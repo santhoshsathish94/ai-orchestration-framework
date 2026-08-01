@@ -46,7 +46,7 @@ This framework helps organizations:
 
 📖 [AI Orchestration Model](docs/04-framework.md)
 
-📖 [Case Studies](case-studies\contentful-api-migration\README.md)
+📖 [Case Studies](case-studies/contentful-api-migration/README.md)
 
 📖 Enterprise Adoption *(Coming Soon)*
 
