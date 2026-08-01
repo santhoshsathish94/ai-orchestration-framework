@@ -1,5 +1,9 @@
 # Examples
 
+AI Orchestration Model
+
+Opportunity → Intent → Context → Orchestrate → Validate ↺
+
 This folder contains example implementations and walkthroughs for the AI Orchestration Framework.
 
 ## Example content

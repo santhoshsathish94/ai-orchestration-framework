@@ -1,4 +1,8 @@
-# 01 — The Problem
+# The Problem
+
+AI Orchestration Model
+
+Opportunity → Intent → Context → Orchestrate → Validate ↺
 
 ## Why another framework?
 

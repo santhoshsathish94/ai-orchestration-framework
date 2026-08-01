@@ -1,5 +1,9 @@
 # Context Engineering
 
+AI Orchestration Model
+
+Opportunity → Intent → Context → Orchestrate → Validate ↺
+
 This document explains how the framework manages context, prompts, and knowledge flow.
 
 ## What Is Context Engineering

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CMS API — REST Rewrite: Architecture Overview</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+  :root{
+    --bg:#0f172a; --panel:#ffffff; --ink:#0f172a; --muted:#64748b; --line:#e2e8f0;
+    --brand:#2563eb; --good:#16a34a; --warn:#d97706; --bad:#dc2626; --chip:#eff6ff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font:16px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#f8fafc}
+  header{background:linear-gradient(135deg,#1e293b,#2563eb);color:#fff;padding:40px 24px}
+  header .wrap{max-width:1080px;margin:0 auto}
+  header h1{margin:0 0 6px;font-size:30px}
+  header p{margin:0;color:#dbeafe;font-size:17px}
+  main{max-width:1080px;margin:0 auto;padding:24px}
+  section{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:18px 0;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+  h2{margin:0 0 12px;font-size:22px}
+  h3{margin:18px 0 8px;font-size:16px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+  p.lead{font-size:17px;color:#334155}
+  .grid{display:grid;gap:16px}
+  .cols-2{grid-template-columns:1fr 1fr}
+  .cols-3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:820px){.cols-2,.cols-3{grid-template-columns:1fr}}
+  .card{border:1px solid var(--line);border-radius:12px;padding:16px;background:#fff}
+  .card.good{border-left:4px solid var(--good)} .card.warn{border-left:4px solid var(--warn)}
+  .card.brand{border-left:4px solid var(--brand)} .card.bad{border-left:4px solid var(--bad)}
+  .card h4{margin:0 0 6px;font-size:15px}
+  .chip{display:inline-block;background:var(--chip);color:var(--brand);border:1px solid #bfdbfe;border-radius:999px;padding:2px 10px;font-size:12px;margin:2px 4px 2px 0}
+  table{border-collapse:collapse;width:100%;font-size:14px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#f1f5f9}
+  .mermaid{background:#fff;border:1px dashed var(--line);border-radius:12px;padding:16px;margin-top:8px;text-align:center}
+  .muted{color:var(--muted)}
+  .kpi{display:flex;gap:14px;flex-wrap:wrap}
+  .kpi .b{flex:1;min-width:160px;border:1px solid var(--line);border-radius:12px;padding:14px}
+  .kpi .b .n{font-size:22px;font-weight:700;color:var(--brand)}
+  .foot{color:var(--muted);font-size:13px;text-align:center;margin:28px 0}
+  code{background:#f1f5f9;padding:1px 6px;border-radius:6px;font-size:13px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>CMS API — REST Rewrite</h1>
+  <p>Architecture overview in plain terms · same API, simpler engine, safer &amp; faster</p>
+</div></header>
+
+<main>
+
+<section>
+  <h2>What we're doing (in one paragraph)</h2>
+  <p class="lead">
+    The CMS API takes content from <strong>Contentful</strong> and serves it to our websites as JSON.
+    Today it talks to Contentful using <strong>GraphQL</strong>, which needs a lot of hand-written
+    code. We're rebuilding it to use Contentful's <strong>REST</strong> API with one small, generic
+    converter. <strong>The public API does not change</strong> — same URLs, same JSON — so nothing
+    that consumes it has to change. Along the way we make it <strong>lighter, faster, harder to
+    abuse, and easier to watch</strong>.
+  </p>
+  <div class="kpi">
+    <div class="b"><div class="n">Same</div>API contract (routes &amp; JSON) — verified by automated parity tests</div>
+    <div class="b"><div class="n">~1 call</div>to Contentful per request (was up to 2–3)</div>
+    <div class="b"><div class="n">Fewer</div>moving parts: no GraphQL files, no hand-written model zoo, no AutoMapper</div>
+  </div>
+</section>
+
+<section>
+  <h2>Before &amp; after</h2>
+  <div class="grid cols-2">
+    <div class="card warn">
+      <h4>Today — GraphQL</h4>
+      <ul>
+        <li>~30 GraphQL query files + fragments</li>
+        <li>A builder that fetches a page twice (discover, then fetch)</li>
+        <li>~200 hand-written model classes + a ~900-line mapping profile</li>
+        <li>A second network call just to resolve links inside rich text</li>
+        <li>Cache used as a normal 1-day cache (can serve stale content)</li>
+      </ul>
+    </div>
+    <div class="card good">
+      <h4>New — REST</h4>
+      <ul>
+        <li>One REST call with <code>include=10</code> returns the page <em>and</em> everything it links to</li>
+        <li>One <strong>generic converter</strong> turns any content type into our DTOs</li>
+        <li>No GraphQL files, no model zoo, no AutoMapper</li>
+        <li>Rich-text links come back in the same call — no extra round trip</li>
+        <li>Cache is a <strong>safety net</strong>, not a staleness layer (details below)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>How a request flows</h2>
+  <p class="muted">Cheapest checks first, so abuse and outages cost us almost nothing.</p>
+  <div class="mermaid">
+flowchart TD
+  R[Website asks for content] --> AL{Is this a real slug?}
+  AL -- no --> N[404 immediately<br/>no Contentful call]
+  AL -- yes --> CB{Is Contentful healthy?}
+  CB -- no --> C[Serve last-known-good<br/>from cache]
+  CB -- yes --> F["Fetch live from Contentful REST<br/>(1 call, include=10)"]
+  F -- ok --> M[Generic converter → DTOs] --> OUT[Return JSON]
+  OUT -. save copy in background .-> C
+  F -- fails/timeout --> C
+  </div>
+</section>
+
+<section>
+  <h2>The pieces</h2>
+  <div class="mermaid">
+flowchart LR
+  subgraph API[API.Contentful - Minimal API host]
+    EP[Endpoints<br/>Page/Section/Blog/HelpCenter/Glossary]
+    WH[Contentful webhook<br/>keeps slug allow-list fresh]
+    AL[Slug allow-list]
+  end
+  subgraph CF[API.Contentful.Infrastructure]
+    GW[Content Gateway<br/>resilience + fallback cache]
+    RC[REST client<br/>delivery / preview]
+    RES[Link resolver<br/>stitches includes]
+    MAP[Generic mapper<br/>attributes + cached plans]
+    RT[Rich-text → HTML]
+  end
+  DTO[Contracts<br/>DTOs = the frozen API shape]
+  CACHE[(Memcached<br/>last-known-good)]
+  OTEL[OpenTelemetry → App Insights]
+  EP --> AL --> GW --> RC --> RES --> MAP --> DTO
+  MAP --> RT
+  GW --> CACHE
+  WH --> AL
+  API -.-> OTEL
+  CF -.-> OTEL
+  </div>
+  <p class="muted">Three projects: <strong>Contracts</strong> (the API shape), <strong>Contentful</strong>
+  (the engine), <strong>Api</strong> (the host). That's the whole thing.</p>
+</section>
+
+<section>
+  <h2>The one clever idea: a generic converter</h2>
+  <p class="lead">Instead of a class per content type, we describe each field on the DTO with a small
+  attribute, and <em>one</em> converter reads those rules for any content type.</p>
+  <div class="grid cols-3">
+    <div class="card brand"><h4>Read the field</h4><span class="muted">Default: match the Contentful
+      field name; override with <code>[ContentfulField]</code>.</span></div>
+    <div class="card brand"><h4>Follow links</h4><span class="muted">Linked entries/assets are
+      stitched in from the same response; lists become <code>[Collection]</code>.</span></div>
+    <div class="card brand"><h4>Render rich text</h4><span class="muted"><code>[RichText]</code> turns
+      Contentful rich text into the same HTML the old API produced.</span></div>
+  </div>
+  <p class="muted" style="margin-top:12px">Because the DTOs are copied over unchanged, the exact JSON
+  shape — including the polymorphic <code>kind</code> labels on sections — stays identical.</p>
+</section>
+
+<section>
+  <h2>Caching = safety net, not staleness</h2>
+  <div class="grid cols-2">
+    <div class="card good"><h4>Normal times</h4>Every request goes <strong>live</strong> to Contentful
+      (it's fast and CDN-backed). We quietly save a copy in the background.</div>
+    <div class="card warn"><h4>If Contentful has a problem</h4>We instantly serve the last saved copy,
+      so the site stays up. A circuit breaker avoids waiting on timeouts; duplicate simultaneous
+      requests are collapsed into one.</div>
+  </div>
+  <p class="muted" style="margin-top:10px">Preview/draft requests are always live (never cached).</p>
+</section>
+
+<section>
+  <h2>Protecting against abuse (recent DoS)</h2>
+  <div class="grid cols-2">
+    <div class="card bad"><h4>The problem</h4>An attacker hammered <em>random</em> slugs. Each unknown
+      slug used to become an upstream call — amplifying the attack.</div>
+    <div class="card good"><h4>The fix</h4>We keep an <strong>allow-list of real slugs</strong>. Unknown
+      slug → instant 404, no upstream call. A secured <strong>Contentful webhook</strong> keeps the
+      list current when content is published/unpublished. (Rate limiting stays at the gateway/CDN.)</div>
+  </div>
+</section>
+
+<section>
+  <h2>Knowing when something's wrong</h2>
+  <p>Full <strong>OpenTelemetry</strong> (traces, metrics, logs) into <strong>App Insights</strong>.
+  Dashboards show the signals that matter:</p>
+  <span class="chip">Contentful latency &amp; errors</span>
+  <span class="chip">Circuit open/closed</span>
+  <span class="chip">Times we served from cache</span>
+  <span class="chip">Blocked slugs (attack signal)</span>
+  <span class="chip">Webhook applied/rejected</span>
+  <span class="chip">Mapping errors</span>
+</section>
+
+<section>
+  <h2>Key decisions at a glance</h2>
+  <table>
+    <tr><th>Area</th><th>Choice</th><th>Why</th></tr>
+    <tr><td>Runtime</td><td>.NET 10 (LTS), Minimal APIs</td><td>Modern, light, fast startup; matches the current target</td></tr>
+    <tr><td>Mapping</td><td>Generic converter (reflection + cached plans)</td><td>Deletes ~200 models + AutoMapper; one place to maintain</td></tr>
+    <tr><td>Source</td><td>Contentful REST + <code>include=10</code></td><td>One call resolves the whole page graph</td></tr>
+    <tr><td>Cache</td><td>Fallback-only on Memcached</td><td>Fresh content always; resilience on outage</td></tr>
+    <tr><td>Security</td><td>Slug allow-list + webhook</td><td>Kills random-slug amplification</td></tr>
+    <tr><td>Contract safety</td><td>Copy DTOs verbatim + parity &amp; snapshot tests</td><td>Guarantees no breakage</td></tr>
+    <tr><td>Payload</td><td>Brotli/Gzip first; protobuf only if measured to help</td><td>HTML-heavy payloads compress well; protobuf gain is marginal</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Plain-English glossary</h2>
+  <div class="grid cols-2">
+    <div class="card"><h4>DTO</h4><span class="muted">The exact shape of the JSON we return. It is the contract.</span></div>
+    <div class="card"><h4>Includes</h4><span class="muted">Contentful returns linked items alongside the main one so we can stitch them together.</span></div>
+    <div class="card"><h4>Circuit breaker</h4><span class="muted">If Contentful keeps failing, we stop calling it for a bit and serve cache instead.</span></div>
+    <div class="card"><h4>Preview</h4><span class="muted">Draft content for editors; always fetched live, never cached.</span></div>
+  </div>
+</section>
+
+<p class="foot">Living document — keep in sync with <code>docs/rest-migration/00-overview.md</code>.
+Diagrams render with Mermaid; open in any modern browser.</p>
+</main>
+
+<script>mermaid.initialize({startOnLoad:true, theme:'default', flowchart:{curve:'basis'}});</script>
+</body>
+</html>

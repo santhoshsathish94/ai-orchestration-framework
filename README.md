@@ -1,125 +1,91 @@
 # AI Orchestration Framework
 
-> **An open, evidence-based framework for orchestrating AI across the Software Development Lifecycle (SDLC).**
+> **Transform Intent into Outcomes.**
+
+An open, evidence-based framework for orchestrating AI across business and engineering workflows.
 
 ---
 
 ## Vision
 
-Artificial Intelligence is changing how software is built, but most discussions focus on models, prompts, and tools.
+AI is changing how organizations build software and operate their businesses.
 
-The AI Orchestration Framework focuses on something different:
+The challenge is no longer generating code or automating tasks.
 
-**How software engineering itself should evolve to integrate AI in a reliable, governed, and repeatable way.**
+The challenge is integrating AI into existing workflows in a way that is reliable, measurable, and repeatable.
 
-This framework is built from real-world engineering experience and production case studies. It is not tied to any specific AI model, vendor, or technology stack. Instead, it defines engineering principles that enable teams to safely adopt AI across the software delivery lifecycle.
-
----
-
-## Core Philosophy
-
-> **AI is another engineering capability that must be orchestrated like any other part of a software system.**
-
-This framework is built on the belief that AI should not be treated as a standalone tool or replacement for engineers. Instead, it should be integrated into software engineering through structured workflows, shared context, governance, validation, and continuous improvement.
-
-## Why this framework exists
-
-Software engineering has always been about building reliable systems.
-
-As AI becomes part of the development process, the challenge is no longer whether AI can generate code. The challenge is how engineering teams can orchestrate AI effectively while maintaining quality, governance, security, and human oversight.
-
-This framework aims to answer questions such as:
-
-* How should AI participate in software delivery?
-* Where should humans remain in control?
-* How can engineering teams provide the right context to AI?
-* How can AI-assisted workflows become deterministic and repeatable?
-* How should organizations measure the impact of AI on software delivery?
+The AI Orchestration Framework provides a structured approach to achieve that goal.
 
 ---
 
-## Guiding Principles
+## AI Orchestration Model
 
-The framework is built around a few core ideas:
-
-* Engineering before prompting.
-* Context before execution.
-* Workflows before automation.
-* Validation before deployment.
-* Human judgment for critical decisions.
-* Continuous measurement and improvement.
-
-These principles will evolve as new evidence and production experience are gathered.
+![AI Orchestration Model](assets/ai-orchestration-model.png)
 
 ---
 
-## What this repository contains
+## Why this Framework?
 
-* Engineering philosophy
-* Framework specification
-* AI orchestration principles
-* Context engineering guidance
-* Validation and governance models
-* Real-world case studies
-* Practical templates and examples
-* Framework roadmap and future evolution
+This framework helps organizations:
+
+* Discover opportunities where AI creates measurable value.
+* Transform intent into engineering context.
+* Orchestrate AI within business and engineering workflows.
+* Validate outcomes instead of outputs.
+* Continuously improve through feedback and learning.
 
 ---
 
-## Design Goals
+## Start Here
 
-The AI Orchestration Framework is designed to be:
+📖 [Vision](docs/01-problem.md)
 
-* Vendor neutral
-* Model agnostic
-* Evidence based
-* Production focused
-* Practical for engineering teams
-* Continuously evolving
+📖 [Philosophy](docs/02-philosophy.md)
+
+📖 [Principles](docs/03-principles.md)
+
+📖 [AI Orchestration Model](docs/04-framework.md)
+
+📖 [Case Studies](case-studies\contentful-api-migration\README.md)
+
+📖 Enterprise Adoption *(Coming Soon)*
+
+---
+
+## Repository Structure
+
+```
+docs/
+case-studies/
+diagrams/
+templates/
+examples/
+```
 
 ---
 
 ## Current Status
 
-**Version:** 0.1
+🚧 **Version 0.1** — Foundation
 
-This project is in its early stages.
-
-The framework will evolve through production experience, community feedback, and documented case studies rather than assumptions or hype.
-
----
-
-## Contributing
-
-Constructive feedback, discussions, and engineering perspectives are welcome.
-
-The objective is not to create another AI toolkit, but to develop a practical engineering framework that helps organizations adopt AI responsibly and effectively.
+* ✅ AI Orchestration Model
+* ✅ Philosophy
+* ✅ Principles
+* 🚧 First Production Case Study
+* ⏳ Enterprise Adoption Guide
 
 ---
 
-## Roadmap
+## Guiding Principle
 
-Version 0.1 focuses on establishing the foundation:
-
-* Defining the problem space
-* Establishing engineering principles
-* Documenting the first production case study
-* Building the initial framework specification
-
-Future versions will expand into enterprise adoption guidance, orchestration patterns, governance models, and additional real-world case studies.
-
----
-
-## License
-
-This project is released under the Apache 2.0 License.
+> **AI is another engineering capability that must be orchestrated like any other part of a software system.**
 
 ---
 
 ## Author
 
-Created and maintained by **Santhosh Narayanan**.
+**Santhosh Narayanan**
 
-Built from real-world engineering experience.
+GitHub: https://github.com/santhoshsathish94/ai-orchestration-framework
 
-Continuously evolving through production case studies and community feedback.
+Built from real-world engineering experience and continuously evolving through production case studies.

@@ -1,5 +1,9 @@
 # Agent Orchestration
 
+AI Orchestration Model
+
+Opportunity → Intent → Context → Orchestrate → Validate ↺
+
 This document describes how the framework coordinates agents and workflow execution.
 
 ## Key Concepts

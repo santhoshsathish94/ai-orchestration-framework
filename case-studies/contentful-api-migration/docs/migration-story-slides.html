@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Project Migration Done in a Day using AI</title>
+<style>
+  :root{
+    /* Claude / Anthropic-inspired warm theme */
+    --blue:#c96442; --blue-d:#a64b2a; --blue-soft:#f6e7de; --purple:#d9a066;
+    --ink:#26231e; --muted:#736c5f; --line:#e6dfd2; --bg:#fdfbf7; --soft:#f3efe6;
+    --charcoal:#2b2721; --green:#1a8f5c; --green-soft:#e9f6ef; --sky:#efd9cc;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--soft);color:var(--ink)}
+  #deck{height:100vh;width:100vw;overflow:hidden;position:relative;background:var(--bg)}
+  .slide{position:absolute;inset:0;padding:6vh 7vw;opacity:0;visibility:hidden;transform:translateY(14px);
+    transition:opacity .3s ease,transform .3s ease;overflow:auto;display:flex;flex-direction:column;justify-content:center;background:var(--bg)}
+  .slide.active{opacity:1;visibility:visible;transform:none}
+  .kicker{color:var(--blue);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:13px;margin-bottom:14px}
+  h1{font-size:46px;line-height:1.08;margin:0 0 14px;font-weight:800;letter-spacing:-.02em}
+  h2{font-size:30px;margin:0 0 6px;font-weight:800;letter-spacing:-.01em}
+  .subtitle{color:var(--blue);font-weight:700;font-size:18px;margin:0 0 16px}
+  h3{font-size:16px;margin:0 0 8px;color:var(--blue);font-weight:700}
+  p,li{font-size:19px;line-height:1.5}
+  .sub{color:var(--muted);font-size:20px;max-width:66ch}
+  ul{margin:6px 0 0;padding-left:22px} li{margin:8px 0}
+  .grid{display:grid;gap:16px;margin-top:6px}
+  .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+  .card{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+  .card.soft{background:var(--soft)}
+  .card.accent{border-color:#ead2c2;background:var(--blue-soft)}
+  .stat{font-size:38px;font-weight:800;letter-spacing:-.02em;line-height:1}
+  .stat.b{color:var(--blue)} .stat.g{color:var(--green)} .stat.d{color:var(--ink)}
+  .lbl{color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.04em;margin-top:6px}
+  .pill{display:inline-block;padding:3px 11px;border-radius:999px;font-size:13px;font-weight:700}
+  .pill.ok{background:var(--green-soft);color:var(--green);border:1px solid #bfe3cf}
+  .pill.warn{background:#fff4e5;color:#a15c00;border:1px solid #f3d19b}
+  .pill.bad{background:#fdecec;color:#b3261e;border:1px solid #f3b7b3}
+  .pill.na{background:#eef1f5;color:#5b6b7b;border:1px solid #d9e0e8}
+  table{border-collapse:collapse;width:100%;font-size:17px;margin-top:6px}
+  th,td{border:1px solid var(--line);padding:10px 13px;text-align:left}
+  td.new{color:var(--blue-d);font-weight:700}
+  .sec th,.sec td{padding:8px 12px;font-size:15px;vertical-align:middle}
+  .seccard{border-radius:16px;padding:22px 22px 18px;border:1px solid var(--line);position:relative}
+  .seccard.bad{background:#fdf1f0;border-color:#f3c0bb}
+  .seccard.ok{background:#eef8f2;border-color:#bfe3cf}
+  .secbadge{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff;position:absolute;top:-16px;right:22px;box-shadow:0 3px 8px rgba(0,0,0,.14)}
+  .secbadge.bad{background:#d64430} .secbadge.ok{background:#1a8f5c}
+  .seccard h3{margin:0 0 14px;font-size:22px}
+  .seclist{list-style:none;padding:0;margin:0}
+  .seclist li{position:relative;padding-left:30px;margin:12px 0;font-size:16px;line-height:1.35}
+  .seclist li.x::before{content:"\2717";position:absolute;left:0;top:0;color:#d64430;font-weight:800;font-size:17px}
+  .seclist li.c::before{content:"\2713";position:absolute;left:0;top:0;color:#1a8f5c;font-weight:800;font-size:17px}
+  .secfoot{margin-top:16px;padding:10px 13px;border-radius:10px;font-weight:800;font-size:15px;text-align:center}
+  .secfoot.bad{background:#fdecec;color:#b3261e} .secfoot.ok{background:var(--green-soft);color:var(--green)}
+  .win{color:var(--green);font-weight:700} .hl{color:var(--blue);font-weight:700} .muted{color:var(--muted)} .tag{color:var(--muted);font-size:15px}
+  .hilite{color:#fff;background:linear-gradient(95deg,var(--purple),var(--blue));padding:2px 14px;border-radius:12px;white-space:nowrap;box-shadow:0 3px 12px rgba(201,100,66,.3)}
+  .tasks{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:4px 0 2px}
+  .tk{display:flex;align-items:center;gap:8px;background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:7px 10px;font-size:12.5px;font-weight:700;line-height:1.15}
+  .tk .n{flex:none;width:23px;height:23px;border-radius:6px;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800}
+  .tk.gate{background:var(--blue-soft);border-color:#ead2c2}
+  .tk.gate .n{background:var(--purple)}
+  .tk.cut{background:var(--green-soft);border-color:#bfe3cf}
+  .tk.cut .n{background:var(--green)}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:26px;color:var(--ink);letter-spacing:-.01em}
+  .logo .mark{width:28px;height:28px;border-radius:50%;background:conic-gradient(from 210deg,#d9a066 0deg 90deg,#c96442 90deg 210deg,#a64b2a 210deg 360deg);position:relative;flex:none}
+  .logo .mark::after{content:"";position:absolute;inset:7px;background:#fff;border-radius:50%}
+  .logo .cmark{width:32px;height:32px;flex:none}
+  .serif{font-family:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif;font-weight:600;letter-spacing:-.015em}
+  ol.plan{margin:8px 0 0;padding:0;list-style:none;counter-reset:pl;column-count:2;column-gap:30px}
+  ol.plan li{counter-increment:pl;position:relative;padding-left:36px;margin:9px 0;font-size:15.5px;font-weight:600;break-inside:avoid}
+  ol.plan li::before{content:counter(pl,decimal-leading-zero);position:absolute;left:0;top:0;min-width:25px;height:21px;padding:0 5px;border-radius:6px;background:var(--blue);color:#fff;font-size:11px;font-weight:800;display:inline-flex;align-items:center;justify-content:center}
+  ol.plan li.gate::before{background:var(--purple)} ol.plan li.cut::before{background:var(--green)}
+  .author{margin-top:20px;font-size:18px}
+  .author b{color:var(--ink)}
+  /* architecture panels */
+  .arch{display:grid;grid-template-columns:1fr 46px 1fr;gap:12px;align-items:center;margin-top:6px}
+  .panel{border:1px solid var(--line);border-radius:14px;padding:15px 16px;background:var(--soft)}
+  .panel.new{border-color:#ead2c2;background:var(--blue-soft)}
+  .panel h3{margin:0}
+  .panel .plat{color:var(--muted);font-size:13px;margin:2px 0 10px}
+  .abox{background:#fff;border:1px solid var(--line);border-radius:9px;padding:7px 10px;font-size:14px;font-weight:700;margin:6px 0;text-align:center}
+  .panel.new .abox{border-color:#ead2c2}
+  .abox .s{display:block;font-weight:400;color:var(--muted);font-size:12px;margin-top:1px}
+  .adown{text-align:center;color:var(--blue);font-size:15px;line-height:.7;margin:0}
+  .bigarrow{font-size:38px;color:var(--blue);text-align:center;font-weight:800}
+  .panelnote{font-size:12.5px;color:var(--muted);margin-top:8px}
+  .barrow{display:flex;align-items:center;gap:12px;margin:9px 0}
+  .barlabel{width:150px;color:var(--muted);font-size:14px;flex:none}
+  .bar{height:24px;border-radius:7px;background:var(--blue)}
+  .barval{font-weight:800;font-size:15px}
+  .note{font-size:13px;color:var(--muted);margin-top:8px}
+  .foot{position:fixed;bottom:12px;left:0;right:0;display:flex;justify-content:space-between;padding:0 24px;color:var(--muted);font-size:12px;pointer-events:none}
+  .progress{position:fixed;top:0;left:0;height:4px;background:var(--blue);transition:width .3s ease;z-index:10}
+  .nav{position:fixed;bottom:20px;right:26px;display:flex;gap:14px;z-index:30}
+  .nav button{width:52px;height:52px;display:flex;align-items:center;justify-content:center;background:var(--blue);color:#fff;border:none;border-radius:16px;font-size:28px;font-weight:800;line-height:1;cursor:pointer;box-shadow:0 4px 14px rgba(201,100,66,.32);transition:background .15s ease,transform .15s ease}
+  .nav button:hover{background:var(--blue-d);transform:translateY(-2px)}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div id="deck">
+
+  <!-- 1 · TITLE -->
+  <section class="slide active" style="background:linear-gradient(180deg,#f3efe6 0%,#fdfbf7 55%)">
+    <div class="logo"><svg class="cmark" viewBox="0 0 40 40" aria-hidden="true"><g stroke="var(--blue)" stroke-width="2.7" stroke-linecap="round"><line x1="20" y1="16" x2="20" y2="3"/><line x1="22" y1="16.5" x2="28.5" y2="5.3"/><line x1="23.5" y1="18" x2="34.7" y2="11.5"/><line x1="24" y1="20" x2="37" y2="20"/><line x1="23.5" y1="22" x2="34.7" y2="28.5"/><line x1="22" y1="23.5" x2="28.5" y2="34.7"/><line x1="20" y1="24" x2="20" y2="37"/><line x1="18" y1="23.5" x2="11.5" y2="34.7"/><line x1="16.5" y1="22" x2="5.3" y2="28.5"/><line x1="16" y1="20" x2="3" y2="20"/><line x1="16.5" y1="18" x2="5.3" y2="11.5"/><line x1="18" y1="16.5" x2="11.5" y2="5.3"/></g></svg> Contentful</div>
+    <div class="kicker" style="margin-top:30px">Content Platform Migration · Case Study</div>
+    <h1 class="serif" style="font-size:60px">Project Migration<br/>Done in a <span class="hilite">Day using AI</span></h1>
+    <p class="sub" style="margin-top:6px">The CMS content API re-platformed from GraphQL to Contentful REST — with byte-for-byte
+    parity and zero consumer impact.</p>
+    <div class="author">
+      by <b>Santhosh N</b><br/>
+      <span class="tag">Authored &amp; AI-orchestrated — verifiable in this repository's git commit history.</span>
+    </div>
+  </section>
+
+  <!-- 2 · OLD ARCHITECTURE -> NEW ARCHITECTURE -->
+  <section class="slide">
+    <div class="kicker">1 · The change, in one picture</div>
+    <h2>Old architecture &rarr; New architecture</h2>
+    <div class="arch">
+      <div class="panel">
+        <h3 style="color:var(--ink)">Existing CMS API</h3>
+        <div class="plat">.NET 9 · MVC controllers · Contentful <b>GraphQL</b></div>
+        <div class="abox">MVC Controllers<span class="s">Page · Section · Blog · HelpCenter · Glossary</span></div>
+        <div class="adown">↓</div>
+        <div class="abox">ContentService <span class="s">+ Memcached fallback cache</span></div>
+        <div class="adown">↓</div>
+        <div class="abox">Content Provider<span class="s">89 .graphql files · DynamicQueryBuilder</span></div>
+        <div class="adown">↓</div>
+        <div class="abox">GraphQL + RichTextLinkService<span class="s">2–3 round-trips · AutoMapper (85 maps)</span></div>
+        <div class="adown">↓</div>
+        <div class="abox">CMS API Response (JSON)</div>
+        <div class="panelnote">~9,960 LOC · 86 DTOs · 99 Gql models · 6 controllers</div>
+      </div>
+      <div class="bigarrow">&rarr;</div>
+      <div class="panel new">
+        <h3>Redesigned Contentful API</h3>
+        <div class="plat">.NET 10 · Minimal API · Contentful <b>REST (CDA)</b></div>
+        <div class="abox">Minimal API Endpoints<span class="s">same 5 groups · same routes</span></div>
+        <div class="adown">↓</div>
+        <div class="abox">Resilient Gateway<span class="s">circuit breaker · single-flight · fallback cache</span></div>
+        <div class="adown">↓</div>
+        <div class="abox">Contentful REST Client<span class="s">1 REST fetch · delivery / preview</span></div>
+        <div class="adown">↓</div>
+        <div class="abox">EntryGraph → EntryMapper<span class="s">one cached, attribute-driven engine</span></div>
+        <div class="adown">↓</div>
+        <div class="abox">CMS API Response (identical JSON)</div>
+        <div class="panelnote">~9,300 LOC · 91 DTOs · 1 generic mapper · 5 endpoint groups</div>
+      </div>
+    </div>
+    <p class="tag" style="margin-top:12px">Same public contract on both sides — only the engine underneath changed. Detailed architecture &amp; security write-ups accompany this deck (existing vs redesigned).</p>
+  </section>
+
+  <!-- 3 · HOW AI PLANNED & EXECUTED -->
+  <section class="slide">
+    <div class="kicker">2 · How AI did it</div>
+    <h2>The full plan &mdash; 15 tasks, executed one branch at a time</h2>
+    <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:start">
+      <div class="card">
+        <h3 style="color:var(--ink)">The plan &mdash; executed top to bottom</h3>
+        <ol class="plan">
+          <li>Foundation &amp; generic core</li>
+          <li>DTO contract &amp; conventions</li>
+          <li>Page endpoints + slugs</li>
+          <li>Sections (polymorphic)</li>
+          <li>Blog</li>
+          <li>HelpCenter &amp; articles</li>
+          <li>Glossary</li>
+          <li class="gate">Parity / validation harness</li>
+          <li>Content gateway: cache &amp; resilience</li>
+          <li>Slug allow-list &amp; webhook</li>
+          <li>Observability</li>
+          <li>Benchmarks &amp; reports</li>
+          <li>Payload optimization</li>
+          <li>CORS &amp; preview origin</li>
+          <li class="cut">Hosting &amp; cutover</li>
+        </ol>
+      </div>
+      <div>
+        <div class="card accent" style="margin-bottom:14px">
+          <h3>Executed sequentially</h3>
+          <p style="margin:0;font-size:15.5px">One task at a time in <b>dependency order</b>. Tasks that touch the same files never ran at once &mdash; <b>no merge conflicts, no half-finished state</b> &mdash; and each finished <b>green</b> (clean build + tests) before the next began.</p>
+        </div>
+        <div class="card">
+          <h3>One branch &amp; PR per task</h3>
+          <p style="margin:0;font-size:15.5px">Every task checked in on its own branch (<span class="tag"><b>feat/task-03-page</b></span>). Git history maps <b>1:1 to the plan</b> &mdash; fully <b>traceable</b>, and any task can be reviewed, reverted or <b>fixed in isolation</b>.</p>
+        </div>
+      </div>
+    </div>
+    <p class="note">Each task carried its own context file &mdash; objective, dependencies, source-of-truth legacy references, deliverables and acceptance criteria &mdash; so AI built exactly what was scoped and self-checked against an objective gate.</p>
+  </section>
+
+  <!-- 4 · COMPARISON -->
+  <section class="slide">
+    <div class="kicker">3 · Cost Comparison</div>
+    <h2>Cost Comparison</h2>
+    <div class="subtitle">CMS Content API · Core engine: GraphQL &rarr; REST</div>
+    <div class="two">
+      <div class="card">
+        <h3 style="color:var(--ink)">Existing</h3>
+        <p style="margin:2px 0 12px;font-size:16px">Contentful <b>GraphQL</b> &nbsp;·&nbsp; .NET 9 &nbsp;·&nbsp; MVC</p>
+        <div class="lbl">Developed by</div>
+        <div style="font-size:21px;font-weight:800;margin:2px 0 14px">Existing team</div>
+        <div class="stat d">~8&ndash;10 wks</div><div class="lbl">team estimate · $55K&ndash;$85K</div>
+      </div>
+      <div class="card accent">
+        <h3>Redesign</h3>
+        <p style="margin:2px 0 12px;font-size:16px">Contentful <b>REST</b> &nbsp;·&nbsp; .NET 10 &nbsp;·&nbsp; Minimal API</p>
+        <div class="lbl">Developed by</div>
+        <div style="font-size:21px;font-weight:800;margin:2px 0 14px">AI, orchestrated by <span style="color:var(--blue-d)">Santhosh N</span></div>
+        <div class="stat b">~1 day</div><div class="lbl">25,352 AI credits · 36/36 parity</div>
+      </div>
+    </div>
+    <div style="margin-top:24px">
+      <div class="barrow"><div class="barlabel">Team rebuild</div><div class="bar" style="width:320px;background:var(--charcoal)"></div><div class="barval">~8&ndash;10 weeks · $55K&ndash;$85K</div></div>
+      <div class="barrow"><div class="barlabel">AI, used wisely</div><div class="bar" style="width:22px"></div><div class="barval" style="color:var(--blue)">~1 day · 25,352 credits</div></div>
+    </div>
+    <p class="note">Authenticity: the new build is verifiable in this repository's git commit history.</p>
+  </section>
+
+  <!-- 5 · WHY AI NEEDS A HUMAN AUTHOR -->
+  <section class="slide">
+    <div class="kicker">4 · The human in the loop</div>
+    <h2>AI moved fast &mdash; the author gave it direction</h2>
+    <div class="two">
+      <div class="card accent">
+        <h3>What the human brought &mdash; experience &amp; context</h3>
+        <ul style="margin:0">
+          <li><b>Concrete API contracts:</b> every endpoint &amp; response stays identical (new fields are additive-safe; nothing changed or removed) &rarr; <b>zero consumer impact</b> and a true drop-in cutover.</li>
+          <li><b>Parity testing:</b> all endpoints and responses verified against recorded <b>fixtures</b> &mdash; <b>removing the QA dependency</b> and catching every edge case automatically &rarr; parity from stuck to <b>36&nbsp;/&nbsp;36</b>.</li>
+          <li><b>Domain instinct:</b> &ldquo;don't accept &lsquo;it can't be done&rsquo; &mdash; verify against the live API.&rdquo; &rarr; the date, ordering &amp; search &ldquo;limitations&rdquo; proved to be code bugs, and were fixed.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="color:var(--ink)">Where AI fell short</h3>
+        <ul style="margin:0">
+          <li>Mistook parity gaps for <b>&ldquo;platform limitations&rdquo;</b> &mdash; and stopped instead of digging deeper.</li>
+          <li>Treated every tiny response difference as a hard blocker; progress plateaued.</li>
+          <li>Would have <b>crippled the redesign</b> to mirror quirks of the old output &mdash; lacking the judgment to know which differences actually mattered.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="sub" style="margin-top:18px"><span class="hl">AI will close this gap very soon.</span></p>
+  </section>
+
+  <!-- 6 · QUALITY BAR -->
+  <section class="slide">
+    <div class="kicker">5 · Security · clean code · performance</div>
+    <h2>The quality bar, all green</h2>
+    <div class="grid g4">
+      <div class="card soft"><div class="stat g">0</div><div class="lbl">Vulnerabilities / secrets</div></div>
+      <div class="card soft"><div class="stat g">10/10</div><div class="lbl">OWASP items addressed</div></div>
+      <div class="card soft"><div class="stat g">239</div><div class="lbl">Tests pass (220+19)</div></div>
+      <div class="card soft"><div class="stat g">0 / 0</div><div class="lbl">Warnings / errors</div></div>
+    </div>
+    <div class="grid g3" style="margin-top:18px">
+      <div class="card"><h3>Security</h3><p>Anonymous public-read API; CORS + preview-origin allow-lists; HMAC-signed
+      webhooks; SSRF bounded by a slug allow-list. Full <code>security-scan-report.html</code> attached.</p></div>
+      <div class="card"><h3>Clean code</h3><p>One convention-driven mapper (not per-type handlers); additive-tolerant
+      contract tests; snapshot + unit + live-parity suites.</p></div>
+      <div class="card"><h3>Performance</h3><p>Cached mapping plan, Brotli-first compression, fallback cache + circuit
+      breaker + single-flight; hot path benchmarked with BenchmarkDotNet.</p></div>
+    </div>
+  </section>
+
+  <!-- 7 · PERFORMANCE -->
+  <section class="slide">
+    <div class="kicker">6 · Performance &mdash; under concurrent load</div>
+    <h2>Faster under load &mdash; and it protects the backend</h2>
+    <div class="grid g3" style="margin-bottom:14px">
+      <div class="card accent"><div class="lbl">Throughput @ 40 concurrent</div><div class="stat b">48 <span style="font-size:18px">req/s</span></div><div class="tag">existing 7.6 req/s &middot; <b class="win">~6&times; higher</b></div></div>
+      <div class="card accent"><div class="lbl">p95 latency under load</div><div class="stat b">2.3 s</div><div class="tag">existing 19.3 s &middot; <b class="win">~8&times; lower tail</b></div></div>
+      <div class="card accent"><div class="lbl">Invalid slug (404)</div><div class="stat b">8 ms</div><div class="tag">existing 70 ms &middot; <b class="win">rejected with no upstream call</b></div></div>
+    </div>
+    <table class="sec">
+      <tr><th style="width:38%">Endpoint (mean under 40-way load)</th><th>Existing</th><th>Redesign</th></tr>
+      <tr><td>Page (who-we-are, 24 KB)</td><td>667 ms</td><td class="new">189 ms &nbsp;<span class="win">3.5&times;</span></td></tr>
+      <tr><td>Glossary list (35 KB)</td><td>958 ms</td><td class="new">282 ms &nbsp;<span class="win">3.4&times;</span></td></tr>
+      <tr><td>HelpCenter list (286 KB)</td><td>5,634 ms</td><td class="new">345 ms &nbsp;<span class="win">16&times;</span></td></tr>
+      <tr><td>Blog list (~1 MB)</td><td>12,880 ms</td><td class="new">1,889 ms &nbsp;<span class="win">6.8&times;</span></td></tr>
+    </table>
+    <p class="note">400 requests across 4 endpoints at 40 concurrent &mdash; <b>both APIs 0 errors</b>, same Contentful environment, same machine, byte-identical payloads. Under load the redesign clears the run in <b>8.3 s vs 52.9 s</b> (mean 676 ms vs 5,035 ms). Invalid slugs are short-circuited by the redesign's <b>slug allow-list</b> &mdash; a 404 returns in ~8 ms with no upstream fetch, protecting the backend from bad/abusive traffic; the existing API still reaches out (~70 ms). Cold start 2.1 s vs 52.4 s; clean build 5.5 s vs 6.0 s (redesign 0 warnings).</p>
+  </section>
+
+  <!-- 8 · CLOSING QUOTE -->
+  <section class="slide" style="background:linear-gradient(180deg,#fdfbf7 0%,#f3efe6 100%);text-align:center;align-items:center">
+    <div style="max-width:34ch;margin:0 auto">
+      <div style="font-size:96px;color:var(--blue);line-height:.5;font-weight:800">&ldquo;</div>
+      <h1 style="font-size:44px;line-height:1.18;margin-top:8px">The price of doing the same old thing is far higher than the price of change.</h1>
+      <p class="sub" style="margin:18px auto 0;font-size:20px;color:var(--muted)">— Bill Clinton</p>
+    </div>
+  </section>
+
+</div>
+
+<div class="foot">
+  <div>CMS API · GraphQL → Contentful REST · by Santhosh N</div>
+  <div><span id="counter">1 / 8</span> · ← → to navigate · F fullscreen</div>
+</div>
+<div class="nav">
+  <button onclick="go(-1)" aria-label="Previous">‹</button>
+  <button onclick="go(1)" aria-label="Next">›</button>
+</div>
+
+<script>
+  const slides=[...document.querySelectorAll('.slide')];
+  let i=0;
+  function render(){
+    slides.forEach((s,n)=>s.classList.toggle('active',n===i));
+    document.getElementById('counter').textContent=(i+1)+' / '+slides.length;
+    document.getElementById('progress').style.width=((i+1)/slides.length*100)+'%';
+  }
+  function go(d){ i=Math.min(slides.length-1,Math.max(0,i+d)); render(); }
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){go(1);e.preventDefault();}
+    else if(e.key==='ArrowLeft'||e.key==='PageUp'){go(-1);e.preventDefault();}
+    else if(e.key==='Home'){i=0;render();} else if(e.key==='End'){i=slides.length-1;render();}
+    else if(e.key.toLowerCase()==='f'){ if(!document.fullscreenElement){document.documentElement.requestFullscreen();} else {document.exitFullscreen();} }
+  });
+  document.getElementById('deck').addEventListener('click',e=>{ if(e.target.closest('.nav'))return; go(1); });
+  render();
+</script>
+</body>
+</html>

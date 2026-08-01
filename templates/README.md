@@ -1,5 +1,9 @@
 # Templates
 
+AI Orchestration Model
+
+Opportunity → Intent → Context → Orchestrate → Validate ↺
+
 This folder contains reusable templates for AI orchestration artifacts.
 
 ## Possible templates

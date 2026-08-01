@@ -1,5 +1,9 @@
 # Roadmap
 
+AI Orchestration Model
+
+Opportunity → Intent → Context → Orchestrate → Validate ↺
+
 This document outlines future priorities for the AI Orchestration Framework.
 
 ## Roadmap Themes

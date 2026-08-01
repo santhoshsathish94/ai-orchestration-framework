@@ -1,5 +1,9 @@
 # Diagrams
 
+AI Orchestration Model
+
+Opportunity → Intent → Context → Orchestrate → Validate ↺
+
 This folder contains architecture and process diagrams for the AI Orchestration Framework.
 
 ## Contents

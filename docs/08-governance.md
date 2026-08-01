@@ -1,5 +1,9 @@
 # Governance
 
+AI Orchestration Model
+
+Opportunity → Intent → Context → Orchestrate → Validate ↺
+
 This document describes governance structures for AI orchestration.
 
 ## Governance Focus

@@ -1,5 +1,9 @@
 # Adoption
 
+AI Orchestration Model
+
+Opportunity → Intent → Context → Orchestrate → Validate ↺
+
 This document explores how teams can adopt the AI Orchestration Framework successfully.
 
 ## Adoption Checklist

@@ -1,5 +1,9 @@
 # Validation
 
+AI Orchestration Model
+
+Opportunity → Intent → Context → Orchestrate → Validate ↺
+
 This document covers validation strategies for AI workflows and model outputs.
 
 ## Validation Layers

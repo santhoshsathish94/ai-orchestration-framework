@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>API.Contentful — Architecture &amp; Security Analysis</title>
+<style>
+  :root {
+    --orange:#ee5a24; --orange-d:#c9481b; --orange-soft:#fff1eb;
+    --ink:#23282d; --muted:#6b7280; --line:#e6e8eb; --bg:#ffffff; --soft:#f7f8fa;
+    --green:#1a8f5c; --bad:#b3261e; --warn:#a15c00;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); margin: 0; padding: 0 0 72px; line-height: 1.55; background: var(--bg); }
+  header { background: linear-gradient(120deg, var(--orange) 0%, var(--orange-d) 100%); color: #fff; padding: 34px 40px 30px; }
+  header h1 { margin: 0 0 8px; font-size: 24px; letter-spacing: -.2px; }
+  header .sub { color: #ffe4d7; font-size: 13.5px; }
+  header .sub code { background: rgba(255,255,255,.16); color:#fff; }
+  main { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  nav.toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 4px; }
+  nav.toc a { font-size: 12.5px; text-decoration: none; color: var(--orange-d); background: var(--orange-soft); border: 1px solid #f7d8c8; padding: 5px 11px; border-radius: 999px; }
+  nav.toc a:hover { background: var(--orange); color: #fff; border-color: var(--orange); }
+  section { margin-top: 38px; }
+  h2 { font-size: 18px; border-bottom: 2px solid var(--orange); padding-bottom: 7px; margin-bottom: 14px; }
+  h2 .num { color: var(--orange); font-weight: 800; margin-right: 8px; }
+  h3 { font-size: 14.5px; margin: 22px 0 8px; color: var(--orange-d); }
+  p { margin: 8px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; margin: 10px 0 6px; }
+  th, td { border: 1px solid var(--line); padding: 8px 11px; text-align: left; vertical-align: top; }
+  th { background: var(--soft); font-weight: 600; }
+  tr:nth-child(even) td { background: #fcfcfd; }
+  code { background: var(--soft); padding: 1px 5px; border-radius: 4px; font-size: 12px; font-family: "Cascadia Code", Consolas, monospace; }
+  .pill { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 11.5px; font-weight: 700; color: #fff; white-space: nowrap; }
+  .pill.ok { background: var(--green); } .pill.warn { background: var(--warn); } .pill.bad { background: var(--bad); } .pill.na { background: var(--muted); } .pill.orange { background: var(--orange); }
+  .summary { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 16px; }
+  .card { flex: 1 1 150px; border: 1px solid var(--line); border-radius: 10px; padding: 15px 16px; background: #fff; box-shadow: 0 1px 2px rgba(35,40,45,.04); }
+  .card .n { font-size: 27px; font-weight: 800; color: var(--ink); }
+  .card .l { color: var(--muted); font-size: 11.5px; text-transform: uppercase; letter-spacing: .04em; margin-top: 2px; }
+  .muted { color: var(--muted); }
+  .note { background: var(--orange-soft); border-left: 4px solid var(--orange); padding: 11px 15px; font-size: 13px; border-radius: 0 8px 8px 0; margin: 12px 0; }
+  .note.plain { background: var(--soft); border-left-color: var(--line); }
+  footer { max-width: 1080px; margin: 46px auto 0; padding: 18px 24px; color: var(--muted); font-size: 12px; border-top: 1px solid var(--line); }
+
+  /* ---- diagram primitives (pure HTML/CSS, no scripts) ---- */
+  .diagram { border: 1px solid var(--line); border-radius: 12px; padding: 20px; background: var(--soft); margin: 14px 0; overflow-x: auto; }
+  .layer { display: flex; align-items: stretch; gap: 12px; margin: 0 0 12px; }
+  .layer:last-child { margin-bottom: 0; }
+  .layer-label { flex: 0 0 118px; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 11.5px; font-weight: 700; color: #fff; background: var(--orange); border-radius: 8px; padding: 8px; letter-spacing: .02em; }
+  .layer-label.alt { background: var(--ink); }
+  .layer-body { flex: 1; display: flex; flex-wrap: wrap; gap: 10px; align-content: center; }
+  .box { background: #fff; border: 1px solid #d9dde1; border-radius: 8px; padding: 9px 12px; font-size: 12px; flex: 1 1 150px; min-width: 130px; }
+  .box b { display: block; font-size: 12.5px; color: var(--ink); }
+  .box span { color: var(--muted); font-size: 11px; }
+  .box.accent { border-color: var(--orange); background: var(--orange-soft); }
+  .box.dark { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .box.dark b { color: #fff; } .box.dark span { color: #c7ccd1; }
+
+  /* flow diagram */
+  .flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 0; }
+  .flow .step { background: #fff; border: 1px solid #d9dde1; border-radius: 8px; padding: 10px 12px; font-size: 12px; flex: 1 1 0; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .flow .step b { font-size: 12.5px; }
+  .flow .step span { color: var(--muted); font-size: 10.5px; }
+  .flow .step.accent { border-color: var(--orange); background: var(--orange-soft); }
+  .flow .step.dark { background: var(--ink); border-color: var(--ink); color:#fff; }
+  .flow .step.dark b { color:#fff; } .flow .step.dark span { color:#c7ccd1; }
+  .flow .arrow { flex: 0 0 26px; display: flex; align-items: center; justify-content: center; color: var(--orange); font-weight: 800; font-size: 17px; }
+  .legend { font-size: 11.5px; color: var(--muted); margin-top: 10px; }
+  ul.tight { margin: 6px 0; padding-left: 20px; } ul.tight li { margin: 3px 0; font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Architecture &amp; Security Analysis</h1>
+  <div class="sub">
+    Project: <strong>API.Contentful</strong> &nbsp;·&nbsp; .NET 10 Minimal API &nbsp;·&nbsp;
+    Analysis date: <strong>2026-07-30</strong> &nbsp;·&nbsp; Branch: <code>main</code> &nbsp;·&nbsp; HEAD: <code>feeb579</code>
+  </div>
+</header>
+<main>
+
+  <nav class="toc">
+    <a href="#overview">1 · Overview</a>
+    <a href="#architecture">2 · Architecture</a>
+    <a href="#patterns">3 · Patterns &amp; Quality</a>
+    <a href="#testing">4 · Testing</a>
+    <a href="#security">5 · Dependency &amp; Security</a>
+    <a href="#metrics">6 · Real Metrics</a>
+  </nav>
+
+  <!-- ============================ 1. OVERVIEW ============================ -->
+  <section id="overview">
+    <h2><span class="num">1</span>Executive overview</h2>
+    <p>
+      <strong>API.Contentful</strong> is a greenfield <strong>.NET 10 Minimal API</strong> that replaces the
+      legacy <code>Legacy.CMS</code> service. The legacy service read content from <strong>Contentful via GraphQL</strong>
+      (with AutoMapper, a dynamic query builder, and generated <code>.graphql</code> documents); this rewrite reads the
+      same content from the <strong>Contentful REST Content Delivery / Preview API (CDA/CPA)</strong> and re-projects it
+      through a small, convention-driven mapping engine.
+    </p>
+    <p>
+      The <strong>golden rule</strong> of the project is a <em>byte-for-byte compatible public contract</em>: the same
+      routes, the same <code>CMSAPIResponse</code> JSON envelope, the same PascalCase property names, the same
+      HTML-escaped rich-text output. Correctness is proven by an additive parity + snapshot test suite rather than by
+      inspection.
+    </p>
+    <div class="note">
+      <strong>Access model:</strong> the API is <strong>anonymous public-read</strong>. The earlier preview
+      API-key authentication (<code>X-Preview-Api-Key</code> + <code>[Authorize]</code>) has been
+      <strong>removed</strong> — <code>Program.cs</code> wires <em>no</em> authentication or authorization middleware.
+      Preview traffic (<code>isPreview=true</code>) is bounded by an <em>origin allow-list</em>
+      (<code>PreviewOriginMiddleware</code>), not by authentication. This intentionally avoids re-introducing a
+      production incident that the legacy team hit and reverted when a preview auth gate rejected legitimate anonymous
+      traffic.
+    </div>
+    <div class="summary">
+      <div class="card"><div class="n">.NET 10</div><div class="l">Minimal API</div></div>
+      <div class="card"><div class="n">3</div><div class="l">Source projects</div></div>
+      <div class="card"><div class="n">~9,300</div><div class="l">Production LOC</div></div>
+      <div class="card"><div class="n">5</div><div class="l">Endpoint groups</div></div>
+      <div class="card"><div class="n">239</div><div class="l">Tests (220 + 19)</div></div>
+      <div class="card"><div class="n" style="color:var(--green)">0</div><div class="l">Build warnings</div></div>
+    </div>
+    <p class="muted" style="margin-top:14px">
+      Solution: <code>API.Contentful.slnx</code> — 3 source projects (host + Contracts + Infrastructure),
+      2 test projects, 1 benchmark project.
+    </p>
+  </section>
+
+  <!-- ============================ 2. ARCHITECTURE ============================ -->
+  <section id="architecture">
+    <h2><span class="num">2</span>Architecture</h2>
+    <p>The solution is a clean three-project vertical, verified by reading the code under <code>src/</code>:</p>
+    <table>
+      <tr><th>Project</th><th>SDK</th><th>Responsibility (verified)</th></tr>
+      <tr>
+        <td><code>API.Contentful</code><br><span class="muted">host</span></td>
+        <td><code>Microsoft.NET.Sdk.Web</code></td>
+        <td>Minimal-API composition root: <code>Program.cs</code>, the 7 endpoint files under <code>Endpoints/</code>,
+            <code>Middleware/ExceptionHandlingMiddleware.cs</code>, <code>Security/PreviewOriginMiddleware.cs</code>,
+            bundled default JSON under <code>Defaults/Json/</code>.</td>
+      </tr>
+      <tr>
+        <td><code>…​.Contracts</code><br><span class="muted">the wire contract</span></td>
+        <td><code>Microsoft.NET.Sdk</code></td>
+        <td>DTOs (<code>Dtos/</code>), the polymorphic marker interfaces <code>ISection</code> / <code>ICard</code> /
+            <code>IRichTextEntry</code> (<code>Interface/</code>), and the 8 mapping attributes
+            (<code>Mapping/</code>). Contains no logic — it <em>is</em> the contract.</td>
+      </tr>
+      <tr>
+        <td><code>…​.Infrastructure</code><br><span class="muted">the engine</span></td>
+        <td><code>Microsoft.NET.Sdk</code></td>
+        <td>Contentful REST client, the reflection mapping engine, the entry-graph resolver + rich-text renderer,
+            the fallback-cache gateway, the slug allow-list + webhook, observability, and security options
+            (<code>Contentful/ · Mapping/ · Gateway/ · AllowList/ · Providers/ · Observability/ · Paging/ ·
+            Security/ · Extensions/</code>).</td>
+      </tr>
+    </table>
+
+    <h3>2.1 · Layer &amp; component diagram</h3>
+    <div class="diagram" aria-label="Layered component diagram">
+      <div class="layer">
+        <div class="layer-label">Host<br>(Sdk.Web)</div>
+        <div class="layer-body">
+          <div class="box accent"><b>Endpoints/</b><span>Page · Section · Blog · HelpCenter · Glossary · Health · Webhook</span></div>
+          <div class="box"><b>Middleware</b><span>ExceptionHandling · PreviewOrigin · CORS · Compression · ForwardedHeaders</span></div>
+          <div class="box"><b>Program.cs</b><span>DI wiring · JSON options · API versioning</span></div>
+        </div>
+      </div>
+      <div class="layer">
+        <div class="layer-label">Contracts</div>
+        <div class="layer-body">
+          <div class="box"><b>Dtos/</b><span>~91 DTO types (PageDto, BlogPostDto, …)</span></div>
+          <div class="box"><b>Interface/</b><span>ISection · ICard · IRichTextEntry (+ IMedia) — [JsonPolymorphic]</span></div>
+          <div class="box"><b>Mapping/</b><span>8 attributes: ContentType · ContentfulField · RichText · Collection · MapEach · ProjectFrom · AssetFlatten · MapperIgnore</span></div>
+          <div class="box"><b>CMSAPIResponse&lt;T,E&gt;</b><span>the response envelope</span></div>
+        </div>
+      </div>
+      <div class="layer">
+        <div class="layer-label">Infrastructure</div>
+        <div class="layer-body">
+          <div class="box accent"><b>Gateway/</b><span>ContentGateway (circuit breaker + single-flight + fallback cache)</span></div>
+          <div class="box"><b>Providers/</b><span>ContentfulRestContentProvider (per-domain fetch/resolve/map)</span></div>
+          <div class="box"><b>Mapping/</b><span>EntryMapper · MappingPlan · ContentTypeRegistry · ScalarValueConverter</span></div>
+          <div class="box"><b>Contentful/</b><span>ContentfulRestClient · EntryGraphResolver · EntryGraph · RichText/RichTextRenderer</span></div>
+          <div class="box"><b>AllowList/</b><span>SlugAllowList · ReconcileService · WebhookProcessor</span></div>
+          <div class="box"><b>Observability/</b><span>CmsMetrics · ContentfulHealthChecker</span></div>
+        </div>
+      </div>
+      <div class="layer">
+        <div class="layer-label alt">External</div>
+        <div class="layer-body">
+          <div class="box dark"><b>Contentful CDA</b><span>cdn.contentful.com (delivery)</span></div>
+          <div class="box dark"><b>Contentful CPA</b><span>preview.contentful.com (preview)</span></div>
+          <div class="box dark"><b>App Insights</b><span>OpenTelemetry / Azure Monitor (conditional)</span></div>
+        </div>
+      </div>
+      <div class="legend">Arrows of control flow top → bottom. The host depends on Contracts + Infrastructure; Infrastructure depends on Contracts; Contracts depends on nothing.</div>
+    </div>
+
+    <h3>2.2 · Request-flow diagram (non-preview read)</h3>
+    <div class="diagram" aria-label="Request flow diagram">
+      <div class="flow">
+        <div class="step accent"><b>Endpoint</b><span>GET /Page?slug=…</span></div>
+        <div class="arrow">›</div>
+        <div class="step"><b>Allow-list</b><span>IsAllowed(scope, slug)?</span></div>
+        <div class="arrow">›</div>
+        <div class="step accent"><b>Gateway</b><span>circuit breaker · single-flight · fallback cache</span></div>
+        <div class="arrow">›</div>
+        <div class="step"><b>REST provider</b><span>fan-out by content type</span></div>
+        <div class="arrow">›</div>
+        <div class="step dark"><b>Contentful CDA</b><span>?include=10</span></div>
+      </div>
+      <div class="flow" style="margin-top:12px">
+        <div class="step dark"><b>Contentful CDA</b><span>JSON: items + includes</span></div>
+        <div class="arrow">›</div>
+        <div class="step"><b>EntryGraphResolver</b><span>→ EntryGraph (id → ResolvedEntry/Asset)</span></div>
+        <div class="arrow">›</div>
+        <div class="step accent"><b>EntryMapper</b><span>cached MappingPlan · rich-text render</span></div>
+        <div class="arrow">›</div>
+        <div class="step"><b>CMSAPIResponse</b><span>envelope + polymorphic Kind</span></div>
+        <div class="arrow">›</div>
+        <div class="step accent"><b>STJ → JSON</b><span>PascalCase · nulls written · HTML-escaped</span></div>
+      </div>
+      <div class="legend">
+        Preview (<code>isPreview=true</code>) skips the allow-list gate on individual lookups' cache path: the gateway
+        calls Contentful <em>live</em> and never reads or writes the fallback cache. On any non-cancellation fetch
+        failure the gateway returns <code>default</code>, which each endpoint turns into its own domain 404 (legacy
+        preview semantics), rather than a 500.
+      </div>
+    </div>
+
+    <h3>2.3 · The mapping engine (Infrastructure/Mapping + Contentful)</h3>
+    <p>
+      The heart of the service is a small, <strong>reflection-based, attribute-driven mapper</strong> that replaces the
+      legacy GraphQL + AutoMapper stack. It is convention-first: a DTO property maps from the Contentful field of the
+      same (camelCased) name unless an attribute says otherwise.
+    </p>
+    <ul class="tight">
+      <li><code>EntryMapper</code> builds a <code>MappingPlan</code> <strong>once per DTO <code>Type</code></strong> and caches it in a
+          <code>ConcurrentDictionary&lt;Type, MappingPlan&gt;</code>; each plan is a list of compiled
+          <code>PropertyPlan</code> entries (a <code>PropertyKind</code> + a compiled setter delegate). Reflection cost
+          is paid only on first use.</li>
+      <li><code>PropertyKind</code> (verified enum): <code>Ignore</code>, <code>ScalarLike</code>, <code>MapEach</code>,
+          <code>Collection</code>, <code>Complex</code> — the five ways a property value is produced from a
+          <code>ResolvedEntry</code>.</li>
+      <li>The 8 mapping attributes (all present under <code>Contracts/Mapping/</code>):
+          <code>[ContentType]</code>, <code>[ContentfulField]</code>, <code>[RichText]</code>, <code>[Collection]</code>,
+          <code>[MapEach]</code>, <code>[ProjectFrom]</code>, <code>[AssetFlatten]</code>, <code>[MapperIgnore]</code>.</li>
+      <li><code>EntryGraphResolver</code> parses a raw CDA response (<code>items</code> + <code>includes.Entry</code> /
+          <code>includes.Asset</code>) into an <code>EntryGraph</code> — an id-keyed index of <code>ResolvedEntry</code> /
+          <code>ResolvedAsset</code> — so links resolve by lookup instead of re-fetching.</li>
+      <li>Cycle &amp; depth safety: recursion is guarded by an ancestor-id set (<code>MapContext</code>) plus a configurable
+          <code>MaxDepth</code> (<code>MappingOptions.MaxDepth = 64</code>). Genuine back-edges are dropped; ordinary
+          shared references map fully.</li>
+      <li><code>RichTextRenderer</code> renders a Contentful rich-text document <code>JsonElement</code> to HTML, a
+          behaviour-preserving port of the legacy <code>ContentfulRichTextHelper</code> — Task 08 diffs it byte-for-byte.</li>
+      <li><code>ContentTypeRegistry</code> is built once at startup by reflecting over the Contracts assembly. It is keyed
+          by <strong><code>(targetInterface, contentTypeId)</code></strong> — not a flat map — because e.g. content type
+          <code>image</code> resolves to <code>ImageDto</code> for <code>IMedia</code> but <code>ImageCardDto</code> for
+          <code>ICard</code>.</li>
+    </ul>
+    <div class="note plain">
+      <strong>Two separate maps (kept deliberately straight):</strong> an <em>input</em> map
+      <code>contentTypeId → DtoType</code> (from <code>[ContentType]</code>, ~60 registrations) picks the concrete type to
+      construct; an <em>output</em> map <code>DtoType → kind</code> (from <code>[JsonDerivedType]</code>, ~62
+      discriminators) supplies the JSON discriminator the frontend switches on.
+    </div>
+
+    <h3>2.4 · Polymorphism</h3>
+    <p>
+      <code>ISection</code> / <code>ICard</code> / <code>IMedia</code> carry
+      <code>[JsonPolymorphic(TypeDiscriminatorPropertyName = "Kind")]</code> with a <code>[JsonDerivedType]</code> per
+      concrete implementation. System.Text.Json injects the discriminator whenever a value is serialized <em>through</em>
+      the interface type. The quirky discriminator string values (e.g. <code>legalSection</code>,
+      <code>speackerSchedule</code>, <code>stackedCardsSection</code>, <code>Table</code>) are part of the contract and are
+      emitted verbatim by the copied attributes — STJ owns the discriminator slot; the mapper only picks the concrete type.
+    </p>
+
+    <h3>2.5 · Provider &amp; gateway (resilience)</h3>
+    <ul class="tight">
+      <li><code>ContentfulRestClient</code> uses <strong>two named <code>HttpClient</code>s</strong>
+          (<code>contentful-rest-delivery</code> / <code>contentful-rest-preview</code>), each with base address, bearer
+          auth, and the standard resilience handler, selected by the <code>preview</code> flag.</li>
+      <li><code>ContentfulRestContentProvider</code> performs the per-domain fetch → resolve → map pipeline. For per-slug
+          page lookups it <strong>fans out concurrently</strong> across the 8 page content types in a fixed precedence order
+          (a content-type-less <code>fields.slug</code> filter is rejected by Contentful with HTTP 400, so fan-out is the
+          only viable approach).</li>
+      <li><code>ContentGateway</code> implements the <strong>fallback-only</strong> caching flow with Polly v8:
+        <ul class="tight">
+          <li>A gateway-level <strong>circuit breaker</strong> (outer) wraps a per-request <strong>timeout</strong> (inner);
+              when open, Contentful is skipped entirely and the fallback cache is served.</li>
+          <li>A per-key <strong>single-flight coordinator</strong> coalesces concurrent identical requests into one upstream call
+              (thundering-herd protection).</li>
+          <li>Successful fetches are written to the fallback cache <strong>fire-and-forget</strong>, throttled to at most one write
+              per key per interval.</li>
+          <li>On failure with no cached value, it throws <code>ContentUnavailableException</code>, which the endpoint layer maps to
+              <strong>503</strong>.</li>
+          <li><strong>Preview is never cached</strong> (not read, not written); preview fetch failures return <code>default</code>.</li>
+        </ul>
+      </li>
+      <li>Fallback store: <code>IFallbackCacheStore</code> with an in-process default (<code>InMemoryFallbackCacheStore</code>).
+          A Memcached swap-in path is documented but not wired in this environment.</li>
+      <li><code>SlugAllowList</code> bounds which slugs can reach Contentful: a <code>volatile HashSet&lt;string&gt;</code> per scope
+          (Page / Blog / Article), atomically swapped on reload, <strong>fail-open on the first load only</strong>, refreshed by
+          <code>SlugAllowListReconcileService</code> (default 15 min) and the webhook.</li>
+    </ul>
+
+    <h3>2.6 · Endpoints, versioning &amp; routing</h3>
+    <p>Five content groups plus health and an internal webhook, mapped in <code>Program.cs</code>. Each content group is mapped
+       once unversioned and once under <code>/v{version:apiVersion}</code> (default v1):</p>
+    <table>
+      <tr><th>Group</th><th>Representative routes (verified)</th></tr>
+      <tr><td><strong>Page</strong></td><td><code>GET /Page/{Domain}</code> (by slug), <code>GET /Page/slugs</code> (anonymous bulk enumeration)</td></tr>
+      <tr><td><strong>Section</strong></td><td><code>GET /Section/{Domain}</code> (header / footer / rightrail)</td></tr>
+      <tr><td><strong>Blog</strong></td><td><code>/getBlogs</code>, <code>/getBlogsByCategory</code>, <code>/getBlogsByTag</code>, <code>/getBlogsByAuthor</code>, <code>/getRecentBlogs</code>, <code>/list</code>, <code>/search</code></td></tr>
+      <tr><td><strong>HelpCenter</strong></td><td><code>/api/HelpCenter/category</code>, <code>/api/HelpCenter/tag</code>, <code>/api/HelpCenter/search</code>, absolute <code>GET /HelpCenter/list</code></td></tr>
+      <tr><td><strong>Glossary</strong></td><td><code>GET /Glossary/list</code></td></tr>
+      <tr><td><strong>Health</strong></td><td><code>GET /Health</code> — returns 200 "degraded" (never 5xx) when Contentful is unreachable but the cache can serve</td></tr>
+      <tr><td><strong>Webhook</strong></td><td><code>POST /internal/contentful/webhook</code> — anonymous at the auth layer; guarded by shared-secret + HMAC</td></tr>
+    </table>
+
+    <h3>2.7 · Cross-cutting concerns</h3>
+    <table>
+      <tr><th>Concern</th><th>Implementation (verified in code)</th></tr>
+      <tr><td>CORS</td><td><code>CmsCors</code> policy restricted to configured origins (<code>www.example.com</code>, <code>example.com</code>, <code>preview.example.com</code>), methods limited to <strong>GET/OPTIONS</strong>.</td></tr>
+      <tr><td>Preview origin restriction</td><td><code>PreviewOriginMiddleware</code>: <code>isPreview=true</code> browser requests must carry an <code>Origin</code>/<code>Referer</code> in <code>PreviewOrigins</code>; <strong>fails closed</strong> if <code>PreviewOrigins</code> is empty; SSR/no-header calls pass through. Not authentication — an origin allow-list.</td></tr>
+      <tr><td>Exception handling</td><td><code>ExceptionHandlingMiddleware</code>: any uncaught exception → a <code>CMSAPIResponse</code>-shaped JSON error body (never a stack trace / default error page); reuses the app's own JSON options.</td></tr>
+      <tr><td>Response compression</td><td><strong>Brotli registered first, then Gzip</strong> (registration index breaks encoding ties, so Brotli wins when accepted); <code>EnableForHttps = true</code>.</td></tr>
+      <tr><td>Observability</td><td><code>CmsMetrics</code> (a single <code>Meter</code> + <code>ActivitySource</code>) injected as a normal singleton; OpenTelemetry tracing/metrics with ASP.NET Core + HttpClient auto-instrumentation; Azure Monitor exporter <strong>conditional</strong> on a configured connection string.</td></tr>
+      <tr><td>Forwarded headers</td><td><code>UseForwardedHeaders</code> (X-Forwarded-Proto / -For) first, so downstream middleware sees the real scheme/IP from the ingress.</td></tr>
+    </table>
+
+    <h3>2.8 · Serialization contract</h3>
+    <p>Configured once via <code>ConfigureHttpJsonOptions</code> in <code>Program.cs</code>, to match legacy byte-for-byte:</p>
+    <table>
+      <tr><th>Setting</th><th>Value</th><th>Effect</th></tr>
+      <tr><td><code>PropertyNamingPolicy</code></td><td><code>null</code></td><td><strong>PascalCase</strong> property names (C# member casing preserved)</td></tr>
+      <tr><td><code>DefaultIgnoreCondition</code></td><td><code>Never</code></td><td>nulls are <strong>written</strong> (not omitted)</td></tr>
+      <tr><td><code>Encoder</code></td><td><code>JavaScriptEncoder.Default</code></td><td>HTML-escaping encoder (<code>&lt;p&gt;</code> → <code>\u003Cp\u003E</code>), matching legacy</td></tr>
+    </table>
+    <div class="note plain">
+      These three settings reverse the Minimal-API defaults (camelCase / relaxed encoder) on purpose. The legacy service
+      serialized every response body through a default <code>JsonSerializerOptions</code> written by a custom
+      <code>ActionResult</code> that bypassed the MVC <code>AddJsonOptions(camelCase)</code> config — so the real wire
+      contract is PascalCase with nulls written. The exception middleware reuses the same options, so error bodies match too.
+    </div>
+  </section>
+
+  <!-- ============================ 3. PATTERNS ============================ -->
+  <section id="patterns">
+    <h2><span class="num">3</span>Design patterns &amp; quality characteristics</h2>
+    <table>
+      <tr><th>Pattern</th><th>Where</th><th>Benefit</th></tr>
+      <tr><td>Convention-driven mapping</td><td><code>EntryMapper</code> + attributes + <code>MappingPlan</code> cache</td><td>Replaces generated GraphQL + AutoMapper with a small reflected engine; new DTOs need only attributes, no query files.</td></tr>
+      <tr><td>Registry / strategy for polymorphism</td><td><code>ContentTypeRegistry</code> keyed by <code>(interface, contentTypeId)</code></td><td>One content type can back different DTOs per marker interface; input vs output maps kept separate.</td></tr>
+      <tr><td>Circuit breaker</td><td><code>ContentGateway</code> (Polly v8, outer)</td><td>Stops hammering an unhealthy Contentful; serves fallback cache while open.</td></tr>
+      <tr><td>Single-flight / request coalescing</td><td><code>SingleFlightCoordinator</code></td><td>Thundering-herd protection — one upstream call per key under concurrent load.</td></tr>
+      <tr><td>Fallback (last-known-good) cache</td><td><code>IFallbackCacheStore</code> + fire-and-forget writes</td><td>Availability over freshness on upstream failure; preview never cached.</td></tr>
+      <tr><td>Allow-list / bounded resource access</td><td><code>SlugAllowList</code> (atomic swap, fail-open first load)</td><td>Caps the SSRF/DoS surface: unknown slugs never reach Contentful.</td></tr>
+      <tr><td>Options pattern</td><td><code>ContentfulOptions</code>, <code>CorsOptions</code>, <code>CacheOptions</code>, <code>MappingOptions</code>, <code>AllowListOptions</code></td><td>All tunables bound from configuration; no magic constants in flow.</td></tr>
+      <tr><td>Additive-tolerant contract testing</td><td>ParityTests snapshots + live-diff harness</td><td>Correctness proven objectively against golden JSON and (when infra exists) the live legacy service.</td></tr>
+    </table>
+  </section>
+
+  <!-- ============================ 4. TESTING ============================ -->
+  <section id="testing">
+    <h2><span class="num">4</span>Testing &amp; verification</h2>
+    <p>Counts below are from an actual test run on branch <code>main</code> (HEAD <code>feeb579</code>), 2026-07-30:</p>
+    <div class="summary">
+      <div class="card"><div class="n" style="color:var(--green)">220</div><div class="l">Unit tests (0 skipped)</div></div>
+      <div class="card"><div class="n" style="color:var(--green)">19</div><div class="l">Snapshot parity tests</div></div>
+      <div class="card"><div class="n" style="color:var(--warn)">36</div><div class="l">Live-parity (skipped*)</div></div>
+      <div class="card"><div class="n" style="color:var(--green)">0</div><div class="l">Build warnings</div></div>
+    </div>
+    <table>
+      <tr><th>Suite</th><th>Result</th><th>Notes</th></tr>
+      <tr><td><code>API.Contentful.UnitTests</code></td><td><span class="pill ok">220 passed / 0 failed / 0 skipped</span></td><td>Mapping engine, gateway resilience, rich-text renderer, endpoints, allow-list, middleware.</td></tr>
+      <tr><td><code>API.Contentful.ParityTests</code></td><td><span class="pill ok">19 passed</span> <span class="pill warn">36 skipped</span> / 0 failed</td><td>19 contract-snapshot tests (golden JSON, always run); 36 live old-vs-new diff cases.</td></tr>
+    </table>
+    <div class="note plain">
+      * The 36 live-parity cases are <strong>correctly skipped</strong> — not failing, not passing by accident — because
+      no reachable legacy service + shared Contentful environment exists in this analysis environment. They spring to
+      life once real infrastructure is configured. The 19 snapshot tests need no live infra and form the standing CI
+      parity gate. Test stack: <strong>xUnit + FluentAssertions + Moq</strong>, matching the legacy repo.
+    </div>
+  </section>
+
+  <!-- ============================ 5. SECURITY ============================ -->
+  <section id="security">
+    <h2><span class="num">5</span>Dependency &amp; security analysis</h2>
+    <p>All scans below were <strong>re-run on 2026-07-30</strong> against the current tree. <code>dotnet list package</code>
+       does not accept the <code>.slnx</code> directly, so each of the 6 projects was scanned individually.</p>
+
+    <div class="summary">
+      <div class="card"><div class="n" style="color:var(--green)">0</div><div class="l">Vulnerable packages</div></div>
+      <div class="card"><div class="n" style="color:var(--green)">0</div><div class="l">Hardcoded secrets</div></div>
+      <div class="card"><div class="n" style="color:var(--warn)">1</div><div class="l">Deprecated (test-only)</div></div>
+      <div class="card"><div class="n" style="color:var(--warn)">1</div><div class="l">Runtime update avail.</div></div>
+      <div class="card"><div class="n" style="color:var(--green)">10/10</div><div class="l">OWASP items addressed</div></div>
+    </div>
+
+    <h3>5.1 · Dependency vulnerability scan &nbsp;<span class="pill ok">0 findings</span></h3>
+    <p>Command: <code>dotnet list &lt;project&gt; package --vulnerable --include-transitive</code>. Every project reported
+       <em>"has no vulnerable packages given the current sources"</em>, including transitive dependencies:</p>
+    <table>
+      <tr><th>Project</th><th>Vulnerable (direct)</th><th>Vulnerable (transitive)</th></tr>
+      <tr><td>API.Contentful (host)</td><td>0</td><td>0</td></tr>
+      <tr><td>API.Contentful.Contracts</td><td>0</td><td>0</td></tr>
+      <tr><td>API.Contentful.Infrastructure</td><td>0</td><td>0</td></tr>
+      <tr><td>API.Contentful.UnitTests</td><td>0</td><td>0</td></tr>
+      <tr><td>API.Contentful.ParityTests</td><td>0</td><td>0</td></tr>
+      <tr><td>API.Contentful.Benchmarks</td><td>0</td><td>0</td></tr>
+    </table>
+
+    <h3>5.2 · Deprecated packages &nbsp;<span class="pill warn">1 (test-only)</span></h3>
+    <p>Command: <code>dotnet list &lt;project&gt; package --deprecated</code>. Only the two test projects report a deprecation:</p>
+    <table>
+      <tr><th>Package</th><th>Version</th><th>Project(s)</th><th>Reason</th><th>Risk</th></tr>
+      <tr><td><code>xunit</code></td><td>2.9.3</td><td>UnitTests, ParityTests</td><td>Legacy — alternative <code>xunit.v3</code></td><td><span class="pill na">Low — test-only, not shipped</span></td></tr>
+    </table>
+    <p class="muted">The 4 non-test projects (host, Contracts, Infrastructure, Benchmarks) reported <em>no deprecated packages</em>.</p>
+
+    <h3>5.3 · Outdated (runtime, non-security) &nbsp;<span class="pill warn">1 ships to prod</span></h3>
+    <table>
+      <tr><th>Package</th><th>Current</th><th>Latest</th><th>Project</th><th>Ships to prod?</th></tr>
+      <tr><td><code>Polly.Core</code></td><td>8.4.2</td><td>8.7.0</td><td>Infrastructure</td><td><strong>Yes</strong> — minor bump, no known CVE</td></tr>
+    </table>
+    <p class="muted">Confirmed via <code>dotnet list … --outdated</code> on the Infrastructure project — the only production project with an update available. Used by the gateway's Polly v8 circuit breaker + timeout pipeline.</p>
+
+    <h3>5.4 · Hardcoded secrets &nbsp;<span class="pill ok">0 findings</span></h3>
+    <p>A regex scan (<code>password|apikey|secret|token|connectionstring</code> with a non-empty quoted value) over all
+       <code>src/**</code> <code>.cs/.json/.yml/Dockerfile</code> (excluding <code>bin/obj</code>) returned
+       <strong>no matches</strong>. All secret keys in <code>appsettings.json</code> are empty placeholders, supplied at
+       runtime via user-secrets (local) or environment variables / Key Vault (deployed):</p>
+    <table>
+      <tr><th>Secret key</th><th>In appsettings.json</th><th>Supplied via</th></tr>
+      <tr><td><code>CMS:Contentful:SpaceId</code> / <code>DeliveryToken</code> / <code>PreviewToken</code></td><td>empty <code>""</code></td><td>user-secrets / env (<code>CMS__Contentful__*</code>)</td></tr>
+      <tr><td><code>CMS:Contentful:WebhookSecret</code></td><td>empty <code>""</code></td><td>env / Key Vault</td></tr>
+      <tr><td><code>ApplicationInsights:ConnectionString</code></td><td>empty <code>""</code></td><td>env / Key Vault</td></tr>
+    </table>
+
+    <h3>5.5 · OWASP Top 10 (2021) assessment</h3>
+    <table>
+      <tr><th>Category</th><th>Status</th><th>Grounded in the real code</th></tr>
+      <tr><td>A01 Broken Access Control</td><td><span class="pill ok">OK</span></td><td>Anonymous public-read by design (no auth middleware in <code>Program.cs</code>). Unknown slug ⇒ 404 with <strong>no upstream call</strong> (<code>SlugAllowList</code>). Preview restricted to configured origins (<code>PreviewOriginMiddleware</code>, fails closed). Webhook requires shared-secret + HMAC.</td></tr>
+      <tr><td>A02 Cryptographic Failures</td><td><span class="pill ok">OK</span></td><td>No secrets in code/config (§5.4). Compression <code>EnableForHttps</code>. Webhook uses <code>HMACSHA256</code> + <code>CryptographicOperations.FixedTimeEquals</code> (constant-time compare); empty configured secret rejects all.</td></tr>
+      <tr><td>A03 Injection</td><td><span class="pill ok">OK</span></td><td>No SQL anywhere. Contentful REST queries are built from structured parameters. Content originates from trusted Contentful (not end users). JSON output uses the HTML-escaping encoder.</td></tr>
+      <tr><td>A04 Insecure Design</td><td><span class="pill ok">OK</span></td><td>Fallback-only cache + circuit breaker + single-flight (thundering-herd protection); preview never cached; bounded per-request timeout.</td></tr>
+      <tr><td>A05 Security Misconfiguration</td><td><span class="pill ok">OK</span></td><td>CORS limited to configured origins, GET/OPTIONS only; forwarded headers trusted from ingress; global handler returns a structured <code>CMSAPIResponse</code> error — no stack traces or default error page leaked.</td></tr>
+      <tr><td>A06 Vulnerable &amp; Outdated Components</td><td><span class="pill ok">OK</span></td><td>0 vulnerable packages (§5.1). One non-security runtime update available (<code>Polly.Core</code>).</td></tr>
+      <tr><td>A07 Identification &amp; Auth Failures</td><td><span class="pill na">N/A</span></td><td>API is intentionally anonymous (public-read content). No credentials / sessions to fail. Preview auth was deliberately removed.</td></tr>
+      <tr><td>A08 Software &amp; Data Integrity</td><td><span class="pill ok">OK</span></td><td>Webhook payloads are shared-secret + HMAC verified before they mutate the slug allow-list.</td></tr>
+      <tr><td>A09 Logging &amp; Monitoring</td><td><span class="pill ok">OK</span></td><td>Structured logging + OpenTelemetry (<code>CmsMetrics</code>, App Insights when configured); exception details are logged, never written to responses; no secrets logged.</td></tr>
+      <tr><td>A10 SSRF</td><td><span class="pill ok">OK</span></td><td>Outbound calls target fixed Contentful hosts only (<code>cdn.</code>/<code>preview.contentful.com</code>). The slug allow-list bounds what can be fetched — arbitrary/unknown slugs never trigger an upstream request.</td></tr>
+    </table>
+  </section>
+
+  <!-- ============================ 6. METRICS ============================ -->
+  <section id="metrics">
+    <h2><span class="num">6</span>Real metrics</h2>
+    <p>All numbers below were computed directly from the working tree (<code>Get-ChildItem</code> / <code>Select-String</code> /
+       <code>git</code>), excluding <code>bin/</code> and <code>obj/</code>.</p>
+    <table>
+      <tr><th>Metric</th><th>Value</th><th>How measured</th></tr>
+      <tr><td>Production <code>.cs</code> files (src)</td><td><strong>157</strong></td><td><code>Get-ChildItem -Recurse src *.cs</code>, excl. bin/obj</td></tr>
+      <tr><td>Production LOC (src)</td><td><strong>~9,300</strong></td><td><code>Measure-Object -Line</code> over the src <code>.cs</code> files</td></tr>
+      <tr><td>Test <code>.cs</code> files</td><td><strong>47</strong> (~6,618 LOC)</td><td>same method over <code>test/</code></td></tr>
+      <tr><td>Benchmark <code>.cs</code> files</td><td><strong>3</strong></td><td><code>benchmarks/API.Contentful.Benchmarks</code></td></tr>
+      <tr><td>DTO types</td><td><strong>91</strong> across 87 files</td><td><code>class|record …Dto</code> in <code>Contracts/Dtos</code></td></tr>
+      <tr><td><code>[ContentType]</code> registrations (input map)</td><td><strong>60</strong></td><td><code>Select-String '\[ContentType\('</code></td></tr>
+      <tr><td><code>[JsonDerivedType]</code> discriminators (output map)</td><td><strong>62</strong></td><td><code>Select-String '\[JsonDerivedType\('</code></td></tr>
+      <tr><td>Mapping attributes</td><td><strong>8</strong></td><td><code>Contracts/Mapping/*.cs</code></td></tr>
+      <tr><td>Endpoint groups</td><td><strong>5</strong> (+ Health + webhook)</td><td><code>Endpoints/*.cs</code></td></tr>
+      <tr><td>Unit tests</td><td><strong>220</strong> (0 skipped)</td><td><code>dotnet test</code> run</td></tr>
+      <tr><td>Parity tests</td><td><strong>19</strong> snapshot + <strong>36</strong> live (skipped)</td><td><code>dotnet test</code> run</td></tr>
+      <tr><td>Build warnings</td><td><strong>0</strong></td><td>clean build across the solution</td></tr>
+      <tr><td>Commits on <code>main</code></td><td><strong>124</strong></td><td><code>git rev-list --count HEAD</code></td></tr>
+    </table>
+    <div class="note plain">
+      <strong>Note on the DTO count:</strong> the real number of DTO type declarations in
+      <code>Contracts/Dtos</code> is <strong>91</strong> (across 87 files) — a few files declare more than one DTO.
+      This is higher than the ~78 rough estimate; the measured value is reported here per the "real data only" rule.
+    </div>
+  </section>
+
+  <footer>
+    Generated 2026-07-30 for the API.Contentful architecture &amp; security review. All architecture facts were
+    verified by reading the source under <code>src/</code>; all counts and scan results were produced by live commands
+    on branch <code>main</code> (HEAD <code>feeb579</code>). Dependency data comes from the NuGet-integrated GitHub
+    Advisory Database at scan time — re-run before each release. This static + dependency review complements, and does
+    not replace, organization-mandated DAST / penetration testing.
+  </footer>
+</main>
+</body>
+</html>

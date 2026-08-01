@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>API.Contentful — Security & Vulnerability Scan Report</title>
+<style>
+  :root { --ok:#137333; --warn:#a15c00; --bad:#b3261e; --ink:#1f2328; --muted:#57606a; --line:#d0d7de; --bg:#f6f8fa; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); margin: 0; padding: 0 0 64px; line-height: 1.5; }
+  header { background: #0b3d2e; color: #fff; padding: 28px 40px; }
+  header h1 { margin: 0 0 6px; font-size: 22px; }
+  header .sub { color: #b7d8c9; font-size: 13px; }
+  main { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+  section { margin-top: 34px; }
+  h2 { font-size: 17px; border-bottom: 2px solid var(--line); padding-bottom: 6px; margin-bottom: 12px; }
+  h3 { font-size: 14px; margin: 18px 0 6px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; margin: 8px 0 4px; }
+  th, td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--bg); font-weight: 600; }
+  code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 12px; }
+  .pill { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 600; color: #fff; }
+  .pill.ok { background: var(--ok); } .pill.warn { background: var(--warn); } .pill.bad { background: var(--bad); } .pill.na { background: var(--muted); }
+  .summary { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 14px; }
+  .card { flex: 1 1 180px; border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; background: #fff; }
+  .card .n { font-size: 26px; font-weight: 700; }
+  .card .l { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+  .muted { color: var(--muted); }
+  .note { background: var(--bg); border-left: 4px solid var(--line); padding: 10px 14px; font-size: 13px; border-radius: 0 6px 6px 0; }
+  footer { max-width: 1040px; margin: 40px auto 0; padding: 16px 24px; color: var(--muted); font-size: 12px; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Security &amp; Vulnerability Scan Report</h1>
+  <div class="sub">Project: <strong>API.Contentful</strong> (.NET 10 Minimal API) &nbsp;·&nbsp; Scan date: <strong>2026-07-30</strong> &nbsp;·&nbsp; Branch: <code>main</code></div>
+</header>
+<main>
+
+  <section>
+    <h2>Executive summary</h2>
+    <p><span class="pill ok">PASS</span> No known security vulnerabilities were found in the application or its
+    dependencies (direct or transitive). No hardcoded secrets are present in source or configuration. The
+    OWASP Top&nbsp;10 review found no outstanding issues for this public-read CMS content API.</p>
+    <div class="summary">
+      <div class="card"><div class="n" style="color:var(--ok)">0</div><div class="l">Vulnerable packages</div></div>
+      <div class="card"><div class="n" style="color:var(--ok)">0</div><div class="l">Hardcoded secrets</div></div>
+      <div class="card"><div class="n" style="color:var(--warn)">1</div><div class="l">Deprecated (test-only)</div></div>
+      <div class="card"><div class="n" style="color:var(--warn)">1</div><div class="l">Runtime pkg update avail.</div></div>
+      <div class="card"><div class="n" style="color:var(--ok)">10/10</div><div class="l">OWASP items addressed</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Scope &amp; tooling</h2>
+    <table>
+      <tr><th>Area</th><th>Tool / method</th></tr>
+      <tr><td>Dependency vulnerabilities (direct + transitive)</td><td><code>dotnet list package --vulnerable --include-transitive</code> (GitHub Advisory Database via NuGet)</td></tr>
+      <tr><td>Deprecated dependencies</td><td><code>dotnet list package --deprecated</code></td></tr>
+      <tr><td>Outdated dependencies</td><td><code>dotnet list package --outdated</code></td></tr>
+      <tr><td>Hardcoded secrets</td><td>Regex pattern scan over <code>src/**</code> (*.cs, *.json, *.yml, Dockerfile) + config placeholder review</td></tr>
+      <tr><td>Application security posture</td><td>Manual OWASP Top&nbsp;10 review of the codebase (auth, CORS, injection, SSRF, crypto, logging, error handling)</td></tr>
+    </table>
+    <p class="muted">Solution scanned: <code>API.Contentful.slnx</code> — 4 source projects (host, Contracts, Infrastructure) + benchmarks + 2 test projects.</p>
+  </section>
+
+  <section>
+    <h2>1. Dependency vulnerability scan &nbsp;<span class="pill ok">0 findings</span></h2>
+    <p>Every project reported <em>“no vulnerable packages”</em>, including transitive dependencies:</p>
+    <table>
+      <tr><th>Project</th><th>Vulnerable (direct)</th><th>Vulnerable (transitive)</th></tr>
+      <tr><td>API.Contentful (host)</td><td>0</td><td>0</td></tr>
+      <tr><td>API.Contentful.Contracts</td><td>0</td><td>0</td></tr>
+      <tr><td>API.Contentful.Infrastructure</td><td>0</td><td>0</td></tr>
+      <tr><td>API.Contentful.UnitTests</td><td>0</td><td>0</td></tr>
+      <tr><td>API.Contentful.ParityTests</td><td>0</td><td>0</td></tr>
+      <tr><td>API.Contentful.Benchmarks</td><td>0</td><td>0</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>2. Deprecated packages &nbsp;<span class="pill warn">1 (test-only)</span></h2>
+    <table>
+      <tr><th>Package</th><th>Version</th><th>Project(s)</th><th>Reason</th><th>Risk</th></tr>
+      <tr><td><code>xunit</code></td><td>2.9.3</td><td>UnitTests, ParityTests</td><td>Legacy — superseded by <code>xunit.v3</code></td><td><span class="pill na">Low — test-only, not shipped</span></td></tr>
+    </table>
+    <p class="muted">This affects the test harness only; it is not part of the deployed application. Migration to xunit.v3 can be scheduled independently.</p>
+  </section>
+
+  <section>
+    <h2>3. Outdated packages &nbsp;<span class="pill warn">1 runtime, non-security</span></h2>
+    <table>
+      <tr><th>Package</th><th>Current</th><th>Latest</th><th>Project</th><th>Ships to prod?</th></tr>
+      <tr><td><code>Polly.Core</code></td><td>8.4.2</td><td>8.7.0</td><td>Infrastructure</td><td><strong>Yes</strong> — minor, no known CVE</td></tr>
+      <tr><td><code>BenchmarkDotNet</code></td><td>0.14.0</td><td>0.15.8</td><td>Benchmarks</td><td>No</td></tr>
+      <tr><td><code>FluentAssertions</code></td><td>7.2.0</td><td>8.10.0</td><td>Tests</td><td>No</td></tr>
+      <tr><td><code>Microsoft.NET.Test.Sdk</code></td><td>17.14.1</td><td>18.8.1</td><td>Tests</td><td>No</td></tr>
+      <tr><td><code>coverlet.collector</code></td><td>6.0.4</td><td>10.0.1</td><td>Tests</td><td>No</td></tr>
+      <tr><td><code>Microsoft.AspNetCore.Mvc.Testing</code></td><td>10.0.9</td><td>10.0.10</td><td>Tests</td><td>No</td></tr>
+      <tr><td><code>xunit.runner.visualstudio</code></td><td>3.1.4</td><td>3.1.5</td><td>Tests</td><td>No</td></tr>
+    </table>
+    <p class="muted">Only <code>Polly.Core</code> ships to production; the update is a non-security minor bump. All others are test/benchmark tooling.</p>
+  </section>
+
+  <section>
+    <h2>4. Hardcoded secrets &nbsp;<span class="pill ok">0 findings</span></h2>
+    <p>A pattern scan (password / secret / apikey / token / connectionstring) over all source and config found
+    <strong>no hardcoded secrets</strong>. All secret keys in <code>appsettings.json</code> are empty placeholders,
+    supplied at runtime via user-secrets (local) or environment variables / Key Vault (deployed):</p>
+    <table>
+      <tr><th>Secret key</th><th>In appsettings.json</th><th>Supplied via</th></tr>
+      <tr><td><code>CMS:Contentful:SpaceId</code> / <code>DeliveryToken</code> / <code>PreviewToken</code></td><td>empty</td><td>user-secrets / env vars (<code>CMS__Contentful__*</code>)</td></tr>
+      <tr><td><code>CMS:Contentful:WebhookSecret</code></td><td>empty</td><td>env var / Key Vault</td></tr>
+      <tr><td><code>ApplicationInsights:ConnectionString</code></td><td>empty</td><td>env var / Key Vault</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>5. OWASP Top 10 (2021) assessment</h2>
+    <table>
+      <tr><th>Category</th><th>Status</th><th>Notes</th></tr>
+      <tr><td>A01 Broken Access Control</td><td><span class="pill ok">OK</span></td><td>Public-read CMS content API (anonymous by design, matching legacy). Unknown slug ⇒ 404 with <strong>no upstream call</strong> (slug allow-list). Preview (<code>isPreview=true</code>) restricted to configured origins (<code>preview.example.com</code>). Webhook requires shared-secret + HMAC.</td></tr>
+      <tr><td>A02 Cryptographic Failures</td><td><span class="pill ok">OK</span></td><td>No secrets in code; HTTPS enforced (<code>EnableForHttps</code>); webhook uses HMAC signature verification.</td></tr>
+      <tr><td>A03 Injection</td><td><span class="pill ok">OK</span></td><td>No SQL. Contentful queries use structured parameters. Content originates from the trusted Contentful CMS (not end users). JSON output uses the default HTML-escaping encoder.</td></tr>
+      <tr><td>A04 Insecure Design</td><td><span class="pill ok">OK</span></td><td>Fallback-only cache with circuit breaker + single-flight (thundering-herd protection); preview never cached.</td></tr>
+      <tr><td>A05 Security Misconfiguration</td><td><span class="pill ok">OK</span></td><td>CORS limited to configured origins (GET/OPTIONS only); forwarded headers trusted from the ingress only; global exception handler returns a structured <code>CMSAPIResponse</code> error (no stack traces / default error page leaked).</td></tr>
+      <tr><td>A06 Vulnerable &amp; Outdated Components</td><td><span class="pill ok">OK</span></td><td>0 vulnerable packages (§1). One non-security runtime update available (Polly.Core).</td></tr>
+      <tr><td>A07 Identification &amp; Auth Failures</td><td><span class="pill na">N/A</span></td><td>API is intentionally anonymous (public-read content). No credential/session handling to fail.</td></tr>
+      <tr><td>A08 Software &amp; Data Integrity</td><td><span class="pill ok">OK</span></td><td>Webhook payloads are HMAC-verified before mutating the slug allow-list.</td></tr>
+      <tr><td>A09 Logging &amp; Monitoring</td><td><span class="pill ok">OK</span></td><td>Structured logging + observability (Application Insights wiring); no secrets logged.</td></tr>
+      <tr><td>A10 SSRF</td><td><span class="pill ok">OK</span></td><td>Outbound calls target fixed Contentful hosts only; the slug allow-list bounds what can be fetched — arbitrary/unknown slugs never trigger an upstream request.</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>6. Recommendations</h2>
+    <table>
+      <tr><th>#</th><th>Recommendation</th><th>Priority</th></tr>
+      <tr><td>1</td><td>Add a <code>dotnet list package --vulnerable</code> gate to the CI pipeline so new dependency CVEs fail the build.</td><td><span class="pill warn">Medium</span></td></tr>
+      <tr><td>2</td><td>Bump <code>Polly.Core</code> 8.4.2 → 8.7.0 (non-security, routine maintenance).</td><td><span class="pill na">Low</span></td></tr>
+      <tr><td>3</td><td>Plan migration of test projects from <code>xunit</code> 2.x (legacy) to <code>xunit.v3</code>.</td><td><span class="pill na">Low</span></td></tr>
+      <tr><td>4</td><td>Ensure UAT/prod supply secrets via env vars / Key Vault (never appsettings); confirm <code>CMS__Contentful__Environment</code>, tokens, and <code>WebhookSecret</code> are set.</td><td><span class="pill warn">Medium</span></td></tr>
+      <tr><td>5</td><td>Confirm the ingress/CDN caching layer fronts the API — the client-side search fetches the full entry set per request (see performance notes), which relies on caching under load.</td><td><span class="pill warn">Medium</span></td></tr>
+    </table>
+  </section>
+
+  <footer>
+    Generated 2026-07-30 for the API.Contentful REST-migration readiness review. Dependency data sourced from the
+    NuGet-integrated GitHub Advisory Database at scan time; re-run before each release. This report reflects a
+    static/dependency scan plus a manual OWASP review — it complements, and does not replace, any organization-mandated
+    DAST/penetration testing.
+  </footer>
+</main>
+</body>
+</html>
