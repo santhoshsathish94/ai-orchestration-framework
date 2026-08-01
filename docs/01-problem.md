@@ -1,14 +1,35 @@
-# Problem
+# 01 — The Problem
 
-This document describes the core challenges that the AI Orchestration Framework is designed to solve.
+## Why another framework?
 
-## Pain Points
+Artificial Intelligence is rapidly becoming part of everyday software development. Engineers use AI to generate code, write tests, explain unfamiliar codebases, review pull requests, create documentation, and automate repetitive tasks.
 
-- Fragmented AI solution delivery across teams and systems
-- Unclear ownership of data, models, and decision workflows
-- Difficulty scaling from pilot projects to enterprise adoption
-- Poor integration between prompt engineering, validation, and governance
+Despite these advances, many engineering teams still struggle to adopt AI consistently and reliably.
 
-## Opportunity
+The problem is not that AI lacks capability.
 
-Clearly defining the problem ensures the framework addresses real-world AI orchestration needs, from end-to-end design to sustainable operations.
+The problem is that software engineering processes were designed for humans, not for human–AI collaboration.
+
+As a result, teams often experience:
+
+* Inconsistent AI outputs.
+* Poor or missing context.
+* Hallucinated implementations.
+* Limited trust in AI-generated changes.
+* Weak validation processes.
+* Unclear ownership and accountability.
+* AI being used as an isolated assistant instead of an integrated engineering capability.
+
+Organizations frequently respond by experimenting with prompts, adopting new models, or switching tools. While these may improve individual productivity, they rarely solve the larger engineering problem.
+
+The challenge is not selecting the best AI model.
+
+The challenge is designing engineering systems that allow AI to operate reliably within existing software delivery processes.
+
+This framework argues that successful AI adoption requires a shift in engineering thinking.
+
+Rather than treating AI as a replacement for engineers, it should be treated as another engineering capability that participates within structured workflows, clear governance, measurable validation, and continuous feedback.
+
+Only then can AI become a dependable part of software delivery instead of an unpredictable assistant.
+
+This framework exists to define that engineering approach.
