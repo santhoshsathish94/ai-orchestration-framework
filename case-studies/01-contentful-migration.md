@@ -14,6 +14,10 @@ rewrite was implemented by AI; a single engineer directed the work, made every j
 independently verified each result against real, running systems. The whole migration was
 completed in about a day and validated against live traffic before a phased cutover.
 
+## Contentful migration model
+
+![Content Migration Model](../assets/contentful-migration.png)
+
 ## Why we migrated
 
 - **The GraphQL integration was heavy and brittle.** ~7,800 lines across 200+ files of hand-written,
