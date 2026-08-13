@@ -1,7 +1,7 @@
 # 01 — Contentful API Migration: Case Study
 
 **Current CMS API (GraphQL) → Migrated CMS API (REST)** · .NET 9 MVC → .NET 10 Minimal API
-**Built entirely by AI, directed and verified by a single engineer.**
+**A large migration made far more achievable — and much faster — with AI.**
 
 ## Summary
 
@@ -9,10 +9,11 @@ The CMS content API that powers the company's public website (pages, sections, b
 glossary) was rewritten from the ground up: from a GraphQL integration against Contentful to a REST (Content
 Delivery/Preview API) integration, and from .NET 9 MVC controllers to .NET 10 Minimal APIs. The
 public contract — every route, JSON shape, and response envelope — was preserved exactly, so no
-consumer (the website, and anything else calling the API) needed to change. Every line of the
-rewrite was implemented by AI; a single engineer directed the work, made every judgment call, and
-independently verified each result against real, running systems. The whole migration was
-completed in about a day and validated against live traffic before a phased cutover.
+consumer (the website, and anything else calling the API) needed to change. AI carried most of the
+rewrite; the work still needed human judgment to set direction and to independently verify each
+result against real, running systems. What stands out is not who wrote the code — it is how much AI
+lowered the barrier: the whole migration was completed in about a day and validated against live
+traffic before a phased cutover.
 
 ## Contentful migration model
 
@@ -33,9 +34,10 @@ completed in about a day and validated against live traffic before a phased cuto
   metrics or alerts.
 - **The stack was aging.** .NET 9 plus a hand-rolled GraphQL client was slower under load and harder
   to extend than a modern Minimal API stack.
-- **A manual rewrite was estimated at 8–10 weeks of team effort.** One engineer wanted to prove
-  that AI, doing all of the implementation under close human direction and verification, could
-  deliver the same result safely, in a fraction of the time and with no dedicated team.
+- **A manual rewrite was estimated at 8–10 weeks of team effort.** The goal was to see whether AI,
+  handling the implementation under close human direction and verification, could deliver the same
+  result safely in a fraction of the time — lowering the barrier to the work, not proving any one
+  person's or tool's prowess.
 
 ## What changed
 
@@ -51,9 +53,10 @@ completed in about a day and validated against live traffic before a phased cuto
 
 ## How we did it
 
-Every task below was implemented by AI. The one engineer involved never wrote migration code by
-hand — the role was to set direction, make judgment calls, and independently verify each result
-against real, running systems before trusting it.
+AI carried most of the implementation below; the work still needed human judgment to set direction,
+make the calls, and independently verify each result against real, running systems before trusting
+it. The takeaway is not the split of labor — it is that AI made a migration this size approachable in
+a fraction of the usual effort.
 
 1. **Locked one non-negotiable rule:** the public contract (routes, DTO shapes, `CMSAPIResponse`
    envelope, JSON casing) could not change. Every other decision was subordinate to this.
@@ -84,11 +87,10 @@ against real, running systems before trusting it.
    environment side by side with the Current CMS API on UAT under the same content and traffic
    patterns, registered a second Contentful webhook so both services' allow-lists stayed current
    during the transition, and kept the Current CMS API warm and instantly reinstatable after the flip.
-7. **Every judgment call stayed with the engineer, not the AI** — e.g. deciding which live
-   differences were acceptable improvements vs. real regressions. Nothing was accepted on the AI's
-   word alone: each task's code, tests, and live behavior were independently checked against the
-   real, running systems before merging, rather than trusting generated code or documentation at
-   face value.
+7. **Judgment stayed human** — e.g. deciding which live differences were acceptable improvements vs.
+   real regressions. Nothing was accepted on the AI's word alone: each task's code, tests, and live
+   behavior were independently checked against the real, running systems before merging, rather than
+   trusting generated code or documentation at face value.
 
 ## Results
 
@@ -104,7 +106,7 @@ against real, running systems before trusting it.
 | Typical content page, under load | 667 ms | **189 ms (3.5× faster)** |
 | Invalid / unknown-slug requests | ~70 ms (still reached Contentful) | **~8 ms**, rejected before any Contentful call |
 | Response payload size | baseline JSON | **~63% smaller on average** (Brotli; up to 85% on the largest page) |
-| Delivery time | ~8–10 weeks (team estimate) | **~1 day** — built by AI, directed by one engineer |
+| Delivery time | ~8–10 weeks (team estimate) | **~1 day** — AI carried the implementation, with human direction and verification |
 
 ## Key takeaways
 
@@ -113,12 +115,12 @@ against real, running systems before trusting it.
 - **Decoupling the wire contract from the source system** (DTOs plus mapping attributes, independent
   of Contentful's field names) means future content-model changes are a small, low-risk edit instead
   of a new hand-written converter.
-- **Small, independently-verifiable steps with a hard build/test gate at each merge** made it safe
-  for AI to do all of the implementation quickly, with a single engineer directing and verifying
-  rather than writing code by hand.
-- **One engineer plus AI replaced what the internal estimate assumed would need a multi-person
-  team.** The limiting factor was having an objective way to verify AI-generated changes, not
-  engineering headcount.
+- **Small, independently-verifiable steps with a hard build/test gate at each merge** are what let
+  AI carry the implementation quickly and safely, with people directing and verifying rather than
+  writing the code by hand.
+- **AI made this achievable with far less effort than the internal multi-week, multi-person estimate
+  assumed.** The limiting factor was having an objective way to verify the changes, not engineering
+  headcount — AI lowered the barrier; the parity harness kept it safe.
 - **A staged, reversible cutover** (shadow run → dual webhook → gradual flip → warm rollback target)
   meant the migration only ever carried as much production risk as each stage's own evidence justified.
 - The full history is traceable commit-by-commit in this repository's git log.

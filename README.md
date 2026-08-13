@@ -46,6 +46,8 @@ This framework helps organizations:
 
 📖 [AI Orchestration Model](docs/04-framework.md)
 
+📖 [Practices & Field Lessons](docs/11-practices.md)
+
 📖 [Case Studies](case-studies/)
 
 📖 Enterprise Adoption *(Coming Soon)*
@@ -66,12 +68,13 @@ examples/
 
 ## Current Status
 
-🚧 **Version 0.1** — Foundation
+🚧 **Version 0.2** — Foundation
 
 * ✅ AI Orchestration Model
 * ✅ Philosophy
 * ✅ Principles
-* 🚧 First Production Case Study
+* ✅ Real-World / Evidence-Based Case Studies (2)
+* ✅ Practices & Field Lessons
 * ⏳ Enterprise Adoption Guide
 
 ---
@@ -88,4 +91,4 @@ examples/
 
 GitHub: https://github.com/santhoshsathish94/ai-orchestration-framework
 
-Built from real-world engineering experience and continuously evolving through production case studies.
+Built from real-world engineering experience and continuously evolving through evidence-based case studies.
