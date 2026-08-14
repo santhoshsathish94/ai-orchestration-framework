@@ -5,16 +5,15 @@ All notable changes to this project will be documented in this file.
 ## v0.2.0 — 2026-08-14
 
 ### Added
-- Case study 02 — "Fixing a React Server Components Memory Leak Upstream," a real-world, evidence-based contribution to upstream React.
-- `docs/11-practices.md` — Practices & Field Lessons (focus over parallelism; understand before fixing).
+- Case study 02 — "Fixing a React Server Components Memory Leak Upstream," a real-world contribution to upstream React, with a visual of the progression: production OOM → workaround → continued investigation → root cause → validated fix → upstream contribution.
+- `docs/field-practices.md` — field lessons (focus over parallelism; understand before fixing; a workaround is not the destination).
 
 ### Changed
 - Reworked the case-study voice across case studies 01 and 02 to emphasize that AI lowers the barrier to meaningful work (removed "built entirely by AI" / single-engineer framing).
-- Renamed the "Production Case Studies" milestone to "Real-World / Evidence-Based Case Studies."
-- Linked Practices & Field Lessons from the README and bumped the project version to 0.2.0.
+- Renamed the case-studies milestone to "Real-World Engineering Case Studies" and refreshed the README status/navigation for v0.2.0.
 
 ### Fixed
-- Resolved duplicate `05` documentation numbering (Practices moved to `docs/11-practices.md`).
+- Resolved duplicate `05` documentation numbering (Practices moved out of the numbered sequence to `docs/field-practices.md`).
 
 ## v0.1.0
 

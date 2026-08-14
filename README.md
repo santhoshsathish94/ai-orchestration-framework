@@ -46,7 +46,7 @@ This framework helps organizations:
 
 📖 [AI Orchestration Model](docs/04-framework.md)
 
-📖 [Practices & Field Lessons](docs/11-practices.md)
+📖 [Practices & Field Lessons](docs/field-practices.md)
 
 📖 [Case Studies](case-studies/)
 
@@ -68,12 +68,12 @@ examples/
 
 ## Current Status
 
-🚧 **Version 0.2** — Foundation
+**Version 0.2.0** — Evidence & Field Practices
 
 * ✅ AI Orchestration Model
 * ✅ Philosophy
 * ✅ Principles
-* ✅ Real-World / Evidence-Based Case Studies (2)
+* ✅ Real-World Engineering Case Studies (2)
 * ✅ Practices & Field Lessons
 * ⏳ Enterprise Adoption Guide
 

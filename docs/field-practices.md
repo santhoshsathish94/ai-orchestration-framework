@@ -80,6 +80,39 @@ fix-first is a prompt.
 
 ---
 
+## Lesson 3 — A workaround is not the destination
+
+> **Stabilize the incident first. Then keep going until you understand the underlying problem.**
+
+### From the field
+
+In the React / Next.js memory-leak investigation, disabling stack-trace capture with
+`--stack-trace-limit=0` stopped the production memory growth and stabilized the application. That was the
+right immediate mitigation — but it was not the end of the investigation.
+
+The workaround removed the symptom while also reducing useful error-stack observability. Continuing
+the investigation revealed the deeper retention mechanism in React Server Components. That made it
+possible to pursue an upstream fix rather than permanently carrying a local workaround.
+
+The resulting contribution was submitted to React so the solution could potentially help other
+applications facing the same class of problem.
+
+### The practice
+
+- **Mitigate first when production is at risk**, but explicitly label the mitigation as temporary.
+- Ask what the workaround is **hiding or disabling**, not only whether it makes the incident stop.
+- Once the system is stable, return to the root-cause investigation with measured evidence.
+- Prefer a **generalized fix** when the underlying defect belongs to a shared framework or dependency.
+- When appropriate, contribute the fix upstream so the learning and solution can benefit the wider
+  ecosystem.
+
+**Reinforces:** [Principle 6 — Validate Outcomes, Not Outputs](03-principles.md) and the framework's
+intent to turn individual engineering incidents into reusable knowledge.
+
+**A workaround resolves an incident. Understanding the root cause can resolve a class of problems.**
+
+---
+
 ## Closing
 
 These lessons share one root: **AI multiplies whatever direction it is given.** Focused intent and a

@@ -1,18 +1,15 @@
 # 02 — Fixing a React Server Components Memory Leak Upstream: Case Study
 
-**Production OOM incidents → root-caused and fixed in React's `react-server` (Flight)**
-**An open-source contribution: reproduced, diagnosed, patched, and filed upstream.**
-**A meaningful upstream fix made far more achievable — and much faster — with AI.**
+**Production OOM → workaround → root cause → validated fix → open-source contribution**
+**An AI-assisted investigation that did not stop when the production incident was stabilized.**
 
 ## Summary
 
 A production Next.js 16 App Router application under real traffic was crashing with out-of-memory
 (OOM) errors: server memory grew without bound under sustained load until the process died, causing
-recurring production incidents and delaying releases. The only thing keeping it alive was a blunt
-interim workaround — a global Node flag (`NODE_OPTIONS=--stack-trace-limit=0`) that strips error-stack
-detail everywhere.
+recurring production incidents and delaying releases. The immediate mitigation was a blunt workaround — a global Node flag (`NODE_OPTIONS=--stack-trace-limit=0`) that stopped the memory growth but also strips error-stack detail everywhere.
 
-Rather than living with the workaround, the leak was traced to its true source — not in the
+The workaround stabilized production, but the investigation continued. Rather than living with the workaround, the leak was traced to its true source — not in the
 application or Next.js's own code, but one layer deeper, in React's Server Components renderer
 (`react-server`, the "Flight" server) — and fixed there so every consumer of the library benefits.
 AI carried much of the loop: building a minimal reproduction, making the leak measurable, isolating
@@ -21,9 +18,13 @@ reproduction repository. That is what made a fix like this practical to attempt 
 took human judgment to set the direction and to check each result against real, measured behavior
 before trusting it.
 
-The fix is a personal open-source contribution, filed as a **CI-green pull request awaiting maintainer
-review — not yet merged**. It resolves the React instance of the anti-pattern; the same pattern exists
+The result is a personal open-source contribution, filed as a **CI-green pull request awaiting maintainer
+review — not yet merged**. The goal is broader than fixing one application: if the upstream fix is accepted, other applications using the affected React path can benefit without carrying the same workaround. It resolves the React instance of the anti-pattern; the same pattern exists
 at a second site in Next.js, independently reported by another engineer, and is tracked separately.
+
+![Case Study 02 — React / Next.js memory leak and upstream contribution](../assets/case-study-02-react-rsc-memory-leak.png)
+
+*The visual is intentionally simple: stabilize the incident, continue the investigation, fix the underlying problem, and give the fix back to the ecosystem.*
 
 ## The problem
 
@@ -31,12 +32,18 @@ at a second site in Next.js, independently reported by another engineer, and is 
   and the process eventually crashed — producing production incidents and release delays. (The
   production impact is qualitative here; the quantitative evidence below comes from a public
   reproduction, not the private app.)
-- **The only mitigation was blunt.** `NODE_OPTIONS=--stack-trace-limit=0` bounded the growth but
+- **The immediate mitigation was blunt.** `NODE_OPTIONS=--stack-trace-limit=0` bounded the growth but
   globally strips stack frames from every error, degrading observability across the whole service.
 - **It wasn't only us.** The same symptom is widely reported publicly — e.g. `vercel/next.js#84648`,
   where server memory stays around 15 GB after a 40k-request load test in dynamic-rendering mode, and
   a partial Next.js fix in 16.0.3 did not fully resolve it. The real defect lived deeper than the
   application code.
+
+## The workaround was not the destination
+
+`NODE_OPTIONS=--stack-trace-limit=0` was the practical production mitigation. It stopped the memory growth and restored stability, so it was useful and necessary. But it also globally disabled stack capture, reducing observability for unrelated errors.
+
+That distinction matters to the framework: **mitigate the incident, then keep investigating the cause.** The objective was not simply to make the pods stop crashing; it was to understand why disabling stack capture changed the behavior and determine whether the underlying defect could be fixed without sacrificing stack traces across the application.
 
 ## Root cause
 
@@ -141,11 +148,10 @@ iterated until proven.
 - **A measurable, repeatable harness turned "it leaks" into a provable before/after.** Multi-round
   retained-heap-after-GC is the same "validate outcomes, not outputs" principle as case study 01 —
   applied to memory instead of API parity.
-- **AI can carry the whole investigation-to-PR loop** — reproduction → hypotheses → heap analysis →
-  patch → upstream authoring — with people setting direction and validating each step. The point is
-  the lowered barrier to making this kind of contribution, not the credit.
-- **Root-causing upstream instead of shipping a local workaround** turns a private production incident
-  into an ecosystem-wide fix that every consumer of the library inherits.
+- **AI can carry much of the investigation-to-PR loop** — reproduction → hypotheses → heap analysis →
+  patch → upstream authoring — with people setting direction and validating each step. The value is
+  the lowered barrier to making this kind of contribution, not replacing engineering judgment.
+- **A workaround resolves an incident; root-cause analysis can resolve a class of problems.** The production mitigation stabilized the application, but continuing the investigation enabled an upstream fix that can benefit other consumers of the affected React path.
 - **Independent corroboration** — another engineer's production heap-snapshot diagnosis of the same
   anti-pattern at a different site — is strong evidence the root cause is real, not a quirk of one
   environment.
