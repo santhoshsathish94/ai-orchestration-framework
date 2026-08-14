@@ -1,6 +1,6 @@
 # Philosophy
 
-> **Tagline:** *Transform Intent into Outcomes.*
+> **Tagline:** *Transform Opportunity into Outcomes.*
 
 ## Purpose
 
@@ -8,7 +8,9 @@ The AI Orchestration Framework is founded on a simple belief:
 
 > **AI is another engineering capability that must be orchestrated like any other part of a software system.**
 
-AI should not be viewed as a replacement for engineers, nor as an isolated assistant. Its greatest value comes from being integrated into business and engineering workflows through clear intent, rich context, structured orchestration, and continuous validation.
+AI should not be viewed as a replacement for engineers, nor as an isolated assistant. Its greatest value comes from being integrated into business and engineering workflows through clear understanding, rich context, structured orchestration, and proven outcomes.
+
+The question the framework answers has widened — from *"How do we orchestrate AI agents?"* to *"How do we orchestrate capability — human and AI — so that every cycle produces a better outcome and leaves the system smarter than before?"*
 
 This framework is built on the following philosophy.
 
@@ -80,4 +82,4 @@ It is a philosophy for engineering organizations that want to integrate AI respo
 
 Its objective is simple:
 
-> **Transform Intent into Outcomes.**
+> **Transform Opportunity into Outcomes.**

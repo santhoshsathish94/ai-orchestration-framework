@@ -8,7 +8,7 @@ Rather than focusing on prompts, tools, agents, or individual models, it focuses
 
 ## Core Lifecycle
 
-![AI Orchestration Lifecycle](../assets/ai-orchestration-lifecycle.svg)
+![AI Orchestration Lifecycle](../assets/ai-orchestration-lifecycle.png)
 
 > **Opportunity → Understand → Plan → Execute → Proof → Grow**
 

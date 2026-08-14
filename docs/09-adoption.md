@@ -2,7 +2,7 @@
 
 AI Orchestration Model
 
-Opportunity → Intent → Context → Orchestrate → Validate ↺
+Opportunity → Understand → Plan → Execute → Proof → Grow ↺
 
 This document explores how teams can adopt the AI Orchestration Framework successfully.
 

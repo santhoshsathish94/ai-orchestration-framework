@@ -42,7 +42,7 @@ A data team asks why a synchronization job did not run. AI reads the relevant re
 
 > Reduce unnecessary coordination by making existing organizational knowledge directly accessible.
 
-![Cross-Team Knowledge Access](../assets/reference-cross-team-knowledge-access.svg)
+![Cross-Team Knowledge Access](../assets/reference-cross-team-knowledge-access.png)
 
 ---
 
@@ -92,7 +92,7 @@ The human remains responsible for production approval. The ticket is closed only
 
 **Customer Support Exception**
 
-A recurring customer-facing exception becomes an ADO ticket. AI investigates the exception, identifies the cause, implements a focused fix, validates it in non-production, presents evidence for approval, and verifies the customer-facing signal after production deployment.
+A recurring customer-facing exception becomes a work-tracking ticket. AI investigates the exception, identifies the cause, implements a focused fix, validates it in non-production, presents evidence for approval, and verifies the customer-facing signal after production deployment.
 
 **Performance Spike**
 
@@ -110,7 +110,7 @@ Incorrect report values trigger remediation. AI traces the transformation, fixes
 
 > Move from **"the fix was deployed"** to **"the original problem was proven resolved."**
 
-![Production Exception Remediation](../assets/reference-production-exception-remediation.svg)
+![Production Exception Remediation](../assets/reference-production-exception-remediation.png)
 
 ---
 

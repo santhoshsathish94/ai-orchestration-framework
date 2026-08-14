@@ -18,7 +18,7 @@ The AI Orchestration Framework provides a simple lifecycle for doing that reliab
 
 ## Core Orchestration Lifecycle
 
-![AI Orchestration Lifecycle](assets/ai-orchestration-lifecycle.svg)
+![AI Orchestration Lifecycle](assets/ai-orchestration-lifecycle.png)
 
 > **Opportunity → Understand → Plan → Execute → Proof → Grow**
 
@@ -94,8 +94,7 @@ examples/
 
 **Version 0.2.0** — Evidence & Field Practices
 
-* ✅ AI Orchestration Model
-* ✅ Opportunity → Understand → Plan → Execute → Proof → Grow lifecycle
+* ✅ AI Orchestration Model — Opportunity → Understand → Plan → Execute → Proof → Grow
 * ✅ Philosophy
 * ✅ Principles
 * ✅ Reference Implementations

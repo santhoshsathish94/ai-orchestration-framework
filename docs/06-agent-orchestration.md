@@ -2,7 +2,7 @@
 
 AI Orchestration Model
 
-Opportunity → Intent → Context → Orchestrate → Validate ↺
+Opportunity → Understand → Plan → Execute → Proof → Grow ↺
 
 This document describes how the framework coordinates agents and workflow execution.
 
