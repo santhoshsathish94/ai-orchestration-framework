@@ -4,16 +4,17 @@ AI Orchestration Model
 
 Opportunity → Understand → Plan → Execute → Proof → Grow ↺
 
-This document outlines future priorities for the AI Orchestration Framework.
+This framework is evolving in the open, grounded in real engineering experience. The roadmap is a
+direction, not a promise — it will change as we learn and as people contribute.
 
-## Roadmap Themes
+## Direction
 
-- Build stronger validation and monitoring capabilities
-- Expand governance and policy automation
-- Improve agent orchestration for complex workflows
+- Deepen each stage with practical, adoptable guidance.
+- Add more reference implementations that apply the core lifecycle to common problems.
+- Grow the evidence base with real, honestly-reported case studies.
+- Keep the model simple as it gains depth.
 
-## Next Steps
+## Help shape it
 
-- Define implementation milestones
-- Collect feedback from early users and governance partners
-- Refine the framework based on real deployment learnings
+This is an open, feedback-driven project. Ideas, corrections, and real-world experience are welcome —
+see [Contributing](../CONTRIBUTING.md) for how to raise an issue or a pull request.

@@ -4,16 +4,17 @@ AI Orchestration Model
 
 Opportunity → Understand → Plan → Execute → Proof → Grow ↺
 
-This document explores how teams can adopt the AI Orchestration Framework successfully.
+A framework only matters if teams can actually use it. Adoption is about turning individual skill into
+**collective capability** — organizations do not become AI-enabled because a few people are good at AI.
 
-## Adoption Checklist
+## Grow collective capability
 
-- Align stakeholders on goals, value, and risk
-- Start with pilot use cases and iterate quickly
-- Create shared artifacts for prompts, context, and workflows
+The value compounds when learning, context, and practices are shared — not trapped with whoever
+learned fastest. That takes openness, feedback, and safe room to experiment.
 
-## Change Management
+## In practice
 
-- Provide training and governance support
-- Promote transparency in capabilities, limits, and outcomes
-- Track adoption metrics to measure progress
+- Start with one real, worthwhile problem — not a tool looking for a use.
+- Make the model a habit: Opportunity → Understand → Plan → Execute → Proof → Grow.
+- Share context and lessons so the next team starts ahead of where the last one did.
+- Prefer simple, repeatable workflows over one-off demonstrations.

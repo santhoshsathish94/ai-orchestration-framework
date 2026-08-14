@@ -74,6 +74,8 @@ These are applications of the core lifecycle, not separate frameworks.
 
 📖 [Case Studies](case-studies/)
 
+📖 [Contributing](CONTRIBUTING.md)
+
 📖 Enterprise Adoption *(Coming Soon)*
 
 ---
@@ -92,7 +94,7 @@ examples/
 
 ## Current Status
 
-**Version 0.2.0** — Evidence & Field Practices
+**Version 0.3.0 (in progress)**
 
 * ✅ AI Orchestration Model — Opportunity → Understand → Plan → Execute → Proof → Grow
 * ✅ Philosophy
@@ -100,6 +102,7 @@ examples/
 * ✅ Reference Implementations
 * ✅ Real-World Engineering Case Studies (2)
 * ✅ Practices & Field Lessons
+* ✅ Contributing guide (open to feedback)
 * ⏳ Enterprise Adoption Guide
 
 ---
@@ -109,6 +112,13 @@ examples/
 > **AI is another engineering capability that must be orchestrated like any other part of a software system.**
 
 The goal is not to maximize AI activity. It is to turn capability into coherent outcomes through context, focus, ownership, evidence, and learning.
+
+---
+
+## Contributing
+
+This is an open, feedback-driven project — contributions and honest feedback are welcome. See
+[CONTRIBUTING.md](CONTRIBUTING.md) for how to raise an issue or a pull request, and what we look for.
 
 ---
 
