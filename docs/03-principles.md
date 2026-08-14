@@ -2,100 +2,56 @@
 
 ## Purpose
 
-The philosophy of the AI Orchestration Framework explains **what we believe**.
-
-These principles define **how we consistently apply those beliefs** when orchestrating AI within business and engineering workflows.
+The AI Orchestration Framework defines how humans and AI turn opportunities into measurable outcomes. The lifecycle is simple; the principles make each stage reliable.
 
 ---
 
-## Principle 1 — Start with the Opportunity
+## 1. Start with the Opportunity
 
-Always begin by identifying a business or engineering opportunity where AI can create measurable value.
+Begin with a meaningful business or engineering problem and the outcome worth achieving. Do not start with a model, agent, prompt, or tool simply because it is available.
 
-Do not introduce AI simply because it is available.
+## 2. Understand Before Acting
 
----
+Build sufficient understanding before execution. Gather relevant architecture, business rules, dependencies, telemetry, history, prior attempts, and constraints. Use available organizational knowledge first and identify what is still missing.
 
-## Principle 2 — Define Intent Before Execution
+## 3. Context Before Capability
 
-Clearly define the desired outcome before involving AI.
+AI capability is only useful when it has the context required to reason correctly. Context is a living engineering asset that should improve over time.
 
-Intent establishes the direction and success criteria for the orchestration.
+## 4. Plan for Focus and Ownership
 
----
+Plan the smallest coherent path to the outcome. Parallelize only when work is genuinely independent. Every delegated activity must have clear ownership; delegation must never dissolve accountability.
 
-## Principle 3 — Engineer Context Before Orchestration
+## 5. Orchestrate Work, Not Prompts
 
-Context is a first-class engineering artifact.
+AI should operate inside a structured workflow with defined context, boundaries, tools, decisions, and handoffs. The objective is coherent progress, not maximum AI activity.
 
-Provide AI with the architecture, business rules, constraints, dependencies, policies, and success criteria required for reliable execution.
+## 6. Execute with Ownership
 
-Better context produces better outcomes.
+Humans and AI may share execution, but responsibility for the outcome remains explicit. AI can perform work; humans retain responsibility for risk, governance, and decisions that require human judgment.
 
----
+## 7. Prove Outcomes, Not Activity
 
-## Principle 4 — Orchestrate Workflows, Not Prompts
+A completed task, generated artifact, passing build, or merged PR is not the outcome by itself. Evidence must connect execution back to the original objective and demonstrate that the intended result actually occurred.
 
-AI should participate within structured workflows rather than isolated prompt exchanges.
+## 8. Grow Through Feedback
 
-Reliable orchestration creates repeatable engineering outcomes.
+Every execution should produce learning. Capture what happened, what was missing, what worked, what failed, and what should change. Feed those learnings back into context, workflows, and future orchestration.
 
----
+## 9. Build Collective Capability
 
-## Principle 5 — Keep Humans Responsible
+Knowledge should not remain trapped with a person or team when it can safely become shared organizational context. AI should reduce unnecessary dependency on individual knowledge while preserving appropriate ownership and human collaboration.
 
-Humans remain responsible for intent, governance, validation, and final decisions.
+## 10. Repeat with Better Context
 
-AI augments engineering teams but does not replace engineering accountability.
-
----
-
-## Principle 6 — Validate Outcomes, Not Outputs
-
-Success is measured by the business outcome delivered—not by whether AI generated code, documents, or other artifacts.
-
-Validation should include quality, correctness, security, reliability, and business value.
-
----
-
-## Principle 7 — Measure Business Value
-
-Every orchestration should produce measurable improvements such as:
-
-* Reduced repetitive work
-* Faster delivery
-* Improved quality
-* Lower operational effort
-* Better customer outcomes
-
----
-
-## Principle 8 — Treat Context as a Living Asset
-
-Every orchestration should improve organizational knowledge.
-
-Validation should continuously refine documentation, workflows, context, governance, and engineering practices.
-
----
-
-## Principle 9 — Design for Adoption
-
-Build orchestration that teams can consistently adopt.
-
-Simple, repeatable workflows create greater long-term value than isolated demonstrations.
-
----
-
-## Principle 10 — Every Validation Creates the Next Opportunity
-
-Validation is not the end of the lifecycle.
-
-Every successful orchestration reveals new opportunities to improve additional workflows and create greater organizational value.
+Growth closes the loop. Better context and better orchestration create better understanding for the next opportunity.
 
 ---
 
 ## Summary
 
-These principles guide every implementation of the AI Orchestration Framework regardless of industry, technology stack, or AI platform.
+The framework can be remembered as:
 
-They provide a consistent foundation for transforming opportunities into measurable outcomes through structured orchestration.
+> **Opportunity → Understand → Plan → Execute → Proof → Grow**
+
+The lifecycle is the structure. Context, focus, ownership, evidence, and feedback are what make it work.

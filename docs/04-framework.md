@@ -2,264 +2,234 @@
 
 ## Purpose
 
-The AI Orchestration Model provides a simple, repeatable lifecycle for integrating Artificial Intelligence into business and engineering workflows.
+The AI Orchestration Model is a simple, repeatable lifecycle for integrating AI into business and engineering workflows.
 
-Rather than focusing on prompts, tools, or individual AI models, the model focuses on how organizations systematically transform opportunities into measurable outcomes.
+Rather than focusing on prompts, tools, agents, or individual models, it focuses on how humans and AI turn an opportunity into a measurable outcome and improve the system through learning.
 
-The model is intentionally simple:
+## Core Lifecycle
 
-![AI Orchestration Model](../assets/ai-orchestration-model.png)
+![AI Orchestration Lifecycle](../assets/ai-orchestration-lifecycle.svg)
 
-Every successful AI initiative follows this lifecycle.
+> **Opportunity → Understand → Plan → Execute → Proof → Grow**
 
-Each validation creates new opportunities for continuous improvement, forming an ongoing orchestration loop.
+The lifecycle is intentionally simple. The complexity belongs in the context, ownership, evidence, and feedback surrounding each stage.
 
 ---
 
-# Stage 1 — Opportunity
+## Stage 1 — Opportunity
 
-## Purpose
+Identify the problem or outcome worth pursuing.
 
-Identify business or engineering workflows where AI can create measurable value.
-
-Organizations should not adopt AI because it is available.
-
-They should adopt AI where it improves outcomes.
-
-Typical opportunities include:
-
-* Repetitive engineering tasks
-* Manual business processes
-* Knowledge-intensive workflows
-* Cross-system orchestration
-* Documentation generation
-* Testing and validation
-* Operational automation
+The opportunity should describe why the work matters and what meaningful outcome is expected. A ticket or task can be an input, but it is not the outcome itself.
 
 ### Questions
 
-* What consumes significant time?
-* What work is repetitive?
-* What creates bottlenecks?
-* What could AI improve?
-* How will success be measured?
+- What problem are we solving?
+- Why does it matter?
+- What outcome would make this worthwhile?
+- How will we recognize success?
 
 ### Deliverables
 
-* Opportunity statement
-* Expected business outcome
-* Success metrics
-* Stakeholders
+- Opportunity statement
+- Expected outcome
+- Initial success criteria
+- Relevant stakeholders
 
 ---
 
-# Stage 2 — Intent
+## Stage 2 — Understand
 
-## Purpose
+Build sufficient understanding before acting.
 
-Clearly define the outcome before AI performs any work.
+AI should first gather the context required to reason about the opportunity. This can include repositories, architecture, telemetry, business rules, dependencies, historical incidents, previous attempts, documentation, and organizational knowledge.
 
-Intent represents the human understanding of what success looks like.
-
-AI should never determine intent.
-
-Humans remain responsible for defining goals, priorities, constraints, and desired outcomes.
+If context is missing, the orchestrator should identify the gap and retrieve or request it before execution. The goal is not to collect everything; it is to collect what is necessary to make a sound plan.
 
 ### Questions
 
-* What are we trying to achieve?
-* What does success look like?
-* What constraints exist?
-* What should never change?
-* Who owns the outcome?
+- What happened or what is the current state?
+- What context is required?
+- What do we already know?
+- What is still missing?
+- Who owns the relevant outcome or flow?
+- What constraints must be respected?
 
 ### Deliverables
 
-* Business objective
-* Engineering objective
-* Success criteria
-* Constraints
+- Working context
+- Relevant evidence
+- Known assumptions and gaps
+- Ownership and boundaries
 
 ---
 
-# Stage 3 — Context
+## Stage 3 — Plan
 
-## Purpose
+Choose the focused path to the intended outcome.
 
-Transform intent into engineering context that AI can reliably execute.
+Planning determines what should happen, what should not happen, what can be done independently, and who or what owns each part.
 
-Context is the foundation of successful AI orchestration.
-
-It provides AI with the information required to make informed decisions while reducing ambiguity.
-
-Typical context includes:
-
-* Architecture
-* Existing implementation
-* Business rules
-* API contracts
-* Dependencies
-* Security requirements
-* Coding standards
-* Documentation
-* Data models
-* Acceptance criteria
+Parallelism is used only when work is genuinely independent. More agents or people do not automatically mean faster delivery; coordination cost is part of the plan.
 
 ### Questions
 
-* What information does AI require?
-* What assumptions exist?
-* What dependencies must be respected?
-* What engineering standards apply?
+- What is the smallest coherent path to the outcome?
+- What dependencies exist?
+- What should be done sequentially?
+- What can safely run in parallel?
+- Who owns each part?
+- What decisions require human approval?
 
 ### Deliverables
 
-* Context documents
-* Architecture diagrams
-* Technical specifications
-* Reference implementations
-* Constraints
-* Acceptance criteria
+- Focused execution plan
+- Ownership boundaries
+- Dependencies
+- Validation strategy
+- Approval points
 
 ---
 
-# Stage 4 — Orchestrate
+## Stage 4 — Execute
 
-## Purpose
+Perform the planned work with explicit ownership.
 
-Execute the workflow through structured collaboration between humans and AI.
+Humans and AI can collaborate across analysis, implementation, testing, investigation, documentation, and operational tasks. Delegation does not remove accountability for the outcome.
 
-The objective is not to automate everything.
-
-The objective is to coordinate work so humans and AI each contribute where they provide the greatest value.
-
-AI may assist with:
-
-* Planning
-* Analysis
-* Implementation
-* Testing
-* Documentation
-* Refactoring
-* Review preparation
-
-Humans remain responsible for:
-
-* Engineering decisions
-* Governance
-* Risk management
-* Prioritization
-* Final approval
+Execution should remain observable, attributable, and reversible where practical.
 
 ### Questions
 
-* Which tasks should AI perform?
-* Which decisions require humans?
-* How will work be coordinated?
-* How will progress be tracked?
+- Is the work staying within the planned scope?
+- Is ownership clear?
+- Are assumptions changing?
+- Does new information require replanning?
 
 ### Deliverables
 
-* Execution plan
-* Workflow definition
-* AI tasks
-* Human responsibilities
-* Progress tracking
+- Implemented change or action
+- Execution trace
+- Updated assumptions when required
 
 ---
 
-# Stage 5 — Validate
+## Stage 5 — Proof
 
-## Purpose
+Demonstrate that the intended outcome actually happened.
 
-Verify that the orchestration achieved the intended outcome.
+Proof is stronger than output validation. A generated artifact, successful build, passing test, or merged PR may be necessary, but the orchestration is not complete until evidence connects the work back to the original outcome.
 
-Validation is more than testing.
+Proof can include tests, before/after measurements, telemetry, non-production validation, production signals, user feedback, or other objective evidence.
 
-It measures whether the business objective has been achieved while maintaining engineering quality.
-
-Validation includes:
-
-* Functional correctness
-* Engineering quality
-* Security
-* Performance
-* Reliability
-* Business value
-* User feedback
-
-Validation also captures lessons that improve future orchestrations.
+For production remediation, the loop can continue through deployment and observation until the original production signal is demonstrably resolved.
 
 ### Questions
 
-* Did we achieve the intended outcome?
-* Was quality maintained?
-* What worked well?
-* What should improve?
-* What new opportunities were discovered?
+- Did the original problem actually improve or disappear?
+- What evidence proves it?
+- Was the change safe and within expectations?
+- What remains uncertain?
 
 ### Deliverables
 
-* Validation report
-* Metrics
-* Lessons learned
-* Framework improvements
-* New opportunities
+- Evidence of outcome
+- Validation results
+- Risk and approval evidence where required
+- Outcome status
 
 ---
 
-# Continuous Improvement
+## Stage 6 — Grow
 
-The AI Orchestration Model is intentionally cyclical.
+Turn the experience into better future capability.
 
-Validation produces new knowledge.
+Growth is the feedback and retrospective loop. Capture what was learned, what context was missing, what worked, what failed, and what should change. Update the knowledge base, context, workflows, ownership information, tests, or orchestration rules as appropriate.
 
-That knowledge improves future opportunities, strengthens engineering context, refines orchestration workflows, and increases organizational maturity.
+Growth is not an optional postscript. It is what makes the orchestration system improve over time.
 
-Each execution makes the organization more capable of applying AI effectively.
+### Questions
 
----
+- What did we learn?
+- What context was missing?
+- What should the next human or AI know?
+- What should change in the workflow?
+- What new opportunity did we discover?
 
-# Applying the Model
+### Deliverables
 
-The model is technology independent.
-
-It can be applied to:
-
-* Software Engineering
-* DevOps
-* Quality Assurance
-* Product Management
-* Customer Support
-* Security Operations
-* Finance
-* Human Resources
-* Business Operations
-
-Any workflow can be evaluated using the same lifecycle.
+- Updated organizational context
+- Retrospective / lessons learned
+- Improved workflow or guardrails
+- New opportunities
 
 ---
 
-# Example
+## The Orchestration Loop
 
-The "Project Migration Completed in One Day Using AI" case study demonstrates the complete model.
+```text
+Opportunity
+     ↓
+Understand
+     ↓
+Plan
+     ↓
+Execute
+     ↓
+Proof
+     ↓
+Grow
+     │
+     └──────────────→ Better context → Next Opportunity
+```
 
-| Model Stage | Example                                                                         |
-| ----------- | ------------------------------------------------------------------------------- |
-| Opportunity | Reduce migration effort and delivery time                                       |
-| Intent      | Complete the migration while maintaining production quality                     |
-| Context     | Architecture, API contracts, dependencies, constraints, migration plan          |
-| Orchestrate | Human-guided AI execution using structured workflows                            |
-| Validate    | Functional parity, quality verification, performance, security, lessons learned |
+Knowledge and context support the entire lifecycle. Growth feeds learning back into the next cycle rather than ending the process.
 
 ---
 
-# Key Takeaway
+## Applying the Model
 
-The AI Orchestration Model is not a process for interacting with AI.
+The model is technology independent and can be applied to:
 
-It is an engineering model for integrating AI into organizational workflows in a way that is structured, measurable, repeatable, and continuously improving.
+- Software Engineering
+- DevOps
+- Quality Assurance
+- Production Operations
+- Customer Support
+- Security Operations
+- Product Management
+- Finance
+- Human Resources
+- Business Operations
 
-Its objective is simple:
+### Example: Production Exception Remediation
 
-> **Transform Intent into Outcomes.**
+A production exception can be orchestrated as:
+
+**Opportunity** — resolve a recurring production exception.
+
+**Understand** — read the ticket, inspect logs, code, telemetry, dependencies, history, and existing knowledge before changing anything.
+
+**Plan** — identify root cause, define a focused fix, establish ownership, validation steps, and human approval boundaries.
+
+**Execute** — implement the fix and create the change/PR.
+
+**Proof** — validate in non-production, provide concrete evidence for human approval, deploy, and verify the original production exception resolves.
+
+**Grow** — close only when the production outcome is proven; capture the learning so future incidents can be understood faster.
+
+### Example: Cross-Team Knowledge Gap
+
+A team should not need to contact several teams simply to reconstruct information that already exists in repositories, jobs, telemetry, documentation, or historical context. An AI knowledge capability can retrieve and explain that context, while humans remain responsible for decisions and ownership.
+
+---
+
+## Key Takeaway
+
+AI orchestration is not about maximizing AI activity or parallelism.
+
+It is about turning distributed capability into coherent outcomes through:
+
+**Understanding → focused planning → owned execution → proof → continuous growth.**
+
+> **Opportunity → Understand → Plan → Execute → Proof → Grow**
