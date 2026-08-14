@@ -2,16 +2,19 @@
 
 AI Orchestration Model
 
-Opportunity → Intent → Context → Orchestrate → Validate ↺
+Opportunity → Understand → Plan → Execute → Proof → Grow ↺
 
-This document describes how the framework coordinates agents and workflow execution.
+Orchestration is how the **Plan** and **Execute** stages turn understanding into action — across
+people and AI together. The goal is coherent progress, not maximum activity.
 
-## Key Concepts
+## Orchestrate work, not prompts
 
-- Agent roles and responsibilities
-- Task routing and orchestration patterns
-- Integration with external systems and services
+A single prompt is not orchestration. Work should run inside a structured flow with defined context,
+boundaries, tools, decisions, and handoffs — whether a step is done by a person or an agent.
 
-## Goals
+## Focus and ownership
 
-Enable reliable, scalable AI workflows with clear controls for chaining, fallback, and human review.
+- Plan the smallest coherent path to the outcome; parallelize only when work is genuinely independent.
+- More people or agents add capacity, but also coordination cost — that cost is part of the plan.
+- Every delegated step has an owner. Delegation shares the work; it does not dissolve accountability.
+- Keep execution observable, attributable, and reversible where practical.

@@ -125,11 +125,12 @@ did what, but that AI lowered the barrier enough to make a fix like this practic
    against real, measured behavior before it was trusted, rather than accepting generated code or
    explanations at face value.
 
-The loop mirrors the framework's model end to end: **Opportunity** (a real production incident) →
-**Intent** (fix the root cause upstream, not just the symptom) → **Context** (personal/work isolation,
-upstream contribution norms, and React's existing stack-capture-limiting practice) → **Orchestrate**
-(AI runs repro → analysis → patch → authoring) → **Validate** (measured, repeatable heap evidence) —
-iterated until proven.
+The loop mirrors the framework's model end to end: **Opportunity** (a production incident worth
+fixing at the root) → **Understand** (reproduce the leak, isolate the mechanism, gather evidence) →
+**Plan** (a focused one-file fix and the upstream contribution path) → **Execute** (implement the
+fix; open the issue, PR, and reproduction) → **Proof** (measured, repeatable heap evidence, plus
+independent corroboration) → **Grow** (a reusable upstream fix and lessons captured) — iterated
+until proven.
 
 ## Results
 
@@ -146,7 +147,7 @@ iterated until proven.
 ## Key takeaways
 
 - **A measurable, repeatable harness turned "it leaks" into a provable before/after.** Multi-round
-  retained-heap-after-GC is the same "validate outcomes, not outputs" principle as case study 01 —
+  retained-heap-after-GC is the same "prove the outcome, not just the output" principle as case study 01 —
   applied to memory instead of API parity.
 - **AI can carry much of the investigation-to-PR loop** — reproduction → hypotheses → heap analysis →
   patch → upstream authoring — with people setting direction and validating each step. The value is

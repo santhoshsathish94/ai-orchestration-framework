@@ -2,18 +2,19 @@
 
 AI Orchestration Model
 
-Opportunity → Intent → Context → Orchestrate → Validate ↺
+Opportunity → Understand → Plan → Execute → Proof → Grow ↺
 
-This document describes governance structures for AI orchestration.
+Governance keeps the lifecycle safe as it scales. It is not paperwork; it is making sure ownership,
+risk, and approval are explicit — especially where AI acts.
 
-## Governance Focus
+## Keep humans responsible
 
-- Policy definition and enforcement
-- Risk management and compliance
-- Auditability and traceability
+AI can do the work; people stay accountable for risk, governance, and decisions that need human
+judgment. Automation should make responsibility clearer, not fuzzier.
 
-## Governance Controls
+## In practice
 
-- Define roles for stewards, owners, and reviewers
-- Establish review processes for changes to prompts, policies, and workflows
-- Monitor usage and impact to ensure ongoing accountability
+- Make ownership explicit for each flow, change, and decision.
+- Require human approval where the blast radius is real — for example, production changes.
+- Keep work auditable and attributable: who or what did it, and on what evidence.
+- Review changes to context, workflows, and rules the same way you review code.

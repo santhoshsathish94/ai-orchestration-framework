@@ -25,7 +25,7 @@ The outcomes told a different story. One blocker was ultimately resolved better 
 other accumulated band-aid fixes instead of a real resolution. The new feature came out weak.
 Stepping back to ask *"why did I get more done before, but not now?"*, the answer wasn't AI
 capacity — it was that my **inputs and direction were spread thin**. With attention divided three
-ways, the intent and context given to each task were shallow, so the outputs were shallow too.
+ways, the direction and context given to each task were shallow, so the outputs were shallow too.
 
 Dropping the parallelism and focusing on one workstream at a time is what finally resolved the
 hardest issue at its root (see [Case Study 02](../case-studies/02-react-rsc-memory-leak.md)).
@@ -34,7 +34,7 @@ hardest issue at its root (see [Case Study 02](../case-studies/02-react-rsc-memo
 
 - Treat **human attention — not AI throughput — as the scarce resource.** AI's ability to run many
   things in parallel is a temptation, not a mandate.
-- Prefer **depth over breadth**: give one workstream focused, high-quality intent and context before
+- Prefer **depth over breadth**: give one workstream focused, high-quality direction and context before
   starting the next.
 - Watch for the **illusion of progress** — motion across many tasks is not the same as outcomes.
   Measure outcomes, not activity.
@@ -42,8 +42,8 @@ hardest issue at its root (see [Case Study 02](../case-studies/02-react-rsc-memo
   to conserve budget) *while also* spreading attention thin can cost far more than it saves. Put the
   right resources on the task that matters most.
 
-**Reinforces:** [Principle 3 — Engineer Context Before Orchestration](03-principles.md) and the
-belief that outcome quality follows the quality of human intent and context.
+**Reinforces:** [Principle 4 — Plan for Focus and Ownership](03-principles.md) and the
+belief that outcome quality follows the quality of shared understanding and context.
 *Noise does not improve outcomes; focus does.*
 
 ---
@@ -74,8 +74,8 @@ the root cause was found and fixed quickly — far faster than the fix-first thr
   and return to understanding* — not to try yet another fix.
 - **A fix you can't explain isn't a fix.** Require the diagnosis before the change.
 
-**Reinforces:** [Principle 4 — Orchestrate Workflows, Not Prompts](03-principles.md) and
-[Principle 6 — Validate Outcomes, Not Outputs](03-principles.md). Diagnosis-first is a workflow;
+**Reinforces:** [Principle 2 — Understand Before Acting](03-principles.md) and
+[Principle 7 — Prove Outcomes, Not Activity](03-principles.md). Diagnosis-first is a workflow;
 fix-first is a prompt.
 
 ---
@@ -106,8 +106,8 @@ applications facing the same class of problem.
 - When appropriate, contribute the fix upstream so the learning and solution can benefit the wider
   ecosystem.
 
-**Reinforces:** [Principle 6 — Validate Outcomes, Not Outputs](03-principles.md) and the framework's
-intent to turn individual engineering incidents into reusable knowledge.
+**Reinforces:** [Principle 7 — Prove Outcomes, Not Activity](03-principles.md) and [Principle 8 — Grow Through Feedback](03-principles.md) —
+turning individual engineering incidents into reusable knowledge.
 
 **A workaround resolves an incident. Understanding the root cause can resolve a class of problems.**
 

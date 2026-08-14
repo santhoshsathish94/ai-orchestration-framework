@@ -2,7 +2,7 @@
 
 AI Orchestration Model
 
-Opportunity → Intent → Context → Orchestrate → Validate ↺
+Opportunity → Understand → Plan → Execute → Proof → Grow ↺
 
 This folder contains architecture and process diagrams for the AI Orchestration Framework.
 

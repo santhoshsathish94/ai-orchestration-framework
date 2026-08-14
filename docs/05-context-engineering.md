@@ -2,16 +2,21 @@
 
 AI Orchestration Model
 
-Opportunity → Intent → Context → Orchestrate → Validate ↺
+Opportunity → Understand → Plan → Execute → Proof → Grow ↺
 
-This document explains how the framework manages context, prompts, and knowledge flow.
+Context is what makes the **Understand** stage possible. Capability — human or AI — is only reliable
+when it has the context to reason correctly. A person cannot meaningfully solve a problem they have
+never understood, and neither can an agent, no matter how capable its tools.
 
-## What Is Context Engineering
+## Context is a living asset
 
-Context engineering shapes the inputs, knowledge, and instructions provided to models to produce consistent and relevant outputs.
+Context is not a one-time prompt. It is the accumulated understanding of a system — its architecture,
+business rules, dependencies, history, and prior attempts. It should get richer every cycle — that is
+what **Grow** feeds back.
 
-## Best Practices
+## In practice
 
-- Capture domain knowledge explicitly
-- Use structured prompts and reusable context templates
-- Validate contextual assumptions against real use cases
+- Capture the pre-story: what happened, why it matters, what we're trying to achieve, what was already tried.
+- Prefer existing organizational knowledge (repositories, tickets, telemetry, docs) before adding new context.
+- Name what is still missing, and retrieve it before acting rather than guessing.
+- Keep context reusable so the next person or agent starts from understanding, not from zero.

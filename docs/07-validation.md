@@ -1,19 +1,20 @@
-# Validation
+# Proof
 
 AI Orchestration Model
 
-Opportunity → Intent → Context → Orchestrate → Validate ↺
+Opportunity → Understand → Plan → Execute → Proof → Grow ↺
 
-This document covers validation strategies for AI workflows and model outputs.
+**Proof** is the stage that asks a simple question: *did the intended outcome actually happen?* A
+finished task, a passing build, or a merged change is an output — not proof.
 
-## Validation Layers
+## Prove the outcome, not the activity
 
-- Input validation and schema enforcement
-- Output verification and sanity checks
-- End-to-end quality testing against business requirements
+Evidence has to connect the work back to the original problem. A deployed fix is not the same as a
+resolved problem; proof is showing the original signal actually improved.
 
-## Validation Practices
+## In practice
 
-- Automate tests for prompts, data, and workflow behavior
-- Use monitoring to detect drift, errors, and unexpected outcomes
-- Track validation results as part of model lifecycle governance
+- Decide up front what evidence would prove the outcome.
+- Use the strongest evidence available: before/after measurements, tests, telemetry, user signals.
+- For production work, keep going until the original production signal is demonstrably resolved.
+- Be honest about what still remains uncertain.

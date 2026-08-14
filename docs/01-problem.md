@@ -2,7 +2,28 @@
 
 AI Orchestration Model
 
-Opportunity → Intent → Context → Orchestrate → Validate ↺
+Opportunity → Understand → Plan → Execute → Proof → Grow ↺
+
+## The real bottleneck
+
+Most organizations already have capability — skilled engineers, and now capable AI. In practice, the
+limiting factor is rarely capability itself. It is turning distributed capability — human and AI —
+into shared understanding, focused action, clear ownership, and proven outcomes.
+
+We kept seeing the same pattern at every level:
+
+- A person moves to action before understanding the problem, and the fix misses.
+- A team adds people to go faster, but context travels poorly between them, so work becomes
+  execution → handoff → context loss → rework.
+- An organization gives everyone AI, yet the skill stays with a few people instead of becoming
+  shared capability.
+- An AI agent jumps straight to a fix and thrashes — the gap was understanding, not capability.
+
+The insight is the same each time: **capability without understanding, focus, and ownership rarely
+becomes a reliable outcome.** AI does not remove this gap; it makes it more visible, because AI will
+act on missing context faster and more confidently than a person will.
+
+That is the problem this framework addresses.
 
 ## Why another framework?
 
