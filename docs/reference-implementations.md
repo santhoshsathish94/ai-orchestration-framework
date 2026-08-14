@@ -16,17 +16,7 @@ This becomes especially costly when ownership changes, teams are reorganized, or
 
 Give an AI knowledge capability read-only access to relevant organizational sources so people can ask questions such as **"What happened, and why?"**
 
-```text
-Question
-   ↓
-AI gathers available organizational context
-   ↓
-Understand and explain
-   ↓
-Human decides / acts
-   ↓
-Missing knowledge → capture it → improve future answers
-```
+![Cross-Team Knowledge Access](../assets/reference-cross-team-knowledge-access.png)
 
 ### Direct examples
 
@@ -42,8 +32,6 @@ A data team asks why a synchronization job did not run. AI reads the relevant re
 
 > Reduce unnecessary coordination by making existing organizational knowledge directly accessible.
 
-![Cross-Team Knowledge Access](../assets/reference-cross-team-knowledge-access.png)
-
 ---
 
 ## 2. Production Exception Remediation
@@ -56,27 +44,7 @@ Production exception handling is often fragmented across ticket investigation, c
 
 ### Implementation
 
-```text
-Production Exception
-        ↓
-Understand
-        ↓
-Plan
-        ↓
-Execute Fix
-        ↓
-Proof in Non-Prod
-        ↓
-Human Approval
-        ↓
-Production
-        ↓
-Proof in Production
-        ↓
-Resolved → Close + Grow
-        │
-        └── Not resolved → Understand again
-```
+![Production Exception Remediation](../assets/reference-production-exception-remediation.png)
 
 AI should provide concrete evidence before production approval:
 
@@ -109,8 +77,6 @@ Incorrect report values trigger remediation. AI traces the transformation, fixes
 ### Outcome
 
 > Move from **"the fix was deployed"** to **"the original problem was proven resolved."**
-
-![Production Exception Remediation](../assets/reference-production-exception-remediation.png)
 
 ---
 
