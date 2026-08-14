@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## v0.3.0 — Unreleased
+## v0.3.0 — 2026-08-14
 
 ### Added
 - `docs/reference-implementations.md` — Cross-Team Knowledge Access and Production Exception Remediation, shown as applications of the core lifecycle.
