@@ -42,7 +42,7 @@ This framework helps organizations:
 * Discover opportunities where AI creates measurable value.
 * Build understanding before execution.
 * Orchestrate humans and AI with clear ownership.
-* Validate outcomes instead of outputs.
+* Prove outcomes, not activity.
 * Continuously improve through evidence, feedback, and learning.
 
 ---
