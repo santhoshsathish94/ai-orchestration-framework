@@ -202,6 +202,8 @@ The model is technology independent and can be applied to:
 - Human Resources
 - Business Operations
 
+For practical, adoptable patterns, see **[Reference Implementations](reference-implementations.md)**.
+
 ### Example: Production Exception Remediation
 
 A production exception can be orchestrated as:
