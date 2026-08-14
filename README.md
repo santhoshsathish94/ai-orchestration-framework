@@ -47,6 +47,17 @@ This framework helps organizations:
 
 ---
 
+## Reference Implementations
+
+Practical patterns teams can adopt and adapt directly:
+
+- **[Cross-Team Knowledge Access](docs/reference-implementations.md#1-cross-team-knowledge-access)** — make existing organizational knowledge directly accessible through AI instead of unnecessary cross-team coordination.
+- **[Production Exception Remediation](docs/reference-implementations.md#2-production-exception-remediation)** — orchestrate an exception from understanding through fix, evidence, human approval, production verification, and learning.
+
+These are applications of the core lifecycle, not separate frameworks.
+
+---
+
 ## Start Here
 
 📖 [Vision](docs/01-problem.md)
@@ -56,6 +67,8 @@ This framework helps organizations:
 📖 [Principles](docs/03-principles.md)
 
 📖 [AI Orchestration Model](docs/04-framework.md)
+
+📖 [Reference Implementations](docs/reference-implementations.md)
 
 📖 [Practices & Field Lessons](docs/field-practices.md)
 
@@ -85,6 +98,7 @@ examples/
 * ✅ Opportunity → Understand → Plan → Execute → Proof → Grow lifecycle
 * ✅ Philosophy
 * ✅ Principles
+* ✅ Reference Implementations
 * ✅ Real-World Engineering Case Studies (2)
 * ✅ Practices & Field Lessons
 * ⏳ Enterprise Adoption Guide
