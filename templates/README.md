@@ -1,18 +1,15 @@
 # Templates
 
-AI Orchestration Model
+> **Opportunity → Understand → Plan → Execute → Proof → Grow ↺**
 
-Opportunity → Understand → Plan → Execute → Proof → Grow ↺
+Reusable artifacts for running work through the lifecycle. Copy a template, rename it for your task,
+and fill it in — the value is in clear context, ownership, and evidence, not length.
 
-This folder contains reusable templates for AI orchestration artifacts.
+## Available templates
 
-## Possible templates
+- **[Orchestration Brief](orchestration-brief.md)** — a one-page brief covering all six stages, with
+  copy-and-paste AI prompts and explicit human/AI ownership per stage.
 
-- Prompt templates
-- Context definition templates
-- Validation checklists and workflow blueprints
-- Governance and adoption planning templates
-
-## Usage
-
-Store structure and examples that help teams standardize how they design and operate AI workflows.
+See it applied end-to-end in
+[`examples/production-exception-remediation/`](../examples/production-exception-remediation/), or start
+with the [Quickstart](../QUICKSTART.md).

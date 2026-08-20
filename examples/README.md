@@ -1,17 +1,14 @@
 # Examples
 
-AI Orchestration Model
+> **Opportunity → Understand → Plan → Execute → Proof → Grow ↺**
 
-Opportunity → Understand → Plan → Execute → Proof → Grow ↺
+Worked, runnable walkthroughs that apply the AI Orchestration lifecycle to real tasks. Each one fills
+in the [Orchestration Brief](../templates/orchestration-brief.md) so you can swap in your own scenario
+and follow the same steps.
 
-This folder contains example implementations and walkthroughs for the AI Orchestration Framework.
+## Available examples
 
-## Example content
+- **[Production Exception Remediation](production-exception-remediation/)** — take a recurring
+  production `500` from alert to a *proven* fix, capturing evidence and learning along the way.
 
-- Sample AI orchestration workflows
-- Demonstrations of context engineering and agent coordination
-- Example validation and governance scenarios
-
-## Notes
-
-Use this space for reference material that helps developers understand how to apply the framework in real projects.
+New to the framework? Start with the [Quickstart](../QUICKSTART.md).

@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Added
+- `QUICKSTART.md` — apply the lifecycle to your first task in about 15 minutes.
+- `templates/orchestration-brief.md` — a reusable one-page brief covering all six stages, with copy-and-paste prompts and explicit human/AI ownership.
+- `examples/production-exception-remediation/` — a runnable, end-to-end walkthrough applying the lifecycle (and the orchestration brief) to a recurring production 5xx exception.
+
 ## v0.3.0 — 2026-08-14
 
 ### Added

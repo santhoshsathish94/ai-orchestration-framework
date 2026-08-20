@@ -60,7 +60,9 @@ These are applications of the core lifecycle, not separate frameworks.
 
 ## Start Here
 
-📖 [Vision](docs/01-problem.md)
+� [**Quickstart**](QUICKSTART.md) — apply the lifecycle to your first task in ~15 minutes
+
+�📖 [Vision](docs/01-problem.md)
 
 📖 [Philosophy](docs/02-philosophy.md)
 
@@ -103,6 +105,7 @@ examples/
 * ✅ Real-World Engineering Case Studies (2)
 * ✅ Practices & Field Lessons
 * ✅ Contributing guide (open to feedback)
+* ✅ Quickstart and first runnable example (Production Exception Remediation)
 * ⏳ Enterprise Adoption Guide
 
 ---
