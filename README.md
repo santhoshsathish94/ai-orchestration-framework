@@ -60,9 +60,9 @@ These are applications of the core lifecycle, not separate frameworks.
 
 ## Start Here
 
-� [**Quickstart**](QUICKSTART.md) — apply the lifecycle to your first task in ~15 minutes
+🚀 [**Quickstart**](QUICKSTART.md) — apply the lifecycle to your first task in ~15 minutes
 
-�📖 [Vision](docs/01-problem.md)
+📖 [Vision](docs/01-problem.md)
 
 📖 [Philosophy](docs/02-philosophy.md)
 
