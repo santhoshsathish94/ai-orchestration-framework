@@ -40,6 +40,54 @@ That pattern applies across engineering, healthcare, science, filmmaking, design
 
 ---
 
+## Context Compounds
+
+AI orchestration should not be a sequence of isolated interactions.
+
+Every meaningful cycle should leave behind better context — what was learned, what was proven, what was missed, what decisions were made, and what should be considered next.
+
+Human direction provides intent. AI contributes reasoning, exploration, context retrieval, and evidence gathering. The resulting outcomes and learnings then become part of the context for the next cycle.
+
+> **The outcome of one cycle becomes the context for the next.**
+
+This creates a continuously evolving loop:
+
+**Intent → Context → Reason → Act → Prove → Learn → Expanded Context → New Intent**
+
+The value compounds over time. The system does not repeatedly start from zero; each cycle builds on the understanding, evidence, and decisions accumulated before it.
+
+This is also how the framework itself evolves. Engineering investigations, case studies, documentation, career positioning, communication, feedback, and new questions are not isolated activities. Each contributes context to what comes next.
+
+> **The framework is itself a living example of the philosophy it describes.**
+
+The existing lifecycle can therefore be understood as a continuous context-building loop:
+
+**Opportunity → Understand → Plan → Execute → Proof → Grow → Better Context**
+
+---
+
+## The Conversation as an Orchestration Interface
+
+AI orchestration does not necessarily require humans to operate every underlying tool directly.
+
+When context, tools, ownership, and validation are connected, the human can operate at the level of intent while AI orchestrates execution across the underlying systems.
+
+The conversation becomes an interface to the workflow — not simply a place to ask questions.
+
+In the development of this framework, the same human–AI context has supported repository setup, documentation, engineering investigation, case studies, code changes, pull requests, review responses, releases, resume positioning, and communication.
+
+The important shift is not that AI performs every individual action. It is that the human does not have to become the coordination layer between every underlying tool.
+
+> **The goal is not fewer tools. The goal is fewer coordination boundaries between intent and outcome.**
+
+A successful orchestration should allow humans to operate at the level of outcomes rather than manually coordinating every underlying action.
+
+The React upstream contribution provides a concrete engineering example of this pattern: the investigation moved from production evidence to understanding the root cause, implementation, regression testing, maintainer feedback, further changes, and validation without resetting the accumulated context at each step.
+
+The contribution remains subject to upstream review and acceptance; the example demonstrates the orchestration pattern, not a claim of acceptance before it occurs.
+
+---
+
 ## Framework Philosophy
 
 This broader philosophy is expressed through the following principles.
