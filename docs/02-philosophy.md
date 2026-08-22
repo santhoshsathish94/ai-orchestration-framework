@@ -12,11 +12,37 @@ AI should not be viewed as a replacement for engineers, nor as an isolated assis
 
 The question the framework answers has widened — from *"How do we orchestrate AI agents?"* to *"How do we orchestrate capability — human and AI — so that every cycle produces a better outcome and leaves the system smarter than before?"*
 
-This framework is built on the following philosophy.
+But the underlying idea is broader than engineering.
 
 ---
 
-## Philosophy
+## A Broader Philosophy
+
+### AI is making the barriers to entering new fields of expertise thinner.
+
+What once required years of accumulated knowledge, large teams, and specialized expertise can increasingly be approached with clear intent and expectations, while AI helps us understand, reason, evaluate, and iterate along the way.
+
+AI does not eliminate expertise. It makes expertise more accessible.
+
+At the same time, AI can help address something inherent to being human: we miss things. We overlook signals, make assumptions, and sometimes follow a process without questioning whether something important is missing.
+
+AI can help identify those gaps, surface the information needed to make better decisions, and provide evidence that the outcome actually works.
+
+The goal is not to remove humans from the process. It is to make the human process more capable, more informed, and more provable.
+
+> **AI expands what humans can understand, reduces what humans can miss, and helps prove what humans accomplish.**
+
+This is the broader philosophy behind orchestration. A well-orchestrated AI system does more than answer from the context it already has. It can recognize when context is insufficient, identify what is missing, help gather the next useful signal, reassess with new evidence, and keep consequential decisions with the appropriate human expert.
+
+That pattern applies across engineering, healthcare, science, filmmaking, design, operations, and other fields. The domain changes; the underlying reasoning loop remains.
+
+**Intent → Context → Reason → Identify gaps → Gather evidence → Act → Evaluate → Prove outcome**
+
+---
+
+## Framework Philosophy
+
+This broader philosophy is expressed through the following principles.
 
 ### 1. AI is an engineering capability—not an engineering replacement.
 
@@ -78,7 +104,7 @@ This continuous learning cycle enables organizations to mature their AI capabili
 
 The AI Orchestration Framework is not a methodology for using AI.
 
-It is a philosophy for engineering organizations that want to integrate AI responsibly, reliably, and systematically into the way they deliver business value.
+It is a philosophy for making human and AI capability work together to understand unfamiliar problems, reduce blind spots, act with evidence, and prove outcomes.
 
 Its objective is simple:
 
