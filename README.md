@@ -14,6 +14,18 @@ It is technology independent. It can be implemented using different AI models, a
 
 It is **not** an LLM framework, agent SDK, or prompt library. It defines how humans and AI work together across a complete outcome-oriented workflow — from understanding an opportunity through execution, proof, and learning.
 
+### From Agentic Workflows to AI Orchestration
+
+AI capabilities have evolved from answering questions, to accomplishing tasks, to coordinating repeatable multi-step workflows.
+
+**AI / Prediction → AI Agents → Agentic Workflows → AI Orchestration**
+
+> **Agentic workflows repeat. Orchestration learns.**
+
+Agentic workflows can be a building block within an orchestration system. The difference is that orchestration captures learning from outcomes and makes relevant context available to future opportunities — allowing capability to compound over time.
+
+[See the full AI Orchestration Model](docs/04-framework.md)
+
 ---
 
 ## Vision
