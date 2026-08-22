@@ -16,6 +16,22 @@ The AI Orchestration Framework provides a simple lifecycle for doing that reliab
 
 ---
 
+## Core Philosophy
+
+AI is making the barriers to entering new fields of expertise thinner.
+
+What once required years of accumulated knowledge, large teams, and specialized expertise can increasingly be approached with clear intent and expectations, while AI helps us understand, reason, evaluate, and iterate along the way.
+
+AI does not eliminate expertise. It makes expertise more accessible.
+
+It can also help reduce the gaps that naturally occur in human decision-making — identifying missing information, surfacing overlooked signals, and providing evidence that an outcome actually works.
+
+> **AI expands what humans can understand, reduces what humans can miss, and helps prove what humans accomplish.**
+
+This is why the framework focuses on orchestration rather than simply prompting. The goal is to move from intent through context, reasoning, execution, evaluation, and proof while keeping consequential decisions with the appropriate human expert.
+
+---
+
 ## Core Orchestration Lifecycle
 
 ![AI Orchestration Lifecycle](assets/ai-orchestration-lifecycle.png)
@@ -42,6 +58,7 @@ This framework helps organizations:
 * Discover opportunities where AI creates measurable value.
 * Build understanding before execution.
 * Orchestrate humans and AI with clear ownership.
+* Identify missing context and reduce blind spots.
 * Prove outcomes, not activity.
 * Continuously improve through evidence, feedback, and learning.
 
@@ -102,7 +119,7 @@ examples/
 * ✅ Philosophy
 * ✅ Principles
 * ✅ Reference Implementations
-* ✅ Real-World Engineering Case Studies (2)
+* ✅ Real-World Case Studies (3)
 * ✅ Practices & Field Lessons
 * ✅ Contributing guide (open to feedback)
 * ✅ Quickstart and first runnable example (Production Exception Remediation)
