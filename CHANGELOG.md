@@ -8,6 +8,13 @@ All notable changes to this project will be documented in this file.
 - `QUICKSTART.md` — apply the lifecycle to your first task in about 15 minutes.
 - `templates/orchestration-brief.md` — a reusable one-page brief covering all six stages, with copy-and-paste prompts and explicit human/AI ownership.
 - `examples/production-exception-remediation/` — a runnable, end-to-end walkthrough applying the lifecycle (and the orchestration brief) to a recurring production 5xx exception.
+- Case study 03 — "Contextual Reasoning in a Newborn Care Scenario," illustrating how orchestration can identify a missing signal, support evidence gathering, and keep the consequential decision with the appropriate human expert.
+
+### Changed
+- Expanded the framework philosophy beyond engineering workflows to describe AI as reducing barriers to entering new fields of expertise while helping identify gaps, surface missing information, and prove outcomes.
+- Added the guiding statement: **AI expands what humans can understand, reduces what humans can miss, and helps prove what humans accomplish.**
+- Updated the README and philosophy document to connect the broader philosophy to the core orchestration lifecycle.
+- Updated the README case-study status from two to three real-world case studies.
 
 ## v0.3.0 — 2026-08-14
 
