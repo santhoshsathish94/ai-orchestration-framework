@@ -46,6 +46,10 @@ Knowledge should not remain trapped with a person or team when it can safely bec
 
 Growth closes the loop. Better context and better orchestration create better understanding for the next opportunity.
 
+## 11. Identify Gaps Before Acting on Assumptions
+
+Do not assume the available context is sufficient. AI should help surface missing information, overlooked signals, or untested assumptions when they could materially affect the outcome. Gather the evidence needed to reduce uncertainty before consequential action.
+
 ---
 
 ## Summary
