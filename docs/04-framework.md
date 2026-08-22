@@ -6,6 +6,39 @@ The AI Orchestration Model is a simple, repeatable lifecycle for integrating AI 
 
 Rather than focusing on prompts, tools, agents, or individual models, it focuses on how humans and AI turn an opportunity into a measurable outcome and improve the system through learning.
 
+## From AI Answers to AI Orchestration
+
+AI capabilities are evolving from answering questions to accomplishing tasks and then to coordinating increasingly complex work.
+
+| Stage | Primary question | Core value |
+|---|---|---|
+| **AI / Prediction** | What can AI tell us? | Answers, predictions, and recommendations |
+| **AI Agents** | Can AI accomplish this task? | Task execution using reasoning and tools |
+| **Agentic Workflows** | Can AI repeatedly execute a multi-step process? | Repeatability, coordination, and automation |
+| **AI Orchestration** | Can every outcome improve future capability? | Continuous learning and compounding context |
+
+This is not a strict replacement hierarchy. Agentic workflows can be an important building block within an orchestration system. The distinction is the scope of learning and context.
+
+> **Agentic workflows repeat. Orchestration learns.**
+
+A workflow is primarily designed to execute a known process repeatedly. An orchestration system captures what was learned from those outcomes and makes relevant context available to the next opportunity.
+
+The context can accumulate at the appropriate scope — an individual, a team, an organisation, or another defined boundary.
+
+### The difference in one view
+
+**Agentic workflow**
+
+`Trigger → Reason → Act → Complete → Repeat`
+
+**AI orchestration**
+
+`Opportunity → Understand → Plan → Execute → Proof → Learn → Expanded Context → Next Opportunity`
+
+The goal is therefore not simply to automate the same task more efficiently. It is to continuously build capability from the outcomes of the work.
+
+---
+
 ## Core Lifecycle
 
 ![AI Orchestration Lifecycle](../assets/ai-orchestration-lifecycle.png)
