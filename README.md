@@ -6,6 +6,16 @@ An open, evidence-based framework for orchestrating AI across business and engin
 
 ---
 
+## What is the AI Orchestration Framework?
+
+The **AI Orchestration Framework is an operating model for turning human intent and AI capability into measurable outcomes through context, structured execution, evidence, and continuous learning.**
+
+It is technology independent. It can be implemented using different AI models, agents, tools, enterprise systems, and human workflows.
+
+It is **not** an LLM framework, agent SDK, or prompt library. It defines how humans and AI work together across a complete outcome-oriented workflow — from understanding an opportunity through execution, proof, and learning.
+
+---
+
 ## Vision
 
 AI is changing how organizations build software and operate their businesses.
