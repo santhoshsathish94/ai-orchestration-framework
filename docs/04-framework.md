@@ -45,13 +45,22 @@ The goal is therefore not simply to automate the same task more efficiently. It 
 
 > **Opportunity → Understand → Plan → Execute → Proof → Grow**
 
-The lifecycle is intentionally simple. The complexity belongs in the context, ownership, evidence, and feedback surrounding each stage—not in adding more stages.
+The lifecycle is intentionally simple. Each stage has a distinct responsibility; the complexity belongs in the context, ownership, evidence, and feedback surrounding each stage—not in adding more stages.
+
+- **Opportunity** — define the problem, why it matters, and the outcome worth pursuing.
+- **Understand** — establish the context and evidence required to make a sound decision.
+- **Plan** — determine the focused path, boundaries, dependencies, and ownership required to reach the outcome.
+- **Execute** — perform the planned work while adapting when new evidence requires a change in direction.
+- **Proof** — demonstrate with evidence that the intended outcome actually happened.
+- **Grow** — turn the outcome into better future capability by capturing validated experience, developing reusable expertise, and improving the context, workflow, or decisions for the next cycle.
+
+The lifecycle continuously loops as learning creates better context and new opportunities.
 
 ---
 
 ## Stage 1 — Opportunity
 
-Identify the problem or outcome worth pursuing.
+Define the problem, why it matters, and the outcome worth pursuing.
 
 The opportunity should describe why the work matters and what meaningful outcome is expected. A ticket or task can be an input, but it is not the outcome itself.
 
@@ -73,7 +82,7 @@ The opportunity should describe why the work matters and what meaningful outcome
 
 ## Stage 2 — Understand
 
-Build sufficient understanding before acting.
+Establish the context and evidence required to make a sound decision.
 
 AI should first gather the context required to reason about the opportunity. This can include repositories, architecture, telemetry, business rules, dependencies, historical incidents, previous attempts, documentation, and organizational knowledge.
 
@@ -99,7 +108,7 @@ If context is missing, the orchestrator should identify the gap and retrieve or 
 
 ## Stage 3 — Plan
 
-Choose the focused path to the intended outcome.
+Determine the focused path, boundaries, dependencies, and ownership required to reach the outcome.
 
 Planning determines what should happen, what should not happen, what can be done independently, and who or what owns each part.
 
@@ -126,11 +135,11 @@ Parallelism is used only when work is genuinely independent. More agents or peop
 
 ## Stage 4 — Execute
 
-Perform the planned work with explicit ownership.
+Perform the planned work while adapting when new evidence requires a change in direction.
 
 Humans and AI can collaborate across analysis, implementation, testing, investigation, documentation, and operational tasks. Delegation does not remove accountability for the outcome.
 
-Execution should remain observable, attributable, and reversible where practical.
+Execution should remain observable, attributable, and reversible where practical. New evidence can require replanning rather than blindly continuing the original plan.
 
 ### Questions
 
@@ -149,7 +158,7 @@ Execution should remain observable, attributable, and reversible where practical
 
 ## Stage 5 — Proof
 
-Demonstrate that the intended outcome actually happened.
+Demonstrate with evidence that the intended outcome actually happened.
 
 Proof is stronger than output validation. A generated artifact, successful build, passing test, or merged PR may be necessary, but the orchestration is not complete until evidence connects the work back to the original outcome.
 
@@ -175,7 +184,7 @@ For production remediation, the loop can continue through deployment and observa
 
 ## Stage 6 — Grow
 
-Turn the outcome of the work into better future capability.
+Turn the outcome into better future capability by capturing validated experience, developing reusable expertise, and improving the context, workflow, or decisions for the next cycle.
 
 Growth is more than a retrospective. It is where the system captures meaningful experience from the execution, validates what was learned, identifies patterns across repeated outcomes, and updates the context, knowledge, workflows, or expertise that can improve future decisions.
 
