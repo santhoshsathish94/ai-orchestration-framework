@@ -238,9 +238,9 @@ This is how the orchestration system can compound capability over time without a
 
 ## Toward Goal-Directed Autonomous AI
 
-The six-stage lifecycle is the operating model. **Autonomy is the destination that can emerge as the model, tooling, experience, validation, and trust mechanisms become sufficiently mature.**
+The six-stage lifecycle is the **operating model**. Increasingly autonomous AI is the **destination**.
 
-The framework does not treat autonomy as another lifecycle stage. Instead, each stage contributes a capability required for increasingly autonomous goal-directed execution.
+As experience, expertise, persistent context, tooling, validation, and trust mature, humans can move from specifying detailed tasks toward defining objectives, constraints, and success criteria while AI increasingly determines and adapts the path.
 
 ```text
 AI Answers
@@ -251,26 +251,12 @@ Agentic Workflows
     ↓
 AI Orchestration
     ↓
-Experience & Expertise
-    ↓
 Goal-Directed Orchestration
     ↓
 Goal-Directed Autonomous AI
 ```
 
-Today, a human may provide both the goal and much of the path:
-
-```text
-Human
-  ↓
-Goal + detailed task
-  ↓
-AI
-  ↓
-Plan + Execute
-```
-
-As the orchestration system matures, the human can increasingly provide the **objective, constraints, and success criteria**, while AI determines and adapts the path using current context and accumulated experience:
+The long-term model is:
 
 ```text
 Human
@@ -279,15 +265,7 @@ Objective + constraints + success criteria
   ↓
 AI Orchestrator
   ↓
-Understand
-  ↓
-Plan
-  ↓
-Execute
-  ↓
-Proof
-  ↓
-Grow
+Understand → Plan → Execute → Proof → Grow
   ↓
 Use accumulated experience & expertise
   ↓
@@ -295,13 +273,11 @@ Re-plan when necessary
   ↺
 ```
 
-The long-term destination is therefore:
-
 > **Human defines the destination. AI determines and continuously adapts the path.**
 
-This does not mean removing humans from the system. Human responsibility moves toward defining objectives, constraints, risk boundaries, authority, and success criteria, while AI takes on more of the planning, execution, observation, and adaptation within those boundaries.
+The goal is not to remove humans from the system. Human responsibility moves toward defining objectives, constraints, risk boundaries, authority, and success criteria, while AI takes on more planning, execution, observation, and adaptation within those boundaries.
 
-The framework's purpose is not to claim that unrestricted autonomy exists today. It is to provide an architecture that can progressively support greater autonomy as reasoning, tools, persistent context, experience, validation, and trust mature.
+The framework does not claim that unrestricted autonomy exists today. It provides an architecture that can progressively support greater autonomy as reasoning, tools, persistent context, experience, validation, and trust mature.
 
 ---
 
