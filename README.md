@@ -71,25 +71,26 @@ The lifecycle is intentionally simple. The complexity belongs in the context, ow
 - **Plan** — choose the focused path, boundaries, dependencies, and ownership.
 - **Execute** — perform the work with explicit ownership across humans and AI.
 - **Proof** — demonstrate that the intended outcome actually happened with concrete evidence.
-- **Grow** — capture feedback, validated experience, and new context so the next cycle starts stronger.
+- **Grow** — turn the outcome into better future capability by capturing validated experience, identifying reusable patterns, and updating context, knowledge, workflows, or expertise.
 
 The lifecycle continuously loops as learning creates better context and new opportunities.
 
-### Experience-Driven AI Orchestration
+### How Grow Builds Experience and Expertise
 
-The framework distinguishes between **memory, experience, and expertise**.
+**Execute produces experience. Grow turns validated experience into expertise.**
 
-- **Execution State** — what is happening now.
-- **Experience** — what happened during a specific execution, including the relevant actions, context, evidence, and outcome.
-- **Expertise** — reusable patterns inferred from multiple validated experiences.
+- **Experience** — what was learned from a specific execution, including what was tried, the relevant context, evidence, and outcome.
+- **Expertise** — reusable knowledge or decision patterns that emerge from multiple validated experiences.
 
-This creates a progression:
+A single execution should not automatically become expertise. Across repeated executions, validated outcomes can reveal which approaches work under particular conditions and which should be avoided. That expertise can then influence the next **Understand** and **Plan** stages.
 
-**Execution → Experience → Expertise → Better Decisions → Greater Autonomy**
+This keeps **Experience** and **Expertise** inside the existing **Grow** stage rather than adding new lifecycle stages. The lifecycle remains:
 
-A single execution should not automatically become expertise. Outcomes need evidence and validation before they are treated as reusable patterns. Over repeated executions, the system can identify approaches that work under particular conditions and use those patterns to improve future decisions.
+**Opportunity → Understand → Plan → Execute → Proof → Grow**
 
-This moves orchestration beyond simply repeating a workflow toward **goal-directed decision making**, where a human can define the objective and constraints while AI increasingly determines the most appropriate path within those boundaries.
+while the capability compounds through the loop:
+
+**Execution → Experience → Validation → Expertise → Better Future Decisions**
 
 ---
 
@@ -159,7 +160,7 @@ examples/
 **Version 0.3.0 (in progress)**
 
 * ✅ AI Orchestration Model — Opportunity → Understand → Plan → Execute → Proof → Grow
-* ✅ Experience-Driven AI Orchestration — execution → experience → expertise → better decisions
+* ✅ Experience & Expertise within Grow — execution → validated experience → reusable expertise → better decisions
 * ✅ Philosophy
 * ✅ Principles
 * ✅ Reference Implementations
