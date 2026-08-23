@@ -49,36 +49,9 @@ AI orchestration is the **foundation**, not the final destination.
 
 As reasoning, tools, persistent context, experience, validation, and trust mature, the framework is intended to support a progression toward **goal-directed autonomous AI**.
 
-```text
-AI Models
-    ↓
-AI Agents
-    ↓
-Agentic Workflows
-    ↓
-AI Orchestration
-    ↓
-Experience & Expertise
-    ↓
-Goal-Directed Orchestration
-    ↓
-Goal-Directed Autonomous AI
-```
+![The long-term destination for AI orchestration](assets/ai-future/goal-directed-destination.svg)
 
-Today, humans often provide both the goal and the path.
-
-Over time, the goal can become the primary human input:
-
-```text
-Human
-  ↓
-Objective + constraints + success criteria
-  ↓
-AI
-  ↓
-Understand → Plan → Execute → Proof → Grow
-  ↺
-```
+Today, humans often provide both the goal and the path. Over time, the goal can become the primary human input, while AI increasingly determines and adapts the path within defined constraints and success criteria.
 
 > **Human defines the destination. AI determines and continuously adapts the path.**
 
