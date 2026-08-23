@@ -24,6 +24,10 @@ AI capabilities have evolved from answering questions, to accomplishing tasks, t
 
 Agentic workflows can be a building block within an orchestration system. The difference is that orchestration captures learning from outcomes and makes relevant context available to future opportunities — allowing capability to compound over time.
 
+The next layer is **experience-driven orchestration**: meaningful execution outcomes become validated experience, and repeated validated experiences can form reusable expertise that influences future decisions.
+
+> **AI should not only execute workflows. It should learn from workflows.**
+
 [See the full AI Orchestration Model](docs/04-framework.md)
 
 ---
@@ -67,9 +71,25 @@ The lifecycle is intentionally simple. The complexity belongs in the context, ow
 - **Plan** — choose the focused path, boundaries, dependencies, and ownership.
 - **Execute** — perform the work with explicit ownership across humans and AI.
 - **Proof** — demonstrate that the intended outcome actually happened with concrete evidence.
-- **Grow** — capture feedback, retrospective learning, and new context so the next cycle starts stronger.
+- **Grow** — capture feedback, validated experience, and new context so the next cycle starts stronger.
 
 The lifecycle continuously loops as learning creates better context and new opportunities.
+
+### Experience-Driven AI Orchestration
+
+The framework distinguishes between **memory, experience, and expertise**.
+
+- **Execution State** — what is happening now.
+- **Experience** — what happened during a specific execution, including the relevant actions, context, evidence, and outcome.
+- **Expertise** — reusable patterns inferred from multiple validated experiences.
+
+This creates a progression:
+
+**Execution → Experience → Expertise → Better Decisions → Greater Autonomy**
+
+A single execution should not automatically become expertise. Outcomes need evidence and validation before they are treated as reusable patterns. Over repeated executions, the system can identify approaches that work under particular conditions and use those patterns to improve future decisions.
+
+This moves orchestration beyond simply repeating a workflow toward **goal-directed decision making**, where a human can define the objective and constraints while AI increasingly determines the most appropriate path within those boundaries.
 
 ---
 
@@ -82,6 +102,7 @@ This framework helps organizations:
 * Orchestrate humans and AI with clear ownership.
 * Identify missing context and reduce blind spots.
 * Prove outcomes, not activity.
+* Capture validated experience instead of treating every execution as an isolated event.
 * Continuously improve through evidence, feedback, and learning.
 
 ---
@@ -138,6 +159,7 @@ examples/
 **Version 0.3.0 (in progress)**
 
 * ✅ AI Orchestration Model — Opportunity → Understand → Plan → Execute → Proof → Grow
+* ✅ Experience-Driven AI Orchestration — execution → experience → expertise → better decisions
 * ✅ Philosophy
 * ✅ Principles
 * ✅ Reference Implementations
@@ -153,7 +175,7 @@ examples/
 
 > **AI is another engineering capability that must be orchestrated like any other part of a software system.**
 
-The goal is not to maximize AI activity. It is to turn capability into coherent outcomes through context, focus, ownership, evidence, and learning.
+The goal is not to maximize AI activity. It is to turn capability into coherent outcomes through context, focus, ownership, evidence, and learning — while allowing validated experience to improve future decisions.
 
 ---
 
