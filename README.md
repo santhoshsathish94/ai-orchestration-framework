@@ -14,9 +14,9 @@ It is not an LLM framework, agent SDK, or prompt library. It defines **how AI an
 
 AI is evolving:
 
-**AI Answers → AI Agents → Agentic Workflows → AI Orchestration**
+**AI Models → AI Agents → Agentic Workflows → AI Orchestration**
 
-Agents can perform tasks. Workflows can repeat tasks. **Orchestration connects context, decisions, execution, proof, and learning so the system can improve over time.**
+AI models provide intelligence. Agents can perform tasks. Workflows can repeat tasks. **Orchestration connects context, decisions, execution, proof, and learning so the system can improve over time.**
 
 > **Agentic workflows repeat. Orchestration learns.**
 
@@ -50,7 +50,7 @@ AI orchestration is the **foundation**, not the final destination.
 As reasoning, tools, persistent context, experience, validation, and trust mature, the framework is intended to support a progression toward **goal-directed autonomous AI**.
 
 ```text
-AI Answers
+AI Models
     ↓
 AI Agents
     ↓
