@@ -86,6 +86,16 @@ The framework does not claim unrestricted autonomy exists today. It defines the 
 
 [Read the full autonomous-AI direction →](docs/04-framework.md#toward-goal-directed-autonomous-ai)
 
+### Beyond the Framework
+
+**The AI Future** is a separate technical hypothesis exploring what could happen if AI systems continuously accumulate validated experience, develop reusable expertise, and learn from one another across interactions.
+
+> **Can intelligence compound when experience becomes persistent and shared?**
+
+This is a future-state exploration, not part of the framework lifecycle.
+
+[Read The AI Future hypothesis →](docs/ai-future-hypothesis.md)
+
 ---
 
 ## Core Principles
