@@ -10,12 +10,7 @@ Rather than focusing on prompts, tools, agents, or individual models, it focuses
 
 AI capabilities are evolving from models that provide intelligence to agents that can act, workflows that can repeat and coordinate tasks, and orchestration systems that can learn from outcomes.
 
-| Stage | Primary question | Core value |
-|---|---|---|
-| **AI Models** | What can AI understand, generate, predict, or recommend? | Intelligence, analysis, generation, and prediction |
-| **AI Agents** | Can AI accomplish this task? | Task execution using reasoning and tools |
-| **Agentic Workflows** | Can AI repeatedly execute a multi-step process? | Repeatability, coordination, and automation |
-| **AI Orchestration** | Can every outcome improve future capability? | Continuous learning and compounding context |
+![From AI Models to AI Orchestration](../assets/ai-orchestration-model-progression.svg)
 
 This is not a strict replacement hierarchy. Agentic workflows can be an important building block within an orchestration system. The distinction is the scope of learning and context.
 
@@ -24,20 +19,6 @@ This is not a strict replacement hierarchy. Agentic workflows can be an importan
 A workflow is primarily designed to execute a known process repeatedly. An orchestration system captures what was learned from those outcomes and makes relevant context available to the next opportunity.
 
 The context can accumulate at the appropriate scope — an individual, a team, an organisation, or another defined boundary.
-
-### The difference in one view
-
-**Agentic workflow**
-
-`Trigger → Reason → Act → Complete → Repeat`
-
-**AI orchestration**
-
-`Opportunity → Understand → Plan → Execute → Proof → Learn → Expanded Context → Next Opportunity`
-
-The goal is therefore not simply to automate the same task more efficiently. It is to continuously build capability from the outcomes of the work.
-
----
 
 ## Core Lifecycle
 
@@ -78,8 +59,6 @@ The opportunity should describe why the work matters and what meaningful outcome
 - Initial success criteria
 - Relevant stakeholders
 
----
-
 ## Stage 2 — Understand
 
 Establish the context and evidence required to make a sound decision.
@@ -103,8 +82,6 @@ If context is missing, the orchestrator should identify the gap and retrieve or 
 - Relevant evidence
 - Known assumptions and gaps
 - Ownership and boundaries
-
----
 
 ## Stage 3 — Plan
 
@@ -131,8 +108,6 @@ Parallelism is used only when work is genuinely independent. More agents or peop
 - Validation strategy
 - Approval points
 
----
-
 ## Stage 4 — Execute
 
 Perform the planned work while adapting when new evidence requires a change in direction.
@@ -153,8 +128,6 @@ Execution should remain observable, attributable, and reversible where practical
 - Implemented change or action
 - Execution trace
 - Updated assumptions when required
-
----
 
 ## Stage 5 — Proof
 
@@ -180,35 +153,19 @@ For production remediation, the loop can continue through deployment and observa
 - Risk and approval evidence where required
 - Outcome status
 
----
-
 ## Stage 6 — Grow
 
 Turn the outcome into better future capability by capturing validated experience, developing reusable expertise, and improving the context, workflow, or decisions for the next cycle.
 
-Growth is more than a retrospective. It is where the system captures meaningful experience from the execution, validates what was learned, identifies patterns across repeated outcomes, and updates the context, knowledge, workflows, or expertise that can improve future decisions.
+Growth is more than a retrospective. It is where the system captures meaningful experience from execution, validates what was learned, identifies patterns across repeated outcomes, and updates the context, knowledge, workflows, or expertise that can improve future decisions.
 
-**Execute produces experience. Grow turns validated experience into expertise.**
+> **Execute produces experience. Grow turns validated experience into expertise.**
 
 ### Experience and Expertise
 
 **Experience** is what was learned from a specific execution — what was tried, the relevant context, the evidence observed, and the outcome.
 
 **Expertise** is the reusable knowledge or decision pattern that emerges from multiple validated experiences. A single execution should not automatically become expertise.
-
-For example:
-
-```text
-Experience 1 → Approach A → Success
-Experience 2 → Approach A → Success
-Experience 3 → Approach B → Failure
-Experience 4 → Approach A → Success
-                ↓
-        Emerging Expertise
-                ↓
-"When these conditions occur,
- Approach A is generally preferred."
-```
 
 The resulting expertise can become part of the context available during the next **Understand** and **Plan** stages, allowing future decisions to start from a stronger position rather than treating every similar task as a new problem.
 
@@ -240,94 +197,17 @@ This is how the orchestration system can compound capability over time without a
 
 The six-stage lifecycle is the operating model. **Autonomy is the destination that can emerge as the model, tooling, experience, validation, and trust mechanisms become sufficiently mature.**
 
-The framework does not treat autonomy as another lifecycle stage. Instead, each stage contributes a capability required for increasingly autonomous goal-directed execution.
+The framework does not treat autonomy as another lifecycle stage. Each stage contributes a capability required for increasingly autonomous goal-directed execution.
 
-```text
-AI Models
-    ↓
-AI Agents
-    ↓
-Agentic Workflows
-    ↓
-AI Orchestration
-    ↓
-Experience & Expertise
-    ↓
-Goal-Directed Orchestration
-    ↓
-Goal-Directed Autonomous AI
-```
+![A possible progression toward goal-directed autonomous AI](../assets/goal-directed-autonomy-progression.svg)
 
-Today, a human may provide both the goal and much of the path:
-
-```text
-Human
-  ↓
-Goal + detailed task
-  ↓
-AI
-  ↓
-Plan + Execute
-```
-
-As the orchestration system matures, the human can increasingly provide the **objective, constraints, and success criteria**, while AI determines and adapts the path using current context and accumulated experience:
-
-```text
-Human
-  ↓
-Objective + constraints + success criteria
-  ↓
-AI Orchestrator
-  ↓
-Understand
-  ↓
-Plan
-  ↓
-Execute
-  ↓
-Proof
-  ↓
-Grow
-  ↓
-Use accumulated experience & expertise
-  ↓
-Re-plan when necessary
-  ↺
-```
-
-The long-term destination is therefore:
+Today, a human may provide both the goal and much of the path. As the orchestration system matures, the human can increasingly provide the **objective, constraints, and success criteria**, while AI determines and adapts the path using current context and accumulated experience.
 
 > **Human defines the destination. AI determines and continuously adapts the path.**
 
 This does not mean removing humans from the system. Human responsibility moves toward defining objectives, constraints, risk boundaries, authority, and success criteria, while AI takes on more of the planning, execution, observation, and adaptation within those boundaries.
 
 The framework's purpose is not to claim that unrestricted autonomy exists today. It is to provide an architecture that can progressively support greater autonomy as reasoning, tools, persistent context, experience, validation, and trust mature.
-
----
-
-## The Orchestration Loop
-
-```text
-Opportunity
-     ↓
-Understand
-     ↓
-Plan
-     ↓
-Execute
-     ↓
-Proof
-     ↓
-Grow
-     │
-     └──────────────→ Better context & expertise
-                              ↓
-                       Next Opportunity
-```
-
-Knowledge, experience, and expertise support the lifecycle without becoming additional lifecycle stages. Growth feeds validated learning back into the next cycle rather than ending the process.
-
----
 
 ## Applying the Model
 
@@ -344,7 +224,7 @@ The model is technology independent and can be applied to:
 - Human Resources
 - Business Operations
 
-For practical, adoptable patterns, see **[Reference Implementations](reference-implementations.md)**.
+For practical patterns, see **[Reference Implementations](reference-implementations.md)**.
 
 ### Example: Production Exception Remediation
 
@@ -365,8 +245,6 @@ A production exception can be orchestrated as:
 ### Example: Cross-Team Knowledge Gap
 
 A team should not need to contact several teams simply to reconstruct information that already exists in repositories, jobs, telemetry, documentation, or historical context. An AI knowledge capability can retrieve and explain that context, while humans remain responsible for decisions and ownership.
-
----
 
 ## Key Takeaway
 
