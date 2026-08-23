@@ -56,7 +56,10 @@ Different systems could specialize in different domains while sharing relevant e
 
 This does not require one giant AI. It could emerge from an ecosystem of specialized systems with governed mechanisms for sharing.
 
-Recent work is already exploring persistent and shared memory for multi-agent systems, including memory fabrics and governed shared memory. These developments make the direction technically plausible, while the larger hypothesis remains open. citeturn0search1turn0search0
+Recent 2026 work is already exploring persistent and shared memory for multi-agent systems, including multi-user memory fabrics and governed shared memory. These developments make the direction technically plausible, while the larger hypothesis remains open.
+
+- [A memory fabric for conversational AI agents enabling shared and persistent multiuser memory](https://doi.org/10.1007/s44163-026-00992-z)
+- [From the Internet of AI Agents to the Society of Agents](https://link.springer.com/article/10.1007/s44227-026-00107-1)
 
 ## 5. From shared experience to collective expertise
 
@@ -73,7 +76,10 @@ The important question is not simply how much information is stored. It is wheth
 - who has evidence for a claim, and
 - when knowledge should be revised or forgotten.
 
-Shared memory therefore becomes both an **intelligence substrate** and a **governance problem**. citeturn0search0turn0academia12
+Shared memory therefore becomes both an **intelligence substrate** and a **governance problem**. Recent work explicitly identifies provenance, validation, access control, conflict resolution, forgetting, and memory poisoning as important design problems.
+
+- [Governed Collaborative Memory as Artificial Selection in LLM-Based Multi-Agent Systems](https://arxiv.org/abs/2605.04264)
+- [From the Internet of AI Agents to the Society of Agents](https://link.springer.com/article/10.1007/s44227-026-00107-1)
 
 ## 6. Collective intelligence
 
@@ -83,7 +89,10 @@ If AI systems can continuously contribute validated experience and reuse one ano
 
 This would be different from simply connecting agents through messages. The systems would have a persistent body of shared learning that changes future decisions.
 
-Research on multi-agent memory and self-evolving systems is beginning to test parts of this idea. Early results suggest persistent memory can improve long-horizon coordination and task performance, but they do not establish the much larger claim of collective intelligence. citeturn0academia13turn0search5
+Research on multi-agent memory and self-evolving systems is beginning to test parts of this idea. Early results suggest persistent memory can improve long-horizon coordination and task performance, but they do not establish the much larger claim of collective intelligence.
+
+- [Self-Evolving Multi-Agent Systems via Decentralized Memory](https://arxiv.org/abs/2605.22721)
+- [MeMAT: Multi-agent transformer with deep long-term memory, short-term memory, and persistent memory](https://doi.org/10.1016/j.neucom.2026.134438)
 
 ## 7. The harder question: purpose
 
