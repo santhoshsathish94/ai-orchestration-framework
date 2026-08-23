@@ -181,10 +181,84 @@ Growth is the feedback and retrospective loop. Capture what was learned, what co
 
 Growth is not an optional postscript. It is what makes the orchestration system improve over time.
 
+### Experience-Driven AI Orchestration
+
+Memory alone is not enough. A system that remembers that something happened is different from a system that understands what was tried, why it was tried, what the outcome was, and what that outcome means for future decisions.
+
+The framework therefore distinguishes three layers:
+
+| Layer | Purpose |
+|---|---|
+| **Execution State** | What is happening now |
+| **Experience** | What happened during a specific execution, including actions, reasoning context, evidence, and outcome |
+| **Expertise** | Reusable patterns inferred from multiple validated experiences |
+
+This creates a progression:
+
+**Execution → Experience → Expertise → Better Decisions → Greater Autonomy**
+
+A single execution should not automatically become expertise. Experience should be validated before it is used as a reusable pattern. Multiple outcomes can reveal what approaches work, under which conditions, and what should be avoided.
+
+For example:
+
+```text
+Experience 1 → Approach A → Success
+Experience 2 → Approach A → Success
+Experience 3 → Approach B → Failure
+Experience 4 → Approach A → Success
+                ↓
+        Emerging Expertise
+                ↓
+"When these conditions occur,
+ Approach A is generally preferred."
+```
+
+The goal is not to create an unrestricted autonomous system. The goal is to make future decisions increasingly informed by validated experience while respecting defined objectives, constraints, ownership, evidence, and human approval boundaries.
+
+### From Fixed Workflows to Goal-Directed Orchestration
+
+A conventional workflow largely defines the path:
+
+`Step 1 → Step 2 → Step 3 → Step 4`
+
+An agentic workflow allows AI to make decisions within that path.
+
+Experience-driven orchestration allows relevant previous outcomes to influence which path is chosen and whether replanning is required.
+
+With a sufficiently well-defined objective, current state, constraints, available tools, and validated experience, the system can move toward:
+
+```text
+Human defines the objective
+          ↓
+AI understands the current state
+          ↓
+AI determines a strategy
+          ↓
+AI executes
+          ↓
+AI observes the outcome
+          ↓
+AI captures validated experience
+          ↓
+AI redirects when necessary
+          ↓
+AI continues until the objective
+or termination criteria are satisfied
+```
+
+The human defines **what success means**. The AI can increasingly determine **how to get there** within the permitted boundaries.
+
+> **AI should not only execute workflows. It should learn from workflows.**
+
+This is the foundation for moving from task-oriented AI toward goal-directed AI orchestration.
+
 ### Questions
 
 - What did we learn?
 - What context was missing?
+- What actions and outcomes are worth retaining as experience?
+- Which experiences are sufficiently validated to influence future decisions?
+- What patterns are emerging across similar executions?
 - What should the next human or AI know?
 - What should change in the workflow?
 - What new opportunity did we discover?
@@ -192,6 +266,8 @@ Growth is not an optional postscript. It is what makes the orchestration system 
 ### Deliverables
 
 - Updated organizational context
+- Validated experience
+- Reusable expertise or patterns where justified
 - Retrospective / lessons learned
 - Improved workflow or guardrails
 - New opportunities
@@ -213,10 +289,14 @@ Proof
      ↓
 Grow
      │
-     └──────────────→ Better context → Next Opportunity
+     ├────────→ Experience
+     │              ↓
+     │          Expertise
+     │              ↓
+     └──────→ Better decisions → Next Opportunity
 ```
 
-Knowledge and context support the entire lifecycle. Growth feeds learning back into the next cycle rather than ending the process.
+Knowledge and context support the entire lifecycle. Growth feeds validated learning back into the next cycle rather than ending the process.
 
 ---
 
@@ -251,7 +331,7 @@ A production exception can be orchestrated as:
 
 **Proof** — validate in non-production, provide concrete evidence for human approval, deploy, and verify the original production exception resolves.
 
-**Grow** — close only when the production outcome is proven; capture the learning so future incidents can be understood faster.
+**Grow** — close only when the production outcome is proven; capture the learning so future incidents can be understood faster and validated experience can improve future decisions.
 
 ### Example: Cross-Team Knowledge Gap
 
