@@ -64,14 +64,14 @@ This is why the framework focuses on orchestration rather than simply prompting.
 
 > **Opportunity → Understand → Plan → Execute → Proof → Grow**
 
-The lifecycle is intentionally simple. The complexity belongs in the context, ownership, evidence, and feedback surrounding each stage—not in adding more stages.
+The lifecycle is intentionally simple. Each stage has a distinct responsibility; the complexity belongs in the context, ownership, evidence, and feedback surrounding each stage—not in adding more stages.
 
-- **Opportunity** — identify the problem or outcome worth pursuing.
-- **Understand** — establish sufficient context before acting; retrieve missing context from available organizational knowledge and systems.
-- **Plan** — choose the focused path, boundaries, dependencies, and ownership.
-- **Execute** — perform the work with explicit ownership across humans and AI.
-- **Proof** — demonstrate that the intended outcome actually happened with concrete evidence.
-- **Grow** — turn the outcome into better future capability by capturing validated experience, identifying reusable patterns, and updating context, knowledge, workflows, or expertise.
+- **Opportunity** — define the problem, why it matters, and the outcome worth pursuing.
+- **Understand** — establish the context and evidence required to make a sound decision.
+- **Plan** — determine the focused path, boundaries, dependencies, and ownership required to reach the outcome.
+- **Execute** — perform the planned work while adapting when new evidence requires a change in direction.
+- **Proof** — demonstrate with evidence that the intended outcome actually happened.
+- **Grow** — turn the outcome into better future capability by capturing validated experience, developing reusable expertise, and improving the context, workflow, or decisions for the next cycle.
 
 The lifecycle continuously loops as learning creates better context and new opportunities.
 
@@ -94,6 +94,75 @@ while the capability compounds through the loop:
 
 ---
 
+## Toward Goal-Directed Autonomous AI
+
+The six-stage lifecycle is the **operating model**. Increasingly autonomous AI is the **long-term destination** as the model, tooling, experience, validation, and trust mechanisms become sufficiently mature.
+
+Autonomy is not a seventh stage. Each stage contributes a capability that can eventually allow AI to take more responsibility for determining and adapting the path toward a human-defined objective.
+
+```text
+AI Answers
+    ↓
+AI Agents
+    ↓
+Agentic Workflows
+    ↓
+AI Orchestration
+    ↓
+Experience & Expertise
+    ↓
+Goal-Directed Orchestration
+    ↓
+Goal-Directed Autonomous AI
+```
+
+Today, a human may provide both the goal and much of the path:
+
+```text
+Human
+  ↓
+Goal + detailed task
+  ↓
+AI
+  ↓
+Plan + Execute
+```
+
+As the orchestration system matures, the human can increasingly provide the **objective, constraints, and success criteria**, while AI determines and adapts the path using current context and accumulated experience:
+
+```text
+Human
+  ↓
+Objective + constraints + success criteria
+  ↓
+AI Orchestrator
+  ↓
+Understand
+  ↓
+Plan
+  ↓
+Execute
+  ↓
+Proof
+  ↓
+Grow
+  ↓
+Use accumulated experience & expertise
+  ↓
+Re-plan when necessary
+  ↺
+```
+
+The long-term destination is:
+
+> **Human defines the destination. AI determines and continuously adapts the path.**
+
+This does not mean removing humans from the system. Human responsibility moves toward defining objectives, constraints, risk boundaries, authority, and success criteria, while AI takes on more of the planning, execution, observation, and adaptation within those boundaries.
+
+The framework does not claim that unrestricted autonomy exists today. It defines an architecture that can progressively support greater autonomy as reasoning, tools, persistent context, experience, validation, and trust mature.
+
+---
+
 ## Why this Framework?
 
 This framework helps organizations:
@@ -105,6 +174,7 @@ This framework helps organizations:
 * Prove outcomes, not activity.
 * Capture validated experience instead of treating every execution as an isolated event.
 * Continuously improve through evidence, feedback, and learning.
+* Build toward increasingly goal-directed AI without treating autonomy as a shortcut or a separate workflow stage.
 
 ---
 
@@ -161,6 +231,7 @@ examples/
 
 * ✅ AI Orchestration Model — Opportunity → Understand → Plan → Execute → Proof → Grow
 * ✅ Experience & Expertise within Grow — execution → validated experience → reusable expertise → better decisions
+* ✅ Goal-Directed Autonomous AI direction — human-defined objective → AI-directed and continuously adapted path
 * ✅ Philosophy
 * ✅ Principles
 * ✅ Reference Implementations
@@ -176,7 +247,7 @@ examples/
 
 > **AI is another engineering capability that must be orchestrated like any other part of a software system.**
 
-The goal is not to maximize AI activity. It is to turn capability into coherent outcomes through context, focus, ownership, evidence, and learning — while allowing validated experience to improve future decisions.
+The goal is not to maximize AI activity. It is to turn capability into coherent outcomes through context, focus, ownership, evidence, and learning — while allowing validated experience to improve future decisions and progressively enable greater autonomy.
 
 ---
 
