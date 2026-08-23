@@ -61,11 +61,13 @@ The framework does not claim unrestricted autonomy exists today. It defines the 
 
 ### Beyond the Framework
 
-**The AI Future** is a separate technical hypothesis exploring what could happen if AI systems continuously accumulate validated experience, develop reusable expertise, and learn from one another across interactions.
+**The AI Future** is a separate technical hypothesis exploring a different question: what happens when frontier intelligence, persistent AI systems, shared experience, massive infrastructure, robotics, and competitive pressure converge toward greater autonomy?
 
-> **Can intelligence compound when experience becomes persistent and shared?**
+The central thought experiment is simple:
 
-This is a future-state exploration, not part of the framework lifecycle.
+> **What happens when someone decides that winning the race requires giving AI a persistent purpose, broad resources, and permission to pursue and learn with minimal human intervention — “let it run”?**
+
+This is not a prediction or a claim that current frontier models have reached AGI. It is an exploration of a possible **race-to-autonomy** feedback loop and what could follow from it.
 
 [Read The AI Future hypothesis →](docs/ai-future-hypothesis.md)
 
