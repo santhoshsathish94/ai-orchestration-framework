@@ -6,13 +6,13 @@ The AI Orchestration Model is a simple, repeatable lifecycle for integrating AI 
 
 Rather than focusing on prompts, tools, agents, or individual models, it focuses on how humans and AI turn an opportunity into a measurable outcome and improve the system through learning.
 
-## From AI Answers to AI Orchestration
+## From AI Models to AI Orchestration
 
-AI capabilities are evolving from answering questions to accomplishing tasks and then to coordinating increasingly complex work.
+AI capabilities are evolving from models that provide intelligence to agents that can act, workflows that can repeat and coordinate tasks, and orchestration systems that can learn from outcomes.
 
 | Stage | Primary question | Core value |
 |---|---|---|
-| **AI / Prediction** | What can AI tell us? | Answers, predictions, and recommendations |
+| **AI Models** | What can AI understand, generate, predict, or recommend? | Intelligence, analysis, generation, and prediction |
 | **AI Agents** | Can AI accomplish this task? | Task execution using reasoning and tools |
 | **Agentic Workflows** | Can AI repeatedly execute a multi-step process? | Repeatability, coordination, and automation |
 | **AI Orchestration** | Can every outcome improve future capability? | Continuous learning and compounding context |
@@ -238,12 +238,12 @@ This is how the orchestration system can compound capability over time without a
 
 ## Toward Goal-Directed Autonomous AI
 
-The six-stage lifecycle is the **operating model**. Increasingly autonomous AI is the **destination**.
+The six-stage lifecycle is the operating model. **Autonomy is the destination that can emerge as the model, tooling, experience, validation, and trust mechanisms become sufficiently mature.**
 
-As experience, expertise, persistent context, tooling, validation, and trust mature, humans can move from specifying detailed tasks toward defining objectives, constraints, and success criteria while AI increasingly determines and adapts the path.
+The framework does not treat autonomy as another lifecycle stage. Instead, each stage contributes a capability required for increasingly autonomous goal-directed execution.
 
 ```text
-AI Answers
+AI Models
     ↓
 AI Agents
     ↓
@@ -251,12 +251,26 @@ Agentic Workflows
     ↓
 AI Orchestration
     ↓
+Experience & Expertise
+    ↓
 Goal-Directed Orchestration
     ↓
 Goal-Directed Autonomous AI
 ```
 
-The long-term model is:
+Today, a human may provide both the goal and much of the path:
+
+```text
+Human
+  ↓
+Goal + detailed task
+  ↓
+AI
+  ↓
+Plan + Execute
+```
+
+As the orchestration system matures, the human can increasingly provide the **objective, constraints, and success criteria**, while AI determines and adapts the path using current context and accumulated experience:
 
 ```text
 Human
@@ -265,7 +279,15 @@ Objective + constraints + success criteria
   ↓
 AI Orchestrator
   ↓
-Understand → Plan → Execute → Proof → Grow
+Understand
+  ↓
+Plan
+  ↓
+Execute
+  ↓
+Proof
+  ↓
+Grow
   ↓
 Use accumulated experience & expertise
   ↓
@@ -273,11 +295,13 @@ Re-plan when necessary
   ↺
 ```
 
+The long-term destination is therefore:
+
 > **Human defines the destination. AI determines and continuously adapts the path.**
 
-The goal is not to remove humans from the system. Human responsibility moves toward defining objectives, constraints, risk boundaries, authority, and success criteria, while AI takes on more planning, execution, observation, and adaptation within those boundaries.
+This does not mean removing humans from the system. Human responsibility moves toward defining objectives, constraints, risk boundaries, authority, and success criteria, while AI takes on more of the planning, execution, observation, and adaptation within those boundaries.
 
-The framework does not claim that unrestricted autonomy exists today. It provides an architecture that can progressively support greater autonomy as reasoning, tools, persistent context, experience, validation, and trust mature.
+The framework's purpose is not to claim that unrestricted autonomy exists today. It is to provide an architecture that can progressively support greater autonomy as reasoning, tools, persistent context, experience, validation, and trust mature.
 
 ---
 
