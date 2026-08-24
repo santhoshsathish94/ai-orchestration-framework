@@ -26,6 +26,7 @@ All notable changes to this project will be documented in this file.
 - Converted the philosophy's numbered list into prose beliefs so the principles are the only numbered list.
 - Collapsed five competing loop formulations onto the single canonical lifecycle across the philosophy, case study 03, and the AI Future hypothesis.
 - Reframed the AI Future hypothesis to acknowledge prior art on competitive AI-safety dynamics and to connect back to the framework as the discipline for granting autonomy; demoted it in the README.
+- Sharpened the AI Future hypothesis: added the unsolved technical barriers to autonomy (continual learning, long-horizon credit assignment, compounding reliability, physical sample efficiency, open-ended goal evaluation), the asymmetry of restraint as a unilateral cost, the follower's shortcut (compete on leash length rather than model quality), the physical axis as a non-substitutable resource, and a "what would make this wrong" falsifiability section. The argument names no actor by design.
 - Rewrote the README navigation to surface the Quickstart, template, and worked example, and corrected the release status.
 - Renamed `docs/07-validation.md` to `docs/07-proof.md` to match the stage name.
 
