@@ -25,10 +25,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # Pages must be enabled on the repository (Settings -> Pages -> Source: GitHub Actions).
+      # configure-pages cannot enable it: GITHUB_TOKEN has no administration permission.
       - uses: actions/configure-pages@v5
-        with:
-          # Turns Pages on for the repository, so no manual setup is needed here or in a fork.
-          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
