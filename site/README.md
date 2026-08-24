@@ -43,5 +43,11 @@ site/
 - The AI Future hypothesis stays labelled speculative and separate from the framework.
 - New terminology goes in [`docs/glossary.md`](../docs/glossary.md) first, then the site.
 
+## Social preview
+
+`assets/social-preview.svg` is the source; `assets/social-preview.png` (1600×800) is rendered from it
+and used for both the site's `og:image` and the repository's social preview. To regenerate after
+editing the SVG, open it at a 1280×640 viewport and export at 2:1.
+
 The full plan, including acceptance criteria, lives outside this repo in
 `build_the_website_for_the_framework.md`.
