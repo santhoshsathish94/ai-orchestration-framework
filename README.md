@@ -38,14 +38,23 @@ AI models provide intelligence. Agents can perform tasks. Workflows can repeat t
 
 One principle per stage — if you remember the lifecycle, you remember the principles.
 
-| Stage | What happens | Principle |
-|---|---|---|
-| **Opportunity** | Define the problem, why it matters, and the outcome worth pursuing. | Start with the opportunity, not the tool. |
-| **Understand** | Establish the context and evidence needed to decide well. | Never assume the context is sufficient. |
-| **Plan** | Choose the focused path, boundaries, dependencies, and ownership. | Parallelize only what is genuinely independent. |
-| **Execute** | Do the work, adapting when new evidence changes the direction. | Delegation never dissolves accountability. |
-| **Proof** | Demonstrate with evidence that the intended outcome actually happened. | Prove outcomes, not activity. |
-| **Grow** | Capture what was learned and feed it into the next cycle. | Only validated experience becomes expertise. |
+**Opportunity** — Define the problem, why it matters, and the outcome worth pursuing.  
+*Start with the opportunity, not the tool.*
+
+**Understand** — Establish the context and evidence needed to decide well.  
+*Never assume the context is sufficient.*
+
+**Plan** — Choose the focused path, boundaries, dependencies, and ownership.  
+*Parallelize only what is genuinely independent.*
+
+**Execute** — Do the work, adapting when new evidence changes the direction.  
+*Delegation never dissolves accountability.*
+
+**Proof** — Demonstrate with evidence that the intended outcome actually happened.  
+*Prove outcomes, not activity.*
+
+**Grow** — Capture what was learned and feed it into the next cycle.  
+*Only validated experience becomes expertise.*
 
 The lifecycle stays deliberately simple. Experience and expertise are **part of Grow**, not additional stages.
 
