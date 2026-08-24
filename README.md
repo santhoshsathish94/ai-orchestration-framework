@@ -85,13 +85,13 @@ orchestration that learns.
 
 ---
 
-## The Long-Term Destination
+## Where this leads
 
-AI orchestration is the **foundation**, not the final destination.
+AI orchestration is the **foundation**, not the end state.
 
 As reasoning, tools, persistent context, experience, validation, and trust mature, the framework is intended to support a progression toward **goal-directed autonomous AI**.
 
-![The long-term destination for AI orchestration](assets/ai-future/goal-directed-destination.svg)
+![Human defines the destination; AI determines and adapts the path](assets/ai-future/goal-directed-destination.svg)
 
 Today, humans often provide both the goal and the path. Over time, the goal can become the primary human input, while AI increasingly determines and adapts the path within defined constraints and success criteria.
 
