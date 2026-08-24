@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Added
+- A **"Proven in practice"** section in the README, stating the two delivered outcomes up front: the CMS API migration estimated at 8–10 weeks and delivered in about a day, and the production memory leak traced past its workaround and fixed at the root.
+- `assets/social-preview.png` — a 1280×640 card used for the site's `og:image` and the repository social preview, with `assets/social-preview.svg` as the design source.
+
+### Changed
+- Both reference implementations now state that they were **built and demonstrated against real organizational data**, rather than reading as purely conceptual patterns. Graded with the framework's own evidence ladder as **rung 2 — demonstrated**: a small number of real cases, not put in front of end users and not adopted organization-wide. Production Exception Remediation also names what has not been exercised — wiring approval and deployment gates into a team's real tooling.
+- The case-studies index leads with the fact that 01 and 02 are delivered outcomes rather than illustrations.
+
 ## v0.4.0 — 2026-08-24
 
 A review pass over the whole framework, plus the first website. The model itself did not change; what
