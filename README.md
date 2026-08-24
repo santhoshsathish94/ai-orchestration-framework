@@ -126,7 +126,9 @@ The framework is designed to help teams:
 - **[Cross-Team Knowledge Access](docs/reference-implementations.md#1-cross-team-knowledge-access)** — make existing organizational knowledge accessible through AI.
 - **[Production Exception Remediation](docs/reference-implementations.md#2-production-exception-remediation)** — take a production issue from understanding through fix, proof, and learning.
 
-These are practical applications of the core lifecycle.
+These are practical applications of the core lifecycle. Both have been **built and demonstrated
+against real organizational data**, not just proposed — though neither has been put in front of end
+users yet, and the page says exactly that.
 
 ---
 

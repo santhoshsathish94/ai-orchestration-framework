@@ -2,6 +2,14 @@
 
 These are practical patterns teams can adopt and adapt. They are not separate frameworks; they demonstrate how the core lifecycle applies to recurring organizational problems.
 
+> **Status — what these actually are.** Both have been **built and demonstrated against real
+> organizational data** — repositories, logs, telemetry and job definitions — on a small number of
+> real cases. Neither has been put in front of end users or adopted organization-wide.
+>
+> On the [evidence ladder](07-proof.md#how-strong-is-your-evidence) that is **rung 2 — demonstrated**.
+> They are working patterns, not proven production deployments, and this page says so rather than
+> letting the reader assume either more or less.
+
 ## 1. Cross-Team Knowledge Access
 
 **Type:** Reference Capability
@@ -31,6 +39,10 @@ A data team asks why a synchronization job did not run. AI reads the relevant re
 ### Outcome
 
 > Reduce unnecessary coordination by making existing organizational knowledge directly accessible.
+
+Both examples above were run against real systems. The capability answered them from the actual
+sources rather than from a summary prepared in advance — which is the part that matters, because it
+is what makes the pattern hold when the question is one nobody anticipated.
 
 ---
 
@@ -77,6 +89,11 @@ Incorrect report values trigger remediation. AI traces the transformation, fixes
 ### Outcome
 
 > Move from **"the fix was deployed"** to **"the original problem was proven resolved."**
+
+The orchestration itself has been demonstrated end to end — investigation, root cause, focused change,
+validation, and evidence assembled for a human approval decision. What has not been exercised is the
+last mile: standing this up as the routine path for a team's production exceptions, with the approval
+and deployment gates wired into their real tooling.
 
 ---
 
