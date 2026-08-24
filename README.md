@@ -52,6 +52,27 @@ The lifecycle stays deliberately simple. Experience and expertise are **part of 
 
 ---
 
+## Proven in practice
+
+This comes out of delivery work, not theory. Two cycles are documented end to end:
+
+**A CMS content API migration estimated at 8–10 weeks of team effort, delivered in about a day.**
+GraphQL → REST and .NET 9 MVC → .NET 10 Minimal APIs, replacing ~7,800 lines across 200+ files —
+with every route, JSON shape and response envelope preserved so no consumer had to change, validated
+against live traffic before a phased cutover.
+[Case study 01 →](case-studies/01-contentful-migration.md)
+
+**A production memory leak fixed at its root, not worked around.**
+Recurring out-of-memory crashes were stabilized with a blunt mitigation, then the investigation
+continued — past the workaround, into React's Server Components renderer. The one-file fix was
+contributed upstream so other applications need not carry the same workaround.
+[Case study 02 →](case-studies/02-react-rsc-memory-leak.md) *(CI-green PR awaiting maintainer review)*
+
+Both left reusable context behind. That is the difference between a workflow that repeats and
+orchestration that learns.
+
+---
+
 ## The Long-Term Destination
 
 AI orchestration is the **foundation**, not the final destination.
@@ -151,7 +172,7 @@ These are practical applications of the core lifecycle.
 - ✅ Experience & Expertise within Grow
 - ✅ Evidence ladder and autonomy ladder
 - ✅ Reference Implementations
-- ✅ Real-World Case Studies (3)
+- ✅ Real-World Case Studies (3) — two with delivered outcomes
 - ✅ How AI Fails, Field Lessons, Glossary
 - ⏳ Enterprise Adoption Guide
 

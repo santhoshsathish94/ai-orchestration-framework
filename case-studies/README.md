@@ -2,6 +2,10 @@
 
 Real work, honestly reported — including what is still unproven.
 
+**01 and 02 are delivered outcomes**, not illustrations: a migration estimated at 8–10 weeks completed
+in about a day and validated against live traffic, and a production out-of-memory failure traced to
+its root cause in a shared framework and fixed there.
+
 These deliberately span different domains. The lifecycle is the same in each; only the vocabulary
 changes.
 
@@ -9,7 +13,7 @@ changes.
 |---|---|---|---|
 | **01** | [Contentful API Migration](01-contentful-migration.md) | Software engineering | A large GraphQL → REST migration completed in about a day, with the public contract preserved and validated against live traffic. |
 | **02** | [Fixing a React Server Components Memory Leak Upstream](02-react-rsc-memory-leak.md) | Open-source engineering | Production OOM → workaround → root cause → validated fix → upstream contribution. The workaround was not the destination. |
-| **03** | [Contextual Reasoning in a Newborn Care Scenario](03-newborn-contextual-reasoning.md) | Healthcare *(reasoning pattern)* | AI recognising that the available context was insufficient, and surfacing a missing signal for a human expert to decide on. |
+| **03** | [Contextual Reasoning in a Newborn Care Scenario](03-newborn-contextual-reasoning.md) | Healthcare *(reasoning pattern)* | AI recognizing that the available context was insufficient, and surfacing a missing signal for a human expert to decide on. |
 
 ## A note on evidence
 
