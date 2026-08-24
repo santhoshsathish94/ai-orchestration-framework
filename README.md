@@ -4,11 +4,20 @@
 
 An open, evidence-based framework for orchestrating AI across engineering and business workflows.
 
+**[🌐 Read it on the website →](https://santhoshsathish94.github.io/ai-orchestration-framework/)** — the framework explained in about three minutes, with the lifecycle, the evidence ladder, and the autonomy ladder made interactive.
+
 ## What is it?
 
 The **AI Orchestration Framework is an operating model for turning human intent and AI capability into measurable outcomes through context, execution, evidence, and learning.**
 
 It is not an LLM framework, agent SDK, or prompt library. It defines **how AI and humans work together to achieve an outcome**.
+
+### What it is not
+
+- **Not software.** There is nothing to install. It is a way of working.
+- **Not a replacement for how you already work.** It sits alongside Agile, incident management, or whatever your team already uses.
+- **Not about model or tool selection.** It does not tell you which AI to use, and it does not cover cost, evaluations, data governance, or security review.
+- **Not needed for everything.** Throwaway or trivial work does not need a lifecycle. Use it where being wrong actually costs something.
 
 ### Why orchestration?
 
@@ -55,33 +64,26 @@ Today, humans often provide both the goal and the path. Over time, the goal can 
 
 > **Human defines the destination. AI determines and continuously adapts the path.**
 
-The framework does not claim unrestricted autonomy exists today. It defines the engineering foundation through which greater autonomy can progressively become possible.
+The framework does not claim unrestricted autonomy exists today. It defines the engineering foundation through which greater autonomy can progressively become possible — one level at a time, each earned through proof.
 
-[Read the full autonomous-AI direction →](docs/04-framework.md#toward-goal-directed-autonomous-ai)
-
-### Beyond the Framework
-
-**The AI Future** is a separate technical hypothesis exploring a different question: what happens when frontier intelligence, persistent AI systems, shared experience, massive infrastructure, robotics, and competitive pressure converge toward greater autonomy?
-
-The central thought experiment is simple:
-
-> **What happens when someone decides that winning the race requires giving AI a persistent purpose, broad resources, and permission to pursue and learn with minimal human intervention — “let it run”?**
-
-This is not a prediction or a claim that current frontier models have reached AGI. It is an exploration of a possible **race-to-autonomy** feedback loop and what could follow from it.
-
-[Read The AI Future hypothesis →](docs/ai-future-hypothesis.md)
+[Read the autonomy ladder →](docs/04-framework.md#the-autonomy-ladder)
 
 ---
 
 ## Core Principles
 
-- **Understand before acting.**
-- **Focus over unnecessary parallelism.**
-- **Ownership must remain clear.**
-- **Prove outcomes, not activity.**
-- **Learn from validated outcomes.**
-- **Use experience to improve future decisions.**
-- **Increase autonomy only as context, evidence, and trust mature.**
+One principle per stage — if you remember the lifecycle, you remember the principles.
+
+| Stage | Principle |
+|---|---|
+| **Opportunity** | Start with the opportunity, not the tool. |
+| **Understand** | Understand before acting — and never assume the context is sufficient. |
+| **Plan** | Plan for focus and ownership. Parallelize only what is genuinely independent. |
+| **Execute** | Orchestrate work, not prompts. Delegation never dissolves accountability. |
+| **Proof** | Prove outcomes, not activity. Name the evidence you actually have. |
+| **Grow** | Turn validated experience into shared capability. |
+
+[Read the principles →](docs/03-principles.md)
 
 ---
 
@@ -109,27 +111,48 @@ These are practical applications of the core lifecycle.
 
 ## Explore the Framework
 
-- 🚀 [**Quickstart**](QUICKSTART.md)
-- 📖 [Vision](docs/01-problem.md)
+**Start here**
+
+- 🌐 [**Website**](https://santhoshsathish94.github.io/ai-orchestration-framework/) — the interactive walkthrough
+- 🚀 [**Quickstart**](QUICKSTART.md) — run your first cycle in about 15 minutes
+- 📝 [Orchestration Brief template](templates/orchestration-brief.md) — the one-page working artifact
+- 🧪 [Worked example](examples/production-exception-remediation/) — all six stages on a production `500`
+
+**The framework**
+
+- 📖 [The Problem](docs/01-problem.md)
 - 📖 [Philosophy](docs/02-philosophy.md)
 - 📖 [Principles](docs/03-principles.md)
 - 📖 [AI Orchestration Model](docs/04-framework.md)
 - 📖 [Reference Implementations](docs/reference-implementations.md)
+
+**Practical**
+
+- 📖 [How AI Fails — and which stage catches it](docs/how-ai-fails.md)
 - 📖 [Practices & Field Lessons](docs/field-practices.md)
 - 📖 [Case Studies](case-studies/)
-- 📖 [Contributing](CONTRIBUTING.md)
+- 📖 [Glossary](docs/glossary.md)
+
+**Beyond the framework**
+
+- 🔭 [The AI Future](docs/ai-future-hypothesis.md) — a separate, speculative hypothesis on the race to autonomy. Not part of the framework.
+- 🤝 [Contributing](CONTRIBUTING.md)
 
 ---
 
 ## Current Status
 
-**Version 0.3.0 (in progress)**
+**Latest release: v0.3.0 — next release in progress**
 
 - ✅ Core AI Orchestration Lifecycle
+- ✅ Principles, one per stage
+- ✅ Interactive website on GitHub Pages
+- ✅ Quickstart, brief template, and worked example
 - ✅ Experience & Expertise within Grow
-- ✅ Goal-Directed Autonomous AI direction
+- ✅ Evidence ladder and autonomy ladder
 - ✅ Reference Implementations
-- ✅ Real-World Case Studies
+- ✅ Real-World Case Studies (3)
+- ✅ How AI Fails, Field Lessons, Glossary
 - ⏳ Enterprise Adoption Guide
 
 ---

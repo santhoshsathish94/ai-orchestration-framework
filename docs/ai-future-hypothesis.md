@@ -72,6 +72,12 @@ This leads to the central hypothesis:
 
 > **What happens when restraint itself becomes a competitive disadvantage?**
 
+### This is not a new idea
+
+The dynamic above has been described before. Competitive pressure eroding safety margins in an AI development race is well-established territory — Armstrong, Bostrom and Shulman's *Racing to the Precipice* modeled it directly, Bostrom's *Superintelligence* treats it at length, and the current "race to the top" framing used across frontier labs is an attempt to invert it.
+
+Nothing here claims to have discovered that dynamic. What this document adds is a narrower, more practical question: **if autonomy is going to increase under competitive pressure, what does the engineering discipline for granting it look like?** That is the question the AI Orchestration Framework is trying to answer, and it is why the two documents sit in the same repository.
+
 ## 4. The world becomes the learning environment
 
 ![AI learning through continuous interaction with the physical world](../assets/ai-future/03-persistent-intelligence.svg)
@@ -79,6 +85,8 @@ This leads to the central hypothesis:
 Robotics and connected infrastructure could extend this loop from software into the physical world.
 
 **Observe → Decide → Act → Measure → Learn → Repeat**
+
+That loop is recognizable: it is the same Understand → Plan → Execute → Proof → Grow cycle, running without a human in every turn.
 
 A robot can try something. A factory can measure it. A laboratory can test it. The resulting information can become context for the next decision.
 
@@ -137,6 +145,19 @@ The proposed mechanism is much simpler:
 The purpose is not to predict the ending.
 
 **It is to understand the path before we reach it.**
+
+## So what?
+
+If autonomy increases because competition rewards it, then the useful question is not *whether* to grant autonomy but **what has to be true before each increment of it is granted**. That is an engineering problem, and it has an answer:
+
+- **Proof before trust.** Autonomy should be earned against evidence, not assumed from capability. The [autonomy ladder](04-framework.md#toward-goal-directed-autonomous-ai) makes each increment conditional on the previous level consistently producing proven outcomes.
+- **Ownership that survives delegation.** As AI takes more of the path, a named human still owns the objective, the constraints, and the risk. Delegation shares work; it does not move accountability.
+- **Context that compounds honestly.** A system that learns from its own unvalidated output amplifies its own errors. Grow only promotes *validated* experience into expertise for exactly this reason.
+- **Reversibility.** The faster a system acts, the more the ability to observe and undo matters.
+
+None of this slows a capable team down. It is what makes increasing autonomy defensible rather than reckless — the difference between a system that is trusted because it has been proven and one that is trusted because it has not yet failed visibly.
+
+**That is the argument this repository is actually making. The hypothesis is only the reason it matters.**
 
 ---
 

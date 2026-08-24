@@ -7,14 +7,32 @@ All notable changes to this project will be documented in this file.
 ### Added
 - `QUICKSTART.md` — apply the lifecycle to your first task in about 15 minutes.
 - `templates/orchestration-brief.md` — a reusable one-page brief covering all six stages, with copy-and-paste prompts and explicit human/AI ownership.
-- `examples/production-exception-remediation/` — a runnable, end-to-end walkthrough applying the lifecycle (and the orchestration brief) to a recurring production 5xx exception.
+- `examples/production-exception-remediation/` — an end-to-end walkthrough applying the lifecycle (and the orchestration brief) to a recurring production 5xx exception, now labeled as an illustrative scenario.
 - Case study 03 — "Contextual Reasoning in a Newborn Care Scenario," illustrating how orchestration can identify a missing signal, support evidence gathering, and keep the consequential decision with the appropriate human expert.
+- `docs/how-ai-fails.md` — eight AI-specific failure modes and the lifecycle stage that catches each one.
+- `docs/glossary.md` — plain-language definitions for every term the framework uses.
+- **Evidence ladder** in the Proof stage — five rungs from "asserted" to "observed in the real environment," with the rule to name the rung you actually reached.
+- **Autonomy ladder** in the AI Orchestration Model — five levels of goal-directed autonomy, each earned through consistently achieved Proof, capped by blast radius and revocable.
+- "When Proof fails" guidance — a failed proof returns to Understand, not to Execute.
+- "What it is not" scope boundaries in the README.
+- `case-studies/README.md` — an index that distinguishes outcome case studies from reasoning patterns.
+- GitHub issue and pull request templates that follow Opportunity → Change → Proof.
+- `site/` — an interactive website deployed to GitHub Pages: the lifecycle explorer (including the Proof → Understand failure edge), the evolution from models to orchestration, the evidence ladder, the AI failure-mode matcher, the autonomy ladder, and a searchable glossary. No build step and no dependencies; readable with JavaScript disabled.
 
 ### Changed
 - Expanded the framework philosophy beyond engineering workflows to describe AI as reducing barriers to entering new fields of expertise while helping identify gaps, surface missing information, and prove outcomes.
 - Added the guiding statement: **AI expands what humans can understand, reduces what humans can miss, and helps prove what humans accomplish.**
-- Updated the README and philosophy document to connect the broader philosophy to the core orchestration lifecycle.
-- Updated the README case-study status from two to three real-world case studies.
+- Reduced the principles from eleven to **six — one per lifecycle stage**, folding context, gap-identification, execution ownership, and collective capability into the stage they belong to.
+- Converted the philosophy's numbered list into prose beliefs so the principles are the only numbered list.
+- Collapsed five competing loop formulations onto the single canonical lifecycle across the philosophy, case study 03, and the AI Future hypothesis.
+- Reframed the AI Future hypothesis to acknowledge prior art on competitive AI-safety dynamics and to connect back to the framework as the discipline for granting autonomy; demoted it in the README.
+- Rewrote the README navigation to surface the Quickstart, template, and worked example, and corrected the release status.
+- Renamed `docs/07-validation.md` to `docs/07-proof.md` to match the stage name.
+
+### Removed
+- `docs/AI-FUTURE.md` — an orphaned pointer file describing a superseded version of the hypothesis.
+- Eight unused AI Future illustrations, the unused `assets/ai-orchestration-model.png`, and the empty `diagrams/` placeholder.
+- Career- and resume-positioning references from the philosophy.
 
 ## v0.3.0 — 2026-08-14
 

@@ -18,7 +18,7 @@ This is not a strict replacement hierarchy. Agentic workflows can be an importan
 
 A workflow is primarily designed to execute a known process repeatedly. An orchestration system captures what was learned from those outcomes and makes relevant context available to the next opportunity.
 
-The context can accumulate at the appropriate scope — an individual, a team, an organisation, or another defined boundary.
+The context can accumulate at the appropriate scope — an individual, a team, an organization, or another defined boundary.
 
 ## Core Lifecycle
 
@@ -139,6 +139,26 @@ Proof can include tests, before/after measurements, telemetry, non-production va
 
 For production remediation, the loop can continue through deployment and observation until the original production signal is demonstrably resolved.
 
+### The evidence ladder
+
+Not every task has telemetry, and pretending otherwise makes Proof unusable for most work. What matters is being accurate about how strong your evidence actually is.
+
+| Rung | Evidence | What it establishes |
+|---|---|---|
+| 1 | **Asserted** — someone says it works | Nothing. This is not proof. |
+| 2 | **Demonstrated once** — shown working manually | It can work |
+| 3 | **Tested repeatably** — an automated check that fails without the change | It works, and will keep working |
+| 4 | **Measured before/after** — the number moved in the right direction | It changed the thing you cared about |
+| 5 | **Observed in the real environment** — the original signal is gone and stays gone | The outcome actually happened |
+
+> **Name the rung you actually reached. Do not claim a higher one.**
+
+Rung 5 is not always available or worth the cost; a small internal change may be complete at rung 3. The discipline is not always reaching the top — it is being honest about where you stopped and what therefore remains unproven.
+
+### When Proof fails
+
+Failed proof is a normal outcome, not an exception to handle later. When the evidence does not support the intended outcome, **return to Understand, not to Execute.** A failed proof usually means the understanding was incomplete, so another attempt at the fix repeats the original mistake faster.
+
 ### Questions
 
 - Did the original problem actually improve or disappear?
@@ -206,6 +226,27 @@ Today, a human may provide both the goal and much of the path. As the orchestrat
 > **Human defines the destination. AI determines and continuously adapts the path.**
 
 This does not mean removing humans from the system. Human responsibility moves toward defining objectives, constraints, risk boundaries, authority, and success criteria, while AI takes on more of the planning, execution, observation, and adaptation within those boundaries.
+
+### The autonomy ladder
+
+"Increase autonomy as trust matures" is only useful if you can say what trust looks like. These levels make it concrete. They describe how much of the *path* AI is trusted to determine — not how capable the model is.
+
+| Level | Human provides | AI provides |
+|---|---|---|
+| **L0** | Every step | Suggestions only |
+| **L1** | Approves each step before it happens | Drafts each step |
+| **L2** | Approves the plan; reviews the result | Executes the agreed plan |
+| **L3** | Objective, constraints, success criteria | Plans and executes within the boundaries |
+| **L4** | Objective and success criteria | Determines and continuously adapts the path |
+
+> **Move up a level only when Proof at the current level has been consistently achieved — and move back down when it has not.**
+
+The gate is Proof, not confidence. A level is earned when outcomes at that level are repeatedly proven without rework or intervention, for that specific kind of work. Autonomy is granted per context, not globally: a team may sit at L3 for a well-understood remediation flow and L1 for anything touching customer data.
+
+Two rules keep the ladder honest:
+
+- **Blast radius caps the level.** Where a mistake is expensive or irreversible, human approval stays regardless of track record.
+- **Levels are revocable.** A ladder that only goes up is not a trust mechanism.
 
 The framework's purpose is not to claim that unrestricted autonomy exists today. It is to provide an architecture that can progressively support greater autonomy as reasoning, tools, persistent context, experience, validation, and trust mature.
 

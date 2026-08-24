@@ -29,7 +29,7 @@ Dropping the parallelism and focusing on one workstream at a time finally resolv
 - Watch for the **illusion of progress** — motion across many tasks is not the same as outcomes. Measure outcomes, not activity.
 - Beware **false economy**: under-resourcing a task while also spreading attention thin can cost more than it saves. Put the right resources on the task that matters most.
 
-**Reinforces:** [Principle 4 — Plan for Focus and Ownership](03-principles.md) and the belief that outcome quality follows the quality of shared understanding and context.
+**Reinforces:** [Principle 3 — Plan for Focus and Ownership](03-principles.md#3-plan-for-focus-and-ownership) and the belief that outcome quality follows the quality of shared understanding and context.
 
 *Noise does not improve outcomes; focus does.*
 
@@ -56,7 +56,7 @@ Changing the direction changed everything: **step back, understand the problem e
 - When an agent starts **thrashing** with repeated failed fixes, treat it as the signal to stop fixing and return to understanding.
 - **A fix you can't explain isn't a fix.** Require the diagnosis before the change.
 
-**Reinforces:** [Principle 2 — Understand Before Acting](03-principles.md) and [Principle 7 — Prove Outcomes, Not Activity](03-principles.md).
+**Reinforces:** [Principle 2 — Understand Before Acting](03-principles.md#2-understand-before-acting) and [Principle 5 — Prove Outcomes, Not Activity](03-principles.md#5-prove-outcomes-not-activity).
 
 ---
 
@@ -80,7 +80,7 @@ The resulting contribution was submitted to React so the solution could potentia
 - Prefer a **generalized fix** when the underlying defect belongs to a shared framework or dependency.
 - When appropriate, contribute the fix upstream so the learning and solution can benefit the wider ecosystem.
 
-**Reinforces:** [Principle 7 — Prove Outcomes, Not Activity](03-principles.md) and [Principle 8 — Grow Through Feedback](03-principles.md) — turning individual engineering incidents into reusable knowledge.
+**Reinforces:** [Principle 5 — Prove Outcomes, Not Activity](03-principles.md#5-prove-outcomes-not-activity) and [Principle 6 — Grow Into Collective Capability](03-principles.md#6-grow-into-collective-capability) — turning individual engineering incidents into reusable knowledge.
 
 > **A workaround resolves an incident. Understanding the root cause can resolve a class of problems.**
 

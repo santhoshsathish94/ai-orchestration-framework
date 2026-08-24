@@ -7,6 +7,10 @@ This example fills in the [Orchestration Brief](../../templates/orchestration-br
 stage. It's written so you can **swap in your own exception** and follow the exact same steps with
 your AI assistant. Nothing here is tool-specific — the prompts work with any capable coding assistant.
 
+> **This is an illustrative scenario, not a reported incident.** The checkout bug, the metrics, and
+> the CI results are invented to show the shape of a full cycle. For real, evidence-backed work see
+> the [case studies](../../case-studies/).
+
 > **Lifecycle:** Opportunity → Understand → Plan → Execute → Proof → Grow ↺
 
 | Field | Value |
@@ -14,7 +18,7 @@ your AI assistant. Nothing here is tool-specific — the prompts work with any c
 | **Task / outcome** | Stop the recurring `500` on `POST /api/checkout` |
 | **Owner (human)** | On-call engineer |
 | **AI capability** | Coding assistant with read access to the repo, logs, and CI |
-| **Date** | 2026-08-21 |
+| **Scenario** | Illustrative |
 
 ---
 

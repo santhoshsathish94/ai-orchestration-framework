@@ -2,7 +2,12 @@
 
 **AI-assisted context → identify an information gap → suggest a useful next signal → human clinical decision**
 
-> This case study describes an AI-assisted reasoning pattern, not medical advice. AI did not diagnose, prescribe, or make a clinical decision. The pediatrician remained responsible for the medical decision.
+> **This is a reasoning pattern, not an outcome measurement.** Unlike case studies 01 and 02, it
+> reports no metric — it illustrates what the Understand stage looks like outside software.
+>
+> It is not medical advice. AI did not diagnose, prescribe, or make a clinical decision; the
+> pediatrician remained responsible for the medical decision. No identifying details and no actual
+> medical data are included. The situation is described only at the level of the reasoning pattern.
 
 ## Summary
 
@@ -12,9 +17,9 @@ The useful contribution from AI was not a diagnosis from the reports. It was rec
 
 The suggestion was discussed with the pediatrician. When the repeat result became available, the pediatrician used it as an additional data point and made the clinical decision.
 
-The important orchestration pattern is:
+The important orchestration pattern is what the **Understand** stage looks like when it is done well:
 
-**Context → Existing evidence → Identify information gap → Suggest next signal → Reassess with new evidence → Human decision**
+**Existing evidence → identify the information gap → suggest the next signal → reassess with new evidence → human decision**
 
 ## Why this is an orchestration use case
 
@@ -66,9 +71,11 @@ The goal is not simply:
 
 **Question → Answer**
 
-A stronger orchestration loop is:
+A stronger loop keeps going until the context is good enough to act on:
 
-**Context → Reason → Detect uncertainty → Identify missing information → Gather evidence → Reassess → Human decision**
+**Reason → detect uncertainty → identify missing information → gather evidence → reassess → human decision**
+
+That is the **Understand** stage of the lifecycle, applied outside software.
 
 The same principle can apply well beyond healthcare. In engineering, operations, security, finance, or incident response, the model may have enough information to form a hypothesis but not enough information to confidently act.
 

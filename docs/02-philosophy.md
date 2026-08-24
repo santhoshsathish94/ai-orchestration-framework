@@ -34,9 +34,11 @@ The goal is not to remove humans from the process. It is to make the human proce
 
 This is the broader philosophy behind orchestration. A well-orchestrated AI system does more than answer from the context it already has. It can recognize when context is insufficient, identify what is missing, help gather the next useful signal, reassess with new evidence, and keep consequential decisions with the appropriate human expert.
 
-That pattern applies across engineering, healthcare, science, filmmaking, design, operations, and other fields. The domain changes; the underlying reasoning loop remains.
+That pattern applies across engineering, healthcare, science, filmmaking, design, operations, and other fields. The domain changes; the underlying loop remains — and that loop is the lifecycle:
 
-**Intent → Context → Reason → Identify gaps → Gather evidence → Act → Evaluate → Prove outcome**
+**Opportunity → Understand → Plan → Execute → Proof → Grow**
+
+Recognizing a gap, gathering the missing signal, and reassessing are not extra steps. They are what **Understand** looks like when it is done well.
 
 ---
 
@@ -50,19 +52,13 @@ Human direction provides intent. AI contributes reasoning, exploration, context 
 
 > **The outcome of one cycle becomes the context for the next.**
 
-This creates a continuously evolving loop:
-
-**Intent → Context → Reason → Act → Prove → Learn → Expanded Context → New Intent**
-
 The value compounds over time. The system does not repeatedly start from zero; each cycle builds on the understanding, evidence, and decisions accumulated before it.
 
-This is also how the framework itself evolves. Engineering investigations, case studies, documentation, career positioning, communication, feedback, and new questions are not isolated activities. Each contributes context to what comes next.
+**Opportunity → Understand → Plan → Execute → Proof → Grow → Better Context → Next Opportunity**
+
+This is also how the framework itself evolves. Engineering investigations, case studies, documentation, feedback, and new questions are not isolated activities. Each contributes context to what comes next.
 
 > **The framework is itself a living example of the philosophy it describes.**
-
-The existing lifecycle can therefore be understood as a continuous context-building loop:
-
-**Opportunity → Understand → Plan → Execute → Proof → Grow → Better Context**
 
 ---
 
@@ -74,7 +70,7 @@ When context, tools, ownership, and validation are connected, the human can oper
 
 The conversation becomes an interface to the workflow — not simply a place to ask questions.
 
-In the development of this framework, the same human–AI context has supported repository setup, documentation, engineering investigation, case studies, code changes, pull requests, review responses, releases, resume positioning, and communication.
+In the development of this framework, the same human–AI context has supported repository setup, documentation, engineering investigation, case studies, code changes, pull requests, review responses, and releases.
 
 The important shift is not that AI performs every individual action. It is that the human does not have to become the coordination layer between every underlying tool.
 
@@ -88,63 +84,23 @@ The contribution remains subject to upstream review and acceptance; the example 
 
 ---
 
-## Framework Philosophy
+## What We Believe
 
-This broader philosophy is expressed through the following principles.
+These beliefs are what the framework rests on. The [Principles](03-principles.md) turn them into practice, one per lifecycle stage.
 
-### 1. AI is an engineering capability—not an engineering replacement.
+**AI is an engineering capability, not an engineering replacement.** It extends what teams can do. Human judgment, experience, ethics, and decision-making remain essential.
 
-AI extends the capabilities of engineering teams. Human judgment, experience, ethics, and decision-making remain essential.
+**AI creates the most value inside existing workflows.** It should become part of how an organization operates, not a disconnected tool used by individuals.
 
----
+**Intent belongs to humans. Context enables AI.** Humans define the desired outcome and translate it into the context AI needs. The quality of the outcome follows the quality of that context.
 
-### 2. AI creates the greatest value when orchestrated within existing business and engineering workflows.
+**Quality comes from orchestration and evidence, not from AI output alone.** Generating an answer is one step. Reliable delivery still needs structured workflows, governance, testing, review, security, and proof.
 
-AI should become part of how organizations operate rather than a disconnected tool used by individuals.
+**Every orchestration should produce real value.** The purpose of AI is not to automate tasks; it is to improve outcomes — less repetitive work, better quality, faster delivery, new possibilities.
 
----
+**AI should absorb repetitive execution so people can do meaningful work.** The highest value of AI is not replacing people. It is giving them more time on problems worth solving.
 
-### 3. Intent belongs to humans. Context enables AI.
-
-Humans define the desired outcome.
-
-Humans translate that intent into the engineering context required for successful AI execution.
-
-The quality of AI outcomes depends on the quality of the context it receives.
-
----
-
-### 4. Quality is determined by orchestration and validation—not by AI output alone.
-
-Generating an answer is only one step.
-
-Reliable software delivery requires structured workflows, governance, testing, reviews, security, and continuous validation.
-
----
-
-### 5. Every orchestration should produce measurable business value.
-
-The purpose of AI is not simply to automate tasks.
-
-Its purpose is to improve business outcomes by reducing repetitive work, increasing quality, accelerating delivery, and enabling new possibilities.
-
----
-
-### 6. AI should eliminate repetitive execution so people can focus on creativity, decisions, collaboration, and innovation.
-
-The highest value of AI is not replacing people.
-
-It is enabling people to spend more time solving meaningful problems.
-
----
-
-### 7. Every execution should improve the next.
-
-Validation does not end a workflow.
-
-It creates better context, better orchestration, better practices, and new opportunities for continuous improvement.
-
-This continuous learning cycle enables organizations to mature their AI capabilities over time.
+**Every execution should improve the next.** Proof does not end a workflow. It creates better context, better practices, and new opportunities — which is how an organization matures its AI capability over time.
 
 ---
 
