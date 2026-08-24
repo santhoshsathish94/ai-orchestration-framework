@@ -9,8 +9,11 @@ All notable changes to this project will be documented in this file.
 - `assets/social-preview.png` — a 1280×640 card used for the site's `og:image` and the repository social preview, with `assets/social-preview.svg` as the design source.
 
 ### Changed
+- Broadened `docs/01-problem.md` so the problem statement is not framed as software-engineering-only. Software engineering remains where the framework was built and where its evidence comes from; the problem it addresses is not confined there.
+- Replaced a competing slogan on the website ("An agent can act. Only orchestration learns.") with the canonical **"Agentic workflows repeat. Orchestration learns."**
 - Both reference implementations now state that they were **built and demonstrated against real organizational data**, rather than reading as purely conceptual patterns. Graded with the framework's own evidence ladder as **rung 2 — demonstrated**: a small number of real cases, not put in front of end users and not adopted organization-wide. Production Exception Remediation also names what has not been exercised — wiring approval and deployment gates into a team's real tooling.
-- The case-studies index leads with the fact that 01 and 02 are delivered outcomes rather than illustrations.
+- The case-studies index and the website now group evidence explicitly into **outcome case studies** (01, 02) and **reasoning patterns** (03), instead of relying on a per-row label.
+- Added a framework-versus-runtime clarification to the README and the website: the framework defines the operating model around AI orchestration and does not prescribe the runtime used to execute it. Agent frameworks, workflow engines and tool protocols sit inside it.
 
 ## v0.4.0 — 2026-08-24
 

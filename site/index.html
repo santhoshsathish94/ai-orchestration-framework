@@ -62,7 +62,7 @@
   <section class="band band--soft" id="why">
     <div class="wrap">
       <p class="eyebrow">Why orchestration</p>
-      <h2>An agent can act. Only orchestration learns.</h2>
+      <h2>Agentic workflows repeat. Orchestration learns.</h2>
       <p class="lede">AI capability keeps improving. What has been missing is the layer that connects
         context, decisions, execution, proof, and learning — so the next cycle starts stronger than
         the last one.</p>
@@ -116,7 +116,10 @@
         </div>
       </div>
 
-      <div class="pull"><p>Agentic workflows repeat. Orchestration learns.</p></div>
+      <p class="note" style="margin-top:1.4rem">This framework defines the <strong>operating model</strong>
+        around AI orchestration. It does not prescribe the <strong>runtime</strong> used to execute it —
+        agent frameworks, workflow engines, and tool protocols are implementation choices that sit
+        inside it.</p>
     </div>
   </section>
 
@@ -631,7 +634,10 @@
       <p class="lede">Including what is still unproven. The evidence bar differs by intent, so each
         case study says which kind it is.</p>
 
-      <div class="grid grid--3" style="margin-top:1.5rem">
+      <h3 style="margin-top:1.8rem">Outcome case studies</h3>
+      <p class="note">Delivered work with measurable results — and a plain statement of what remains uncertain.</p>
+
+      <div class="grid grid--2" style="margin-top:1.1rem">
         <article class="card case">
           <p class="case__tag">01 · Outcome case study</p>
           <h3>Contentful API migration</h3>
@@ -657,7 +663,12 @@
           <p class="case__status">Status: a CI-green pull request <strong>awaiting maintainer review — not yet merged</strong>.</p>
           <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/case-studies/02-react-rsc-memory-leak.md">Read case study 02 →</a></p>
         </article>
+      </div>
 
+      <h3 style="margin-top:2rem">Reasoning patterns</h3>
+      <p class="note">No measured outcome, by design — these illustrate how a stage works, not what it delivered.</p>
+
+      <div class="grid grid--2" style="margin-top:1.1rem">
         <article class="card case">
           <p class="case__tag">03 · Reasoning pattern</p>
           <h3>Contextual reasoning in a newborn care scenario</h3>
@@ -666,6 +677,17 @@
           <p>It reports no metric by design — it illustrates what Understand looks like outside
             software. It contains no clinical claim, no medical advice, and no identifying data.</p>
           <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/case-studies/03-newborn-contextual-reasoning.md">Read case study 03 →</a></p>
+        </article>
+
+        <article class="card case card--flat">
+          <p class="case__tag">Reference implementations · Rung 2</p>
+          <h3>Cross-team knowledge access &amp; production exception remediation</h3>
+          <p>Both were <strong>built and demonstrated against real organizational data</strong> —
+            repositories, logs, telemetry and job definitions — on a small number of real cases.</p>
+          <p>Neither has been put in front of end users or adopted organization-wide. On the evidence
+            ladder that is <strong>rung 2 — demonstrated</strong>, and the page says so rather than
+            letting a reader assume more.</p>
+          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/reference-implementations.md">Read the reference implementations →</a></p>
         </article>
       </div>
 
@@ -760,6 +782,7 @@
         <div class="card"><h3>Not software</h3><p>There is nothing to install. It is a way of working.</p></div>
         <div class="card"><h3>Not a replacement for how you already work</h3><p>It sits alongside Agile, incident management, or whatever your team already uses.</p></div>
         <div class="card"><h3>Not about model or tool selection</h3><p>It does not tell you which AI to use, and it does not cover cost, evaluations, data governance, or security review.</p></div>
+        <div class="card"><h3>Not a runtime</h3><p>It defines the operating model, not the execution technology. Agent frameworks, workflow engines and tool protocols are choices that sit inside it, not competitors to it.</p></div>
         <div class="card"><h3>Not needed for everything</h3><p>Throwaway or trivial work does not need a lifecycle. Use it where being wrong actually costs something.</p></div>
       </div>
       <p class="note" style="margin-top:1.3rem">It is also not an LLM framework, an agent SDK, or a

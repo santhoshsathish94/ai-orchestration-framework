@@ -27,34 +27,44 @@ That is the problem this framework addresses.
 
 ## Why another framework?
 
-Artificial Intelligence is rapidly becoming part of everyday software development. Engineers use AI to generate code, write tests, explain unfamiliar codebases, review pull requests, create documentation, and automate repetitive tasks.
+AI is now part of everyday work. In software engineering it generates code, writes tests, explains
+unfamiliar systems, reviews changes and produces documentation. In operations, support, and analysis
+it reads logs, reconstructs what happened, drafts responses and answers questions that used to
+require a person who already knew.
 
-Despite these advances, many engineering teams still struggle to adopt AI consistently and reliably.
+Despite that, teams still struggle to adopt it consistently and reliably.
 
 The problem is not that AI lacks capability.
 
-The problem is that software engineering processes were designed for humans, not for human–AI collaboration.
+**The problem is that our processes were designed for humans working with humans, not for humans
+working with AI.** Handoffs assume a person on both ends. Review assumes an author who can explain
+their reasoning. "Done" assumes someone checked.
 
-As a result, teams often experience:
+The symptoms look the same wherever it happens:
 
-* Inconsistent AI outputs.
+* Inconsistent outputs.
 * Poor or missing context.
-* Hallucinated implementations.
-* Limited trust in AI-generated changes.
-* Weak validation processes.
+* Confident answers that turn out to be invented.
+* Limited trust in AI-produced work.
+* Weak or absent proof that the intended outcome occurred.
 * Unclear ownership and accountability.
-* AI being used as an isolated assistant instead of an integrated engineering capability.
+* AI used as an isolated personal assistant rather than an integrated capability.
 
-Organizations frequently respond by experimenting with prompts, adopting new models, or switching tools. While these may improve individual productivity, they rarely solve the larger engineering problem.
+Organizations frequently respond by experimenting with prompts, adopting new models, or switching
+tools. Those may improve individual productivity, but they rarely solve the larger problem.
 
 The challenge is not selecting the best AI model.
 
-The challenge is designing engineering systems that allow AI to operate reliably within existing software delivery processes.
+The challenge is designing systems of work in which AI can participate reliably — with the context it
+needs, boundaries it respects, ownership that stays clear, and evidence that the outcome actually
+happened.
 
-This framework argues that successful AI adoption requires a shift in engineering thinking.
+This framework argues that successful AI adoption requires a shift in thinking. Rather than treating
+AI as a replacement for people, it should be treated as another capability that participates within
+structured workflows, clear governance, measurable proof, and continuous feedback.
 
-Rather than treating AI as a replacement for engineers, it should be treated as another engineering capability that participates within structured workflows, clear governance, measurable validation, and continuous feedback.
+Only then does AI become dependable rather than unpredictable.
 
-Only then can AI become a dependable part of software delivery instead of an unpredictable assistant.
+Software engineering is where this framework was built and where its evidence comes from. The problem
+it addresses is not confined there.
 
-This framework exists to define that engineering approach.
