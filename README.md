@@ -36,20 +36,22 @@ AI models provide intelligence. Agents can perform tasks. Workflows can repeat t
 
 **Opportunity → Understand → Plan → Execute → Proof → Grow**
 
-| Stage | Definition |
-|---|---|
-| **Opportunity** | Define the problem, why it matters, and the outcome worth pursuing. |
-| **Understand** | Establish the context and evidence required to make a sound decision. |
-| **Plan** | Determine the focused path, boundaries, dependencies, and ownership. |
-| **Execute** | Perform the work and adapt when new evidence changes the direction. |
-| **Proof** | Demonstrate with evidence that the intended outcome actually happened. |
-| **Grow** | Turn the outcome into better future capability through validated experience and reusable expertise. |
+One principle per stage — if you remember the lifecycle, you remember the principles.
+
+| Stage | What happens | Principle |
+|---|---|---|
+| **Opportunity** | Define the problem, why it matters, and the outcome worth pursuing. | Start with the opportunity, not the tool. |
+| **Understand** | Establish the context and evidence needed to decide well. | Never assume the context is sufficient. |
+| **Plan** | Choose the focused path, boundaries, dependencies, and ownership. | Parallelize only what is genuinely independent. |
+| **Execute** | Do the work, adapting when new evidence changes the direction. | Delegation never dissolves accountability. |
+| **Proof** | Demonstrate with evidence that the intended outcome actually happened. | Prove outcomes, not activity. |
+| **Grow** | Capture what was learned and feed it into the next cycle. | Only validated experience becomes expertise. |
 
 The lifecycle stays deliberately simple. Experience and expertise are **part of Grow**, not additional stages.
 
 > **Execute produces experience. Grow turns validated experience into expertise.**
 
-[Read the full lifecycle and stage definitions →](docs/04-framework.md)
+[Read the full lifecycle and stage definitions →](docs/04-framework.md) · [Read the principles →](docs/03-principles.md)
 
 ---
 
@@ -89,23 +91,6 @@ Today, humans often provide both the goal and the path. Over time, the goal can 
 The framework does not claim unrestricted autonomy exists today. It defines the engineering foundation through which greater autonomy can progressively become possible — one level at a time, each earned through proof.
 
 [Read the autonomy ladder →](docs/04-framework.md#the-autonomy-ladder)
-
----
-
-## Core Principles
-
-One principle per stage — if you remember the lifecycle, you remember the principles.
-
-| Stage | Principle |
-|---|---|
-| **Opportunity** | Start with the opportunity, not the tool. |
-| **Understand** | Understand before acting — and never assume the context is sufficient. |
-| **Plan** | Plan for focus and ownership. Parallelize only what is genuinely independent. |
-| **Execute** | Orchestrate work, not prompts. Delegation never dissolves accountability. |
-| **Proof** | Prove outcomes, not activity. Name the evidence you actually have. |
-| **Grow** | Turn validated experience into shared capability. |
-
-[Read the principles →](docs/03-principles.md)
 
 ---
 
