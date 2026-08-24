@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glossary — AI Orchestration Framework</title>
+<meta name="description" content="Plain-language definitions for every term used in the AI Orchestration Framework.">
+<link rel="canonical" href="https://santhoshsathish94.github.io/ai-orchestration-framework/glossary/">
+<meta name="theme-color" content="#0a6a5f">
+<link rel="stylesheet" href="../styles.css">
+<script>document.documentElement.className = 'js';</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../">AI Orchestration <span>Framework</span></a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../#why">Framework</a>
+      <a href="../#lifecycle">How it works</a>
+      <a href="../#evidence">Evidence</a>
+      <a href="../#future">Future</a>
+      <a href="./" aria-current="page">Glossary</a>
+      <a href="https://github.com/santhoshsathish94/ai-orchestration-framework">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="narrow" style="padding-block: clamp(2.5rem,6vw,4rem)">
+  <p class="eyebrow">Glossary</p>
+  <h1 style="font-size:clamp(1.8rem,4vw,2.4rem)">Plain-language definitions</h1>
+  <p class="lede">If a term here is not clear, that is a bug in the writing —
+    <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/issues">tell us</a>.</p>
+
+  <label for="term-filter" class="note" style="display:block;margin-bottom:0.4rem">Filter terms</label>
+  <input class="filter" id="term-filter" type="search" placeholder="e.g. proof, context, blast radius" autocomplete="off">
+  <p class="note" id="term-count" role="status" aria-live="polite" style="margin-top:-1rem"></p>
+
+  <dl class="terms">
+    <div><dt>Orchestration</dt><dd>Coordinating people, AI, tools, and context so that work produces a proven outcome — rather than each part doing its own thing.</dd></div>
+    <div><dt>Capability</dt><dd>Anything that can do work: a person, a team, an AI model, an agent, a tool, a system.</dd></div>
+    <div><dt>Context</dt><dd>Everything AI or a person needs to reason correctly about a problem — the code, the history, the rules, the constraints, what was already tried.</dd></div>
+    <div><dt>Intent</dt><dd>What a human actually wants to achieve. The outcome, not the task.</dd></div>
+    <div><dt>Outcome</dt><dd>The change in the real world you were after. Distinct from <em>output</em>, which is just what got produced.</dd></div>
+    <div><dt>Proof</dt><dd>Evidence that connects the work back to the original problem and shows the outcome actually happened.</dd></div>
+    <div><dt>Evidence ladder</dt><dd>Five rungs from "someone says it works" to "observed in the real environment." You name the rung you reached. <a href="../#proof">See the ladder</a>.</dd></div>
+    <div><dt>Experience</dt><dd>What was learned from one specific execution — what was tried, what happened, what the evidence showed.</dd></div>
+    <div><dt>Expertise</dt><dd>A reusable pattern that emerges from several <em>validated</em> experiences. One execution is not expertise.</dd></div>
+    <div><dt>Ownership</dt><dd>The named human accountable for an outcome. Work can be delegated; ownership cannot.</dd></div>
+    <div><dt>Agent</dt><dd>An AI system that can take actions and use tools, not only produce text.</dd></div>
+    <div><dt>Agentic workflow</dt><dd>A designed loop of agent steps that repeats a known process. Orchestration differs in that it <em>learns</em> from the outcome.</dd></div>
+    <div><dt>Autonomy ladder</dt><dd>Five levels describing how much of the <em>path</em> AI is trusted to determine, each earned through proof. <a href="../#future">See the ladder</a>.</dd></div>
+    <div><dt>Telemetry</dt><dd>The signals a running system emits about itself — logs, metrics, traces, error rates.</dd></div>
+    <div><dt>Blast radius</dt><dd>How much damage a change could do if it is wrong. Bigger blast radius means more human approval.</dd></div>
+    <div><dt>Non-production</dt><dd>Any environment that is not serving real users — local, test, staging. Safe to break.</dd></div>
+    <div><dt>Guardrail</dt><dd>A constraint that keeps work inside safe boundaries: a required approval, a scope limit, a check that must pass.</dd></div>
+    <div><dt>Root cause</dt><dd>The underlying reason a problem occurs. Distinct from the symptom, and from the workaround that hides it.</dd></div>
+    <div><dt>Workaround</dt><dd>Something that stops the pain without fixing the cause. Legitimate to stabilize an incident; not a destination.</dd></div>
+    <div><dt>Thrashing</dt><dd>Repeated confident attempts at a fix, none of which work — the signal to stop fixing and go back to understanding.</dd></div>
+  </dl>
+
+  <p class="note" style="margin-top:2rem">Source of truth:
+    <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/glossary.md">docs/glossary.md</a></p>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p style="max-width:none">The website explains; the repository documents.
+      <a href="https://github.com/santhoshsathish94/ai-orchestration-framework">AI Orchestration Framework on GitHub</a>.</p>
+  </div>
+</footer>
+
+<script src="../app.js" defer></script>
+</body>
+</html>
