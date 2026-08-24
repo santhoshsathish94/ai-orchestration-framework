@@ -2,7 +2,7 @@
 
 > **Technical hypothesis — independent from the AI Orchestration Framework**
 
-![The AI Future — from frontier intelligence to autonomous collective intelligence](../assets/ai-future/ai-future-hero.svg)
+![The AI Future — what happens when restraint itself becomes a competitive disadvantage](../assets/ai-future/ai-future-hero.svg)
 
 ## The question
 

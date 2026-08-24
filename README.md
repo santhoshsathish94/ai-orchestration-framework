@@ -94,7 +94,7 @@ The framework is designed to help teams:
 - Apply AI to meaningful outcomes rather than isolated tasks.
 - Reduce missing context and unnecessary coordination.
 - Combine humans, AI agents, tools, and enterprise systems coherently.
-- Validate that changes actually achieved the intended result.
+- Prove that changes actually achieved the intended result.
 - Build organizational experience and expertise over repeated executions.
 - Create a path from today's agentic systems toward increasingly goal-directed AI.
 
@@ -142,7 +142,7 @@ These are practical applications of the core lifecycle.
 
 ## Current Status
 
-**Latest release: v0.3.0 — next release in progress**
+**Latest release: v0.4.0**
 
 - ✅ Core AI Orchestration Lifecycle
 - ✅ Principles, one per stage

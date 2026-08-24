@@ -81,13 +81,19 @@ Perform the work. Keep changes focused and reviewable. AI proposes; humans own d
 Demonstrate the outcome with concrete evidence — a result, not activity.
 
 - **Evidence (tests, before/after, metrics, logs):** …
+- **Rung reached:** … *(asserted / demonstrated once / tested repeatably / measured before-after / observed in the real environment — see the [evidence ladder](../docs/07-proof.md#how-strong-is-your-evidence))*
 - **Does the success signal from step 1 now hold?** …
 - **Human verification:** …
+- **Still unproven:** …
 
 > **Prompt:** "Show concrete evidence that the outcome from the Opportunity was achieved. Map each
-> piece of evidence back to the success signal. Note anything still unproven."
+> piece of evidence back to the success signal. Name the strongest rung the evidence actually reaches
+> and do not claim a higher one. Note anything still unproven."
 
 **Ownership:** AI assembles evidence; human verifies and accepts (or rejects) the proof.
+
+*If the proof does not hold, go back to **Understand** — not to Execute. A failed proof usually means
+the understanding was incomplete.*
 
 ---
 

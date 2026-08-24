@@ -20,3 +20,7 @@ what **Grow** feeds back.
 - Prefer existing organizational knowledge (repositories, tickets, telemetry, docs) before adding new context.
 - Name what is still missing, and retrieve it before acting rather than guessing.
 - Keep context reusable so the next person or agent starts from understanding, not from zero.
+
+Understand is also the stage that catches most AI failures — fabricated references, plausible-but-wrong
+root causes, and agreement offered in place of judgment. See
+[How AI fails](how-ai-fails.md) for what to watch for and why each one happens.

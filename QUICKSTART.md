@@ -28,8 +28,14 @@ assistant and a note on **who owns what** (human vs AI):
 | **Understand** | Enough context that the problem is obvious; known unknowns listed |
 | **Plan** | The smallest focused path, with per-step ownership |
 | **Execute** | A focused, reviewable change |
-| **Proof** | Evidence that maps back to the success signal |
+| **Proof** | Evidence that maps back to the success signal, and the rung it reaches |
 | **Grow** | Saved context and the next opportunity |
+
+> **At Proof, name your rung.** Asserted → demonstrated once → tested repeatably → measured
+> before/after → observed in the real environment. Reaching the top rung is not the goal; being
+> honest about where you stopped is. See the [evidence ladder](docs/07-proof.md#how-strong-is-your-evidence).
+>
+> If the proof does not hold, go back to **Understand** — not to Execute.
 
 ## 4. Keep the brief (1 min)
 

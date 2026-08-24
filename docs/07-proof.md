@@ -39,3 +39,6 @@ See the [evidence ladder](04-framework.md#the-evidence-ladder) for the full stag
 Failed proof is a normal result, not an error state. When the evidence does not support the outcome,
 **go back to Understand, not to Execute.** Failed proof usually means the understanding was
 incomplete — and another attempt at the fix just repeats the original mistake faster.
+
+Proof also exists because AI reports success it has not verified. See
+[How AI fails](how-ai-fails.md) for that failure mode and the others this stage is designed to catch.
