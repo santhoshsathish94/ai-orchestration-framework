@@ -23,7 +23,9 @@ barrier.
 > not an end-to-end delivery time, and comparing it directly against an 8–10 week estimate that
 > included analysis, review and coordination would overstate the gain.
 
-> **Evidence reached: rung 4 — measured before and after.** The production cutover has not yet run,
+> **Evidence reached: rung 4 — measured before and after.** The basis for that is the parity harness
+> and QA's sign-off against the real site through the gateway — not the performance figures, which
+> were measured locally (see Results). The production cutover has not yet run,
 > so nothing here claims rung 5. The staged rollout below is the plan the evidence supports, not a
 > sequence that has already executed.
 

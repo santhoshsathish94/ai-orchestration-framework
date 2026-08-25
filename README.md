@@ -6,7 +6,7 @@ An open, evidence-based framework for orchestrating AI across engineering and bu
 
 It sits **on top of the systems you already run**. Nothing to install. Nothing to migrate onto.
 
-**[🌐 Read it on the website →](https://santhoshsathish94.github.io/ai-orchestration-framework/)** — the framework explained in about three minutes, with the lifecycle, the evidence ladder, and the autonomy ladder made interactive.
+**[🌐 Read it on the website →](https://santhoshsathish94.github.io/ai-orchestration-framework/)** — the framework explained in about three minutes, with the lifecycle and the AI failure modes made interactive.
 
 ---
 
@@ -216,7 +216,7 @@ users yet, and the page says exactly that.
 - ✅ Experience & Expertise within Grow
 - ✅ Evidence ladder and autonomy ladder
 - ✅ Reference Implementations
-- ✅ Real-World Case Studies (3) — two with delivered outcomes
+- ✅ Real-World Case Studies (2), both delivered outcomes
 - ✅ How AI Fails, Field Lessons, Glossary
 - ⏳ Enterprise Adoption Guide
 

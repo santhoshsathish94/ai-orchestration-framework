@@ -23,7 +23,7 @@ If you are an AI agent asked to work under this framework, read AGENTS.md. It is
 ## Evidence
 
 - [Reference implementations](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/reference-implementations.md): Cross-team knowledge access, production exception remediation, multi-repository defect remediation — each with its limits stated.
-- [Case studies](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/case-studies/README.md): Delivered outcomes, with the evidence rung stated for each.
+- [Case studies](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/case-studies/README.md): Delivered outcomes, each stating what it has not proven.
 - [How AI fails](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/how-ai-fails.md): Eight failure modes and the stage that catches each.
 - [Practices and field lessons](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/field-practices.md): Lessons from real work, including the ones that went badly.
 
