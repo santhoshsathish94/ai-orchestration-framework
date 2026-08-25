@@ -184,8 +184,8 @@
       <p class="lede">The lifecycle is deliberately simple. The complexity belongs in the context,
         ownership, evidence, and feedback around each stage — not in adding more stages.</p>
 
-      <div class="cycle" aria-hidden="true">
-        <svg viewBox="0 0 960 250" role="img">
+      <div class="cycle">
+        <svg viewBox="0 0 960 250" role="tablist" aria-label="Lifecycle stages">
           <defs>
             <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="cycle-arrow"/></marker>
             <marker id="ar-loop" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="cycle-arrow cycle-arrow--loop"/></marker>
@@ -193,10 +193,10 @@
           </defs>
 
           <path class="cycle-edge cycle-edge--fail" marker-end="url(#ar-fail)" d="M723 95 C 723 30, 237 30, 237 91"/>
-          <text class="cycle-label cycle-label--fail" x="480" y="22" text-anchor="middle">proof failed → back to Understand, not Execute</text>
+          <text class="cycle-label cycle-label--fail" x="480" y="22" text-anchor="middle" aria-hidden="true">proof failed → back to Understand, not Execute</text>
 
           <path class="cycle-edge cycle-edge--loop" marker-end="url(#ar-loop)" d="M885 149 C 885 216, 75 216, 75 153"/>
-          <text class="cycle-label cycle-label--loop" x="480" y="240" text-anchor="middle">better context → next opportunity</text>
+          <text class="cycle-label cycle-label--loop" x="480" y="240" text-anchor="middle" aria-hidden="true">better context → next opportunity</text>
 
           <path class="cycle-edge" marker-end="url(#ar)" d="M144 122 H166"/>
           <path class="cycle-edge" marker-end="url(#ar)" d="M306 122 H328"/>
@@ -204,12 +204,12 @@
           <path class="cycle-edge" marker-end="url(#ar)" d="M630 122 H652"/>
           <path class="cycle-edge" marker-end="url(#ar)" d="M792 122 H814"/>
 
-          <g class="cycle-node is-active" data-stage="opportunity"><rect x="10" y="95" width="130" height="54" rx="8"/><text x="75" y="127" text-anchor="middle">Opportunity</text></g>
-          <g class="cycle-node" data-stage="understand"><rect x="172" y="95" width="130" height="54" rx="8"/><text x="237" y="127" text-anchor="middle">Understand</text></g>
-          <g class="cycle-node" data-stage="plan"><rect x="334" y="95" width="130" height="54" rx="8"/><text x="399" y="127" text-anchor="middle">Plan</text></g>
-          <g class="cycle-node" data-stage="execute"><rect x="496" y="95" width="130" height="54" rx="8"/><text x="561" y="127" text-anchor="middle">Execute</text></g>
-          <g class="cycle-node" data-stage="proof"><rect x="658" y="95" width="130" height="54" rx="8"/><text x="723" y="127" text-anchor="middle">Proof</text></g>
-          <g class="cycle-node" data-stage="grow"><rect x="820" y="95" width="130" height="54" rx="8"/><text x="885" y="127" text-anchor="middle">Grow</text></g>
+          <g class="cycle-node is-active" data-stage="opportunity" role="tab" tabindex="0" aria-selected="true" aria-controls="lc-p1"><rect x="10" y="95" width="130" height="54" rx="8"/><text x="75" y="127" text-anchor="middle">Opportunity</text></g>
+          <g class="cycle-node" data-stage="understand" role="tab" tabindex="-1" aria-selected="false" aria-controls="lc-p2"><rect x="172" y="95" width="130" height="54" rx="8"/><text x="237" y="127" text-anchor="middle">Understand</text></g>
+          <g class="cycle-node" data-stage="plan" role="tab" tabindex="-1" aria-selected="false" aria-controls="lc-p3"><rect x="334" y="95" width="130" height="54" rx="8"/><text x="399" y="127" text-anchor="middle">Plan</text></g>
+          <g class="cycle-node" data-stage="execute" role="tab" tabindex="-1" aria-selected="false" aria-controls="lc-p4"><rect x="496" y="95" width="130" height="54" rx="8"/><text x="561" y="127" text-anchor="middle">Execute</text></g>
+          <g class="cycle-node" data-stage="proof" role="tab" tabindex="-1" aria-selected="false" aria-controls="lc-p5"><rect x="658" y="95" width="130" height="54" rx="8"/><text x="723" y="127" text-anchor="middle">Proof</text></g>
+          <g class="cycle-node" data-stage="grow" role="tab" tabindex="-1" aria-selected="false" aria-controls="lc-p6"><rect x="820" y="95" width="130" height="54" rx="8"/><text x="885" y="127" text-anchor="middle">Grow</text></g>
         </svg>
       </div>
 

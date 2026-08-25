@@ -235,6 +235,14 @@ section[id] { scroll-margin-top: 5rem; }
 .js .cycle-node rect { transition: fill 120ms ease, stroke 120ms ease; }
 .js .cycle-node:hover:not(.is-active) rect { fill: var(--accent-soft, #eefaf7); stroke: var(--accent); }
 .js .cycle-node:hover:not(.is-active) text { fill: var(--ink); }
+.js .cycle-node:focus { outline: none; }
+.js .cycle-node:focus-visible rect { stroke: var(--accent); stroke-width: 3; }
+
+/* Above 800px the diagram is the control, so the tab row would just duplicate it.
+   Below 800px the diagram is hidden and the tab row takes over. */
+@media (min-width: 801px) {
+    .js [data-tabs="lifecycle"] > .tablist { display: none; }
+}
 .cycle-edge { stroke: var(--line-2); stroke-width: 1.5; fill: none; }
 .cycle-edge--loop { stroke: var(--accent-line); }
 .cycle-edge--fail { stroke: var(--warn); stroke-dasharray: 5 4; }

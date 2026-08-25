@@ -64,7 +64,10 @@
   groups.lifecycle = function (tab) {
     var stage = tab.getAttribute('data-value');
     document.querySelectorAll('.cycle-node').forEach(function (node) {
-      node.classList.toggle('is-active', node.getAttribute('data-stage') === stage);
+      var on = node.getAttribute('data-stage') === stage;
+      node.classList.toggle('is-active', on);
+      node.setAttribute('aria-selected', on ? 'true' : 'false');
+      node.setAttribute('tabindex', on ? '0' : '-1');
     });
   };
 
@@ -73,12 +76,32 @@
   /* "Caught by <stage>" chips jump to the lifecycle and select that stage. */
   var lifecycle = document.querySelector('[data-tabs="lifecycle"]');
 
-  /* Clicking a stage in the diagram selects it. Mouse enhancement only — the diagram is
-     aria-hidden and hidden on small screens, so the tablist stays the accessible control. */
-  document.querySelectorAll('.cycle-node').forEach(function (node) {
-    node.addEventListener('click', function () {
+  /* The diagram is the primary control on wide screens; the tablist takes over on narrow ones.
+     Both drive the same panels through selectByValue. */
+  var cycleNodes = Array.prototype.slice.call(document.querySelectorAll('.cycle-node'));
+  cycleNodes.forEach(function (node, i) {
+    function select(focus) {
       if (!lifecycle || !lifecycle.selectByValue) return;
       lifecycle.selectByValue(node.getAttribute('data-stage'), false);
+      if (focus) node.focus();
+    }
+    node.addEventListener('click', function () { select(false); });
+    node.addEventListener('keydown', function (e) {
+      var step = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
+      if (step) {
+        e.preventDefault();
+        var target = cycleNodes[(i + step + cycleNodes.length) % cycleNodes.length];
+        lifecycle.selectByValue(target.getAttribute('data-stage'), false);
+        target.focus();
+      } else if (e.key === 'Home') {
+        e.preventDefault(); cycleNodes[0].focus();
+        lifecycle.selectByValue(cycleNodes[0].getAttribute('data-stage'), false);
+      } else if (e.key === 'End') {
+        e.preventDefault(); cycleNodes[cycleNodes.length - 1].focus();
+        lifecycle.selectByValue(cycleNodes[cycleNodes.length - 1].getAttribute('data-stage'), false);
+      } else if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault(); select(false);
+      }
     });
   });
   document.querySelectorAll('[data-goto-stage]').forEach(function (btn) {
