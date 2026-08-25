@@ -70,8 +70,9 @@ This comes out of delivery work, not theory. Two cycles are documented end to en
 
 **A CMS content API migration estimated at 8–10 weeks of team effort, delivered in about a day.**
 GraphQL → REST and .NET 9 MVC → .NET 10 Minimal APIs, replacing ~7,800 lines across 200+ files —
-with every route, JSON shape and response envelope preserved so no consumer had to change, validated
-against live traffic before a phased cutover.
+with every route, JSON shape and response envelope preserved so no consumer had to change, and parity
+validated byte-for-byte against live traffic in preprod. The production cutover has not yet run, so
+this reaches rung 4 — measured before and after — not rung 5.
 [Case study 01 →](case-studies/01-contentful-migration.md)
 
 **A production memory leak fixed at its root, not worked around.**

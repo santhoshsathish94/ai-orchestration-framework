@@ -12,8 +12,12 @@ public contract — every route, JSON shape, and response envelope — was prese
 consumer (the website, and anything else calling the API) needed to change. AI carried most of the
 rewrite; the work still needed human judgment to set direction and to independently verify each
 result against real, running systems. What stands out is not who wrote the code — it is how much AI
-lowered the barrier: the whole migration was completed in about a day and validated against live
-traffic before a phased cutover.
+lowered the barrier: the whole migration was completed in about a day and parity-validated
+byte-for-byte against live traffic in preprod.
+
+> **Evidence reached: rung 4 — measured before and after.** The production cutover has not yet run,
+> so nothing here claims rung 5. The staged rollout below is the plan the evidence supports, not a
+> sequence that has already executed.
 
 ## Contentful migration model
 
@@ -83,10 +87,11 @@ a fraction of the usual effort.
    - Search was implemented against Contentful's full-text search, which matched far more broadly
      than the Current CMS API's slug/title/category/tag matching — caught by comparing result counts,
      reimplemented to match its behavior exactly.
-6. **Rolled out in reversible stages, not a single cutover:** ran the Migrated CMS API on a preprod
+6. **Planned the rollout in reversible stages, not a single cutover:** ran the Migrated CMS API on a preprod
    environment side by side with the Current CMS API on UAT under the same content and traffic
    patterns, registered a second Contentful webhook so both services' allow-lists stayed current
-   during the transition, and kept the Current CMS API warm and instantly reinstatable after the flip.
+   during the transition, and kept the Current CMS API warm and instantly reinstatable for the flip.
+   The flip itself has not yet been performed.
 7. **Judgment stayed human** — e.g. deciding which live differences were acceptable improvements vs.
    real regressions. Nothing was accepted on the AI's word alone: each task's code, tests, and live
    behavior were independently checked against the real, running systems before merging, rather than
@@ -122,5 +127,5 @@ a fraction of the usual effort.
   assumed.** The limiting factor was having an objective way to verify the changes, not engineering
   headcount — AI lowered the barrier; the parity harness kept it safe.
 - **A staged, reversible cutover** (shadow run → dual webhook → gradual flip → warm rollback target)
-  meant the migration only ever carried as much production risk as each stage's own evidence justified.
+  means the migration will only ever carry as much production risk as each stage's own evidence justifies.
 - The full history is traceable commit-by-commit in this repository's git log.
