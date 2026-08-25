@@ -105,22 +105,46 @@ a fraction of the usual effort.
 
 ## Results
 
+### Correctness and delivery
+
 | Metric | Before | After |
 |---|---|---|
 | Live parity, Current vs. Migrated CMS API (byte-for-byte) | — | **36/36** endpoint cases (34 exact + 2 explicitly-approved deviations) |
 | Endpoint groups verified side-by-side (preprod vs. UAT) | — | **15/15**, zero errors, zero customer-visible differences |
 | Automated tests | — | **239/239** passing (220 unit + 19 contract-snapshot), 0 build warnings |
 | Security scan | — | 0 vulnerable dependencies, 0 hardcoded secrets, OWASP Top 10 clean |
-| Throughput @ 40 concurrent users | 7.6 req/s | **48 req/s (~6×)** |
-| Help Center listing, under load | 5.6 s | **345 ms (16× faster)** |
-| Blog listing, under load | 12.9 s | **1.9 s (6.8× faster)** |
-| Typical content page, under load | 667 ms | **189 ms (3.5× faster)** |
-| Invalid / unknown-slug requests | ~70 ms (still reached Contentful) | **~8 ms**, rejected before any Contentful call |
-| Response payload size | baseline JSON | **~63% smaller on average** (Brotli; up to 85% on the largest page) |
 | Implementation time | — | **~1 day** of execution with agents and subagents |
 | Testing and parity validation | — | **~1 further day** |
 | Stakeholder review and agreement | — | longer again; work was not continuous |
 | Original estimate for the same scope | ~8–10 weeks of team effort | — |
+
+The parity suite was a **one-time migration gate, not a permanent CI check** — it was removed from
+the pipeline once it had done its job, because it requires both services running side by side. So
+36/36 is a point-in-time result, not a continuously enforced one.
+
+### Performance — and what produced it
+
+**These are local measurements.** Both services were run on one developer machine and driven by a
+committed script: warm-up pass, then 400 requests at 40 concurrency across four representative
+endpoints, plus a separate 120-request invalid-slug burst. **No load test has been run against
+deployed infrastructure.** A proper multi-regime test was written and never executed, and the
+comparison report it was meant to populate was never generated. Treat the direction as sound and the
+multiples as indicative, not as production figures.
+
+| Metric | Before | After |
+|---|---|---|
+| Throughput @ 40 concurrent | 7.6 req/s | **48 req/s (~6×)** |
+| Help Center listing | 5.6 s | **345 ms (16× faster)** |
+| Blog listing | 12.9 s | **1.9 s (6.8× faster)** |
+| Typical content page | 667 ms | **189 ms (3.5× faster)** |
+| Invalid / unknown-slug requests | ~70 ms (still reached Contentful) | **~8 ms**, rejected before any Contentful call |
+| Response payload size | baseline JSON | **~63% smaller on average** (Brotli; up to 85% on the largest page) |
+
+**Credit where it belongs: AI did not make this faster — the new architecture did.** One REST fetch
+with `include` instead of 2–3 GraphQL round trips, a slug allow-list that rejects junk before it
+reaches Contentful, and Brotli on a payload that had never been compressed. A team writing the same
+design by hand would have measured the same gains. What AI changed was the cost of *attempting* the
+rewrite at all, which is a claim about effort, not about latency.
 
 ## Key takeaways
 
@@ -138,6 +162,10 @@ a fraction of the usual effort.
 - **Execution stopped being the expensive part, which moved the bottleneck rather than removing it.**
   Writing the code took a day; proving it was right took another, and getting agreement to ship took
   longer than both. Any honest account of AI speed-up has to say which of those it is talking about.
+- **Say where a number was measured, or it will be read as more than it is.** The performance figures
+  here come from two processes on one machine. They are real and reproducible, and they are not
+  production evidence. The gap between "measured" and "measured somewhere that matters" is exactly
+  the gap the evidence ladder exists to make visible.
 - **A staged, reversible cutover** (shadow run → dual webhook → gradual flip → warm rollback target)
   means the migration will only ever carry as much production risk as each stage's own evidence justifies.
 - The full history is traceable commit-by-commit in this repository's git log.
