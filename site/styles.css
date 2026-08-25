@@ -181,20 +181,6 @@ section[id] { scroll-margin-top: 5rem; }
 .tab[aria-selected="true"] {
   background: var(--accent); border-color: var(--accent); color: #fff;
 }
-.tab .tab__n { font-variant-numeric: tabular-nums; opacity: 0.6; margin-right: 0.4rem; }
-.tab[aria-selected="true"] .tab__n { opacity: 0.75; }
-
-/* vertical variant, used by the ladders */
-.tablist--stack { flex-direction: column; gap: 0.4rem; margin-bottom: 1.1rem; }
-.tablist--stack .tab {
-  border-radius: 8px; text-align: left; display: flex; gap: 0.8rem; align-items: baseline;
-  width: 100%;
-}
-.tablist--stack .tab__n {
-  font-size: 0.76rem; letter-spacing: 0.06em; text-transform: uppercase;
-  flex: 0 0 4.2rem; margin: 0; opacity: 1; color: var(--muted);
-}
-.tablist--stack .tab[aria-selected="true"] .tab__n { color: rgba(255,255,255,0.8); }
 
 .panel {
   border: 1px solid var(--line); border-radius: var(--radius);
@@ -237,6 +223,11 @@ section[id] { scroll-margin-top: 5rem; }
 .stack dt { font-weight: 650; color: var(--ink); margin-bottom: 0.25rem; }
 .stack dd { margin: 0; color: var(--ink-2); max-width: var(--measure); }
 
+@media (min-width: 760px) {
+  .stack--2 { display: grid; grid-template-columns: 1fr 1fr; column-gap: 2.4rem; }
+  .stack--2 div:nth-child(2) { border-top: 0; padding-top: 0; }
+}
+
 /* Pointer affordance only; keyboard and screen-reader users drive this from the tablist. */
 .js .cycle-node { cursor: pointer; }
 .js .cycle-node rect { transition: fill 120ms ease, stroke 120ms ease; }
@@ -271,15 +262,12 @@ section[id] { scroll-margin-top: 5rem; }
 .compare__row dd { margin: 0; font-family: var(--mono); font-size: 0.83rem; color: var(--ink-2); line-height: 1.7; }
 @media (max-width: 620px) { .compare__row { grid-template-columns: 1fr; } }
 
-/* ---------- ladders ---------- */
+/* ---------- chips ---------- */
 
-.rung-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.9rem; }
 .chip {
   font-size: 0.78rem; font-weight: 620; border-radius: 100px; padding: 0.2rem 0.65rem;
   background: var(--soft-2); color: var(--ink-2); border: 1px solid var(--line);
 }
-.chip--good { background: var(--accent-soft); border-color: var(--accent-line); color: #05564c; }
-.chip--warn { background: var(--warn-soft); border-color: #e2c88a; color: var(--warn); }
 
 .chip-btn { font: inherit; cursor: pointer; }
 .chip-btn:hover { border-color: var(--accent); color: var(--accent); }

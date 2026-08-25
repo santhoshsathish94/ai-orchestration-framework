@@ -109,9 +109,28 @@
     <div class="wrap">
       <p class="eyebrow">Why orchestration</p>
       <h2>Agentic workflows repeat. Orchestration learns.</h2>
-      <p class="lede">A workflow can run the same loop perfectly a hundred times and be no wiser on
-        the hundredth than the first. Orchestration adds evidence, ownership, and context that
-        compounds — so the next cycle starts stronger than the last.</p>
+      <p class="lede">Most organizations already have capability — skilled engineers, and now capable
+        AI. The bottleneck is turning it into shared understanding, focused action, clear ownership,
+        and proven outcomes. A workflow can run the same loop perfectly a hundred times and be no wiser
+        on the hundredth than the first.</p>
+
+      <div class="grid grid--2" style="margin:1.6rem 0 0">
+        <div class="card card--flat">
+          <h3>The same pattern, at every level</h3>
+          <ul>
+            <li>A person acts before understanding the problem, and the fix misses.</li>
+            <li>A team adds people to go faster, but context travels poorly, so work becomes execution → handoff → context loss → rework.</li>
+            <li>An organization gives everyone AI, yet the skill stays with a few people instead of becoming shared capability.</li>
+            <li>An agent jumps straight to a fix and thrashes — the gap was understanding, not capability.</li>
+          </ul>
+        </div>
+        <div class="card card--flat">
+          <h3>Why AI makes it visible</h3>
+          <p>Capability without understanding, focus, and ownership rarely becomes a reliable outcome.
+            AI does not remove that gap. It makes it more visible, because <strong>AI will act on
+            missing context faster and more confidently than a person will.</strong></p>
+        </div>
+      </div>
 
       <h3 style="margin-top:2.2rem">So how does it actually learn?</h3>
       <p>Not by the model remembering. A session ends and its working memory goes with it. What makes
@@ -141,38 +160,8 @@
         </div>
       </div>
 
-      <p style="margin-top:1.2rem">This is the <strong>Grow</strong> stage made concrete. Without it a
-        workflow can repeat perfectly and still know nothing on the hundredth run.
+      <p style="margin-top:1.2rem">This is the <strong>Grow</strong> stage made concrete.
         <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/05-context-engineering.md#where-context-lives">Where context lives →</a></p>
-    </div>
-  </section>
-
-  <!-- ============ THE PROBLEM ============ -->
-  <section class="band" id="problem">
-    <div class="wrap">
-      <p class="eyebrow">The problem</p>
-      <h2>The bottleneck was never capability.</h2>
-      <p>Most organizations already have capability — skilled engineers, and now capable AI. The
-        limiting factor is turning distributed capability into shared understanding, focused action,
-        clear ownership, and proven outcomes.</p>
-
-      <div class="grid grid--2" style="margin:1.5rem 0 0">
-        <div class="card card--flat">
-          <h3>The same pattern, at every level</h3>
-          <ul>
-            <li>A person acts before understanding the problem, and the fix misses.</li>
-            <li>A team adds people to go faster, but context travels poorly, so work becomes execution → handoff → context loss → rework.</li>
-            <li>An organization gives everyone AI, yet the skill stays with a few people instead of becoming shared capability.</li>
-            <li>An agent jumps straight to a fix and thrashes — the gap was understanding, not capability.</li>
-          </ul>
-        </div>
-        <div class="card card--flat">
-          <h3>Why AI makes it visible</h3>
-          <p>Capability without understanding, focus, and ownership rarely becomes a reliable outcome.
-            AI does not remove that gap. It makes it more visible, because <strong>AI will act on
-            missing context faster and more confidently than a person will.</strong></p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -348,65 +337,13 @@
         </div>
       </div>
 
-      <p class="note" style="margin-top:1.2rem">Full stage definitions:
+      <p class="note" style="margin-top:1.2rem">The loop is not software-specific. The same six stages
+        are intended to apply across DevOps, quality assurance, security operations, product
+        management, finance, HR, and business operations — the vocabulary changes, the loop does not.</p>
+
+      <p class="note">Full stage definitions:
         <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/04-framework.md">docs/04-framework.md</a> ·
         <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/03-principles.md">the six principles</a></p>
-    </div>
-  </section>
-
-  <!-- ============ PROOF ============ -->
-  <section class="band" id="proof">
-    <div class="wrap">
-      <p class="eyebrow">Proof, not activity</p>
-      <h2>How strong is your evidence, really?</h2>
-      <p class="lede">Most work does not have production telemetry, and proof has to stay usable
-        anyway. The discipline is not always reaching the top rung — it is knowing which rung you
-        reached, and saying so.</p>
-
-      <div class="tabs" data-tabs="evidence">
-        <div class="tablist tablist--stack" role="tablist" aria-orientation="vertical" aria-label="The evidence ladder">
-          <button class="tab" role="tab" id="ed-t1" aria-controls="ed-p1" aria-selected="true"><span class="tab__n">Rung 1</span>Asserted</button>
-          <button class="tab" role="tab" id="ed-t2" aria-controls="ed-p2"><span class="tab__n">Rung 2</span>Demonstrated once</button>
-          <button class="tab" role="tab" id="ed-t3" aria-controls="ed-p3"><span class="tab__n">Rung 3</span>Tested repeatably</button>
-          <button class="tab" role="tab" id="ed-t4" aria-controls="ed-p4"><span class="tab__n">Rung 4</span>Measured before / after</button>
-          <button class="tab" role="tab" id="ed-t5" aria-controls="ed-p5"><span class="tab__n">Rung 5</span>Observed in the real environment</button>
-        </div>
-
-        <div class="panel is-active" role="tabpanel" id="ed-p1" aria-labelledby="ed-t1" data-panel tabindex="0">
-          <h3>Asserted</h3>
-          <div class="rung-meta"><span class="chip chip--warn">Not proof</span></div>
-          <p>Someone — a person or an AI — says it works.</p>
-          <p><strong>Establishes:</strong> nothing. This is the rung most "done" claims actually sit on.</p>
-        </div>
-        <div class="panel" role="tabpanel" id="ed-p2" aria-labelledby="ed-t2" data-panel tabindex="0">
-          <h3>Demonstrated once</h3>
-          <div class="rung-meta"><span class="chip">Weak</span></div>
-          <p>Shown working manually, one time.</p>
-          <p><strong>Establishes:</strong> it can work.<br><strong>Does not establish:</strong> that it keeps working, or that it works outside the path you just walked.</p>
-        </div>
-        <div class="panel" role="tabpanel" id="ed-p3" aria-labelledby="ed-t3" data-panel tabindex="0">
-          <h3>Tested repeatably</h3>
-          <div class="rung-meta"><span class="chip">Solid</span></div>
-          <p>An automated check that fails without the change and passes with it.</p>
-          <p><strong>Establishes:</strong> it works, and will keep working.<br><strong>Does not establish:</strong> that the thing you actually cared about moved.</p>
-          <p class="note">A small internal change may be genuinely complete here.</p>
-        </div>
-        <div class="panel" role="tabpanel" id="ed-p4" aria-labelledby="ed-t4" data-panel tabindex="0">
-          <h3>Measured before / after</h3>
-          <div class="rung-meta"><span class="chip chip--good">Strong</span></div>
-          <p>The number moved in the right direction, and you can show both sides.</p>
-          <p><strong>Establishes:</strong> it changed the thing you cared about.<br><strong>Does not establish:</strong> that it holds in the real environment, under real conditions.</p>
-        </div>
-        <div class="panel" role="tabpanel" id="ed-p5" aria-labelledby="ed-t5" data-panel tabindex="0">
-          <h3>Observed in the real environment</h3>
-          <div class="rung-meta"><span class="chip chip--good">Strongest</span></div>
-          <p>The original signal is gone, and stays gone.</p>
-          <p><strong>Establishes:</strong> the outcome actually happened.</p>
-          <p class="note">Not always available, and not always worth the cost. That is fine — say where you stopped.</p>
-        </div>
-      </div>
-
-      <div class="pull"><p>Name the rung you actually reached. Do not claim a higher one.</p></div>
     </div>
   </section>
 
@@ -559,6 +496,11 @@
       <p style="margin-top:1.4rem">AI can do the work; people stay accountable for risk, governance,
         and decisions that need human judgment. Automation should make responsibility
         <strong>clearer</strong>, not fuzzier.</p>
+
+      <p>You move from the first column toward the second by earning it, per context rather than
+        globally. Widen what AI decides where the results have held up; keep human approval wherever a
+        mistake is expensive or hard to reverse; and take the scope back when the results stop holding.
+        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/08-governance.md">How much autonomy to grant →</a></p>
     </div>
   </section>
 
@@ -614,87 +556,13 @@
     </div>
   </section>
 
-  <!-- ============ BEYOND SOFTWARE ============ -->
-  <section class="band" id="domains">
-    <div class="wrap">
-      <p class="eyebrow">Beyond software</p>
-      <h2>The loop does not change. The words do.</h2>
-      <p class="lede">The model is technology independent. These four are drawn from the framework's
-        own documented examples and case studies.</p>
-
-      <div class="tabs" data-tabs="domains">
-        <div class="tablist" role="tablist" aria-label="Domains">
-          <button class="tab" role="tab" id="dm-t1" aria-controls="dm-p1" aria-selected="true">Software engineering</button>
-          <button class="tab" role="tab" id="dm-t2" aria-controls="dm-p2">Production operations</button>
-          <button class="tab" role="tab" id="dm-t3" aria-controls="dm-p3">Customer support</button>
-          <button class="tab" role="tab" id="dm-t4" aria-controls="dm-p4">Outside software</button>
-        </div>
-
-        <div class="panel is-active" role="tabpanel" id="dm-p1" aria-labelledby="dm-t1" data-panel tabindex="0">
-          <h3>A recurring production exception</h3>
-          <dl class="kv">
-            <div><dt>Opportunity</dt><dd>Resolve a recurring production exception.</dd></div>
-            <div><dt>Understand</dt><dd>Read the ticket; inspect logs, code, telemetry, dependencies, and history before changing anything.</dd></div>
-            <div><dt>Plan</dt><dd>Identify root cause; define a focused fix, ownership, validation steps, and approval boundaries.</dd></div>
-            <div><dt>Execute</dt><dd>Implement the fix and raise the change.</dd></div>
-            <div><dt>Proof</dt><dd>Validate in non-production, present evidence for approval, deploy, and verify the exception resolves.</dd></div>
-            <div><dt>Grow</dt><dd>Close only when the production outcome is proven; keep the learning for next time.</dd></div>
-          </dl>
-        </div>
-
-        <div class="panel" role="tabpanel" id="dm-p2" aria-labelledby="dm-t2" data-panel tabindex="0">
-          <h3>A sudden latency increase</h3>
-          <dl class="kv">
-            <div><dt>Opportunity</dt><dd>API latency has risen and users are feeling it.</dd></div>
-            <div><dt>Understand</dt><dd>Investigate from telemetry and recent changes.</dd></div>
-            <div><dt>Plan</dt><dd>Identify the likely bottleneck and the smallest change that addresses it.</dd></div>
-            <div><dt>Execute</dt><dd>Make the focused change.</dd></div>
-            <div><dt>Proof</dt><dd>Benchmark in non-production, then verify production latency returns to the expected range before closing.</dd></div>
-            <div><dt>Grow</dt><dd>Record what the signal looked like so the next spike is recognized sooner.</dd></div>
-          </dl>
-          <p class="note">From <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/reference-implementations.md">Production Exception Remediation</a>.</p>
-        </div>
-
-        <div class="panel" role="tabpanel" id="dm-p3" aria-labelledby="dm-t3" data-panel tabindex="0">
-          <h3>"Why did this customer request fail?"</h3>
-          <dl class="kv">
-            <div><dt>Opportunity</dt><dd>Answer the customer without a chain of cross-team escalations.</dd></div>
-            <div><dt>Understand</dt><dd>AI reads the relevant source, logs, and recent context and reconstructs what happened.</dd></div>
-            <div><dt>Plan</dt><dd>Decide what the customer needs and who must be involved, if anyone.</dd></div>
-            <div><dt>Execute</dt><dd>Respond, or route to the one team that genuinely owns it.</dd></div>
-            <div><dt>Proof</dt><dd>The customer's issue is actually resolved — not merely acknowledged.</dd></div>
-            <div><dt>Grow</dt><dd>The reconstructed explanation becomes context the next person can reuse.</dd></div>
-          </dl>
-          <p class="note">From <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/reference-implementations.md">Cross-Team Knowledge Access</a> — people spend time finding <em>who knows the answer</em> instead of finding the answer.</p>
-        </div>
-
-        <div class="panel" role="tabpanel" id="dm-p4" aria-labelledby="dm-t4" data-panel tabindex="0">
-          <h3>When the context itself is insufficient</h3>
-          <p>A documented case study describes AI reviewing available information during a newborn's
-            treatment and recognizing that a single measurement did not establish a trend — so it
-            suggested a repeat measurement for discussion with the pediatrician, who made the
-            clinical decision.</p>
-          <p>That is <strong>Understand</strong>, done well, outside software: reason about whether the
-            information you have is sufficient, surface the gap, gather the next signal, reassess, and
-            keep the consequential decision with the right human expert.</p>
-          <p class="note">A reasoning pattern, not an outcome measurement — and not medical advice.
-            <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/case-studies/03-newborn-contextual-reasoning.md">Read case study 03 →</a></p>
-        </div>
-      </div>
-
-      <p class="note" style="margin-top:1.2rem">The same lifecycle is intended to apply across DevOps,
-        quality assurance, security operations, product management, finance, HR, and business
-        operations.</p>
-    </div>
-  </section>
-
   <!-- ============ EVIDENCE ============ -->
   <section class="band band--soft" id="evidence">
     <div class="wrap">
       <p class="eyebrow">Built from evidence</p>
       <h2>Real work, honestly reported.</h2>
-      <p class="lede">Including what is still unproven. The evidence bar differs by intent, so each
-        case study says which kind it is.</p>
+      <p class="lede">Including what is still unproven. Where something has not been proven yet, it
+        says so.</p>
 
       <h3 style="margin-top:1.8rem">Outcome case studies</h3>
       <p class="note">Delivered work with measurable results — and a plain statement of what remains uncertain.</p>
@@ -709,7 +577,7 @@
           <p>A manual rewrite was estimated at 8–10 weeks of team effort. With AI carrying most of the
             implementation under close human direction and verification, it was completed in about a
             day and parity-validated byte-for-byte against live traffic in preprod. The production
-            cutover has not yet run — evidence rung 4, not rung 5.</p>
+            cutover has not yet run.</p>
           <p class="note">The point is not who wrote the code. It is how much AI lowered the barrier to
             attempting the work at all.</p>
           <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/case-studies/01-contentful-migration.md">Read case study 01 →</a></p>
@@ -728,28 +596,18 @@
         </article>
       </div>
 
-      <h3 style="margin-top:2rem">Reasoning patterns</h3>
-      <p class="note">No measured outcome, by design — these illustrate how a stage works, not what it delivered.</p>
+      <h3 style="margin-top:2rem">Reference implementations</h3>
+      <p class="note">Patterns that run on real work, with their limits stated.</p>
 
       <div class="grid grid--2" style="margin-top:1.1rem">
-        <article class="card case">
-          <p class="case__tag">03 · Reasoning pattern</p>
-          <h3>Contextual reasoning in a newborn care scenario</h3>
-          <p>AI recognizing that the available context was insufficient, and surfacing a missing signal
-            for a human expert to decide on.</p>
-          <p>It reports no metric by design — it illustrates what Understand looks like outside
-            software. It contains no clinical claim, no medical advice, and no identifying data.</p>
-          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/case-studies/03-newborn-contextual-reasoning.md">Read case study 03 →</a></p>
-        </article>
-
         <article class="card case card--flat">
-          <p class="case__tag">Reference implementations</p>
-          <h3>Three patterns, each graded</h3>
+          <p class="case__tag">Three patterns</p>
+          <h3>Built and used against real organizational data</h3>
           <p>Cross-team knowledge access, production exception remediation, and multi-repository
-            defect remediation — all <strong>built and used against real organizational data</strong>.</p>
+            defect remediation.</p>
           <p>Knowledge access has answered <strong>real production and support incidents</strong>,
             including a data-synchronization failure that had survived an overnight investigation after
-            the owning team had gone — <strong>rung 4–5</strong> for those cases. The remediation patterns
+            the owning team had gone. The remediation patterns
             have run on real work through existing review and deployment approvals. None is an
             always-on capability or adopted organization-wide, and each still depends on a human
             providing the map and holding the approvals.</p>
@@ -762,98 +620,25 @@
     </div>
   </section>
 
-  <!-- ============ FUTURE ============ -->
-  <section class="band" id="future">
-    <div class="wrap">
-      <p class="eyebrow">Where this leads</p>
-      <h2>Autonomy is earned, one level at a time.</h2>
-      <p class="lede">"Increase autonomy as trust matures" is only useful if you can say what trust
-        looks like. These levels describe how much of the <em>path</em> AI is trusted to determine —
-        not how capable the model is.</p>
-
-      <div class="tabs" data-tabs="autonomy">
-        <div class="tablist tablist--stack" role="tablist" aria-orientation="vertical" aria-label="The autonomy ladder">
-          <button class="tab" role="tab" id="au-t1" aria-controls="au-p1" aria-selected="true"><span class="tab__n">L0</span>Human does everything</button>
-          <button class="tab" role="tab" id="au-t2" aria-controls="au-p2"><span class="tab__n">L1</span>AI drafts each step</button>
-          <button class="tab" role="tab" id="au-t3" aria-controls="au-p3"><span class="tab__n">L2</span>AI executes the agreed plan</button>
-          <button class="tab" role="tab" id="au-t4" aria-controls="au-p4"><span class="tab__n">L3</span>AI plans within boundaries</button>
-          <button class="tab" role="tab" id="au-t5" aria-controls="au-p5"><span class="tab__n">L4</span>AI adapts the path</button>
-        </div>
-
-        <div class="panel is-active" role="tabpanel" id="au-p1" aria-labelledby="au-t1" data-panel tabindex="0">
-          <h3>L0 — Human does everything</h3>
-          <dl class="kv">
-            <div><dt>Human provides</dt><dd>Every step.</dd></div>
-            <div><dt>AI provides</dt><dd>Suggestions only.</dd></div>
-          </dl>
-        </div>
-        <div class="panel" role="tabpanel" id="au-p2" aria-labelledby="au-t2" data-panel tabindex="0">
-          <h3>L1 — AI drafts each step</h3>
-          <dl class="kv">
-            <div><dt>Human provides</dt><dd>Approval of each step, before it happens.</dd></div>
-            <div><dt>AI provides</dt><dd>A draft of each step.</dd></div>
-            <div><dt>To earn L2</dt><dd>Proof at this level is consistently accepted.</dd></div>
-          </dl>
-        </div>
-        <div class="panel" role="tabpanel" id="au-p3" aria-labelledby="au-t3" data-panel tabindex="0">
-          <h3>L2 — AI executes the agreed plan</h3>
-          <dl class="kv">
-            <div><dt>Human provides</dt><dd>Approval of the plan; review of the result.</dd></div>
-            <div><dt>AI provides</dt><dd>Execution of the agreed plan.</dd></div>
-            <div><dt>To earn L3</dt><dd>Proof holds without rework.</dd></div>
-          </dl>
-        </div>
-        <div class="panel" role="tabpanel" id="au-p4" aria-labelledby="au-t4" data-panel tabindex="0">
-          <h3>L3 — AI plans within boundaries</h3>
-          <dl class="kv">
-            <div><dt>Human provides</dt><dd>Objective, constraints, and success criteria.</dd></div>
-            <div><dt>AI provides</dt><dd>Planning and execution within those boundaries.</dd></div>
-            <div><dt>To earn L4</dt><dd>Proof holds unsupervised.</dd></div>
-          </dl>
-        </div>
-        <div class="panel" role="tabpanel" id="au-p5" aria-labelledby="au-t5" data-panel tabindex="0">
-          <h3>L4 — AI adapts the path</h3>
-          <dl class="kv">
-            <div><dt>Human provides</dt><dd>The objective and the success criteria.</dd></div>
-            <div><dt>AI provides</dt><dd>Determines and continuously adapts the path.</dd></div>
-          </dl>
-          <p class="note">This is a direction, not a claim about today.</p>
-        </div>
-      </div>
-
-      <div class="grid grid--3" style="margin-top:1.5rem">
-        <div class="card card--flat"><h3>The gate is proof</h3><p>Move up only when Proof at the current level has been consistently achieved — and move back down when it has not.</p></div>
-        <div class="card card--flat"><h3>Blast radius caps the level</h3><p>Where a mistake is expensive or irreversible, human approval stays regardless of track record.</p></div>
-        <div class="card card--flat"><h3>Levels are revocable</h3><p>A ladder that only goes up is not a trust mechanism.</p></div>
-      </div>
-
-      <p style="margin-top:1.5rem">Autonomy is granted <strong>per context, not globally</strong>. A team
-        may sit at L3 for a well-understood remediation flow and L1 for anything touching customer data.</p>
-
-      <div class="pull"><p>Human defines the destination. AI determines and continuously adapts the path.</p></div>
-
-      <p class="note">Separately, and clearly labelled as such, the repository carries
-        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/hypothesis/ai-future.md">The AI Future</a>
-        — a speculative technical hypothesis about competitive pressure and autonomy. It is a thought
-        experiment, not a prediction, and it is <strong>not part of the framework</strong>.</p>
-    </div>
-  </section>
-
   <!-- ============ WHAT IT IS NOT ============ -->
   <section class="band band--soft" id="scope">
     <div class="wrap">
       <p class="eyebrow">Scope</p>
       <h2>What it is not.</h2>
-      <div class="grid grid--2" style="margin-top:1.3rem">
-        <div class="card"><h3>Not software</h3><p>There is nothing to install. It is a way of working.</p></div>
-        <div class="card"><h3>Not a platform to migrate onto</h3><p>Orchestration is a layer above the systems you already run, not a change to them. Adoption is incremental, and if you stop, what is underneath is unchanged.</p></div>
-        <div class="card"><h3>Not a replacement for how you already work</h3><p>It sits alongside Agile, incident management, or whatever your team already uses — and on top of the systems you already run, rather than in place of them.</p></div>
-        <div class="card"><h3>Not about model or tool selection</h3><p>It does not tell you which AI to use, and it does not cover cost, evaluations, data governance, or security review.</p></div>
-        <div class="card"><h3>Not a runtime</h3><p>It defines the operating model, not the execution technology. Agent frameworks, workflow engines and tool protocols are choices that sit inside it, not competitors to it.</p></div>
-        <div class="card"><h3>Not needed for everything</h3><p>Throwaway or trivial work does not need a lifecycle. Use it where being wrong actually costs something.</p></div>
-      </div>
+      <dl class="stack stack--2">
+        <div><dt>Not software</dt><dd>There is nothing to install. It is a way of working.</dd></div>
+        <div><dt>Not a platform to migrate onto</dt><dd>It is a layer above the systems you already run. Adoption is incremental, and if you stop, what is underneath is unchanged.</dd></div>
+        <div><dt>Not a replacement for how you already work</dt><dd>It sits alongside Agile, incident management, or whatever your team already uses.</dd></div>
+        <div><dt>Not about model or tool selection</dt><dd>It does not tell you which AI to use, and it does not cover cost, evaluations, data governance, or security review.</dd></div>
+        <div><dt>Not a runtime</dt><dd>Agent frameworks, workflow engines and tool protocols are choices that sit inside it, not competitors to it.</dd></div>
+        <div><dt>Not needed for everything</dt><dd>Trivial or throwaway work does not need a lifecycle. Use it where being wrong actually costs something.</dd></div>
+      </dl>
       <p class="note" style="margin-top:1.3rem">It is also not an LLM framework, an agent SDK, or a
         prompt library — and it makes no claim that unrestricted autonomous AI exists today.</p>
+      <p class="note">Separately, and clearly labelled as such, the repository carries
+        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/hypothesis/ai-future.md">The AI Future</a>
+        — a speculative hypothesis about competitive pressure and autonomy. It is a thought
+        experiment, not a prediction, and it is <strong>not part of the framework</strong>.</p>
     </div>
   </section>
 
@@ -928,8 +713,8 @@
         software architecture — platform modernization, distributed systems, and API design. This
         framework is the operating model behind that work, published so that it does not stay with
         one person.</p>
-      <p>Every claim on this site is graded on the framework's own evidence ladder, including the
-        ones that only reach the lower rungs. That is deliberate: a framework about proving outcomes
+      <p>Every claim on this site states plainly what has been proven and what has not, including the
+        work that is still unfinished. That is deliberate: a framework about proving outcomes
         should be held to its own standard first.</p>
       <p><a href="https://santhoshsathish94.github.io/professional-profile/">Résumé</a> ·
         <a href="https://santhoshsathish94.github.io/professional-profile/work/">Selected work</a> ·
@@ -969,7 +754,7 @@
         <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/tree/main/case-studies">All case studies</a></li>
         <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/case-studies/01-contentful-migration.md">01 — Contentful migration</a></li>
         <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/case-studies/02-react-rsc-memory-leak.md">02 — React RSC memory leak</a></li>
-        <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/case-studies/03-newborn-contextual-reasoning.md">03 — Contextual reasoning</a></li>
+        <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/reference-implementations.md">Reference implementations</a></li>
       </ul>
     </div>
     <div>

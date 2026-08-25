@@ -31,13 +31,20 @@ All notable changes to this project will be documented in this file.
 - Regraded the reference implementations. Cross-Team Knowledge Access has resolved **real production and support incidents** and reaches **rung 4–5** for those cases; Production Exception Remediation and Multi-Repository Defect Remediation have both run on real work through existing review and deployment approvals. None is an always-on capability or adopted organization-wide, and all still depend on a human providing the map, reviewing the output, and holding the approvals.
 
 ### Removed
+- **The evidence ladder and the autonomy ladder as website sections.** Both remain part of the framework in `docs/07-proof.md` and `docs/08-governance.md`, where practitioners need them. On the site they asked a first-time reader to learn a grading scheme before they had done anything, and turned plain statements into jargon — "rung 4, not rung 5" instead of "the production cutover has not yet run." The site now states what has and has not been proven in plain words. Two full sections shorter.
+- **The website's "Beyond software" section.** Three tabs restating the same six stages in slightly different vocabulary. The claim it existed to make — the loop is not software-specific — is now one line on the lifecycle.
+- **Case study 03, "Contextual Reasoning in a Newborn Care Scenario."** It illustrated a model reasoning well about insufficient context, which is a property of the model rather than of orchestration. Nothing in it was set up, governed, or proven — it was good AI use, not orchestration work, and presenting it as evidence for this framework overstated what the framework had shown. The case-studies index and the website now carry outcome case studies and reference implementations only.
+
+### Changed — the website is shorter
+- **Merged "Why orchestration" and "The problem" into one section.** Both argued that capability was never the bottleneck; saying it once says it harder.
+- **"What it is not" is a two-column list rather than six cards**, with each entry cut to a line.
+- Net effect: sixteen screens down to thirteen, fifteen sections down to eleven, six tab groups down to three.
 - `docs/06-agent-orchestration.md`. It was twenty lines, had no inbound links, and restated Principles 3 and 4 without adding to them. Its one distinctive line — keep execution observable, attributable, and reversible where practical — moved into governance.
 
 ### Moved
 - `docs/ai-future-hypothesis.md` → `hypothesis/ai-future.md`, out of `docs/` entirely. It is speculative and explicitly not part of the framework; keeping it beside the doctrine invited confusion.
 - Broadened `docs/01-problem.md` so the problem statement is not framed as software-engineering-only. Software engineering remains where the framework was built and where its evidence comes from; the problem it addresses is not confined there.
 - Replaced a competing slogan on the website ("An agent can act. Only orchestration learns.") with the canonical **"Agentic workflows repeat. Orchestration learns."**
-- The case-studies index and the website now group evidence explicitly into **outcome case studies** (01, 02) and **reasoning patterns** (03), instead of relying on a per-row label.
 - Added a framework-versus-runtime clarification to the README and the website: the framework defines the operating model around AI orchestration and does not prescribe the runtime used to execute it. Agent frameworks, workflow engines and tool protocols sit inside it.
 
 ## v0.4.0 — 2026-08-24

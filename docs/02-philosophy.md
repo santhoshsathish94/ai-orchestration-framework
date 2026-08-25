@@ -34,7 +34,7 @@ The goal is not to remove humans from the process. It is to make the human proce
 
 This is the broader philosophy behind orchestration. A well-orchestrated AI system does more than answer from the context it already has. It can recognize when context is insufficient, identify what is missing, help gather the next useful signal, reassess with new evidence, and keep consequential decisions with the appropriate human expert.
 
-That pattern applies across engineering, healthcare, science, filmmaking, design, operations, and other fields. The domain changes; the underlying loop remains — and that loop is the lifecycle:
+That pattern is not confined to engineering, though engineering is where this framework was built and where all of its evidence comes from. The domain changes; the underlying loop remains — and that loop is the lifecycle:
 
 **Opportunity → Understand → Plan → Execute → Proof → Grow**
 
