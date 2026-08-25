@@ -11,8 +11,10 @@ Delivery/Preview API) integration, and from .NET 9 MVC controllers to .NET 10 Mi
 public contract — every route, JSON shape, and response envelope — was preserved exactly, so no
 consumer (the website, and anything else calling the API) needed to change. AI carried most of the
 rewrite; the work still needed human judgment to set direction and to independently verify each
-result against real, running systems. What stands out is not who wrote the code — it is how much AI
-lowered the barrier.
+result against real, running systems. Both versions were deployed to UAT and the API gateway's
+preprod endpoint was pointed at the new one, so **QA validated the real site against the migrated
+API and signed it off**. What stands out is not who wrote the code — it is how much AI lowered the
+barrier.
 
 > **On "a day."** The **implementation** took about a day, run with agents and subagents. Testing and
 > parity validation took roughly another day on top of that, and getting stakeholder agreement took
@@ -93,12 +95,18 @@ a fraction of the usual effort.
    - Search was implemented against Contentful's full-text search, which matched far more broadly
      than the Current CMS API's slug/title/category/tag matching — caught by comparing result counts,
      reimplemented to match its behavior exactly.
-6. **Planned the rollout in reversible stages, not a single cutover:** ran the Migrated CMS API on a preprod
-   environment side by side with the Current CMS API on UAT under the same content and traffic
-   patterns, registered a second Contentful webhook so both services' allow-lists stayed current
-   during the transition, and kept the Current CMS API warm and instantly reinstatable for the flip.
-   The flip itself has not yet been performed.
-7. **Judgment stayed human** — e.g. deciding which live differences were acceptable improvements vs.
+6. **Validated through the API gateway against the real site, not just at the API boundary.** Both
+   versions — current and migrated — were deployed to the UAT environment. The gateway's **preprod
+   endpoint was then pointed at the migrated API**, so the actual website ran against the new
+   service end to end while the current one stayed live and unchanged for everyone else. **QA tested
+   the site directly in that configuration and signed off.** That is the difference between proving
+   two JSON responses match and proving the product still works.
+7. **Planned the rollout in reversible stages, not a single cutover:** the gateway split above meant
+   the migrated API could be exercised under real conditions and reverted by repointing one route.
+   A second Contentful webhook kept both services' allow-lists current during the transition, and
+   the current API stayed warm and instantly reinstatable for the flip. The production flip itself
+   has not yet been performed.
+8. **Judgment stayed human** — e.g. deciding which live differences were acceptable improvements vs.
    real regressions. Nothing was accepted on the AI's word alone: each task's code, tests, and live
    behavior were independently checked against the real, running systems before merging, rather than
    trusting generated code or documentation at face value.
@@ -110,7 +118,8 @@ a fraction of the usual effort.
 | Metric | Before | After |
 |---|---|---|
 | Live parity, Current vs. Migrated CMS API (byte-for-byte) | — | **36/36** endpoint cases (34 exact + 2 explicitly-approved deviations) |
-| Endpoint groups verified side-by-side (preprod vs. UAT) | — | **15/15**, zero errors, zero customer-visible differences |
+| Endpoint groups verified side-by-side | — | **15/15**, zero errors, zero customer-visible differences |
+| Site validated end to end through the API gateway | — | **QA tested the live site against the migrated API and signed off** |
 | Automated tests | — | **239/239** passing (220 unit + 19 contract-snapshot), 0 build warnings |
 | Security scan | — | 0 vulnerable dependencies, 0 hardcoded secrets, OWASP Top 10 clean |
 | Implementation time | — | **~1 day** of execution with agents and subagents |

@@ -578,8 +578,10 @@
             no consumer had to change.</p>
           <p>A manual rewrite was estimated at 8–10 weeks of team effort. With AI carrying most of the
             implementation under close human direction, the <strong>execution took about a day</strong>,
-            and the result was parity-validated byte-for-byte against live traffic in preprod. The
-            production cutover has not yet run.</p>
+            and the result was parity-validated byte-for-byte against live traffic. Both versions ran
+            in the test environment with the API gateway pointing at the new one, so <strong>QA signed
+            off against the real site</strong>, not just matching JSON. The production cutover has not
+            yet run.</p>
           <p class="note">That day is execution only. Testing and validation took roughly another day,
             and stakeholder agreement longer still — the work was not continuous. Comparing one day
             against a ten-week estimate that included analysis and coordination would overstate it.</p>
