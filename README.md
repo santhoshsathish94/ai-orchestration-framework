@@ -12,11 +12,26 @@ The **AI Orchestration Framework is an operating model for turning human intent 
 
 It is not an LLM framework, agent SDK, or prompt library. It defines **how AI and humans work together to achieve an outcome**.
 
+### It sits on top of what you already run
+
+**Orchestration is a layer above your existing systems, not a change to them.** There is nothing to
+migrate onto. The work already happens somewhere — repositories, tickets, pipelines, logs, data
+stores, whatever your organization actually uses — and orchestration adds the layer that carries
+context, execution, evidence and learning across them. What changes is how the work is directed, not
+what it runs on.
+
+That makes adoption incremental and reversible: you can start with one real problem, and if you stop,
+the systems underneath are exactly as they were.
+
+It does not mean there is no work to do. The layer needs **access**, and access should be scoped
+deliberately — read-only where reading is enough, and approval kept in human hands where the blast
+radius is real. But the systems themselves stay as they are.
+
 ### What it is not
 
 - **Not software.** There is nothing to install. It is a way of working.
 - **Not a runtime.** It defines the operating model around AI orchestration; it does not prescribe the runtime used to execute it. Agent frameworks, workflow engines and tool protocols are choices that sit inside it, not competitors to it.
-- **Not a replacement for how you already work.** It sits alongside Agile, incident management, or whatever your team already uses.
+- **Not a replacement for how you already work.** It sits alongside Agile, incident management, or whatever your team already uses — and on top of the systems you already run, rather than in place of them.
 - **Not about model or tool selection.** It does not tell you which AI to use, and it does not cover cost, evaluations, data governance, or security review.
 - **Not needed for everything.** Throwaway or trivial work does not need a lifecycle. Use it where being wrong actually costs something.
 
