@@ -136,6 +136,7 @@ The framework is designed to help teams:
 
 - **[Cross-Team Knowledge Access](docs/reference-implementations.md#1-cross-team-knowledge-access)** — make existing organizational knowledge accessible through AI.
 - **[Production Exception Remediation](docs/reference-implementations.md#2-production-exception-remediation)** — take a production issue from understanding through fix, proof, and learning.
+- **[Multi-Repository Defect Remediation](docs/reference-implementations.md#3-multi-repository-defect-remediation)** — work a batch of defects across service boundaries, ending in evidence of which are genuinely closed.
 
 These are practical applications of the core lifecycle. Both have been **built and demonstrated
 against real organizational data**, not just proposed — though neither has been put in front of end
@@ -158,6 +159,7 @@ users yet, and the page says exactly that.
 - 📖 [Philosophy](docs/02-philosophy.md)
 - 📖 [Principles](docs/03-principles.md)
 - 📖 [AI Orchestration Model](docs/04-framework.md)
+- 📖 [The Orchestration Environment](docs/orchestration-environment.md) — the access layer that makes any of it possible
 - 📖 [Reference Implementations](docs/reference-implementations.md)
 
 **Practical**

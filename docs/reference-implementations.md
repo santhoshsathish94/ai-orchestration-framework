@@ -12,10 +12,18 @@ These are practical patterns teams can adopt and adapt. They are not separate fr
 > without a clear owner. In both, the reported signal was traced to its actual cause. On the
 > [evidence ladder](07-proof.md#how-strong-is-your-evidence) those specific cases reach **rung 4–5**.
 >
-> What has **not** happened: neither pattern is an always-on capability, and neither is adopted
+> Production Exception Remediation and Multi-Repository Defect Remediation have both been run on real
+> work, through existing review and deployment approvals. The defect-remediation cycle produced
+> verified closure for **most, not all**, of a batch — with the remainder carried forward as better
+> context for the next cycle.
+>
+> What has **not** happened: none of these is an always-on capability, and none is adopted
 > organization-wide. The knowledge capability is assembled per question rather than running as a
-> product. Production Exception Remediation remains at **rung 2 — demonstrated**, and has not had
-> approval and deployment gates wired into a team's real tooling.
+> product, and every pattern here depends on a human providing the map, reviewing the output, and
+> holding the approvals.
+>
+> These patterns assume an [orchestration environment](orchestration-environment.md) is in place —
+> read-only access across the systems the organization already runs.
 
 ## 1. Cross-Team Knowledge Access
 
@@ -97,6 +105,52 @@ Incorrect report values trigger remediation. AI traces the transformation, fixes
 ### Outcome
 
 > Move from **"the fix was deployed"** to **"the original problem was proven resolved."**
+
+---
+
+## 3. Multi-Repository Defect Remediation
+
+**Type:** Reference Workflow
+
+### Underlying problem
+
+A batch of defects arrives as a single ticket. The work of triaging them is mostly navigation: which
+of them are real, which system each one actually originates in, and which of them share a cause.
+
+That navigation is slow because it crosses boundaries. A defect reported against a page may live in
+a downstream service, a data mapping, or a configuration value, and the person triaging usually only
+knows some of those systems well.
+
+### Implementation
+
+Give the orchestration layer the ticket reference and read access across the repositories involved,
+then let it work the batch rather than one item at a time:
+
+1. Read the ticket and separate it into individual defects.
+2. For each, locate the responsible code — **following dependencies across repositories** rather than
+   assuming the defect lives where it was reported.
+3. Propose focused changes, each with the reasoning that led to it.
+4. Open them for human review as normal pull requests.
+5. On approval, trigger the existing pipeline and request the human approval the pipeline already
+   requires before a test environment is updated.
+6. Verify the fixes against the running test environment and report which defects are actually
+   closed — and, for the rest, what was learned about why they are not.
+
+### What the human contributes
+
+The map. Which system is responsible for what, and which component talks to which. That context is
+the difference between diagnosis and a confident guess, and it does not come from the code alone.
+
+Review and approval also stay human. The volume of change this produces is exactly the situation in
+which rubber-stamping becomes tempting.
+
+### Outcome
+
+> Turn a batch of defects from a queue of individual investigations into one orchestrated cycle,
+> ending in evidence of which are genuinely closed.
+
+A partial result is the normal result, and a useful one. Knowing that some defects remain, and why,
+is what makes the next cycle better informed than the last.
 
 The orchestration itself has been demonstrated end to end — investigation, root cause, focused change,
 validation, and evidence assembled for a human approval decision. What has not been exercised is the
