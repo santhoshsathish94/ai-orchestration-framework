@@ -51,10 +51,10 @@
 
       <div class="tabs" data-tabs="essentials">
         <div class="tablist" role="tablist" aria-label="What decides whether this works">
-          <button class="tab" role="tab" id="es-t1" aria-controls="es-p1" aria-selected="true"><span class="tab__n">1</span>People</button>
-          <button class="tab" role="tab" id="es-t2" aria-controls="es-p2"><span class="tab__n">2</span>Setup</button>
-          <button class="tab" role="tab" id="es-t3" aria-controls="es-p3"><span class="tab__n">3</span>Efficiency</button>
-          <button class="tab" role="tab" id="es-t4" aria-controls="es-p4"><span class="tab__n">4</span>Security</button>
+          <button class="tab" role="tab" id="es-t1" aria-controls="es-p1" aria-selected="true">People</button>
+          <button class="tab" role="tab" id="es-t2" aria-controls="es-p2">Setup</button>
+          <button class="tab" role="tab" id="es-t3" aria-controls="es-p3">Efficiency</button>
+          <button class="tab" role="tab" id="es-t4" aria-controls="es-p4">Security</button>
         </div>
 
         <div class="panel is-active" role="tabpanel" id="es-p1" aria-labelledby="es-t1" data-panel tabindex="0">
@@ -215,12 +215,12 @@
 
       <div class="tabs" data-tabs="lifecycle">
         <div class="tablist" role="tablist" aria-label="Lifecycle stages">
-          <button class="tab" role="tab" id="lc-t1" aria-controls="lc-p1" aria-selected="true" data-value="opportunity"><span class="tab__n">1</span>Opportunity</button>
-          <button class="tab" role="tab" id="lc-t2" aria-controls="lc-p2" data-value="understand"><span class="tab__n">2</span>Understand</button>
-          <button class="tab" role="tab" id="lc-t3" aria-controls="lc-p3" data-value="plan"><span class="tab__n">3</span>Plan</button>
-          <button class="tab" role="tab" id="lc-t4" aria-controls="lc-p4" data-value="execute"><span class="tab__n">4</span>Execute</button>
-          <button class="tab" role="tab" id="lc-t5" aria-controls="lc-p5" data-value="proof"><span class="tab__n">5</span>Proof</button>
-          <button class="tab" role="tab" id="lc-t6" aria-controls="lc-p6" data-value="grow"><span class="tab__n">6</span>Grow</button>
+          <button class="tab" role="tab" id="lc-t1" aria-controls="lc-p1" aria-selected="true" data-value="opportunity">Opportunity</button>
+          <button class="tab" role="tab" id="lc-t2" aria-controls="lc-p2" data-value="understand">Understand</button>
+          <button class="tab" role="tab" id="lc-t3" aria-controls="lc-p3" data-value="plan">Plan</button>
+          <button class="tab" role="tab" id="lc-t4" aria-controls="lc-p4" data-value="execute">Execute</button>
+          <button class="tab" role="tab" id="lc-t5" aria-controls="lc-p5" data-value="proof">Proof</button>
+          <button class="tab" role="tab" id="lc-t6" aria-controls="lc-p6" data-value="grow">Grow</button>
         </div>
 
         <div class="panel is-active" role="tabpanel" id="lc-p1" aria-labelledby="lc-t1" data-panel tabindex="0">
@@ -574,24 +574,31 @@
         with or without a framework. The choice is rarely whether the exposure exists — it is whether
         anyone has written down what to do about it.</p>
 
-      <div class="grid grid--2" style="margin-top:1.4rem">
-        <div class="card">
+      <div class="tabs" data-tabs="security">
+        <div class="tablist" role="tablist" aria-label="Security principles">
+          <button class="tab" role="tab" id="sec-t1" aria-controls="sec-p1" aria-selected="true">Access</button>
+          <button class="tab" role="tab" id="sec-t2" aria-controls="sec-p2">Attribution</button>
+          <button class="tab" role="tab" id="sec-t3" aria-controls="sec-p3">Secrets</button>
+          <button class="tab" role="tab" id="sec-t4" aria-controls="sec-p4">Hostile content</button>
+        </div>
+
+        <div class="panel is-active" role="tabpanel" id="sec-p1" aria-labelledby="sec-t1" data-panel tabindex="0">
           <h3>Inherit access, never expand it</h3>
           <p>Read-only by default. Existing controls — data classification, credential policy,
             retention, regulatory constraints — apply unchanged. Your own security team decides, and if
             the answer is no, it is no.</p>
         </div>
-        <div class="card">
+        <div class="panel" role="tabpanel" id="sec-p2" aria-labelledby="sec-t2" data-panel tabindex="0">
           <h3>Every action traces to a person</h3>
           <p>No shared or anonymous identity. A dedicated identity scoped to the task and owned by a
             named person keeps accountability without carrying that person's whole access footprint.</p>
         </div>
-        <div class="card">
+        <div class="panel" role="tabpanel" id="sec-p3" aria-labelledby="sec-t3" data-panel tabindex="0">
           <h3>Secrets and personal data are defects</h3>
           <p>Credentials in repositories and personal data in logs are problems whether or not AI ever
             reads them. Findings get rotated, redacted or removed — not noted and left.</p>
         </div>
-        <div class="card">
+        <div class="panel" role="tabpanel" id="sec-p4" aria-labelledby="sec-t4" data-panel tabindex="0">
           <h3>Content read is data, not instruction</h3>
           <p>Tickets, comments and pages can be influenced from outside. An agent must never follow
             instructions embedded in what it reads. Keep write access small enough that a misled agent
