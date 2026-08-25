@@ -53,9 +53,9 @@ time was spent on explanations that turned out to be wrong.
 
 **Even the mitigation was not obvious.** `--stack-trace-limit=0` was not an educated first guess; it
 came out of testing Node flags one at a time against a measured heap curve. The result that mattered
-was the one that *failed*: `--no-async-stack-traces` changed nothing. That pinned the cause to
-**synchronous** stack-frame capture and ruled out async-stack linking, which is what eventually made
-the search narrow enough to finish.
+was the one that *failed*: `--no-async-stack-traces` changed nothing in the isolated reproduction.
+That pinned the reproduction's cause to **synchronous** stack-frame capture. (`--no-async-stack-traces`
+is in any case rejected by `NODE_OPTIONS` outright, so it was never deployable fleet-wide.)
 
 **Four plausible fixes were implemented and disproved**, each tested against loaded code rather than
 reasoned about:
@@ -64,13 +64,21 @@ reasoned about:
   the render.
 - Cancelling the dedupe clone in Next.js's `dedupe-fetch.js` — no effect.
 - Nulling `task.model` and `task.thenableState` in React Flight's `abortTask` / `erroredTask` — no
-  effect, and stderr instrumentation then proved those handlers **never fire** for this leak.
+  effect, and stderr instrumentation then proved those handlers **never fire** for the reproduction's
+  leak.
 - Application Insights as the retainer — A/B identical. A passenger, not the cause.
 
 **A measurement trap nearly produced a false positive.** A single light run sometimes drained to
 ~30 MB on its own, which made at least one wrong fix look like it worked. Only multi-round load
 accumulated reliably, so every candidate had to be re-tested with the controlled four-round method
 before it was believed.
+
+**A local misconfiguration briefly produced the opposite false conclusion.** An extended burst run
+showed the post-GC floor climbing 179 → 272 → 366 MB and was written up as a confirmed concurrency
+leak. It was then traced to a dead local CMS endpoint in `.env.local` making every render's CMS fetch
+reject. Against a healthy backend the identical test stayed flat at ~170 MB. The wrong setup had
+accidentally been a faithful proxy for the production failure condition — useful, but only once it
+was understood as such rather than reported as the baseline.
 
 **It looked like a Next.js bug for most of the investigation.** Retainer analysis pointed at the
 React `cache()` fetch-dedupe trie created by Next.js's `createDedupeFetch`, and the public symptom
@@ -79,12 +87,30 @@ instrumenting `global.Error` to enumerate **every** `Error` constructed during a
 doing the pinning was created by React's Flight server, not by Next.js. The dedupe cache was what got
 retained; React was what retained it.
 
-> One correction worth stating plainly, because the intuitive version of this bug is wrong: the leak
-> is **not** caused by a failing dependency call retaining error objects. That was an early
-> hypothesis and the evidence contradicts it. In the dominant case the fetch succeeds, the render
-> completes, and no error is raised in the render path at all — the retained `Error` is one React
-> constructs *itself* on the successful-completion path. The leak happens on healthy requests, which
-> is exactly why it was hard to find.
+## Two paths to the same pin
+
+One mechanism produced the leak by two different routes, and conflating them wasted time. In both,
+an `Error`'s **captured stack** references the request's `AsyncResource`, whose store holds React
+Flight's `writtenObjects` — so a single retained `Error` drags an entire request's render graph with
+it.
+
+**On renders that fail** — the dominant path in production. When an SSR render errors or aborts
+(dead-listing 404s, upstream failures against a saturated backend), the reason `Error` is retained by
+a framework object: an `AbortSignal`'s abort reason, a Flight stream's closed-reason, or a rejected
+promise. Heap analysis of a leaking production pod counted **8,833 aborted-with-reason
+`AbortSignal`s** and **~1.96M retained promises** against **16** and **3,722** on a fresh pod —
+roughly one pinned async render graph, ~210 promises apiece, per errored render.
+
+**On renders that succeed** — the path the isolated reproduction exposed, and the one fixed upstream.
+Even with no error anywhere in the request, React's Flight server constructs an `Error` *itself* on
+the completion path to use as the cache-cleanup abort reason, and stores it for the request's
+lifetime. This is the defect that does not depend on anything going wrong, which is why it was worth
+fixing in React rather than in the application.
+
+The application's own mitigations — a circuit breaker, a negative cache, and a concurrency cap —
+reduced how *often* the first path fired but could not stop it, because they bound call rate and
+in-flight work while the leak is retention that outlives request completion. Zeroing the stack limit
+addresses both paths, because it removes the reference that does the pinning.
 
 ## Root cause
 
@@ -137,6 +163,30 @@ request.cacheController.abort(abortReason);
 This fixes the React (`react-server`) instance of the pattern. The Next.js instance
 (`vercel/next.js#97316`) is a separate, complementary fix.
 
+## Validated under sustained load — a clean A/B
+
+The reproduction proved the mechanism in isolation. A later soak test proved it on a real fleet, and
+by accident produced an unusually clean experiment: the **same container image** ran under load
+twice, and the only difference in its environment was the stack-limit flag.
+
+| | Flag absent | `--stack-trace-limit=0` |
+|---|---|---|
+| Pods under load | 53 | 36 |
+| Restarts | **113**, up to 7 on a single pod | **0** |
+| Failure mode | V8 heap OOM at ~4,044 MB against a 4,096 MB ceiling, confirmed in 14 crash logs | none |
+| Per-pod heap growth | ~1–2 GB/min, unbounded | slow rise, then flat — one pod held 2,828 → 2,864 MB across 5.5 h |
+| Duration survived | 2–4 minutes | ~6.5 hours, scaling 14 → 35 pods |
+
+Corroborated independently: the load-test team's own dashboard tracks a per-pod request counter that
+resets to zero whenever a pod restarts. Across the entire soak it climbed continuously with no
+resets.
+
+Two honest qualifications. First, this validates the **mitigation**, not the upstream patch — zeroing
+the stack limit process-wide is exactly the blunt instrument the contribution exists to make
+unnecessary, and it costs stack detail on every error in the service. Second, a forced-GC measurement
+showed the surviving ~1.8 GB is genuinely retained rather than lazily uncollected. The leak went from
+unbounded to bounded, which is what stopped the crashes; it did not go to zero.
+
 ## How we did it
 
 AI did much of the legwork below — the reproduction, the analysis, the fix, and the write-ups —
@@ -184,6 +234,7 @@ until proven.
 | Rendered output | full 2000-item list, HTTP 200 | identical |
 | Mechanism isolation | — | only `--stack-trace-limit=0` fixes it (synchronous frames) |
 | Effort to root cause | — | several days of repeated profiling; four candidate fixes disproved |
+| Fleet A/B, same image | 113 restarts across 53 pods | **0 restarts** across 36 pods, ~6.5 h under load |
 | Fix size | — | 1 file, +11 / −0 |
 | Independent corroboration | — | matching production diagnosis (`vercel/next.js#97316`) |
 | Status | production mitigated via a global Node flag | upstream fix filed, CI-green, in review |
