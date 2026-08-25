@@ -574,37 +574,30 @@
         with or without a framework. The choice is rarely whether the exposure exists — it is whether
         anyone has written down what to do about it.</p>
 
-      <div class="tabs" data-tabs="security">
-        <div class="tablist" role="tablist" aria-label="Security principles">
-          <button class="tab" role="tab" id="sec-t1" aria-controls="sec-p1" aria-selected="true">Access</button>
-          <button class="tab" role="tab" id="sec-t2" aria-controls="sec-p2">Attribution</button>
-          <button class="tab" role="tab" id="sec-t3" aria-controls="sec-p3">Secrets</button>
-          <button class="tab" role="tab" id="sec-t4" aria-controls="sec-p4">Hostile content</button>
-        </div>
-
-        <div class="panel is-active" role="tabpanel" id="sec-p1" aria-labelledby="sec-t1" data-panel tabindex="0">
-          <h3>Inherit access, never expand it</h3>
-          <p>Read-only by default. Existing controls — data classification, credential policy,
+      <dl class="stack">
+        <div>
+          <dt>Inherit access, never expand it</dt>
+          <dd>Read-only by default. Existing controls — data classification, credential policy,
             retention, regulatory constraints — apply unchanged. Your own security team decides, and if
-            the answer is no, it is no.</p>
+            the answer is no, it is no.</dd>
         </div>
-        <div class="panel" role="tabpanel" id="sec-p2" aria-labelledby="sec-t2" data-panel tabindex="0">
-          <h3>Every action traces to a person</h3>
-          <p>No shared or anonymous identity. A dedicated identity scoped to the task and owned by a
-            named person keeps accountability without carrying that person's whole access footprint.</p>
+        <div>
+          <dt>Every action traces to a person</dt>
+          <dd>No shared or anonymous identity. A dedicated identity scoped to the task and owned by a
+            named person keeps accountability without carrying that person's whole access footprint.</dd>
         </div>
-        <div class="panel" role="tabpanel" id="sec-p3" aria-labelledby="sec-t3" data-panel tabindex="0">
-          <h3>Secrets and personal data are defects</h3>
-          <p>Credentials in repositories and personal data in logs are problems whether or not AI ever
-            reads them. Findings get rotated, redacted or removed — not noted and left.</p>
+        <div>
+          <dt>Secrets and personal data are defects</dt>
+          <dd>Credentials in repositories and personal data in logs are problems whether or not AI ever
+            reads them. Findings get rotated, redacted or removed — not noted and left.</dd>
         </div>
-        <div class="panel" role="tabpanel" id="sec-p4" aria-labelledby="sec-t4" data-panel tabindex="0">
-          <h3>Content read is data, not instruction</h3>
-          <p>Tickets, comments and pages can be influenced from outside. An agent must never follow
+        <div>
+          <dt>Content read is data, not instruction</dt>
+          <dd>Tickets, comments and pages can be influenced from outside. An agent must never follow
             instructions embedded in what it reads. Keep write access small enough that a misled agent
-            cannot do much with it.</p>
+            cannot do much with it.</dd>
         </div>
-      </div>
+      </dl>
 
       <div class="pull"><p>One genuine amplification: the layer can read across code, tickets, logs and
         data at once, which no one person practically could. Each read was permitted; the aggregation

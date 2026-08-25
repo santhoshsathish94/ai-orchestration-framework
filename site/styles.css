@@ -230,6 +230,13 @@ section[id] { scroll-margin-top: 5rem; }
 .cycle-node text { fill: var(--ink-2); font-size: 15px; font-weight: 600; font-family: var(--font); }
 .cycle-node.is-active rect { fill: var(--accent); stroke: var(--accent); }
 .cycle-node.is-active text { fill: #fff; }
+/* Plain stacked list: one item per row, no card chrome. */
+.stack { margin: 1.3rem 0 0; }
+.stack div { padding: 0.85rem 0; border-top: 1px solid var(--line); }
+.stack div:first-child { border-top: 0; padding-top: 0; }
+.stack dt { font-weight: 650; color: var(--ink); margin-bottom: 0.25rem; }
+.stack dd { margin: 0; color: var(--ink-2); max-width: var(--measure); }
+
 /* Pointer affordance only; keyboard and screen-reader users drive this from the tablist. */
 .js .cycle-node { cursor: pointer; }
 .js .cycle-node rect { transition: fill 120ms ease, stroke 120ms ease; }
