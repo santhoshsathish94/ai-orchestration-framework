@@ -183,6 +183,38 @@
         around AI orchestration. It does not prescribe the <strong>runtime</strong> used to execute it —
         agent frameworks, workflow engines, and tool protocols are implementation choices that sit
         inside it.</p>
+
+      <h3 style="margin-top:2.2rem">So how does it actually learn?</h3>
+      <p>Not by the model remembering. A session ends and its working memory goes with it. What makes
+        the difference is unglamorous: <strong>plain markdown files committed alongside the code</strong>,
+        written as the work proceeds rather than at the end.</p>
+
+      <div class="grid grid--2" style="margin-top:1.2rem">
+        <div class="card card--flat">
+          <h3>What the file holds</h3>
+          <dl class="kv">
+            <div><dt>The goal</dt><dd>What outcome is being pursued, and what "done" means.</dd></div>
+            <div><dt>Established</dt><dd>Findings that are settled, and the evidence behind each.</dd></div>
+            <div><dt>Remaining</dt><dd>Open questions, unverified assumptions, next steps.</dd></div>
+            <div><dt>Ruled out</dt><dd>What was tried and failed, and why — the most expensive thing to rediscover.</dd></div>
+          </dl>
+        </div>
+        <div class="card card--flat">
+          <h3>Why it changes the outcome</h3>
+          <p>Anyone can pick the work up — a colleague, a different agent, the same agent tomorrow — and
+            start from the accumulated understanding instead of re-deriving it. Re-derivation is where
+            both the cost and the drift come from.</p>
+          <p>It also travels with the change and gets reviewed with it, so it cannot quietly disagree
+            with a wiki nobody opens.</p>
+          <p class="note">Repeated failed attempts are usually a symptom of lost context, not
+            impatience. An agent that cannot see what has already been tried will try it again,
+            confidently.</p>
+        </div>
+      </div>
+
+      <p style="margin-top:1.2rem">This is the <strong>Grow</strong> stage made concrete. Without it a
+        workflow can repeat perfectly and still know nothing on the hundredth run.
+        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/05-context-engineering.md#where-context-lives">Where context lives →</a></p>
     </div>
   </section>
 
