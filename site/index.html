@@ -63,19 +63,19 @@
   <section class="band" id="essentials">
     <div class="wrap">
       <p class="eyebrow">If you read nothing else</p>
-      <h2>Three things that matter most.</h2>
+      <h2>Four things that matter most.</h2>
 
-      <div class="grid grid--3" style="margin-top:1.4rem">
+      <div class="grid grid--2" style="margin-top:1.4rem">
         <div class="card">
-          <h3>1 · People are still the point</h3>
+          <h3>1 · Humans are still the most valuable asset</h3>
           <p>In the AI era the most valuable resource an organization has is still its people. A few
-            skilled individuals can solve a few problems; that is not growth.</p>
+            skilled individuals solving a few problems is not growth.</p>
           <p>Helping the whole workforce adopt this — training them, encouraging them, and listening to
             their feedback — matters more than any other step on this site.</p>
           <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/09-adoption.md">Adoption →</a></p>
         </div>
         <div class="card">
-          <h3>2 · Set it up with your own agent</h3>
+          <h3>2 · Quick setup using your own agent</h3>
           <p>Orchestration needs an access layer: your repositories, tickets, logs, datasources and a
             non-production environment, reachable by the agent you already use.</p>
           <p>Read-only first, one connection at a time, never wider than the person accountable for it
@@ -83,12 +83,20 @@
           <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/orchestration-environment.md#building-one">Build one →</a></p>
         </div>
         <div class="card">
-          <h3>3 · Spend capability where it counts</h3>
+          <h3>3 · Efficiency is always the priority</h3>
           <p>Let a strong model hold the plan and own the outcome, with cheaper models doing scoped
             work beneath it. The owning model checks and corrects what comes back.</p>
           <p>Same result, a fraction of the cost — and the saving compounds once an organization works
             this way. Wasted capability is wasted twice at scale.</p>
           <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/orchestration-environment.md#spend-capability-where-it-counts">How to divide the work →</a></p>
+        </div>
+        <div class="card">
+          <h3>4 · Security and governance are non-negotiable</h3>
+          <p>AI works within the access the accountable person already holds. Inherit it, never expand
+            it, keep it read-only by default, and make every action traceable to a named human.</p>
+          <p>Most of this exposure exists already wherever people use AI at work. The framework's job
+            is to name it and insist it is handled — including the part nobody has solved yet.</p>
+          <p><a href="#security">What a security review will ask →</a></p>
         </div>
       </div>
     </div>
@@ -585,6 +593,58 @@
       <p style="margin-top:1.4rem">AI can do the work; people stay accountable for risk, governance,
         and decisions that need human judgment. Automation should make responsibility
         <strong>clearer</strong>, not fuzzier.</p>
+    </div>
+  </section>
+
+  <!-- ============ SECURITY & GOVERNANCE ============ -->
+  <section class="band" id="security">
+    <div class="wrap">
+      <p class="eyebrow">Security &amp; governance</p>
+      <h2>No new access. Named accountability. One unsolved problem.</h2>
+      <p class="lede">Orchestration works within the access a person already has. If they cannot reach
+        a system, neither can AI acting for them.</p>
+
+      <p>Most of what a security review raises here is already true wherever people use AI at work,
+        with or without a framework. The choice is rarely whether the exposure exists — it is whether
+        anyone has written down what to do about it.</p>
+
+      <div class="grid grid--2" style="margin-top:1.4rem">
+        <div class="card">
+          <h3>Inherit access, never expand it</h3>
+          <p>Read-only by default. Existing controls — data classification, credential policy,
+            retention, regulatory constraints — apply unchanged. Your own security team decides, and if
+            the answer is no, it is no.</p>
+        </div>
+        <div class="card">
+          <h3>Every action traces to a person</h3>
+          <p>No shared or anonymous identity. A dedicated identity scoped to the task and owned by a
+            named person keeps accountability without carrying that person's whole access footprint.</p>
+        </div>
+        <div class="card">
+          <h3>Secrets and personal data are defects</h3>
+          <p>Credentials in repositories and personal data in logs are problems whether or not AI ever
+            reads them. Findings get rotated, redacted or removed — not noted and left.</p>
+        </div>
+        <div class="card">
+          <h3>Content read is data, not instruction</h3>
+          <p>Tickets, comments and pages can be influenced from outside. An agent must never follow
+            instructions embedded in what it reads. Keep write access small enough that a misled agent
+            cannot do much with it.</p>
+        </div>
+      </div>
+
+      <div class="pull"><p>One genuine amplification: the layer can read across code, tickets, logs and
+        data at once, which no one person practically could. Each read was permitted; the aggregation
+        is new. Treat the layer itself as a sensitive asset.</p></div>
+
+      <h3 style="margin-top:1.8rem">The part nobody has solved</h3>
+      <p>Approval gates stop the largest mistakes. Attribution explains them afterwards. Neither
+        detects an agent doing something unintended <em>inside access it legitimately holds</em>.
+        Monitoring built for agent behavior — comparing what agents did against what was asked, and
+        raising an alert while it is happening — does not meaningfully exist yet, here or anywhere.
+        Until it does, this depends on a human paying attention, and attention scales worse than access
+        does.</p>
+      <p class="note"><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/08-governance.md#questions-your-security-team-will-ask">Every question a security review will ask →</a></p>
     </div>
   </section>
 
