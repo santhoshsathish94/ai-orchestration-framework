@@ -43,6 +43,8 @@ All notable changes to this project will be documented in this file.
 - Net effect: sixteen screens down to twelve, fifteen sections down to eleven, six tab groups down to four.
 
 ### Changed — how the work is described
+- **"About a day" now says what it measures.** It is the *execution* time for the CMS API migration, run with agents and subagents. Testing and parity validation took roughly another day, and stakeholder agreement longer still; the work was not continuous. Setting one day against an 8–10 week estimate that included analysis, review and coordination overstates the gain, and the case study, README, index, website and profile now all say so. Added as a takeaway in its own right: execution stopped being the expensive part, which moves the bottleneck rather than removing it.
+- **`docs/reference-implementations.md` said "Both" while describing three patterns** — left over from when there were two.
 - **Case studies are referred to by name, not by number.** "Contentful API migration," not "case study 01." The filenames keep their numeric prefix so the directory stays ordered, but nothing user-facing counts them.
 - **Dropped "honestly reported."** Saying so implies other people do not, or that earlier reports here were not. The work either states what it has not proven or it does not; an adverb adds nothing.
 - **The React case study now records what the investigation actually cost:** several days of repeated profiling, four candidate fixes implemented and disproved, two separate false conclusions (a single run draining on its own, and a dead local endpoint that manufactured a leak), and the fact that it looked like a Next.js defect until `global.Error` was instrumented to find the pinning object in React.

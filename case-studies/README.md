@@ -2,17 +2,18 @@
 
 Real work, including what is still unproven.
 
-**Both are delivered outcomes**, not illustrations: a migration estimated at 8–10 weeks completed
-in about a day and parity-validated against live traffic in preprod, and a production out-of-memory
-failure traced to its root cause in a shared framework and fixed there. Neither is finished — the
-migration's production cutover has not run, and the upstream fix is not yet merged. Both say so.
+**Both are delivered outcomes**, not illustrations: a migration whose implementation took about a day
+against an 8–10 week estimate, parity-validated against live traffic in preprod, and a production
+out-of-memory failure traced to its root cause in a shared framework and fixed there. Neither is
+finished — the migration's production cutover has not run, and the upstream fix is not yet merged.
+Both say so.
 
 These deliberately span different domains. The lifecycle is the same in each; only the vocabulary
 changes.
 
 | Case study | Domain | What it shows |
 |---|---|---|
-| [Contentful API Migration](01-contentful-migration.md) | Software engineering | A large GraphQL → REST migration completed in about a day, with the public contract preserved and parity-validated against live traffic in preprod. *(Production cutover not yet run.)* |
+| [Contentful API Migration](01-contentful-migration.md) | Software engineering | A large GraphQL → REST migration whose implementation took about a day against an 8–10 week estimate, with the public contract preserved and parity-validated against live traffic in preprod. *(Execution time only — validation and sign-off took longer. Production cutover not yet run.)* |
 | [Fixing a React Server Components Memory Leak Upstream](02-react-rsc-memory-leak.md) | Open-source engineering | Production OOM → workaround → root cause → validated fix → upstream contribution. The workaround was not the destination. *(PR CI-green, awaiting maintainer review.)* |
 
 ## A note on evidence

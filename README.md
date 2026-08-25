@@ -102,11 +102,12 @@ The lifecycle stays deliberately simple. Experience and expertise are **part of 
 
 This comes out of delivery work, not theory. Two cycles are documented end to end:
 
-**A CMS content API migration estimated at 8–10 weeks of team effort, delivered in about a day.**
+**A CMS content API migration whose implementation took about a day, against an 8–10 week estimate.**
 GraphQL → REST and .NET 9 MVC → .NET 10 Minimal APIs, replacing ~7,800 lines across 200+ files —
 with every route, JSON shape and response envelope preserved so no consumer had to change, and parity
-validated byte-for-byte against live traffic in preprod. The production cutover has not yet run, so
-this reaches rung 4 — measured before and after — not rung 5.
+validated byte-for-byte against live traffic in preprod. Testing and validation took roughly another
+day, and stakeholder agreement longer still: the one-day figure is execution, not end-to-end delivery.
+The production cutover has not yet run, so this reaches rung 4 — measured before and after — not rung 5.
 [Read the case study →](case-studies/01-contentful-migration.md)
 
 **A production memory leak fixed at its root, not worked around.**

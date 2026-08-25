@@ -2,8 +2,8 @@
 
 These are practical patterns teams can adopt and adapt. They are not separate frameworks; they demonstrate how the core lifecycle applies to recurring organizational problems.
 
-> **Status — what these actually are.** Both have been **built and used against real organizational
-> data** — repositories, logs, telemetry and job definitions.
+> **Status — what these actually are.** All three have been **built and used against real
+> organizational data** — repositories, logs, telemetry and job definitions.
 >
 > Cross-Team Knowledge Access has since answered **real production and support incidents**: a
 > data-synchronization failure that had already survived an overnight investigation, where the team

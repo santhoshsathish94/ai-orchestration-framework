@@ -12,8 +12,14 @@ public contract — every route, JSON shape, and response envelope — was prese
 consumer (the website, and anything else calling the API) needed to change. AI carried most of the
 rewrite; the work still needed human judgment to set direction and to independently verify each
 result against real, running systems. What stands out is not who wrote the code — it is how much AI
-lowered the barrier: the whole migration was completed in about a day and parity-validated
-byte-for-byte against live traffic in preprod.
+lowered the barrier.
+
+> **On "a day."** The **implementation** took about a day, run with agents and subagents. Testing and
+> parity validation took roughly another day on top of that, and getting stakeholder agreement took
+> longer still. The work was not continuous, and the calendar time from start to sign-off was
+> materially longer than the execution time. The one-day figure describes **execution only** — it is
+> not an end-to-end delivery time, and comparing it directly against an 8–10 week estimate that
+> included analysis, review and coordination would overstate the gain.
 
 > **Evidence reached: rung 4 — measured before and after.** The production cutover has not yet run,
 > so nothing here claims rung 5. The staged rollout below is the plan the evidence supports, not a
@@ -111,7 +117,10 @@ a fraction of the usual effort.
 | Typical content page, under load | 667 ms | **189 ms (3.5× faster)** |
 | Invalid / unknown-slug requests | ~70 ms (still reached Contentful) | **~8 ms**, rejected before any Contentful call |
 | Response payload size | baseline JSON | **~63% smaller on average** (Brotli; up to 85% on the largest page) |
-| Delivery time | ~8–10 weeks (team estimate) | **~1 day** — AI carried the implementation, with human direction and verification |
+| Implementation time | — | **~1 day** of execution with agents and subagents |
+| Testing and parity validation | — | **~1 further day** |
+| Stakeholder review and agreement | — | longer again; work was not continuous |
+| Original estimate for the same scope | ~8–10 weeks of team effort | — |
 
 ## Key takeaways
 
@@ -126,6 +135,9 @@ a fraction of the usual effort.
 - **AI made this achievable with far less effort than the internal multi-week, multi-person estimate
   assumed.** The limiting factor was having an objective way to verify the changes, not engineering
   headcount — AI lowered the barrier; the parity harness kept it safe.
+- **Execution stopped being the expensive part, which moved the bottleneck rather than removing it.**
+  Writing the code took a day; proving it was right took another, and getting agreement to ship took
+  longer than both. Any honest account of AI speed-up has to say which of those it is talking about.
 - **A staged, reversible cutover** (shadow run → dual webhook → gradual flip → warm rollback target)
   means the migration will only ever carry as much production risk as each stage's own evidence justifies.
 - The full history is traceable commit-by-commit in this repository's git log.
