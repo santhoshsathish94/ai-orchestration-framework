@@ -21,13 +21,20 @@ judgment. Automation should make responsibility clearer, not fuzzier.
 
 ## Attribute every action to a person
 
-Work performed by AI should run under the credentials of the human accountable for it, not under a
-shared or anonymous identity. Two reasons:
+Every action taken through the layer must lead back to a named, accountable human. Never a shared or
+anonymous identity. Two reasons:
 
 - **Traceability.** Anything unexpected leads back to someone who can explain it, correct it, and
   learn from it. "The AI did it" closes no loop.
 - **Restraint.** Someone whose own name is attached to every action grants access more carefully than
   someone delegating to a faceless service account.
+
+**Attribution is the requirement; the mechanism depends on your policy.** Running work under an
+individual's own credentials is the simplest way to achieve it, and for a single practitioner it is
+often enough. At any larger scale, most organizations will prefer a **dedicated identity, scoped to
+the task and owned by a named person** — that keeps the accountability without carrying the person's
+entire access footprint, and it can be rotated and revoked on its own. Either route is acceptable.
+An unattributable one is not.
 
 Access itself should be **read-only by default**, using the kind of restricted accounts most
 organizations already issue. Reading cannot corrupt data or release a change, which is why it is the
@@ -53,6 +60,49 @@ already holds. That single rule removes most of the question.
 The question worth asking is not "is it safe to give AI access?" It is **"is this person's existing
 access appropriate, and am I comfortable with work being done through it?"** That is a question the
 organization already knows how to answer.
+
+## Questions your security team will ask
+
+Most of these have good answers. Two do not yet, and saying so is more useful than glossing over them.
+
+**"What new access is this creating?"**
+Per connection, none — the layer inherits access someone already has. But be honest about the
+composite: it can read across code, tickets, logs, datasources and environments *at once*, which no
+single person practically could. Each read was permitted; the aggregation is a new capability and a
+new target. Treat the layer itself as a sensitive asset and scope it accordingly.
+
+**"What leaves our environment, and who can see it?"**
+Code, log extracts, ticket contents and query results go to whichever AI provider you use. Enterprise
+agreements commonly cover retention, training exclusion, residency and sub-processors — **verify
+yours rather than assuming them.** This is a procurement and legal question, and it should be settled
+before access is granted, not after.
+
+**"What stops secrets and personal data ending up in the context?"**
+By default, nothing. Repositories contain credentials more often than anyone admits, and logs
+routinely contain personal data. Before granting access: scan for secrets and rotate whatever turns
+up; prefer log sources that are already redacted; exclude datasources holding regulated data unless
+there is a specific reason not to. Assume anything the layer *can* read has been read.
+
+**"What if the content it reads is hostile?"**
+This is the sharpest risk and it deserves a straight answer. A framework that encourages reading
+tickets, comments, logs and pages is encouraging an agent to consume text that people outside your
+organization can influence. Instructions hidden in that content can be followed — prompt injection.
+What helps: keep write access minimal so a hijacked agent has little it can do; require human
+approval for every state-changing action; treat everything read as data rather than instruction; and
+be suspicious whenever an agent proposes something unrelated to the task it was given. None of these
+is a complete defense. Assume it is possible and size the blast radius on that basis.
+
+**"Is non-production actually safe?"**
+Often it holds a copy of production data. "Safe to break" is not "safe to expose." Check before
+treating it as low risk.
+
+**"What happens when the owner leaves?"**
+The layer's access is revoked with them, like any other access they held. If it outlives their
+offboarding, attribution has already failed.
+
+**"How do we know it is behaving?"**
+You largely do not yet — see the next section. That is the honest answer, and it is the reason to keep
+early access read-only.
 
 ## AI governance monitoring is required
 

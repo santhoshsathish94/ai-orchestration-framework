@@ -168,6 +168,20 @@ one at all.
 | Could a mistake here be undone in minutes? | Put a human approval in front of it |
 | Can I explain who is accountable if this goes wrong? | Stop until you can |
 
+### Before you connect anything
+
+Four checks, none of which take long and all of which are awkward to do afterwards:
+
+- **Confirm what your AI provider does with the content.** Retention, training exclusion, residency,
+  sub-processors. Enterprise agreements usually cover this; verify yours rather than assuming.
+- **Scan the repositories for secrets and rotate what you find.** Assume anything reachable has been
+  read.
+- **Check whether the logs and non-production data contain personal data.** "Safe to break" is not
+  "safe to expose," and non-production environments frequently hold copies of real records.
+- **Decide what the agent may act on versus only read.** Content it reads may be influenced by people
+  outside your organization, so keep write access small enough that a misled agent cannot do much
+  with it. See [Governance](08-governance.md#questions-your-security-team-will-ask).
+
 ### Keep it small on purpose
 
 A narrow setup that one person understands completely is worth more than a broad one nobody can
