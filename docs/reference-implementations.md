@@ -2,13 +2,20 @@
 
 These are practical patterns teams can adopt and adapt. They are not separate frameworks; they demonstrate how the core lifecycle applies to recurring organizational problems.
 
-> **Status — what these actually are.** Both have been **built and demonstrated against real
-> organizational data** — repositories, logs, telemetry and job definitions — on a small number of
-> real cases. Neither has been put in front of end users or adopted organization-wide.
+> **Status — what these actually are.** Both have been **built and used against real organizational
+> data** — repositories, logs, telemetry and job definitions.
 >
-> On the [evidence ladder](07-proof.md#how-strong-is-your-evidence) that is **rung 2 — demonstrated**.
-> They are working patterns, not proven production deployments, and this page says so rather than
-> letting the reader assume either more or less.
+> Cross-Team Knowledge Access has since answered **real production and support incidents**: a
+> data-synchronization failure that had already survived an overnight investigation, where the team
+> that originally owned the flow was no longer available and the mapping involved was far too large to
+> have been documented; and a customer-facing support case that had been circulating between teams
+> without a clear owner. In both, the reported signal was traced to its actual cause. On the
+> [evidence ladder](07-proof.md#how-strong-is-your-evidence) those specific cases reach **rung 4–5**.
+>
+> What has **not** happened: neither pattern is an always-on capability, and neither is adopted
+> organization-wide. The knowledge capability is assembled per question rather than running as a
+> product. Production Exception Remediation remains at **rung 2 — demonstrated**, and has not had
+> approval and deployment gates wired into a team's real tooling.
 
 ## 1. Cross-Team Knowledge Access
 
@@ -40,9 +47,10 @@ A data team asks why a synchronization job did not run. AI reads the relevant re
 
 > Reduce unnecessary coordination by making existing organizational knowledge directly accessible.
 
-Both examples above were run against real systems. The capability answered them from the actual
-sources rather than from a summary prepared in advance — which is the part that matters, because it
-is what makes the pattern hold when the question is one nobody anticipated.
+Both examples above were run against real systems, and in both the answer was reached by working
+backwards from the reported symptom to the source rather than from a summary prepared in advance.
+That is the part that matters: it is what makes the pattern hold when the question is one nobody
+anticipated, and when the people who would have known are no longer there to ask.
 
 ---
 
