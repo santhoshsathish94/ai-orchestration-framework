@@ -72,6 +72,15 @@
 
   /* "Caught by <stage>" chips jump to the lifecycle and select that stage. */
   var lifecycle = document.querySelector('[data-tabs="lifecycle"]');
+
+  /* Clicking a stage in the diagram selects it. Mouse enhancement only — the diagram is
+     aria-hidden and hidden on small screens, so the tablist stays the accessible control. */
+  document.querySelectorAll('.cycle-node').forEach(function (node) {
+    node.addEventListener('click', function () {
+      if (!lifecycle || !lifecycle.selectByValue) return;
+      lifecycle.selectByValue(node.getAttribute('data-stage'), false);
+    });
+  });
   document.querySelectorAll('[data-goto-stage]').forEach(function (btn) {
     btn.addEventListener('click', function () {
       if (!lifecycle || !lifecycle.selectByValue) return;

@@ -230,6 +230,11 @@ section[id] { scroll-margin-top: 5rem; }
 .cycle-node text { fill: var(--ink-2); font-size: 15px; font-weight: 600; font-family: var(--font); }
 .cycle-node.is-active rect { fill: var(--accent); stroke: var(--accent); }
 .cycle-node.is-active text { fill: #fff; }
+/* Pointer affordance only; keyboard and screen-reader users drive this from the tablist. */
+.js .cycle-node { cursor: pointer; }
+.js .cycle-node rect { transition: fill 120ms ease, stroke 120ms ease; }
+.js .cycle-node:hover:not(.is-active) rect { fill: var(--accent-soft, #eefaf7); stroke: var(--accent); }
+.js .cycle-node:hover:not(.is-active) text { fill: var(--ink); }
 .cycle-edge { stroke: var(--line-2); stroke-width: 1.5; fill: none; }
 .cycle-edge--loop { stroke: var(--accent-line); }
 .cycle-edge--fail { stroke: var(--warn); stroke-dasharray: 5 4; }
