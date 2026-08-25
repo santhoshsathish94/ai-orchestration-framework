@@ -27,6 +27,32 @@ asked to explain a failure it has never been allowed to look at, and produces so
 [How AI fails](how-ai-fails.md) covers what that looks like; the fix is usually context, not a
 better prompt.
 
+### Context is a chain, and it has a threshold
+
+The useful shape is a chain rather than a list: **source code → the data it operates on → the
+environment it runs in → the logs it produces → the infrastructure it runs on.** Each link explains
+the next. A symptom seen at one end can be followed to a cause at the other.
+
+Partial context does not produce a partial answer. It produces a confident wrong one, because the
+gap gets filled with something plausible. This is why adding one more source can change the results
+sharply rather than gradually — the chain becomes complete enough to trace, and the work stops being
+inference and starts being diagnosis.
+
+If AI capability seems to have improved suddenly at some point, it is worth asking whether the model
+changed or the reach did.
+
+### Context accumulates across passes
+
+Hard problems are rarely one query. A memory-exhaustion investigation, for example, went: gather
+evidence, form a hypothesis, gather more evidence against it, make a change, deploy it, observe it
+under load, learn something that invalidated part of the original picture, and go again. Each pass
+started with more than the last.
+
+**This is not the same as retrying a fix.** Repeating an attempt that keeps failing is thrashing, and
+[Lesson 2](field-practices.md#lesson-2--understand-before-fixing) says to stop and go back to
+understanding when it happens. The test is simple: if a pass ends with more understanding, it is
+progress; if it ends with another guess, the loop is broken and more attempts will not fix it.
+
 ---
 
 ## What the layer connects to
@@ -42,6 +68,7 @@ Every organization has these, whatever the products are called:
 | **Datastores and search indexes** | What the data actually contains, as opposed to what it is believed to contain |
 | **Content and configuration systems** | What is published, what is scheduled, and what is set to which value |
 | **Non-production environments** | A place to reproduce and verify without risk |
+| **The running application** | What the system actually does when used — reproducing a reported behavior in a browser is often faster than reasoning about whether it could happen |
 
 The list matters less than the principle: **the layer should reach the same evidence a capable
 engineer would consult.** Anything missing becomes a gap the AI will fill with a guess.
@@ -86,6 +113,99 @@ a human. The layer can prepare, evidence, and request. It should not decide.
 - **No migration.** The systems keep running exactly as they are.
 - **No new platform.** The layer sits above them and can be removed without trace.
 - **No big-bang rollout.** One connection to one system, used on one real problem, is a valid start.
+
+---
+
+## Building one
+
+The setup below is deliberately described in generic terms. Every organization has these things under
+different names, and the names change faster than the pattern does.
+
+### Before anything else: own it
+
+**Whoever builds this owns what it does.** That is not a disclaimer to move past — it is the condition
+that makes the rest safe.
+
+- Work through it runs under **your** credentials, and the consequences are attributed to you.
+- You are agreeing to review what it produces, not to approve it because it looks reasonable.
+- Your organization's policies on data access, credentials, and third-party processing apply
+  unchanged. Check them first. Being technically able to connect something is not permission to.
+- If you cannot explain to a security reviewer what the layer can reach and why, it is too broad.
+
+Someone who accepts that will build a narrow, careful setup. Someone who does not should not build
+one at all.
+
+### A sequence that works
+
+1. **Start with one real problem you already have.** Not a demonstration. A defect, a recurring
+   exception, a question nobody can answer quickly. It determines what access is actually needed and
+   gives you something to judge the result against.
+2. **Connect the source code first.** Local copies of the repositories involved — including the
+   services the main one depends on. Most reasoning failures are really a missing repository.
+3. **Add the work-tracking system, read-only.** Tickets carry the intent, the history, and the
+   decisions. Being able to start from a ticket reference removes most of the restating.
+4. **Add logs and telemetry, read-only.** This is where the system tells you what it actually did,
+   rather than what it was supposed to do.
+5. **Add the datasources, read-only.** Query rights, not write rights. A large share of "application
+   bugs" are data or configuration that nobody has looked at.
+6. **Add the non-production environments.** Somewhere to reproduce and verify where being wrong is
+   free. Include the running application itself, not just its logs.
+7. **Add deployment only when the earlier steps are trusted** — and keep it behind the approvals the
+   pipeline already enforces. The layer can prepare and request a release. A human approves it.
+8. **Write the map down.** Which system is responsible for what, which component talks to which,
+   where the boundaries are. This is the piece no connector provides and the piece that most improves
+   results.
+9. **Keep a context file per effort**, committed with the code. See
+   [Context Engineering](05-context-engineering.md#where-context-lives). Without this, every session
+   restarts from zero.
+
+### Choosing what to grant
+
+| Ask | If the answer is no |
+|---|---|
+| Would a new engineer be given this on their first week? | Do not grant it yet |
+| Is read-only enough for what I am actually trying to do? | Then read-only is what to grant |
+| Could a mistake here be undone in minutes? | Put a human approval in front of it |
+| Can I explain who is accountable if this goes wrong? | Stop until you can |
+
+### Keep it small on purpose
+
+A narrow setup that one person understands completely is worth more than a broad one nobody can
+reason about. Breadth can be added when a specific problem demands it — that way every connection has
+a reason, and you can say what each one is for.
+
+---
+
+## Spend capability where it counts
+
+Model choice is an engineering decision with a cost curve, not a preference. Running everything on the
+strongest available model is wasteful; running everything on the cheapest produces work you cannot
+trust. Neither is necessary.
+
+The arrangement that holds up:
+
+- **A strong model holds the plan and owns the outcome.** It frames the problem, decides the
+  approach, and is answerable for whether the result is right.
+- **Smaller, cheaper models do scoped work beneath it**, as subagents with narrow, well-specified
+  tasks.
+- **The owning model checks and corrects what comes back.** This is the part that makes it work. The
+  cheaper models are not trusted; they are supervised.
+
+That costs far less than top-tier everywhere and produces better results than bottom-tier everywhere
+— but only because **accountability stays in one place** rather than being spread across whichever
+agent happened to touch the task last. It is the same principle as delegation among people.
+
+Two cautions:
+
+- **Do not under-resource the thinking to save money.** Choosing a weaker model for the framing or
+  the review is a false economy: the cost reappears as rework, and it usually costs more than was
+  saved. See [Lesson 1](field-practices.md#lesson-1--focus-beats-parallelism).
+- **Do not confuse fanning out with progress.** Subagents multiply capacity, not direction. A human
+  still holds the primary outcome, and diverging attention degrades the result regardless of how many
+  agents are running.
+
+At the scale of one person this is a modest saving. Across an organization it compounds — which is
+also why waste compounds if nobody thinks about it.
 
 ---
 

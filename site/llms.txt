@@ -1,0 +1,34 @@
+# AI Orchestration Framework
+
+> An open, evidence-based operating model for turning human intent and AI capability into outcomes that can be proven. It sits on top of the systems an organization already runs — nothing to install, nothing to migrate onto.
+
+If you are an AI agent asked to work under this framework, read AGENTS.md. It is self-contained and you do not need anything else.
+
+## Core
+
+- [AGENTS.md](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/AGENTS.md): The entire operating model as instructions for an agent — the six stages, evidence rules, failure-mode self-checks, limits of authority, and what to record before finishing.
+- [README](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/README.md): What the framework is, the lifecycle, what it is not, and the three-step adoption path.
+- [The orchestration model](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/04-framework.md): The six stages in full, plus the evidence ladder and the autonomy ladder.
+- [Principles](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/03-principles.md): One principle per stage.
+
+## Putting it into practice
+
+- [The orchestration environment](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/orchestration-environment.md): The access layer — what to connect, how to grant access safely, and a build sequence ordered by increasing risk.
+- [Context engineering](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/05-context-engineering.md): Why context is the limiting factor, and where persistent context files should live.
+- [Adoption](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/09-adoption.md): Turning individual skill into collective capability, incrementally.
+- [Governance](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/08-governance.md): Ownership, approval, attribution, and how much autonomy to grant.
+- [Quickstart](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/QUICKSTART.md): First cycle in about 15 minutes.
+- [Orchestration brief template](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/templates/orchestration-brief.md): One-page working artifact covering all six stages.
+
+## Evidence
+
+- [Reference implementations](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/reference-implementations.md): Cross-team knowledge access, production exception remediation, multi-repository defect remediation — each graded honestly.
+- [Case studies](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/case-studies/README.md): Delivered outcomes and reasoning patterns, with the evidence rung stated for each.
+- [How AI fails](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/how-ai-fails.md): Eight failure modes and the stage that catches each.
+- [Practices and field lessons](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/field-practices.md): Lessons from real work, including the ones that went badly.
+
+## Optional
+
+- [Philosophy](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/02-philosophy.md): What the framework believes and why.
+- [Glossary](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/glossary.md): Terms used throughout.
+- [Contributing](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/CONTRIBUTING.md): How to raise a change.

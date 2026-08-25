@@ -86,6 +86,73 @@ The resulting contribution was submitted to React so the solution could potentia
 
 ---
 
+## Lesson 4 — You do not have to hold the context to be accountable for it
+
+> **The knowledge is usually already in the system. Being out of date is an access problem, not a competence problem.**
+
+### From the field
+
+A defect arrived in a flow that the person responsible for it had never worked on. They had been leading a team rather than writing code for some time, and features and flows had shipped in the interim that they had simply never seen. On the old terms, the only options were to go and learn the area first, or hand it to whoever last touched it.
+
+Instead the orchestration layer was pointed at it. It read across the repositories involved, navigated the running application to reproduce the reported behavior, and showed exactly where it occurred. The fix followed, went through normal review, and was verified against the running system.
+
+What is worth noticing is where the knowledge came from. The AI did not know the domain. **The domain was in the repository and in the running application the whole time** — encoded in the code, the configuration, and the behavior of the system itself. What changed was that it became reachable without first being memorized by a person.
+
+### The practice
+
+- Treat "I am not current on this area" as **a question about access, not a reason to hand the work away**.
+- Include the **running application** in what the orchestration layer can reach. A great deal of what a system does is only observable by using it, and reproducing a report is often faster than reasoning about it.
+- Ask for **the location and the evidence before the fix** — where the behavior occurs and how that was established. A patch offered without that is a guess with good formatting.
+- Do not mistake this for the AI understanding the domain. It read the domain from the system. That distinction matters when the system is the thing that is wrong.
+- Keep review proportionate. Being out of context is a reason to look harder at the evidence, not to approve faster because the explanation sounded confident.
+
+**Reinforces:** [Principle 2 — Understand Before Acting](03-principles.md#2-understand-before-acting) and [Principle 6 — Grow Into Collective Capability](03-principles.md#6-grow-into-collective-capability) — knowledge held by a system beats knowledge held by whoever happened to be present.
+
+> **Most organizational knowledge is not missing. It is unreachable.**
+
+---
+
+## Lesson 5 — Write the understanding down, or pay for it again
+
+> **A session's memory dies with the session. A file in the repository does not.**
+
+### From the field
+
+Two efforts ran in the same period, and the difference between them was not difficulty.
+
+In the first, a memory-exhaustion investigation, findings were written into markdown files committed
+alongside the code and updated as the work went: what was being pursued, what had been established,
+what was still open, what had turned out to be wrong. Each pass began from the accumulated picture.
+The investigation was long, but it converged.
+
+In the second, work on a fix in an open-source library, that discipline was not applied. Nothing
+persisted between passes. Without the accumulated context, the full flow was never understood, and
+the work degenerated into repeated attempts at a fix — the exact thrashing described in
+[Lesson 2](#lesson-2--understand-before-fixing). It only recovered when the loop was applied
+deliberately: understand, plan, execute, validate, capture what was learned, then repeat.
+
+The same person, the same tools, the same period. The variable was whether understanding was being
+written down.
+
+### The practice
+
+- Keep a **working context file next to the code**, and update it as you go rather than at the end. A
+  write-up produced afterwards is a report; a file maintained during the work is memory.
+- Record **what was ruled out and why**, not only what was found. Dead ends are the most expensive
+  thing to rediscover.
+- State **the goal, what is settled, what remains**. Anyone resuming should be able to act without
+  reconstructing the reasoning first.
+- Treat **repeated failed attempts as a symptom of lost context**, not just impatience. An agent that
+  cannot see what has already been tried will try it again, confidently.
+- Finish the cycle in **Grow** — the learning becomes the starting context for the next one, which is
+  the only thing that makes the next one cheaper.
+
+**Reinforces:** [Principle 6 — Grow Into Collective Capability](03-principles.md#6-grow-into-collective-capability) and [Context Engineering](05-context-engineering.md#where-context-lives).
+
+> **Context that is not written down is not context. It is something one session happened to know.**
+
+---
+
 ## Closing
 
 These lessons share one root: **AI multiplies whatever direction it is given.** Focused intent and an understand-first workflow can multiply into strong outcomes; scattered attention and fix-first guessing can multiply into noise.

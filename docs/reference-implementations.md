@@ -49,7 +49,13 @@ A support executive asks why a customer request failed. AI reads the relevant so
 
 **Data Team Knowledge Gap**
 
-A data team asks why a synchronization job did not run. AI reads the relevant repository and SQL job definitions, reconstructs the flow, and explains the failure even when the team that originally owned the flow is no longer available.
+A data team asks why a synchronization job did not run. AI reads the relevant repository and scheduled job definitions, reconstructs the flow, and explains the failure even when the team that originally owned the flow is no longer available.
+
+**Out-of-Context Owner**
+
+Someone accountable for an area they have not worked on — a lead who has been away from the code, a new joiner, anyone returning to a system that moved on without them — asks where a reported behavior originates. The capability reads across the repositories involved and reproduces the behavior in the running application, locating the cause without the person first having to learn the area.
+
+The knowledge was never missing. It was in the code and in the running system, and simply had not been reachable without someone who already held it.
 
 ### Outcome
 

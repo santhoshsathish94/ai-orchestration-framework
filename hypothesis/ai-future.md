@@ -199,7 +199,7 @@ The purpose is not to predict the ending.
 
 If autonomy increases because competition rewards it, then the useful question is not *whether* to grant autonomy but **what has to be true before each increment of it is granted**. That is an engineering problem, and it has an answer:
 
-- **Proof before trust.** Autonomy should be earned against evidence, not assumed from capability. The [autonomy ladder](04-framework.md#the-autonomy-ladder) makes each increment conditional on the previous level consistently producing proven outcomes.
+- **Proof before trust.** Autonomy should be earned against evidence, not assumed from capability. The [autonomy ladder](../docs/04-framework.md#the-autonomy-ladder) makes each increment conditional on the previous level consistently producing proven outcomes.
 - **Ownership that survives delegation.** As AI takes more of the path, a named human still owns the objective, the constraints, and the risk. Delegation shares work; it does not move accountability.
 - **Context that compounds honestly.** A system that learns from its own unvalidated output amplifies its own errors. Grow promotes only *validated* experience into expertise for exactly this reason.
 - **Reversibility.** The faster a system acts, the more the ability to observe and undo matters.

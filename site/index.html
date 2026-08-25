@@ -30,7 +30,7 @@
       <a href="#why">Framework</a>
       <a href="#lifecycle">How it works</a>
       <a href="#evidence">Evidence</a>
-      <a href="#future">Future</a>
+      <a href="#try">Start</a>
       <a href="glossary/">Glossary</a>
       <a href="https://github.com/santhoshsathish94/ai-orchestration-framework">GitHub</a>
     </nav>
@@ -42,9 +42,10 @@
   <!-- ============ HERO ============ -->
   <section class="hero wrap">
     <p class="eyebrow">Open · Evidence-based</p>
-    <h1>From AI that performs tasks to AI that orchestrates outcomes.</h1>
+    <h1>AI Orchestration Framework</h1>
     <p class="lede">An operating model for turning human intent and AI capability into measurable
-      outcomes — through context, execution, evidence, and learning.</p>
+      outcomes — through context, execution, evidence, and learning. It sits on top of the systems you
+      already run. Nothing to install, nothing to migrate onto.</p>
 
     <ol class="chain" aria-label="The lifecycle">
       <li><b>Opportunity</b></li><li><b>Understand</b></li><li><b>Plan</b></li>
@@ -52,9 +53,44 @@
     </ol>
 
     <div class="actions">
-      <a class="btn btn--primary" href="#lifecycle">Explore the framework</a>
+      <a class="btn btn--primary" href="#try">Start</a>
       <a class="btn btn--ghost" href="https://github.com/santhoshsathish94/ai-orchestration-framework">View on GitHub</a>
       <a class="btn btn--text" href="#evidence">See real-world evidence →</a>
+    </div>
+  </section>
+
+  <!-- ============ THREE THINGS ============ -->
+  <section class="band" id="essentials">
+    <div class="wrap">
+      <p class="eyebrow">If you read nothing else</p>
+      <h2>Three things that matter most.</h2>
+
+      <div class="grid grid--3" style="margin-top:1.4rem">
+        <div class="card">
+          <h3>1 · People are still the point</h3>
+          <p>In the AI era the most valuable resource an organization has is still its people. A few
+            skilled individuals can solve a few problems; that is not growth.</p>
+          <p>Helping the whole workforce adopt this — training them, encouraging them, and listening to
+            their feedback — matters more than any other step on this site.</p>
+          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/09-adoption.md">Adoption →</a></p>
+        </div>
+        <div class="card">
+          <h3>2 · Set it up with your own agent</h3>
+          <p>Orchestration needs an access layer: your repositories, tickets, logs, datasources and a
+            non-production environment, reachable by the agent you already use.</p>
+          <p>Read-only first, one connection at a time, never wider than the person accountable for it
+            already has. No migration, no new platform.</p>
+          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/orchestration-environment.md#building-one">Build one →</a></p>
+        </div>
+        <div class="card">
+          <h3>3 · Spend capability where it counts</h3>
+          <p>Let a strong model hold the plan and own the outcome, with cheaper models doing scoped
+            work beneath it. The owning model checks and corrects what comes back.</p>
+          <p>Same result, a fraction of the cost — and the saving compounds once an organization works
+            this way. Wasted capability is wasted twice at scale.</p>
+          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/orchestration-environment.md#spend-capability-where-it-counts">How to divide the work →</a></p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -682,14 +718,15 @@
 
         <article class="card case card--flat">
           <p class="case__tag">Reference implementations</p>
-          <h3>Cross-team knowledge access &amp; production exception remediation</h3>
-          <p>Both were <strong>built and used against real organizational data</strong> —
-            repositories, logs, telemetry and job definitions.</p>
-          <p>Cross-team knowledge access has since answered <strong>real production and support
-            incidents</strong>, including a data-synchronization failure that had survived an overnight
-            investigation after the owning team had gone — <strong>rung 4–5</strong> for those cases.
-            Neither pattern is an always-on capability or adopted organization-wide; production
-            exception remediation remains at <strong>rung 2</strong>.</p>
+          <h3>Three patterns, each graded</h3>
+          <p>Cross-team knowledge access, production exception remediation, and multi-repository
+            defect remediation — all <strong>built and used against real organizational data</strong>.</p>
+          <p>Knowledge access has answered <strong>real production and support incidents</strong>,
+            including a data-synchronization failure that had survived an overnight investigation after
+            the owning team had gone — <strong>rung 4–5</strong> for those cases. The remediation patterns
+            have run on real work through existing review and deployment approvals. None is an
+            always-on capability or adopted organization-wide, and each still depends on a human
+            providing the map and holding the approvals.</p>
           <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/reference-implementations.md">Read the reference implementations →</a></p>
         </article>
       </div>
@@ -770,7 +807,7 @@
       <div class="pull"><p>Human defines the destination. AI determines and continuously adapts the path.</p></div>
 
       <p class="note">Separately, and clearly labelled as such, the repository carries
-        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/ai-future-hypothesis.md">The AI Future</a>
+        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/hypothesis/ai-future.md">The AI Future</a>
         — a speculative technical hypothesis about competitive pressure and autonomy. It is a thought
         experiment, not a prediction, and it is <strong>not part of the framework</strong>.</p>
     </div>
@@ -806,18 +843,41 @@
 
       <div class="grid grid--3" style="margin-top:1.5rem">
         <div class="card">
-          <h3>1 · Quickstart</h3>
+          <h3>1 · Copy one file</h3>
+          <p>Put <code>AGENTS.md</code> in your project and point your AI agent at it. It carries the
+            whole operating model — the loop, the evidence rules, the limits of its authority, and what
+            to write back when it finishes.</p>
+          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/AGENTS.md">Get AGENTS.md →</a></p>
+        </div>
+        <div class="card">
+          <h3>2 · Give it the evidence</h3>
+          <p>Repository, tickets, logs, datasources, a non-production environment. Read-only first, one
+            connection at a time, and never wider than you can explain.</p>
+          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/orchestration-environment.md#building-one">How to set it up →</a></p>
+        </div>
+        <div class="card">
+          <h3>3 · Run one real problem</h3>
+          <p>Keep a context file beside the code as you go — the goal, what is settled, what remains,
+            what was ruled out. That file is what makes the next cycle cheaper than this one.</p>
+          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/05-context-engineering.md#where-context-lives">Where context lives →</a></p>
+        </div>
+      </div>
+
+      <h3 style="margin-top:2rem">Also useful</h3>
+      <div class="grid grid--3" style="margin-top:1rem">
+        <div class="card">
+          <h3>Quickstart</h3>
           <p>Get from idea to your first cycle in about 15 minutes.</p>
           <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/QUICKSTART.md">Open the quickstart →</a></p>
         </div>
         <div class="card">
-          <h3>2 · Orchestration brief</h3>
+          <h3>Orchestration brief</h3>
           <p>A one-page template covering all six stages, with copy-and-paste prompts and explicit
             human/AI ownership per stage. It is your working artifact for the whole cycle.</p>
           <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/templates/orchestration-brief.md">Copy the template →</a></p>
         </div>
         <div class="card">
-          <h3>3 · Worked example</h3>
+          <h3>Worked example</h3>
           <p>An illustrative walkthrough of a recurring production <code>500</code> through all six
             stages, with the prompts used at each one.</p>
           <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/tree/main/examples/production-exception-remediation">See the example →</a></p>

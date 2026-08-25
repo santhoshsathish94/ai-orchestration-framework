@@ -4,7 +4,28 @@
 
 An open, evidence-based framework for orchestrating AI across engineering and business workflows.
 
+It sits **on top of the systems you already run**. Nothing to install. Nothing to migrate onto.
+
 **[🌐 Read it on the website →](https://santhoshsathish94.github.io/ai-orchestration-framework/)** — the framework explained in about three minutes, with the lifecycle, the evidence ladder, and the autonomy ladder made interactive.
+
+---
+
+## Start
+
+**1. Copy [`AGENTS.md`](AGENTS.md) into your project.**
+It is the entire operating model in one file. Point your AI agent at it — it does not need anything else.
+
+**2. Give the agent access to the evidence.**
+Repository, tickets, logs, datasources, a non-production environment. Read-only first, one connection
+at a time. [How to set that up →](docs/orchestration-environment.md#building-one)
+
+**3. Run one real problem through the loop.**
+A defect, a recurring exception, a question nobody can answer quickly. Keep a context file beside the
+code so the next cycle starts ahead of this one.
+
+That is the adoption path. Everything below explains why it is shaped this way.
+
+---
 
 ## What is it?
 
@@ -14,18 +35,16 @@ It is not an LLM framework, agent SDK, or prompt library. It defines **how AI an
 
 ### It sits on top of what you already run
 
-**Orchestration is a layer above your existing systems, not a change to them.** There is nothing to
-migrate onto. The work already happens somewhere — repositories, tickets, pipelines, logs, data
-stores, whatever your organization actually uses — and orchestration adds the layer that carries
-context, execution, evidence and learning across them. What changes is how the work is directed, not
-what it runs on.
+**Orchestration is a layer above your existing systems, not a change to them.** The work already
+happens somewhere — repositories, tickets, pipelines, logs, data stores. Orchestration adds the layer
+that carries context, execution, evidence and learning across them. What changes is how the work is
+directed, not what it runs on.
 
-That makes adoption incremental and reversible: you can start with one real problem, and if you stop,
-the systems underneath are exactly as they were.
+So adoption is incremental and reversible. Start with one problem; stop whenever you like and the
+systems underneath are untouched.
 
-It does not mean there is no work to do. The layer needs **access**, and access should be scoped
-deliberately — read-only where reading is enough, and approval kept in human hands where the blast
-radius is real. But the systems themselves stay as they are.
+It is not free, though. The layer needs **access**, scoped deliberately — read-only where reading is
+enough, human approval wherever the blast radius is real.
 
 ### What it is not
 
@@ -150,28 +169,37 @@ users yet, and the page says exactly that.
 
 - 🌐 [**Website**](https://santhoshsathish94.github.io/ai-orchestration-framework/) — the interactive walkthrough
 - 🚀 [**Quickstart**](QUICKSTART.md) — run your first cycle in about 15 minutes
+- 🤖 [**AGENTS.md**](AGENTS.md) — the whole operating model as instructions for an AI agent. Point your agent at this one file; it does not need the rest.
 - 📝 [Orchestration Brief template](templates/orchestration-brief.md) — the one-page working artifact
 - 🧪 [Worked example](examples/production-exception-remediation/) — all six stages on a production `500`
 
 **The framework**
 
-- 📖 [The Problem](docs/01-problem.md)
-- 📖 [Philosophy](docs/02-philosophy.md)
-- 📖 [Principles](docs/03-principles.md)
-- 📖 [AI Orchestration Model](docs/04-framework.md)
-- 📖 [The Orchestration Environment](docs/orchestration-environment.md) — the access layer that makes any of it possible
-- 📖 [Reference Implementations](docs/reference-implementations.md)
+- 📖 [The Problem](docs/01-problem.md) — why another framework
+- 📖 [Philosophy](docs/02-philosophy.md) — what it believes
+- 📖 [Principles](docs/03-principles.md) — one per stage
+- 📖 [AI Orchestration Model](docs/04-framework.md) — the six stages, the evidence ladder, the autonomy ladder
 
-**Practical**
+**Going deeper on each part**
 
+- 📖 [Context Engineering](docs/05-context-engineering.md) — the limiting factor, and where persistent context files live
+- 📖 [Proof](docs/07-proof.md) — how strong your evidence actually is
+- 📖 [Governance](docs/08-governance.md) — ownership, access, attribution, and the monitoring gap
+- 📖 [Adoption](docs/09-adoption.md) — turning individual skill into collective capability
+- 📖 [Roadmap](docs/10-roadmap.md) — what is coming
+
+**Putting it to work**
+
+- 📖 [The Orchestration Environment](docs/orchestration-environment.md) — the access layer, and how to build one
+- 📖 [Reference Implementations](docs/reference-implementations.md) — three patterns, each graded
 - 📖 [How AI Fails — and which stage catches it](docs/how-ai-fails.md)
-- 📖 [Practices & Field Lessons](docs/field-practices.md)
+- 📖 [Practices & Field Lessons](docs/field-practices.md) — including the ones that went badly
 - 📖 [Case Studies](case-studies/)
 - 📖 [Glossary](docs/glossary.md)
 
 **Beyond the framework**
 
-- 🔭 [The AI Future](docs/ai-future-hypothesis.md) — a separate, speculative hypothesis on the race to autonomy. Not part of the framework.
+- 🔭 [The AI Future](hypothesis/ai-future.md) — a separate, speculative hypothesis on the race to autonomy. Not part of the framework.
 - 🤝 [Contributing](CONTRIBUTING.md)
 
 ---

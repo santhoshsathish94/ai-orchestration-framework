@@ -7,6 +7,9 @@ Opportunity → Understand → Plan → Execute → Proof → Grow ↺
 A framework only matters if teams can actually use it. Adoption is about turning individual skill into
 **collective capability** — organizations do not become AI-enabled because a few people are good at AI.
 
+**This page carries more weight than any other.** Access can be arranged and controls can be written
+in a week. Whether people actually work this way is the thing that decides whether any of it mattered.
+
 ## Grow collective capability
 
 The value compounds when learning, context, and practices are shared — not trapped with whoever
@@ -14,10 +17,11 @@ learned fastest. That takes openness, feedback, and safe room to experiment.
 
 ## Nothing to migrate onto
 
-Orchestration is a layer above the systems a team already runs, not a change to them. The work
-already happens somewhere — repositories, tickets, pipelines, logs, data stores — and the layer
-carries context, execution, evidence and learning across whatever those happen to be. What changes is
-how the work is directed, not what it runs on.
+Orchestration is a layer above the systems a team already runs, not a change to them — see
+[the orchestration environment](orchestration-environment.md) for what that layer connects to and how
+to build one. The work already happens somewhere — repositories, tickets, pipelines, logs, data
+stores — and the layer carries context, execution, evidence and learning across whatever those happen
+to be. What changes is how the work is directed, not what it runs on.
 
 This is the practical reason adoption can start small. There is no platform decision to make and no
 migration to fund. If a team stops, the systems underneath are unchanged.
