@@ -11,7 +11,7 @@ direction, not a promise — it will change as we learn and as people contribute
 
 - Deepen each stage with practical, adoptable guidance.
 - Add more reference implementations that apply the core lifecycle to common problems.
-- Grow the evidence base with real, honestly-reported case studies.
+- Grow the evidence base with real case studies, including ones where the outcome was not achieved.
 - Keep the model simple as it gains depth.
 
 ## Help shape it

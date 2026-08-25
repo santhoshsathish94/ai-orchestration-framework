@@ -20,7 +20,7 @@ The outcomes told a different story. One blocker was ultimately resolved better 
 
 The realization was that the problem was not AI capacity. **Human direction and context were spread too thin.** With attention divided three ways, the direction and context given to each task became shallow, so the outputs became shallow too.
 
-Dropping the parallelism and focusing on one workstream at a time finally resolved the hardest issue at its root (see [Case Study 02](../case-studies/02-react-rsc-memory-leak.md)).
+Dropping the parallelism and focusing on one workstream at a time finally resolved the hardest issue at its root (see [the React memory leak case study](../case-studies/02-react-rsc-memory-leak.md)).
 
 ### The practice
 

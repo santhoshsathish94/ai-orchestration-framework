@@ -1,4 +1,4 @@
-# 01 — Contentful API Migration: Case Study
+# Contentful API Migration
 
 **Current CMS API (GraphQL) → Migrated CMS API (REST)** · .NET 9 MVC → .NET 10 Minimal API
 **A large migration made far more achievable — and much faster — with AI.**

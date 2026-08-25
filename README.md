@@ -107,13 +107,13 @@ GraphQL → REST and .NET 9 MVC → .NET 10 Minimal APIs, replacing ~7,800 lines
 with every route, JSON shape and response envelope preserved so no consumer had to change, and parity
 validated byte-for-byte against live traffic in preprod. The production cutover has not yet run, so
 this reaches rung 4 — measured before and after — not rung 5.
-[Case study 01 →](case-studies/01-contentful-migration.md)
+[Read the case study →](case-studies/01-contentful-migration.md)
 
 **A production memory leak fixed at its root, not worked around.**
 Recurring out-of-memory crashes were stabilized with a blunt mitigation, then the investigation
 continued — past the workaround, into React's Server Components renderer. The one-file fix was
 contributed upstream so other applications need not carry the same workaround.
-[Case study 02 →](case-studies/02-react-rsc-memory-leak.md) *(CI-green PR awaiting maintainer review)*
+[Read the case study →](case-studies/02-react-rsc-memory-leak.md) *(CI-green PR awaiting maintainer review)*
 
 Both left reusable context behind. That is the difference between a workflow that repeats and
 orchestration that learns.

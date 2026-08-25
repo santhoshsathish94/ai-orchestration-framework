@@ -559,17 +559,19 @@
   <!-- ============ EVIDENCE ============ -->
   <section class="band band--soft" id="evidence">
     <div class="wrap">
-      <p class="eyebrow">Built from evidence</p>
-      <h2>Real work, honestly reported.</h2>
-      <p class="lede">Including what is still unproven. Where something has not been proven yet, it
-        says so.</p>
+      <p class="eyebrow">Evidence</p>
+      <h2>Real work.</h2>
+      <p class="lede">Two delivered outcomes and three patterns in use. Each one says where it
+        stopped.</p>
 
-      <h3 style="margin-top:1.8rem">Outcome case studies</h3>
-      <p class="note">Delivered work with measurable results — and a plain statement of what remains uncertain.</p>
+      <div class="tabs" data-tabs="evidence">
+        <div class="tablist" role="tablist" aria-label="Evidence">
+          <button class="tab" role="tab" id="ev-t1" aria-controls="ev-p1" aria-selected="true">Contentful API migration</button>
+          <button class="tab" role="tab" id="ev-t2" aria-controls="ev-p2">React memory leak</button>
+          <button class="tab" role="tab" id="ev-t3" aria-controls="ev-p3">Reference implementations</button>
+        </div>
 
-      <div class="grid grid--2" style="margin-top:1.1rem">
-        <article class="card case">
-          <p class="case__tag">01 · Outcome case study</p>
+        <div class="panel is-active" role="tabpanel" id="ev-p1" aria-labelledby="ev-t1" data-panel tabindex="0">
           <h3>Contentful API migration</h3>
           <p>A CMS content API rewritten from a GraphQL integration to REST, and from .NET 9 MVC to
             .NET 10 Minimal APIs — with every route, JSON shape, and response envelope preserved so
@@ -580,11 +582,10 @@
             cutover has not yet run.</p>
           <p class="note">The point is not who wrote the code. It is how much AI lowered the barrier to
             attempting the work at all.</p>
-          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/case-studies/01-contentful-migration.md">Read case study 01 →</a></p>
-        </article>
+          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/case-studies/01-contentful-migration.md">Read the case study →</a></p>
+        </div>
 
-        <article class="card case">
-          <p class="case__tag">02 · Outcome case study</p>
+        <div class="panel" role="tabpanel" id="ev-p2" aria-labelledby="ev-t2" data-panel tabindex="0">
           <h3>A React Server Components memory leak, fixed upstream</h3>
           <p>A production application was crashing with out-of-memory errors. A blunt Node flag stopped
             the growth and stabilized production — but also stripped error-stack detail everywhere.</p>
@@ -592,27 +593,21 @@
             React's <code>react-server</code> renderer, and produced a one-file fix contributed
             upstream so other applications need not carry the same workaround.</p>
           <p class="case__status">Status: a CI-green pull request <strong>awaiting maintainer review — not yet merged</strong>.</p>
-          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/case-studies/02-react-rsc-memory-leak.md">Read case study 02 →</a></p>
-        </article>
-      </div>
+          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/case-studies/02-react-rsc-memory-leak.md">Read the case study →</a></p>
+        </div>
 
-      <h3 style="margin-top:2rem">Reference implementations</h3>
-      <p class="note">Patterns that run on real work, with their limits stated.</p>
-
-      <div class="grid grid--2" style="margin-top:1.1rem">
-        <article class="card case card--flat">
-          <p class="case__tag">Three patterns</p>
+        <div class="panel" role="tabpanel" id="ev-p3" aria-labelledby="ev-t3" data-panel tabindex="0">
           <h3>Built and used against real organizational data</h3>
           <p>Cross-team knowledge access, production exception remediation, and multi-repository
             defect remediation.</p>
           <p>Knowledge access has answered <strong>real production and support incidents</strong>,
             including a data-synchronization failure that had survived an overnight investigation after
-            the owning team had gone. The remediation patterns
-            have run on real work through existing review and deployment approvals. None is an
-            always-on capability or adopted organization-wide, and each still depends on a human
-            providing the map and holding the approvals.</p>
+            the owning team had gone. The remediation patterns have run on real work through existing
+            review and deployment approvals. None is an always-on capability or adopted
+            organization-wide, and each still depends on a human providing the map and holding the
+            approvals.</p>
           <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/reference-implementations.md">Read the reference implementations →</a></p>
-        </article>
+        </div>
       </div>
 
       <div class="pull"><p>A workaround resolves an incident. Understanding the root cause can resolve a class of problems.</p></div>
@@ -752,8 +747,8 @@
       <h4>Evidence</h4>
       <ul>
         <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/tree/main/case-studies">All case studies</a></li>
-        <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/case-studies/01-contentful-migration.md">01 — Contentful migration</a></li>
-        <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/case-studies/02-react-rsc-memory-leak.md">02 — React RSC memory leak</a></li>
+        <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/case-studies/01-contentful-migration.md">Contentful API migration</a></li>
+        <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/case-studies/02-react-rsc-memory-leak.md">React RSC memory leak</a></li>
         <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/reference-implementations.md">Reference implementations</a></li>
       </ul>
     </div>

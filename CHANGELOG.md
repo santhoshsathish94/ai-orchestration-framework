@@ -34,12 +34,18 @@ All notable changes to this project will be documented in this file.
 - **The evidence ladder and the autonomy ladder as website sections.** Both remain part of the framework in `docs/07-proof.md` and `docs/08-governance.md`, where practitioners need them. On the site they asked a first-time reader to learn a grading scheme before they had done anything, and turned plain statements into jargon — "rung 4, not rung 5" instead of "the production cutover has not yet run." The site now states what has and has not been proven in plain words. Two full sections shorter.
 - **The website's "Beyond software" section.** Three tabs restating the same six stages in slightly different vocabulary. The claim it existed to make — the loop is not software-specific — is now one line on the lifecycle.
 - **Case study 03, "Contextual Reasoning in a Newborn Care Scenario."** It illustrated a model reasoning well about insufficient context, which is a property of the model rather than of orchestration. Nothing in it was set up, governed, or proven — it was good AI use, not orchestration work, and presenting it as evidence for this framework overstated what the framework had shown. The case-studies index and the website now carry outcome case studies and reference implementations only.
+- `docs/06-agent-orchestration.md`. It was twenty lines, had no inbound links, and restated Principles 3 and 4 without adding to them. Its one distinctive line — keep execution observable, attributable, and reversible where practical — moved into governance.
 
 ### Changed — the website is shorter
 - **Merged "Why orchestration" and "The problem" into one section.** Both argued that capability was never the bottleneck; saying it once says it harder.
 - **"What it is not" is a two-column list rather than six cards**, with each entry cut to a line.
-- Net effect: sixteen screens down to thirteen, fifteen sections down to eleven, six tab groups down to three.
-- `docs/06-agent-orchestration.md`. It was twenty lines, had no inbound links, and restated Principles 3 and 4 without adding to them. Its one distinctive line — keep execution observable, attributable, and reversible where practical — moved into governance.
+- **The evidence section is one tab group** — Contentful API migration, React memory leak, reference implementations — instead of stacked cards under two subheadings.
+- Net effect: sixteen screens down to twelve, fifteen sections down to eleven, six tab groups down to four.
+
+### Changed — how the work is described
+- **Case studies are referred to by name, not by number.** "Contentful API migration," not "case study 01." The filenames keep their numeric prefix so the directory stays ordered, but nothing user-facing counts them.
+- **Dropped "honestly reported."** Saying so implies other people do not, or that earlier reports here were not. The work either states what it has not proven or it does not; an adverb adds nothing.
+- **The React case study now records what the investigation actually cost:** several days of repeated profiling, four candidate fixes implemented and disproved, a near-miss false positive caused by single runs draining on their own, and the fact that it looked like a Next.js defect until `global.Error` was instrumented to find the pinning object in React. Also states plainly that the leak is *not* caused by a failing dependency call retaining error objects — an intuitive reading the evidence contradicts, since the leak occurs on requests that succeed.
 
 ### Moved
 - `docs/ai-future-hypothesis.md` → `hypothesis/ai-future.md`, out of `docs/` entirely. It is speculative and explicitly not part of the framework; keeping it beside the doctrine invited confusion.

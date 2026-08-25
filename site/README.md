@@ -38,8 +38,8 @@ site/
 
 - **One loop only:** Opportunity → Understand → Plan → Execute → Proof → Grow. Never introduce a
   competing arrow-chain.
-- **Never invent** metrics, customers, adoption, or results. Case study 02 is *awaiting review, not
-  merged* — the site must keep saying so.
+- **Never invent** metrics, customers, adoption, or results. The React memory leak case study is
+  *awaiting review, not merged* — the site must keep saying so.
 - The AI Future hypothesis stays labelled speculative and separate from the framework.
 - New terminology goes in [`docs/glossary.md`](../docs/glossary.md) first, then the site.
 

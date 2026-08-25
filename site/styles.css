@@ -274,13 +274,6 @@ section[id] { scroll-margin-top: 5rem; }
 
 /* ---------- evidence / case studies ---------- */
 
-.case { display: grid; gap: 0.55rem; align-content: start; }
-.case__tag {
-  font-size: 0.75rem; font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase;
-  color: var(--muted);
-}
-.case h3 { margin: 0; font-size: 1.05rem; }
-.case p { font-size: 0.94rem; color: var(--ink-2); margin: 0; max-width: none; }
 .case__status {
   font-size: 0.82rem; color: var(--warn); background: var(--warn-soft);
   border: 1px solid #e2c88a; border-radius: 6px; padding: 0.4rem 0.6rem;
