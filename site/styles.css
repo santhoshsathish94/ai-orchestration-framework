@@ -119,8 +119,9 @@ section[id] { scroll-margin-top: 5rem; }
 /* ---------- hero ---------- */
 
 .hero { padding-block: clamp(3rem, 9vw, 6rem) clamp(2.5rem, 6vw, 4rem); }
-.hero h1 { max-width: 17ch; }
-.hero .lede { max-width: 56ch; font-size: clamp(1.05rem, 2.2vw, 1.28rem); }
+.hero h1 { max-width: 22ch; }
+.chain { max-width: none; }
+.hero .lede { max-width: 68ch; font-size: clamp(1.05rem, 2.2vw, 1.28rem); }
 
 .chain {
   display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;

@@ -65,37 +65,56 @@
       <p class="eyebrow">If you read nothing else</p>
       <h2>Four things that matter most.</h2>
 
-      <div class="grid grid--2" style="margin-top:1.4rem">
-        <div class="card">
-          <h3>1 · Humans are still the most valuable asset</h3>
+      <div class="tabs" data-tabs="essentials">
+        <div class="tablist tablist--stack" role="tablist" aria-orientation="vertical" aria-label="The four things that matter most">
+          <button class="tab" role="tab" id="es-t1" aria-controls="es-p1" aria-selected="true"><span class="tab__n">1</span>Humans are still the most valuable asset</button>
+          <button class="tab" role="tab" id="es-t2" aria-controls="es-p2"><span class="tab__n">2</span>Quick setup using your own agent</button>
+          <button class="tab" role="tab" id="es-t3" aria-controls="es-p3"><span class="tab__n">3</span>Efficiency is always the priority</button>
+          <button class="tab" role="tab" id="es-t4" aria-controls="es-p4"><span class="tab__n">4</span>Security and governance are non-negotiable</button>
+        </div>
+
+        <div class="panel is-active" role="tabpanel" id="es-p1" aria-labelledby="es-t1" data-panel tabindex="0">
+          <h3>Humans are still the most valuable asset</h3>
           <p>In the AI era the most valuable resource an organization has is still its people. A few
-            skilled individuals solving a few problems is not growth.</p>
+            skilled individuals solving a few problems is not growth — it is a bottleneck with better
+            tooling.</p>
           <p>Helping the whole workforce adopt this — training them, encouraging them, and listening to
-            their feedback — matters more than any other step on this site.</p>
+            their feedback — matters more than anything else on this site. It applies well beyond
+            engineering: product, marketing and support spend just as much effort finding out what a
+            system did and why.</p>
           <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/09-adoption.md">Adoption →</a></p>
         </div>
-        <div class="card">
-          <h3>2 · Quick setup using your own agent</h3>
+
+        <div class="panel" role="tabpanel" id="es-p2" aria-labelledby="es-t2" data-panel tabindex="0">
+          <h3>Quick setup using your own agent</h3>
           <p>Orchestration needs an access layer: your repositories, tickets, logs, datasources and a
-            non-production environment, reachable by the agent you already use.</p>
+            non-production environment, reachable by the agent you already use. Nothing to install and
+            nothing to migrate onto — it sits on top of what is already running.</p>
           <p>Read-only first, one connection at a time, never wider than the person accountable for it
-            already has. No migration, no new platform.</p>
+            already has. Start on one real problem; if you stop, the systems underneath are untouched.</p>
           <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/orchestration-environment.md#building-one">Build one →</a></p>
         </div>
-        <div class="card">
-          <h3>3 · Efficiency is always the priority</h3>
-          <p>Let a strong model hold the plan and own the outcome, with cheaper models doing scoped
-            work beneath it. The owning model checks and corrects what comes back.</p>
-          <p>Same result, a fraction of the cost — and the saving compounds once an organization works
-            this way. Wasted capability is wasted twice at scale.</p>
+
+        <div class="panel" role="tabpanel" id="es-p3" aria-labelledby="es-t3" data-panel tabindex="0">
+          <h3>Efficiency is always the priority</h3>
+          <p>Let a strong model hold the plan and own the outcome, with cheaper models doing scoped work
+            beneath it as subagents. The owning model checks and corrects what comes back — they are
+            supervised, not trusted.</p>
+          <p>That costs far less than running everything at the top tier and produces better results
+            than running everything at the bottom, because accountability stays in one place. At one
+            person's scale it is a modest saving; across an organization it compounds — and so does the
+            waste, if nobody thinks about it.</p>
           <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/orchestration-environment.md#spend-capability-where-it-counts">How to divide the work →</a></p>
         </div>
-        <div class="card">
-          <h3>4 · Security and governance are non-negotiable</h3>
+
+        <div class="panel" role="tabpanel" id="es-p4" aria-labelledby="es-t4" data-panel tabindex="0">
+          <h3>Security and governance are non-negotiable</h3>
           <p>AI works within the access the accountable person already holds. Inherit it, never expand
             it, keep it read-only by default, and make every action traceable to a named human.</p>
-          <p>Most of this exposure exists already wherever people use AI at work. The framework's job
-            is to name it and insist it is handled — including the part nobody has solved yet.</p>
+          <p>Most of this exposure already exists wherever people use AI at work, with or without a
+            framework — the choice is whether anyone has written down what to do about it. One thing is
+            genuinely new, though: the layer can read across code, tickets, logs and data at once, which
+            no one person practically could.</p>
           <p><a href="#security">What a security review will ask →</a></p>
         </div>
       </div>
