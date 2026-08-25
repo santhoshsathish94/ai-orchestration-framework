@@ -11,13 +11,13 @@ that is a bug in the writing — [tell us](../CONTRIBUTING.md).
 | **Intent** | What a human actually wants to achieve. The outcome, not the task. |
 | **Outcome** | The change in the real world you were after. Distinct from *output*, which is just what got produced. |
 | **Proof** | Evidence that connects the work back to the original problem and shows the outcome actually happened. |
-| **Evidence ladder** | Five rungs from "someone says it works" to "observed in the real environment." You name the rung you reached. See [Proof](07-proof.md#how-strong-is-your-evidence). |
+| **Evidence** | What you actually did to check a claim — an assertion, one manual look, a repeatable test, a before-and-after measurement, or the original signal gone from the real environment. Say which. See [Proof](07-proof.md#how-strong-is-your-evidence). |
 | **Experience** | What was learned from one specific execution — what was tried, what happened, what the evidence showed. |
 | **Expertise** | A reusable pattern that emerges from several *validated* experiences. One execution is not expertise. |
 | **Ownership** | The named human accountable for an outcome. Work can be delegated; ownership cannot. |
 | **Agent** | An AI system that can take actions and use tools, not only produce text. |
 | **Agentic workflow** | A designed loop of agent steps that repeats a known process. Orchestration differs in that it *learns* from the outcome. |
-| **Autonomy ladder** | Five levels describing how much of the *path* AI is trusted to determine, each earned through Proof. See [the framework](04-framework.md#the-autonomy-ladder). |
+| **Autonomy** | How much of the *path* AI is trusted to determine — widened where results have held, capped by blast radius, granted per context rather than globally. See [the framework](04-framework.md#widening-what-ai-decides). |
 | **Telemetry** | The signals a running system emits about itself — logs, metrics, traces, error rates. |
 | **Blast radius** | How much damage a change could do if it is wrong. Bigger blast radius means more human approval. |
 | **Non-production** | Any environment that is not serving real users — local, test, staging. Safe to break. |

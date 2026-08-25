@@ -139,21 +139,20 @@ Proof can include tests, before/after measurements, telemetry, non-production va
 
 For production remediation, the loop can continue through deployment and observation until the original production signal is demonstrably resolved.
 
-### The evidence ladder
+### Say what your evidence actually is
 
-Not every task has telemetry, and pretending otherwise makes Proof unusable for most work. What matters is being accurate about how strong your evidence actually is.
+Not every task has telemetry, and pretending otherwise makes Proof unusable for most work. What matters is describing what you actually did to check, in words a reader can act on.
 
-| Rung | Evidence | What it establishes |
-|---|---|---|
-| 1 | **Asserted** — someone says it works | Nothing. This is not proof. |
-| 2 | **Demonstrated once** — shown working manually | It can work |
-| 3 | **Tested repeatably** — an automated check that fails without the change | It works, and will keep working |
-| 4 | **Measured before/after** — the number moved in the right direction | It changed the thing you cared about |
-| 5 | **Observed in the real environment** — the original signal is gone and stays gone | The outcome actually happened |
+Four questions do the work:
 
-> **Name the rung you actually reached. Do not claim a higher one.**
+- **Did anyone verify it, or is someone asserting it?** "It works" from a person or a model establishes nothing on its own.
+- **Does it hold up again?** Something seen working once may not repeat. An automated check that fails without the change and passes with it is a different claim from a manual look.
+- **Did the thing you cared about move?** A passing test says the code behaves; a before-and-after measurement says the problem changed.
+- **Did it hold where it counts?** The strongest evidence is the original signal disappearing in the real environment and staying gone.
 
-Rung 5 is not always available or worth the cost; a small internal change may be complete at rung 3. The discipline is not always reaching the top — it is being honest about where you stopped and what therefore remains unproven.
+> **State what you checked, what you observed, and where you stopped.**
+
+Stopping early is fine and often correct — a small internal change may be genuinely complete once a test covers it, and production observation is not always available or worth the cost. What is not fine is describing weak evidence in language that sounds like strong evidence. "Verified in the test environment; not yet observed in production" is a complete, honest claim. "Verified" alone is not.
 
 ### When Proof fails
 
@@ -227,26 +226,15 @@ Today, a human may provide both the goal and much of the path. As the orchestrat
 
 This does not mean removing humans from the system. Human responsibility moves toward defining objectives, constraints, risk boundaries, authority, and success criteria, while AI takes on more of the planning, execution, observation, and adaptation within those boundaries.
 
-### The autonomy ladder
+### Widening what AI decides
 
-"Increase autonomy as trust matures" is only useful if you can say what trust looks like. These levels make it concrete. They describe how much of the *path* AI is trusted to determine — not how capable the model is.
+"Increase autonomy as trust matures" is only useful if you can say what decides it. Three rules do:
 
-| Level | Human provides | AI provides |
-|---|---|---|
-| **L0** | Every step | Suggestions only |
-| **L1** | Approves each step before it happens | Drafts each step |
-| **L2** | Approves the plan; reviews the result | Executes the agreed plan |
-| **L3** | Objective, constraints, success criteria | Plans and executes within the boundaries |
-| **L4** | Objective and success criteria | Determines and continuously adapts the path |
+- **Results decide, not confidence.** Widen what AI determines for itself where outcomes of that kind have repeatedly held up without rework or intervention. Narrow it again the moment they stop.
+- **Blast radius overrides track record.** Where a mistake is expensive or hard to reverse, human approval stays regardless of how well things have gone.
+- **It is granted per context, not globally.** A team may let AI plan and execute freely inside a well-understood remediation flow while approving every step of anything touching customer data.
 
-> **Move up a level only when Proof at the current level has been consistently achieved — and move back down when it has not.**
-
-The gate is Proof, not confidence. A level is earned when outcomes at that level are repeatedly proven without rework or intervention, for that specific kind of work. Autonomy is granted per context, not globally: a team may sit at L3 for a well-understood remediation flow and L1 for anything touching customer data.
-
-Two rules keep the ladder honest:
-
-- **Blast radius caps the level.** Where a mistake is expensive or irreversible, human approval stays regardless of track record.
-- **Levels are revocable.** A ladder that only goes up is not a trust mechanism.
+What moves is how much of the *path* AI determines — from drafting steps a human approves, through executing an agreed plan, to planning within stated constraints. What does not move is who owns the objective, the constraints, and the outcome.
 
 The framework's purpose is not to claim that unrestricted autonomy exists today. It is to provide an architecture that can progressively support greater autonomy as reasoning, tools, persistent context, experience, validation, and trust mature.
 

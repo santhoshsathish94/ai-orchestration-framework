@@ -9,8 +9,8 @@ These are practical patterns teams can adopt and adapt. They are not separate fr
 > data-synchronization failure that had already survived an overnight investigation, where the team
 > that originally owned the flow was no longer available and the mapping involved was far too large to
 > have been documented; and a customer-facing support case that had been circulating between teams
-> without a clear owner. In both, the reported signal was traced to its actual cause. On the
-> [evidence ladder](07-proof.md#how-strong-is-your-evidence) those specific cases reach **rung 4–5**.
+> without a clear owner. In both, the reported signal was traced to its actual cause — the strongest
+> evidence here, observed against the real systems rather than demonstrated.
 >
 > Production Exception Remediation and Multi-Repository Defect Remediation have both been run on real
 > work, through existing review and deployment approvals. The defect-remediation cycle produced

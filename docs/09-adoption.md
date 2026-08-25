@@ -44,7 +44,7 @@ A pattern that works, in rough order:
    existing pipeline triggers are where automated checking earns its place without new risk.
 5. **Let people work the way they find natural.** If most questions can be asked and answered
    conversationally, the bottleneck stops being whoever knows the system best.
-6. **Widen the blast radius only as proof accumulates**, following the autonomy ladder rather than
+6. **Widen the blast radius only as proof accumulates**, following what results actually held rather than
    enthusiasm.
 7. **Capture what each cycle taught** so the next team starts ahead of where the last one did.
 

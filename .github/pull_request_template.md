@@ -14,8 +14,7 @@ Opportunity -> Change -> Proof. Keep it short.
 ## Proof
 
 <!-- Evidence that this does what you say it does.
-     Name the rung you actually reached:
-     asserted / demonstrated once / tested repeatably / measured before-after / observed in the real environment.
+     State what you checked, what you observed, and where you stopped.
      For docs changes, "I checked every link and heading anchor" is valid proof. -->
 
 ## Anything still unproven

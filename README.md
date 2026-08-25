@@ -107,7 +107,7 @@ GraphQL → REST and .NET 9 MVC → .NET 10 Minimal APIs, replacing ~7,800 lines
 with every route, JSON shape and response envelope preserved so no consumer had to change, and parity
 validated byte-for-byte against live traffic in preprod. Testing and validation took roughly another
 day, and stakeholder agreement longer still: the one-day figure is execution, not end-to-end delivery.
-The production cutover has not yet run, so this reaches rung 4 — measured before and after — not rung 5.
+The production cutover has not yet run.
 [Read the case study →](case-studies/01-contentful-migration.md)
 
 **A production memory leak fixed at its root, not worked around.**
@@ -135,7 +135,7 @@ Today, humans often provide both the goal and the path. Over time, the goal can 
 
 The framework does not claim unrestricted autonomy exists today. It defines the engineering foundation through which greater autonomy can progressively become possible — one level at a time, each earned through proof.
 
-[Read the autonomy ladder →](docs/04-framework.md#the-autonomy-ladder)
+[How much autonomy to grant →](docs/08-governance.md#how-much-autonomy-to-grant)
 
 ---
 
@@ -179,7 +179,7 @@ users yet, and the page says exactly that.
 - 📖 [The Problem](docs/01-problem.md) — why another framework
 - 📖 [Philosophy](docs/02-philosophy.md) — what it believes
 - 📖 [Principles](docs/03-principles.md) — one per stage
-- 📖 [AI Orchestration Model](docs/04-framework.md) — the six stages, the evidence ladder, the autonomy ladder
+- 📖 [AI Orchestration Model](docs/04-framework.md) — the six stages in full
 
 **Going deeper on each part**
 
@@ -214,7 +214,6 @@ users yet, and the page says exactly that.
 - ✅ Interactive website on GitHub Pages
 - ✅ Quickstart, brief template, and worked example
 - ✅ Experience & Expertise within Grow
-- ✅ Evidence ladder and autonomy ladder
 - ✅ Reference Implementations
 - ✅ Real-World Case Studies (2), both delivered outcomes
 - ✅ How AI Fails, Field Lessons, Glossary

@@ -97,7 +97,7 @@ pointed at a new consumer.
 
 **Scope per purpose, not per convenience.** Access appropriate for investigating a defect is not
 automatically appropriate for touching customer data. Grant it per context, as the
-[autonomy ladder](04-framework.md#the-autonomy-ladder) describes.
+[widening what AI decides](04-framework.md#widening-what-ai-decides) describes.
 
 **Keep every action attributable to a named person.** Work performed through the layer should run
 under the credentials of the human who is accountable for it, so that anything unexpected can be

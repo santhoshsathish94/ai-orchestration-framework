@@ -22,17 +22,18 @@ resolved problem; proof is showing the original signal actually improved.
 ## How strong is your evidence?
 
 Most work does not have production telemetry, and Proof has to stay usable anyway. The point is not
-to always reach the top rung — it is to know which rung you reached and to say so.
+to reach the strongest possible evidence every time — it is to describe accurately what you did.
 
-1. **Asserted** — someone says it works. Not proof.
-2. **Demonstrated once** — shown working manually.
-3. **Tested repeatably** — an automated check that fails without the change.
-4. **Measured before/after** — the number moved in the right direction.
-5. **Observed in the real environment** — the original signal is gone and stays gone.
+Ask four things:
 
-> **Name the rung you actually reached. Do not claim a higher one.**
+- **Did anyone verify it, or is someone asserting it?** An assertion establishes nothing, whoever makes it.
+- **Does it hold up again?** Seen working once is weaker than a check that fails without the change.
+- **Did the thing you cared about move?** A passing test says the code behaves. A before-and-after measurement says the problem changed.
+- **Did it hold where it counts?** The original signal gone from the real environment, and staying gone.
 
-See the [evidence ladder](04-framework.md#the-evidence-ladder) for the full stage detail.
+> **State what you checked, what you observed, and where you stopped.**
+
+Stopping early is fine. Describing weak evidence in strong language is not.
 
 ## When proof fails
 

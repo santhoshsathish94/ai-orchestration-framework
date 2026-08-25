@@ -144,17 +144,15 @@ Building this monitoring layer is the most valuable unsolved problem in the spac
 
 ## How much autonomy to grant
 
-Governance is where the [autonomy ladder](04-framework.md#the-autonomy-ladder) is actually applied.
-It turns "increase autonomy as trust matures" into something you can decide and defend: five levels,
-each earned only when Proof at the current level has been consistently achieved.
+Governance is where ["increase autonomy as trust matures"](04-framework.md#widening-what-ai-decides)
+turns into something you can decide and defend. Three rules keep it honest:
 
-Three rules keep it honest:
-
-- **Autonomy is granted per context, not globally.** A team may sit at L3 for a well-understood
-  remediation flow and L1 for anything touching customer data.
-- **Blast radius caps the level.** Where a mistake is expensive or irreversible, human approval stays
-  regardless of track record.
-- **Levels are revocable.** A ladder that only goes up is not a trust mechanism.
+- **Results decide, not confidence.** Widen what AI determines for itself where outcomes of that
+  kind have repeatedly held up without rework. Narrow it again the moment they stop.
+- **Blast radius overrides track record.** Where a mistake is expensive or irreversible, human
+  approval stays regardless of how well things have gone.
+- **It is granted per context, not globally.** A team may let AI plan and execute inside a
+  well-understood remediation flow while approving every step of anything touching customer data.
 
 ## Controls are not the hard part
 

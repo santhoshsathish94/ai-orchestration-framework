@@ -8,7 +8,7 @@ If you are an AI agent asked to work under this framework, read AGENTS.md. It is
 
 - [AGENTS.md](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/AGENTS.md): The entire operating model as instructions for an agent — the six stages, evidence rules, failure-mode self-checks, limits of authority, and what to record before finishing.
 - [README](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/README.md): What the framework is, the lifecycle, what it is not, and the three-step adoption path.
-- [The orchestration model](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/04-framework.md): The six stages in full, plus the evidence ladder and the autonomy ladder.
+- [The orchestration model](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/04-framework.md): The six stages in full, plus how to describe evidence and how much autonomy to grant.
 - [Principles](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/03-principles.md): One principle per stage.
 
 ## Putting it into practice

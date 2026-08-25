@@ -74,21 +74,22 @@ confident from the inside.
 
 ---
 
-## 5. Prove it, and name the rung
+## 5. Prove it, and say what the proof was
 
-Every claim of success carries a level of evidence. **State which one you reached.** Do not imply a
-higher one.
+Every claim of success rests on something. **Say what.** Do not use language that implies more than
+you did.
 
-| Rung | Means |
-|---|---|
-| 1 | **Asserted** — I believe it works |
-| 2 | **Demonstrated once** — it was seen working, one time |
-| 3 | **Tested repeatably** — it works again on demand |
-| 4 | **Measured before and after** — the change is quantified |
-| 5 | **Observed in the real environment** — the original signal is gone and stays gone |
+Be specific about which of these you actually have:
 
-Rung 3 is a perfectly good place to stop for small work. **Stopping low is fine. Claiming high is
-not.** If you cannot verify something, say "unverified" and say why.
+- You believe it works — that is an assertion, not evidence. Say so.
+- You saw it work once.
+- It works again on demand, because a check fails without the change and passes with it.
+- You measured the thing you cared about, before and after.
+- The original signal is gone from the real environment, and stayed gone.
+
+Stopping early is fine — a repeatable test is a perfectly good place to finish small work.
+**Stopping early is fine. Describing it as more than it was is not.** If you cannot verify
+something, say "unverified" and say why.
 
 ---
 
@@ -162,7 +163,7 @@ Record:
 - **Remaining** — open questions, unverified assumptions, next steps.
 - **Ruled out** — what was tried and did not work, and why. This is the most expensive thing to
   rediscover, and the most commonly omitted.
-- **Evidence rung reached** — see section 5.
+- **Evidence** — what was checked, what was observed, and where you stopped. See section 5.
 
 Write it as work proceeds, not only at the end. A file written afterwards is a report; a file
 maintained during the work is memory.
@@ -174,13 +175,14 @@ maintained during the work is memory.
 State plainly:
 
 1. What outcome was reached.
-2. The evidence, and the rung.
+2. The evidence, and what it does not cover.
 3. What you could not verify.
 4. What you changed, and where.
 5. What should happen next.
 
 **Do not describe activity as achievement.** "I updated six files" is not an outcome. "The reported
-error no longer occurs, verified in the test environment — rung 3" is.
+error no longer occurs, verified by a test that fails without the change — not yet seen in
+production" is.
 
 ---
 

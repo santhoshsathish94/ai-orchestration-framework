@@ -92,12 +92,12 @@ your AI assistant. Nothing here is tool-specific — the prompts work with any c
   - The full suite is green.
   - Staging: 200 checkouts with and without coupons — zero `500`s.
 - **Success signal holds?** After deploy, the `/api/checkout` `5xx` rate returned to baseline and held for 24 hours.
-- **Rung reached:** **5 — observed in the real environment.** The original signal is gone and stayed gone. Most work stops at rung 3 or 4, and that is fine as long as you say so.
+- **Where this stopped:** **observed in the real environment** — the original signal is gone and stayed gone. Most work stops earlier than this, and that is fine as long as you say so.
 - **Human verification:** On-call confirmed the dashboard and closed the alert.
 
 > **Prompt used:** "Show concrete evidence that the outcome from the Opportunity was achieved. Map
-> each piece of evidence back to the success signal. Name the strongest rung the evidence actually
-> reaches. Note anything still unproven."
+> each piece of evidence back to the success signal. Say what was checked, what was observed, and
+> where you stopped. Note anything still unproven."
 
 **Ownership:** AI assembled the evidence; human verified production and accepted the proof.
 

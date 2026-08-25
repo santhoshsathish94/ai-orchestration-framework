@@ -23,11 +23,11 @@ barrier.
 > not an end-to-end delivery time, and comparing it directly against an 8–10 week estimate that
 > included analysis, review and coordination would overstate the gain.
 
-> **Evidence reached: rung 4 — measured before and after.** The basis for that is the parity harness
-> and QA's sign-off against the real site through the gateway — not the performance figures, which
-> were measured locally (see Results). The production cutover has not yet run,
-> so nothing here claims rung 5. The staged rollout below is the plan the evidence supports, not a
-> sequence that has already executed.
+> **What this is proven against.** The parity harness and QA's sign-off against the real site through
+> the gateway. Not the performance figures, which were measured locally (see Results). The production
+> cutover has not yet run, so nothing here claims the migration has been observed under real traffic.
+> The staged rollout below is the plan the evidence supports, not a sequence that has already
+> executed.
 
 ## Contentful migration model
 
@@ -175,8 +175,7 @@ rewrite at all, which is a claim about effort, not about latency.
   longer than both. Any honest account of AI speed-up has to say which of those it is talking about.
 - **Say where a number was measured, or it will be read as more than it is.** The performance figures
   here come from two processes on one machine. They are real and reproducible, and they are not
-  production evidence. The gap between "measured" and "measured somewhere that matters" is exactly
-  the gap the evidence ladder exists to make visible.
+  production evidence. "Measured" and "measured somewhere that matters" are different claims.
 - **A staged, reversible cutover** (shadow run → dual webhook → gradual flip → warm rollback target)
   means the migration will only ever carry as much production risk as each stage's own evidence justifies.
 - The full history is traceable commit-by-commit in this repository's git log.

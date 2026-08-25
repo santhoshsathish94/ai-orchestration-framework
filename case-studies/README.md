@@ -18,13 +18,13 @@ changes.
 
 ## A note on evidence
 
-The three [reference implementations](../docs/reference-implementations.md) are graded separately.
-Cross-team knowledge access has resolved real production and support incidents and reaches **rung
-4–5** for those cases; the two remediation patterns have run on real work through existing review and
-deployment approvals. None is an always-on capability or adopted organization-wide.
+The three [reference implementations](../docs/reference-implementations.md) are described separately.
+Cross-team knowledge access has resolved real production and support incidents; the two remediation
+patterns have run on real work through existing review and deployment approvals. None is an
+always-on capability or adopted organization-wide.
 
-See the [evidence ladder](../docs/07-proof.md#how-strong-is-your-evidence) for how we talk about
-strength of evidence generally.
+See [Proof](../docs/07-proof.md#how-strong-is-your-evidence) for how we talk about evidence
+generally.
 
 ## Contributing a case study
 
