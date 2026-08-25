@@ -65,6 +65,18 @@ organization already knows how to answer.
 
 Most of these have good answers. Two do not yet, and saying so is more useful than glossing over them.
 
+**First, a point that reframes several of them.** Nearly everything below is already possible in most
+organizations today, without this framework and without anyone's permission. AI works within a
+person's existing access: someone who cannot reach a system cannot reach it through AI either, and
+someone who *can* reach it can already point a tool at it. Ungoverned AI use with employee access is
+the status quo almost everywhere.
+
+So the choice is rarely "introduce this risk or not." It is **"leave it undescribed, or name it and
+put rules around it."** This framework exists to do the second. What follows is not a list of dangers
+it creates; it is a list of things it insists you deal with.
+
+One genuine amplification is worth separating out, though: **aggregation**. See the first question.
+
 **"What new access is this creating?"**
 Per connection, none — the layer inherits access someone already has. But be honest about the
 composite: it can read across code, tickets, logs, datasources and environments *at once*, which no
@@ -82,6 +94,12 @@ By default, nothing. Repositories contain credentials more often than anyone adm
 routinely contain personal data. Before granting access: scan for secrets and rotate whatever turns
 up; prefer log sources that are already redacted; exclude datasources holding regulated data unless
 there is a specific reason not to. Assume anything the layer *can* read has been read.
+
+And when something is found, **fix it — do not note it.** A credential committed to a repository is a
+defect whether or not AI ever reads it, and personal data in logs is a compliance problem that exists
+independently of who is looking. Anyone with repository access could already have found either. The
+rule is simple: findings of this kind are raised, tracked, and remediated — rotated, redacted, or
+removed. Treating them as acceptable background noise is how they stay for years.
 
 **"What if the content it reads is hostile?"**
 This is the sharpest risk and it deserves a straight answer. A framework that encourages reading
