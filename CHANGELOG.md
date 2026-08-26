@@ -41,6 +41,8 @@ All notable changes to this project will be documented in this file.
 - `docs/06-agent-orchestration.md`. It was twenty lines, had no inbound links, and restated Principles 3 and 4 without adding to them. Its one distinctive line — keep execution observable, attributable, and reversible where practical — moved into governance.
 
 ### Changed — the website is shorter
+- **Deleted the "Run one cycle on something real" section.** Once the agent-file section existed, it was saying the same thing twice — the three start steps now live at the end of that section, where someone has just read what the file does and is ready to use it. The quickstart, brief template and worked example are one line of links rather than three cards.
+- **The README lost a third of its length.** Cut "Why this matters" (six bullets that could have described any framework), the duplicate reference-implementations list, and the "Current Status" checklist of green ticks. The thirty-link "Explore the Framework" index became five grouped lines. 239 lines to 189.
 - **Merged "Why orchestration" and "The problem" into one section.** Both argued that capability was never the bottleneck; saying it once says it harder.
 - **"What it is not" is a two-column list rather than six cards**, with each entry cut to a line.
 - **The evidence section is one tab group** — Contentful API migration, React memory leak, reference implementations — instead of stacked cards under two subheadings.

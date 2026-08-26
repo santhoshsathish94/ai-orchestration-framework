@@ -29,9 +29,8 @@
     <nav class="site-nav" aria-label="Primary">
       <a href="#why">Framework</a>
       <a href="#lifecycle">How it works</a>
-      <a href="#agent">Agent file</a>
+      <a href="#agent">Start</a>
       <a href="#evidence">Evidence</a>
-      <a href="#try">Start</a>
       <a href="glossary/">Glossary</a>
       <a href="https://github.com/santhoshsathish94/ai-orchestration-framework">GitHub</a>
     </nav>
@@ -401,8 +400,40 @@
         </div>
       </div>
 
-      <p style="margin-top:1.3rem"><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/AGENTS.md">Read <code>AGENTS.md</code> →</a>
-        &nbsp;·&nbsp; <a href="#try">Start with it</a></p>
+      <h3 style="margin-top:2rem">Start with it</h3>
+      <p class="note">Pick something small and real — a bug, a recurring exception, a question nobody
+        can answer quickly. Nothing to migrate onto first.</p>
+
+      <div class="grid grid--3" style="margin-top:1.1rem">
+        <div class="card card--flat">
+          <h3>1 · Copy the file</h3>
+          <p>Put <code>AGENTS.md</code> in your project and point your agent at it.</p>
+          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/AGENTS.md">Get AGENTS.md →</a></p>
+        </div>
+        <div class="card card--flat">
+          <h3>2 · Give it the evidence</h3>
+          <p>Repository, tickets, logs, a non-production environment. Read-only first, one connection
+            at a time, never wider than you can explain.</p>
+          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/orchestration-environment.md#building-one">How to set it up →</a></p>
+        </div>
+        <div class="card card--flat">
+          <h3>3 · Run one real problem</h3>
+          <p>Keep a context file beside the code as you go. That file is what makes the next cycle
+            cheaper than this one.</p>
+          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/05-context-engineering.md#where-context-lives">Where context lives →</a></p>
+        </div>
+      </div>
+
+      <p class="note" style="margin-top:1.2rem">Prefer to run it yourself? The
+        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/QUICKSTART.md">quickstart</a>
+        walks a first cycle by hand, the
+        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/templates/orchestration-brief.md">orchestration brief</a>
+        is a one-page working artifact for all six stages, and the
+        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/tree/main/examples/production-exception-remediation">worked example</a>
+        runs a production <code>500</code> through the loop.</p>
+
+      <div class="pull"><p>Don't optimize for AI activity. Optimize for outcomes — through context,
+        focus, ownership, evidence, and learning.</p></div>
     </div>
   </section>
 
@@ -680,7 +711,7 @@
   </section>
 
   <!-- ============ WHAT IT IS NOT ============ -->
-  <section class="band band--soft" id="scope">
+  <section class="band" id="scope">
     <div class="wrap">
       <p class="eyebrow">Scope</p>
       <h2>What it is not.</h2>
@@ -698,67 +729,6 @@
         <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/hypothesis/ai-future.md">The AI Future</a>
         — a speculative hypothesis about competitive pressure and autonomy. It is a thought
         experiment, not a prediction, and it is <strong>not part of the framework</strong>.</p>
-    </div>
-  </section>
-
-  <!-- ============ TRY IT ============ -->
-  <section class="band" id="try">
-    <div class="wrap">
-      <p class="eyebrow">Try it</p>
-      <h2>Run one cycle on something real.</h2>
-      <p class="lede">Pick a small, real task — a bug, a small feature, a production exception. The
-        lifecycle works best on concrete work, not hypotheticals.</p>
-      <p>There is nothing to migrate onto first. The layer goes on top of the systems you already run,
-        so you can start on one problem this week and keep everything else exactly as it is.</p>
-
-      <div class="grid grid--3" style="margin-top:1.5rem">
-        <div class="card">
-          <h3>1 · Copy one file</h3>
-          <p>Put <code>AGENTS.md</code> in your project and point your AI agent at it. Nothing else to
-            read, nothing to install — <a href="#agent">what it does</a>.</p>
-          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/AGENTS.md">Get AGENTS.md →</a></p>
-        </div>
-        <div class="card">
-          <h3>2 · Give it the evidence</h3>
-          <p>Repository, tickets, logs, datasources, a non-production environment. Read-only first, one
-            connection at a time, and never wider than you can explain.</p>
-          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/orchestration-environment.md#building-one">How to set it up →</a></p>
-        </div>
-        <div class="card">
-          <h3>3 · Run one real problem</h3>
-          <p>Keep a context file beside the code as you go — the goal, what is settled, what remains,
-            what was ruled out. That file is what makes the next cycle cheaper than this one.</p>
-          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/05-context-engineering.md#where-context-lives">Where context lives →</a></p>
-        </div>
-      </div>
-
-      <h3 style="margin-top:2rem">Also useful</h3>
-      <div class="grid grid--3" style="margin-top:1rem">
-        <div class="card">
-          <h3>Quickstart</h3>
-          <p>Get from idea to your first cycle in about 15 minutes.</p>
-          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/QUICKSTART.md">Open the quickstart →</a></p>
-        </div>
-        <div class="card">
-          <h3>Orchestration brief</h3>
-          <p>A one-page template covering all six stages, with copy-and-paste prompts and explicit
-            human/AI ownership per stage. It is your working artifact for the whole cycle.</p>
-          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/templates/orchestration-brief.md">Copy the template →</a></p>
-        </div>
-        <div class="card">
-          <h3>Worked example</h3>
-          <p>An illustrative walkthrough of a recurring production <code>500</code> through all six
-            stages, with the prompts used at each one.</p>
-          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/tree/main/examples/production-exception-remediation">See the example →</a></p>
-        </div>
-      </div>
-
-      <p style="margin-top:1.5rem">Keep the filled-in brief alongside your work — in the pull request,
-        the ticket, or the repo. It <em>is</em> your proof and your learning, and it makes the next
-        cycle start stronger.</p>
-
-      <div class="pull"><p>Don't optimize for AI activity. Optimize for outcomes — through context,
-        focus, ownership, evidence, and learning.</p></div>
     </div>
   </section>
 

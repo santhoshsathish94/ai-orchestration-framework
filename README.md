@@ -123,102 +123,52 @@ orchestration that learns.
 
 ## Where this leads
 
-AI orchestration is the **foundation**, not the end state.
-
-As reasoning, tools, persistent context, experience, validation, and trust mature, the framework is intended to support a progression toward **goal-directed autonomous AI**.
+AI orchestration is the **foundation**, not the end state. Today humans often provide both the goal
+and the path. As reasoning, tools, persistent context and evidence mature, the goal can become the
+primary human input while AI determines and adapts the path inside stated constraints.
 
 ![Human defines the destination; AI determines and adapts the path](assets/ai-future/goal-directed-destination.svg)
 
-Today, humans often provide both the goal and the path. Over time, the goal can become the primary human input, while AI increasingly determines and adapts the path within defined constraints and success criteria.
-
 > **Human defines the destination. AI determines and continuously adapts the path.**
 
-The framework does not claim unrestricted autonomy exists today. It defines the engineering foundation through which greater autonomy can progressively become possible — one level at a time, each earned through proof.
-
-[How much autonomy to grant →](docs/08-governance.md#how-much-autonomy-to-grant)
-
----
-
-## Why this matters
-
-The framework is designed to help teams:
-
-- Apply AI to meaningful outcomes rather than isolated tasks.
-- Reduce missing context and unnecessary coordination.
-- Combine humans, AI agents, tools, and enterprise systems coherently.
-- Prove that changes actually achieved the intended result.
-- Build organizational experience and expertise over repeated executions.
-- Create a path from today's agentic systems toward increasingly goal-directed AI.
+Nothing here claims that unrestricted autonomy exists today. What AI decides for itself widens where
+results have held, stays capped where a mistake is expensive, and is granted per context rather than
+globally. [How much autonomy to grant →](docs/08-governance.md#how-much-autonomy-to-grant)
 
 ---
 
 ## Reference Implementations
 
-- **[Cross-Team Knowledge Access](docs/reference-implementations.md#1-cross-team-knowledge-access)** — make existing organizational knowledge accessible through AI.
-- **[Production Exception Remediation](docs/reference-implementations.md#2-production-exception-remediation)** — take a production issue from understanding through fix, proof, and learning.
-- **[Multi-Repository Defect Remediation](docs/reference-implementations.md#3-multi-repository-defect-remediation)** — work a batch of defects across service boundaries, ending in evidence of which are genuinely closed.
-
-These are practical applications of the core lifecycle. Both have been **built and demonstrated
-against real organizational data**, not just proposed — though neither has been put in front of end
-users yet, and the page says exactly that.
-
----
-
-## Explore the Framework
-
-**Start here**
-
-- 🌐 [**Website**](https://santhoshsathish94.github.io/ai-orchestration-framework/) — the interactive walkthrough
-- 🚀 [**Quickstart**](QUICKSTART.md) — run your first cycle in about 15 minutes
-- 🤖 [**AGENTS.md**](AGENTS.md) — the whole operating model as instructions for an AI agent. Point your agent at this one file; it does not need the rest.
-- 📝 [Orchestration Brief template](templates/orchestration-brief.md) — the one-page working artifact
-- 🧪 [Worked example](examples/production-exception-remediation/) — all six stages on a production `500`
-
-**The framework**
-
-- 📖 [The Problem](docs/01-problem.md) — why another framework
-- 📖 [Philosophy](docs/02-philosophy.md) — what it believes
-- 📖 [Principles](docs/03-principles.md) — one per stage
-- 📖 [AI Orchestration Model](docs/04-framework.md) — the six stages in full
-
-**Going deeper on each part**
-
-- 📖 [Context Engineering](docs/05-context-engineering.md) — the limiting factor, and where persistent context files live
-- 📖 [Proof](docs/07-proof.md) — how strong your evidence actually is
-- 📖 [Governance](docs/08-governance.md) — ownership, access, attribution, and the monitoring gap
-- 📖 [Adoption](docs/09-adoption.md) — turning individual skill into collective capability
-- 📖 [Roadmap](docs/10-roadmap.md) — what is coming
-
-**Putting it to work**
-
-- 📖 [The Orchestration Environment](docs/orchestration-environment.md) — the access layer, and how to build one
-- 📖 [Reference Implementations](docs/reference-implementations.md) — three patterns, each graded
-- 📖 [How AI Fails — and which stage catches it](docs/how-ai-fails.md)
-- 📖 [Practices & Field Lessons](docs/field-practices.md) — including the ones that went badly
-- 📖 [Case Studies](case-studies/)
-- 📖 [Glossary](docs/glossary.md)
-
-**Beyond the framework**
-
-- 🔭 [The AI Future](hypothesis/ai-future.md) — a separate, speculative hypothesis on the race to autonomy. Not part of the framework.
-- 🤝 [Contributing](CONTRIBUTING.md)
+Three patterns applying the lifecycle to recurring problems, each stating its own limits:
+**[cross-team knowledge access](docs/reference-implementations.md#1-cross-team-knowledge-access)**,
+**[production exception remediation](docs/reference-implementations.md#2-production-exception-remediation)**,
+and **[multi-repository defect remediation](docs/reference-implementations.md#3-multi-repository-defect-remediation)**.
+All have been built and used against real organizational data. None is an always-on capability or
+adopted organization-wide.
 
 ---
 
-## Current Status
+## Explore
 
-**Latest release: v0.4.0**
+**Start** — [AGENTS.md](AGENTS.md) is the whole model as instructions for an agent; point yours at it
+and nothing else is required. If you would rather run a first cycle by hand, use the
+[quickstart](QUICKSTART.md), the [brief template](templates/orchestration-brief.md), or the
+[worked example](examples/production-exception-remediation/).
 
-- ✅ Core AI Orchestration Lifecycle
-- ✅ Principles, one per stage
-- ✅ `AGENTS.md` — the whole model as instructions an agent can run, including teaching the person it works with
-- ✅ Interactive website on GitHub Pages
-- ✅ Quickstart, brief template, and worked example
-- ✅ Experience & Expertise within Grow
-- ✅ Reference Implementations
-- ✅ Real-World Case Studies (2), both delivered outcomes
-- ✅ How AI Fails, Field Lessons, Glossary
-- ✅ Adoption — the [adoption guide](docs/09-adoption.md), the [orchestration environment](docs/orchestration-environment.md), and the agent file that carries the model into a team without anyone reading a specification
+**The framework** — [The problem](docs/01-problem.md) · [Philosophy](docs/02-philosophy.md) ·
+[Principles](docs/03-principles.md) · [The model in full](docs/04-framework.md)
+
+**Each part in depth** — [Context engineering](docs/05-context-engineering.md) ·
+[Proof](docs/07-proof.md) · [Governance](docs/08-governance.md) · [Adoption](docs/09-adoption.md) ·
+[Roadmap](docs/10-roadmap.md)
+
+**Putting it to work** — [The orchestration environment](docs/orchestration-environment.md) ·
+[Reference implementations](docs/reference-implementations.md) · [How AI fails](docs/how-ai-fails.md) ·
+[Practices and field lessons](docs/field-practices.md) · [Case studies](case-studies/) ·
+[Glossary](docs/glossary.md)
+
+**Separate, and speculative** — [The AI Future](hypothesis/ai-future.md), a hypothesis about the race
+to autonomy. Clearly labelled, and **not part of the framework**.
 
 ---
 
