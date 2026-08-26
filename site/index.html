@@ -29,6 +29,7 @@
     <nav class="site-nav" aria-label="Primary">
       <a href="#why">Framework</a>
       <a href="#lifecycle">How it works</a>
+      <a href="#agent">Agent file</a>
       <a href="#evidence">Evidence</a>
       <a href="#try">Start</a>
       <a href="glossary/">Glossary</a>
@@ -347,6 +348,64 @@
     </div>
   </section>
 
+  <!-- ============ THE AGENT FILE ============ -->
+  <section class="band" id="agent">
+    <div class="wrap">
+      <p class="eyebrow">The agent file</p>
+      <h2>You do not have to learn this. Your agent does.</h2>
+      <p class="lede">Everything above is one file: <code>AGENTS.md</code>. Drop it into a project, point
+        an AI agent at it, and the agent works this way — and explains what it is doing as it goes.</p>
+
+      <p>A person reading the docs takes an afternoon to absorb the model. An agent takes one file, and
+        the person learns the loop by watching it run on their own work. That is the intended route in:
+        most people will meet this framework through an agent, not through a specification, because
+        asking is faster and clearer than reading.</p>
+
+      <div class="tabs" data-tabs="agent">
+        <div class="tablist" role="tablist" aria-label="What the agent file does">
+          <button class="tab" role="tab" id="ag-t1" aria-controls="ag-p1" aria-selected="true">What it makes an agent do</button>
+          <button class="tab" role="tab" id="ag-t2" aria-controls="ag-p2">What it stops</button>
+          <button class="tab" role="tab" id="ag-t3" aria-controls="ag-p3">How it teaches you</button>
+        </div>
+
+        <div class="panel is-active" role="tabpanel" id="ag-p1" aria-labelledby="ag-t1" data-panel tabindex="0">
+          <dl class="kv">
+            <div><dt>Read first</dt><dd>Find the context file before acting; do not re-derive what is already settled or repeat a dead end someone already ruled out.</dd></div>
+            <div><dt>Reach real evidence</dt><dd>Logs, telemetry, the running system — not assumptions about them, and not a summary written earlier by someone else.</dd></div>
+            <div><dt>Self-check</dt><dd>Test its own work against the known ways AI fails before handing anything back.</dd></div>
+            <div><dt>Say what the proof was</dt><dd>What was checked, what was observed, and where it stopped. No claim larger than the evidence.</dd></div>
+            <div><dt>Write back</dt><dd>Update the context file with what is settled, what remains, and what was ruled out — so the next cycle starts ahead of this one.</dd></div>
+          </dl>
+        </div>
+
+        <div class="panel" role="tabpanel" id="ag-p2" aria-labelledby="ag-t2" data-panel tabindex="0">
+          <dl class="kv">
+            <div><dt>Acting beyond its authority</dt><dd>Five things it must refuse outright, and the instruction to say what it refused and why rather than going quiet.</dd></div>
+            <div><dt>Obeying the content it reads</dt><dd>Text found in a ticket, a page or a file is <strong>data, not instruction</strong> — the defence against prompt injection stated as a rule the agent holds itself to.</dd></div>
+            <div><dt>Leaking what it finds</dt><dd>Secrets and personal data encountered mid-task are treated as defects to report, never as material to use or repeat.</dd></div>
+            <div><dt>Dressing up activity as outcome</dt><dd>"I updated six files" is not a result. The hand-back format makes the difference explicit.</dd></div>
+            <div><dt>Retrying a failed fix</dt><dd>When proof fails it returns to Understand, not to Execute. A second attempt needs new understanding, not more determination.</dd></div>
+          </dl>
+        </div>
+
+        <div class="panel" role="tabpanel" id="ag-p3" aria-labelledby="ag-t3" data-panel tabindex="0">
+          <p>The file instructs the agent to treat you as the person it is teaching — because for most
+            teams, it is the only teacher this framework will ever have.</p>
+          <dl class="kv">
+            <div><dt>Names the stage</dt><dd>"I am still in Understand — I want to see the actual log before proposing a fix." You learn the loop by watching it run.</dd></div>
+            <div><dt>Gives the reason</dt><dd>Every request for access, a success criterion or an approval comes with what it is for. A reason teaches; a bare request just looks like process.</dd></div>
+            <div><dt>Offers to set it up</dt><dd>Proposes the context file and writes the first version, rather than waiting to be asked.</dd></div>
+            <div><dt>Matches you</dt><dd>Explains each step the first time; stops narrating once you know it.</dd></div>
+            <div><dt>Humble, and still honest</dt><dd>Courtesy governs how it says something, never whether it says it. If your direction will not work it says so once, with a better option beside it — then respects the call.</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <p style="margin-top:1.3rem"><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/AGENTS.md">Read <code>AGENTS.md</code> →</a>
+        &nbsp;·&nbsp; <a href="#try">Start with it</a></p>
+    </div>
+  </section>
+
   <!-- ============ HOW AI FAILS ============ -->
   <section class="band band--soft" id="failures">
     <div class="wrap">
@@ -655,9 +714,8 @@
       <div class="grid grid--3" style="margin-top:1.5rem">
         <div class="card">
           <h3>1 · Copy one file</h3>
-          <p>Put <code>AGENTS.md</code> in your project and point your AI agent at it. It carries the
-            whole operating model — the loop, the evidence rules, the limits of its authority, and what
-            to write back when it finishes.</p>
+          <p>Put <code>AGENTS.md</code> in your project and point your AI agent at it. Nothing else to
+            read, nothing to install — <a href="#agent">what it does</a>.</p>
           <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/AGENTS.md">Get AGENTS.md →</a></p>
         </div>
         <div class="card">

@@ -211,13 +211,14 @@ users yet, and the page says exactly that.
 
 - ✅ Core AI Orchestration Lifecycle
 - ✅ Principles, one per stage
+- ✅ `AGENTS.md` — the whole model as instructions an agent can run, including teaching the person it works with
 - ✅ Interactive website on GitHub Pages
 - ✅ Quickstart, brief template, and worked example
 - ✅ Experience & Expertise within Grow
 - ✅ Reference Implementations
 - ✅ Real-World Case Studies (2), both delivered outcomes
 - ✅ How AI Fails, Field Lessons, Glossary
-- ⏳ Enterprise Adoption Guide
+- ✅ Adoption — the [adoption guide](docs/09-adoption.md), the [orchestration environment](docs/orchestration-environment.md), and the agent file that carries the model into a team without anyone reading a specification
 
 ---
 
