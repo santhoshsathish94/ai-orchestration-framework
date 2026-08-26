@@ -437,8 +437,61 @@
     </div>
   </section>
 
+  <!-- ============ WALKTHROUGH ============ -->
+  <section class="band band--soft" id="walkthrough">
+    <div class="wrap">
+      <p class="eyebrow">What it looks like in practice</p>
+      <h2>One real problem, start to finish.</h2>
+      <p class="lede">New listings stopped appearing after a data load. The investigation had already
+        run overnight without finding it. The team that built the synchronization had left the company,
+        and the mapping involved was far too large for anyone to have written down.</p>
+
+      <p>This is the ordinary shape of hard work: the knowledge was never missing, it was just no
+        longer reachable without the person who held it. Here is the whole cycle on that problem, and
+        why each piece of access earns its place.</p>
+
+      <h3 style="margin-top:1.8rem">What it reads, and what each thing answers</h3>
+      <dl class="kv" style="margin-top:0.9rem">
+        <div><dt>The repository</dt><dd>Where the sync is <em>actually</em> implemented, which is rarely where the documentation says it is.</dd></div>
+        <div><dt>Work tracking</dt><dd>What changed recently, and what the overnight investigation already ruled out — so none of it is repeated.</dd></div>
+        <div><dt>Logs and telemetry</dt><dd>Which step ran, which returned nothing, and which failed quietly without raising anything.</dd></div>
+        <div><dt>The datastore</dt><dd>What the data looks like right now, rather than what the schema implies it should look like.</dd></div>
+        <div><dt>A non-production environment</dt><dd>Somewhere to reproduce the behavior without touching a customer.</dd></div>
+        <div><dt>The running application</dt><dd>What the customer is actually seeing, which is where the whole thing started.</dd></div>
+      </dl>
+      <p class="note" style="margin-top:0.9rem">None of that is exotic. It is the same evidence an
+        experienced engineer would open, in roughly the same order. What changes is that it can be read
+        together, in one pass, by something that has not been away from this area for two years.</p>
+
+      <h3 style="margin-top:2rem">The cycle, and who holds what</h3>
+      <dl class="kv" style="margin-top:0.9rem">
+        <div><dt>Opportunity</dt><dd><span class="owner owner--human">Human</span> Says what a good outcome is: <em>listings appear again after a load</em> — not "go and look at the sync job." Naming the outcome instead of the task is what stops the work drifting into activity.</dd></div>
+        <div><dt>Understand</dt><dd><span class="owner owner--ai">AI</span> Works backwards from the customer-visible symptom through the application, the logs and the data to the source. This is the part that used to require the person who left.</dd></div>
+        <div><dt>Plan</dt><dd><span class="owner owner--human">Human</span> The cause turns out to be a single misconfigured flag between ingestion and the database. Decide the smallest change that fixes it, and who approves it.</dd></div>
+        <div><dt>Execute</dt><dd><span class="owner owner--ai">AI</span> Makes the change and raises it through the review and deployment path the team already uses. No new tooling, no separate route to production.</dd></div>
+        <div><dt>Proof</dt><dd><span class="owner owner--human">Human</span> Listings appear after the next load, and keep appearing. The original signal is gone and stays gone — the human decides when that is genuinely enough.</dd></div>
+        <div><dt>Grow</dt><dd>The reconstructed flow is written down beside the code. The next person to touch this does not need the original authors either, and does not start from nothing.</dd></div>
+      </dl>
+
+      <h3 style="margin-top:2rem">Where the human actually matters</h3>
+      <p>AI does the reading, the reconstruction, the drafting and much of the checking. It will also,
+        with total confidence, follow a wrong thread a long way — proposing a fix for the step that
+        merely <em>looks</em> broken, or declaring success because a job now completes without error
+        while the listings still are not there.</p>
+      <p>So the job changes rather than disappears. <strong>State the outcome</strong> so there is
+        something to diverge from. <strong>Notice the divergence early</strong>, while it is one wrong
+        assumption instead of a day of work built on it. <strong>Hold the approvals</strong> wherever a
+        mistake would be expensive. And <strong>decide when the evidence is actually enough</strong> —
+        that judgment is not delegable, because only a person carries the consequence of getting it
+        wrong.</p>
+
+      <div class="pull"><p>You stop doing the retrieval and start doing the direction. The work gets
+        clearer, not more automatic.</p></div>
+    </div>
+  </section>
+
   <!-- ============ HOW AI FAILS ============ -->
-  <section class="band band--soft" id="failures">
+  <section class="band" id="failures">
     <div class="wrap">
       <p class="eyebrow">How AI fails</p>
       <h2>AI fails fluently. That is the whole problem.</h2>
@@ -524,7 +577,7 @@
   </section>
 
   <!-- ============ CONTEXT & EXPERTISE ============ -->
-  <section class="band" id="context">
+  <section class="band band--soft" id="context">
     <div class="wrap">
       <p class="eyebrow">Why cycles compound</p>
       <h2>Experience is not expertise.</h2>
@@ -561,7 +614,7 @@
   </section>
 
   <!-- ============ OWNERSHIP ============ -->
-  <section class="band band--soft" id="ownership">
+  <section class="band" id="ownership">
     <div class="wrap">
       <p class="eyebrow">Humans and AI</p>
       <h2>Humans do not disappear. Their responsibility moves.</h2>
@@ -595,7 +648,7 @@
   </section>
 
   <!-- ============ SECURITY & GOVERNANCE ============ -->
-  <section class="band" id="security">
+  <section class="band band--soft" id="security">
     <div class="wrap">
       <p class="eyebrow">Security &amp; governance</p>
       <h2>No new access. Named accountability. One unsolved problem.</h2>
@@ -647,7 +700,7 @@
   </section>
 
   <!-- ============ EVIDENCE ============ -->
-  <section class="band band--soft" id="evidence">
+  <section class="band" id="evidence">
     <div class="wrap">
       <p class="eyebrow">Evidence</p>
       <h2>Real work.</h2>
@@ -711,7 +764,7 @@
   </section>
 
   <!-- ============ WHAT IT IS NOT ============ -->
-  <section class="band" id="scope">
+  <section class="band band--soft" id="scope">
     <div class="wrap">
       <p class="eyebrow">Scope</p>
       <h2>What it is not.</h2>
@@ -733,7 +786,7 @@
   </section>
 
   <!-- ============ AUTHOR ============ -->
-  <section class="band band--soft" id="author">
+  <section class="band" id="author">
     <div class="wrap">
       <p class="eyebrow">About the author</p>
       <h2>Written by a practitioner, from delivery work.</h2>
