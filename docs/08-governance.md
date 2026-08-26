@@ -136,11 +136,16 @@ needed is monitoring built for agent behavior rather than system behavior — so
 - flags access being used in ways that do not match the stated purpose;
 - raises an alert on anomalous or out-of-scope action while it is happening, not at audit time.
 
-No mature answer to this exists yet, including here. Until one does, this approach depends on a human
-paying attention — and attention scales far worse than access does. Anyone adopting it inherits that
-limitation and should decide deliberately whether it is acceptable at their blast radius.
+No mature answer to this exists yet, including here. That is a reason to build a first version, not a
+reason to wait: most organizations already collect the raw material — access logs, audit trails,
+repository and pipeline history — and comparing that record against the task the agent was given is a
+tractable starting point, even if it is coarse. Until something better exists, this approach depends
+on a human paying attention, and attention scales far worse than access does. Anyone adopting it
+inherits that limitation and should decide deliberately whether it is acceptable at their blast
+radius.
 
-Building this monitoring layer is the most valuable unsolved problem in the space.
+**This is the single highest-value thing to build**, because it is the only control that operates
+while the agent is working rather than before or after it.
 
 ## How much autonomy to grant
 

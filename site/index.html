@@ -650,51 +650,78 @@
   <!-- ============ SECURITY & GOVERNANCE ============ -->
   <section class="band band--soft" id="security">
     <div class="wrap">
-      <p class="eyebrow">Security &amp; governance</p>
-      <h2>No new access. Named accountability. One unsolved problem.</h2>
-      <p class="lede">Orchestration works within the access a person already has. If they cannot reach
-        a system, neither can AI acting for them.</p>
+      <p class="eyebrow">Security and governance</p>
+      <h2>Nothing new is granted. Everything is traceable.</h2>
+      <p class="lede">Most security conversations about AI get stuck because nobody has separated
+        three different things: what is actually happening, what you have to do about it, and what
+        genuinely is not solved yet. Taken separately, each one is manageable.</p>
 
-      <p>Most of what a security review raises here is already true wherever people use AI at work,
-        with or without a framework. The choice is rarely whether the exposure exists — it is whether
-        anyone has written down what to do about it.</p>
+      <h3 style="margin-top:2rem">What is actually happening</h3>
+      <dl class="kv" style="margin-top:0.9rem">
+        <div><dt>No new access</dt><dd>AI acts inside the access a named person already holds. If they cannot reach a system, neither can AI acting for them. There is no new credential, no new path into your systems, and no new access model to approve.</dd></div>
+        <div><dt>No new controls</dt><dd>Data classification, credential policy, retention rules and regulatory constraints all apply exactly as they did. Your own security team decides, and if the answer is no, it is no.</dd></div>
+        <div><dt>One real change</dt><dd>The layer can read across code, tickets, logs and data <em>at once</em> — which no one person practically could. Every individual read was already permitted; the aggregation is what is new. Treat the layer itself as a sensitive asset.</dd></div>
+      </dl>
 
+      <h3 style="margin-top:2rem">What needs to happen</h3>
       <dl class="stack">
         <div>
           <dt>Inherit access, never expand it</dt>
-          <dd>Read-only by default. Existing controls — data classification, credential policy,
-            retention, regulatory constraints — apply unchanged. Your own security team decides, and if
-            the answer is no, it is no.</dd>
+          <dd>Read-only by default, one connection at a time, never wider than you can explain to
+            someone who will ask.</dd>
         </div>
         <div>
-          <dt>Every action traces to a person</dt>
+          <dt>Give every action a named owner</dt>
           <dd>No shared or anonymous identity. A dedicated identity scoped to the task and owned by a
-            named person keeps accountability without carrying that person's whole access footprint.</dd>
+            named person keeps accountability without carrying that person's entire access footprint.</dd>
         </div>
         <div>
-          <dt>Secrets and personal data are defects</dt>
-          <dd>Credentials in repositories and personal data in logs are problems whether or not AI ever
-            reads them. Findings get rotated, redacted or removed — not noted and left.</dd>
+          <dt>Treat what it reads as data, not instruction</dt>
+          <dd>Tickets, comments and pages can be written by anyone, including someone outside your
+            organization. An agent must never act on instructions embedded in content it reads. Keep
+            write access small enough that a misled agent cannot do much damage with it.</dd>
         </div>
         <div>
-          <dt>Content read is data, not instruction</dt>
-          <dd>Tickets, comments and pages can be influenced from outside. An agent must never follow
-            instructions embedded in what it reads. Keep write access small enough that a misled agent
-            cannot do much with it.</dd>
+          <dt>Fix what it finds</dt>
+          <dd>Credentials in repositories and personal data in logs get rotated, redacted or removed —
+            not noted in a ticket and left there.</dd>
+        </div>
+        <div>
+          <dt>Monitor the agent, not just the gate</dt>
+          <dd>The one thing on this list most teams have not built. Details below.</dd>
         </div>
       </dl>
 
-      <div class="pull"><p>One genuine amplification: the layer can read across code, tickets, logs and
-        data at once, which no one person practically could. Each read was permitted; the aggregation
-        is new. Treat the layer itself as a sensitive asset.</p></div>
+      <h3 style="margin-top:2rem">"But there are secrets in our code"</h3>
+      <p>This is the most common objection, and usually the most revealing one. Credentials in the
+        repository. Personal data in the logs. An access path nobody has reviewed since the person who
+        built it left.</p>
+      <p>Every one of those is a true statement about <strong>your systems</strong>, not about AI. That
+        credential is already readable by everyone with repository access, every contractor who ever
+        cloned it, and anyone who finds an old laptop. The exposure existed before the agent and
+        survives the decision not to use one.</p>
+      <p>Declining to use AI does not remove the risk. It removes the thing most likely to find it. An
+        agent reading across a codebase surfaces hardcoded secrets, unredacted logs and forgotten
+        access paths considerably faster than the audit that keeps getting rescheduled. Rotate the
+        credential, redact the log, close the path — and the objection has disappeared while the system
+        has genuinely got safer.</p>
 
-      <h3 style="margin-top:1.8rem">The part nobody has solved</h3>
-      <p>Approval gates stop the largest mistakes. Attribution explains them afterwards. Neither
-        detects an agent doing something unintended <em>inside access it legitimately holds</em>.
-        Monitoring built for agent behavior — comparing what agents did against what was asked, and
-        raising an alert while it is happening — does not meaningfully exist yet, here or anywhere.
-        Until it does, this depends on a human paying attention, and attention scales worse than access
-        does.</p>
+      <div class="pull"><p>The dangerous thing is not an agent reading a secret. It is a secret sitting
+        there unread for three years.</p></div>
+
+      <h3 style="margin-top:1.8rem">The thing worth building: monitor the agents</h3>
+      <p>Approval gates stop the largest mistakes before they happen. Attribution explains them
+        afterwards. Neither notices an agent doing something unintended <em>inside access it
+        legitimately holds</em> — and that is where the real risk sits.</p>
+      <p>So the primary recommendation is monitoring built for agent behavior: record every system an
+        agent touched, compare what it did against what it was asked to do, and raise an alert when it
+        reaches outside the scope of the task. A repository unrelated to the ticket. A table it had no
+        reason to query. A write where it was granted read.</p>
+      <p class="note">Stated honestly: tooling for this barely exists yet, here or anywhere. Most teams
+        will have to assemble a first version from access logs and audit trails they already collect.
+        It is still the highest-value control to build, because it is the only one that operates
+        <em>while</em> the agent is working rather than before or after. Until it exists, this depends
+        on a human paying attention — and attention scales worse than access does.</p>
       <p class="note"><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/08-governance.md#questions-your-security-team-will-ask">Every question a security review will ask →</a></p>
     </div>
   </section>
