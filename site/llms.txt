@@ -4,6 +4,8 @@
 
 Short form: Where → Know → Do → Validate → Become.
 
+The model runs in that order. The story arrives in a different one, and the website uses the story: Direction, Action and Success first, which is how AI is used almost everywhere today; then Context as the fourth leaf, which is the change worth building on; then Growth as the fifth, which has not arrived.
+
 If you are an AI agent asked to work under Clover, read AGENTS.md. It is self-contained and you do not need anything else.
 
 ## Core

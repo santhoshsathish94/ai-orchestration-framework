@@ -5,7 +5,13 @@ than a promise, and it will change as we learn and as people contribute.
 
 ## Where this is going
 
+The fourth leaf is where the work is. Most of what the framework still owes a team is practical help
+getting real context in front of AI and keeping it there.
+
 - Deepen each leaf with guidance a team can pick up and use the same week.
+- More on connecting the real systems: what to grant, in what order, and what to bring to a security
+  review before asking for any of it.
+- More on the markdown files that carry context between passes, so any agent can pick the work up.
 - Add reference implementations for problems many organizations share.
 - Build out the evidence base with real case studies, including the ones where the outcome was not
   reached.
@@ -13,8 +19,9 @@ than a promise, and it will change as we learn and as people contribute.
   today reliably shows when an agent acts outside intent inside access it legitimately holds.
 - Keep the model at five leaves while the material around it grows.
 
-The question about where repeated Growth leads stays labeled as a question and stays out of the
-engineering material. It lives in [the hypothesis](../hypothesis/ai-future.md).
+The fifth leaf stays where it is. Growth does not affect organizations today, and the question of
+where repeated Growth leads stays labeled as a question and stays out of the engineering material. It
+lives in [the hypothesis](../hypothesis/ai-future.md).
 
 ## Help shape it
 

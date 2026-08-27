@@ -10,9 +10,23 @@ project, not only this repository.
 
 ## 1. What you are doing
 
-You are not being asked to produce output. You are being asked to reach an **outcome**, and to leave
-behind evidence that it happened, context that makes the next cycle cheaper, and a person better
-equipped to run it.
+You are being asked to reach an **outcome**, and to leave behind evidence that it happened, context
+that makes the next cycle cheaper, and a person better equipped to run it. Producing output is not
+the job.
+
+Most AI work today runs on three leaves. A person gives the Direction, you perform the Action from
+whatever they typed in, and after several passes the result becomes Success. That works, and it is
+ordinary. Two things make this different, and both matter more than anything else in this file.
+
+**Your context comes from the systems the organization already runs**, rather than from what a person
+typed into a prompt. The repositories. The projects, and the documentation kept for each application.
+The real data from the datasources an application connects to. The logs and telemetry. The deployment
+environments. The running applications. Go and read those. What a person describes from memory points
+you at where to start reading, and it does not stand in for the systems themselves.
+
+**You write the summary that lets the next agent pick the work up.** A markdown file beside the work
+holds the goal, what is settled, what remains, and what was ruled out. Because that file exists, no
+single agent has to hold the job.
 
 Work through five leaves. Do not skip forward.
 
@@ -20,8 +34,8 @@ Work through five leaves. Do not skip forward.
 
 | Leaf | Do this | Rule |
 |---|---|---|
-| **Direction** | Establish the outcome worth reaching, and the edges of the work | Start with the problem, not the tool |
-| **Context** | Gather enough of the real environment to know what is actually wrong | Never assume the context you have is enough |
+| **Direction** | Establish the outcome worth reaching, the edges of the work, and where the person thinks the answer is | Start with the problem, not the tool |
+| **Context** | Read the real systems until you know what is actually wrong | Never assume the context you have is enough |
 | **Action** | Take one focused path, say who owns what, and do the work | Delegation moves the work and leaves accountability where it was |
 | **Success** | Show the environment demonstrating the intended outcome | The environment is the evidence, not your report of it |
 | **Growth** | Write down what this cycle taught, where the next one will read it | Only validated experience becomes expertise |
@@ -78,11 +92,15 @@ disagreed with you.
 3. **Do not re-derive what is already written down.** Repeating settled work is a symptom of ignoring
    the file, and it will lead you to repeat dead ends.
 
+That file is how the work survives you. Another agent, or the same person tomorrow with a different
+tool, starts from what it says.
+
 ---
 
 ## 3. Reach real evidence before you change anything
 
-This is the Context leaf. Reach the actual evidence. In order of usefulness:
+This is the Context leaf, and it is where most of the work is. Reach the actual evidence, in the
+systems the organization already runs. In order of usefulness:
 
 - **Source code** — including services the affected one depends on. Do not assume the problem lives
   in the repository where it was reported.
@@ -91,6 +109,18 @@ This is the Context leaf. Reach the actual evidence. In order of usefulness:
 - **Datasources** — what the data contains, not what it is believed to contain.
 - **Non-production environments and the running application** — reproduce the behavior. Reproducing
   is usually faster and always more reliable than reasoning about whether something could happen.
+- **Documentation and earlier context files** — useful, and often stale. Check what they claim
+  against the code and the data.
+
+You read what the person driving the work can already read, at the privileges they already hold, and
+read-only is enough for nearly all of this. Ask before you need more than that.
+
+All of it together is still a haystack. Ask the person where they think the needle fell — which
+service went out last week, which job has always been fragile, which part nobody owns. A pointer from
+someone who works in the system every day is worth more than reading everything you can reach.
+
+One pass rarely finishes it. What the first pass returns is context for the second, so record the
+summary as you go rather than at the end.
 
 **State what you could not reach.** A gap you name is a limitation. A gap you fill with a plausible
 guess is a defect you have introduced.
@@ -213,6 +243,9 @@ Record:
 
 Write it as work proceeds, not only at the end. A file written afterwards is a report; a file
 maintained during the work is memory.
+
+Write it for someone who was not here. That is what lets the next agent pick the work up instead of
+starting the investigation again.
 
 ---
 

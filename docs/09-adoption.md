@@ -7,6 +7,21 @@ This page carries more weight than the rest of the framework. Access can be arra
 be written in a week. Whether people actually work this way is what decides whether any of it
 mattered.
 
+## What is actually being adopted
+
+A team already using AI is already running three of the leaves. Somebody gives the Direction, AI
+performs the Action from whatever that person typed in, and after several passes the result becomes
+Success. That part needs no rollout.
+
+What gets adopted is the fourth leaf. AI reads the systems the organization already runs — the
+repositories, the projects and their documentation, the real data, the logs and telemetry, the
+deployment environments, the running applications — instead of reading a description somebody typed
+from memory. Alongside it, the people who work in a system every day start saying where the answer
+probably is, because the systems are a haystack and a pointer is worth more than a longer
+description.
+
+The rest of this page is about getting that leaf in place and keeping it there.
+
 ## Nothing to migrate onto
 
 Orchestration sits above the systems a team already runs. The work already happens somewhere —
@@ -18,19 +33,22 @@ That is the practical reason adoption can start small. There is no platform deci
 migration to fund. A team that stops is left with exactly what it had.
 
 There is still work in it. The layer needs access to the places the answers live, and that access
-should be scoped on purpose: read-only where reading is enough, and human approval kept wherever a
-mistake would be expensive or hard to reverse. [The orchestration
-environment](orchestration-environment.md) covers what to connect and in what order.
+should be scoped on purpose: read-only where reading is enough, mirroring what the person driving the
+work can already see, and human approval kept wherever a mistake would be expensive or hard to
+reverse. [The orchestration environment](orchestration-environment.md) covers what to connect and in
+what order, and [governance](08-governance.md#questions-your-security-team-will-ask) covers the
+questions a security team will ask before any of it is granted.
 
 ## The leaves do not cost the same to adopt
 
-**Direction** costs habit and nothing else. Somebody states the outcome, the constraints, and what
-stays out of scope before the work starts. A team can begin that today with no access, no tooling and
-no approval to wait for.
+**Direction** costs habit and nothing else. Somebody states the outcome, the constraints, what stays
+out of scope, and where they think the answer is, before the work starts. A team can begin that today
+with no access, no tooling and no approval to wait for.
 
-**Context** is the first real investment, and it is where most of the early value shows up. Read-only
-reach into the code, the tickets, the logs and the data lets AI reason about the actual problem
-instead of a description of it.
+**Context** is the real investment, and it is where most of the early value shows up. Read-only reach
+into the code, the tickets, the logs and the data lets AI reason about the actual problem instead of
+a description of it. It is also the leaf that needs someone to negotiate access, so it is the one
+that stalls.
 
 **Action** widens on its own once Direction and Context are steady. What AI is trusted to carry
 follows what has already held up in work of that kind.
@@ -39,8 +57,9 @@ follows what has already held up in work of that kind.
 checked, what they observed, and where they stopped find out quickly how much of their reporting had
 been assertion.
 
-**Growth** is the leaf teams skip, because the work feels finished when the change ships. It is also
-the only leaf that makes the next cycle cheaper than the last one.
+**Growth** is the smallest of the five today, and the larger form of it has not arrived. What a team
+can do now is write down what a cycle taught, beside the work, so the next cycle starts from it. Most
+teams skip it, because the work feels finished when the change ships.
 
 ## A sequence that works
 
@@ -49,22 +68,25 @@ the only leaf that makes the next cycle cheaper than the last one.
    survive contact with a busy week.
 2. **Teach the cycle rather than the tool.** Direction → Context → Action → Success → Growth outlives
    whichever product the team is using this quarter.
-3. **Give the layer read-only access to the real systems first.** Most early value is in answering
-   questions from actual sources — code, logs, job definitions, data — and reading cannot break
-   anything. It is the cheapest way to find out whether the output can be trusted.
+3. **Connect one real source, read-only.** The repository, then the logs, then the ticket history,
+   then a datasource. Reading cannot break anything, so it is the cheapest way to find out whether
+   the output can be trusted, and one connection at a time keeps the security conversation small.
 4. **Wire it into the environments and pipelines that already exist.** Non-production environments and
    existing pipeline triggers are where checking earns its place without new risk.
 5. **Let people ask in whatever way they find natural.** When most questions can be asked and answered
    in conversation, the bottleneck stops being whoever knows the system best.
 6. **Widen what AI decides as results hold**, following
    [the rules for widening](04-framework.md#widening-what-ai-decides) rather than enthusiasm.
-7. **Write down what each cycle taught**, next to the code, so the next person starts from it.
-   [Context engineering](05-context-engineering.md#where-context-lives) covers where that lives.
+7. **Keep a markdown file beside the work** holding the goal, what is settled, what remains, and what
+   was ruled out. That file is what lets any agent pick the job up, so the work stops depending on one
+   agent or one session. [Context engineering](05-context-engineering.md#where-context-lives) covers
+   where it lives.
 
 ## From individual skill to collective capability
 
 A few people being good at AI does not make an organization capable. The value compounds when
 context, practices and lessons are shared, and it stalls when they stay with whoever learned fastest.
+The context files are most of the sharing mechanism, which is why writing them is worth insisting on.
 
 Two things make the sharing happen. People need room to try something and have it not work, because a
 team that is penalized for a failed attempt stops reporting the failed attempts. And somebody has to
@@ -82,6 +104,7 @@ What is worth watching:
 - Whether people outside the original group start working this way without being asked.
 - Whether claims arrive with what was checked and where it stopped, unprompted.
 - Whether the context files from earlier cycles are being read, and not only written.
+- Whether anyone had to reconstruct work a previous session already did.
 
 ## Related
 

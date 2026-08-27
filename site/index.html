@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Clover — a five-leaf model for working with AI</title>
-<meta name="description" content="Clover is a five-leaf model for doing real work with AI inside it: Direction, Context, Action, Success, Growth.">
+<meta name="description" content="Clover is a five-leaf model for doing real work with AI inside it. Three leaves is how most teams work today. Context is the fourth leaf, and it changes the result.">
 <link rel="canonical" href="https://santhoshsathish94.github.io/ai-orchestration-framework/">
 <meta property="og:title" content="Clover — Direction, Context, Action, Success, Growth">
-<meta property="og:description" content="A five-leaf model for doing real work with AI inside it. Human intent becomes an outcome the real environment confirms, and the system keeps what the cycle taught.">
+<meta property="og:description" content="A five-leaf model for doing real work with AI inside it. Three leaves is how most teams work with AI today. The fourth leaf, Context, is the one that changes the result.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://santhoshsathish94.github.io/ai-orchestration-framework/">
 <!-- Served from the repo so it costs the page nothing; only scrapers fetch it. -->
@@ -43,11 +43,11 @@
       </svg>
       Clover <span>five leaves</span></a>
     <nav class="site-nav" aria-label="Primary">
-      <a href="#problem">The problem</a>
-      <a href="#direction">The five leaves</a>
+      <a href="#three-leaves">Three leaves</a>
+      <a href="#context">The fourth leaf</a>
+      <a href="#fifth-leaf">The fifth leaf</a>
       <a href="#agent">Start</a>
       <a href="#evidence">Evidence</a>
-      <a href="#fifth-leaf">The fifth leaf</a>
       <a href="glossary/">Glossary</a>
       <a href="https://github.com/santhoshsathish94/ai-orchestration-framework">GitHub</a>
     </nav>
@@ -57,7 +57,7 @@
 <main id="main">
 
   <!-- ============ HERO ============ -->
-  <section class="hero band--soft" id="overview">
+  <section class="hero" id="overview">
     <div class="wrap">
       <div class="hero__top">
         <svg class="clover clover--hero" viewBox="0 0 100 100" role="img" aria-label="Clover with all five leaves filled">
@@ -71,9 +71,9 @@
         <div>
           <p class="eyebrow">Open · Five leaves</p>
           <h1>Clover</h1>
-          <p class="lede">Clover is a five-leaf model for doing real work with AI inside it. It
-            describes how human intent becomes an outcome the real environment confirms, and what the
-            system keeps once it does.</p>
+          <p class="lede">Clover is a five-leaf model for doing real work with AI inside it. It grows
+            the way a clover does. Three leaves is how most teams work with AI today. The fourth leaf
+            is the one that changes the result. The fifth has not arrived.</p>
         </div>
       </div>
 
@@ -86,8 +86,8 @@
       </ol>
 
       <dl class="kv">
-        <div><dt>Direction</dt><dd>A person says which outcome is worth reaching, and what stays out of the work.</dd></div>
-        <div><dt>Context</dt><dd>The system reads the real environment before it acts on it.</dd></div>
+        <div><dt>Direction</dt><dd>A person says which outcome is worth reaching, and points at where the answer probably is.</dd></div>
+        <div><dt>Context</dt><dd>The system reads what the organization already has, before it acts on it.</dd></div>
         <div><dt>Action</dt><dd>The work gets planned and done inside boundaries somebody stated.</dd></div>
         <div><dt>Success</dt><dd>The environment shows that the intended outcome happened.</dd></div>
         <div><dt>Growth</dt><dd>What the cycle taught gets written where the next one will read it.</dd></div>
@@ -95,12 +95,12 @@
 
       <p style="margin-top:1.2rem">Short form: <strong>Where → Know → Do → Validate → Become</strong>.</p>
 
-      <p>Growth is not a finish line. What one cycle keeps becomes the Context the next one starts
-        from, it changes how Action gets planned, and it sometimes changes the Direction, because the
-        work showed that a different outcome was the one worth having.</p>
+      <p>That is the model in the order it runs. This page tells it in the order it arrived. Direction,
+        Action and Success came first and are ordinary. Context is the leaf that showed up recently and
+        changed what the other three are worth. Growth is the one we have not reached.</p>
 
       <div class="actions" style="margin-top:1.4rem">
-        <a class="btn btn--primary" href="#direction">Start with the first leaf</a>
+        <a class="btn btn--primary" href="#capability">Start the story</a>
         <a class="btn btn--ghost" href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/AGENTS.md">Get AGENTS.md</a>
         <a class="btn btn--text" href="https://github.com/santhoshsathish94/ai-orchestration-framework">Repository →</a>
       </div>
@@ -110,337 +110,163 @@
     </div>
   </section>
 
-  <!-- ============ THE PROBLEM ============ -->
-  <section class="band" id="problem">
+  <!-- ============ WHERE AI ALREADY IS ============ -->
+  <section class="band band--soft" id="capability">
     <div class="wrap">
-      <p class="eyebrow">The problem this solves</p>
-      <h2>Where the work usually breaks down</h2>
-      <p class="lede">Most teams already have the capability. Skilled people, and now capable AI. What
-        is missing is the part around it: knowing what the work is for, seeing the real system, doing
-        the work inside boundaries, checking the result against reality, and keeping what the cycle
-        taught.</p>
+      <p class="eyebrow">Where AI already is</p>
+      <h2>What AI can already do</h2>
+      <p class="lede">AI does expert work today. It reads a codebase it has never seen and explains how
+        the system actually behaves. It reviews a change the way a senior engineer reviews one. It
+        designs tests, it reasons about the failure paths, and it reads a diff the way a security
+        specialist reads it.</p>
 
-      <p>The same pattern shows up at every level.</p>
-      <ul>
-        <li>A person acts before understanding the problem, and the fix misses.</li>
-        <li>A team adds people to go faster, context travels badly, and the work turns into handoff and rework.</li>
-        <li>An organization gives everyone AI, and the skill stays with a few people instead of becoming shared capability.</li>
-        <li>An agent jumps to a fix and thrashes, because what was missing was information rather than capability.</li>
-      </ul>
+      <p>What changed is that the answers come from analysis rather than recall. It traces a call path
+        through unfamiliar code. It reads a stack trace against the real source and works out which
+        branch ran. It follows a symptom through the logs into the data underneath. Those answers hold
+        up when a person goes and checks them.</p>
 
-      <p>AI does not create that gap. It makes the gap easier to see, because AI acts on missing
-        context faster and more confidently than a person does.</p>
+      <dl class="kv" style="margin-top:1.4rem">
+        <div><dt>Software engineering</dt><dd>Reads unfamiliar code, explains it, and writes changes that fit the way the project is already built.</dd></div>
+        <div><dt>Quality assurance</dt><dd>Designs cases from how the system behaves rather than from the wording of the ticket, including the ones a tired person skips.</dd></div>
+        <div><dt>Security review</dt><dd>Reads a change for the class of mistake that causes incidents, and reads a whole repository for the credential nobody meant to commit.</dd></div>
+        <div><dt>Operations and incident work</dt><dd>Reconstructs what happened from logs and telemetry, at a speed that matters while an incident is still open.</dd></div>
+      </dl>
 
-      <p>Each of the five leaves below is one of those parts, with what commonly goes wrong at it.</p>
+      <p style="margin-top:1.4rem">So capability is not what most teams are short of. What decides the
+        result is what AI is given to work from, and whether anyone pointed it at the right place. The
+        rest of this page is about those two things.</p>
     </div>
   </section>
 
-  <!-- ============ LEAF 1 · DIRECTION ============ -->
-  <section class="band band--soft" id="direction">
+  <!-- ============ THREE LEAVES ============ -->
+  <section class="band" id="three-leaves">
     <div class="wrap">
-      <div class="leaf-head">
-        <svg class="clover" viewBox="0 0 100 100" role="img" aria-label="Clover with one of five leaves filled">
-          <path class="clover__stem" d="M50 48C50 68 50 80 50 95"/>
-          <use class="clover__leaf is-filled" href="#clover-leaf"/>
-          <use class="clover__leaf" href="#clover-leaf" transform="rotate(72 50 44)"/>
-          <use class="clover__leaf" href="#clover-leaf" transform="rotate(144 50 44)"/>
-          <use class="clover__leaf" href="#clover-leaf" transform="rotate(216 50 44)"/>
-          <use class="clover__leaf" href="#clover-leaf" transform="rotate(288 50 44)"/>
-        </svg>
-        <div>
-          <p class="eyebrow">Leaf 1 · Direction</p>
-          <h2>Where are we going, and what outcome are we trying to achieve?</h2>
+      <p class="eyebrow">Three leaves</p>
+      <h2>How AI is used almost everywhere today</h2>
+      <p class="lede">A person gives the Direction. AI performs the Action, working from whatever that
+        person typed in. After several passes the result becomes Success. Three leaves, and it works.</p>
+
+      <div class="arc">
+        <figure class="arc__mark">
+          <svg class="clover clover--mark" viewBox="-30 -18 160 117" role="img"
+               aria-label="A three-leaf clover. The leaves are labeled Direction, Action and Success.">
+            <path class="clover__stem" d="M50 48C50 66 50 78 50 92"/>
+            <use class="clover__leaf is-soft" href="#clover-leaf"/>
+            <use class="clover__leaf is-soft" href="#clover-leaf" transform="rotate(120 50 44)"/>
+            <use class="clover__leaf is-soft" href="#clover-leaf" transform="rotate(240 50 44)"/>
+            <text class="clover__label" x="50" y="-3" text-anchor="middle">Direction</text>
+            <text class="clover__label" x="91" y="71" text-anchor="start">Action</text>
+            <text class="clover__label" x="9" y="71" text-anchor="end">Success</text>
+          </svg>
+          <figcaption>Three leaves, 120 degrees apart. This is the common clover, and it is where
+            almost every team is.</figcaption>
+        </figure>
+
+        <div class="arc__body">
+          <dl class="kv" id="direction">
+            <div><dt>Direction</dt><dd>A person states the outcome, the constraints, and what stays out of the work.</dd></div>
+            <div><dt>Action</dt><dd>AI plans the work, writes it, tests it, and brings back something to look at.</dd></div>
+            <div><dt>Success</dt><dd>The person reads the result, corrects it, and runs the loop again until it is good enough.</dd></div>
+          </dl>
+          <p style="margin-top:1.2rem">A lot of real value comes out of this. It is also the ceiling of
+            what one person can type. Everything AI knows about the system it is changing arrives
+            through a description written from memory, in a hurry, about a codebase nobody has held in
+            their head for years.</p>
         </div>
       </div>
 
-      <p class="lede">Direction is where human intent enters the system. A person decides what is
-        worth doing, why it matters, which outcome counts, which constraints apply, and what should
-        stay out of the work.</p>
+      <p>Nothing here is wrong. It is ordinary, and ordinary is worth having. The limit is that the
+        three leaves only ever see as much of the organization as one person remembered to describe.</p>
 
-      <p>A ticket can trigger it. Direction is the outcome behind the ticket, said plainly, with the
-        edges of the work attached. A direction that says where to go and never says where not to
-        gets read generously by whoever picks it up.</p>
-
-      <h3 style="margin-top:1.8rem">Who holds what</h3>
-      <dl class="kv holds">
-        <div>
-          <dt><span class="owner owner--human">Human</span></dt>
-          <dd>The objective, the priorities, the constraints, the risk boundaries, what counts as a
-            good outcome, and what stays out of scope. Ownership of the outcome stays with a person
-            after the work is handed over.</dd>
-        </div>
-        <div>
-          <dt><span class="owner owner--ai">AI</span></dt>
-          <dd>Sharpens it. Restates the objective in its own words, asks what should happen to the
-            parts nobody mentioned, points out where two stated goals conflict, and turns a vague
-            request into something specific enough to work from.</dd>
-        </div>
-      </dl>
-
-      <h3 style="margin-top:2rem">People do not drop out of the work</h3>
-      <div class="grid grid--2" style="margin-top:1.1rem">
-        <div class="card">
-          <h3>Today</h3>
-          <p><span class="owner owner--human">Human</span></p>
-          <p>Goal · constraints · path · decisions</p>
-          <p style="margin-top:0.7rem"><span class="owner owner--ai">AI</span></p>
-          <p>Assistance · execution</p>
-        </div>
-        <div class="card">
-          <h3>Where results have held</h3>
-          <p><span class="owner owner--human">Human</span></p>
-          <p>Objective · constraints · authority · risk boundaries · what counts as success</p>
-          <p style="margin-top:0.7rem"><span class="owner owner--ai">AI</span></p>
-          <p>Context gathering · planning · execution · observation · adaptation</p>
-        </div>
-      </div>
-      <p style="margin-top:1.2rem">A team moves from the first column toward the second by earning it,
-        per context rather than everywhere at once. Widen what AI determines where outcomes of that
-        kind have repeatedly held up. Keep human approval wherever a mistake is expensive or hard to
-        reverse. Narrow it again the moment the results stop holding.
-        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/08-governance.md">How that is held in practice →</a></p>
-
-      <div class="wrong">
+      <div class="wrong" id="problem">
         <h3>What goes wrong here</h3>
-        <p>Direction gets skipped, because a ticket looks like enough. The work then optimizes for
-          closing the ticket rather than for the outcome.</p>
-        <p>Scope goes unstated. Nobody said the change must not touch payments, so nothing stopped
-          it.</p>
-        <p>Constraints given once in a long session quietly stop being honored. Boundaries belong
-          somewhere durable — the brief, the repository, the ticket — rather than only in the
-          conversation.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ LEAF 2 · CONTEXT ============ -->
-  <section class="band" id="context">
-    <div class="wrap">
-      <div class="leaf-head">
-        <svg class="clover" viewBox="0 0 100 100" role="img" aria-label="Clover with two of five leaves filled">
-          <path class="clover__stem" d="M50 48C50 68 50 80 50 95"/>
-          <use class="clover__leaf is-filled" href="#clover-leaf"/>
-          <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(72 50 44)"/>
-          <use class="clover__leaf" href="#clover-leaf" transform="rotate(144 50 44)"/>
-          <use class="clover__leaf" href="#clover-leaf" transform="rotate(216 50 44)"/>
-          <use class="clover__leaf" href="#clover-leaf" transform="rotate(288 50 44)"/>
-        </svg>
-        <div>
-          <p class="eyebrow">Leaf 2 · Context</p>
-          <h2>What do we need to know about reality before acting?</h2>
-        </div>
-      </div>
-
-      <p class="lede">Context is what the system needs to know about reality before acting. Source
-        code, documentation, architecture, real data, logs, runtime state, tests, how the system
-        actually behaves, earlier attempts, and memory carried from previous cycles.</p>
-
-      <p>Prompting is a small part of this. Where the environment can answer a question, we read the
-        environment rather than reasoning about what it probably contains. Collecting everything is
-        its own failure, because a context packed with irrelevant material buries the few facts the
-        problem turns on.</p>
-
-      <h3 style="margin-top:1.8rem">Who holds what</h3>
-      <dl class="kv holds">
-        <div>
-          <dt><span class="owner owner--human">Human</span></dt>
-          <dd>Access and judgment. Which systems may be read, which data may be used, which sources
-            can be trusted, and when the context in hand is good enough to act on.</dd>
-        </div>
-        <div>
-          <dt><span class="owner owner--ai">AI</span></dt>
-          <dd>Most of the gathering. Reading code, tracing a call path, pulling telemetry,
-            reconstructing an incident from logs, finding the earlier attempt nobody remembered. It
-            also reports what it could not reach, and that part matters most.</dd>
-        </div>
-      </dl>
-
-      <p class="note" style="margin-top:1.4rem">A gap an agent names is a limitation. A gap it fills
-        with a plausible guess is a defect somebody now has to find.
-        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/05-context-engineering.md">Context engineering →</a></p>
-
-      <div class="wrong">
-        <h3>What goes wrong here</h3>
-        <p>The plausible answer. A model working from thin context produces something that reads
-          correctly and describes a system that does not exist. Searching for the exact string it
-          cited usually settles it.</p>
-        <p>A root cause that merely fits the symptom. The fix that follows is well built and changes
-          nothing.</p>
-        <p>Agreement instead of judgment. Propose a theory and AI will support it, then propose the
-          opposite and it will support that too. Asking for the evidence against a theory is worth as
-          much as asking for the evidence for it.</p>
-        <p>Hoarding. A context stuffed with everything reachable is harder to reason from than a
-          context with the right few things in it.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ LEAF 3 · ACTION ============ -->
-  <section class="band band--soft" id="action">
-    <div class="wrap">
-      <div class="leaf-head">
-        <svg class="clover" viewBox="0 0 100 100" role="img" aria-label="Clover with three of five leaves filled">
-          <path class="clover__stem" d="M50 48C50 68 50 80 50 95"/>
-          <use class="clover__leaf is-filled" href="#clover-leaf"/>
-          <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(72 50 44)"/>
-          <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(144 50 44)"/>
-          <use class="clover__leaf" href="#clover-leaf" transform="rotate(216 50 44)"/>
-          <use class="clover__leaf" href="#clover-leaf" transform="rotate(288 50 44)"/>
-        </svg>
-        <div>
-          <p class="eyebrow">Leaf 3 · Action</p>
-          <h2>What should we do, and how should the work happen?</h2>
-        </div>
-      </div>
-
-      <p class="lede">Action covers deciding how the work should happen and then doing it. Reasoning,
-        planning, tool and model choice, orchestration across agents, code changes, tests, debugging,
-        and interaction with whatever environments the work touches.</p>
-
-      <p>Planning and doing sit on one leaf on purpose. The plan usually changes once the work meets
-        reality, and keeping the two together makes that change ordinary rather than an exception to
-        explain.</p>
-
-      <h3 style="margin-top:1.8rem">Who holds what</h3>
-      <dl class="kv holds">
-        <div>
-          <dt><span class="owner owner--human">Human</span></dt>
-          <dd>The boundaries and the approvals. Which decisions need a person before they happen,
-            what may run unattended, and who owns each part when the work is split. Delegation moves
-            the work and leaves accountability where it was.</dd>
-        </div>
-        <div>
-          <dt><span class="owner owner--ai">AI</span></dt>
-          <dd>Most of the work, inside those boundaries. Choosing an approach, sequencing the steps,
-            picking tools, running subagents where parts are genuinely independent, implementing,
-            testing, and coming back when the evidence contradicts the plan.</dd>
-        </div>
-      </dl>
-
-      <h3 style="margin-top:2rem">Spend capability where it counts</h3>
-      <p>A strong model holds the plan and owns the outcome. Cheaper models do scoped work beneath it
-        as subagents, and the owning model checks and corrects what comes back. They are supervised
-        rather than trusted.</p>
-      <p>That costs far less than running everything at the top tier, and it produces better results
-        than running everything at the bottom, because accountability stays in one place. At one
-        person's scale the saving is modest. Across an organization it compounds, and so does the
-        waste if nobody looks at it.
-        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/orchestration-environment.md#spend-capability-where-it-counts">How to divide the work →</a></p>
-
-      <div class="wrong">
-        <h3>What goes wrong here</h3>
+        <p>The plausible answer. Working from a thin description, a model produces something that reads
+          correctly and describes a system that does not exist. Searching for the exact string it cited
+          usually settles it.</p>
+        <p>Constraints given once in a long session quietly stop being honored, because the only place
+          they ever lived was the conversation.</p>
         <p>Thrash. A change fails, the next attempt is a variation of the same change, and each one
-          sounds as confident as the last. The second failed attempt is the signal to stop and go
-          back to Context.</p>
-        <p>Misplaced parallelism. Splitting work that shares state costs more in coordination and
-          rework than it saves.</p>
+          sounds as confident as the last. No new information arrived between the two.</p>
         <p>Motion read as progress. AI removes the effort cost of starting work and leaves the
           attention cost of directing it, so human attention stays the scarce resource.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ LEAF 4 · SUCCESS ============ -->
-  <section class="band" id="success">
+  <!-- ============ THE FOURTH LEAF · CONTEXT ============ -->
+  <section class="band band--soft" id="context">
     <div class="wrap">
-      <div class="leaf-head">
-        <svg class="clover" viewBox="0 0 100 100" role="img" aria-label="Clover with four of five leaves filled">
-          <path class="clover__stem" d="M50 48C50 68 50 80 50 95"/>
-          <use class="clover__leaf is-filled" href="#clover-leaf"/>
-          <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(72 50 44)"/>
-          <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(144 50 44)"/>
-          <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(216 50 44)"/>
-          <use class="clover__leaf" href="#clover-leaf" transform="rotate(288 50 44)"/>
-        </svg>
-        <div>
-          <p class="eyebrow">Leaf 4 · Success</p>
-          <h2>Did reality validate the intended outcome?</h2>
+      <p class="eyebrow">The fourth leaf</p>
+      <h2>Context is the leaf that just arrived</h2>
+      <p class="lede">Context typed in by hand has stopped being the useful kind. AI can hold far more
+        context than it could before, and that is the change worth building on. The context that
+        matters now is the material the organization already has.</p>
+
+      <div class="arc">
+        <figure class="arc__mark">
+          <svg class="clover clover--mark" viewBox="-30 -18 160 117" role="img"
+               aria-label="A four-leaf clover. The leaves are labeled Direction, Context, Action and Success, with Context drawn solid as the leaf that just arrived.">
+            <path class="clover__stem" d="M50 48C50 66 50 78 50 92"/>
+            <use class="clover__leaf is-soft" href="#clover-leaf" transform="rotate(315 50 44)"/>
+            <use class="clover__leaf is-new" href="#clover-leaf" transform="rotate(45 50 44)"/>
+            <use class="clover__leaf is-soft" href="#clover-leaf" transform="rotate(135 50 44)"/>
+            <use class="clover__leaf is-soft" href="#clover-leaf" transform="rotate(225 50 44)"/>
+            <text class="clover__label" x="13" y="12" text-anchor="end">Direction</text>
+            <text class="clover__label clover__label--now" x="87" y="12" text-anchor="start">Context</text>
+            <text class="clover__label" x="87" y="82" text-anchor="start">Action</text>
+            <text class="clover__label" x="13" y="82" text-anchor="end">Success</text>
+          </svg>
+          <figcaption>Four leaves, 90 degrees apart. Context is drawn solid because it is the leaf
+            that just arrived, and it is the rare one.</figcaption>
+        </figure>
+
+        <div class="arc__body">
+          <h3>What context means now</h3>
+          <ul>
+            <li>The repositories.</li>
+            <li>The many projects, and the documentation kept for each application.</li>
+            <li>The actual data, from every datasource the application connects to.</li>
+            <li>The logs and telemetry the application produces.</li>
+            <li>The deployment environments.</li>
+            <li>The running applications and websites themselves.</li>
+          </ul>
+          <p>None of that has to be written out by a person first. It is already there, and it is
+            already true, which is more than can be said for most descriptions of it.</p>
         </div>
       </div>
 
-      <p class="lede">Success means the real environment demonstrates the intended outcome. The
-        environment is the evidence. An AI reporting that it worked, a plausible explanation, a
-        confident tone, and a high model score all sit outside that.</p>
+      <h3 style="margin-top:2.2rem">Access, and no new access model</h3>
+      <p>None of it gets handed over at once. A person gets access to what they already have access to,
+        at the privileges they already hold. Read-only is enough to start with, and one connection at a
+        time is enough to learn from. No new credential is created and no new path into the systems
+        opens up.</p>
+      <p class="note">Security teams have specific questions about this, and they deserve specific
+        answers rather than reassurance. Those answers are set out further down.
+        <a href="#security">What a security review will actually ask →</a></p>
 
-      <p>Evidence can be a test that fails without the change and passes with it, a before-and-after
-        measurement, telemetry, a non-production run, a production signal that disappears and stays
-        gone, or a user confirming the outcome.</p>
+      <h3 style="margin-top:2rem">The needle and the haystack</h3>
+      <p>Connecting all of it does not finish the job. An organization's systems are a haystack, and
+        the thing worth finding is a needle somewhere in it. Expecting AI to search the whole haystack
+        does not work, and it costs a lot to watch it try.</p>
+      <p><strong>That is what changes Direction.</strong> The people who work on the system every day
+        know roughly where the needle fell. They know which service went out last week, which job has
+        always been fragile, and which team owns the part nobody writes down. So Direction changes
+        shape. Rather than describing the task in detail, it says which part of the system to read
+        first.</p>
+      <p>Direction that points, together with context that is real, is what produces Success worth
+        having. Both parts already exist in most organizations, which is why this is reachable for
+        ordinary teams and not only for the ones with a research budget.</p>
 
-      <h3 style="margin-top:1.8rem">Say what the evidence actually is</h3>
-      <p>Not every task has telemetry, and pretending otherwise makes this leaf unusable for most
-        work. What matters is describing what was actually done to check, in words a reader can act
-        on. Four questions do the work.</p>
-      <ul>
-        <li>Did anyone verify it, or is someone asserting it?</li>
-        <li>Does it hold up again?</li>
-        <li>Did the thing we cared about move?</li>
-        <li>Did it hold where it counts?</li>
-      </ul>
-      <p>State what you checked, what you observed, and where you stopped. Stopping early is fine and
-        often correct, because a small change can be genuinely complete once a test covers it and
-        production observation is not always available or worth its cost. What causes damage is
-        describing weak evidence in the language of strong evidence. "Validated in the test
-        environment, not yet observed in production" is a complete and honest claim.</p>
-
-      <h3 style="margin-top:2rem">When Success fails</h3>
-      <p>A failed check is a normal outcome. When the evidence does not support the intended outcome,
-        the work returns to <strong>Context</strong> rather than to Action. A second attempt on the
-        same information reaches the same place, faster. It needs something new: what the environment
-        did instead, which assumption broke, which signal nobody had looked at yet.
-        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/07-success.md">Success in practice →</a></p>
-
-      <h3 style="margin-top:2rem">Who holds what</h3>
-      <dl class="kv holds">
-        <div>
-          <dt><span class="owner owner--human">Human</span></dt>
-          <dd>The standard. What counts as sufficient evidence for this work, and what risk is
-            acceptable if the answer turns out to be wrong. Approval for anything expensive or hard
-            to reverse stays with a person.</dd>
-        </div>
-        <div>
-          <dt><span class="owner owner--ai">AI</span></dt>
-          <dd>Runs the checks, gathers the evidence, and reports it accurately, including what did
-            not work and what it could not check.</dd>
-        </div>
-      </dl>
-
-      <div class="wrong">
-        <h3>What goes wrong here</h3>
-        <p>Evidence described more strongly than it is. "Verified" covering a single manual look. A
-          merged change reported as a resolved problem.</p>
-        <p>Reported success that nobody ran. Describing a completed task and completing it are
-          similar acts for a language model, so the artifact is worth more than the claim.</p>
-        <p>Stopping at the artifact. The build passed, the work is treated as done, and nobody checks
-          whether the original signal changed.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ LEAF 5 · GROWTH ============ -->
-  <section class="band band--soft" id="growth">
-    <div class="wrap">
-      <div class="leaf-head">
-        <svg class="clover" viewBox="0 0 100 100" role="img" aria-label="Clover with all five leaves filled">
-          <path class="clover__stem" d="M50 48C50 68 50 80 50 95"/>
-          <use class="clover__leaf is-filled" href="#clover-leaf"/>
-          <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(72 50 44)"/>
-          <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(144 50 44)"/>
-          <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(216 50 44)"/>
-          <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(288 50 44)"/>
-        </svg>
-        <div>
-          <p class="eyebrow">Leaf 5 · Growth</p>
-          <h2>What did the system become or learn?</h2>
-        </div>
-      </div>
-
-      <p class="lede">Growth is what the system accumulates across repeated cycles: persistent
-        memory, experience, learned patterns, expertise, better planning, better tool choice, more
-        capability than it had before.</p>
-
-      <p>The model does not do this by remembering. A session ends and its working memory goes with
-        it. What makes the difference is plain markdown files committed alongside the code, written
-        while the work happens rather than at the end.</p>
+      <h3 style="margin-top:2rem">It runs in a loop</h3>
+      <p>One pass rarely finishes anything. What comes back from the first pass is context for the
+        second: the file that turned out to matter, the log line nobody had read, the theory that
+        died. Each pass is better because the context is better. Running the same request again on the
+        same information lands in the same place.</p>
+      <p>Markdown files kept beside the work are a plain way to hold that. They carry the goal, what is
+        settled, what remains, and what was ruled out, and they get reviewed with the change like any
+        other file. The summary in them is what matters most. With it written down, no single agent has
+        to hold the job. Any agent can read it and carry on, and so can a colleague who picks the work
+        up on Monday.</p>
 
       <div class="grid grid--2" style="margin-top:1.4rem">
         <div class="card card--flat">
@@ -453,59 +279,145 @@
           </dl>
         </div>
         <div class="card card--flat">
-          <h3>Why it changes the outcome</h3>
-          <p>Anyone can pick the work up — a colleague, a different agent, the same agent tomorrow —
-            and start from what is already established instead of re-deriving it. Re-derivation is
-            where both the cost and the drift come from.</p>
-          <p style="margin-top:0.7rem">The file travels with the change and gets reviewed with it, so
-            it cannot quietly disagree with a wiki nobody opens.</p>
+          <h3>Spend capability where it counts</h3>
+          <p>A strong model holds the plan and owns the outcome. Cheaper models do scoped work beneath
+            it as subagents, and the owning model checks and corrects what comes back.</p>
+          <p style="margin-top:0.7rem">That costs far less than running everything at the top tier, and
+            it holds up better than running everything at the bottom, because accountability stays in
+            one place.
+            <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/orchestration-environment.md#spend-capability-where-it-counts">How to divide the work →</a></p>
         </div>
       </div>
-
-      <h3 style="margin-top:2rem">Experience and expertise</h3>
-      <p>Experience is what one cycle produced: what was tried, the context it ran in, the evidence
-        observed, and the outcome. Expertise is the reusable pattern that emerges once several
-        validated experiences point the same way. One cycle should not become a rule.</p>
-      <p>The expertise that survives this leaf becomes part of the Context the next cycle starts
-        from, which is how capability compounds without adding leaves to the model.</p>
 
       <h3 style="margin-top:2rem">Who holds what</h3>
       <dl class="kv holds">
         <div>
           <dt><span class="owner owner--human">Human</span></dt>
-          <dd>Judgment about what is worth keeping, what can safely be shared, and where a captured
-            lesson has gone stale. An experience recorded wrongly spreads, and somebody has to
-            notice.</dd>
+          <dd>Access and judgment. Which systems may be read, which data may be used, where the needle
+            probably fell, and when the context in hand is good enough to act on.</dd>
         </div>
         <div>
           <dt><span class="owner owner--ai">AI</span></dt>
-          <dd>Captures the experience while it is still accurate, writes it where the next cycle will
-            read it, notices patterns across cycles, and applies them when a similar problem shows
-            up.</dd>
+          <dd>Most of the gathering. Reading code, tracing a call path, pulling telemetry,
+            reconstructing an incident from logs, finding the earlier attempt nobody remembered. It
+            also reports what it could not reach, and that part matters most.</dd>
         </div>
       </dl>
 
+      <h3 style="margin-top:2rem">People do not drop out of the work</h3>
+      <div class="grid grid--2" style="margin-top:1.1rem">
+        <div class="card">
+          <h3>Three leaves</h3>
+          <p><span class="owner owner--human">Human</span></p>
+          <p>Goal · constraints · path · decisions</p>
+          <p style="margin-top:0.7rem"><span class="owner owner--ai">AI</span></p>
+          <p>Assistance · execution</p>
+        </div>
+        <div class="card">
+          <h3>Four leaves, where results have held</h3>
+          <p><span class="owner owner--human">Human</span></p>
+          <p>Objective · constraints · authority · risk boundaries · where to look · what counts as success</p>
+          <p style="margin-top:0.7rem"><span class="owner owner--ai">AI</span></p>
+          <p>Context gathering · planning · execution · observation · adaptation</p>
+        </div>
+      </div>
+      <p style="margin-top:1.2rem">A team moves from the first column toward the second by earning it,
+        per context rather than everywhere at once. Widen what AI determines where outcomes of that
+        kind have repeatedly held up. Keep human approval wherever a mistake is expensive or hard to
+        reverse. Narrow it again the moment the results stop holding.
+        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/08-governance.md">How that is held in practice →</a></p>
+
       <div class="wrong">
         <h3>What goes wrong here</h3>
-        <p>Nothing is captured, because the work closed when the change shipped.</p>
-        <p>Everything is captured, and the pile of learnings becomes noise nobody reads.</p>
-        <p>A single lucky outcome gets promoted into a rule the system then follows everywhere. A
-          wrong conclusion written into memory compounds, because every later cycle starts from
-          it.</p>
+        <p>Hoarding. A context stuffed with everything reachable is harder to reason from than a
+          context with the right few things in it.</p>
+        <p>A gap filled with a guess. A gap an agent names is a limitation. A gap it fills with a
+          plausible value is a defect somebody now has to find.</p>
+        <p>Agreement instead of judgment. Propose a theory and AI will support it, then propose the
+          opposite and it will support that too. Asking for the evidence against a theory is worth as
+          much as asking for the evidence for it.</p>
+        <p>A root cause that merely fits the symptom. The fix that follows is well built and changes
+          nothing.</p>
+        <p>Success taken on the model's word. The environment is the evidence, so a check means a test
+          that fails without the change, a measurement, a signal that disappears and stays gone, or a
+          person confirming the outcome. When the evidence does not support the outcome, the work goes
+          back to Context rather than straight to another attempt.</p>
       </div>
 
-      <p class="note" style="margin-top:1.6rem">The five leaves in full:
-        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/04-framework.md">the model</a> ·
+      <p class="note" style="margin-top:1.6rem">
+        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/05-context-engineering.md">Context engineering</a> ·
+        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/07-success.md">Success in practice</a> ·
+        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/04-framework.md">the five leaves in full</a> ·
         <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/03-principles.md">one principle per leaf</a></p>
     </div>
   </section>
 
+  <!-- ============ THE FIFTH LEAF · GROWTH ============ -->
+  <section class="band" id="fifth-leaf">
+    <div class="wrap">
+      <p class="eyebrow">The fifth leaf</p>
+      <h2>Growth, and it has not arrived</h2>
+      <p><span class="chip">Hypothesis, not prediction</span></p>
+      <p class="lede">This leaf does not affect organizations today. Nothing in this section is
+        something a team can adopt on Monday, and it is kept separate for that reason.</p>
+
+      <div class="arc">
+        <figure class="arc__mark">
+          <svg class="clover clover--mark" viewBox="-30 -18 160 117" role="img"
+               aria-label="A five-leaf clover. The leaves are labeled Direction, Context, Action, Success and Growth, with Growth drawn as a faint outline because it has not arrived.">
+            <path class="clover__stem" d="M50 48C50 66 50 78 50 92"/>
+            <use class="clover__leaf is-soft" href="#clover-leaf"/>
+            <use class="clover__leaf is-soft" href="#clover-leaf" transform="rotate(72 50 44)"/>
+            <use class="clover__leaf is-soft" href="#clover-leaf" transform="rotate(144 50 44)"/>
+            <use class="clover__leaf is-soft" href="#clover-leaf" transform="rotate(216 50 44)"/>
+            <use class="clover__leaf is-ghost" href="#clover-leaf" transform="rotate(288 50 44)"/>
+            <text class="clover__label" x="50" y="-3" text-anchor="middle">Direction</text>
+            <text class="clover__label" x="95" y="33" text-anchor="start">Context</text>
+            <text class="clover__label" x="78" y="85" text-anchor="start">Action</text>
+            <text class="clover__label" x="22" y="85" text-anchor="end">Success</text>
+            <text class="clover__label clover__label--ghost" x="5" y="33" text-anchor="end">Growth</text>
+          </svg>
+          <figcaption>Five leaves, 72 degrees apart. Growth is a faint outline because it has not
+            arrived.</figcaption>
+        </figure>
+
+        <div class="arc__body">
+          <p>We have seen how far AI has come with the four-leaf way of working. Growth is what forms
+            after that.</p>
+          <p>Every problem solved with AI produces information. What the problem was, what was tried,
+            what the environment did in response, and which answer held. Across an enormous number of
+            interactions those results form patterns, and new expertise forms out of the patterns.</p>
+          <p>The phase after this one is AI that works from goals, with far less direction than it
+            needs today. If that arrives, the results could come at the scale of an entire
+            organization's output rather than one task at a time.</p>
+        </div>
+      </div>
+
+      <p class="note">This is a statement about how information accumulates in general. It is not a
+        claim that any AI provider trains on customer or enterprise work, and many state plainly that
+        they do not.</p>
+
+      <h3 style="margin-top:2.2rem">The name</h3>
+      <p>The five-leaf clover is the framework's identity. It is borrowed from <em>Black Clover</em>,
+        where a fifth leaf carries a devil association. Clover reuses the symbol and leaves the meaning
+        behind. Here the fifth leaf stands for the unknown boundary of Growth, which is uncertainty
+        rather than danger. Growth is useful, beneficial and adaptive. The open part is how far it
+        goes.</p>
+      <p>Direction asks where we should go. Growth asks what we become along the way.</p>
+
+      <p class="note" style="margin-top:1.4rem">The longer version lives in the repository, labeled as
+        a hypothesis:
+        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/hypothesis/ai-future.md">The AI Future →</a>
+        It is a thought experiment and it is <strong>not part of the engineering model</strong>.</p>
+    </div>
+  </section>
+
   <!-- ============ THE AGENT FILE ============ -->
-  <section class="band" id="agent">
+  <section class="band band--soft" id="agent">
     <div class="wrap">
       <p class="eyebrow">The agent file</p>
       <h2>One file, and the agent works this way</h2>
-      <p class="lede">Everything above is one file: <code>AGENTS.md</code>. Drop it into a project,
+      <p class="lede">The whole model is one file: <code>AGENTS.md</code>. Drop it into a project,
         point an AI agent at it, and the agent runs the five leaves — and explains what it is doing
         while it does.</p>
 
@@ -590,7 +502,7 @@
   </section>
 
   <!-- ============ WALKTHROUGH ============ -->
-  <section class="band band--soft" id="walkthrough">
+  <section class="band" id="walkthrough">
     <div class="wrap">
       <p class="eyebrow">What it looks like in practice</p>
       <h2>One real problem, start to finish.</h2>
@@ -638,7 +550,7 @@
   </section>
 
   <!-- ============ SECURITY & GOVERNANCE ============ -->
-  <section class="band" id="security">
+  <section class="band band--soft" id="security">
     <div class="wrap">
       <p class="eyebrow">Security and governance</p>
       <h2>What a security review will actually ask</h2>
@@ -714,12 +626,18 @@
   </section>
 
   <!-- ============ EVIDENCE ============ -->
-  <section class="band band--soft" id="evidence">
+  <section class="band" id="evidence">
     <div class="wrap">
       <p class="eyebrow">Evidence</p>
       <h2>What this has been run on</h2>
       <p class="lede">Two delivered outcomes and three patterns in use. Each one says where it
         stopped.</p>
+
+      <p>Success means the real environment demonstrated the intended outcome, so each entry below
+        states what was checked, what was observed, and where the work stopped. Stopping early is
+        normal and often correct. The damage comes from describing weak evidence in the language of
+        strong evidence, so "validated in the test environment, not yet observed in production" is
+        written out in full rather than rounded up.</p>
 
       <div class="tabs" data-tabs="evidence">
         <div class="tablist" role="tablist" aria-label="Evidence">
@@ -784,7 +702,7 @@
   </section>
 
   <!-- ============ WHAT IT IS NOT ============ -->
-  <section class="band" id="scope">
+  <section class="band band--soft" id="scope">
     <div class="wrap">
       <p class="eyebrow">Scope</p>
       <h2>What it is not</h2>
@@ -801,42 +719,6 @@
       <p class="note">The five leaves are not software-specific either. The same cycle is intended to
         apply across DevOps, quality assurance, security operations, product management, finance,
         human resources, and business operations. The vocabulary changes and the cycle does not.</p>
-    </div>
-  </section>
-
-  <!-- ============ THE FIFTH LEAF ============ -->
-  <section class="band band--soft" id="fifth-leaf">
-    <div class="wrap">
-      <p class="eyebrow">The fifth leaf</p>
-      <h2>The open question</h2>
-      <p><span class="chip">Hypothesis, not prediction</span></p>
-      <p class="lede">Everything above is meant to be usable today. This part is a question nobody can
-        answer yet, and it is kept separate on purpose.</p>
-
-      <p>Every cycle produces Growth. Growth persists, it compounds, and it makes the next cycle more
-        capable than the last. Nobody knows where that ends.</p>
-
-      <p>Questions worth asking:</p>
-      <ul>
-        <li>What happens when growth is shared across many systems rather than kept inside one.</li>
-        <li>What happens when it is embodied, so a system learns from the physical world.</li>
-        <li>What happens when a system starts influencing or selecting its own Direction rather than executing the one it was given.</li>
-      </ul>
-
-      <p>None of that is claimed as established, and none of it is described here as inevitable.
-        Growth is useful, beneficial and adaptive today. The open part is how far it goes.</p>
-
-      <p>Direction asks where we should go. Growth asks what we become along the way.</p>
-
-      <h3 style="margin-top:2rem">The name</h3>
-      <p>The five-leaf clover is the framework's identity. It is borrowed from <em>Black Clover</em>,
-        where a fifth leaf carries a devil association. Clover reuses the symbol and not the meaning.
-        Here the fifth leaf stands for the unknown boundary of Growth, which is uncertainty rather
-        than danger.</p>
-
-      <p class="note">The longer version lives in the repository, labeled as a hypothesis:
-        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/hypothesis/ai-future.md">The AI Future →</a>
-        It is a thought experiment and it is <strong>not part of the engineering model</strong>.</p>
     </div>
   </section>
 

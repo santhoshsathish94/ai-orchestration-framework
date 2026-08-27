@@ -73,6 +73,7 @@ code, .mono { font-family: var(--mono); font-size: 0.88em; }
 .narrow { width: min(760px, 100%); margin-inline: auto; padding-inline: var(--pad); }
 
 section[id] { scroll-margin-top: 5rem; }
+.kv[id], .wrong[id] { scroll-margin-top: 6rem; }
 
 .band { padding-block: clamp(3rem, 7vw, 5rem); border-top: 1px solid var(--line); }
 .band--soft { background: var(--soft); }
@@ -87,7 +88,7 @@ section[id] { scroll-margin-top: 5rem; }
 
 /* ---------- the clover mark ---------- */
 /* One <path id="clover-leaf"> lives in a hidden sprite at the top of the page. Every mark is that
-   one leaf <use>d five times, 72 degrees apart around (50, 44). No JS, no external assets. */
+   one leaf <use>d and rotated around (50, 44). No JS, no external assets. */
 
 .clover-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
 
@@ -102,14 +103,43 @@ section[id] { scroll-margin-top: 5rem; }
 .clover--hero { width: clamp(104px, 20vw, 160px); }
 .clover--brand { width: 26px; }
 
-/* ---------- leaf sections ---------- */
+/* The three narrative marks: three leaves, then four, then five. */
+.clover--mark { width: clamp(200px, 40vw, 420px); }
 
-.leaf-head {
-  display: grid; grid-template-columns: auto minmax(0, 1fr);
-  gap: 1rem 1.6rem; align-items: center; margin-bottom: 1.4rem;
+/* A leaf that is already part of the ordinary way of working. */
+.clover__leaf.is-soft { fill: var(--accent-soft); stroke: var(--accent-line); stroke-width: 2.5; }
+/* The leaf that just arrived. */
+.clover__leaf.is-new { fill: var(--accent); stroke: var(--accent); stroke-width: 2.5; }
+/* A leaf that has not arrived. */
+.clover__leaf.is-ghost {
+  fill: none; stroke: var(--line-2); stroke-width: 2.5; stroke-dasharray: 5 4;
 }
-.leaf-head h2 { margin-bottom: 0; }
-@media (max-width: 560px) { .leaf-head { grid-template-columns: 1fr; } }
+
+.clover__label {
+  font-family: var(--font); font-size: 8px; font-weight: 650; letter-spacing: 0.02em;
+  fill: var(--ink-2);
+}
+.clover__label--now { fill: var(--accent); font-weight: 700; }
+.clover__label--ghost { fill: var(--muted); font-weight: 550; }
+
+/* ---------- the narrative arc ---------- */
+
+.arc {
+  display: grid; gap: 1.5rem 2.4rem; align-items: center; margin-top: 1.7rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+@media (max-width: 860px) { .arc { grid-template-columns: minmax(0, 1fr); } }
+
+.arc__mark { margin: 0; display: grid; justify-items: center; gap: 0.7rem; }
+.arc__mark figcaption {
+  font-size: 0.9rem; color: var(--muted); text-align: center; max-width: 34ch;
+}
+.arc__body > :last-child { margin-bottom: 0; }
+.arc__body h3 { margin-bottom: 0.5rem; }
+.arc__body ul { margin: 0 0 1rem; padding-left: 1.15rem; }
+.arc__body li { margin-bottom: 0.2rem; }
+
+/* ---------- leaf sections ---------- */
 
 .holds dt { flex: 0 0 5.5rem; }
 .holds dd { padding-top: 0.1rem; }

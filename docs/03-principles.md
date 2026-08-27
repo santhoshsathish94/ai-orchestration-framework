@@ -4,7 +4,7 @@
 
 Clover describes how humans and AI turn intent into outcomes the environment confirms. The five leaves give the structure. These principles are what make each leaf hold up on real work.
 
-There is one principle per leaf. A team that remembers the leaves already remembers the principles.
+There is one principle per leaf. A team that remembers the leaves already remembers the principles. The first two carry most of the weight, because Direction and Context are what separate the four-leaf way of working from the three-leaf one.
 
 ---
 
@@ -14,6 +14,8 @@ There is one principle per leaf. A team that remembers the leaves already rememb
 
 Somebody accountable states what is being worked on, why it matters, which outcome is worth having, and what sits outside the work. The availability of a model, agent, or tool is not a reason to start.
 
+Direction also points. An organization's systems are a haystack, and the answer is a needle somewhere inside it. The people who work in those systems every day know roughly where it fell — which service went out last week, which job has always been fragile, which team owns the part nobody wrote down. Once AI can read the real environment, saying which part of the system to read first is worth more than a long description of the task.
+
 Direction carries the boundaries with it: what must not change, what needs approval before it happens, which systems and data the work may touch. A direction that says where to go and never says where not to gets read generously by whoever picks it up.
 
 Tickets, incidents, and requests are inputs to Direction. They rarely state the outcome on their own, and somebody still has to.
@@ -22,11 +24,13 @@ Tickets, incidents, and requests are inputs to Direction. They rarely state the 
 
 *Leaf: Context*
 
-Gather what the problem actually requires before acting on it — source, architecture, business rules, dependencies, telemetry, history, earlier attempts, constraints, and whatever the organization already knows. Where the environment can answer a question, read the environment instead of reasoning about what it probably contains.
+Context comes from the systems the organization already runs. The repositories, the documentation kept for each application, the real data behind them, the logs and telemetry, the deployment environments, and the running applications. Where the environment can answer a question, read the environment instead of reasoning about what it probably contains.
+
+Access mirrors the person. AI reads what the person driving the work can already read, at the privileges they already hold, and read-only is enough to start with. [Governance](08-governance.md#access-mirrors-the-person-not-the-ai) covers how that is held.
 
 Treat the context in hand as incomplete until it has been checked. Name the assumptions nobody tested and the signals nobody looked at, then reduce that uncertainty before making a consequential change.
 
-Collecting everything is its own failure. A context stuffed with irrelevant material buries the few facts the problem turns on. Enough context to reason correctly is the bar.
+Collecting everything is its own failure. A context stuffed with irrelevant material buries the few facts the problem turns on. Enough context to reason correctly is the bar, and reaching it takes several passes. A summary kept in a markdown file beside the work carries what each pass established, which is what lets any agent pick the job up.
 
 ## 3. Action runs inside a structured workflow
 
@@ -57,6 +61,8 @@ Every cycle produces experience — what was tried, the context it ran in, what 
 Experience becomes expertise once the same pattern has held across several cycles. A single good outcome is an anecdote, and promoting it to a rule teaches the system something that is not true yet.
 
 Where knowledge can safely be shared, it should not stay with one person or one team. Otherwise the next cycle depends on who happens to be around.
+
+What a team can do with this leaf today is modest and still worth doing. The larger form of Growth, where patterns accumulate across an enormous number of cycles until new expertise comes out of them, has not arrived.
 
 ---
 

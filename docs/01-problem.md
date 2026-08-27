@@ -4,11 +4,28 @@ Clover
 
 Direction → Context → Action → Success → Growth
 
-## The bottleneck is not capability
+## AI already does expert work
 
-Most organizations already have capability — skilled people, and now capable AI. The limit sits
-somewhere else. It is getting intent, real information, and honest evidence to travel between
-everyone doing the work, human or machine.
+AI reads a codebase it has never seen and explains how the system behaves. It reviews a change the
+way an experienced engineer reviews one. It designs test cases from how the system actually works
+rather than from the wording of a ticket. It reads a diff for the class of mistake that causes
+security incidents. During an incident it reconstructs what happened from logs and telemetry, fast
+enough to be useful while the incident is still open.
+
+Those answers come out of analysis. AI traces a call path through unfamiliar code, reads a stack
+trace against the real source to work out which branch ran, and follows a symptom through the logs
+into the data underneath. When somebody goes and checks the answer, it usually holds.
+
+So capability is not what most teams are short of. Skilled people are available, and capable AI is
+available too. Something else decides whether the work turns into an outcome anyone can rely on.
+
+## The context is still a person typing
+
+Almost everywhere AI is used today, everything it knows about the system it is changing arrives
+through a description somebody typed in. That description gets written from memory, usually in a
+hurry, about a codebase nobody has held in their head for years.
+
+The ceiling on the work is the ceiling on what one person can type.
 
 We kept seeing the same pattern at every level:
 
@@ -21,20 +38,13 @@ We kept seeing the same pattern at every level:
 - An agent makes a change, the change fails, and it tries a variation of the same change. Nothing
   was missing except information.
 
-Each one is the same failure. Capability without direction, information, and evidence rarely turns
-into a reliable outcome. AI does not create that gap, though it does make the gap obvious, because
-AI will act on missing information faster and more confidently than a person will.
+Each one is the same failure. Capability without direction, real information, and evidence rarely
+turns into a reliable outcome. AI does not create that gap. It makes the gap obvious, because AI
+will act on missing information faster and more confidently than a person will.
 
 That is the problem Clover addresses.
 
 ## Why the old way of working does not hold
-
-AI is now part of everyday work. In software engineering it generates code, writes tests, explains
-unfamiliar systems, reviews changes and produces documentation. In operations, support, and analysis
-it reads logs, reconstructs what happened, drafts responses and answers questions that used to
-require a person who already knew.
-
-Teams still struggle to rely on it.
 
 Our ways of working were built for humans working with humans. A handoff assumes a person on both
 ends. A review assumes an author who can explain their reasoning. "Done" assumes somebody looked. An
@@ -60,6 +70,17 @@ the result held up, or what the organization keeps afterward.
 Picking a model is a small decision next to designing how the work happens. A capable participant,
 human or AI, needs the information the problem actually requires, boundaries it respects, ownership
 that survives delegation, and something at the end that shows the outcome occurred.
+
+## The organization already holds the context
+
+The material that would tell AI what it needs to know exists already. The repositories. The many
+projects, and the documentation kept for each application. The real data, from every datasource the
+application connects to. The logs and telemetry. The deployment environments. The running
+applications themselves.
+
+Nobody has to write any of that out first. It is there, and it is current, which is more than can be
+said for most descriptions of it. Reaching it is what the [second leaf](05-context-engineering.md)
+covers, and it is why the model has four working leaves rather than three.
 
 Clover organizes that into five questions a team asks every time:
 
