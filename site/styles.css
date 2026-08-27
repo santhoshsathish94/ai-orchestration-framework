@@ -123,17 +123,13 @@ section[id] { scroll-margin-top: 5rem; }
 .clover__label--now { fill: var(--accent); font-weight: 700; }
 .clover__label--next { fill: var(--muted); }
 
-/* Closing question. The mark is black here and carries no label. */
-.clover--ink { width: clamp(120px, 22vw, 190px); }
+/* Closing question. The mark is black here and carries no labels. */
 .clover--ink .clover__leaf { fill: var(--ink); stroke: var(--ink); stroke-width: 2; }
 .clover--ink .clover__stem { stroke: var(--ink); }
 
-.ask { max-width: 46rem; text-align: center; }
-.ask p { max-width: none; }
-.ask .clover--ink { margin-bottom: 1.6rem; }
 .ask__q {
-  margin-top: 1.8rem; font-size: clamp(1.15rem, 2.6vw, 1.5rem); line-height: 1.45;
-  font-weight: 600; color: var(--ink); text-wrap: balance;
+  margin-top: 2rem; font-size: clamp(1.15rem, 2.6vw, 1.5rem); line-height: 1.45;
+  font-weight: 600; color: var(--ink); max-width: 44rem; text-wrap: balance;
 }
 
 /* ---------- the narrative arc ---------- */
