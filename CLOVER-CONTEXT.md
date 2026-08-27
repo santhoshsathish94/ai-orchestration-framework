@@ -38,11 +38,17 @@ every link resolves, and the website flows top to bottom with one leaf per secti
 
 | Stage | What it is |
 |---|---|
-| **Direction** | The human controls what needs to be done and decides how it should be done, and approves. Control stays with the human. |
-| **Context** | Everything the work needs to reason from. In the common clover this is only what one human can hand over. In the lucky clover it is the systems the organization already runs. |
-| **Action** | Now mostly driven by AI: reasoning, planning, tool and model selection, execution, iteration, code changes, testing, debugging. |
+| **Direction** | The human controls what matters, the desired outcome, constraints, boundaries, and what must not happen. |
+| **Context** | No longer something a human provides. It is the systems the organization already runs — repositories, projects and docs, datasources, logs and telemetry, deployment environments, the running applications. |
+| **Action** | AI determines how the work should happen and executes within those boundaries. |
 | **Success** | The intended outcome demonstrated by the real environment. Not the AI saying it worked, not a plausible answer, not model confidence. |
 | **Growth** | What AI learns, and the expertise it forms, out of the other four stages. The next stage. |
+
+**The Direction and Action wording above is canonical. Use it verbatim wherever the stages are
+defined.** It replaces an earlier version in which the human "decides how it should be done" — that
+phrasing is now wrong and must not appear anywhere. The human sets the outcome and the boundaries.
+AI works out the how inside them. Anything that gives the human the detailed "how" also empties
+Action of meaning.
 
 ### GROWTH IS NOT PART OF THE WORKING LOOP — this was being got wrong
 
