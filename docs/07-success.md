@@ -1,6 +1,6 @@
 # Success
 
-Success is the fourth leaf of [the Clover framework](04-framework.md). It asks whether the intended outcome actually happened, and it answers with the environment.
+Success is the fourth stage of [the Clover framework](04-framework.md). It asks whether the intended outcome actually happened, and it answers with the environment.
 
 The environment is the evidence of success. A closed task, a generated artifact, a passing build, a merged change, a fluent explanation, a confident tone, and a high model score are all things the work produced. None of them shows that the outcome occurred.
 
@@ -18,11 +18,11 @@ A deployed fix and a resolved problem are two different claims. The evidence has
 
 What counts depends on the work. A test that fails without the change and passes with it. A before-and-after measurement. Telemetry. A run outside production. A production signal that disappears and stays gone. A user confirming the outcome in their own words.
 
-Deciding this at the start is the cheap version. When Direction says what would demonstrate the outcome, this leaf becomes a matter of running the check. When nobody says, the team ends up arguing about sufficiency at the point where everyone wants to be finished.
+Deciding this at the start is the cheap version. When Direction says what would demonstrate the outcome, this stage becomes a matter of running the check. When nobody says, the team ends up arguing about sufficiency at the point where everyone wants to be finished.
 
 ## How strong is your evidence?
 
-Most work has no production telemetry, and this leaf has to stay usable anyway. The goal is to describe accurately what was done, rather than to reach the strongest available evidence every time.
+Most work has no production telemetry, and this stage has to stay usable anyway. The goal is to describe accurately what was done, rather than to reach the strongest available evidence every time.
 
 Four questions carry most of it:
 
@@ -41,7 +41,11 @@ A failed check is a normal outcome of the cycle. When the evidence does not supp
 
 Retrying the change that just failed is the common waste. The second attempt runs on the same information as the first and arrives in the same place, faster. Something about reality was missing, so the next attempt needs new material: what the environment did instead, which assumption broke, which signal nobody had looked at yet. [Context](05-context-engineering.md) covers where to go and get it.
 
-## What goes wrong here
+A success is not the end of the loop either. Both outcomes go back into the same place:
+
+> After each success and each failure, the context files are written before the next attempt.
+
+## What happens there
 
 Evidence gets described more strongly than it is. "Verified" covers a single manual look. A merged change gets reported as a resolved problem. AI reports success it never checked, and the report reads the same as one that was checked, which is the whole difficulty. [How AI fails](how-ai-fails.md) covers that pattern and the others.
 

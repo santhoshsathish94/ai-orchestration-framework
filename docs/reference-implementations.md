@@ -7,7 +7,7 @@ Clover framework](04-framework.md) applies to a recurring organizational problem
 > organizational data** — repositories, logs, telemetry and job definitions.
 >
 > None of them is always-on, and none is adopted organization-wide. The knowledge capability is
-> assembled per question rather than running as a product. Each pattern depends on a person providing
+> assembled per question rather than running as a product. Each pattern depends on a human providing
 > the map, reviewing the output, and holding the approvals.
 >
 > These patterns assume an [orchestration environment](orchestration-environment.md) is in place —
@@ -41,7 +41,7 @@ A data team asks why a synchronization job did not run. AI reads the relevant re
 
 **Out-of-Context Owner**
 
-Someone accountable for an area they have not worked on — a lead who has been away from the code, a new joiner, anyone returning to a system that moved on without them — asks where a reported behavior originates. The capability reads across the repositories involved and reproduces the behavior in the running application, locating the cause without the person first having to learn the area.
+Someone accountable for an area they have not worked on — a lead who has been away from the code, a new joiner, anyone returning to a system that moved on without them — asks where a reported behavior originates. The capability reads across the repositories involved and reproduces the behavior in the running application, locating the cause without the human first having to learn the area.
 
 The knowledge was never missing. It was in the code and in the running system, and simply had not been reachable without someone who already held it.
 
@@ -113,7 +113,7 @@ A batch of defects arrives as a single ticket. The work of triaging them is most
 of them are real, which system each one actually originates in, and which of them share a cause.
 
 That navigation is slow because it crosses boundaries. A defect reported against a page may live in
-a downstream service, a data mapping, or a configuration value, and the person triaging usually only
+a downstream service, a data mapping, or a configuration value, and the human triaging usually only
 knows some of those systems well.
 
 ### Implementation
@@ -154,15 +154,15 @@ and deployment gates wired into their real tooling.
 
 ---
 
-## Built on the five leaves
+## Built on the four working stages
 
 All three run the same cycle:
 
-> **Direction → Context → Action → Success → Growth**
+> **Direction → Context → Action → Success**
 
 Cross-Team Knowledge Access spends most of its time in Context. Production Exception Remediation
 carries a cycle all the way to Success in the real environment. Multi-Repository Defect Remediation
-adds Growth across a batch, because what the unresolved defects showed becomes the Context the next
-pass starts from.
+loops the hardest, because what the unresolved defects showed is written back into Context and is
+what the next pass starts from.
 
-The patterns add operational detail where a recurring problem needs it. None of them adds a leaf.
+The patterns add operational detail where a recurring problem needs it. None of them adds a stage.

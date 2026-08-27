@@ -2,25 +2,27 @@
 
 ## Purpose
 
-Clover is a repeatable cycle for doing real work with AI inside it. Five leaves: Direction, Context, Action, Success, Growth.
+Clover is a five-leaf framework of using AI. It sets out how a human's direction, the systems an organization already runs, the work AI does, and the evidence the real environment gives back fit together into one repeatable cycle.
 
-Prompts, tools, agents, and AI model choice all sit underneath the cycle. What the framework describes is how human intent becomes an outcome the environment confirms, and what the system keeps once it does.
+Prompts, tools, agents, and AI model choice all sit underneath the cycle. What the framework describes is how human intent becomes an outcome the environment confirms, and what the next attempt starts from.
 
-**Direction → Context → Action → Success → Growth**
+**The working loop is four stages: Direction → Context → Action → Success.**
+
+The fifth stage is Growth: what AI learns, and the expertise it forms, out of the other four. Nobody in an organization operates it.
 
 ## Three leaves, then four, then five
 
-That is the order the work runs in. The leaves arrived in a different order, and the way they arrived is the clearest way to explain them.
+The number of leaves carries the argument. The stages arrived in a different order than they run in, and the way they arrived is the clearest way to explain them.
 
 ### Three leaves — the common clover
 
-Direction, Action, Success. This is how AI is used almost everywhere today. A human gives the Direction. AI performs the Action, working from whatever that human typed in. After several passes the result becomes Success.
+Direction, Action, Success. This is how AI is used almost everywhere today. A human gives the Direction. AI performs the Action from whatever that one human can hand over: not only what they type, but the files they attach and the repository they happen to be working in. After several passes the result becomes Success.
 
-It works, and a lot of real value comes out of it. It is also ordinary, which is what a common clover is. The limit is that these three leaves only ever see as much of the organization as one human remembered to describe, written from memory and usually in a hurry.
+It works, and a lot of real value comes out of it. It is also ordinary, which is what a common clover is. The limit is that a handover is still bounded by what one human can reach and remember, put together from memory and usually in a hurry.
 
 ### Four leaves — the lucky clover
 
-Context arrives. It is no longer something a human provides: it is the current systems the organization uses. Every repository, with its many projects and the documentation kept for each application. The datasources the applications connect to. The logs and telemetry. The deployment environments. The running applications themselves. Nobody has to write any of it out first.
+Context arrives. It is no longer bounded by one human: it is the current systems the organization uses. Every repository, with its many projects and the documentation kept for each application. The datasources the applications connect to. The logs and telemetry. The deployment environments. The running applications themselves. Nobody has to write any of it out first.
 
 Reaching it takes a setup rather than a principle:
 
@@ -36,17 +38,21 @@ Connecting the material does not finish the job. An organization's systems are a
 
 It runs in a loop. What comes back from one pass is context for the next. Markdown files kept beside the work hold the summary, and that summary is what lets any agent pick the job up, so no single agent has to hold the work. [Context](05-context-engineering.md#where-context-lives) covers how those files are kept.
 
-A lucky clover is the rare one, and this is the leaf that makes it rare. It is also where organizations are now.
+> After each success and each failure, the context files are written before the next attempt.
+
+A lucky clover is the rare one, and this is the stage that makes it rare. It is also where organizations are now.
 
 ### Five leaves — the growth clover
 
-Growth is the next phase. It happens whether or not anyone chooses it.
+Growth is the next stage. It happens whether or not anyone chooses it.
 
-AI becomes more capable from what it takes out of the other four leaves: the direction it was given, the context it read, the actions it ran, and the results it saw confirmed. Patterns form, and expertise forms out of the patterns. The phase after this one is AI working from goals with far less direction than it needs now, at a scale closer to an organization's whole output than to one task.
+AI becomes more capable from what it takes out of the other four stages: the direction it was given, the context it read, the actions it ran, and the results it saw confirmed. Patterns form, and expertise forms out of the patterns.
+
+Nobody in an organization operates this one. It belongs to the frontier AI companies, who hold the volume of data that everyone's usage generates. A team does not adopt Growth or run a step for it.
 
 That is a general statement about how information accumulates. It says nothing about any AI provider training on customer or enterprise work, and many state plainly that they do not.
 
-Everything below sets out the five leaves one at a time.
+Everything below sets out the five stages one at a time.
 
 ## From AI models to AI orchestration
 
@@ -58,25 +64,25 @@ This is not a strict replacement hierarchy. An agentic workflow can be an import
 
 Context can accumulate at whatever scope fits — a human, a team, an organization, or another defined boundary.
 
-## The five leaves
+## The five stages
 
-Each leaf has one job. The complexity belongs in the context, ownership, evidence, and feedback around the leaves, and not in adding more of them.
+Each stage has one job. The complexity belongs in the context, ownership, evidence, and feedback around the stages, and not in adding more of them.
 
-| Leaf | What it is | Core question |
+| Stage | What it is | Core question |
 |---|---|---|
-| **Direction** | The human says what needs to be done and what must not happen, and stays in control. With real context available, Direction also points at where the answer probably is. | What needs to be done, and what must not happen? |
+| **Direction** | The human controls what needs to be done, decides how it should be done, and approves. With real context available, Direction also points at where the answer probably is. | What needs to be done, and what must not happen? |
 | **Context** | The current systems the organization uses — repositories with their many projects and documentation, the datasources the applications connect to, the logs and telemetry, the deployment environments, the running applications. | What do we need to know about reality before acting? |
 | **Action** | Now mostly driven by AI: deciding how the work should happen, and doing it. | What should we do, and how should the work happen? |
 | **Success** | The intended outcome demonstrated by the real environment. | Did reality validate the intended outcome? |
-| **Growth** | AI becoming more capable from what it learns across the other four leaves. | What did the system become or learn? |
+| **Growth** | What AI learns, and the expertise it forms, out of the other four stages. The next stage, and not one a team operates. | What is AI becoming? |
 
-Growth is not a finish line. What one cycle accumulates becomes part of the next cycle's Context, changes how Action gets planned, and sometimes changes the Direction itself, because the work revealed that a different outcome was the one worth pursuing.
+A team runs the first four. What one cycle establishes goes into the next cycle's Context, changes how Action gets planned, and sometimes changes the Direction itself, because the work revealed that a different outcome was the one worth pursuing.
 
 ---
 
-## Leaf 1 — Direction
+## Stage 1 — Direction
 
-Direction is where human intent enters the system. A human says what needs to be done, why it matters, which outcome counts, which constraints apply, and what must not happen. Control stays with them.
+Direction is where human intent enters the system. The human controls what needs to be done, decides how it should be done, and approves. They say why it matters, which outcome counts, which constraints apply, and what must not happen. Control stays with them.
 
 A ticket can trigger it. Direction is the outcome behind the ticket, stated plainly, together with what the work must not touch.
 
@@ -90,29 +96,31 @@ Once AI can read the real environment, Direction also points. The people who wor
 
 **What happens there.** Direction gets skipped because a ticket looks like enough, and the work then optimizes for closing the ticket rather than for the outcome. Unstated scope is the next one: nobody said the change must not touch billing, so nothing stopped it. The third is a direction with no pointer, which leaves an agent reading everything it can reach, slowly and at cost.
 
-## Leaf 2 — Context
+## Stage 2 — Context
 
-Context is what the system needs to know about reality before acting, and it comes from the current systems the organization uses. Every repository, with its many projects and the documentation kept for each application. The datasources the applications connect to. The logs and telemetry. The deployment environments. The running applications. Tests, history, earlier attempts, and the memory carried from previous cycles sit here too.
+Context is what the system needs to know about reality before acting. In the common clover it is only what one human can hand over — what they type, the files they attach, the repository they are working in — and it stays bounded by what that human can reach and remember. In the lucky clover it becomes the current systems the organization uses. Every repository, with its many projects and the documentation kept for each application. The datasources the applications connect to. The logs and telemetry. The deployment environments. The running applications. Tests, history, earlier attempts, and what previous cycles wrote down sit here too.
 
 Read-only MCP servers in front of those systems are how an agent reaches them. Every connection is scoped to what the human driving the work already has access to, at the privileges they already hold, and one environment is enough to start — development. [Governance](08-governance.md#access-mirrors-the-person-not-the-ai) covers how that access is held.
 
 Prompting is a small part of this. The working rule is to reason from the real environment rather than from assumptions, wherever the environment can answer the question.
 
-One pass rarely finishes it. What the first pass returns is context for the second, and a markdown file beside the work carries the summary from one pass to the next.
+One pass rarely finishes it. Every pass adds context, and a markdown file beside the work carries the summary from one pass to the next.
+
+> After each success and each failure, the context files are written before the next attempt.
 
 **Core question.** What do we need to know about reality before acting?
 
 **What the human holds.** Access and judgment. Which systems may be read, which data may be used, which sources can be trusted, where the answer probably is, and when the context in hand is good enough to act on.
 
-**What AI does.** Most of the gathering. Reading code, tracing a call path, pulling telemetry, reconstructing an incident from logs, finding the earlier attempt nobody remembered. A good orchestration also reports what it could not find, and that part matters most.
+**What AI does.** Most of the gathering. Reading code, tracing a call path, pulling telemetry, reconstructing an incident from logs, finding the earlier attempt nobody remembered. It also writes back what the pass established, so the next one starts from it. A good orchestration reports what it could not find, and that part matters most.
 
 **What happens there.** The plausible answer. An AI model working from thin context produces something that reads correctly and describes a system that does not exist. The opposite failure is hoarding, where a context packed with irrelevant material buries the few facts the problem turns on. [How AI fails](how-ai-fails.md) covers the specific patterns, and [context engineering](05-context-engineering.md) covers how the material is assembled.
 
-## Leaf 3 — Action
+## Stage 3 — Action
 
 Action is now mostly driven by AI. It covers deciding how the work should happen and then doing it. Reasoning, planning, tool selection, AI model selection, orchestration across agents, code changes, tests, debugging, and interaction with whatever environments the work touches.
 
-Planning and doing sit on one leaf on purpose. The plan usually changes once the work meets reality, and keeping the two together makes that change ordinary rather than an exception to explain.
+Planning and doing sit on one stage on purpose. The plan usually changes once the work meets reality, and keeping the two together makes that change ordinary rather than an exception to explain.
 
 **Core question.** What should we do, and how should the work happen?
 
@@ -122,7 +130,7 @@ Planning and doing sit on one leaf on purpose. The plan usually changes once the
 
 **What happens there.** Thrash. A change fails, the next attempt is a variation of the same change, and each attempt sounds as confident as the last. Misplaced parallelism is the other one: splitting work that shares state costs more in coordination and rework than it saves.
 
-## Leaf 4 — Success
+## Stage 4 — Success
 
 Success means the real environment demonstrates the intended outcome. The environment is the evidence of success. An AI reporting that it worked, a plausible explanation, a confident tone, and a high model score all fall outside that.
 
@@ -138,7 +146,7 @@ Evidence can be a test that fails without the change and passes with it, a befor
 
 ### Say what the evidence actually is
 
-Not every task has telemetry, and pretending otherwise makes this leaf unusable for most work. What matters is describing what was actually done to check, in words a reader can act on.
+Not every task has telemetry, and pretending otherwise makes this stage unusable for most work. What matters is describing what was actually done to check, in words a reader can act on.
 
 Four questions do the work:
 
@@ -153,31 +161,27 @@ State what you checked, what you observed, and where you stopped. Stopping early
 
 A failed check is a normal outcome rather than an exception to handle later. When the evidence does not support the intended outcome, **return to Context, not to Action.**
 
-Retrying a fix that just failed is the common waste. The second attempt runs on the same information as the first and reaches the same place, faster. A second attempt needs new information: what the environment did instead, which assumption broke, which signal nobody had looked at yet.
+Retrying a fix that just failed is the common waste. The second attempt runs on the same information as the first and reaches the same place, faster. A second attempt needs new information: what the environment did instead, which assumption broke, which signal nobody had looked at yet. That new information gets written into the context files before the attempt is made.
 
-More on this leaf in [Success in practice](07-success.md).
+More on this stage in [Success in practice](07-success.md).
 
-## Leaf 5 — Growth
+## Stage 5 — Growth
 
-Growth is what the system accumulates across repeated cycles: persistent memory, experience, learned patterns, expertise, better planning, better tool selection, adaptation, more capability than it had before.
+Growth is what AI learns, and the expertise it forms, out of the other four stages: the direction it was given, the context it read, the actions it ran, and the results it saw confirmed. Patterns form across an enormous number of cycles, and expertise forms out of the patterns.
 
-Experience is what one cycle produced — what was tried, the context it ran in, the evidence observed, the outcome. Expertise is the reusable pattern that emerges once several validated experiences point the same way. One cycle should not become a rule.
+Nobody in an organization operates it. It belongs to the frontier AI companies, who hold the volume of data that everyone's usage generates. There is no Growth step to run and nothing to adopt. It is the next stage, and it arrives either way.
 
-**Core question.** What did the system become or learn?
+**Core question.** What is AI becoming?
 
-**What the human holds.** Judgment about what is worth keeping, what can safely be shared, and where a captured lesson has gone stale. An experience recorded wrongly spreads, and somebody has to notice.
+**What a team does about it.** Nothing directly. What a team keeps from its own cycles — what was tried, the context it ran in, the evidence observed — goes into Context, where the next cycle reads it. That is the part a team controls, and [Context](05-context-engineering.md#where-context-lives) covers how it is kept.
 
-**What AI does.** Captures the experience while it is still accurate, writes it where the next cycle will actually read it, notices patterns across cycles, and applies them the next time a similar problem shows up.
-
-**What happens there.** Nothing is captured, because the work closed when the change shipped. Or everything is captured, and the pile of "learnings" becomes noise nobody reads. The subtle one is promoting a single lucky outcome into a rule the system then follows everywhere.
-
-The expertise that survives this leaf becomes part of the Context the next cycle starts from, which is how capability compounds without adding leaves. What a team validates and reuses today is the part it controls; the wider Growth described in the arc above is the next phase, and it arrives either way.
+**What happens there.** Growth gets treated as a step somebody owns, which turns it into a folder of "learnings" nobody reads. The material that helps the next cycle is context, and it belongs beside the work.
 
 ---
 
 ## Widening what AI decides
 
-The five leaves are how the work runs. How much of the work AI determines for itself changes over time, as tooling, context, experience, validation, and trust mature.
+The four working stages are how the work runs. How much of the work AI determines for itself changes over time, as tooling, context, experience, validation, and trust mature.
 
 ![A possible progression toward goal-directed autonomous AI](../assets/goal-directed-autonomy-progression.svg)
 
@@ -218,7 +222,7 @@ For practical patterns, see **[Reference Implementations](reference-implementati
 
 **Success** — validate outside production, give the approver concrete evidence, deploy, and watch until the original exception stops appearing and stays gone.
 
-**Growth** — close the work once the production outcome holds, and keep the experience so the next incident of that shape is understood faster.
+**Then back to Context** — write what this pass established into the file beside the code, whether the exception stopped or not, so the next attempt or the next incident of that shape starts from it.
 
 ### Example: a cross-team knowledge gap
 

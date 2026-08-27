@@ -1,4 +1,4 @@
-# How AI Fails — and Which Leaf Catches It
+# How AI Fails — and Which Stage Catches It
 
 Most of this framework is good engineering discipline. This page is the part that is specifically
 about **AI**.
@@ -8,7 +8,7 @@ when they are unsure. AI often fails **fluently**, producing a confident, well-s
 plausible answer that happens to be wrong. That is the reason [the Clover framework](04-framework.md)
 puts Context before Action and Success after it.
 
-Each failure below has a leaf that catches it.
+Each failure below has a stage that catches it.
 
 ---
 
@@ -50,7 +50,7 @@ is announced, and the output stops respecting a boundary it respected an hour ag
 without it.
 
 **Caught by Direction.** Boundaries belong somewhere durable — the brief, the repository, the ticket —
-rather than only in a conversation. The direction gets restated as the work moves between leaves,
+rather than only in a conversation. The direction gets restated as the work moves between stages,
 instead of being assumed to have survived.
 
 ---
@@ -118,8 +118,9 @@ and every later cycle starts from it. The error compounds instead of being corre
 **Why it happens:** Systems that accumulate context do not automatically separate what was
 demonstrated from what was merely produced.
 
-**Caught by Growth.** Only validated experience becomes durable expertise. One cycle is an anecdote,
-and a pattern needs several that point the same way.
+**Caught by Context.** What goes into the context files is what the environment showed, alongside what
+was only produced. One cycle is an anecdote, and a pattern needs several that point the same way
+before anything treats it as settled.
 
 ---
 
@@ -134,7 +135,7 @@ and a pattern needs several that point the same way.
 | Agreement instead of judgment | Context |
 | Thrashing | Context |
 | Motion mistaken for progress | Action, Success |
-| Learning from unvalidated output | Growth |
+| Learning from unvalidated output | Context |
 
 Every one of these is caught by evidence rather than by better prompting, which is why the discipline
 around the model matters as much as the choice of model.

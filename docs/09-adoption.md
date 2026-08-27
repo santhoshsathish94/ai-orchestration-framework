@@ -9,18 +9,18 @@ mattered.
 
 ## What is actually being adopted
 
-A team already using AI is already running three of the leaves. Somebody gives the Direction, AI
-performs the Action from whatever that human typed in, and after several passes the result becomes
-Success. That part needs no rollout.
+A team already using AI is already running three of the stages. Somebody gives the Direction, AI
+performs the Action from whatever that one human can hand over, and after several passes the result
+becomes Success. That part needs no rollout.
 
-What gets adopted is the fourth leaf. AI reads the current systems the organization uses — the
-repositories with their many projects and documentation, the datasources the applications connect
-to, the logs and telemetry, the deployment environments, the running applications — instead of
-reading a description somebody typed from memory. Alongside it, the people who work in a system
-every day start saying where the answer probably is, because the systems are a haystack and a
-pointer is worth more than a longer description.
+What gets adopted is Context. AI reads the current systems the organization uses — the repositories
+with their many projects and documentation, the datasources the applications connect to, the logs
+and telemetry, the deployment environments, the running applications — instead of reading what one
+human could hand over from memory. Alongside it, the people who work in a system every day start
+saying where the answer probably is, because the systems are a haystack and a pointer is worth more
+than a longer description.
 
-The rest of this page is about getting that leaf in place and keeping it there.
+The rest of this page is about getting that stage in place and keeping it there.
 
 ## The setup
 
@@ -61,7 +61,7 @@ reverse. [The orchestration environment](orchestration-environment.md) covers wh
 what order, and [governance](08-governance.md#questions-your-security-team-will-ask) covers the
 questions a security team will ask before any of it is granted.
 
-## The leaves do not cost the same to adopt
+## The stages do not cost the same to adopt
 
 **Direction** costs habit and nothing else. Somebody says what needs to be done, what must not
 happen, and where they think the answer is, before the work starts. A team can begin that today with
@@ -69,8 +69,10 @@ no access, no tooling and no approval to wait for.
 
 **Context** is the real investment, and it is where most of the early value shows up. Read-only reach
 into the code, the tickets, the logs and the data lets AI reason about the actual problem instead of
-a description of it. It is also the leaf that needs someone to negotiate access, so it is the one
-that stalls.
+a description of it. It is also the stage that needs someone to negotiate access, so it is the one
+that stalls. It is where iteration lands too:
+
+> After each success and each failure, the context files are written before the next attempt.
 
 **Action** widens on its own once Direction and Context are steady. What AI is trusted to carry
 follows what has already held up in work of that kind.
@@ -79,16 +81,18 @@ follows what has already held up in work of that kind.
 checked, what they observed, and where they stopped find out quickly how much of their reporting had
 been assertion.
 
-**Growth** is the next phase, and it arrives whether or not a team plans for it. What a team can do
-with it now is write down what a cycle taught, beside the work, so the next cycle starts from it.
-Most teams skip that, because the work feels finished when the change ships.
+**Growth** costs nothing to adopt, because nobody in an organization runs it. It is what AI learns
+out of the other four stages, it belongs to the frontier AI companies who hold the volume of data
+that everyone's usage generates, and it arrives whether or not a team plans for it. What a team
+writes down goes into Context, beside the work. Most teams skip that, because the work feels
+finished when the change ships.
 
 ## A sequence that works
 
 1. **Start with one real problem the team already has** — a recurring exception, a defect nobody can
    place, a question that currently takes three teams to answer. A tool looking for a use does not
    survive contact with a busy week.
-2. **Teach the cycle rather than the tool.** Direction → Context → Action → Success → Growth outlives
+2. **Teach the cycle rather than the tool.** Direction → Context → Action → Success outlives
    whichever product the team is using this quarter.
 3. **Connect one real source, read-only.** A read-only MCP server in front of the repository, then
    the logs, then the ticket history, then a datasource. Reading cannot break anything, so it is the
@@ -131,7 +135,7 @@ What is worth watching:
 
 ## Related
 
-- [The orchestration environment](orchestration-environment.md) — the access the Context leaf needs.
+- [The orchestration environment](orchestration-environment.md) — the access the Context stage needs.
 - [Governance](08-governance.md) — ownership, attribution, and approval as this widens.
 - [Practices and field lessons](field-practices.md) — what this has looked like on real work.
 - [Reference implementations](reference-implementations.md) — patterns to adopt and adapt.

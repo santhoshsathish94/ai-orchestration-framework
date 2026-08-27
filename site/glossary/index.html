@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Glossary — Clover</title>
-<meta name="description" content="Plain-language definitions for every term used in Clover, the five-leaf way of working with AI.">
+<meta name="description" content="Plain-language definitions for every term used in Clover, the five-leaf framework of using AI.">
 <link rel="canonical" href="https://santhoshsathish94.github.io/ai-orchestration-framework/glossary/">
 <meta name="theme-color" content="#0a6a5f">
 <link rel="stylesheet" href="../styles.css">
@@ -34,7 +34,7 @@
       Clover <span>five leaves</span></a>
     <nav class="site-nav" aria-label="Primary">
       <a href="../#problem">The problem</a>
-      <a href="../#direction">The five leaves</a>
+      <a href="../#direction">The five stages</a>
       <a href="../#walkthrough">Example</a>
       <a href="../#agent">Start</a>
       <a href="../#evidence">Evidence</a>
@@ -55,24 +55,25 @@
   <input class="filter" id="term-filter" type="search" placeholder="e.g. growth, context, blast radius" autocomplete="off">
   <p class="note" id="term-count" role="status" aria-live="polite" style="margin-top:-1rem"></p>
 
-  <h2 style="font-size:1.05rem;margin-top:1.4rem">Clover and the five leaves</h2>
+  <h2 style="font-size:1.05rem;margin-top:1.4rem">Clover and the five stages</h2>
   <dl class="terms">
-    <div><dt>Clover</dt><dd>This framework. Five leaves — Direction, Context, Action, Success, Growth — describing how human intent becomes an outcome the environment confirms, and what the system keeps once it does.</dd></div>
-    <div><dt>Leaf</dt><dd>One part of the cycle. Each leaf has one job, and there are five of them.</dd></div>
-    <div><dt>Direction</dt><dd>The human says what needs to be done and what must not happen, and stays in control. With real context available, Direction also points at where the answer probably is.</dd></div>
-    <div><dt>Context</dt><dd>The systems the organization already uses — the repositories and their documentation, the datasources, the logs and telemetry, the deployment environments, the running applications. It is no longer something a human writes out.</dd></div>
+    <div><dt>Clover</dt><dd>This framework. Five stages — Direction, Context, Action, Success, Growth — describing how human intent becomes an outcome the environment confirms, and what the system keeps once it does. Four of them are the working loop, and Growth is the next stage.</dd></div>
+    <div><dt>Stage</dt><dd>One part of the cycle. Each stage has one job, and there are five. In the clover mark each stage is drawn as a leaf.</dd></div>
+    <div><dt>The working loop</dt><dd>Direction, Context, Action, Success. The four stages a team actually runs, over and over. Growth is outside it.</dd></div>
+    <div><dt>Direction</dt><dd>The human controls what needs to be done, decides how it should be done, and approves. Control stays with the human. With real context available, Direction also points at where the answer probably is.</dd></div>
+    <div><dt>Context</dt><dd>Everything the work reasons from. In the common clover it is only what one human can hand over — what they type, the files they attach, the repository they happen to be working in. In the lucky clover it is the systems the organization already runs: the repositories and their documentation, the datasources, the logs and telemetry, the deployment environments, the running applications.</dd></div>
     <div><dt>Action</dt><dd>Mostly driven by AI. Deciding how the work should happen and then doing it: planning, tool choice, orchestration across agents, changes, tests, debugging.</dd></div>
     <div><dt>Success</dt><dd>The intended outcome demonstrated by the real environment. A closed task, a passing build, or a confident report sits outside this.</dd></div>
-    <div><dt>Growth</dt><dd>AI becoming more capable from what it learns across the other four leaves. Patterns form, and expertise forms out of the patterns.</dd></div>
-    <div><dt>The common clover</dt><dd>Three leaves — Direction, Action, Success. How AI is used almost everywhere today.</dd></div>
-    <div><dt>The lucky clover</dt><dd>Four leaves, with Context added. What the framework exists for, and the state we are in now. <a href="../#context">The fourth leaf</a>.</dd></div>
-    <div><dt>The growth clover</dt><dd>All five leaves. The next phase, which happens whether anyone chooses it or not. <a href="../#fifth-leaf">Growth</a>.</dd></div>
+    <div><dt>Growth</dt><dd>AI becoming more capable out of the other four stages. Patterns form, and expertise forms out of the patterns. No team runs it: it belongs to the frontier AI companies and the volume of data everyone's usage generates.</dd></div>
+    <div><dt>The common clover</dt><dd>Three stages — Direction, Action, Success. How AI is used almost everywhere today.</dd></div>
+    <div><dt>The lucky clover</dt><dd>Four stages, with Context added. What the framework exists for, and the state we are in now. <a href="../#context">The fourth stage</a>.</dd></div>
+    <div><dt>The growth clover</dt><dd>All five stages. Growth is the next stage, and it happens whether anyone chooses it or not. <a href="../#fifth-leaf">Growth</a>.</dd></div>
   </dl>
 
   <h2 style="font-size:1.05rem;margin-top:2rem">Everything else</h2>
   <dl class="terms">
     <div><dt>Orchestration</dt><dd>Coordinating people, AI, tools, and context so that work produces an outcome the environment confirms, rather than each part doing its own thing.</dd></div>
-    <div><dt>Orchestration environment</dt><dd>The access layer between AI and the systems an organization already uses. Read-only MCP servers in front of the repositories, datasources, logs and environments. It is what feeds the Context leaf.</dd></div>
+    <div><dt>Orchestration environment</dt><dd>The access layer between AI and the systems an organization already uses. Read-only MCP servers in front of the repositories, datasources, logs and environments. It is what feeds the Context stage.</dd></div>
     <div><dt>Capability</dt><dd>Anything that can do work: a human, a team, an AI, an agent, a tool, a system.</dd></div>
     <div><dt>Intent</dt><dd>What a human actually wants to achieve. The outcome, and not the task.</dd></div>
     <div><dt>Outcome</dt><dd>The change in the real world that was wanted. Distinct from <em>output</em>, which is what got produced.</dd></div>

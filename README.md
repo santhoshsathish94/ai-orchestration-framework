@@ -1,12 +1,16 @@
 # Clover
 
-> **Direction → Context → Action → Success → Growth**
+> **Direction → Context → Action → Success**
 
-Clover is a five-leaf way of working with AI. It describes how human intent becomes an outcome the
-real environment confirms, and what the system keeps once it does. It sits on top of the systems a
-team already runs. Nothing to install, nothing to migrate onto.
+Clover is a five-leaf framework of using AI. It sets out how a human's direction, the systems an
+organization already runs, the work AI does, and the evidence the real environment gives back fit
+together into one repeatable cycle. It sits on top of the systems a team already runs, so there is
+nothing to install and nothing to migrate onto.
 
-**[🌐 Read it on the website →](https://santhoshsathish94.github.io/ai-orchestration-framework/)** — the five leaves in about three minutes.
+A team runs four stages: Direction, Context, Action, Success. The fifth stage is Growth, and nobody
+in an organization operates it.
+
+**[🌐 Read it on the website →](https://santhoshsathish94.github.io/ai-orchestration-framework/)** — the five stages in about three minutes.
 
 ---
 
@@ -29,12 +33,13 @@ outcome anyone can rely on sits around the capability.
 The number of leaves carries the argument.
 
 **Three leaves — the common clover. Direction, Action, Success.** A human gives the Direction. AI
-performs the Action, working from whatever that human typed in. After several passes the result
+performs the Action from whatever that one human can hand over: not only what they type, but the
+files they attach and the repository they happen to be working in. After several passes the result
 becomes Success. This is how AI is used almost everywhere today, it produces real value, and it is
-ordinary. The limit is that these three leaves only ever see as much of the organization as one
-human remembered to describe.
+ordinary. The limit is that those three stages only ever see as much of the organization as one
+human can reach and remember.
 
-**Four leaves — the lucky clover. Context.** Context is no longer something a human provides. It is
+**Four leaves — the lucky clover. Context.** Context is no longer bounded by one human. It is
 the current systems the organization uses: every repository with its many projects and their
 documentation, the datasources the applications connect to, the logs and telemetry, the deployment
 environments, and the running applications.
@@ -61,34 +66,37 @@ It runs in a loop, and what comes back from one pass is context for the next. Ma
 beside the work hold the summary, and that summary is what lets any agent pick the job up, so no
 single agent has to hold the work.
 
-**Five leaves — the growth clover. Growth.** Growth is the next phase, and it happens whether or not
-anyone chooses it. AI becomes more capable from what it takes out of the other four leaves: the
+> After each success and each failure, the context files are written before the next attempt.
+
+**Five leaves — the growth clover. Growth.** Growth is the next stage, and it happens whether or not
+anyone chooses it. AI becomes more capable from what it takes out of the other four stages: the
 direction it was given, the context it read, the actions it ran, and the results it saw confirmed.
-Patterns form, and expertise forms out of the patterns. The phase after this one is AI working from
-goals with far less direction than it needs now. That is a general statement about how information
-accumulates, and it says nothing about any AI provider training on customer or enterprise work.
+Patterns form, and expertise forms out of the patterns. Nobody in an organization operates this. It
+belongs to the frontier AI companies, who hold the volume of data everyone's usage generates. That
+is a general statement about how information accumulates, and it says nothing about any AI provider
+training on customer or enterprise work.
 
 [The arc in full →](docs/04-framework.md#three-leaves-then-four-then-five)
 
 ---
 
-## The five leaves
+## The five stages
 
-The leaves read in the order the work runs in.
+The stages read in the order the work runs in. A team runs the first four.
 
-| Leaf | What it covers | The question it answers |
+| Stage | What it covers | The question it answers |
 |---|---|---|
-| **Direction** | The human says what needs to be done and what must not happen, and stays in control. With real context available, Direction also points at where the answer probably is | What needs to be done, and what must not happen? |
+| **Direction** | The human controls what needs to be done, decides how it should be done, and approves | What needs to be done, and what must not happen? |
 | **Context** | The current systems the organization uses — repositories and their projects and documentation, datasources, logs and telemetry, deployment environments, running applications | What do we need to know about reality before acting? |
 | **Action** | Mostly driven by AI: deciding how the work should happen, and doing it | What should we do, and how should the work happen? |
 | **Success** | The intended outcome demonstrated by the real environment | Did reality validate the intended outcome? |
-| **Growth** | AI becoming more capable from what it learns across the other four leaves | What did the system become or learn? |
+| **Growth** | What AI learns, and the expertise it forms, out of the other four stages. The next stage, and not one a team operates | What is AI becoming? |
 
-Each leaf has one job. The complexity belongs in the context, the ownership, the evidence and the
-feedback around the leaves, rather than in adding more of them. There is one principle per leaf, so a
-team that remembers the leaves already remembers the principles. If Success does not hold, the cycle
-goes back to Context rather than to Action, because a second attempt on the same information lands in
-the same place, faster.
+Each stage has one job. The complexity belongs in the context, the ownership, the evidence and the
+feedback around the stages, rather than in adding more of them. There is one principle per stage, so
+a team that remembers the stages already remembers the principles. If Success does not hold, the
+cycle goes back to Context rather than to Action, because a second attempt on the same information
+lands in the same place, faster.
 
 [The framework in full →](docs/04-framework.md) · [The principles →](docs/03-principles.md)
 
@@ -100,14 +108,14 @@ the same place, faster.
 It is the whole way of working written as instructions for an agent. Point an agent at that one
 file and nothing else is required.
 
-**2. Connect the fourth leaf.**
+**2. Connect the Context stage.**
 Read-only MCP servers in front of the repositories, the tickets, the logs and the datasources, plus
 one environment to read — development is enough. One connection at a time, each scoped to what the
 human driving the work can already read, at the privileges they already hold. Widen to other
 non-production environments once it proves out.
 [How to set that up →](docs/orchestration-environment.md#building-one)
 
-**3. Run one real problem through the five leaves.**
+**3. Run one real problem through the four stages.**
 A defect, a recurring exception, a question nobody can answer quickly. Say where you think the answer
 is, and keep a markdown file beside the code so the next cycle starts ahead of this one.
 
@@ -151,7 +159,7 @@ crashes were stabilized with a blunt Node flag, and the investigation kept going
 Components renderer. The one-file fix was contributed upstream as a CI-green pull request, which has
 not been merged. [Read the case study →](case-studies/02-react-rsc-memory-leak.md)
 
-Three reference implementations apply the leaves to recurring problems:
+Three reference implementations apply the stages to recurring problems:
 [cross-team knowledge access](docs/reference-implementations.md#1-cross-team-knowledge-access),
 [production exception remediation](docs/reference-implementations.md#2-production-exception-remediation),
 and [multi-repository defect remediation](docs/reference-implementations.md#3-multi-repository-defect-remediation).

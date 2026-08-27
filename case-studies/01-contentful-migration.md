@@ -180,7 +180,7 @@ on a payload that had never been compressed. A team writing the same design by h
 measured the same gains. What AI changed was the cost of *attempting* the rewrite at all, which is a
 claim about effort rather than about latency.
 
-## Growth — what carries forward
+## What went back into Context
 
 Beyond the running service, this is what the cycle left behind.
 

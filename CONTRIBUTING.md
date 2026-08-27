@@ -14,7 +14,7 @@ included. Corrections, questions, ideas, and case studies are all welcome.
 
 ## How to raise a pull request
 
-1. Fork the repository and create a branch (for example, `docs/clarify-the-success-leaf`).
+1. Fork the repository and create a branch (for example, `docs/clarify-the-success-stage`).
 2. Make a small, focused change. Match the existing structure and writing style.
 3. In the PR description, briefly cover:
    - **Direction** — the problem or gap this addresses, and the outcome you're after.
@@ -25,16 +25,16 @@ included. Corrections, questions, ideas, and case studies are all welcome.
 
 ## What we're likely to accept
 
-- Clarity and correctness improvements to the docs and the model.
+- Clarity and correctness improvements to the docs and the framework.
 - Field lessons and practices drawn from real experience.
-- Reference implementations that apply the five leaves to a common problem.
+- Reference implementations that apply the stages to a common problem.
 - Case studies with honest outcomes, including the ones where the outcome was never reached.
 - Anything that keeps the framework **simple, universal, and practical**.
 
 ## What we'll usually push back on
 
-- Added leaves, jargon, or complexity the reader doesn't need. The model is deliberately five:
-  **Direction → Context → Action → Success → Growth.**
+- Added stages, jargon, or complexity the reader doesn't need. Clover is deliberately five stages,
+  and a team runs four of them: **Direction → Context → Action → Success.**
 - Rungs, levels, scores, or grades for evidence or autonomy. They were removed on purpose, because a
   number is easier to claim than to justify. Say what you checked, what you observed, and where you
   stopped.

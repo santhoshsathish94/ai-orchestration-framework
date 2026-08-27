@@ -2,7 +2,9 @@
 
 ## What Clover rests on
 
-Clover starts from one belief.
+Clover is a five-leaf framework of using AI. It sets out how a human's direction, the systems an organization already runs, the work AI does, and the evidence the real environment gives back fit together into one repeatable cycle.
+
+It starts from one belief.
 
 AI is another engineering capability, and it has to be orchestrated like every other part of a working system — given intent, given real information, kept inside boundaries, checked against reality, and improved by what the last cycle taught.
 
@@ -32,19 +34,19 @@ Engineering is where this framework was built and where all of its evidence come
 
 Clover has five leaves, and the number carries the argument.
 
-**Three leaves — the common clover.** Direction, Action, Success. A human gives the Direction, AI performs the Action from whatever that human typed in, and after several passes the result becomes Success. This is how AI is used almost everywhere today, it produces real value, and it is ordinary. What limits it is that those three leaves only ever see as much of the organization as one human remembered to describe.
+**Three leaves — the common clover.** Direction, Action, Success. A human gives the Direction, AI performs the Action from whatever that one human can hand over, and after several passes the result becomes Success. The handover is more than typing — files can be attached, and the repository they are working in can be pointed at — and it stays bounded by what that human can reach and remember. This is how AI is used almost everywhere today, it produces real value, and it is ordinary.
 
 **Four leaves — the lucky clover.** Context arrives, and it changes what the other three are worth.
 
-**Five leaves — the growth clover.** Growth, which is the next phase.
+**Five leaves — the growth clover.** Growth, which is the next stage and not one a team runs.
 
-The leaves read Direction → Context → Action → Success → Growth, because that is the order the work runs in. The story arrives in a different order, and telling it the second way is what makes the first way make sense.
+The working loop is four stages: Direction → Context → Action → Success. That is the order the work runs in. The story arrives in a different order, and telling it the second way is what makes the first way make sense.
 
 ---
 
-## Why the fourth leaf is the breakthrough
+## Why Context is the breakthrough
 
-Context is no longer something a human provides. It is the current systems the organization uses. Every repository, with its many projects and the documentation kept for each application. The datasources the applications connect to. The logs and telemetry. The deployment environments. The running applications and websites. None of it has to be written out first, and none of it is a description of the system from memory.
+Context is no longer bounded by one human. It is the current systems the organization uses. Every repository, with its many projects and the documentation kept for each application. The datasources the applications connect to. The logs and telemetry. The deployment environments. The running applications and websites. None of it has to be written out first, and none of it is a description of the system from memory.
 
 Reaching it is a setup rather than a principle. Stand up **read-only MCP servers** in front of the repositories, the datasources, the logs and the environments, so an agent can read them directly. Scope every connection to what the human driving the work already has access to, at the privileges they already hold. Start with **one environment — development is enough** — and widen to other non-production environments as it proves out. [The orchestration environment](orchestration-environment.md#building-one) covers what to connect and in what order.
 
@@ -52,23 +54,25 @@ The approach will be challenged, and the honest answer holds up. That access alr
 
 Connecting the material does not finish the job. An organization's systems are a haystack, and the thing worth finding is a needle somewhere inside it. Expecting AI to search the whole haystack does not work and costs a great deal to watch. **That is what changes Direction.** The people who work on a system every day know roughly where the needle fell, so the most valuable thing they contribute is a pointer at the part of the system to read first. Direction that points, together with context that is real, is what produces Success worth having, and both parts already exist in most organizations.
 
-It runs in a loop. What comes back from one pass is context for the next. Markdown files kept beside the work hold the goal, what is settled, what remains, and what was ruled out, and that written summary is what lets any agent pick the job up. No single agent has to hold the work anymore. [Context](05-context-engineering.md#where-context-lives) covers how those files are kept.
+It runs in a loop. Every pass adds context. Markdown files kept beside the work hold the goal, what is settled, what remains, and what was ruled out, and that written summary is what lets any agent pick the job up. No single agent has to hold the work anymore. [Context](05-context-engineering.md#where-context-lives) covers how those files are kept.
+
+> After each success and each failure, the context files are written before the next attempt.
 
 ---
 
 ## Why these names
 
-The five leaves are Direction, Context, Action, Success, and Growth. They were named carefully, and the reasons are part of the argument.
+The five stages are Direction, Context, Action, Success, and Growth. They were named carefully, and the reasons are part of the argument.
 
-**Direction, rather than Control.** Control describes the human role well enough today. It also implies that people can keep perfect control of a system that keeps getting more capable. Direction claims less and stays true longer: humans say what needs to be done and what must not happen, and stay in control, whatever the system turns out to be able to do on its own.
+**Direction, rather than Control.** Control describes the human role well enough today. It also implies that people can keep perfect control of a system that keeps getting more capable. Direction claims less and stays true longer: the human controls what needs to be done, decides how it should be done, and approves, whatever the system turns out to be able to do on its own.
 
 **Context, rather than Understand.** Understanding happens inside a head, and nobody can inspect it. Context is the material the system has to work from, and that can be inspected. A system can be handed the whole context and still reason badly from it, so naming the material keeps the distinction visible.
 
-**Action, rather than Plan and Execute.** Deciding how the work should happen and doing it belong on one leaf. Splitting them invites a plan that gets written, approved, and then quietly abandoned once the work meets reality.
+**Action, rather than Plan and Execute.** Deciding how the work should happen and doing it belong on one stage. Splitting them invites a plan that gets written, approved, and then quietly abandoned once the work meets reality.
 
 **Success, rather than Results or Proof.** Results describes whatever came out of the work. Success asks the harder question: did the outcome we wanted actually occur, and did the real environment say so? The environment is the evidence of success, which is why an AI model's own assessment of its work carries no weight here.
 
-**Growth, rather than Grow or Learning.** Learning suggests an AI model getting better at prediction. Growth covers what the whole system accumulates — memory that persists, patterns that hold up, expertise a team can rely on, better planning the next time a similar problem appears.
+**Growth, rather than Grow or Learning.** Learning suggests an AI model getting better at prediction. Growth covers what AI becomes out of the other four stages — patterns that hold up across an enormous number of cycles, and the expertise that forms out of them.
 
 ---
 
@@ -78,7 +82,7 @@ Direction asks where we should go. Growth asks what we become along the way.
 
 Those two questions pull against each other, and the tension is worth keeping rather than designing out. People set Direction at a moment in time. Growth changes what the system can do after that moment, which can change what the next Direction should be. A team holding only Direction runs a system that never improves. A team watching only Growth loses the thread of why the work was worth doing.
 
-The fifth leaf is the next phase, and it happens whether or not anyone chooses it. AI becomes more capable from what it takes out of the other four leaves: the direction it was given, the context it read, the actions it ran, and the results it saw confirmed. Patterns form, and expertise forms out of the patterns. The phase after that is AI working from goals with far less direction than it needs now. That is a general statement about how information accumulates, and it says nothing about any AI provider training on customer or enterprise work. Many state plainly that they do not.
+Growth is the next stage, and it happens whether or not anyone chooses it. AI becomes more capable from what it takes out of the other four stages: the direction it was given, the context it read, the actions it ran, and the results it saw confirmed. Patterns form, and expertise forms out of the patterns. Nobody in an organization operates it — it belongs to the frontier AI companies, who hold the volume of data that everyone's usage generates. That is a general statement about how information accumulates, and it says nothing about any AI provider training on customer or enterprise work. Many state plainly that they do not.
 
 Where repeated Growth ends is a question rather than a prediction, and that question is deliberately kept out of the engineering material. It lives in [the hypothesis](../hypothesis/ai-future.md).
 
@@ -112,7 +116,7 @@ The upstream React contribution is the clearest example. The work moved from pro
 
 ## What we believe
 
-These beliefs are what the rest of the framework rests on. The [principles](03-principles.md) turn them into practice, one per leaf.
+These beliefs are what the rest of the framework rests on. The [principles](03-principles.md) turn them into practice, one per stage.
 
 **AI extends what teams can do, and it does not stand in for judgment.** Experience, ethics, and accountability stay with people.
 
@@ -132,4 +136,4 @@ These beliefs are what the rest of the framework rests on. The [principles](03-p
 
 ---
 
-The [problem](01-problem.md) explains why this is needed. [The framework](04-framework.md) sets out the five leaves in full.
+The [problem](01-problem.md) explains why this is needed. [The framework](04-framework.md) sets out the five stages in full.

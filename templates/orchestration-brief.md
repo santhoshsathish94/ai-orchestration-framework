@@ -1,7 +1,7 @@
 # Orchestration Brief — &lt;Task or Outcome&gt;
 
 > A one-page brief for running a single task through Clover:
-> **Direction → Context → Action → Success → Growth**
+> **Direction → Context → Action → Success**
 >
 > Copy this file, rename it for the task, and fill each section as the work proceeds. The prompts are
 > starting points for an AI assistant — adapt them to the tools at hand. Keep the brief short. The
@@ -16,7 +16,7 @@
 
 ---
 
-## 1. Direction — *where we are going*
+## 1. Direction — *what needs to be done*
 
 State the outcome worth reaching, the edges of the work, and what would show it happened.
 
@@ -26,27 +26,32 @@ State the outcome worth reaching, the edges of the work, and what would show it 
 - **Out of scope / must not change:** …
 - **Needs human approval:** …
 
-> **Prompt:** "Here is a problem: &lt;describe&gt;. Restate the outcome we actually want in one
-> sentence. Propose what would demonstrate that outcome in the real environment, and ask me about
-> anything I have left out — especially what this work must not touch."
+> **Prompt:** "Here is a problem: &lt;describe&gt;. Before you read anything or propose anything,
+> restate the outcome we actually want in one sentence, propose what would demonstrate that outcome
+> in the real environment, and ask me about anything I have left out — especially what this work must
+> not touch, and which systems you would like to read."
 
-**Ownership:** The human sets the direction, the boundaries, and the approvals. AI sharpens the
-wording, names conflicts between stated goals, and asks about the parts nobody mentioned.
+**Ownership:** The human controls what needs to be done, decides how it should be done, and
+approves. AI sharpens the wording, names conflicts between stated goals, and asks about the parts
+nobody mentioned.
 
 ---
 
-## 2. Context — *what we know about reality*
+## 2. Context — *what the real systems show*
 
-Gather what the problem actually turns on, from the environment rather than from assumption.
+Gather what the problem actually turns on, from the systems the organization already runs rather
+than from assumption. Keep this section current — every pass adds to it.
 
 - **Known context:** …
-- **Sources read (code, tickets, logs, telemetry, data, history):** …
+- **Sources read (code, tickets, logs, telemetry, data, environments):** …
 - **Open questions and untested assumptions:** …
 - **Could not reach:** …
+- **What earlier attempts showed, and what they ruled out:** …
 
 > **Prompt:** "Before proposing anything, read &lt;sources&gt;. Summarize what you now know about how
-> the system actually behaves, list what is still unknown, say what you could not reach, and tell me
-> what you would need to be confident."
+> the system actually behaves, list what is still unknown, and say what you could not reach. For
+> anything you could not reach, name the specific piece of information you need and ask me for it
+> rather than assuming it."
 
 **Ownership:** The human decides which systems may be read, which sources can be trusted, and when
 the context is good enough to act on. AI does most of the gathering and reports the gaps.
@@ -67,8 +72,9 @@ Take the smallest coherent path to the outcome, with an owner on every step.
 > say who should own it and why. Call out the risks. Then implement step &lt;n&gt; only, and stop
 > before anything outside the agreed scope."
 
-**Ownership:** The human sets the boundaries and approves what needs approving. AI does the work
-inside them, and comes back when the evidence contradicts the plan.
+**Ownership:** Action is mostly driven by AI, which does the work inside the agreed boundaries and
+comes back when the evidence contradicts the plan. The human sets those boundaries and approves what
+needs approving.
 
 ---
 
@@ -95,23 +101,27 @@ faster.*
 
 ---
 
-## 5. Growth — *what the system keeps*
+## After each pass — write it back into Context
 
-Turn what this cycle produced into context the next one starts from.
+This is not a fifth stage. Every attempt produces context, whether it succeeded or failed, and that
+context is what the next attempt reasons from.
 
-- **What worked, and what did not:** …
-- **Worth keeping (docs, prompts, tests, guardrails, memory files):** …
+> After each success and each failure, write the context files before the next attempt.
+
+- **What this attempt showed, and what it ruled out:** …
+- **Worth keeping (docs, prompts, tests, guardrails, context files):** …
+- **Where it is written, so the next cycle actually reads it:** …
 - **Pattern or one-off?** … *(a single good outcome is an anecdote; a pattern has held across several cycles)*
 - **Next direction this revealed:** …
 
-> **Prompt:** "Summarize what this cycle showed, what is worth keeping for next time, and where it
-> should be written so the next cycle actually reads it. Say whether this is a pattern that has held
-> before or a single result."
+> **Prompt:** "Summarize what this attempt showed and what it ruled out. Write it back into the
+> Context section of this brief, and say where else it should live so the next cycle reads it. Say
+> whether this is a pattern that has held before or a single result."
 
-**Ownership:** The human decides what becomes durable knowledge and what has gone stale. AI captures
-the experience while it is still accurate and applies it next time.
+**Ownership:** The human decides what becomes durable knowledge and what has gone stale. AI writes it
+while the details are still accurate.
 
 ---
 
-*Part of [Clover](../README.md). What Growth records becomes the Context the next cycle starts from,
-and sometimes it changes the Direction itself.*
+*Part of [Clover](../README.md). Every pass adds context, and sometimes it changes the Direction
+itself, because the work showed that a different outcome was the one worth having.*

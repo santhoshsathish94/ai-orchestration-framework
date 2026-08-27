@@ -26,18 +26,18 @@ site/
   .nojekyll
 ```
 
-The page is the narrative arc, not one section per leaf. The clover grows as the reader scrolls:
+The page is the narrative arc, not one section per stage. The clover grows as the reader scrolls:
 three leaves, then four, then five.
 
-1. Hero — the name, one line, the five-leaf mark, one line per leaf. Nothing else
+1. Hero — the name, a two or three line explanation, the five-leaf mark, one line per stage. Nothing else
 2. AI current capabilities — short
 3. Three leaves · the common clover — short
 4. Four leaves · the lucky clover — the largest and most important section on the page
 5. Five leaves · the growth clover — short
-6. The worked example — visual, an end-to-end run, few steps
+6. The worked example — visual, an end-to-end run, few steps, ending at Success
 7. The agent file
 8. Security and governance
-9. Evidence
+9. Production case studies and reference implementations
 10. What it is not
 11. About the author
 
@@ -65,13 +65,16 @@ The marks are the site's identity and they carry the argument, so they have rule
   - three leaves at 120 degrees, labeled Direction, Action, Success — "the common clover";
   - four leaves at 90 degrees, labeled Direction, Context, Action, Success, with Context drawn solid
     as the leaf that just arrived — "the lucky clover";
-  - five leaves at 72 degrees, all drawn normally — "the growth clover". Growth is not faded out.
+  - five leaves at 72 degrees, with the Growth leaf drawn dotted because it has not arrived yet —
+    "the growth clover". The hero mark carries the same dotted fifth leaf; the small header mark is
+    decorative and stays solid.
 - Leaf names are real `<text>` labels positioned outside each leaf tip, inside a `viewBox` of
   `-30 -18 160 117` so the labels have room. They are content, not decoration — never replace them
   with a legend.
-- Fill state is CSS, not geometry. `.clover__leaf.is-soft` is an established leaf and
-  `.clover__leaf.is-new` is the leaf that just arrived. `.clover__leaf.is-filled` stays for the solid
-  five-leaf marks in the header and hero.
+- Fill state is CSS, not geometry. `.clover__leaf.is-soft` is an established stage,
+  `.clover__leaf.is-new` is the stage that just arrived, and `.clover__leaf.is-next` is Growth drawn
+  with a dashed stroke and no fill. `.clover__leaf.is-filled` stays for the solid leaves in the
+  header and hero.
 - Marks that carry meaning get `role="img"` and an `aria-label` naming the leaves. Decorative
   duplicates, such as the one in the header, get `aria-hidden="true"`.
 - An arc mark has to hold up between about 200px and 420px; the header and hero marks between about
@@ -82,12 +85,20 @@ The marks are the site's identity and they carry the argument, so they have rule
 
 - **The arc is the spine.** Three leaves, then four, then five. Do not flatten it back into five
   equal sections, and do not reorder the story so Context arrives before Action and Success.
-- **Five leaves only:** Direction → Context → Action → Success → Growth. Never introduce a competing
+- **Five stages only:** Direction → Context → Action → Success → Growth. Never introduce a competing
   arrow-chain, never append "→ repeat" to that one, and never bring back the short form
   "Where → Know → Do → Validate → Become". Direction is *what*, not *where*.
-- **Never call it a model.** Clover is a five-leaf way of working with AI, and a framework at repo
-  level. "Model" collides with "AI model".
-- **Say "human"**, never "person" or "the user", for whoever holds Direction.
+- **"Leaves" is for the picture.** Say leaves when describing a clover mark. Everywhere else on the
+  page, say stages.
+- **The working loop is four stages** — Direction, Context, Action, Success. Growth is not something
+  a team runs, so no example, walkthrough or diagram gets a Growth step. Examples end at Success and
+  loop back into Context.
+- **Iteration feeds Context, never Growth.** The page states the rule plainly: after each success or
+  failure, the context files are written before the next attempt.
+- **Never call it a model.** Clover is a five-leaf framework of using AI. "Model" collides with
+  "AI model".
+- **Say "human"**, never "person" or "the user", for whoever holds Direction. Direction is the human
+  controlling what needs to be done, deciding how it should be done, and approving.
 - **No rungs, levels, scores or grades.** The evidence ladder and the autonomy ladder were deleted
   from the framework. State what was checked, what was observed, and where the work stopped.
 - **Never invent** metrics, customers, adoption, or results. The React memory leak is a CI-green pull
@@ -95,16 +106,21 @@ The marks are the site's identity and they carry the argument, so they have rule
   keep saying so.
 - The four-leaf section says nothing about production. Development first, then the other
   non-production environments. Access is read-only and scoped to what the human already holds.
-- Growth is the next phase, never a hypothesis, a prediction or something that "has not arrived", and
-  never described as dangerous. Do not explain the *Black Clover* or devil association anywhere.
+- Growth is the next stage, never a hypothesis, a prediction or "next phase", and never described as
+  dangerous. Do not explain the *Black Clover* or devil association anywhere.
 - Never assert that any AI provider trains on customer or enterprise work. Keep the accumulation
   argument structural and unattributed.
 - Alternate `.band` and `.band--soft` between adjacent sections so no two neighbors share a
   background. The hero is white and the footer is soft, so the count has to work out at both ends.
+- **Use the width.** Sections must not stack down the left in a 68ch column. `.wrong__flow` and
+  `.wrong__cols` run the "what happens there" blocks across both columns, `.split` puts a heading
+  and lead on the left with the detail on the right, `.stack--2` gives a two-column definition list,
+  and `.panel__cols` spreads a tab panel across the full measure.
 - Tabs: one generic `initTabs` over `[data-tabs]` groups. The first tab and panel in each group carry
   `aria-selected` and `is-active` in the markup, so nothing flashes before `app.js` runs.
 - The worked example is `.run` — plain HTML and CSS, no images and no JavaScript. Keep it to a few
-  steps, and do not turn it back into prose.
+  steps, do not turn it back into prose, and keep it ending at Success with `.run__loop` turning back
+  into Context.
 - `glossary/index.html` links back to `#problem`, `#direction`, `#context`, `#walkthrough`, `#agent`,
   `#evidence` and `#fifth-leaf` on this page. Those IDs have to keep resolving.
 - American spelling. No employer, product, cluster or infrastructure names.

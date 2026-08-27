@@ -2,17 +2,17 @@
 
 ## Purpose
 
-Clover describes how humans and AI turn intent into outcomes the environment confirms. The five leaves give the structure. These principles are what make each leaf hold up on real work.
+Clover describes how humans and AI turn intent into outcomes the environment confirms. The five stages give the structure. These principles are what make each stage hold up on real work.
 
-There is one principle per leaf. A team that remembers the leaves already remembers the principles. The first two carry most of the weight, because Direction and Context are what separate the lucky clover from the common one.
+There is one principle per stage. A team that remembers the stages already remembers the principles. The first two carry most of the weight, because Direction and Context are what separate the lucky clover from the common one.
 
 ---
 
 ## 1. Direction is a human decision
 
-*Leaf: Direction*
+*Stage: Direction*
 
-A human accountable for the outcome says what needs to be done and what must not happen, and stays in control. The availability of an AI model, an agent, or a tool is not a reason to start.
+The human accountable for the outcome controls what needs to be done, decides how it should be done, and approves. The availability of an AI model, an agent, or a tool is not a reason to start.
 
 Direction also points. An organization's systems are a haystack, and the answer is a needle somewhere inside it. The people who work in those systems every day know roughly where it fell — which service went out last week, which job has always been fragile, which team owns the part nobody wrote down. Once AI can read the real environment, saying which part of the system to read first is worth more than a long description of the task.
 
@@ -22,19 +22,25 @@ Tickets, incidents, and requests are inputs to Direction. They rarely state the 
 
 ## 2. Context comes from the real environment
 
-*Leaf: Context*
+*Stage: Context*
 
-Context comes from the current systems the organization uses. Every repository, with its many projects and the documentation kept for each application. The datasources the applications connect to. The logs and telemetry. The deployment environments. The running applications. Where the environment can answer a question, read the environment instead of reasoning about what it probably contains.
+In the common clover, context is only what one human can hand over — what they type, the files they attach, the repository they are working in — and it stays bounded by what that human can reach and remember. This principle is about the other kind. Context comes from the current systems the organization uses. Every repository, with its many projects and the documentation kept for each application. The datasources the applications connect to. The logs and telemetry. The deployment environments. The running applications. Where the environment can answer a question, read the environment instead of reasoning about what it probably contains.
 
 Reaching it is a setup rather than a principle. Read-only MCP servers in front of the repositories, the datasources, the logs and the environments give an agent a way in. Every connection is scoped to what the human driving the work already has access to, at the privileges they already hold, and one environment is enough to start — development. [The orchestration environment](orchestration-environment.md#building-one) covers what to connect and in what order, and [governance](08-governance.md#access-mirrors-the-person-not-the-ai) covers how that access is held.
 
 Treat the context in hand as incomplete until it has been checked. Name the assumptions nobody tested and the signals nobody looked at, then reduce that uncertainty before making a consequential change.
 
-Collecting everything is its own failure. A context stuffed with irrelevant material buries the few facts the problem turns on. Enough context to reason correctly is the bar, and reaching it takes several passes. A summary kept in a markdown file beside the work carries what each pass established, which is what lets any agent pick the job up.
+Collecting everything is its own failure. A context stuffed with irrelevant material buries the few facts the problem turns on. Enough context to reason correctly is the bar, and reaching it takes several passes.
+
+Every pass adds context, and iteration feeds this stage rather than any other.
+
+> After each success and each failure, the context files are written before the next attempt.
+
+What gets written is what was tried, the context it ran in, what the environment showed, and what turned out to be wrong. A summary kept in a markdown file beside the work carries all of that, which is what lets any agent pick the job up. Judgment about what is worth keeping and where a recorded lesson has gone stale stays with a human, because a wrong finding written down spreads.
 
 ## 3. Action runs inside a structured workflow
 
-*Leaf: Action*
+*Stage: Action*
 
 AI works reliably when it has defined context, stated boundaries, the tools the job needs, and clear handoffs. Action is now mostly driven by AI, and humans and AI can share the work. Responsibility for the outcome stays with a named human, whoever or whatever performed each step.
 
@@ -44,7 +50,7 @@ New information during the work is a reason to replan rather than a reason to pu
 
 ## 4. Success is demonstrated by the environment
 
-*Leaf: Success*
+*Stage: Success*
 
 A closed task, a generated artifact, a passing build, or a merged change is not the outcome by itself. Success means the environment shows that the intended outcome occurred.
 
@@ -54,21 +60,19 @@ When the evidence does not support the intended outcome, go back to Context. A f
 
 ## 5. Growth is validated before it is reused
 
-*Leaf: Growth*
+*Stage: Growth*
 
-Every cycle produces experience — what was tried, the context it ran in, what the environment showed, what was missing. Capture it while it is still accurate.
+Growth is what AI learns, and the expertise it forms, out of the other four stages. Nobody in an organization operates it. It belongs to the frontier AI companies, who hold the volume of data that everyone's usage generates, and it is the next stage rather than one a team runs.
 
-Experience becomes expertise once the same pattern has held across several cycles. A single good outcome is an anecdote, and promoting it to a rule teaches the system something that is not true yet.
+What a team does control is what it reuses. A single good outcome is an anecdote, and promoting it to a rule teaches the next cycle something that is not true yet. A pattern earns its place once it has held across several cycles, and until then it is recorded as what happened rather than as how things are done.
 
-Where knowledge can safely be shared, it should not stay with one team, or with whoever learned it first. Otherwise the next cycle depends on who happens to be around.
-
-Growth is also the next phase, and it arrives whether or not anyone chooses it. AI becomes more capable from what it takes out of the other four leaves. Patterns form, expertise forms out of the patterns, and the phase after that is AI working from goals with far less direction than it needs now. What a team validates and reuses today is the part it controls.
+Where knowledge can safely be shared, it should not stay with one team, or with whoever learned it first. Otherwise the next cycle depends on who happens to be around. The place it goes is Context — the files beside the work — which is where the next cycle reads it.
 
 ---
 
 ## Summary
 
-| Leaf | Principle |
+| Stage | Principle |
 |---|---|
 | **Direction** | Direction is a human decision |
 | **Context** | Context comes from the real environment |
@@ -76,6 +80,6 @@ Growth is also the next phase, and it arrives whether or not anyone chooses it. 
 | **Success** | Success is demonstrated by the environment |
 | **Growth** | Growth is validated before it is reused |
 
-Direction → Context → Action → Success → Growth
+The working loop is four stages: Direction → Context → Action → Success.
 
-Each leaf is described in full, with what happens there, in [the framework](04-framework.md).
+Each stage is described in full, with what happens there, in [the framework](04-framework.md).

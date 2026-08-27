@@ -110,12 +110,18 @@ section[id] { scroll-margin-top: 5rem; }
 .clover__leaf.is-soft { fill: var(--accent-soft); stroke: var(--accent-line); stroke-width: 2.5; }
 /* The leaf that just arrived. */
 .clover__leaf.is-new { fill: var(--accent); stroke: var(--accent); stroke-width: 2.5; }
+/* Growth: dotted, because it has not arrived yet. */
+.clover__leaf.is-next {
+  fill: none; stroke: var(--accent-line); stroke-width: 2.5;
+  stroke-dasharray: 5 4.5; stroke-linecap: round;
+}
 
 .clover__label {
   font-family: var(--font); font-size: 8px; font-weight: 650; letter-spacing: 0.02em;
   fill: var(--ink-2);
 }
 .clover__label--now { fill: var(--accent); font-weight: 700; }
+.clover__label--next { fill: var(--muted); }
 
 /* ---------- the narrative arc ---------- */
 
@@ -146,6 +152,23 @@ section[id] { scroll-margin-top: 5rem; }
 }
 .wrong p { font-size: 0.97rem; color: var(--ink-2); }
 .wrong p:last-child { margin-bottom: 0.6rem; }
+
+/* Full-measure variants. The heading stays outside the columns so it cannot flow into one. */
+.wrong__flow, .wrong__cols p { max-width: none; }
+@media (min-width: 900px) {
+  .wrong__flow, .wrong__cols { columns: 2; column-gap: 3rem; }
+  .wrong__cols p { break-inside: avoid; }
+  .wrong__cols p:last-child { margin-bottom: 0.6rem; }
+}
+
+/* Heading and lead on the left, the detail on the right. */
+.split { display: grid; gap: 1.1rem 2.8rem; align-items: start; }
+.split h3 { margin-top: 0; }
+.split__lead > :last-child, .split__body > :last-child { margin-bottom: 0; }
+.split > .split__body { margin-top: 0; }
+@media (min-width: 860px) {
+  .split { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); }
+}
 
 /* ---------- header ---------- */
 
@@ -223,6 +246,15 @@ section[id] { scroll-margin-top: 5rem; }
 .chip--ok { background: #fff; border-color: var(--accent-line); color: var(--ink-2); }
 .chip--ok::before { content: "\2713"; color: var(--accent); font-weight: 700; margin-right: 0.35rem; }
 
+/* The run ends at Success and turns back into Context. */
+.run__loop {
+  display: flex; gap: 0.6rem; align-items: baseline;
+  margin: 1.2rem 0 0; padding: 0.8rem 1rem 0.8rem 0.9rem;
+  max-width: none; color: var(--ink-2); font-size: 0.95rem;
+  background: var(--accent-soft); border-radius: var(--radius);
+}
+.run__loop-mark { color: var(--accent); font-size: 1.25rem; font-weight: 700; line-height: 1; }
+
 /* ---------- grids & cards ---------- */
 
 .grid { display: grid; gap: 1.1rem; }
@@ -276,6 +308,8 @@ section[id] { scroll-margin-top: 5rem; }
 
 /* two-column panel body */
 .panel__cols { display: grid; gap: 0.6rem 2rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.panel__cols p { max-width: none; }
+.panel__cols > div > :last-child { margin-bottom: 0; }
 
 .owner {
   display: inline-flex; align-items: center; gap: 0.4rem;

@@ -3,34 +3,35 @@
 Plain-language definitions for the terms used across this framework. If a term here is not clear,
 that is a bug in the writing — [tell us](../CONTRIBUTING.md).
 
-## Clover and the five leaves
+## Clover and the five stages
 
 | Term | What it means here |
 |---|---|
-| **Clover** | This framework. A five-leaf way of working with AI — Direction → Context → Action → Success → Growth — describing how human intent becomes an outcome the environment confirms, and what the system keeps once it does. See [the framework](04-framework.md). |
-| **Leaf** | One part of the cycle. Each leaf has one job, and there are five of them. |
+| **Clover** | This framework. A five-leaf framework of using AI, setting out how a human's direction, the systems an organization already runs, the work AI does, and the evidence the real environment gives back fit together into one repeatable cycle. See [the framework](04-framework.md). |
+| **Stage** | One part of the cycle. Each stage has one job. The working loop is four of them — Direction → Context → Action → Success — and the fifth is Growth. |
+| **Leaf** | A leaf of the clover mark. The picture has five. In the documents the parts of the cycle are called stages. |
 | **The common clover** | Three leaves: Direction, Action, Success. How AI is used almost everywhere today. |
 | **The lucky clover** | Four leaves. Context arrives, and it changes what the other three are worth. Where organizations are now. |
-| **The growth clover** | Five leaves. Growth, which is the next phase. |
-| **Direction** | Where human intent enters the system. The human says what needs to be done and what must not happen, and stays in control. With real context available, Direction also points at where the answer probably is. |
-| **Context** | The current systems the organization uses — every repository with its many projects and documentation, the datasources the applications connect to, the logs and telemetry, the deployment environments, the running applications. Not something a human writes out. |
+| **The growth clover** | Five leaves. Growth, which is the next stage. |
+| **Direction** | Where human intent enters the system. The human controls what needs to be done, decides how it should be done, and approves. With real context available, Direction also points at where the answer probably is. |
+| **Context** | What the work reasons from. In the common clover it is only what one human can hand over — what they type, the files they attach, the repository they are working in. In the lucky clover it is the current systems the organization uses: every repository with its many projects and documentation, the datasources the applications connect to, the logs and telemetry, the deployment environments, the running applications. |
 | **Action** | Now mostly driven by AI: deciding how the work should happen and then doing it. Planning, tool and AI model choice, orchestration across agents, changes, tests, debugging. |
 | **Success** | The intended outcome demonstrated by the real environment. A closed task, a passing build, or a confident report sits outside this. |
-| **Growth** | AI becoming more capable from what it learns across the other four leaves — the direction it was given, the context it read, the actions it ran, and the results it saw confirmed. |
-| **The fifth leaf** | Growth, and the next phase. Patterns form, expertise forms out of the patterns, and the phase after that is AI working from goals with far less direction. Where that ends is carried as a question, in [the hypothesis](../hypothesis/ai-future.md). |
+| **Growth** | What AI learns, and the expertise it forms, out of the other four stages. Nobody in an organization operates it. It belongs to the frontier AI companies, who hold the volume of data that everyone's usage generates. |
+| **The fifth leaf** | Growth. It stands for the next stage, and where repeated Growth ends is carried as a question, in [the hypothesis](../hypothesis/ai-future.md). |
 
 ## Everything else
 
 | Term | What it means here |
 |---|---|
 | **Orchestration** | Coordinating people, AI, tools, and context so that work produces an outcome the environment confirms, rather than each part doing its own thing. |
-| **Orchestration environment** | The access layer between AI and the current systems an organization uses. It is what feeds the Context leaf. See [the orchestration environment](orchestration-environment.md). |
-| **MCP server** | A small service that gives an agent a scoped way to read one system — a repository, a datasource, a log store, an environment. Read-only, and scoped to what the human driving the work already has access to. This is how the Context leaf gets connected. |
+| **Orchestration environment** | The access layer between AI and the current systems an organization uses. It is what feeds the Context stage. See [the orchestration environment](orchestration-environment.md). |
+| **MCP server** | A small service that gives an agent a scoped way to read one system — a repository, a datasource, a log store, an environment. Read-only, and scoped to what the human driving the work already has access to. This is how the Context stage gets connected. |
 | **Capability** | Anything that can do work: a human, a team, an AI model, an agent, a tool, a system. |
 | **Intent** | What a human actually wants to achieve. The outcome, and not the task. |
 | **Outcome** | The change in the real world that was wanted. Distinct from *output*, which is what got produced. |
 | **Evidence** | What was actually done to check a claim — an assertion, one manual look, a repeatable test, a before-and-after measurement, or the original signal gone from the real environment. Say which. See [Success](07-success.md#how-strong-is-your-evidence). |
-| **Experience** | What was learned from one cycle — what was tried, what happened, what the evidence showed. |
+| **Experience** | What was learned from one cycle — what was tried, what happened, what the evidence showed. It is written into the context files beside the work. |
 | **Expertise** | A reusable pattern that emerges from several *validated* experiences. One cycle is not expertise. |
 | **Ownership** | The named human accountable for an outcome. Work can be delegated; ownership cannot. |
 | **Agent** | An AI system that can take actions and use tools, rather than only produce text. |

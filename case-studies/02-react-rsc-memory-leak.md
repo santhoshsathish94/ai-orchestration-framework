@@ -200,7 +200,7 @@ is the lowered barrier rather than the split of credit.
    against real, measured behavior before it was trusted, rather than accepting generated code or
    explanations at face value.
 
-The work followed the five leaves. **Direction** was a production incident worth fixing at the root.
+The work followed the four working stages. **Direction** was a production incident worth fixing at the root.
 **Context** was reproducing the leak, isolating the mechanism, and gathering the evidence.
 **Action** was the focused one-file fix and the upstream contribution path. **Success** was measured,
 repeatable heap evidence plus independent corroboration. **Growth** is a reusable upstream fix and
@@ -245,7 +245,7 @@ unbounded to bounded, which is what stopped the crashes; it did not go to zero.
 | Independent corroboration | — | matching production diagnosis (`vercel/next.js#97316`) |
 | Status | production mitigated via a global Node flag | upstream fix filed, CI-green, in review |
 
-## Growth — what carries forward
+## What went back into Context
 
 - **A measurable, repeatable harness turned "it leaks" into a provable before/after.** Multi-round
   retained-heap-after-GC applies the same discipline as the Contentful migration's parity harness,

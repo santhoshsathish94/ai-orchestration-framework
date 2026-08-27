@@ -1,8 +1,10 @@
 # The Problem
 
-Clover
+Clover is a five-leaf framework of using AI. It sets out how a human's direction, the systems an
+organization already runs, the work AI does, and the evidence the real environment gives back fit
+together into one repeatable cycle.
 
-Direction → Context → Action → Success → Growth
+Direction → Context → Action → Success
 
 ## AI already does expert work
 
@@ -19,13 +21,14 @@ into the data underneath. When somebody goes and checks the answer, it usually h
 So capability is not what most teams are short of. Skilled people are available, and capable AI is
 available too. Something else decides whether the work turns into an outcome anyone can rely on.
 
-## The context is still a human typing
+## The context is still one human's handover
 
-Almost everywhere AI is used today, everything it knows about the system it is changing arrives
-through a description somebody typed in. That description gets written from memory, usually in a
-hurry, about a codebase nobody has held in their head for years.
+Almost everywhere AI is used today, everything it knows about the system it is changing arrives from
+one human. That is more than typing. They can attach files, or point at the repository they happen
+to be working in. It is still bounded by what that one human can reach and remember, put together in
+a hurry, about a codebase nobody has held in their head for years.
 
-The ceiling on the work is the ceiling on what one human can type.
+The ceiling on the work is the ceiling on what one human can hand over.
 
 We kept seeing the same pattern at every level:
 
@@ -80,18 +83,19 @@ connect to. The logs and telemetry. The deployment environments. The running app
 themselves.
 
 Nobody has to write any of that out first. It is there, and it is current, which is more than can be
-said for most descriptions of it. Reaching it is what the [second leaf](05-context-engineering.md)
-covers, and it is the leaf that changed what the other three are worth.
+said for most descriptions of it. Reaching it is what the [Context stage](05-context-engineering.md)
+covers, and it is the stage that changed what the other three are worth.
 
-Clover organizes that into five questions a team asks every time:
+Clover organizes that into four questions a team asks every time:
 
 - What needs to be done, and what must not happen?
 - What do we need to know about reality before acting?
 - What should we do, and how should the work happen?
 - Did reality validate the intended outcome?
-- What did we learn that the next cycle should start from?
 
-The [five leaves](04-framework.md) are those questions, in that order.
+The [four working stages](04-framework.md) are those questions, in that order. What each pass
+establishes is written down and becomes the context the next one starts from. The fifth stage,
+Growth, is what AI learns out of those four, and nobody in an organization runs it.
 
 ## Where the evidence comes from
 

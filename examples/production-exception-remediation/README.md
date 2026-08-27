@@ -3,15 +3,15 @@
 An end-to-end walkthrough of one common problem run through Clover: **a recurring `500` on
 `POST /api/checkout`.**
 
-The example fills in the [Orchestration Brief](../../templates/orchestration-brief.md) leaf by leaf,
-so another exception can be swapped in and follow the same path. Nothing here is tool-specific, and
-the prompts work with any capable coding assistant.
+The example fills in the [Orchestration Brief](../../templates/orchestration-brief.md) stage by
+stage, so another exception can be swapped in and follow the same path. Nothing here is
+tool-specific, and the prompts work with any capable coding assistant.
 
 > **This is an illustrative scenario, not a reported incident.** The checkout bug, the numbers, and
 > the results are invented to show the shape of a full cycle. For real, evidence-backed work see
 > the [case studies](../../case-studies/).
 
-> **Direction → Context → Action → Success → Growth**
+> **Direction → Context → Action → Success**
 
 | Field | Value |
 |---|---|
@@ -27,12 +27,17 @@ the prompts work with any capable coding assistant.
 - **Problem / trigger:** Alerting shows `POST /api/checkout` returning `500` roughly 40 times an hour since the last deploy.
 - **Desired outcome:** Checkout succeeds at its normal rate, and this error class stops appearing.
 - **What would demonstrate it:** The `5xx` rate on `/api/checkout` back at its pre-deploy baseline (under 0.1%) and holding for 24 hours.
-- **Out of scope:** The coupon data model and the tax rules themselves.
+- **Out of scope:** Changing how tax or discounts are calculated for orders that already work. The fix covers the failing path only.
 - **Needs human approval:** The deploy.
 
 > **Prompt used:** "Here is a problem: `POST /api/checkout` is returning 500s, about 40 an hour,
-> since our last deploy. Restate the outcome we actually want in one sentence. Propose what would
-> demonstrate that outcome in production, and ask me about anything I have left out."
+> since our last deploy. Before you read anything or propose anything, restate the outcome we
+> actually want in one sentence, propose what would demonstrate that outcome in production, and ask
+> me about anything I have left out."
+
+**What the AI asked first:** What counts as done, what the fix must not touch, and whether it could
+read the exception logs, the deploy diff and the checkout code. The engineer granted read access to
+all three.
 
 **Ownership:** The engineer set the outcome and the boundaries. AI sharpened the wording and asked
 what the fix must not touch.
@@ -108,10 +113,15 @@ and accepted it.
 
 ---
 
-## 5. Growth
+## After the pass — written back into Context
 
-- **What worked:** Reproducing with a test before changing anything made the evidence trivial to
-  produce afterwards.
+There is no fifth step. The cycle ends at Success, the brief gets updated, and the next attempt on
+anything of this shape starts further along.
+
+- **What this pass showed:** Reproducing with a test before changing anything made the evidence
+  trivial to produce afterwards.
+- **What it ruled out:** A cause affecting every checkout. The failures tracked orders placed
+  without a coupon, which is what pointed at the null.
 - **Worth keeping:**
   - The regression test now guards the no-coupon path.
   - A note where the team will read it: a new optional field has to be null-safe on every consumer.
@@ -119,11 +129,11 @@ and accepted it.
   worth treating as a pattern rather than as one result.
 - **Next direction this revealed:** Audit the other `v128` additions for the same assumption.
 
-> **Prompt used:** "Summarize what this cycle showed, what is worth keeping for next time, and where
-> it should be written so the next cycle actually reads it. Say whether this is a pattern that has
-> held before or a single result."
+> **Prompt used:** "Summarize what this attempt showed and what it ruled out. Write it back into the
+> Context section of this brief, and say where else it should live so the next cycle reads it. Say
+> whether this is a pattern that has held before or a single result."
 
-**Ownership:** The engineer decided what becomes durable knowledge. AI drafted it while the details
+**Ownership:** The engineer decided what becomes durable knowledge. AI wrote it while the details
 were still accurate.
 
 ---
@@ -132,8 +142,9 @@ were still accurate.
 
 1. Copy [`templates/orchestration-brief.md`](../../templates/orchestration-brief.md) and rename it for the exception at hand.
 2. Replace the checkout scenario above with the real alert.
-3. Walk the five leaves with an assistant, using the prompts as starting points.
-4. Keep the filled-in brief with the change. It carries the evidence and what the cycle taught.
+3. Walk the four stages with an assistant, using the prompts as starting points.
+4. Write the context back after each pass, whether it succeeded or failed.
+5. Keep the filled-in brief with the change. It carries the evidence and what the cycle taught.
 
 The gap this closes is between "the fix was deployed" and "the original signal is gone from
 production and stayed gone" — with enough context left behind that the next incident of this shape is

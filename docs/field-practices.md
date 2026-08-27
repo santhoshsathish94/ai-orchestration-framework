@@ -2,7 +2,7 @@
 
 Lessons from running [the Clover framework](04-framework.md) on real, high-stakes work. The
 [philosophy](02-philosophy.md) covers what we believe. The [principles](03-principles.md) cover what
-makes each leaf hold up. This page records what happened when they met actual deadlines.
+makes each stage hold up. This page records what happened when they met actual deadlines.
 
 Each lesson records the situation, what became clear, and the practice it produced.
 
@@ -114,7 +114,7 @@ The knowledge is usually already in the system. Being out of date is an access p
 
 ### From the field
 
-A defect arrived in a flow that the person responsible for it had never worked on. They had been
+A defect arrived in a flow that the human responsible for it had never worked on. They had been
 leading a team rather than writing code for some time, and features and flows had shipped in the
 interim that they had simply never seen. On the old terms, the only options were to go and learn the
 area first, or hand it to whoever last touched it.
@@ -181,8 +181,9 @@ written down.
   reconstructing the reasoning first.
 - Treat **repeated failed attempts as a symptom of lost context**. An agent that cannot see what has
   already been tried will try it again, confidently.
-- Finish the cycle in **Growth**. What one cycle keeps becomes the Context the next one starts from,
-  which is the only thing that makes the next one cheaper.
+- **Write the file back into Context before the next pass.** After each success and each failure, the
+  context files are written before the next attempt, which is the only thing that makes the next pass
+  cheaper than the last.
 
 **Reinforces:** [Principle 5 — Growth is validated before it is
 reused](03-principles.md#5-growth-is-validated-before-it-is-reused), [Principle 2 — Context comes from

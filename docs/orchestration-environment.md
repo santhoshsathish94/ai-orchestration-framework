@@ -4,10 +4,10 @@ Most of the framework describes how to think. This page describes what has to be
 thinking to reach anything real.
 
 An orchestration environment is the **access layer** between AI and the systems an organization
-already runs. It is what feeds the [Context](05-context-engineering.md) leaf of [the Clover
-model](04-framework.md) — source code, tickets, logs, data, and the behavior of the running system.
-There is no platform to buy and nothing to migrate onto. It is a set of connections to things that
-already exist, plus the rules governing what may be done through them.
+already runs. It is what feeds the [Context](05-context-engineering.md) stage of [the Clover
+framework](04-framework.md) — source code, tickets, logs, data, and the behavior of the running
+system. There is no platform to buy and nothing to migrate onto. It is a set of connections to things
+that already exist, plus the rules governing what may be done through them.
 
 > **Status.** This describes a working setup and the patterns it has produced, generalized from real
 > use. It is one practitioner's environment, not a standard, and not a product recommendation.
@@ -153,7 +153,8 @@ one at all.
    results.
 9. **Keep a context file per effort**, committed with the code. See
    [Context Engineering](05-context-engineering.md#where-context-lives). Without this, every session
-   restarts from zero.
+   restarts from zero. After each success and each failure, the file is written before the next
+   attempt.
 
 ### Choosing what to grant
 
