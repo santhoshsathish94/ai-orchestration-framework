@@ -2,13 +2,12 @@
 
 > **Direction → Context → Action → Success**
 
-Clover is a five-leaf framework of using AI. It sets out how a human's direction, the systems an
-organization already runs, the work AI does, and the evidence the real environment gives back fit
-together into one repeatable cycle. It sits on top of the systems a team already runs, so there is
-nothing to install and nothing to migrate onto.
+Clover is an AI Orchestration Framework connecting human Direction, real-world Context, AI-driven
+Action, and validated Success into a repeatable cycle. It sits on top of the systems a team already
+runs, so there is nothing to install and nothing to migrate onto.
 
-A team runs four stages: Direction, Context, Action, Success. The fifth stage is Growth, and nobody
-in an organization operates it.
+Five leaves, and a team runs four of them: Direction, Context, Action, Success. The fifth stage is
+Growth, and nobody in an organization operates it.
 
 **[🌐 Read it on the website →](https://santhoshsathish94.github.io/ai-orchestration-framework/)** — the five stages in about three minutes.
 

@@ -1,6 +1,6 @@
 # Clover
 
-> A five-leaf framework of using AI: Direction, Context, Action, Success, Growth. It describes how human intent becomes an outcome the real environment confirms, and what the system keeps once it does. It sits on top of the systems an organization already runs — nothing to install, nothing to migrate onto.
+> Clover is an AI Orchestration Framework connecting human Direction, real-world Context, AI-driven Action, and validated Success into a repeatable cycle. It sits on top of the systems an organization already runs — nothing to install, nothing to migrate onto.
 
 The working loop is four stages: Direction, Context, Action, Success. A team runs those four and runs them again, and iteration feeds Context rather than Growth. Growth is the fifth stage and no team runs it: it belongs to the frontier AI companies and the volume of data everyone's usage generates.
 

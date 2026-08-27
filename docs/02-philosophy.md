@@ -2,7 +2,7 @@
 
 ## What Clover rests on
 
-Clover is a five-leaf framework of using AI. It sets out how a human's direction, the systems an organization already runs, the work AI does, and the evidence the real environment gives back fit together into one repeatable cycle.
+Clover is an AI Orchestration Framework connecting human Direction, real-world Context, AI-driven Action, and validated Success into a repeatable cycle.
 
 It starts from one belief.
 

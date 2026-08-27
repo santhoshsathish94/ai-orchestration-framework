@@ -17,8 +17,10 @@ every link resolves, and the website flows top to bottom with one leaf per secti
 
 ### Words to use, and words to avoid
 
-- Clover is **a five-leaf framework of using AI**. Never a "model". Give it a two or three line
-  explanation wherever the name is introduced.
+- **The canonical definition**, to be used wherever Clover is introduced: *Clover is an AI
+  Orchestration Framework connecting human Direction, real-world Context, AI-driven Action, and
+  validated Success into a repeatable cycle.* Never call it a "model". "Five-leaf" describes the
+  picture, not the definition.
 - **"Leaves" is for the image only.** When explaining the picture, say leaves. Everywhere else in
   the documents, call them **stages**.
 - **Say "human", never "person" or "the user"**, when describing who holds Direction.

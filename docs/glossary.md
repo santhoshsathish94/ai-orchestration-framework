@@ -7,7 +7,7 @@ that is a bug in the writing — [tell us](../CONTRIBUTING.md).
 
 | Term | What it means here |
 |---|---|
-| **Clover** | This framework. A five-leaf framework of using AI, setting out how a human's direction, the systems an organization already runs, the work AI does, and the evidence the real environment gives back fit together into one repeatable cycle. See [the framework](04-framework.md). |
+| **Clover** | This framework. An AI Orchestration Framework connecting human Direction, real-world Context, AI-driven Action, and validated Success into a repeatable cycle. See [the framework](04-framework.md). |
 | **Stage** | One part of the cycle. Each stage has one job. The working loop is four of them — Direction → Context → Action → Success — and the fifth is Growth. |
 | **Leaf** | A leaf of the clover mark. The picture has five. In the documents the parts of the cycle are called stages. |
 | **The common clover** | Three leaves: Direction, Action, Success. How AI is used almost everywhere today. |
