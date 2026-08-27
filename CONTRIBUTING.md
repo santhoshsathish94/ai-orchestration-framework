@@ -40,10 +40,26 @@ included. Corrections, questions, ideas, and case studies are all welcome.
 
 ## Writing style
 
-Keep it **simple, direct, and grounded in real experience** — depth without complexity. Start with the
-problem, explain the realization, then the principle. Use plain language and a collective voice
-(*we, teams, organizations*). If a reader thinks *"this is simple, we already have this problem, I can
-apply this,"* the writing is working.
+Three rules: **simple, direct, human.**
+
+**Simple.** Short words. One idea per sentence. If a sentence needs a comma to hold itself together,
+make it two sentences.
+
+**Direct.** Say the thing, then explain it. No build-up. Name who does what — "the team decides" is
+better than "a decision is made".
+
+**Human.** Write like you are explaining it to a colleague at their desk. Contractions are fine.
+Leave out the clever closing line.
+
+Start with the problem, then what you found, then the principle. Say *we* and *teams*, not *you*. If
+a reader thinks *"this is simple, we already have this problem, I can apply this,"* it is working.
+
+Signs it is not working:
+
+- A sentence shaped like "not X, it is Y".
+- A paragraph that ends on a quotable phrase.
+- Any sentence you would call elegant.
+- Three items in a list because three sounds good.
 
 ## Feedback and discussion
 
