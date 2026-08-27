@@ -31,7 +31,7 @@ anonymous identity. Two reasons:
 **Attribution is the requirement, and the mechanism depends on local policy.** Running work under an
 individual's own credentials is the simplest way to achieve it, and for a single practitioner it is
 often enough. At any larger scale, most organizations will prefer a **dedicated identity, scoped to
-the task and owned by a named human** — that keeps the accountability without carrying the person's
+the task and owned by a named human** — that keeps the accountability without carrying that human's
 entire access footprint, and it can be rotated and revoked on its own. Either route works. A route
 that leaves an action traceable to nobody does not.
 

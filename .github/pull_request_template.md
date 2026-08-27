@@ -1,6 +1,6 @@
 <!--
-Thanks for contributing. This template follows the framework itself:
-Direction -> Action -> Success. Keep it short.
+Thanks for contributing. This follows the framework: Direction, then Action,
+then Success. Context is what you read to get there. Keep it short.
 -->
 
 ## Direction

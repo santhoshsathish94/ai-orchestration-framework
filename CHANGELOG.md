@@ -6,10 +6,15 @@ All notable changes to this project will be documented in this file.
 
 ### Renamed and rewritten as Clover
 
-The framework is now **Clover**, and the model is five leaves: **Direction → Context → Action →
-Success → Growth**, short form Where → Know → Do → Validate → Become. The six stages are gone.
-Opportunity became Direction, Understand became Context, Plan and Execute merged into Action, Proof
-became Success, and Grow became Growth. The six principles became five, one per leaf.
+The framework is now **Clover**, an AI Orchestration Framework connecting human Direction,
+real-world Context, AI-driven Action, and validated Success into a repeatable cycle. Five stages
+replace six: Opportunity became Direction, Understand became Context, Plan and Execute merged into
+Action, Proof became Success, and Grow became Growth. The six principles became five.
+
+A team runs four of those stages. Growth is the fifth, and no team runs it — it is what AI learns
+out of the other four, and it belongs to the frontier AI companies and the volume of data everyone's
+usage generates. Iteration feeds Context rather than Growth: after each success and each failure,
+the context files are written before the next attempt.
 
 The names carry the argument, so they are worth stating. **Direction** rather than Control, because
 control implies people can perfectly steer a system that keeps getting more capable. **Context**
@@ -22,15 +27,15 @@ it covers what the whole system accumulates rather than what one model predicts 
 
 The rename ran through the repository as one change: the docs, `AGENTS.md`, the quickstart, the
 brief template, the worked example, the issue and pull request templates, the case studies, the
-website, and the README. Both case studies are retold through the five leaves with every fact left
+website, and the README. Both case studies are retold through the stages with every fact left
 as it was, including the two that are still open — the migration's production cutover has not run,
 and the upstream React pull request is CI-green and not merged.
 
-Clover also names the fifth leaf. Growth is useful today, and how far it goes is an open question:
-what happens when experience is shared across many systems, when it is embodied, and when a system
-begins to influence the Direction it was given rather than only carrying it out. That question is
-kept out of the framework material and lives in `hypothesis/ai-future.md`. It is a question, and not
-a prediction.
+The clover carries the argument. Three leaves is the common clover, how AI is used almost everywhere
+today. Four is the lucky clover, where Context becomes the systems an organization already runs, and
+that is what the framework exists for. Five is the growth clover, the next stage. Where repeated
+Growth ends is followed separately in `hypothesis/ai-future.md`, kept out of the framework material,
+and it is a question rather than a prediction.
 
 This is a breaking change to the framework's vocabulary. Anything written against the six stages
 needs remapping.

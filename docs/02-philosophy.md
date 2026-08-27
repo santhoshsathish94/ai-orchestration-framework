@@ -46,7 +46,7 @@ The working loop is four stages: Direction → Context → Action → Success. T
 
 ## Why Context is the breakthrough
 
-Context is no longer bounded by one human. It is the current systems the organization uses. Every repository, with its many projects and the documentation kept for each application. The datasources the applications connect to. The logs and telemetry. The deployment environments. The running applications and websites. None of it has to be written out first, and none of it is a description of the system from memory.
+Context is no longer bounded by one human. It is the current systems the organization uses. Every repository, with its many projects and the documentation kept for each application. The datasources the applications connect to. The logs and telemetry. The deployment environments. The running applications. None of it has to be written out first, and none of it is a description of the system from memory.
 
 Reaching it is a setup rather than a principle. Stand up **read-only MCP servers** in front of the repositories, the datasources, the logs and the environments, so an agent can read them directly. Scope every connection to what the human driving the work already has access to, at the privileges they already hold. Start with **one environment — development is enough** — and widen to other non-production environments as it proves out. [The orchestration environment](orchestration-environment.md#building-one) covers what to connect and in what order.
 
