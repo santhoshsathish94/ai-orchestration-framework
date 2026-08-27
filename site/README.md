@@ -95,7 +95,9 @@ The marks are the site's identity and they carry the argument, so they have rule
   loop back into Context.
 - **Iteration feeds Context, never Growth.** The page states the rule plainly: after each success or
   failure, the context files are written before the next attempt.
-- **Never call it a model.** Clover is a five-leaf framework of using AI. "Model" collides with
+- **Never call it a model.** Clover is an AI Orchestration Framework connecting human Direction,
+  real-world Context, AI-driven Action, and validated Success into a repeatable cycle. "Model"
+  collides with
   "AI model".
 - **Say "human"**, never "person" or "the user", for whoever holds Direction. Direction is the human
   controlling what needs to be done, deciding how it should be done, and approving.

@@ -2,9 +2,8 @@
 
 Run a first Clover cycle on a real task in about 15 minutes.
 
-Clover is a five-leaf framework of using AI. It sets out how a human's direction, the systems an
-organization already runs, the work AI does, and the evidence the real environment gives back fit
-together into one repeatable cycle.
+Clover is an AI Orchestration Framework connecting human Direction, real-world Context, AI-driven
+Action, and validated Success into a repeatable cycle.
 
 There is nothing to install. The cycle runs on real work, with whatever tools and AI assistant are
 already in use.
