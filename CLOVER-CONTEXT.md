@@ -15,23 +15,91 @@ every link resolves, and the website flows top to bottom with one leaf per secti
 
 ## Established — do not re-decide these
 
-### The model
+### The narrative arc — THIS IS THE SPINE OF EVERYTHING
+
+Clover is told as a clover that grows: **three leaves → four leaves → five leaves.** The number of
+leaves is the argument, not decoration. A three-leaf clover is ordinary and everywhere. A four-leaf
+clover is the rare one. A five-leaf clover is rarer still, and it has not arrived yet.
+
+Do not present the five leaves as five equal sections. Tell it in this order.
+
+**Opening — where AI already is.** Start by stating plainly how far AI has come and how useful it
+already is. It works as an expert software engineer, a quality assurance engineer, a security
+specialist, and more besides, and it backs that with real analysis rather than recall. This is the
+setup: the capability is not the missing piece.
+
+**Three leaves — Direction, Action, Success.** How AI is used almost everywhere today. A human
+supplies the Direction. AI performs the Action, using whatever direction and context the human typed
+in. The result becomes Success after several iterations. This works, and it is ordinary. It is the
+three-leaf clover.
+
+**Four leaves — Context is the fourth leaf, and it is the breakthrough.** Human-supplied context,
+written out by the person who already understands the problem, has stopped being the useful kind.
+Context has changed, because AI can now hold far more of it than it could before. That is the
+breakthrough worth building on.
+
+So context now means the things the organization already has:
+
+- the repositories
+- the many projects and the documentation kept for each application
+- the actual data, from every datasource the application connects to
+- the logs and telemetry the application produces
+- the deployment environments
+- the running applications and websites themselves
+
+You do not hand all of that over at once. You give access to what the person already has access to,
+at the privileges they already hold. Read-only is enough. Where an organization has security and
+governance concerns, the answers are the ones set out in the governance material — point there
+rather than repeating it.
+
+Even with all of that connected, the system is still a needle in a haystack. **That is what changes
+Direction.** The people who work on the system every day can point at roughly where the needle fell.
+Expecting AI to search the whole haystack does not work. Direction plus real context is what makes
+the difference, and that combination is what produces Success worth having — the kind every
+organization wants and every team can reach.
+
+It is iterative. Each result improves the context for the next pass. Markdown files kept beside the
+work are a good way to track progress and hold a summary of the context. That summary is what lets
+any agent pick the work up. **No single agent has to hold the job anymore.** With the context
+written down, any agent can understand it and act on it.
+
+**Five leaves — Growth, and it is not here yet.** Say plainly that this leaf does not affect
+organizations today. We have seen how far AI has come with the four-leaf way of working. The fifth
+leaf is what emerges next. Every problem solved with AI produces information, patterns accumulate
+across an enormous number of interactions, and new expertise forms out of that. The next phase is AI
+that works from goals with much less direction, and that could produce results at the scale of an
+entire organization's output.
+
+Stop there. Further hypothesis material is being revised separately — do not extend past this point.
+
+### The five leaves
 
 **Direction → Context → Action → Success → Growth**
 
-Five leaves. Do **not** append "→ repeat" to that line. The cycle does feed back — Growth shapes the
-next cycle's Context, Action, and sometimes the Direction itself — but say that in a sentence, not in
-the arrow chain.
+That is the canonical order of the model. Do **not** append "→ repeat" to it. The cycle does feed
+back, and Growth shapes the next pass — say that in a sentence, not in the arrow chain.
+
+Note the difference between the model order and the story order. The model reads Direction → Context
+→ Action → Success → Growth. The story arrives as Direction, Action, Success first, then Context as
+the fourth leaf, then Growth as the fifth. Both are true, and the story is what the website and the
+introductions use.
 
 Short form: **Where → Know → Do → Validate → Become**
 
 | Leaf | What it is | Core question |
 |---|---|---|
-| **Direction** | Human intent, purpose, priorities, constraints, and what should *not* be pursued. Where human intent enters the system. | Where are we going, and what outcome are we trying to achieve? |
-| **Context** | The information the system needs to reason about the real problem — repository, docs, architecture, data, logs, runtime state, tests, actual system behaviour, history, persistent memory, previous experience. | What do we need to know about reality before acting? |
-| **Action** | Reasoning, planning, orchestration, tool selection, model selection, execution, iteration, code changes, testing, debugging, interaction with external environments. | What should we do, and how should the work happen? |
+| **Direction** | Human intent, purpose, priorities, constraints, and what should *not* be pursued. With real context available, Direction becomes pointing at where the answer probably is. | Where are we going, and what outcome are we trying to achieve? |
+| **Context** | Everything the organization already has that describes reality — repositories, documentation, real data, logs and telemetry, deployment environments, the running applications. | What do we need to know about reality before acting? |
+| **Action** | Reasoning, planning, orchestration, tool selection, model selection, execution, iteration, code changes, testing, debugging. | What should we do, and how should the work happen? |
 | **Success** | The intended outcome demonstrated by the real environment. Not the AI saying it worked, not a plausible answer, not model confidence. | Did reality validate the intended outcome? |
-| **Growth** | What the system accumulates or becomes across repeated cycles — persistent memory, experience, learned patterns, expertise, better planning, better tool selection, adaptation, increasing capability. | What did the system become or learn? |
+| **Growth** | What accumulates across many cycles — patterns, expertise, capability. Not something an organization gets today. | What did the system become or learn? |
+
+### One claim to handle carefully
+
+The idea that every organization's success makes AI stronger is worth stating as a general
+mechanism: solved problems produce information, patterns accumulate, and models improve over time.
+Do **not** assert that any specific AI provider trains on customer or enterprise work. Many
+explicitly do not. Keep it structural and unattributed.
 
 ### Why these names, and not the old ones
 
@@ -147,33 +215,41 @@ reverse, and grant it per context rather than globally.
 
 ## Website — the shape it needs
 
-One page, top to bottom. The five leaves are the spine, and the clover grows a leaf per section.
+One page, top to bottom, told as the narrative arc above. The clover grows from three leaves to four
+to five as the reader scrolls.
 
-Each leaf section carries an **inline SVG clover with that many leaves filled** — one filled leaf at
-Direction, two at Context, three at Action, four at Success, five at Growth. Static SVG per section,
-no JavaScript required. The existing site rule holds: no build step, no dependencies, readable with
-JavaScript disabled.
+**Three clover marks carry the argument.** Each is an inline SVG with the leaf names shown as text
+labels beside the leaves:
+
+- **Three-leaf mark** — Direction, Action, Success. Leaves 120 degrees apart.
+- **Four-leaf mark** — Direction, Context, Action, Success, with **Context visually emphasized** as
+  the leaf that just arrived. Leaves 90 degrees apart.
+- **Five-leaf mark** — all five, with Growth drawn as a faint outline because it has not arrived.
+  Leaves 72 degrees apart.
+
+SVG requirements: one reusable leaf shape rotated into position, not five hand-drawn paths. Labels
+in `<text>` positioned outside each leaf tip, readable at the size shown. `role="img"` with a
+descriptive `aria-label`. Scales from about 200px to 420px. No external assets and no JavaScript
+needed to render. Banned: brains, robots, circuit boards, neural networks, hexagons, glowing "AI
+magic".
 
 Section order:
 
-1. Hero — Clover, the five leaves, one line each
-2. The problem this solves — short
-3. **Leaf 1 · Direction**
-4. **Leaf 2 · Context**
-5. **Leaf 3 · Action**
-6. **Leaf 4 · Success**
-7. **Leaf 5 · Growth**
-8. The agent file — what `AGENTS.md` does and how it teaches the person using it
-9. One real problem, start to finish — the walkthrough, told through the five leaves
-10. Security and governance
-11. Evidence — the case studies
-12. What it is not
-13. The fifth leaf — the open question, clearly labelled as hypothesis
-14. About the author
+1. Hero — Clover, and the one-line claim
+2. Where AI already is — expert software engineer, QA, security, backed by real analysis
+3. **Three leaves** — Direction, Action, Success. How AI is used today. The three-leaf mark
+4. **The fourth leaf: Context** — the breakthrough. What context now means, the access model,
+   read-only, a pointer to governance, the needle and the haystack, how Direction sharpens, the
+   iterative loop, markdown files, any agent can pick it up. The four-leaf mark
+5. **The fifth leaf: Growth** — not here yet. The five-leaf mark with Growth faint
+6. The agent file — what `AGENTS.md` does and that it teaches the person using it
+7. One real problem, start to finish — the walkthrough
+8. Security and governance — the full detail the fourth-leaf section points at
+9. Evidence — the case studies
+10. What it is not
+11. About the author
 
-Fold the current standalone sections in rather than keeping them: how AI fails becomes "what goes
-wrong here" inside each leaf; ownership folds into Direction; experience and expertise fold into
-Growth.
+Fold the standalone failure-mode material into the leaf sections as "what goes wrong here".
 
 ## Remaining
 
