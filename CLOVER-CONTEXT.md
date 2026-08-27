@@ -15,91 +15,109 @@ every link resolves, and the website flows top to bottom with one leaf per secti
 
 ## Established — do not re-decide these
 
+### Words to use, and words to avoid
+
+- **Never call it a "model".** Clover is a **five-leaf way of working with AI**, and at repo level a
+  **framework**. "Model" collides with "AI model" and overstates what this is.
+- **Say "human", never "person" or "the user"**, when describing who holds Direction.
+- **No short form.** Drop "Where → Know → Do → Validate → Become" everywhere. "Where" is wrong for
+  Direction — Direction is *what*.
+- **"What happens there"**, never "what goes wrong here", as the per-leaf heading.
+- The fifth leaf is **the next phase**. Never "it has not arrived", never "hypothesis", never
+  "prediction".
+- Clover names: the three-leaf is **the common clover**, the four-leaf is **the lucky clover**, the
+  five-leaf is **the growth clover**.
+- Do not explain the *Black Clover* or devil association anywhere. People who know it will see it.
+
 ### The narrative arc — THIS IS THE SPINE OF EVERYTHING
 
 Clover is told as a clover that grows: **three leaves → four leaves → five leaves.** The number of
-leaves is the argument, not decoration. A three-leaf clover is ordinary and everywhere. A four-leaf
-clover is the rare one. A five-leaf clover is rarer still, and it has not arrived yet.
+leaves is the argument.
 
-Do not present the five leaves as five equal sections. Tell it in this order.
+**Hero.** The name, one line, and the five-leaf mark with a line per leaf. Nothing else. Do not
+start the story here, and do not mention `AGENTS.md` or tooling. Move straight to the next section.
 
-**Opening — where AI already is.** Start by stating plainly how far AI has come and how useful it
-already is. It works as an expert software engineer, a quality assurance engineer, a security
-specialist, and more besides, and it backs that with real analysis rather than recall. This is the
-setup: the capability is not the missing piece.
+**AI current capabilities.** Short, simple, clear. AI is already past what any individual human can
+do. It holds the collection of skills humans have — engineering, quality assurance, security review,
+analysis — in one place. What it does not have is direction, and the will to act on its own.
 
-**Three leaves — Direction, Action, Success.** How AI is used almost everywhere today. A human
-supplies the Direction. AI performs the Action, using whatever direction and context the human typed
-in. The result becomes Success after several iterations. This works, and it is ordinary. It is the
-three-leaf clover.
+**Three leaves — the common clover. Direction, Action, Success.** How AI is used almost everywhere
+today. A human gives the Direction. AI performs the Action from what the human typed. The result
+becomes Success after several iterations. It works, and it is ordinary. Keep this section short: it
+only has to be recognized, not argued. No geometry talk under the image — the caption is just "the
+common clover".
 
-**Four leaves — Context is the fourth leaf, and it is the breakthrough.** Human-supplied context,
-written out by the person who already understands the problem, has stopped being the useful kind.
-Context has changed, because AI can now hold far more of it than it could before. That is the
-breakthrough worth building on.
+**Four leaves — the lucky clover. This is what the framework exists for.** Everything else on the
+page is setup for this section. Get it right.
 
-So context now means the things the organization already has:
+Context is no longer something a human writes out. It is the systems the organization already runs:
 
-- the repositories
-- the many projects and the documentation kept for each application
-- the actual data, from every datasource the application connects to
-- the logs and telemetry the application produces
+- every repository the team works in, holding many projects and their documentation
+- the datasources the applications connect to
+- the logs and telemetry those applications produce
 - the deployment environments
-- the running applications and websites themselves
+- the running applications and websites
 
-You do not hand all of that over at once. You give access to what the person already has access to,
-at the privileges they already hold. Read-only is enough. Where an organization has security and
-governance concerns, the answers are the ones set out in the governance material — point there
-rather than repeating it.
+**Give the reader a real plan, not a principle.** Concretely: stand up **read-only MCP servers** in
+front of those systems, so an agent can reach them. Scope every connection to what the human already
+has access to, at the privileges they already hold. Start with **one environment — development is
+enough** — and widen to other non-production environments as it proves out.
 
-Even with all of that connected, the system is still a needle in a haystack. **That is what changes
-Direction.** The people who work on the system every day can point at roughly where the needle fell.
-Expecting AI to search the whole haystack does not work. Direction plus real context is what makes
-the difference, and that combination is what produces Success worth having — the kind every
-organization wants and every team can reach.
+**Do not discuss production.** Organizations push back the moment it comes up, and it is not needed
+to get the value.
+
+**Defend the approach, because it will be challenged.** The honest argument: this access already
+exists and is already being used, often without anyone tracking it. Clover makes it deliberate,
+scoped and visible. It also surfaces problems — stale credentials, unreviewed access paths, data
+nobody has looked at — before they become incidents. Point at the security and governance section
+for the detail rather than repeating it.
+
+Then the part that makes it work: even with everything connected, this is a needle in a haystack.
+The humans who work on the system every day can point at roughly where the needle fell. Expecting AI
+to search the whole haystack does not work. Direction plus real context is what produces results
+worth having.
 
 It is iterative. Each result improves the context for the next pass. Markdown files kept beside the
-work are a good way to track progress and hold a summary of the context. That summary is what lets
-any agent pick the work up. **No single agent has to hold the job anymore.** With the context
-written down, any agent can understand it and act on it.
+work hold the summary, and that summary is what lets any agent pick the work up. No single agent has
+to hold the job.
 
-**Five leaves — Growth, and it is not here yet.** Say plainly that this leaf does not affect
-organizations today. We have seen how far AI has come with the four-leaf way of working. The fifth
-leaf is what emerges next. Every problem solved with AI produces information, patterns accumulate
-across an enormous number of interactions, and new expertise forms out of that. The next phase is AI
-that works from goals with much less direction, and that could produce results at the scale of an
-entire organization's output.
+This is where the case studies and the adoptable patterns belong. This is the state we are in now.
 
-Stop there. Further hypothesis material is being revised separately — do not extend past this point.
+**Five leaves — the growth clover. The next phase.** Not a hypothesis, not a prediction, not
+speculation. It is what happens next whether anyone chooses it or not. AI becomes more capable from
+what it takes out of the other four leaves — direction it has been given, context it has read,
+actions it has run, and results it has seen confirmed. Patterns form. Expertise forms. The phase
+after that is AI working from goals with far less direction, at a scale closer to an organization's
+whole output than to one task.
+
+Keep it simple and short. Do not hedge it into an open question, and do not dramatize it.
 
 ### The five leaves
 
 **Direction → Context → Action → Success → Growth**
 
-That is the canonical order of the model. Do **not** append "→ repeat" to it. The cycle does feed
-back, and Growth shapes the next pass — say that in a sentence, not in the arrow chain.
+Do **not** append "→ repeat". The cycle feeds back; say so in a sentence.
 
-Note the difference between the model order and the story order. The model reads Direction → Context
-→ Action → Success → Growth. The story arrives as Direction, Action, Success first, then Context as
-the fourth leaf, then Growth as the fifth. Both are true, and the story is what the website and the
-introductions use.
+| Leaf | What it is |
+|---|---|
+| **Direction** | The human says what needs to be done and what must not happen, and stays in control. With real context available, Direction is also pointing at where the answer probably is. |
+| **Context** | No longer something a human provides. It is the systems the organization already runs — repositories, projects and docs, datasources, logs and telemetry, deployment environments, the running applications. |
+| **Action** | Now mostly driven by AI: reasoning, planning, tool and model selection, execution, iteration, code changes, testing, debugging. |
+| **Success** | The intended outcome demonstrated by the real environment. Not the AI saying it worked, not a plausible answer, not model confidence. |
+| **Growth** | AI becoming more capable from what it learns across the other four leaves. Inevitable, and the next phase. |
 
-Short form: **Where → Know → Do → Validate → Become**
+### The worked example — rebuild it
 
-| Leaf | What it is | Core question |
-|---|---|---|
-| **Direction** | Human intent, purpose, priorities, constraints, and what should *not* be pursued. With real context available, Direction becomes pointing at where the answer probably is. | Where are we going, and what outcome are we trying to achieve? |
-| **Context** | Everything the organization already has that describes reality — repositories, documentation, real data, logs and telemetry, deployment environments, the running applications. | What do we need to know about reality before acting? |
-| **Action** | Reasoning, planning, orchestration, tool selection, model selection, execution, iteration, code changes, testing, debugging. | What should we do, and how should the work happen? |
-| **Success** | The intended outcome demonstrated by the real environment. Not the AI saying it worked, not a plausible answer, not model confidence. | Did reality validate the intended outcome? |
-| **Growth** | What accumulates across many cycles — patterns, expertise, capability. Not something an organization gets today. | What did the system become or learn? |
+The current walkthrough is too long and too written. Replace it with something **visual, simple and
+easy to follow**: a real end-to-end run of application development work. Keep the steps few. Do not
+re-explain what context is — the fourth leaf already did that. The visual should demonstrate it
+instead.
 
 ### One claim to handle carefully
 
-The idea that every organization's success makes AI stronger is worth stating as a general
-mechanism: solved problems produce information, patterns accumulate, and models improve over time.
-Do **not** assert that any specific AI provider trains on customer or enterprise work. Many
-explicitly do not. Keep it structural and unattributed.
+Growth as a general mechanism is fine: solved problems produce information, patterns accumulate,
+capability improves. Do **not** assert that any specific AI provider trains on customer or
+enterprise work. Keep it structural and unattributed.
 
 ### Why these names, and not the old ones
 
@@ -215,41 +233,31 @@ reverse, and grant it per context rather than globally.
 
 ## Website — the shape it needs
 
-One page, top to bottom, told as the narrative arc above. The clover grows from three leaves to four
-to five as the reader scrolls.
+One page, top to bottom, told as the narrative arc above.
 
-**Three clover marks carry the argument.** Each is an inline SVG with the leaf names shown as text
-labels beside the leaves:
+**Three clover marks carry the argument**, each an inline SVG with the leaf names as `<text>` labels:
 
-- **Three-leaf mark** — Direction, Action, Success. Leaves 120 degrees apart.
-- **Four-leaf mark** — Direction, Context, Action, Success, with **Context visually emphasized** as
-  the leaf that just arrived. Leaves 90 degrees apart.
-- **Five-leaf mark** — all five, with Growth drawn as a faint outline because it has not arrived.
-  Leaves 72 degrees apart.
+- **Three-leaf** — Direction, Action, Success. Caption underneath is just "the common clover".
+- **Four-leaf** — Direction, Context, Action, Success, with Context drawn solid as the leaf that
+  just arrived. Caption "the lucky clover".
+- **Five-leaf** — all five. Caption "the growth clover".
 
-SVG requirements: one reusable leaf shape rotated into position, not five hand-drawn paths. Labels
-in `<text>` positioned outside each leaf tip, readable at the size shown. `role="img"` with a
-descriptive `aria-label`. Scales from about 200px to 420px. No external assets and no JavaScript
-needed to render. Banned: brains, robots, circuit boards, neural networks, hexagons, glowing "AI
-magic".
+No geometry or construction detail in any caption. One reusable leaf shape rotated into position,
+`role="img"` with a descriptive `aria-label`, no external assets, no JavaScript needed.
 
 Section order:
 
-1. Hero — Clover, and the one-line claim
-2. Where AI already is — expert software engineer, QA, security, backed by real analysis
-3. **Three leaves** — Direction, Action, Success. How AI is used today. The three-leaf mark
-4. **The fourth leaf: Context** — the breakthrough. What context now means, the access model,
-   read-only, a pointer to governance, the needle and the haystack, how Direction sharpens, the
-   iterative loop, markdown files, any agent can pick it up. The four-leaf mark
-5. **The fifth leaf: Growth** — not here yet. The five-leaf mark with Growth faint
-6. The agent file — what `AGENTS.md` does and that it teaches the person using it
-7. One real problem, start to finish — the walkthrough
-8. Security and governance — the full detail the fourth-leaf section points at
+1. Hero — name, one line, the five-leaf mark, one line per leaf. Nothing else
+2. **AI current capabilities** — short
+3. **Three leaves · the common clover** — short
+4. **Four leaves · the lucky clover** — the largest and most important section
+5. **Five leaves · the growth clover** — short
+6. The worked example — visual, an end-to-end application development run, few steps
+7. The agent file
+8. Security and governance
 9. Evidence — the case studies
 10. What it is not
 11. About the author
-
-Fold the standalone failure-mode material into the leaf sections as "what goes wrong here".
 
 ## Remaining
 
