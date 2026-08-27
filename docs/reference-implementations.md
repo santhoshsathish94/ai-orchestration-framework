@@ -1,7 +1,7 @@
 # Reference Implementations
 
 Three patterns teams can adopt and adapt. They are not separate frameworks. Each one shows how [the
-Clover model](04-framework.md) applies to a recurring organizational problem.
+Clover framework](04-framework.md) applies to a recurring organizational problem.
 
 > **Status — what these actually are.** All three have been **built and used against real
 > organizational data** — repositories, logs, telemetry and job definitions.

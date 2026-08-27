@@ -5,7 +5,7 @@ about **AI**.
 
 AI does not fail the way a person or a script fails. A script fails loudly. A person usually knows
 when they are unsure. AI often fails **fluently**, producing a confident, well-structured, entirely
-plausible answer that happens to be wrong. That is the reason [the Clover model](04-framework.md)
+plausible answer that happens to be wrong. That is the reason [the Clover framework](04-framework.md)
 puts Context before Action and Success after it.
 
 Each failure below has a leaf that catches it.

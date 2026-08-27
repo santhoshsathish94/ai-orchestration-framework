@@ -1,7 +1,7 @@
 # Adoption
 
-Adoption is where [the Clover model](04-framework.md) becomes how a team works, or stays a document
-somebody read once.
+Adoption is where [the Clover framework](04-framework.md) becomes how a team works, or stays a
+document somebody read once.
 
 This page carries more weight than the rest of the framework. Access can be arranged and controls can
 be written in a week. Whether people actually work this way is what decides whether any of it
@@ -10,17 +10,39 @@ mattered.
 ## What is actually being adopted
 
 A team already using AI is already running three of the leaves. Somebody gives the Direction, AI
-performs the Action from whatever that person typed in, and after several passes the result becomes
+performs the Action from whatever that human typed in, and after several passes the result becomes
 Success. That part needs no rollout.
 
-What gets adopted is the fourth leaf. AI reads the systems the organization already runs — the
-repositories, the projects and their documentation, the real data, the logs and telemetry, the
-deployment environments, the running applications — instead of reading a description somebody typed
-from memory. Alongside it, the people who work in a system every day start saying where the answer
-probably is, because the systems are a haystack and a pointer is worth more than a longer
-description.
+What gets adopted is the fourth leaf. AI reads the current systems the organization uses — the
+repositories with their many projects and documentation, the datasources the applications connect
+to, the logs and telemetry, the deployment environments, the running applications — instead of
+reading a description somebody typed from memory. Alongside it, the people who work in a system
+every day start saying where the answer probably is, because the systems are a haystack and a
+pointer is worth more than a longer description.
 
 The rest of this page is about getting that leaf in place and keeping it there.
+
+## The setup
+
+Three steps, in this order.
+
+1. **Stand up read-only MCP servers** in front of the repositories, the datasources, the logs and
+   telemetry, and the environments. One connection at a time, each one added because a real problem
+   needed it.
+2. **Scope every connection to what the human driving the work already has access to**, at the
+   privileges they already hold. Nothing new is being granted, and the security conversation stays
+   small because there is nothing new to argue about.
+3. **Start with one environment. Development is enough.** Widen to other non-production environments
+   as it proves out.
+
+The approach gets challenged, and the honest answer holds up. That access already exists and is
+already used, often with nobody tracking it. Clover makes it deliberate, scoped and visible. It also
+surfaces stale credentials, unreviewed access paths and data nobody has looked at, before any of
+those become an incident.
+[The orchestration environment](orchestration-environment.md#building-one) covers what to connect and
+in what order, and
+[governance](08-governance.md#questions-your-security-team-will-ask) answers the questions a security
+team will ask before any of it is granted.
 
 ## Nothing to migrate onto
 
@@ -33,7 +55,7 @@ That is the practical reason adoption can start small. There is no platform deci
 migration to fund. A team that stops is left with exactly what it had.
 
 There is still work in it. The layer needs access to the places the answers live, and that access
-should be scoped on purpose: read-only where reading is enough, mirroring what the person driving the
+should be scoped on purpose: read-only where reading is enough, mirroring what the human driving the
 work can already see, and human approval kept wherever a mistake would be expensive or hard to
 reverse. [The orchestration environment](orchestration-environment.md) covers what to connect and in
 what order, and [governance](08-governance.md#questions-your-security-team-will-ask) covers the
@@ -41,9 +63,9 @@ questions a security team will ask before any of it is granted.
 
 ## The leaves do not cost the same to adopt
 
-**Direction** costs habit and nothing else. Somebody states the outcome, the constraints, what stays
-out of scope, and where they think the answer is, before the work starts. A team can begin that today
-with no access, no tooling and no approval to wait for.
+**Direction** costs habit and nothing else. Somebody says what needs to be done, what must not
+happen, and where they think the answer is, before the work starts. A team can begin that today with
+no access, no tooling and no approval to wait for.
 
 **Context** is the real investment, and it is where most of the early value shows up. Read-only reach
 into the code, the tickets, the logs and the data lets AI reason about the actual problem instead of
@@ -57,9 +79,9 @@ follows what has already held up in work of that kind.
 checked, what they observed, and where they stopped find out quickly how much of their reporting had
 been assertion.
 
-**Growth** is the smallest of the five today, and the larger form of it has not arrived. What a team
-can do now is write down what a cycle taught, beside the work, so the next cycle starts from it. Most
-teams skip it, because the work feels finished when the change ships.
+**Growth** is the next phase, and it arrives whether or not a team plans for it. What a team can do
+with it now is write down what a cycle taught, beside the work, so the next cycle starts from it.
+Most teams skip that, because the work feels finished when the change ships.
 
 ## A sequence that works
 
@@ -68,11 +90,12 @@ teams skip it, because the work feels finished when the change ships.
    survive contact with a busy week.
 2. **Teach the cycle rather than the tool.** Direction → Context → Action → Success → Growth outlives
    whichever product the team is using this quarter.
-3. **Connect one real source, read-only.** The repository, then the logs, then the ticket history,
-   then a datasource. Reading cannot break anything, so it is the cheapest way to find out whether
-   the output can be trusted, and one connection at a time keeps the security conversation small.
-4. **Wire it into the environments and pipelines that already exist.** Non-production environments and
-   existing pipeline triggers are where checking earns its place without new risk.
+3. **Connect one real source, read-only.** A read-only MCP server in front of the repository, then
+   the logs, then the ticket history, then a datasource. Reading cannot break anything, so it is the
+   cheapest way to find out whether the output can be trusted, and one connection at a time keeps the
+   security conversation small.
+4. **Add the development environment, then the other non-production ones.** That is where checking
+   earns its place without new risk, alongside the pipeline triggers that already exist.
 5. **Let people ask in whatever way they find natural.** When most questions can be asked and answered
    in conversation, the bottleneck stops being whoever knows the system best.
 6. **Widen what AI decides as results hold**, following
@@ -95,7 +118,7 @@ review what gets kept, so that one good outcome does not become a rule the next 
 ## Knowing whether it worked
 
 Enthusiasm during a rollout says very little. The better signal is whether the way of working
-continues while the person who introduced it is on leave. A capability that stops when its advocate
+continues while whoever introduced it is on leave. A capability that stops when its advocate
 steps away has been demonstrated rather than adopted.
 
 What is worth watching:

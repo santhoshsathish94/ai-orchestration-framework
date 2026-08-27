@@ -1,6 +1,6 @@
 # Success
 
-Success is the fourth leaf of [the Clover model](04-framework.md). It asks whether the intended outcome actually happened, and it answers with the environment.
+Success is the fourth leaf of [the Clover framework](04-framework.md). It asks whether the intended outcome actually happened, and it answers with the environment.
 
 The environment is the evidence of success. A closed task, a generated artifact, a passing build, a merged change, a fluent explanation, a confident tone, and a high model score are all things the work produced. None of them shows that the outcome occurred.
 

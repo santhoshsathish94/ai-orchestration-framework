@@ -19,17 +19,17 @@ into the data underneath. When somebody goes and checks the answer, it usually h
 So capability is not what most teams are short of. Skilled people are available, and capable AI is
 available too. Something else decides whether the work turns into an outcome anyone can rely on.
 
-## The context is still a person typing
+## The context is still a human typing
 
 Almost everywhere AI is used today, everything it knows about the system it is changing arrives
 through a description somebody typed in. That description gets written from memory, usually in a
 hurry, about a codebase nobody has held in their head for years.
 
-The ceiling on the work is the ceiling on what one person can type.
+The ceiling on the work is the ceiling on what one human can type.
 
 We kept seeing the same pattern at every level:
 
-- A person starts fixing before knowing what is broken, and the fix lands near the problem rather
+- Somebody starts fixing before knowing what is broken, and the fix lands near the problem rather
   than on it.
 - A team adds people to move faster. What each of them knows travels badly, so the work turns into
   handoff, lost context, and rework.
@@ -40,13 +40,13 @@ We kept seeing the same pattern at every level:
 
 Each one is the same failure. Capability without direction, real information, and evidence rarely
 turns into a reliable outcome. AI does not create that gap. It makes the gap obvious, because AI
-will act on missing information faster and more confidently than a person will.
+will act on missing information faster and more confidently than a human will.
 
 That is the problem Clover addresses.
 
 ## Why the old way of working does not hold
 
-Our ways of working were built for humans working with humans. A handoff assumes a person on both
+Our ways of working were built for humans working with humans. A handoff assumes a human on both
 ends. A review assumes an author who can explain their reasoning. "Done" assumes somebody looked. An
 AI participant breaks all three assumptions at once, and nothing in the process notices.
 
@@ -62,29 +62,30 @@ The symptoms look the same wherever it happens:
 
 ## Better tools do not close it
 
-Organizations usually respond by writing better prompts, adopting a newer model, or switching tools.
-Individual productivity often improves. The larger problem stays open, because none of those choices
-decide where the work should go, what the system needs to know about the real environment, whether
-the result held up, or what the organization keeps afterward.
+Organizations usually respond by writing better prompts, adopting a newer AI model, or switching
+tools. Individual productivity often improves. The larger problem stays open, because none of those
+choices decide where the work should go, what the system needs to know about the real environment,
+whether the result held up, or what the organization keeps afterward.
 
-Picking a model is a small decision next to designing how the work happens. A capable participant,
-human or AI, needs the information the problem actually requires, boundaries it respects, ownership
-that survives delegation, and something at the end that shows the outcome occurred.
+Picking an AI model is a small decision next to designing how the work happens. A capable
+participant, human or AI, needs the information the problem actually requires, boundaries it
+respects, ownership that survives delegation, and something at the end that shows the outcome
+occurred.
 
 ## The organization already holds the context
 
-The material that would tell AI what it needs to know exists already. The repositories. The many
-projects, and the documentation kept for each application. The real data, from every datasource the
-application connects to. The logs and telemetry. The deployment environments. The running
-applications themselves.
+The material that would tell AI what it needs to know exists already. Every repository, with its
+many projects and the documentation kept for each application. The datasources the applications
+connect to. The logs and telemetry. The deployment environments. The running applications
+themselves.
 
 Nobody has to write any of that out first. It is there, and it is current, which is more than can be
 said for most descriptions of it. Reaching it is what the [second leaf](05-context-engineering.md)
-covers, and it is why the model has four working leaves rather than three.
+covers, and it is the leaf that changed what the other three are worth.
 
 Clover organizes that into five questions a team asks every time:
 
-- Where are we going, and what is out of scope?
+- What needs to be done, and what must not happen?
 - What do we need to know about reality before acting?
 - What should we do, and how should the work happen?
 - Did reality validate the intended outcome?

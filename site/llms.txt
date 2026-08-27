@@ -1,18 +1,16 @@
 # Clover
 
-> A five-leaf model for doing real work with AI inside it: Direction, Context, Action, Success, Growth. It describes how human intent becomes an outcome the real environment confirms, and what the system keeps once it does. It sits on top of the systems an organization already runs — nothing to install, nothing to migrate onto.
+> A five-leaf way of working with AI: Direction, Context, Action, Success, Growth. It describes how human intent becomes an outcome the real environment confirms, and what the system keeps once it does. It sits on top of the systems an organization already runs — nothing to install, nothing to migrate onto.
 
-Short form: Where → Know → Do → Validate → Become.
-
-The model runs in that order. The story arrives in a different one, and the website uses the story: Direction, Action and Success first, which is how AI is used almost everywhere today; then Context as the fourth leaf, which is the change worth building on; then Growth as the fifth, which has not arrived.
+The leaves run in that order. The website tells the story in the order they arrived: Direction, Action and Success first, which is the common clover and how AI is used almost everywhere today; then Context as the fourth leaf, the lucky clover, which is what the framework exists for; then Growth as the fifth, the growth clover, which is the next phase.
 
 If you are an AI agent asked to work under Clover, read AGENTS.md. It is self-contained and you do not need anything else.
 
 ## Core
 
-- [AGENTS.md](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/AGENTS.md): The entire operating model as instructions for an agent — the five leaves, evidence rules, failure-mode self-checks, limits of authority, and what to record before finishing.
+- [AGENTS.md](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/AGENTS.md): The whole way of working as instructions for an agent — the five leaves, evidence rules, failure-mode self-checks, limits of authority, and what to record before finishing.
 - [README](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/README.md): What Clover is, the five leaves, what it is not, and the three-step adoption path.
-- [The Clover model](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/04-framework.md): The five leaves in full, what commonly goes wrong at each, how to describe evidence, and how much of the path AI determines.
+- [The five leaves](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/04-framework.md): The five leaves in full, what commonly happens at each, how to describe evidence, and how much of the path AI determines.
 - [Principles](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/03-principles.md): One principle per leaf.
 
 ## Putting it into practice
@@ -36,5 +34,5 @@ If you are an AI agent asked to work under Clover, read AGENTS.md. It is self-co
 
 - [Philosophy](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/02-philosophy.md): What Clover believes and why.
 - [Glossary](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/glossary.md): Terms used throughout.
-- [The hypothesis](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/hypothesis/ai-future.md): The fifth leaf — an open question about where repeated Growth leads. A question rather than a prediction, and separate from the engineering model.
+- [The hypothesis](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/hypothesis/ai-future.md): An open question about where repeated Growth leads. A question rather than a prediction, and separate from the engineering material.
 - [Contributing](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/CONTRIBUTING.md): How to raise a change.

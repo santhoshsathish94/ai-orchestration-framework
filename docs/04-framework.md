@@ -1,48 +1,52 @@
-# The Clover Model
+# The Clover Framework
 
 ## Purpose
 
 Clover is a repeatable cycle for doing real work with AI inside it. Five leaves: Direction, Context, Action, Success, Growth.
 
-Prompts, tools, agents, and model choice all sit underneath the cycle. What the model describes is how human intent becomes an outcome the environment confirms, and what the system keeps once it does.
+Prompts, tools, agents, and AI model choice all sit underneath the cycle. What the framework describes is how human intent becomes an outcome the environment confirms, and what the system keeps once it does.
 
 **Direction → Context → Action → Success → Growth**
 
-Short form: **Where → Know → Do → Validate → Become**
-
 ## Three leaves, then four, then five
 
-That is the order the work runs in. The leaves arrived in a different order, and the way they arrived is the clearest way to explain the model.
+That is the order the work runs in. The leaves arrived in a different order, and the way they arrived is the clearest way to explain them.
 
-### Three leaves — Direction, Action, Success
+### Three leaves — the common clover
 
-This is how AI is used almost everywhere today. A person gives the Direction. AI performs the Action, working from whatever that person typed in. After several passes the result becomes Success.
+Direction, Action, Success. This is how AI is used almost everywhere today. A human gives the Direction. AI performs the Action, working from whatever that human typed in. After several passes the result becomes Success.
 
-It works, and a lot of real value comes out of it. It is also ordinary, which is what a three-leaf clover is. The limit is that these three leaves only ever see as much of the organization as one person remembered to describe, written from memory and usually in a hurry.
+It works, and a lot of real value comes out of it. It is also ordinary, which is what a common clover is. The limit is that these three leaves only ever see as much of the organization as one human remembered to describe, written from memory and usually in a hurry.
 
-### The fourth leaf — Context
+### Four leaves — the lucky clover
 
-Context typed in by hand has stopped being the useful kind. AI can hold far more context than it could before, and that change is the one worth building on.
+Context arrives. It is no longer something a human provides: it is the current systems the organization uses. Every repository, with its many projects and the documentation kept for each application. The datasources the applications connect to. The logs and telemetry. The deployment environments. The running applications themselves. Nobody has to write any of it out first.
 
-So Context means the material the organization already has: the repositories, the many projects and the documentation kept for each application, the real data from every datasource an application connects to, the logs and telemetry, the deployment environments, and the running applications themselves. Nobody has to write any of it out first.
+Reaching it takes a setup rather than a principle:
 
-None of it gets handed over at once either. A person gets access to what they already have access to, at the privileges they already hold, and read-only is enough to start with. [Governance](08-governance.md#access-mirrors-the-person-not-the-ai) covers how that access is held, and [the orchestration environment](orchestration-environment.md#rules-for-access) covers what it takes to connect.
+1. **Stand up read-only MCP servers** in front of the repositories, the datasources, the logs and telemetry, and the environments, so an agent can read them directly.
+2. **Scope every connection to what the human driving the work already has access to**, at the privileges they already hold. Nothing new is being granted.
+3. **Start with one environment. Development is enough.** Widen to other non-production environments as it proves out.
+
+[The orchestration environment](orchestration-environment.md#building-one) covers what to connect and in what order, and [governance](08-governance.md#access-mirrors-the-person-not-the-ai) covers how that access is held.
+
+The approach gets challenged, and the honest answer holds up. That access already exists and is already used, often with nobody tracking it. Clover makes it deliberate, scoped and visible. It also surfaces stale credentials, unreviewed access paths and data nobody has looked at, before any of those become an incident. [The questions a security team will ask](08-governance.md#questions-your-security-team-will-ask) are answered one by one.
 
 Connecting the material does not finish the job. An organization's systems are a haystack and the thing worth finding is a needle somewhere inside it, and expecting AI to search the whole haystack does not work. **That is what changes Direction.** The people who work on a system every day know roughly where the needle fell, so Direction becomes a pointer at the part of the system to read first. Direction that points, together with context that is real, is what produces Success worth having.
 
 It runs in a loop. What comes back from one pass is context for the next. Markdown files kept beside the work hold the summary, and that summary is what lets any agent pick the job up, so no single agent has to hold the work. [Context](05-context-engineering.md#where-context-lives) covers how those files are kept.
 
-A four-leaf clover is the rare one, and this is the leaf that makes it rare.
+A lucky clover is the rare one, and this is the leaf that makes it rare. It is also where organizations are now.
 
-### The fifth leaf — Growth
+### Five leaves — the growth clover
 
-Growth has not arrived. A team can already keep what a cycle taught it, and that is worth doing, but the leaf as a whole does not affect organizations today.
+Growth is the next phase. It happens whether or not anyone chooses it.
 
-We have seen how far AI has come with the four-leaf way of working. Growth is what forms after that. Every problem solved with AI produces information — what the problem was, what was tried, what the environment did in response, and which answer held. Across an enormous number of interactions those results form patterns, and new expertise forms out of the patterns. The phase after this one is AI that works from goals with far less direction than it needs today, producing results at the scale of an entire organization's output rather than one task at a time.
+AI becomes more capable from what it takes out of the other four leaves: the direction it was given, the context it read, the actions it ran, and the results it saw confirmed. Patterns form, and expertise forms out of the patterns. The phase after this one is AI working from goals with far less direction than it needs now, at a scale closer to an organization's whole output than to one task.
 
 That is a general statement about how information accumulates. It says nothing about any AI provider training on customer or enterprise work, and many state plainly that they do not.
 
-Everything below is written for the four leaves that are here.
+Everything below sets out the five leaves one at a time.
 
 ## From AI models to AI orchestration
 
@@ -52,7 +56,7 @@ AI capability is evolving from models that provide intelligence, to agents that 
 
 This is not a strict replacement hierarchy. An agentic workflow can be an important building block inside an orchestration. What separates them is the scope of context and learning. A workflow runs a known process repeatedly. An orchestration captures what the outcome showed and makes that available to the next cycle.
 
-Context can accumulate at whatever scope fits — a person, a team, an organization, or another defined boundary.
+Context can accumulate at whatever scope fits — a human, a team, an organization, or another defined boundary.
 
 ## The five leaves
 
@@ -60,11 +64,11 @@ Each leaf has one job. The complexity belongs in the context, ownership, evidenc
 
 | Leaf | What it is | Core question |
 |---|---|---|
-| **Direction** | Human intent, purpose, priorities, constraints, and what should not be pursued. With real context available, Direction becomes pointing at where the answer probably is. | Where are we going, and what outcome are we trying to achieve? |
-| **Context** | Everything the organization already has that describes reality — repositories, documentation, real data, logs and telemetry, deployment environments, the running applications. | What do we need to know about reality before acting? |
-| **Action** | Deciding how the work should happen, and doing it. | What should we do, and how should the work happen? |
+| **Direction** | The human says what needs to be done and what must not happen, and stays in control. With real context available, Direction also points at where the answer probably is. | What needs to be done, and what must not happen? |
+| **Context** | The current systems the organization uses — repositories with their many projects and documentation, the datasources the applications connect to, the logs and telemetry, the deployment environments, the running applications. | What do we need to know about reality before acting? |
+| **Action** | Now mostly driven by AI: deciding how the work should happen, and doing it. | What should we do, and how should the work happen? |
 | **Success** | The intended outcome demonstrated by the real environment. | Did reality validate the intended outcome? |
-| **Growth** | What the system accumulates or becomes across repeated cycles. | What did the system become or learn? |
+| **Growth** | AI becoming more capable from what it learns across the other four leaves. | What did the system become or learn? |
 
 Growth is not a finish line. What one cycle accumulates becomes part of the next cycle's Context, changes how Action gets planned, and sometimes changes the Direction itself, because the work revealed that a different outcome was the one worth pursuing.
 
@@ -72,25 +76,25 @@ Growth is not a finish line. What one cycle accumulates becomes part of the next
 
 ## Leaf 1 — Direction
 
-Direction is where human intent enters the system. A person decides what is worth doing, why it matters, which outcome counts, which constraints apply, and what should stay out of the work.
+Direction is where human intent enters the system. A human says what needs to be done, why it matters, which outcome counts, which constraints apply, and what must not happen. Control stays with them.
 
-A ticket can trigger it. Direction is the outcome behind the ticket, stated plainly, together with the edges of the work.
+A ticket can trigger it. Direction is the outcome behind the ticket, stated plainly, together with what the work must not touch.
 
 Once AI can read the real environment, Direction also points. The people who work in a system every day know roughly where the answer probably is — which service went out last week, which job has always been fragile, which team owns the part nobody wrote down. Saying which part of the system to read first is usually worth more than a longer description of the task.
 
-**Core question.** Where are we going, and what outcome are we trying to achieve?
+**Core question.** What needs to be done, and what must not happen?
 
-**What the human holds.** All of it — the objective, the priorities, the constraints, the risk boundaries, where the answer probably is, what counts as a good outcome, and what stays out of scope. Ownership of the outcome remains with a person after the work is handed over.
+**What the human holds.** All of it — the objective, the priorities, the constraints, the risk boundaries, where the answer probably is, what counts as a good outcome, and what stays out of scope. Ownership of the outcome remains with a human after the work is handed over.
 
-**What AI does.** Sharpens it. AI can restate the objective in its own words, ask what should happen to the parts nobody mentioned, point out that two stated goals conflict, and turn a vague request into something specific enough to work from. Setting the direction stays with the person.
+**What AI does.** Sharpens it. AI can restate the objective in its own words, ask what should happen to the parts nobody mentioned, point out that two stated goals conflict, and turn a vague request into something specific enough to work from. Setting the direction stays with the human.
 
-**What goes wrong here.** Direction gets skipped because a ticket looks like enough, and the work then optimizes for closing the ticket rather than for the outcome. Unstated scope is the next one: nobody said the change must not touch billing, so nothing stopped it. The third is a direction with no pointer, which leaves an agent reading everything it can reach, slowly and at cost.
+**What happens there.** Direction gets skipped because a ticket looks like enough, and the work then optimizes for closing the ticket rather than for the outcome. Unstated scope is the next one: nobody said the change must not touch billing, so nothing stopped it. The third is a direction with no pointer, which leaves an agent reading everything it can reach, slowly and at cost.
 
 ## Leaf 2 — Context
 
-Context is what the system needs to know about reality before acting, and it comes from the systems the organization already runs. The repositories. The many projects, and the documentation kept for each application. The real data, from every datasource the application connects to. The logs and telemetry. The deployment environments. The running applications. Tests, history, earlier attempts, and the memory carried from previous cycles sit here too.
+Context is what the system needs to know about reality before acting, and it comes from the current systems the organization uses. Every repository, with its many projects and the documentation kept for each application. The datasources the applications connect to. The logs and telemetry. The deployment environments. The running applications. Tests, history, earlier attempts, and the memory carried from previous cycles sit here too.
 
-Access mirrors the person. AI reads what the person driving the work can already read, at the privileges they already hold, and read-only is enough to start with. [Governance](08-governance.md#access-mirrors-the-person-not-the-ai) covers how that is held.
+Read-only MCP servers in front of those systems are how an agent reaches them. Every connection is scoped to what the human driving the work already has access to, at the privileges they already hold, and one environment is enough to start — development. [Governance](08-governance.md#access-mirrors-the-person-not-the-ai) covers how that access is held.
 
 Prompting is a small part of this. The working rule is to reason from the real environment rather than from assumptions, wherever the environment can answer the question.
 
@@ -102,21 +106,21 @@ One pass rarely finishes it. What the first pass returns is context for the seco
 
 **What AI does.** Most of the gathering. Reading code, tracing a call path, pulling telemetry, reconstructing an incident from logs, finding the earlier attempt nobody remembered. A good orchestration also reports what it could not find, and that part matters most.
 
-**What goes wrong here.** The plausible answer. A model working from thin context produces something that reads correctly and describes a system that does not exist. The opposite failure is hoarding, where a context packed with irrelevant material buries the few facts the problem turns on. [How AI fails](how-ai-fails.md) covers the specific patterns, and [context engineering](05-context-engineering.md) covers how the material is assembled.
+**What happens there.** The plausible answer. An AI model working from thin context produces something that reads correctly and describes a system that does not exist. The opposite failure is hoarding, where a context packed with irrelevant material buries the few facts the problem turns on. [How AI fails](how-ai-fails.md) covers the specific patterns, and [context engineering](05-context-engineering.md) covers how the material is assembled.
 
 ## Leaf 3 — Action
 
-Action covers deciding how the work should happen and then doing it. Reasoning, planning, tool selection, model selection, orchestration across agents, code changes, tests, debugging, and interaction with whatever environments the work touches.
+Action is now mostly driven by AI. It covers deciding how the work should happen and then doing it. Reasoning, planning, tool selection, AI model selection, orchestration across agents, code changes, tests, debugging, and interaction with whatever environments the work touches.
 
 Planning and doing sit on one leaf on purpose. The plan usually changes once the work meets reality, and keeping the two together makes that change ordinary rather than an exception to explain.
 
 **Core question.** What should we do, and how should the work happen?
 
-**What the human holds.** The boundaries and the approvals. Which decisions need a person before they happen, what may run unattended, and who owns each part when the work is split. Delegation moves the work and leaves accountability where it was.
+**What the human holds.** The boundaries and the approvals. Which decisions need a human before they happen, what may run unattended, and who owns each part when the work is split. Delegation moves the work and leaves accountability where it was.
 
 **What AI does.** Most of the work, inside those boundaries. Choosing an approach, sequencing the steps, picking tools, running subagents where parts are genuinely independent, implementing, testing, and coming back when the evidence contradicts the plan.
 
-**What goes wrong here.** Thrash. A change fails, the next attempt is a variation of the same change, and each attempt sounds as confident as the last. Misplaced parallelism is the other one: splitting work that shares state costs more in coordination and rework than it saves.
+**What happens there.** Thrash. A change fails, the next attempt is a variation of the same change, and each attempt sounds as confident as the last. Misplaced parallelism is the other one: splitting work that shares state costs more in coordination and rework than it saves.
 
 ## Leaf 4 — Success
 
@@ -126,11 +130,11 @@ Evidence can be a test that fails without the change and passes with it, a befor
 
 **Core question.** Did reality validate the intended outcome?
 
-**What the human holds.** The standard. What counts as sufficient evidence for this work, and what risk is acceptable if the answer turns out to be wrong. Approval for anything expensive or hard to reverse stays with a person.
+**What the human holds.** The standard. What counts as sufficient evidence for this work, and what risk is acceptable if the answer turns out to be wrong. Approval for anything expensive or hard to reverse stays with a human.
 
 **What AI does.** Runs the checks, gathers the evidence, and reports it accurately, including what did not work and what it could not check.
 
-**What goes wrong here.** Evidence described more strongly than it is. "Verified" covering a single manual look. A merged change reported as a resolved problem. The quiet one is stopping at the artifact: the build passed, so the work is treated as done, and nobody checks whether the original signal changed.
+**What happens there.** Evidence described more strongly than it is. "Verified" covering a single manual look. A merged change reported as a resolved problem. The quiet one is stopping at the artifact: the build passed, so the work is treated as done, and nobody checks whether the original signal changed.
 
 ### Say what the evidence actually is
 
@@ -138,7 +142,7 @@ Not every task has telemetry, and pretending otherwise makes this leaf unusable 
 
 Four questions do the work:
 
-- **Did anyone verify it, or is someone asserting it?** "It works" from a person or a model establishes nothing on its own.
+- **Did anyone verify it, or is someone asserting it?** "It works" from a human or an AI establishes nothing on its own.
 - **Does it hold up again?** Something seen working once may not repeat. An automated check that fails without the change and passes with it is a different claim from a manual look.
 - **Did the thing we cared about move?** A passing test says the code behaves. A before-and-after measurement says the problem changed.
 - **Did it hold where it counts?** The strongest evidence is the original signal disappearing in the real environment and staying gone.
@@ -165,19 +169,19 @@ Experience is what one cycle produced — what was tried, the context it ran in,
 
 **What AI does.** Captures the experience while it is still accurate, writes it where the next cycle will actually read it, notices patterns across cycles, and applies them the next time a similar problem shows up.
 
-**What goes wrong here.** Nothing is captured, because the work closed when the change shipped. Or everything is captured, and the pile of "learnings" becomes noise nobody reads. The subtle one is promoting a single lucky outcome into a rule the system then follows everywhere.
+**What happens there.** Nothing is captured, because the work closed when the change shipped. Or everything is captured, and the pile of "learnings" becomes noise nobody reads. The subtle one is promoting a single lucky outcome into a rule the system then follows everywhere.
 
-The expertise that survives this leaf becomes part of the Context the next cycle starts from, which is how capability compounds without adding leaves to the model. What a team gets from this leaf today is modest, and the larger form of Growth described in the arc above has not arrived.
+The expertise that survives this leaf becomes part of the Context the next cycle starts from, which is how capability compounds without adding leaves. What a team validates and reuses today is the part it controls; the wider Growth described in the arc above is the next phase, and it arrives either way.
 
 ---
 
 ## Widening what AI decides
 
-The five leaves are the operating model. How much of the work AI determines for itself changes over time, as tooling, context, experience, validation, and trust mature.
+The five leaves are how the work runs. How much of the work AI determines for itself changes over time, as tooling, context, experience, validation, and trust mature.
 
 ![A possible progression toward goal-directed autonomous AI](../assets/goal-directed-autonomy-progression.svg)
 
-Today a person often supplies both the outcome and much of the path. As an orchestration matures, the person can supply the objective, the constraints, and what counts as success, while AI determines and adapts the path from current context and accumulated experience.
+Today a human often supplies both the outcome and much of the path. As an orchestration matures, the human can supply the objective, the constraints, and what counts as success, while AI determines and adapts the path from current context and accumulated experience.
 
 "Increase autonomy as trust matures" is only useful if a team can say what decides it. Three rules do:
 
@@ -185,11 +189,11 @@ Today a person often supplies both the outcome and much of the path. As an orche
 - **Blast radius overrides track record.** Where a mistake is expensive or hard to reverse, human approval stays regardless of how well things have gone.
 - **It is granted per context, rather than globally.** A team may let AI plan and execute freely inside a well-understood remediation flow while approving every step of anything touching customer data.
 
-What moves is how much of the path AI determines, from drafting steps a person approves, through executing an agreed plan, to planning within stated constraints. Who owns the objective, the constraints, and the outcome does not move. [Governance](08-governance.md) covers how that is held in practice.
+What moves is how much of the path AI determines, from drafting steps a human approves, through executing an agreed plan, to planning within stated constraints. Who owns the objective, the constraints, and the outcome does not move. [Governance](08-governance.md) covers how that is held in practice.
 
-## Applying the model
+## Applying the framework
 
-The model is technology independent. It fits anywhere work has an intended outcome that somebody has to stand behind:
+Clover is technology independent. It fits anywhere work has an intended outcome that somebody has to stand behind:
 
 - Software engineering
 - DevOps
@@ -206,7 +210,7 @@ For practical patterns, see **[Reference Implementations](reference-implementati
 
 ### Example: a recurring production exception
 
-**Direction** — resolve a recurring production exception. Say which systems the fix may touch, who approves the deployment, and which part of the system to look at first.
+**Direction** — resolve a recurring production exception. Say which systems the fix may touch, what must not happen, who approves the deployment, and which part of the system to look at first.
 
 **Context** — read the ticket, the logs, the code, the telemetry, the dependencies, the history, and any earlier attempt, before changing anything.
 

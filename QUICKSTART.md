@@ -10,24 +10,24 @@ assistant are already in use.
 ## What this cycle adds
 
 Most AI work today runs on three leaves. Someone gives the Direction, AI performs the Action from
-whatever that person typed in, and after several passes the result becomes Success. It works, and it
+whatever that human typed in, and after several passes the result becomes Success. It works, and it
 is ordinary.
 
 This first cycle adds the fourth leaf. The assistant reads the real systems instead of a description
-of them, and the person says where the answer probably is. That pairing is what the rest of the
+of them, and the human says where the answer probably is. That pairing is what the rest of the
 framework is about.
 
 ## 1. Pick a real task (2 min)
 
-Something small and real works best — a bug, a small feature, a production exception. The cycle needs
+Something small and real works best — a bug, a small feature, a recurring exception. The cycle needs
 concrete work to run on.
 
 ## 2. Give the assistant something real to read (3 min)
 
 Before describing the problem from memory, hand over a source: the repository, the failing test, the
-log lines, the ticket, the query results, the running application in a non-production environment.
-Read-only, at the privileges the person driving the work already holds. One source is enough to
-start.
+log lines, the ticket, the query results, the running application in the development environment.
+A read-only MCP server in front of that one system is enough, scoped to what the human driving the
+work already has access to, at the privileges they already hold. One source is enough to start.
 
 Then point. Say which service went out last week, which job has always been fragile, which part of
 the code to read first. The systems are a haystack, and a pointer from someone who works in them
@@ -47,7 +47,7 @@ assistant and a note on **who owns what**.
 
 | Leaf | Leave the leaf with… |
 |---|---|
-| **Direction** | A one-sentence outcome, the edges of the work, where the answer probably is, and what would demonstrate it |
+| **Direction** | A one-sentence outcome, what must not happen, where the answer probably is, and what would demonstrate it |
 | **Context** | What the real systems showed, and the gaps you could not reach named |
 | **Action** | The smallest focused path, an owner per step, and the change itself |
 | **Success** | Evidence that maps back to the outcome, and what it does not cover |
@@ -63,7 +63,7 @@ assistant and a note on **who owns what**.
 
 Save the filled-in brief with the work — in the pull request, the ticket, or the repository. It
 carries the evidence and what the cycle taught, and because it is written down, the next agent or the
-next person can pick the work up without redoing the investigation.
+next human can pick the work up without redoing the investigation.
 
 ## See a full example
 
@@ -78,4 +78,4 @@ The environment decides whether the outcome happened, and the file left behind d
 next cycle costs.
 
 New here? Start with [the problem this solves](docs/01-problem.md) and
-[the Clover model](docs/04-framework.md). Want to contribute? See [CONTRIBUTING.md](CONTRIBUTING.md).
+[the Clover framework](docs/04-framework.md). Want to contribute? See [CONTRIBUTING.md](CONTRIBUTING.md).

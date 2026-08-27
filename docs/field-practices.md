@@ -1,6 +1,6 @@
 # Practices & Field Lessons
 
-Lessons from running [the Clover model](04-framework.md) on real, high-stakes work. The
+Lessons from running [the Clover framework](04-framework.md) on real, high-stakes work. The
 [philosophy](02-philosophy.md) covers what we believe. The [principles](03-principles.md) cover what
 makes each leaf hold up. This page records what happened when they met actual deadlines.
 

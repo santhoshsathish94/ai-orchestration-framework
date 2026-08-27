@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Glossary — Clover</title>
-<meta name="description" content="Plain-language definitions for every term used in Clover, the five-leaf model.">
+<meta name="description" content="Plain-language definitions for every term used in Clover, the five-leaf way of working with AI.">
 <link rel="canonical" href="https://santhoshsathish94.github.io/ai-orchestration-framework/glossary/">
 <meta name="theme-color" content="#0a6a5f">
 <link rel="stylesheet" href="../styles.css">
@@ -35,9 +35,10 @@
     <nav class="site-nav" aria-label="Primary">
       <a href="../#problem">The problem</a>
       <a href="../#direction">The five leaves</a>
+      <a href="../#walkthrough">Example</a>
       <a href="../#agent">Start</a>
       <a href="../#evidence">Evidence</a>
-      <a href="../#fifth-leaf">The fifth leaf</a>
+      <a href="../#fifth-leaf">Growth</a>
       <a href="./" aria-current="page">Glossary</a>
       <a href="https://github.com/santhoshsathish94/ai-orchestration-framework">GitHub</a>
     </nav>
@@ -57,21 +58,22 @@
   <h2 style="font-size:1.05rem;margin-top:1.4rem">Clover and the five leaves</h2>
   <dl class="terms">
     <div><dt>Clover</dt><dd>This framework. Five leaves — Direction, Context, Action, Success, Growth — describing how human intent becomes an outcome the environment confirms, and what the system keeps once it does.</dd></div>
-    <div><dt>Leaf</dt><dd>One part of the cycle. Each leaf has one job, and the model stays at five of them.</dd></div>
-    <div><dt>Direction</dt><dd>Where human intent enters the system. What is being worked on, why it matters, which outcome counts, which constraints apply, and what stays out of scope.</dd></div>
-    <div><dt>Context</dt><dd>What the system needs to know about reality before acting — the code, the data, the logs, the running behavior, the history, the constraints, and what was already tried.</dd></div>
-    <div><dt>Action</dt><dd>Deciding how the work should happen and then doing it. Planning, tool and model choice, orchestration across agents, changes, tests, debugging.</dd></div>
+    <div><dt>Leaf</dt><dd>One part of the cycle. Each leaf has one job, and there are five of them.</dd></div>
+    <div><dt>Direction</dt><dd>The human says what needs to be done and what must not happen, and stays in control. With real context available, Direction also points at where the answer probably is.</dd></div>
+    <div><dt>Context</dt><dd>The systems the organization already uses — the repositories and their documentation, the datasources, the logs and telemetry, the deployment environments, the running applications. It is no longer something a human writes out.</dd></div>
+    <div><dt>Action</dt><dd>Mostly driven by AI. Deciding how the work should happen and then doing it: planning, tool choice, orchestration across agents, changes, tests, debugging.</dd></div>
     <div><dt>Success</dt><dd>The intended outcome demonstrated by the real environment. A closed task, a passing build, or a confident report sits outside this.</dd></div>
-    <div><dt>Growth</dt><dd>What the system accumulates across repeated cycles — memory, experience, learned patterns, expertise, better planning and tool choice.</dd></div>
-    <div><dt>The fifth leaf</dt><dd>The open boundary of Growth. Growth is useful and adaptive today, and how far it goes is unknown. It is carried as a question rather than a prediction. <a href="../#fifth-leaf">The open question</a>.</dd></div>
-    <div><dt>Short form</dt><dd>Where → Know → Do → Validate → Become. The same five leaves in one word each.</dd></div>
+    <div><dt>Growth</dt><dd>AI becoming more capable from what it learns across the other four leaves. Patterns form, and expertise forms out of the patterns.</dd></div>
+    <div><dt>The common clover</dt><dd>Three leaves — Direction, Action, Success. How AI is used almost everywhere today.</dd></div>
+    <div><dt>The lucky clover</dt><dd>Four leaves, with Context added. What the framework exists for, and the state we are in now. <a href="../#context">The fourth leaf</a>.</dd></div>
+    <div><dt>The growth clover</dt><dd>All five leaves. The next phase, which happens whether anyone chooses it or not. <a href="../#fifth-leaf">Growth</a>.</dd></div>
   </dl>
 
   <h2 style="font-size:1.05rem;margin-top:2rem">Everything else</h2>
   <dl class="terms">
     <div><dt>Orchestration</dt><dd>Coordinating people, AI, tools, and context so that work produces an outcome the environment confirms, rather than each part doing its own thing.</dd></div>
-    <div><dt>Orchestration environment</dt><dd>The access layer between AI and the systems an organization already runs. It is what feeds the Context leaf.</dd></div>
-    <div><dt>Capability</dt><dd>Anything that can do work: a person, a team, an AI model, an agent, a tool, a system.</dd></div>
+    <div><dt>Orchestration environment</dt><dd>The access layer between AI and the systems an organization already uses. Read-only MCP servers in front of the repositories, datasources, logs and environments. It is what feeds the Context leaf.</dd></div>
+    <div><dt>Capability</dt><dd>Anything that can do work: a human, a team, an AI, an agent, a tool, a system.</dd></div>
     <div><dt>Intent</dt><dd>What a human actually wants to achieve. The outcome, and not the task.</dd></div>
     <div><dt>Outcome</dt><dd>The change in the real world that was wanted. Distinct from <em>output</em>, which is what got produced.</dd></div>
     <div><dt>Evidence</dt><dd>What was actually done to check a claim — an assertion, one manual look, a repeatable test, a before-and-after measurement, or the original signal gone from the real environment. Say which. <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/07-success.md">More on Success</a>.</dd></div>

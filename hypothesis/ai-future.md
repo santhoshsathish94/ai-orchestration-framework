@@ -26,7 +26,7 @@ Run that enough times and each cycle can start ahead of the last one. Nobody kno
 
 > If every cycle can make the next one better, how far does that go, and what does the system become along the way?
 
-The five-leaf clover is borrowed from *Black Clover*, where a fifth leaf carries a devil association. Clover reuses the symbol and none of that meaning. Here the fifth leaf stands for the unknown boundary of Growth, which is uncertainty rather than danger.
+The fifth leaf is Growth, and this document follows it past the point the framework is willing to claim.
 
 ---
 

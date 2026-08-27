@@ -1,16 +1,16 @@
 # Context
 
-Context is the second leaf of [the Clover model](04-framework.md). It covers what the system needs to know about reality before anything acts on it.
+Context is the second leaf of [the Clover framework](04-framework.md). It covers what the system needs to know about reality before anything acts on it.
 
-That means the repository, the documentation, the architecture, real data, logs, runtime state, tests, how the system actually behaves, the history of the problem, whatever was already tried, and the memory carried over from previous cycles.
+Context is no longer something a human provides. It is the current systems the organization uses: every repository with its many projects and documentation, the datasources the applications connect to, the logs and telemetry, the deployment environments, and the running applications. Tests, history, whatever was already tried, and the memory carried over from previous cycles sit here too.
 
-Capability is only as good as the material it reasons from. A person cannot solve a problem they have never looked at, and an agent cannot either, however good its tools are.
+Capability is only as good as the material it reasons from. A human cannot solve a problem they have never looked at, and an agent cannot either, however good its tools are.
 
 ## Reason from the real environment
 
 Where the environment can answer a question, read the environment. That is the working rule for this leaf, and the rest of this page is how it plays out.
 
-A model reasoning from assumptions returns something that reads correctly and describes a system nobody has. The failure is quiet, because a confident description of the wrong architecture looks the same as a confident description of the right one until somebody checks. Checking is usually cheap. The code, the logs, the tests, and the running system are all reachable, and reaching them costs far less than a change built on a guess.
+An AI model reasoning from assumptions returns something that reads correctly and describes a system nobody has. The failure is quiet, because a confident description of the wrong architecture looks the same as a confident description of the right one until somebody checks. Checking is usually cheap. The code, the logs, the tests, and the running system are all reachable, and reaching them costs far less than a change built on a guess.
 
 Prompting is a small part of this leaf. A carefully worded request against thin context still produces a guess.
 
@@ -26,6 +26,18 @@ Different problems need different material. These are the sources worth checking
 
 Organizations usually hold most of this already. The work is retrieval and assembly more often than it is authorship.
 
+## How the material gets reached
+
+This part is a setup, not a principle.
+
+1. **Stand up read-only MCP servers** in front of the repositories, the datasources, the logs and telemetry, and the environments, so an agent can read them directly rather than being told about them.
+2. **Scope every connection to what the human driving the work already has access to**, at the privileges they already hold. Nothing new is being granted.
+3. **Start with one environment. Development is enough.** Widen to other non-production environments as it proves out.
+
+That access already exists and is already used, often with nobody tracking it. Setting it up this way makes it deliberate, scoped and visible, and it surfaces stale credentials, unreviewed access paths and data nobody has looked at, before any of those become an incident.
+
+[The orchestration environment](orchestration-environment.md#building-one) covers what to connect and in what order. [Governance](08-governance.md#questions-your-security-team-will-ask) answers the questions a security team will ask.
+
 ## Enough to reason correctly
 
 Two failures sit on either side of this leaf.
@@ -38,7 +50,7 @@ Gaps are worth naming out loud. "The deployment history for this service was not
 
 ## Who holds what
 
-Access and judgment stay with a person: which systems may be read, which data may be used, which sources can be trusted, and when the context in hand is good enough to act on. [Governance](08-governance.md) covers how that access is held, and [the orchestration environment](orchestration-environment.md) covers what it takes to make the material reachable at all.
+Access and judgment stay with a human: which systems may be read, which data may be used, which sources can be trusted, and when the context in hand is good enough to act on. [Governance](08-governance.md) covers how that access is held, and [the orchestration environment](orchestration-environment.md) covers what it takes to make the material reachable at all.
 
 AI does most of the gathering. Reading code, tracing a call path, pulling telemetry, reconstructing an incident from logs, finding the attempt from a year ago that nobody remembered. This is the leaf where a capable agent saves the most time, and it saves it on work people were skipping anyway.
 
@@ -62,9 +74,9 @@ Two properties make it work:
 - **It sits next to the code**, so it travels with the change, gets reviewed with the change, and cannot quietly disagree with a wiki nobody opens.
 - **It is written continuously.** Context recorded at the end is a report. Context recorded as the work proceeds is a working memory, and that is the difference between resuming and restarting.
 
-This is where Growth becomes concrete. The fifth leaf stops being an intention and becomes a file the next cycle reads, which is why the two leaves are usually discussed together.
+This is where Growth becomes concrete. What one cycle learned becomes a file the next cycle reads, which is why the two leaves are usually discussed together.
 
-## What goes wrong here
+## What happens there
 
 This leaf catches most of the AI-specific failures. Fabricated references, a root cause that is plausible and wrong, and agreement offered where judgment was needed all come from acting on material that was never checked. [How AI fails](how-ai-fails.md) covers each pattern and why it happens.
 

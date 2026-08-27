@@ -4,7 +4,7 @@
 
 Clover describes how humans and AI turn intent into outcomes the environment confirms. The five leaves give the structure. These principles are what make each leaf hold up on real work.
 
-There is one principle per leaf. A team that remembers the leaves already remembers the principles. The first two carry most of the weight, because Direction and Context are what separate the four-leaf way of working from the three-leaf one.
+There is one principle per leaf. A team that remembers the leaves already remembers the principles. The first two carry most of the weight, because Direction and Context are what separate the lucky clover from the common one.
 
 ---
 
@@ -12,11 +12,11 @@ There is one principle per leaf. A team that remembers the leaves already rememb
 
 *Leaf: Direction*
 
-Somebody accountable states what is being worked on, why it matters, which outcome is worth having, and what sits outside the work. The availability of a model, agent, or tool is not a reason to start.
+A human accountable for the outcome says what needs to be done and what must not happen, and stays in control. The availability of an AI model, an agent, or a tool is not a reason to start.
 
 Direction also points. An organization's systems are a haystack, and the answer is a needle somewhere inside it. The people who work in those systems every day know roughly where it fell — which service went out last week, which job has always been fragile, which team owns the part nobody wrote down. Once AI can read the real environment, saying which part of the system to read first is worth more than a long description of the task.
 
-Direction carries the boundaries with it: what must not change, what needs approval before it happens, which systems and data the work may touch. A direction that says where to go and never says where not to gets read generously by whoever picks it up.
+Direction carries the boundaries with it: what must not change, what needs approval before it happens, which systems and data the work may touch. A direction that says what to do and never says what must not happen gets read generously by whoever picks it up.
 
 Tickets, incidents, and requests are inputs to Direction. They rarely state the outcome on their own, and somebody still has to.
 
@@ -24,9 +24,9 @@ Tickets, incidents, and requests are inputs to Direction. They rarely state the 
 
 *Leaf: Context*
 
-Context comes from the systems the organization already runs. The repositories, the documentation kept for each application, the real data behind them, the logs and telemetry, the deployment environments, and the running applications. Where the environment can answer a question, read the environment instead of reasoning about what it probably contains.
+Context comes from the current systems the organization uses. Every repository, with its many projects and the documentation kept for each application. The datasources the applications connect to. The logs and telemetry. The deployment environments. The running applications. Where the environment can answer a question, read the environment instead of reasoning about what it probably contains.
 
-Access mirrors the person. AI reads what the person driving the work can already read, at the privileges they already hold, and read-only is enough to start with. [Governance](08-governance.md#access-mirrors-the-person-not-the-ai) covers how that is held.
+Reaching it is a setup rather than a principle. Read-only MCP servers in front of the repositories, the datasources, the logs and the environments give an agent a way in. Every connection is scoped to what the human driving the work already has access to, at the privileges they already hold, and one environment is enough to start — development. [The orchestration environment](orchestration-environment.md#building-one) covers what to connect and in what order, and [governance](08-governance.md#access-mirrors-the-person-not-the-ai) covers how that access is held.
 
 Treat the context in hand as incomplete until it has been checked. Name the assumptions nobody tested and the signals nobody looked at, then reduce that uncertainty before making a consequential change.
 
@@ -36,7 +36,7 @@ Collecting everything is its own failure. A context stuffed with irrelevant mate
 
 *Leaf: Action*
 
-AI works reliably when it has defined context, stated boundaries, the tools the job needs, and clear handoffs. Humans and AI can share the work. Responsibility for the outcome stays with a named person, whoever or whatever performed each step.
+AI works reliably when it has defined context, stated boundaries, the tools the job needs, and clear handoffs. Action is now mostly driven by AI, and humans and AI can share the work. Responsibility for the outcome stays with a named human, whoever or whatever performed each step.
 
 Plan the smallest coherent path to the outcome. Run work in parallel only where it is genuinely independent, because coordination costs real time and more agents do not make a tangled problem finish sooner.
 
@@ -60,9 +60,9 @@ Every cycle produces experience — what was tried, the context it ran in, what 
 
 Experience becomes expertise once the same pattern has held across several cycles. A single good outcome is an anecdote, and promoting it to a rule teaches the system something that is not true yet.
 
-Where knowledge can safely be shared, it should not stay with one person or one team. Otherwise the next cycle depends on who happens to be around.
+Where knowledge can safely be shared, it should not stay with one team, or with whoever learned it first. Otherwise the next cycle depends on who happens to be around.
 
-What a team can do with this leaf today is modest and still worth doing. The larger form of Growth, where patterns accumulate across an enormous number of cycles until new expertise comes out of them, has not arrived.
+Growth is also the next phase, and it arrives whether or not anyone chooses it. AI becomes more capable from what it takes out of the other four leaves. Patterns form, expertise forms out of the patterns, and the phase after that is AI working from goals with far less direction than it needs now. What a team validates and reuses today is the part it controls.
 
 ---
 
@@ -78,6 +78,4 @@ What a team can do with this leaf today is modest and still worth doing. The lar
 
 Direction → Context → Action → Success → Growth
 
-Short form: Where → Know → Do → Validate → Become
-
-Each leaf is described in full, with what commonly goes wrong at it, in [the model](04-framework.md).
+Each leaf is described in full, with what happens there, in [the framework](04-framework.md).

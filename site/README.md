@@ -29,19 +29,19 @@ site/
 The page is the narrative arc, not one section per leaf. The clover grows as the reader scrolls:
 three leaves, then four, then five.
 
-1. Hero
-2. Where AI already is
-3. Three leaves — Direction, Action, Success. How AI is used today
-4. The fourth leaf — Context. The breakthrough, and the longest section on the page
-5. The fifth leaf — Growth. Not here yet
-6. The agent file
-7. One real problem, start to finish
+1. Hero — the name, one line, the five-leaf mark, one line per leaf. Nothing else
+2. AI current capabilities — short
+3. Three leaves · the common clover — short
+4. Four leaves · the lucky clover — the largest and most important section on the page
+5. Five leaves · the growth clover — short
+6. The worked example — visual, an end-to-end run, few steps
+7. The agent file
 8. Security and governance
 9. Evidence
 10. What it is not
 11. About the author
 
-Failure-mode material is folded into the arc sections as "what goes wrong here" rather than kept
+Failure-mode material is folded into the arc sections as "what happens there" rather than kept
 standalone.
 
 ## How it is built
@@ -60,17 +60,18 @@ The marks are the site's identity and they carry the argument, so they have rule
 - One `<path id="clover-leaf">` lives in a hidden sprite `<svg>` at the top of each page. Every mark
   is that single leaf `<use>`d and rotated around the point `(50, 44)` over a short stem. There is no
   second leaf path anywhere — add one and the identity drifts.
-- **Three marks carry the arc**, each in a `<figure class="arc__mark">` with a caption:
-  - three leaves at 120 degrees, labeled Direction, Action, Success;
+- **Three marks carry the arc**, each in a `<figure class="arc__mark">` with a caption. The caption
+  is only the name — no geometry or construction detail:
+  - three leaves at 120 degrees, labeled Direction, Action, Success — "the common clover";
   - four leaves at 90 degrees, labeled Direction, Context, Action, Success, with Context drawn solid
-    as the leaf that just arrived;
-  - five leaves at 72 degrees, with Growth as a dashed outline because it has not arrived.
+    as the leaf that just arrived — "the lucky clover";
+  - five leaves at 72 degrees, all drawn normally — "the growth clover". Growth is not faded out.
 - Leaf names are real `<text>` labels positioned outside each leaf tip, inside a `viewBox` of
   `-30 -18 160 117` so the labels have room. They are content, not decoration — never replace them
   with a legend.
-- Fill state is CSS, not geometry. `.clover__leaf.is-soft` is an established leaf,
-  `.clover__leaf.is-new` is the leaf that just arrived, `.clover__leaf.is-ghost` is one that has not.
-  `.clover__leaf.is-filled` stays for the solid five-leaf marks in the header and hero.
+- Fill state is CSS, not geometry. `.clover__leaf.is-soft` is an established leaf and
+  `.clover__leaf.is-new` is the leaf that just arrived. `.clover__leaf.is-filled` stays for the solid
+  five-leaf marks in the header and hero.
 - Marks that carry meaning get `role="img"` and an `aria-label` naming the leaves. Decorative
   duplicates, such as the one in the header, get `aria-hidden="true"`.
 - An arc mark has to hold up between about 200px and 420px; the header and hero marks between about
@@ -82,22 +83,30 @@ The marks are the site's identity and they carry the argument, so they have rule
 - **The arc is the spine.** Three leaves, then four, then five. Do not flatten it back into five
   equal sections, and do not reorder the story so Context arrives before Action and Success.
 - **Five leaves only:** Direction → Context → Action → Success → Growth. Never introduce a competing
-  arrow-chain, and never append "→ repeat" to that one.
+  arrow-chain, never append "→ repeat" to that one, and never bring back the short form
+  "Where → Know → Do → Validate → Become". Direction is *what*, not *where*.
+- **Never call it a model.** Clover is a five-leaf way of working with AI, and a framework at repo
+  level. "Model" collides with "AI model".
+- **Say "human"**, never "person" or "the user", for whoever holds Direction.
 - **No rungs, levels, scores or grades.** The evidence ladder and the autonomy ladder were deleted
   from the framework. State what was checked, what was observed, and where the work stopped.
 - **Never invent** metrics, customers, adoption, or results. The React memory leak is a CI-green pull
   request that is *not merged*, and the Contentful production cutover *has not run* — the site must
   keep saying so.
-- The fifth leaf stays labeled as a hypothesis, Growth is never described as dangerous, and the
-  speculation stops where the fifth-leaf section stops.
+- The four-leaf section says nothing about production. Development first, then the other
+  non-production environments. Access is read-only and scoped to what the human already holds.
+- Growth is the next phase, never a hypothesis, a prediction or something that "has not arrived", and
+  never described as dangerous. Do not explain the *Black Clover* or devil association anywhere.
 - Never assert that any AI provider trains on customer or enterprise work. Keep the accumulation
   argument structural and unattributed.
 - Alternate `.band` and `.band--soft` between adjacent sections so no two neighbors share a
   background. The hero is white and the footer is soft, so the count has to work out at both ends.
 - Tabs: one generic `initTabs` over `[data-tabs]` groups. The first tab and panel in each group carry
   `aria-selected` and `is-active` in the markup, so nothing flashes before `app.js` runs.
-- `glossary/index.html` links back to `#problem`, `#direction` and `#fifth-leaf` on this page. Those
-  three IDs have to keep resolving.
+- The worked example is `.run` — plain HTML and CSS, no images and no JavaScript. Keep it to a few
+  steps, and do not turn it back into prose.
+- `glossary/index.html` links back to `#problem`, `#direction`, `#context`, `#walkthrough`, `#agent`,
+  `#evidence` and `#fifth-leaf` on this page. Those IDs have to keep resolving.
 - American spelling. No employer, product, cluster or infrastructure names.
 - New terminology goes in [`docs/glossary.md`](../docs/glossary.md) first, then the site.
 

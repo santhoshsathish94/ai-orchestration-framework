@@ -110,17 +110,12 @@ section[id] { scroll-margin-top: 5rem; }
 .clover__leaf.is-soft { fill: var(--accent-soft); stroke: var(--accent-line); stroke-width: 2.5; }
 /* The leaf that just arrived. */
 .clover__leaf.is-new { fill: var(--accent); stroke: var(--accent); stroke-width: 2.5; }
-/* A leaf that has not arrived. */
-.clover__leaf.is-ghost {
-  fill: none; stroke: var(--line-2); stroke-width: 2.5; stroke-dasharray: 5 4;
-}
 
 .clover__label {
   font-family: var(--font); font-size: 8px; font-weight: 650; letter-spacing: 0.02em;
   fill: var(--ink-2);
 }
 .clover__label--now { fill: var(--accent); font-weight: 700; }
-.clover__label--ghost { fill: var(--muted); font-weight: 550; }
 
 /* ---------- the narrative arc ---------- */
 
@@ -181,33 +176,52 @@ section[id] { scroll-margin-top: 5rem; }
 
 .hero { padding-block: clamp(3rem, 9vw, 6rem) clamp(2.5rem, 6vw, 4rem); }
 .hero h1 { max-width: 22ch; }
-.chain { max-width: none; }
 .hero .lede { max-width: 68ch; font-size: clamp(1.05rem, 2.2vw, 1.28rem); }
+.hero__leaves { margin-top: 2rem; }
 
 .hero__top { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.2rem 2rem; align-items: center; }
 @media (max-width: 620px) { .hero__top { grid-template-columns: 1fr; } }
 
-.chain {
-  display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;
-  font-size: 0.83rem; font-weight: 600; color: var(--ink-2);
-  margin: 1.6rem 0 2rem; padding: 0;
-  list-style: none;
-}
-.chain li { display: flex; align-items: center; gap: 0.4rem; }
-.chain li::after { content: "→"; color: var(--line-2); }
-.chain li:last-child::after { content: none; }
-.chain b { font-weight: 600; background: var(--soft-2); padding: 0.25rem 0.6rem; border-radius: 100px; }
+/* ---------- the worked example ---------- */
+/* A numbered run down the page. The rail and the nodes carry the sequence; the chips carry what
+   each leaf touched. No images and nothing to run. */
 
-.actions { display: flex; flex-wrap: wrap; gap: 0.7rem; align-items: center; }
-.btn {
-  display: inline-block; padding: 0.66rem 1.15rem; border-radius: 8px;
-  font-size: 0.94rem; font-weight: 600; text-decoration: none; border: 1px solid transparent;
+.run { list-style: none; margin: 1.9rem 0 0; padding: 0; max-width: none; }
+.run > li { position: relative; padding: 0 0 1.6rem 3.4rem; }
+.run > li::before {
+  content: ""; position: absolute; left: 1.05rem; top: 2.5rem; bottom: 0.2rem;
+  width: 2px; background: var(--accent-line);
 }
-.btn--primary { background: var(--accent); color: #fff; }
-.btn--primary:hover { background: #085449; }
-.btn--ghost { border-color: var(--line-2); color: var(--ink); background: #fff; }
-.btn--ghost:hover { border-color: var(--accent-line); color: var(--accent); }
-.btn--text { color: var(--accent); padding-inline: 0.2rem; }
+.run > li:last-child { padding-bottom: 0; }
+.run > li:last-child::before { display: none; }
+
+.run__node {
+  position: absolute; left: 0; top: 0;
+  width: 2.2rem; height: 2.2rem; border-radius: 100px;
+  display: grid; place-items: center;
+  background: var(--accent); color: #fff; font-size: 0.9rem; font-weight: 700;
+}
+.run__leaf {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;
+  font-size: 1.02rem; font-weight: 680; letter-spacing: -0.01em;
+  margin: 0.15rem 0 0.55rem; min-height: 2rem;
+}
+.run__said {
+  margin: 0; padding: 0.7rem 0.9rem; background: #fff;
+  border: 1px solid var(--line); border-left: 3px solid var(--accent-line); border-radius: 8px;
+  color: var(--ink-2);
+}
+.run__line { margin: 0 0 0.5rem; color: var(--ink-2); font-size: 0.95rem; }
+.run__found { margin: 0.7rem 0 0; color: var(--ink-2); font-size: 0.95rem; }
+
+.run__chips {
+  list-style: none; display: flex; flex-wrap: wrap; gap: 0.45rem;
+  margin: 0; padding: 0; max-width: none;
+}
+.run__chips li { margin: 0; }
+.chip--read { background: var(--accent-soft); border-color: var(--accent-line); color: #05564c; }
+.chip--ok { background: #fff; border-color: var(--accent-line); color: var(--ink-2); }
+.chip--ok::before { content: "\2713"; color: var(--accent); font-weight: 700; margin-right: 0.35rem; }
 
 /* ---------- grids & cards ---------- */
 
