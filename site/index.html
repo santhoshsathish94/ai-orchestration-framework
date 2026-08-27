@@ -617,34 +617,42 @@
         </div>
       </dl>
 
-      <h3 style="margin-top:2rem">"But there are secrets in our code"</h3>
-      <p>This is the most common objection, and usually the most revealing one. Credentials in the
-        repository. Personal data in the logs. An access path nobody has reviewed since whoever built
-        it left.</p>
-      <p>Every one of those is a true statement about <strong>the systems</strong>, rather than about
-        AI. That credential is already readable by everyone with repository access, every contractor
-        who ever cloned it, and anyone who finds an old laptop. The exposure existed before the agent
-        and survives the decision not to use one.</p>
-      <p>Declining to use AI does not remove the risk. It removes the thing most likely to find it. An
-        agent reading across a codebase surfaces hardcoded secrets, unredacted logs and forgotten
-        access paths considerably faster than the audit that keeps getting rescheduled. Rotate the
-        credential, redact the log, close the path, and the objection has disappeared while the system
-        has genuinely got safer.</p>
+      <div class="grid grid--2" style="margin-top:2rem">
+        <div>
+          <h3 style="margin-top:0">"But there are secrets in our code"</h3>
+          <p>This is the most common objection, and usually the most revealing one. Credentials in the
+            repository. Personal data in the logs. An access path nobody has reviewed since whoever built
+            it left.</p>
+          <p>Every one of those is a true statement about <strong>the systems</strong>, rather than about
+            AI. That credential is already readable by everyone with repository access, every contractor
+            who ever cloned it, and anyone who finds an old laptop. The exposure existed before the agent
+            and survives the decision not to use one.</p>
+          <p>Declining to use AI does not remove the risk. It removes the thing most likely to find it. An
+            agent reading across a codebase surfaces hardcoded secrets, unredacted logs and forgotten
+            access paths considerably faster than the audit that keeps getting rescheduled. Rotate the
+            credential, redact the log, close the path, and the objection has disappeared while the system
+            has genuinely got safer.</p>
+        </div>
 
-      <h3 style="margin-top:1.8rem">Monitor the agents, not just the gate</h3>
-      <p>This is the fifth thing on that list, and the one most teams have not built. Approval gates
-        stop the largest mistakes before they happen. Attribution explains them afterwards. Neither
-        notices an agent doing something unintended <em>inside access it legitimately holds</em> — and
-        that is where the real risk sits.</p>
-      <p>So the primary recommendation is monitoring built for agent behavior: record every system an
-        agent touched, compare what it did against what it was asked to do, and raise an alert when it
-        reaches outside the scope of the task. A repository unrelated to the ticket. A table it had no
-        reason to query. A write where it was granted read.</p>
-      <p class="note">Stated honestly: tooling for this barely exists yet, here or anywhere. Most teams
-        will have to assemble a first version from access logs and audit trails they already collect.
-        It is still the highest-value control to build, because it is the only one that operates
-        <em>while</em> the agent is working rather than before or after. Until it exists, this depends
-        on a human paying attention — and attention scales worse than access does.</p>      <p class="note"><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/08-governance.md#questions-your-security-team-will-ask">Every question a security review will ask →</a></p>
+        <div>
+          <h3 style="margin-top:0">Monitor the agents, not just the gate</h3>
+          <p>This is the fifth thing on that list, and the one most teams have not built. Approval gates
+            stop the largest mistakes before they happen. Attribution explains them afterwards. Neither
+            notices an agent doing something unintended <em>inside access it legitimately holds</em> — and
+            that is where the real risk sits.</p>
+          <p>So the primary recommendation is monitoring built for agent behavior: record every system an
+            agent touched, compare what it did against what it was asked to do, and raise an alert when it
+            reaches outside the scope of the task. A repository unrelated to the ticket. A table it had no
+            reason to query. A write where it was granted read.</p>
+          <p class="note">Stated honestly: tooling for this barely exists yet, here or anywhere. Most teams
+            will have to assemble a first version from access logs and audit trails they already collect.
+            It is still the highest-value control to build, because it is the only one that operates
+            <em>while</em> the agent is working rather than before or after. Until it exists, this depends
+            on a human paying attention — and attention scales worse than access does.</p>
+        </div>
+      </div>
+
+      <p class="note"><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/08-governance.md#questions-your-security-team-will-ask">Every question a security review will ask →</a></p>
     </div>
   </section>
 
