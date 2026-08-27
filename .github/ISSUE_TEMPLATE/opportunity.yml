@@ -1,20 +1,21 @@
-name: Opportunity
-description: Suggest an improvement, correction, or gap in the framework
-title: "[Opportunity] "
+name: Direction
+description: Raise a problem, a correction, or a gap in the framework
+title: "[Direction] "
 labels: []
 body:
   - type: markdown
     attributes:
       value: |
         Start with the problem, not the solution — the same way the framework does.
-        Questions and disagreement are welcome; this does not have to become a pull request.
+        This follows Direction → Action → Success. Questions and disagreement are welcome, and
+        none of this has to become a pull request.
 
   - type: textarea
-    id: opportunity
+    id: direction
     attributes:
-      label: The opportunity
+      label: The problem
       description: What did you observe, and why does it matter?
-      placeholder: The Proof stage doesn't say what to do when there's no telemetry available...
+      placeholder: The Context leaf doesn't say what to do when the environment can't be read at all...
     validations:
       required: true
 
@@ -22,7 +23,7 @@ body:
     id: outcome
     attributes:
       label: The outcome you're after
-      description: What would "better" look like?
+      description: What would better look like?
     validations:
       required: true
 
@@ -31,6 +32,22 @@ body:
     attributes:
       label: Context
       description: Anything that helps us understand it — where you hit this, what you tried, relevant links.
+    validations:
+      required: false
+
+  - type: textarea
+    id: action
+    attributes:
+      label: A change you have in mind
+      description: Optional. Skip it if you'd rather discuss the problem first.
+    validations:
+      required: false
+
+  - type: textarea
+    id: success
+    attributes:
+      label: What would show it worked
+      description: Optional. How would we know the change actually landed the outcome?
     validations:
       required: false
 

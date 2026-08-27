@@ -1,129 +1,140 @@
 # Example: Production Exception Remediation
 
-A runnable, end-to-end walkthrough that applies the AI Orchestration lifecycle to a common, concrete
-problem: **a recurring `500` on `POST /api/checkout`.**
+An end-to-end walkthrough of one common problem run through Clover: **a recurring `500` on
+`POST /api/checkout`.**
 
-This example fills in the [Orchestration Brief](../../templates/orchestration-brief.md) stage by
-stage. It's written so you can **swap in your own exception** and follow the exact same steps with
-your AI assistant. Nothing here is tool-specific — the prompts work with any capable coding assistant.
+The example fills in the [Orchestration Brief](../../templates/orchestration-brief.md) leaf by leaf,
+so another exception can be swapped in and follow the same path. Nothing here is tool-specific, and
+the prompts work with any capable coding assistant.
 
-> **This is an illustrative scenario, not a reported incident.** The checkout bug, the metrics, and
-> the CI results are invented to show the shape of a full cycle. For real, evidence-backed work see
+> **This is an illustrative scenario, not a reported incident.** The checkout bug, the numbers, and
+> the results are invented to show the shape of a full cycle. For real, evidence-backed work see
 > the [case studies](../../case-studies/).
 
-> **Lifecycle:** Opportunity → Understand → Plan → Execute → Proof → Grow ↺
+> **Direction → Context → Action → Success → Growth**
 
 | Field | Value |
 |---|---|
 | **Task / outcome** | Stop the recurring `500` on `POST /api/checkout` |
 | **Owner (human)** | On-call engineer |
-| **AI capability** | Coding assistant with read access to the repo, logs, and CI |
+| **AI capability** | Coding assistant with read access to the repository, logs, and CI |
 | **Scenario** | Illustrative |
 
 ---
 
-## 1. Opportunity
+## 1. Direction
 
-- **Problem / trigger:** Alerting shows `POST /api/checkout` returning `500` roughly 40×/hour since the last deploy.
-- **Desired outcome:** Checkout succeeds at its normal rate; the error class disappears.
-- **Success signal:** The `5xx` rate on `/api/checkout` returns to its pre-deploy baseline (< 0.1%) and holds for 24 hours.
+- **Problem / trigger:** Alerting shows `POST /api/checkout` returning `500` roughly 40 times an hour since the last deploy.
+- **Desired outcome:** Checkout succeeds at its normal rate, and this error class stops appearing.
+- **What would demonstrate it:** The `5xx` rate on `/api/checkout` back at its pre-deploy baseline (under 0.1%) and holding for 24 hours.
+- **Out of scope:** The coupon data model and the tax rules themselves.
+- **Needs human approval:** The deploy.
 
-> **Prompt used:** "Here is a problem: `POST /api/checkout` is returning 500s (~40/hour) since our
-> last deploy. Restate the outcome we actually want in one sentence, and propose one measurable
-> signal that would prove it's fixed."
+> **Prompt used:** "Here is a problem: `POST /api/checkout` is returning 500s, about 40 an hour,
+> since our last deploy. Restate the outcome we actually want in one sentence. Propose what would
+> demonstrate that outcome in production, and ask me about anything I have left out."
 
-**Ownership:** Human framed the alert; AI sharpened the outcome and signal.
+**Ownership:** The engineer set the outcome and the boundaries. AI sharpened the wording and asked
+what the fix must not touch.
 
 ---
 
-## 2. Understand
+## 2. Context
 
-- **Known context:** Started after deploy `v128`. Only the checkout path is affected.
-- **Unknowns:** Which change in `v128`? Is it every request or a subset?
-- **Sources retrieved:** exception logs, the `v128` diff, `CheckoutController` and its dependencies.
+- **Known context:** The errors started after deploy `v128`. Only the checkout path is affected.
+- **Sources read:** the exception logs, the `v128` diff, `CheckoutController` and its dependencies.
+- **Open questions:** Which change in `v128`? Every request, or a subset?
+- **Could not reach:** Nothing relevant; the logs, the diff, and the code were all available.
 
 > **Prompt used:** "Before proposing any fix, read the last 50 checkout exceptions, the `v128` diff,
-> and `CheckoutController`. Summarize what you now know, what's still unknown, and what you'd need to
-> be confident about the cause."
+> and `CheckoutController`. Summarize what you now know about how the system actually behaves, what
+> is still unknown, what you could not reach, and what you would need to be confident about the
+> cause."
 
-**What the AI found:** Every stack trace is a `NullReferenceException` in `TaxCalculator.Apply()` when
-`order.Coupon` is null. `v128` added coupon support but assumed a coupon is always present.
+**What the AI found:** Every stack trace is a null reference in `TaxCalculator.Apply()` where
+`order.Coupon` is null. `v128` added coupon support and assumed a coupon is always present. That
+matches the subset pattern — only orders placed without a coupon fail.
 
-**Ownership:** Human pointed to trusted sources; AI retrieved, correlated, and surfaced the gap.
+**Ownership:** The engineer pointed at the trusted sources. AI read them, correlated the traces, and
+named the assumption that broke.
 
 ---
 
-## 3. Plan
+## 3. Action
 
-- **Approach:** Guard the null coupon in `TaxCalculator.Apply()`; treat "no coupon" as zero discount.
-- **Out of scope:** Redesigning the coupon model or changing the tax rules.
+- **Approach:** Guard the null coupon in `TaxCalculator.Apply()`, so no coupon means a zero discount.
 - **Steps:**
-  1. *(AI)* Reproduce with a failing unit test — checkout with no coupon.
-  2. *(AI)* Add the null guard.
-  3. *(Human)* Review the change and the test.
-- **Risks:** A guard that silently hides a genuinely missing coupon. Mitigated by the explicit test.
-
-> **Prompt used:** "Propose the smallest focused plan to fix this. For each step, say who should own
-> it (human or AI) and why. Call out risks and what's out of scope."
-
-**Ownership:** Human approved the plan and boundaries; AI drafted the steps.
-
----
-
-## 4. Execute
-
+  1. *(AI)* Reproduce with a failing unit test — a checkout with no coupon.
+  2. *(AI)* Add the guard.
+  3. *(Human)* Review the change and the test, and approve the deploy.
+- **Risks:** A guard that quietly hides a coupon that should have been there. The explicit test keeps
+  the intended behavior visible.
 - **Changes made:**
-  - Added `CheckoutTests.Checkout_WithNoCoupon_DoesNotThrow` (failed before the fix).
-  - Guarded `order.Coupon` in `TaxCalculator.Apply()` — a null coupon now means a 0 discount.
-- **Human decisions:** Confirmed that "no coupon = no discount" is the correct business behavior.
+  - Added `CheckoutTests.Checkout_WithNoCoupon_DoesNotThrow`, which fails without the change.
+  - Guarded `order.Coupon` in `TaxCalculator.Apply()`.
+- **Human decisions:** Confirmed that no coupon means no discount is the correct business behavior.
 
 > **Prompts used:**
-> - "Implement step 1 only: write a failing unit test for checkout with no coupon. Then stop."
-> - "Now implement the null guard. Keep the change focused; explain what changed and why."
+> - "Given that context, propose the smallest focused path to the outcome. For each step, say who
+>   should own it and why, and call out the risks."
+> - "Implement step 1 only: a failing unit test for a checkout with no coupon. Then stop."
+> - "Now add the guard. Keep the change focused and explain what changed and why."
 
-**Ownership:** AI implemented within scope; human owned the business decision.
+**Ownership:** AI worked inside the agreed boundaries. The engineer owned the business decision and
+the approval.
 
 ---
 
-## 5. Proof
+## 4. Success
 
 - **Evidence:**
-  - The new test fails on `main` and passes with the fix (CI link).
+  - The new test fails on `main` and passes with the change.
   - The full suite is green.
-  - Staging: 200 checkouts with and without coupons — zero `500`s.
-- **Success signal holds?** After deploy, the `/api/checkout` `5xx` rate returned to baseline and held for 24 hours.
-- **Where this stopped:** **observed in the real environment** — the original signal is gone and stayed gone. Most work stops earlier than this, and that is fine as long as you say so.
+  - Outside production: 200 checkouts with and without coupons, and no `500`s.
+  - After the deploy, the `/api/checkout` `5xx` rate returned to baseline and held for 24 hours.
+- **What was checked, and where this stopped:** The original signal is gone from production and
+  stayed gone for a day. Most work stops earlier than this, and that is fine as long as it is said
+  plainly.
+- **Does the outcome from Direction now hold?** Yes.
 - **Human verification:** On-call confirmed the dashboard and closed the alert.
+- **Still unverified:** Whether other `v128` additions carry the same assumption.
 
-> **Prompt used:** "Show concrete evidence that the outcome from the Opportunity was achieved. Map
-> each piece of evidence back to the success signal. Say what was checked, what was observed, and
-> where you stopped. Note anything still unproven."
+> **Prompt used:** "Show concrete evidence that the outcome we stated in Direction was achieved. Map
+> each piece of evidence back to it. Say what you checked, what you observed, and where you stopped.
+> List anything you could not verify."
 
-**Ownership:** AI assembled the evidence; human verified production and accepted the proof.
+**Ownership:** AI assembled the evidence. The engineer set the standard for it, verified production,
+and accepted it.
 
 ---
 
-## 6. Grow
+## 5. Growth
 
-- **What worked:** Reproducing with a test *before* fixing made the proof trivial.
-- **New context saved:**
-  - A regression test now guards the no-coupon path.
-  - A checklist note: "new optional fields must be null-safe on every consumer."
-- **Next opportunity:** Audit other `v128` additions for the same missing-null assumption.
+- **What worked:** Reproducing with a test before changing anything made the evidence trivial to
+  produce afterwards.
+- **Worth keeping:**
+  - The regression test now guards the no-coupon path.
+  - A note where the team will read it: a new optional field has to be null-safe on every consumer.
+- **Pattern or one-off?** The team has seen this shape before, on two earlier optional fields. It is
+  worth treating as a pattern rather than as one result.
+- **Next direction this revealed:** Audit the other `v128` additions for the same assumption.
 
-> **Prompt used:** "Summarize what we learned, what context is worth saving for next time, and any
-> new opportunity this surfaced."
+> **Prompt used:** "Summarize what this cycle showed, what is worth keeping for next time, and where
+> it should be written so the next cycle actually reads it. Say whether this is a pattern that has
+> held before or a single result."
 
-**Ownership:** Human decided what becomes durable knowledge; AI drafted the summary.
+**Ownership:** The engineer decided what becomes durable knowledge. AI drafted it while the details
+were still accurate.
 
 ---
 
 ## Try it yourself
 
-1. Copy [`templates/orchestration-brief.md`](../../templates/orchestration-brief.md) and rename it for your exception.
-2. Replace the checkout scenario above with your own alert.
-3. Walk the six stages with your assistant, using the prompts as starting points.
-4. Keep the filled-in brief with the fix — it *is* the proof and the learning.
+1. Copy [`templates/orchestration-brief.md`](../../templates/orchestration-brief.md) and rename it for the exception at hand.
+2. Replace the checkout scenario above with the real alert.
+3. Walk the five leaves with an assistant, using the prompts as starting points.
+4. Keep the filled-in brief with the change. It carries the evidence and what the cycle taught.
 
-> The point isn't the fix alone — it's moving from **"the fix was deployed"** to **"the original
-> problem was proven resolved,"** with context and learning captured for next time.
+The gap this closes is between "the fix was deployed" and "the original signal is gone from
+production and stayed gone" — with enough context left behind that the next incident of this shape is
+understood faster.

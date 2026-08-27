@@ -1,15 +1,13 @@
 # The Orchestration Environment
 
-AI Orchestration Model
-
-Opportunity → Understand → Plan → Execute → Proof → Grow ↺
-
 Most of the framework describes how to think. This page describes what has to be in place for that
 thinking to reach anything real.
 
 An orchestration environment is the **access layer** between AI and the systems an organization
-already runs. It is not a platform, and there is nothing to migrate onto. It is a set of connections
-to things that already exist, plus the rules governing what may be done through them.
+already runs. It is what feeds the [Context](05-context-engineering.md) leaf of [the Clover
+model](04-framework.md) — source code, tickets, logs, data, and the behavior of the running system.
+There is no platform to buy and nothing to migrate onto. It is a set of connections to things that
+already exist, plus the rules governing what may be done through them.
 
 > **Status.** This describes a working setup and the patterns it has produced, generalized from real
 > use. It is one practitioner's environment, not a standard, and not a product recommendation.
@@ -24,8 +22,8 @@ problem itself**.
 
 Most disappointing results come from the first situation being mistaken for the second. The model is
 asked to explain a failure it has never been allowed to look at, and produces something plausible.
-[How AI fails](how-ai-fails.md) covers what that looks like; the fix is usually context, not a
-better prompt.
+[How AI fails](how-ai-fails.md) covers what that looks like. The fix is usually more reach rather
+than a better prompt.
 
 ### Context is a chain, and it has a threshold
 
@@ -33,13 +31,10 @@ The useful shape is a chain rather than a list: **source code → the data it op
 environment it runs in → the logs it produces → the infrastructure it runs on.** Each link explains
 the next. A symptom seen at one end can be followed to a cause at the other.
 
-Partial context does not produce a partial answer. It produces a confident wrong one, because the
-gap gets filled with something plausible. This is why adding one more source can change the results
-sharply rather than gradually — the chain becomes complete enough to trace, and the work stops being
-inference and starts being diagnosis.
-
-If AI capability seems to have improved suddenly at some point, it is worth asking whether the model
-changed or the reach did.
+Partial context tends to produce a confident wrong answer rather than a partial one, because the gap
+gets filled with something plausible. This is why adding one more source can change results sharply
+rather than gradually. The chain becomes complete enough to follow from symptom to cause, and when a
+team sees that jump, the reach has usually changed more than the model has.
 
 ### Context accumulates across passes
 
@@ -48,10 +43,10 @@ evidence, form a hypothesis, gather more evidence against it, make a change, dep
 under load, learn something that invalidated part of the original picture, and go again. Each pass
 started with more than the last.
 
-**This is not the same as retrying a fix.** Repeating an attempt that keeps failing is thrashing, and
-[Lesson 2](field-practices.md#lesson-2--understand-before-fixing) says to stop and go back to
-understanding when it happens. The test is simple: if a pass ends with more understanding, it is
-progress; if it ends with another guess, the loop is broken and more attempts will not fix it.
+This is a different thing from retrying a fix. Repeating an attempt that keeps failing is thrashing,
+and [Lesson 2](field-practices.md#lesson-2--understand-before-fixing) says to stop and go back for
+the context the attempts were missing. A pass that ends with more context is progress. A pass that
+ends with another guess means more attempts of the same kind will not help.
 
 ---
 
@@ -96,12 +91,13 @@ standard practice in most enterprises. This is not a new category of access; it 
 pointed at a new consumer.
 
 **Scope per purpose, not per convenience.** Access appropriate for investigating a defect is not
-automatically appropriate for touching customer data. Grant it per context, as the
+automatically appropriate for touching customer data. Grant it per context, as
 [widening what AI decides](04-framework.md#widening-what-ai-decides) describes.
 
 **Keep every action attributable to a named person.** Work performed through the layer should run
 under the credentials of the human who is accountable for it, so that anything unexpected can be
-traced to someone who can explain and correct it. Attribution to "the AI" is not accountability.
+traced to someone who can explain and correct it. An action attributed to the AI leaves nobody who
+can do either. [Governance](08-governance.md) covers the mechanisms.
 
 **Keep approval at the boundaries.** Merging, releasing, and anything touching production stay with
 a human. The layer can prepare, evidence, and request. It should not decide.

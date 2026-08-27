@@ -177,14 +177,27 @@ Growth.
 
 ## Remaining
 
-- [ ] Core doctrine — `docs/01-problem.md`, `02-philosophy.md`, `03-principles.md`, `04-framework.md`
-- [ ] Practice docs A — `05-context-engineering.md`, `07-proof.md`, `08-governance.md`
-- [ ] Practice docs B — `09-adoption.md`, `10-roadmap.md`, `orchestration-environment.md`, `how-ai-fails.md`, `field-practices.md`, `glossary.md`, `reference-implementations.md`
-- [ ] Agent-facing — `AGENTS.md`, `QUICKSTART.md`, `templates/orchestration-brief.md`, `examples/`, `.github/`
-- [ ] Repo front and evidence — `README.md`, `CONTRIBUTING.md`, `case-studies/`, `CHANGELOG.md`, `VERSION`
-- [ ] Website — `site/`
-- [ ] Hypothesis — `hypothesis/ai-future.md` reconciled with Clover's hypothesis layer
-- [ ] File renames and a full link sweep (orchestrator does this last)
+- [x] Core doctrine — `docs/01-problem.md`, `02-philosophy.md`, `03-principles.md`, `04-framework.md`
+- [x] Practice docs A — `05-context-engineering.md`, `07-success.md`, `08-governance.md`
+- [x] Practice docs B — `09-adoption.md`, `10-roadmap.md`, `orchestration-environment.md`, `how-ai-fails.md`, `field-practices.md`, `glossary.md`, `reference-implementations.md`
+- [x] Agent-facing — `AGENTS.md`, `QUICKSTART.md`, `templates/orchestration-brief.md`, `examples/`, `.github/`
+- [x] Repo front and evidence — `README.md`, `CONTRIBUTING.md`, `case-studies/`, `CHANGELOG.md`, `VERSION`
+- [x] Website — `site/`
+- [x] Hypothesis — `hypothesis/ai-future.md` merged with Clover's hypothesis layer
+- [x] File renames and a full link sweep — `07-proof.md` → `07-success.md`,
+      `Five_Leaf_Clover_AI_Engineering_Framework_Context.md` → `clover-origin.md`, all inbound
+      references repointed, every link and heading anchor verified
+
+### Still open — needs a person
+
+- **Artwork is stale.** `assets/ai-orchestration-lifecycle.png` draws the old six stages and is no
+  longer referenced. `assets/social-preview.png` still shows six-stage artwork and is what the
+  `og:image` points at. Both need redrawing as a five-leaf clover.
+- **`assets/ai-future/README.md`** still describes the hypothesis as standalone rather than as the
+  fifth leaf.
+- **Site links point at `main`.** Every GitHub link on the website uses `/blob/main/...`, so links
+  to renamed files resolve only after this branch merges. Correct as written; just not clickable yet.
+- **Delete this file before merging to `main`.**
 
 ## Ruled out
 

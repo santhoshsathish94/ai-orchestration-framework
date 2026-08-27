@@ -1,23 +1,23 @@
 <!--
-Thanks for contributing. This template mirrors the framework itself:
-Opportunity -> Change -> Proof. Keep it short.
+Thanks for contributing. This template follows the framework itself:
+Direction -> Action -> Success. Keep it short.
 -->
 
-## Opportunity
+## Direction
 
-<!-- What problem or gap does this address, and why does it matter? -->
+<!-- What problem or gap does this address, and what outcome are you after? -->
 
-## Change
+## Action
 
-<!-- What did you change, and why this approach? -->
+<!-- What you changed, and why this approach rather than another. -->
 
-## Proof
+## Success
 
-<!-- Evidence that this does what you say it does.
+<!-- Evidence that the change does what you say it does.
      State what you checked, what you observed, and where you stopped.
-     For docs changes, "I checked every link and heading anchor" is valid proof. -->
+     For a docs change, "I checked every link and heading anchor" is real evidence. -->
 
-## Anything still unproven
+## Anything still unverified
 
 <!-- Optional, and genuinely welcome. Say what you are unsure about. -->
 

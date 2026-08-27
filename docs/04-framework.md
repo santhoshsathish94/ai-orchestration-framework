@@ -1,286 +1,191 @@
-# AI Orchestration Model
+# The Clover Model
 
 ## Purpose
 
-The AI Orchestration Model is a simple, repeatable lifecycle for integrating AI into business and engineering workflows.
+Clover is a repeatable cycle for doing real work with AI inside it. Five leaves: Direction, Context, Action, Success, Growth.
 
-Rather than focusing on prompts, tools, agents, or individual models, it focuses on how humans and AI turn an opportunity into a measurable outcome and improve the system through learning.
+Prompts, tools, agents, and model choice all sit underneath the cycle. What the model describes is how human intent becomes an outcome the environment confirms, and what the system keeps once it does.
 
-## From AI Models to AI Orchestration
+**Direction → Context → Action → Success → Growth**
 
-AI capabilities are evolving from models that provide intelligence to agents that can act, workflows that can repeat and coordinate tasks, and orchestration systems that can learn from outcomes.
+Short form: **Where → Know → Do → Validate → Become**
 
-![From AI Models to AI Orchestration](../assets/ai-orchestration-model-progression.svg)
+## From AI models to AI orchestration
 
-This is not a strict replacement hierarchy. Agentic workflows can be an important building block within an orchestration system. The distinction is the scope of learning and context.
+AI capability is evolving from models that provide intelligence, to agents that can act, to workflows that repeat and coordinate tasks, to orchestration that keeps what its outcomes taught it.
 
-> **Agentic workflows repeat. Orchestration learns.**
+![From AI models to AI orchestration](../assets/ai-orchestration-model-progression.svg)
 
-A workflow is primarily designed to execute a known process repeatedly. An orchestration system captures what was learned from those outcomes and makes relevant context available to the next opportunity.
+This is not a strict replacement hierarchy. An agentic workflow can be an important building block inside an orchestration. What separates them is the scope of context and learning. A workflow runs a known process repeatedly. An orchestration captures what the outcome showed and makes that available to the next cycle.
 
-The context can accumulate at the appropriate scope — an individual, a team, an organization, or another defined boundary.
+Context can accumulate at whatever scope fits — a person, a team, an organization, or another defined boundary.
 
-## Core Lifecycle
+## The five leaves
 
-![AI Orchestration Lifecycle](../assets/ai-orchestration-lifecycle.png)
+Each leaf has one job. The complexity belongs in the context, ownership, evidence, and feedback around the leaves, and not in adding more of them.
 
-> **Opportunity → Understand → Plan → Execute → Proof → Grow**
+| Leaf | What it is | Core question |
+|---|---|---|
+| **Direction** | Human intent, purpose, priorities, constraints, and what should not be pursued. | Where are we going, and what outcome are we trying to achieve? |
+| **Context** | What the system needs to know about reality before acting. | What do we need to know about reality before acting? |
+| **Action** | Deciding how the work should happen, and doing it. | What should we do, and how should the work happen? |
+| **Success** | The intended outcome demonstrated by the real environment. | Did reality validate the intended outcome? |
+| **Growth** | What the system accumulates or becomes across repeated cycles. | What did the system become or learn? |
 
-The lifecycle is intentionally simple. Each stage has a distinct responsibility; the complexity belongs in the context, ownership, evidence, and feedback surrounding each stage—not in adding more stages.
-
-- **Opportunity** — define the problem, why it matters, and the outcome worth pursuing.
-- **Understand** — establish the context and evidence required to make a sound decision.
-- **Plan** — determine the focused path, boundaries, dependencies, and ownership required to reach the outcome.
-- **Execute** — perform the planned work while adapting when new evidence requires a change in direction.
-- **Proof** — demonstrate with evidence that the intended outcome actually happened.
-- **Grow** — turn the outcome into better future capability by capturing validated experience, developing reusable expertise, and improving the context, workflow, or decisions for the next cycle.
-
-The lifecycle continuously loops as learning creates better context and new opportunities.
+Growth is not a finish line. What one cycle accumulates becomes part of the next cycle's Context, changes how Action gets planned, and sometimes changes the Direction itself, because the work revealed that a different outcome was the one worth pursuing.
 
 ---
 
-## Stage 1 — Opportunity
+## Leaf 1 — Direction
 
-Define the problem, why it matters, and the outcome worth pursuing.
+Direction is where human intent enters the system. A person decides what is worth doing, why it matters, which outcome counts, which constraints apply, and what should stay out of the work.
 
-The opportunity should describe why the work matters and what meaningful outcome is expected. A ticket or task can be an input, but it is not the outcome itself.
+A ticket can trigger it. Direction is the outcome behind the ticket, stated plainly, together with the edges of the work.
 
-### Questions
+**Core question.** Where are we going, and what outcome are we trying to achieve?
 
-- What problem are we solving?
-- Why does it matter?
-- What outcome would make this worthwhile?
-- How will we recognize success?
+**What the human holds.** All of it — the objective, the priorities, the constraints, the risk boundaries, what counts as a good outcome, and what stays out of scope. Ownership of the outcome remains with a person after the work is handed over.
 
-### Deliverables
+**What AI does.** Sharpens it. AI can restate the objective in its own words, ask what should happen to the parts nobody mentioned, point out that two stated goals conflict, and turn a vague request into something specific enough to work from. Setting the direction stays with the person.
 
-- Opportunity statement
-- Expected outcome
-- Initial success criteria
-- Relevant stakeholders
+**What goes wrong here.** Direction gets skipped because a ticket looks like enough, and the work then optimizes for closing the ticket rather than for the outcome. The other common failure is unstated scope: nobody said the change must not touch billing, so nothing stopped it.
 
-## Stage 2 — Understand
+## Leaf 2 — Context
 
-Establish the context and evidence required to make a sound decision.
+Context is what the system needs to know about reality before acting. Source code, documentation, architecture, real data, logs, runtime state, tests, how the system actually behaves, history, earlier attempts, and memory carried from previous cycles.
 
-AI should first gather the context required to reason about the opportunity. This can include repositories, architecture, telemetry, business rules, dependencies, historical incidents, previous attempts, documentation, and organizational knowledge.
+Prompting is a small part of this. The working rule is to reason from the real environment rather than from assumptions, wherever the environment can answer the question.
 
-If context is missing, the orchestrator should identify the gap and retrieve or request it before execution. The goal is not to collect everything; it is to collect what is necessary to make a sound plan.
+**Core question.** What do we need to know about reality before acting?
 
-### Questions
+**What the human holds.** Access and judgment. Which systems may be read, which data may be used, which sources can be trusted, and when the context in hand is good enough to act on.
 
-- What happened or what is the current state?
-- What context is required?
-- What do we already know?
-- What is still missing?
-- Who owns the relevant outcome or flow?
-- What constraints must be respected?
+**What AI does.** Most of the gathering. Reading code, tracing a call path, pulling telemetry, reconstructing an incident from logs, finding the earlier attempt nobody remembered. A good orchestration also reports what it could not find, and that part matters most.
 
-### Deliverables
+**What goes wrong here.** The plausible answer. A model working from thin context produces something that reads correctly and describes a system that does not exist. The opposite failure is hoarding, where a context packed with irrelevant material buries the few facts the problem turns on. [How AI fails](how-ai-fails.md) covers the specific patterns, and [context engineering](05-context-engineering.md) covers how the material is assembled.
 
-- Working context
-- Relevant evidence
-- Known assumptions and gaps
-- Ownership and boundaries
+## Leaf 3 — Action
 
-## Stage 3 — Plan
+Action covers deciding how the work should happen and then doing it. Reasoning, planning, tool selection, model selection, orchestration across agents, code changes, tests, debugging, and interaction with whatever environments the work touches.
 
-Determine the focused path, boundaries, dependencies, and ownership required to reach the outcome.
+Planning and doing sit on one leaf on purpose. The plan usually changes once the work meets reality, and keeping the two together makes that change ordinary rather than an exception to explain.
 
-Planning determines what should happen, what should not happen, what can be done independently, and who or what owns each part.
+**Core question.** What should we do, and how should the work happen?
 
-Parallelism is used only when work is genuinely independent. More agents or people do not automatically mean faster delivery; coordination cost is part of the plan.
+**What the human holds.** The boundaries and the approvals. Which decisions need a person before they happen, what may run unattended, and who owns each part when the work is split. Delegation moves the work and leaves accountability where it was.
 
-### Questions
+**What AI does.** Most of the work, inside those boundaries. Choosing an approach, sequencing the steps, picking tools, running subagents where parts are genuinely independent, implementing, testing, and coming back when the evidence contradicts the plan.
 
-- What is the smallest coherent path to the outcome?
-- What dependencies exist?
-- What should be done sequentially?
-- What can safely run in parallel?
-- Who owns each part?
-- What decisions require human approval?
+**What goes wrong here.** Thrash. A change fails, the next attempt is a variation of the same change, and each attempt sounds as confident as the last. Misplaced parallelism is the other one: splitting work that shares state costs more in coordination and rework than it saves.
 
-### Deliverables
+## Leaf 4 — Success
 
-- Focused execution plan
-- Ownership boundaries
-- Dependencies
-- Validation strategy
-- Approval points
+Success means the real environment demonstrates the intended outcome. The environment is the evidence of success. An AI reporting that it worked, a plausible explanation, a confident tone, and a high model score all fall outside that.
 
-## Stage 4 — Execute
+Evidence can be a test that fails without the change and passes with it, a before-and-after measurement, telemetry, a non-production run, a production signal that disappears and stays gone, or a user confirming the outcome.
 
-Perform the planned work while adapting when new evidence requires a change in direction.
+**Core question.** Did reality validate the intended outcome?
 
-Humans and AI can collaborate across analysis, implementation, testing, investigation, documentation, and operational tasks. Delegation does not remove accountability for the outcome.
+**What the human holds.** The standard. What counts as sufficient evidence for this work, and what risk is acceptable if the answer turns out to be wrong. Approval for anything expensive or hard to reverse stays with a person.
 
-Execution should remain observable, attributable, and reversible where practical. New evidence can require replanning rather than blindly continuing the original plan.
+**What AI does.** Runs the checks, gathers the evidence, and reports it accurately, including what did not work and what it could not check.
 
-### Questions
+**What goes wrong here.** Evidence described more strongly than it is. "Verified" covering a single manual look. A merged change reported as a resolved problem. The quiet one is stopping at the artifact: the build passed, so the work is treated as done, and nobody checks whether the original signal changed.
 
-- Is the work staying within the planned scope?
-- Is ownership clear?
-- Are assumptions changing?
-- Does new information require replanning?
+### Say what the evidence actually is
 
-### Deliverables
-
-- Implemented change or action
-- Execution trace
-- Updated assumptions when required
-
-## Stage 5 — Proof
-
-Demonstrate with evidence that the intended outcome actually happened.
-
-Proof is stronger than output validation. A generated artifact, successful build, passing test, or merged PR may be necessary, but the orchestration is not complete until evidence connects the work back to the original outcome.
-
-Proof can include tests, before/after measurements, telemetry, non-production validation, production signals, user feedback, or other objective evidence.
-
-For production remediation, the loop can continue through deployment and observation until the original production signal is demonstrably resolved.
-
-### Say what your evidence actually is
-
-Not every task has telemetry, and pretending otherwise makes Proof unusable for most work. What matters is describing what you actually did to check, in words a reader can act on.
+Not every task has telemetry, and pretending otherwise makes this leaf unusable for most work. What matters is describing what was actually done to check, in words a reader can act on.
 
 Four questions do the work:
 
 - **Did anyone verify it, or is someone asserting it?** "It works" from a person or a model establishes nothing on its own.
 - **Does it hold up again?** Something seen working once may not repeat. An automated check that fails without the change and passes with it is a different claim from a manual look.
-- **Did the thing you cared about move?** A passing test says the code behaves; a before-and-after measurement says the problem changed.
+- **Did the thing we cared about move?** A passing test says the code behaves. A before-and-after measurement says the problem changed.
 - **Did it hold where it counts?** The strongest evidence is the original signal disappearing in the real environment and staying gone.
 
-> **State what you checked, what you observed, and where you stopped.**
+State what you checked, what you observed, and where you stopped. Stopping early is fine and often correct — a small internal change can be genuinely complete once a test covers it, and production observation is not always available or worth its cost. What causes damage is describing weak evidence in the language of strong evidence. "Validated in the test environment, not yet observed in production" is a complete and honest claim. "Verified" on its own is not.
 
-Stopping early is fine and often correct — a small internal change may be genuinely complete once a test covers it, and production observation is not always available or worth the cost. What is not fine is describing weak evidence in language that sounds like strong evidence. "Verified in the test environment; not yet observed in production" is a complete, honest claim. "Verified" alone is not.
+### When Success fails
 
-### When Proof fails
+A failed check is a normal outcome rather than an exception to handle later. When the evidence does not support the intended outcome, **return to Context, not to Action.**
 
-Failed proof is a normal outcome, not an exception to handle later. When the evidence does not support the intended outcome, **return to Understand, not to Execute.** A failed proof usually means the understanding was incomplete, so another attempt at the fix repeats the original mistake faster.
+Retrying a fix that just failed is the common waste. The second attempt runs on the same information as the first and reaches the same place, faster. A second attempt needs new information: what the environment did instead, which assumption broke, which signal nobody had looked at yet.
 
-### Questions
+More on this leaf in [Success in practice](07-success.md).
 
-- Did the original problem actually improve or disappear?
-- What evidence proves it?
-- Was the change safe and within expectations?
-- What remains uncertain?
+## Leaf 5 — Growth
 
-### Deliverables
+Growth is what the system accumulates across repeated cycles: persistent memory, experience, learned patterns, expertise, better planning, better tool selection, adaptation, more capability than it had before.
 
-- Evidence of outcome
-- Validation results
-- Risk and approval evidence where required
-- Outcome status
+Experience is what one cycle produced — what was tried, the context it ran in, the evidence observed, the outcome. Expertise is the reusable pattern that emerges once several validated experiences point the same way. One cycle should not become a rule.
 
-## Stage 6 — Grow
+**Core question.** What did the system become or learn?
 
-Turn the outcome into better future capability by capturing validated experience, developing reusable expertise, and improving the context, workflow, or decisions for the next cycle.
+**What the human holds.** Judgment about what is worth keeping, what can safely be shared, and where a captured lesson has gone stale. An experience recorded wrongly spreads, and somebody has to notice.
 
-Growth is more than a retrospective. It is where the system captures meaningful experience from execution, validates what was learned, identifies patterns across repeated outcomes, and updates the context, knowledge, workflows, or expertise that can improve future decisions.
+**What AI does.** Captures the experience while it is still accurate, writes it where the next cycle will actually read it, notices patterns across cycles, and applies them the next time a similar problem shows up.
 
-> **Execute produces experience. Grow turns validated experience into expertise.**
+**What goes wrong here.** Nothing is captured, because the work closed when the change shipped. Or everything is captured, and the pile of "learnings" becomes noise nobody reads. The subtle one is promoting a single lucky outcome into a rule the system then follows everywhere.
 
-### Experience and Expertise
-
-**Experience** is what was learned from a specific execution — what was tried, the relevant context, the evidence observed, and the outcome.
-
-**Expertise** is the reusable knowledge or decision pattern that emerges from multiple validated experiences. A single execution should not automatically become expertise.
-
-The resulting expertise can become part of the context available during the next **Understand** and **Plan** stages, allowing future decisions to start from a stronger position rather than treating every similar task as a new problem.
-
-This is how the orchestration system can compound capability over time without adding Experience or Expertise as separate lifecycle stages.
-
-### Questions
-
-- What did we learn?
-- What context was missing?
-- What actions and outcomes are worth retaining as experience?
-- Which experiences are sufficiently validated to influence future decisions?
-- What patterns are emerging across similar executions?
-- What should the next human or AI know?
-- What should change in the workflow?
-- What new opportunity did we discover?
-
-### Deliverables
-
-- Updated organizational context
-- Validated experience
-- Reusable expertise or patterns where justified
-- Retrospective / lessons learned
-- Improved workflow or guardrails
-- New opportunities
+The expertise that survives this leaf becomes part of the Context the next cycle starts from, which is how capability compounds without adding leaves to the model.
 
 ---
 
-## Toward Goal-Directed Autonomous AI
+## Widening what AI decides
 
-The six-stage lifecycle is the operating model. **Autonomy is the destination that can emerge as the model, tooling, experience, validation, and trust mechanisms become sufficiently mature.**
-
-The framework does not treat autonomy as another lifecycle stage. Each stage contributes a capability required for increasingly autonomous goal-directed execution.
+The five leaves are the operating model. How much of the work AI determines for itself changes over time, as tooling, context, experience, validation, and trust mature.
 
 ![A possible progression toward goal-directed autonomous AI](../assets/goal-directed-autonomy-progression.svg)
 
-Today, a human may provide both the goal and much of the path. As the orchestration system matures, the human can increasingly provide the **objective, constraints, and success criteria**, while AI determines and adapts the path using current context and accumulated experience.
+Today a person often supplies both the outcome and much of the path. As an orchestration matures, the person can supply the objective, the constraints, and what counts as success, while AI determines and adapts the path from current context and accumulated experience.
 
-> **Human defines the destination. AI determines and continuously adapts the path.**
+"Increase autonomy as trust matures" is only useful if a team can say what decides it. Three rules do:
 
-This does not mean removing humans from the system. Human responsibility moves toward defining objectives, constraints, risk boundaries, authority, and success criteria, while AI takes on more of the planning, execution, observation, and adaptation within those boundaries.
-
-### Widening what AI decides
-
-"Increase autonomy as trust matures" is only useful if you can say what decides it. Three rules do:
-
-- **Results decide, not confidence.** Widen what AI determines for itself where outcomes of that kind have repeatedly held up without rework or intervention. Narrow it again the moment they stop.
+- **Results decide, rather than confidence.** Widen what AI determines for itself where outcomes of that kind have repeatedly held up without rework or intervention. Narrow it again the moment they stop.
 - **Blast radius overrides track record.** Where a mistake is expensive or hard to reverse, human approval stays regardless of how well things have gone.
-- **It is granted per context, not globally.** A team may let AI plan and execute freely inside a well-understood remediation flow while approving every step of anything touching customer data.
+- **It is granted per context, rather than globally.** A team may let AI plan and execute freely inside a well-understood remediation flow while approving every step of anything touching customer data.
 
-What moves is how much of the *path* AI determines — from drafting steps a human approves, through executing an agreed plan, to planning within stated constraints. What does not move is who owns the objective, the constraints, and the outcome.
+What moves is how much of the path AI determines, from drafting steps a person approves, through executing an agreed plan, to planning within stated constraints. Who owns the objective, the constraints, and the outcome does not move. [Governance](08-governance.md) covers how that is held in practice.
 
-The framework's purpose is not to claim that unrestricted autonomy exists today. It is to provide an architecture that can progressively support greater autonomy as reasoning, tools, persistent context, experience, validation, and trust mature.
+## Applying the model
 
-## Applying the Model
+The model is technology independent. It fits anywhere work has an intended outcome that somebody has to stand behind:
 
-The model is technology independent and can be applied to:
-
-- Software Engineering
+- Software engineering
 - DevOps
-- Quality Assurance
-- Production Operations
-- Customer Support
-- Security Operations
-- Product Management
+- Quality assurance
+- Production operations
+- Customer support
+- Security operations
+- Product management
 - Finance
-- Human Resources
-- Business Operations
+- Human resources
+- Business operations
 
 For practical patterns, see **[Reference Implementations](reference-implementations.md)**.
 
-### Example: Production Exception Remediation
+### Example: a recurring production exception
 
-A production exception can be orchestrated as:
+**Direction** — resolve a recurring production exception. Say which systems the fix may touch and who approves the deployment.
 
-**Opportunity** — resolve a recurring production exception.
+**Context** — read the ticket, the logs, the code, the telemetry, the dependencies, the history, and any earlier attempt, before changing anything.
 
-**Understand** — read the ticket, inspect logs, code, telemetry, dependencies, history, and existing knowledge before changing anything.
+**Action** — identify the root cause, make the focused change, write the regression test, raise it for review, and adapt if the evidence contradicts the diagnosis.
 
-**Plan** — identify root cause, define a focused fix, establish ownership, validation steps, and human approval boundaries.
+**Success** — validate outside production, give the approver concrete evidence, deploy, and watch until the original exception stops appearing and stays gone.
 
-**Execute** — implement the fix and create the change/PR.
+**Growth** — close the work once the production outcome holds, and keep the experience so the next incident of that shape is understood faster.
 
-**Proof** — validate in non-production, provide concrete evidence for human approval, deploy, and verify the original production exception resolves.
+### Example: a cross-team knowledge gap
 
-**Grow** — close only when the production outcome is proven; capture the learning as validated experience so future incidents can be understood faster and repeated patterns can contribute to expertise.
+A team should not have to contact several other teams to reconstruct information that already exists in repositories, jobs, telemetry, documentation, and history. An AI knowledge capability can retrieve that context and explain it, while people keep the decisions and the ownership.
 
-### Example: Cross-Team Knowledge Gap
+---
 
-A team should not need to contact several teams simply to reconstruct information that already exists in repositories, jobs, telemetry, documentation, or historical context. An AI knowledge capability can retrieve and explain that context, while humans remain responsible for decisions and ownership.
+## Note — the hypothesis layer is not in this document
 
-## Key Takeaway
+Clover has two layers, and this document is the engineering one. Everything above is meant to be usable today.
 
-AI orchestration is not about maximizing AI activity or parallelism.
+The second layer is a question about where repeated Growth leads: what happens when experience persists, when it is shared across many systems, when it is embodied, and when a system begins to influence the Direction it was given rather than only executing it. That is a question rather than a prediction, and none of it is claimed as established.
 
-It is about turning distributed capability into coherent outcomes through:
-
-**Understanding → focused planning → owned execution → proof → continuous growth.**
-
-> **Opportunity → Understand → Plan → Execute → Proof → Grow**
+It is kept out of this document deliberately. It lives in [the hypothesis](../hypothesis/ai-future.md).

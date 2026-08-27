@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Glossary — AI Orchestration Framework</title>
-<meta name="description" content="Plain-language definitions for every term used in the AI Orchestration Framework.">
+<title>Glossary — Clover</title>
+<meta name="description" content="Plain-language definitions for every term used in Clover, the five-leaf model.">
 <link rel="canonical" href="https://santhoshsathish94.github.io/ai-orchestration-framework/glossary/">
 <meta name="theme-color" content="#0a6a5f">
 <link rel="stylesheet" href="../styles.css">
@@ -13,14 +13,31 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
+<!-- Same single leaf definition the home page uses. -->
+<svg class="clover-sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <path id="clover-leaf" d="M50 44C48 35 38 31 38 21C38 12 46 9 50 17C54 9 62 12 62 21C62 31 52 35 50 44Z"/>
+  </defs>
+</svg>
+
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="../">AI Orchestration <span>Framework</span></a>
+    <a class="brand" href="../">
+      <svg class="clover clover--brand" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <path class="clover__stem" d="M50 48C50 68 50 80 50 95"/>
+        <use class="clover__leaf is-filled" href="#clover-leaf"/>
+        <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(72 50 44)"/>
+        <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(144 50 44)"/>
+        <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(216 50 44)"/>
+        <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(288 50 44)"/>
+      </svg>
+      Clover <span>five leaves</span></a>
     <nav class="site-nav" aria-label="Primary">
-      <a href="../#why">Framework</a>
-      <a href="../#lifecycle">How it works</a>
+      <a href="../#problem">The problem</a>
+      <a href="../#direction">The five leaves</a>
+      <a href="../#agent">Start</a>
       <a href="../#evidence">Evidence</a>
-      <a href="../#try">Start</a>
+      <a href="../#fifth-leaf">The fifth leaf</a>
       <a href="./" aria-current="page">Glossary</a>
       <a href="https://github.com/santhoshsathish94/ai-orchestration-framework">GitHub</a>
     </nav>
@@ -34,30 +51,43 @@
     <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/issues">tell us</a>.</p>
 
   <label for="term-filter" class="note" style="display:block;margin-bottom:0.4rem">Filter terms</label>
-  <input class="filter" id="term-filter" type="search" placeholder="e.g. proof, context, blast radius" autocomplete="off">
+  <input class="filter" id="term-filter" type="search" placeholder="e.g. growth, context, blast radius" autocomplete="off">
   <p class="note" id="term-count" role="status" aria-live="polite" style="margin-top:-1rem"></p>
 
+  <h2 style="font-size:1.05rem;margin-top:1.4rem">Clover and the five leaves</h2>
   <dl class="terms">
-    <div><dt>Orchestration</dt><dd>Coordinating people, AI, tools, and context so that work produces a proven outcome — rather than each part doing its own thing.</dd></div>
+    <div><dt>Clover</dt><dd>This framework. Five leaves — Direction, Context, Action, Success, Growth — describing how human intent becomes an outcome the environment confirms, and what the system keeps once it does.</dd></div>
+    <div><dt>Leaf</dt><dd>One part of the cycle. Each leaf has one job, and the model stays at five of them.</dd></div>
+    <div><dt>Direction</dt><dd>Where human intent enters the system. What is being worked on, why it matters, which outcome counts, which constraints apply, and what stays out of scope.</dd></div>
+    <div><dt>Context</dt><dd>What the system needs to know about reality before acting — the code, the data, the logs, the running behavior, the history, the constraints, and what was already tried.</dd></div>
+    <div><dt>Action</dt><dd>Deciding how the work should happen and then doing it. Planning, tool and model choice, orchestration across agents, changes, tests, debugging.</dd></div>
+    <div><dt>Success</dt><dd>The intended outcome demonstrated by the real environment. A closed task, a passing build, or a confident report sits outside this.</dd></div>
+    <div><dt>Growth</dt><dd>What the system accumulates across repeated cycles — memory, experience, learned patterns, expertise, better planning and tool choice.</dd></div>
+    <div><dt>The fifth leaf</dt><dd>The open boundary of Growth. Growth is useful and adaptive today, and how far it goes is unknown. It is carried as a question rather than a prediction. <a href="../#fifth-leaf">The open question</a>.</dd></div>
+    <div><dt>Short form</dt><dd>Where → Know → Do → Validate → Become. The same five leaves in one word each.</dd></div>
+  </dl>
+
+  <h2 style="font-size:1.05rem;margin-top:2rem">Everything else</h2>
+  <dl class="terms">
+    <div><dt>Orchestration</dt><dd>Coordinating people, AI, tools, and context so that work produces an outcome the environment confirms, rather than each part doing its own thing.</dd></div>
+    <div><dt>Orchestration environment</dt><dd>The access layer between AI and the systems an organization already runs. It is what feeds the Context leaf.</dd></div>
     <div><dt>Capability</dt><dd>Anything that can do work: a person, a team, an AI model, an agent, a tool, a system.</dd></div>
-    <div><dt>Context</dt><dd>Everything AI or a person needs to reason correctly about a problem — the code, the history, the rules, the constraints, what was already tried.</dd></div>
-    <div><dt>Intent</dt><dd>What a human actually wants to achieve. The outcome, not the task.</dd></div>
-    <div><dt>Outcome</dt><dd>The change in the real world you were after. Distinct from <em>output</em>, which is just what got produced.</dd></div>
-    <div><dt>Proof</dt><dd>Evidence that connects the work back to the original problem and shows the outcome actually happened.</dd></div>
-    <div><dt>Evidence</dt><dd>What you actually did to check a claim — an assertion, one manual look, a repeatable test, a before-and-after measurement, or the original signal gone from the real environment. Say which. <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/07-proof.md#how-strong-is-your-evidence">More on proof</a>.</dd></div>
-    <div><dt>Experience</dt><dd>What was learned from one specific execution — what was tried, what happened, what the evidence showed.</dd></div>
-    <div><dt>Expertise</dt><dd>A reusable pattern that emerges from several <em>validated</em> experiences. One execution is not expertise.</dd></div>
+    <div><dt>Intent</dt><dd>What a human actually wants to achieve. The outcome, and not the task.</dd></div>
+    <div><dt>Outcome</dt><dd>The change in the real world that was wanted. Distinct from <em>output</em>, which is what got produced.</dd></div>
+    <div><dt>Evidence</dt><dd>What was actually done to check a claim — an assertion, one manual look, a repeatable test, a before-and-after measurement, or the original signal gone from the real environment. Say which. <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/07-success.md">More on Success</a>.</dd></div>
+    <div><dt>Experience</dt><dd>What was learned from one cycle — what was tried, what happened, what the evidence showed.</dd></div>
+    <div><dt>Expertise</dt><dd>A reusable pattern that emerges from several <em>validated</em> experiences. One cycle is not expertise.</dd></div>
     <div><dt>Ownership</dt><dd>The named human accountable for an outcome. Work can be delegated; ownership cannot.</dd></div>
-    <div><dt>Agent</dt><dd>An AI system that can take actions and use tools, not only produce text.</dd></div>
-    <div><dt>Agentic workflow</dt><dd>A designed loop of agent steps that repeats a known process. Orchestration differs in that it <em>learns</em> from the outcome.</dd></div>
-    <div><dt>Autonomy</dt><dd>How much of the <em>path</em> AI is trusted to determine — widened where results have held, capped by blast radius, granted per context rather than globally. <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/08-governance.md#how-much-autonomy-to-grant">How much to grant</a>.</dd></div>
+    <div><dt>Agent</dt><dd>An AI system that can take actions and use tools, rather than only produce text.</dd></div>
+    <div><dt>Agentic workflow</dt><dd>A designed loop of agent steps that repeats a known process. Orchestration differs in that it keeps what the outcome taught it.</dd></div>
+    <div><dt>Autonomy</dt><dd>How much of the <em>path</em> AI is trusted to determine — widened where results have held, capped by blast radius, granted per context rather than globally. <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/04-framework.md#widening-what-ai-decides">Widening what AI decides</a>.</dd></div>
     <div><dt>Telemetry</dt><dd>The signals a running system emits about itself — logs, metrics, traces, error rates.</dd></div>
-    <div><dt>Blast radius</dt><dd>How much damage a change could do if it is wrong. Bigger blast radius means more human approval.</dd></div>
+    <div><dt>Blast radius</dt><dd>How much damage a change could do if it is wrong. A bigger blast radius means more human approval.</dd></div>
     <div><dt>Non-production</dt><dd>Any environment that is not serving real users — local, test, staging. Safe to break.</dd></div>
     <div><dt>Guardrail</dt><dd>A constraint that keeps work inside safe boundaries: a required approval, a scope limit, a check that must pass.</dd></div>
     <div><dt>Root cause</dt><dd>The underlying reason a problem occurs. Distinct from the symptom, and from the workaround that hides it.</dd></div>
-    <div><dt>Workaround</dt><dd>Something that stops the pain without fixing the cause. Legitimate to stabilize an incident; not a destination.</dd></div>
-    <div><dt>Thrashing</dt><dd>Repeated confident attempts at a fix, none of which work — the signal to stop fixing and go back to understanding.</dd></div>
+    <div><dt>Workaround</dt><dd>Something that stops the pain without fixing the cause. Legitimate for stabilizing an incident, and not a destination.</dd></div>
+    <div><dt>Thrashing</dt><dd>Repeated confident attempts at a fix, none of which work. The signal to stop fixing and go back to Context.</dd></div>
   </dl>
 
   <p class="note" style="margin-top:2rem">Source of truth:
@@ -67,7 +97,7 @@
 <footer class="site-foot">
   <div class="wrap">
     <p style="max-width:none">The website explains; the repository documents.
-      <a href="https://github.com/santhoshsathish94/ai-orchestration-framework">AI Orchestration Framework on GitHub</a>.</p>
+      <a href="https://github.com/santhoshsathish94/ai-orchestration-framework">Clover on GitHub</a>.</p>
   </div>
 </footer>
 

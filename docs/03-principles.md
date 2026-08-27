@@ -2,63 +2,76 @@
 
 ## Purpose
 
-The AI Orchestration Framework defines how humans and AI turn opportunities into measurable outcomes. The lifecycle is simple; the principles make each stage reliable.
+Clover describes how humans and AI turn intent into outcomes the environment confirms. The five leaves give the structure. These principles are what make each leaf hold up on real work.
 
-There is one principle per stage. If you remember the lifecycle, you already remember the principles.
+There is one principle per leaf. A team that remembers the leaves already remembers the principles.
 
 ---
 
-## 1. Start with the Opportunity
+## 1. Direction is a human decision
 
-*Stage: Opportunity*
+*Leaf: Direction*
 
-Begin with a meaningful business or engineering problem and the outcome worth achieving. Do not start with a model, agent, prompt, or tool simply because it is available.
+Somebody accountable states what is being worked on, why it matters, which outcome is worth having, and what sits outside the work. The availability of a model, agent, or tool is not a reason to start.
 
-## 2. Understand Before Acting
+Direction carries the boundaries with it: what must not change, what needs approval before it happens, which systems and data the work may touch. A direction that says where to go and never says where not to gets read generously by whoever picks it up.
 
-*Stage: Understand*
+Tickets, incidents, and requests are inputs to Direction. They rarely state the outcome on their own, and somebody still has to.
 
-Build sufficient understanding before execution. Gather relevant architecture, business rules, dependencies, telemetry, history, prior attempts, and constraints, and use available organizational knowledge first.
+## 2. Context comes from the real environment
 
-Do not assume the available context is sufficient. Capability is only useful when it has the context required to reason correctly, so surface missing information, overlooked signals, and untested assumptions before consequential action — and gather the evidence needed to reduce that uncertainty.
+*Leaf: Context*
 
-## 3. Plan for Focus and Ownership
+Gather what the problem actually requires before acting on it — source, architecture, business rules, dependencies, telemetry, history, earlier attempts, constraints, and whatever the organization already knows. Where the environment can answer a question, read the environment instead of reasoning about what it probably contains.
 
-*Stage: Plan*
+Treat the context in hand as incomplete until it has been checked. Name the assumptions nobody tested and the signals nobody looked at, then reduce that uncertainty before making a consequential change.
 
-Plan the smallest coherent path to the outcome. Parallelize only when work is genuinely independent. Every delegated activity must have clear ownership; delegation must never dissolve accountability.
+Collecting everything is its own failure. A context stuffed with irrelevant material buries the few facts the problem turns on. Enough context to reason correctly is the bar.
 
-## 4. Orchestrate Work, Not Prompts
+## 3. Action runs inside a structured workflow
 
-*Stage: Execute*
+*Leaf: Action*
 
-AI should operate inside a structured workflow with defined context, boundaries, tools, decisions, and handoffs. Humans and AI may share execution, but responsibility for the outcome stays explicit: AI can perform the work; humans retain responsibility for risk, governance, and decisions that require human judgment. The objective is coherent progress, not maximum AI activity.
+AI works reliably when it has defined context, stated boundaries, the tools the job needs, and clear handoffs. Humans and AI can share the work. Responsibility for the outcome stays with a named person, whoever or whatever performed each step.
 
-## 5. Prove Outcomes, Not Activity
+Plan the smallest coherent path to the outcome. Run work in parallel only where it is genuinely independent, because coordination costs real time and more agents do not make a tangled problem finish sooner.
 
-*Stage: Proof*
+New information during the work is a reason to replan rather than a reason to push on. Coherent progress is the objective, and maximum AI activity is a poor proxy for it.
 
-A completed task, generated artifact, passing build, or merged PR is not the outcome by itself. Evidence must connect execution back to the original objective and demonstrate that the intended result actually occurred. Name the strongest evidence you actually have, and do not claim more.
+## 4. Success is demonstrated by the environment
 
-## 6. Grow Into Collective Capability
+*Leaf: Success*
 
-*Stage: Grow*
+A closed task, a generated artifact, a passing build, or a merged change is not the outcome by itself. Success means the environment shows that the intended outcome occurred.
 
-Every execution should produce learning. Capture what happened, what was missing, what worked, and what failed, and feed it back into context, workflows, and future orchestration. Knowledge should not stay trapped with a person or team when it can safely become shared context. Better context and better orchestration create better understanding for the next opportunity.
+State what you checked, what you observed, and where you stopped. Stopping early is often correct — a small change can be genuinely complete once a test covers it, and production observation is not always available or worth its cost. The failure is describing weak evidence in the language of strong evidence. "Validated in the test environment, not yet observed in production" is a complete and honest claim.
+
+When the evidence does not support the intended outcome, go back to Context. A failed check usually means something about reality was missing, so repeating the action only reaches the same wrong place faster.
+
+## 5. Growth is validated before it is reused
+
+*Leaf: Growth*
+
+Every cycle produces experience — what was tried, the context it ran in, what the environment showed, what was missing. Capture it while it is still accurate.
+
+Experience becomes expertise once the same pattern has held across several cycles. A single good outcome is an anecdote, and promoting it to a rule teaches the system something that is not true yet.
+
+Where knowledge can safely be shared, it should not stay with one person or one team. Otherwise the next cycle depends on who happens to be around.
 
 ---
 
 ## Summary
 
-| Stage | Principle |
+| Leaf | Principle |
 |---|---|
-| **Opportunity** | Start with the Opportunity |
-| **Understand** | Understand Before Acting |
-| **Plan** | Plan for Focus and Ownership |
-| **Execute** | Orchestrate Work, Not Prompts |
-| **Proof** | Prove Outcomes, Not Activity |
-| **Grow** | Grow Into Collective Capability |
+| **Direction** | Direction is a human decision |
+| **Context** | Context comes from the real environment |
+| **Action** | Action runs inside a structured workflow |
+| **Success** | Success is demonstrated by the environment |
+| **Growth** | Growth is validated before it is reused |
 
-> **Opportunity → Understand → Plan → Execute → Proof → Grow**
+Direction → Context → Action → Success → Growth
 
-The lifecycle is the structure. Context, focus, ownership, evidence, and feedback are what make it work.
+Short form: Where → Know → Do → Validate → Become
+
+Each leaf is described in full, with what commonly goes wrong at it, in [the model](04-framework.md).

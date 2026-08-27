@@ -4,6 +4,37 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+### Renamed and rewritten as Clover
+
+The framework is now **Clover**, and the model is five leaves: **Direction → Context → Action →
+Success → Growth**, short form Where → Know → Do → Validate → Become. The six stages are gone.
+Opportunity became Direction, Understand became Context, Plan and Execute merged into Action, Proof
+became Success, and Grow became Growth. The six principles became five, one per leaf.
+
+The names carry the argument, so they are worth stating. **Direction** rather than Control, because
+control implies people can perfectly steer a system that keeps getting more capable. **Context**
+rather than Understand, because understanding happens inside a head, while context is the material
+a system has to work from. **Action** rather than Plan plus Execute, because the plan usually changes
+once the work meets reality and splitting the two invites a plan that gets quietly abandoned.
+**Success** rather than Proof or Results, because the question is whether the intended outcome
+occurred and whether the real environment said so. **Growth** rather than Grow or Learning, because
+it covers what the whole system accumulates rather than what one model predicts better.
+
+The rename ran through the repository as one change: the docs, `AGENTS.md`, the quickstart, the
+brief template, the worked example, the issue and pull request templates, the case studies, the
+website, and the README. Both case studies are retold through the five leaves with every fact left
+as it was, including the two that are still open — the migration's production cutover has not run,
+and the upstream React pull request is CI-green and not merged.
+
+Clover also names the fifth leaf. Growth is useful today, and how far it goes is an open question:
+what happens when experience is shared across many systems, when it is embodied, and when a system
+begins to influence the Direction it was given rather than only carrying it out. That question is
+kept out of the framework material and lives in `hypothesis/ai-future.md`. It is a question, and not
+a prediction.
+
+This is a breaking change to the framework's vocabulary. Anything written against the six stages
+needs remapping.
+
 ### Added
 - **Rewrote the website's security and governance section around three separate questions**, because the old version mixed them together and was hard to reason about: *what is actually happening* (no new access, no new controls, and one real change — the layer reads across code, tickets, logs and data at once, and that aggregation is the genuinely new thing), *what needs to happen* (five concrete actions), and *what is not solved yet*. Adds the objection most security reviews actually open with — "there are secrets in our code" — and answers it directly: that is a true statement about your systems, not about AI. The credential is already readable by everyone with repository access. Declining AI does not remove the risk, it removes the thing most likely to find it. Rotate, redact, close the path, and the objection is gone while the system is genuinely safer. *The dangerous thing is not an agent reading a secret; it is a secret sitting there unread for three years.*
 - **Monitoring is now framed as the primary recommendation rather than an open problem**, on the site and in `docs/08-governance.md`. Record every system an agent touched, compare what it did against what it was asked to do, and alert when it reaches outside the task — a repository unrelated to the ticket, a table it had no reason to query, a write where it was granted read. The honest caveat stays (tooling barely exists), but with the addition that most teams already collect the raw material in access logs and audit trails, so a coarse first version is tractable. It is the only control that operates *while* the agent is working.
