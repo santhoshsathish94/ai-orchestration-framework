@@ -30,7 +30,7 @@ Reaching it takes a setup rather than a principle:
 2. **Scope every connection to what the human driving the work already has access to**, at the privileges they already hold. Nothing new is being granted.
 3. **Start with one environment. Development is enough.** Widen to other non-production environments as it proves out.
 
-[The orchestration environment](orchestration-environment.md#building-one) covers what to connect and in what order, and [governance](08-governance.md#access-mirrors-the-person-not-the-ai) covers how that access is held.
+[The orchestration environment](orchestration-environment.md#building-one) covers what to connect and in what order, and [governance](08-governance.md#access-mirrors-the-human-not-the-ai) covers how that access is held.
 
 The approach gets challenged, and the honest answer holds up. That access already exists and is already used, often with nobody tracking it. Clover makes it deliberate, scoped and visible. It also surfaces stale credentials, unreviewed access paths and data nobody has looked at, before any of those become an incident. [The questions a security team will ask](08-governance.md#questions-your-security-team-will-ask) are answered one by one.
 
@@ -70,9 +70,9 @@ Each stage has one job. The complexity belongs in the context, ownership, eviden
 
 | Stage | What it is | Core question |
 |---|---|---|
-| **Direction** | The human controls what needs to be done, decides how it should be done, and approves. With real context available, Direction also points at where the answer probably is. | What needs to be done, and what must not happen? |
+| **Direction** | The human controls what matters, the desired outcome, constraints, boundaries, and what must not happen, and approves. With real context available, Direction also points at where the answer probably is. | What needs to be done, and what must not happen? |
 | **Context** | The current systems the organization uses — repositories with their many projects and documentation, the datasources the applications connect to, the logs and telemetry, the deployment environments, the running applications. | What do we need to know about reality before acting? |
-| **Action** | Now mostly driven by AI: deciding how the work should happen, and doing it. | What should we do, and how should the work happen? |
+| **Action** | AI determines how the work should happen and executes within those boundaries. | What should we do, and how should the work happen? |
 | **Success** | The intended outcome demonstrated by the real environment. | Did reality validate the intended outcome? |
 | **Growth** | What AI learns, and the expertise it forms, out of the other four stages. The next stage, and not one a team operates. | What is AI becoming? |
 
@@ -82,7 +82,7 @@ A team runs the first four. What one cycle establishes goes into the next cycle'
 
 ## Stage 1 — Direction
 
-Direction is where human intent enters the system. The human controls what needs to be done, decides how it should be done, and approves. They say why it matters, which outcome counts, which constraints apply, and what must not happen. Control stays with them.
+Direction is where human intent enters the system. The human controls what matters, the desired outcome, constraints, boundaries, and what must not happen. AI determines how the work should happen and executes within those boundaries. The human approves, and approval stays required wherever a mistake is expensive or hard to reverse.
 
 A ticket can trigger it. Direction is the outcome behind the ticket, stated plainly, together with what the work must not touch.
 
@@ -100,7 +100,7 @@ Once AI can read the real environment, Direction also points. The people who wor
 
 Context is what the system needs to know about reality before acting. In the common clover it is only what one human can hand over — what they type, the files they attach, the repository they are working in — and it stays bounded by what that human can reach and remember. In the lucky clover it becomes the current systems the organization uses. Every repository, with its many projects and the documentation kept for each application. The datasources the applications connect to. The logs and telemetry. The deployment environments. The running applications. Tests, history, earlier attempts, and what previous cycles wrote down sit here too.
 
-Read-only MCP servers in front of those systems are how an agent reaches them. Every connection is scoped to what the human driving the work already has access to, at the privileges they already hold, and one environment is enough to start — development. [Governance](08-governance.md#access-mirrors-the-person-not-the-ai) covers how that access is held.
+Read-only MCP servers in front of those systems are how an agent reaches them. Every connection is scoped to what the human driving the work already has access to, at the privileges they already hold, and one environment is enough to start — development. [Governance](08-governance.md#access-mirrors-the-human-not-the-ai) covers how that access is held.
 
 Prompting is a small part of this. The working rule is to reason from the real environment rather than from assumptions, wherever the environment can answer the question.
 
@@ -118,7 +118,7 @@ One pass rarely finishes it. Every pass adds context, and a markdown file beside
 
 ## Stage 3 — Action
 
-Action is now mostly driven by AI. It covers deciding how the work should happen and then doing it. Reasoning, planning, tool selection, AI model selection, orchestration across agents, code changes, tests, debugging, and interaction with whatever environments the work touches.
+AI determines how the work should happen and executes within those boundaries. Reasoning, planning, tool selection, AI model selection, orchestration across agents, code changes, tests, debugging, and interaction with whatever environments the work touches.
 
 Planning and doing sit on one stage on purpose. The plan usually changes once the work meets reality, and keeping the two together makes that change ordinary rather than an exception to explain.
 

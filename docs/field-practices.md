@@ -44,7 +44,7 @@ where it is genuinely independent.
 
 ---
 
-## Lesson 2 — Understand before fixing
+## Lesson 2 — Read the system before fixing it
 
 A fix attempted before the problem is understood is a guess, however confident it sounds.
 
@@ -149,7 +149,7 @@ held by a system stays available when the people who held it are not.
 
 ---
 
-## Lesson 5 — Write the understanding down, or pay for it again
+## Lesson 5 — Write the context down, or pay for it again
 
 A session's memory dies with the session. A file in the repository does not.
 
@@ -165,7 +165,7 @@ The investigation was long, and it converged.
 In the second, work on a fix in an open-source library, that discipline was not applied. Nothing
 persisted between passes. Without the accumulated context, the full flow was never understood, and the
 work degenerated into repeated attempts at a fix — the same thrashing described in
-[Lesson 2](#lesson-2--understand-before-fixing). It recovered when the cycle was applied deliberately:
+[Lesson 2](#lesson-2--read-the-system-before-fixing-it). It recovered when the cycle was applied deliberately:
 state the direction, gather the context, act, check the outcome, keep what was learned, and go again.
 
 The same person, the same tools, the same period. The variable was whether understanding was being

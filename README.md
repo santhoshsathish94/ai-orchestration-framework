@@ -85,9 +85,9 @@ The stages read in the order the work runs in. A team runs the first four.
 
 | Stage | What it covers | The question it answers |
 |---|---|---|
-| **Direction** | The human controls what needs to be done, decides how it should be done, and approves | What needs to be done, and what must not happen? |
+| **Direction** | The human controls what matters, the desired outcome, constraints, boundaries, and what must not happen, and approves | What needs to be done, and what must not happen? |
 | **Context** | The current systems the organization uses — repositories and their projects and documentation, datasources, logs and telemetry, deployment environments, running applications | What do we need to know about reality before acting? |
-| **Action** | Mostly driven by AI: deciding how the work should happen, and doing it | What should we do, and how should the work happen? |
+| **Action** | AI determines how the work should happen and executes within those boundaries | What should we do, and how should the work happen? |
 | **Success** | The intended outcome demonstrated by the real environment | Did reality validate the intended outcome? |
 | **Growth** | What AI learns, and the expertise it forms, out of the other four stages. The next stage, and not one a team operates | What is AI becoming? |
 

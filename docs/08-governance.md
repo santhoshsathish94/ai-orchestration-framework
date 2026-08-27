@@ -18,7 +18,7 @@ nobody can say who owns an action has moved the wrong way.
 - Keep work auditable and attributable: who or what did it, and on what evidence.
 - Review changes to context, workflows, and rules the same way code is reviewed.
 
-## Attribute every action to a person
+## Attribute every action to a human
 
 Every action taken through the layer must lead back to a named, accountable human. Never a shared or
 anonymous identity. Two reasons:
@@ -31,7 +31,7 @@ anonymous identity. Two reasons:
 **Attribution is the requirement, and the mechanism depends on local policy.** Running work under an
 individual's own credentials is the simplest way to achieve it, and for a single practitioner it is
 often enough. At any larger scale, most organizations will prefer a **dedicated identity, scoped to
-the task and owned by a named person** — that keeps the accountability without carrying the person's
+the task and owned by a named human** — that keeps the accountability without carrying the person's
 entire access footprint, and it can be rotated and revoked on its own. Either route works. A route
 that leaves an action traceable to nobody does not.
 
@@ -40,12 +40,12 @@ organizations already issue. Reading cannot corrupt data or release a change, wh
 right starting point and usually where most of the value is. See
 [the orchestration environment](orchestration-environment.md).
 
-## Access mirrors the person, not the AI
+## Access mirrors the human, not the AI
 
-**This framework proposes no new access model.** AI works within the access the accountable person
+**This framework proposes no new access model.** AI works within the access the accountable human
 already holds. That single rule removes most of the question.
 
-- **Inherit, do not expand.** If a person cannot see a system, neither can AI acting on their behalf.
+- **Inherit, do not expand.** If a human cannot see a system, neither can AI acting on their behalf.
   Adopting orchestration is not an occasion to grant anyone — human or otherwise — more than they had.
 - **Read-only unless writing is the point.** Most of the value is in reading. Write access is a
   separate decision, made narrowly, for a named purpose.
@@ -56,7 +56,7 @@ already holds. That single rule removes most of the question.
   exactly this judgment. Give them the actual picture — what would be reachable, by whom, under whose
   credentials, and for what — and let them rule on it. If the answer is no, the answer is no.
 
-The question worth asking is whether this person's existing access is appropriate, and whether the
+The question worth asking is whether this human's existing access is appropriate, and whether the
 organization is comfortable with work being done through it. Both are questions it already knows how
 to answer.
 
@@ -67,7 +67,7 @@ than glossing over them.
 
 **First, a point that reframes several of them.** Nearly everything below is already possible in most
 organizations today, without this framework and without anyone's permission. AI works within a
-person's existing access: someone who cannot reach a system cannot reach it through AI either, and
+human's existing access: someone who cannot reach a system cannot reach it through AI either, and
 someone who *can* reach it can already point a tool at it. Ungoverned AI use with employee access is
 the status quo almost everywhere.
 

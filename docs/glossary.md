@@ -13,9 +13,9 @@ that is a bug in the writing — [tell us](../CONTRIBUTING.md).
 | **The common clover** | Three leaves: Direction, Action, Success. How AI is used almost everywhere today. |
 | **The lucky clover** | Four leaves. Context arrives, and it changes what the other three are worth. Where organizations are now. |
 | **The growth clover** | Five leaves. Growth, which is the next stage. |
-| **Direction** | Where human intent enters the system. The human controls what needs to be done, decides how it should be done, and approves. With real context available, Direction also points at where the answer probably is. |
+| **Direction** | Where human intent enters the system. The human controls what matters, the desired outcome, constraints, boundaries, and what must not happen, and approves. With real context available, Direction also points at where the answer probably is. |
 | **Context** | What the work reasons from. In the common clover it is only what one human can hand over — what they type, the files they attach, the repository they are working in. In the lucky clover it is the current systems the organization uses: every repository with its many projects and documentation, the datasources the applications connect to, the logs and telemetry, the deployment environments, the running applications. |
-| **Action** | Now mostly driven by AI: deciding how the work should happen and then doing it. Planning, tool and AI model choice, orchestration across agents, changes, tests, debugging. |
+| **Action** | AI determines how the work should happen and executes within those boundaries: planning, tool and AI model choice, orchestration across agents, changes, tests, debugging. |
 | **Success** | The intended outcome demonstrated by the real environment. A closed task, a passing build, or a confident report sits outside this. |
 | **Growth** | What AI learns, and the expertise it forms, out of the other four stages. Nobody in an organization operates it. It belongs to the frontier AI companies, who hold the volume of data that everyone's usage generates. |
 | **The fifth leaf** | Growth. It stands for the next stage, and where repeated Growth ends is carried as a question, in [the hypothesis](../hypothesis/ai-future.md). |

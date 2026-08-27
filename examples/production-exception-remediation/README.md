@@ -85,8 +85,8 @@ named the assumption that broke.
 > - "Implement step 1 only: a failing unit test for a checkout with no coupon. Then stop."
 > - "Now add the guard. Keep the change focused and explain what changed and why."
 
-**Ownership:** AI worked inside the agreed boundaries. The engineer owned the business decision and
-the approval.
+**Ownership:** AI worked out how to reach the outcome and did the work inside the agreed boundaries.
+The engineer owned the business decision and the approval.
 
 ---
 

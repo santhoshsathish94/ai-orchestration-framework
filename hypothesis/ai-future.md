@@ -153,7 +153,7 @@ Any one of these would meaningfully weaken the argument. Several together would 
 
 > With everything AI can already do, how much more growth do we seek, and in the progress of growth do we still stay in control?
 
-Control is the thread through both layers. Clover opens with a human who controls what needs to be done, decides how it should be done, and approves the result. Direction asks where we should go, Growth asks what we become along the way, and the framework is an argument that the first has to keep hold of the second. [Direction and Growth in the engineering layer →](../docs/02-philosophy.md#direction-and-growth)
+Control is the thread through both layers. Clover opens with a human who controls what matters, the desired outcome, constraints, boundaries, and what must not happen, and approves the result. Direction asks where we should go, Growth asks what we become along the way, and the framework is an argument that the first has to keep hold of the second. [Direction and Growth in the engineering layer →](../docs/02-philosophy.md#direction-and-growth)
 
 Nobody can say today how far growth runs, or whether there is a point where the direction a human set stops describing the system carrying it out. Clover does not answer that. It keeps the question attached to the stage that raises it.
 

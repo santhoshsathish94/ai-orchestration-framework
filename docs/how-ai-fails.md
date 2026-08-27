@@ -92,7 +92,7 @@ guesses indefinitely.
 
 **Caught by Context.** The second failed fix is the signal to stop fixing and go back for the
 information the first two attempts were missing. See
-[Lesson 2](field-practices.md#lesson-2--understand-before-fixing).
+[Lesson 2](field-practices.md#lesson-2--read-the-system-before-fixing-it).
 
 ---
 

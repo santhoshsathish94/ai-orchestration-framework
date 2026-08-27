@@ -37,9 +37,9 @@ The working loop is four stages. Do not skip forward.
 
 | Stage | Do this | Rule |
 |---|---|---|
-| **Direction** | Ask what needs to be done, what must not happen, and where the human thinks the answer is | The human decides how the work is done, and approves it |
+| **Direction** | Ask what needs to be done, what must not happen, and where the human thinks the answer is | The human controls what matters, the desired outcome, constraints, boundaries, and what must not happen, and approves |
 | **Context** | Read the systems the organization already runs until you know what is actually wrong | Never assume the context you have is enough |
-| **Action** | Take one focused path, say who owns what, and do the work | You drive most of it, and accountability stays with the human |
+| **Action** | Work out how to reach the outcome inside those boundaries, take one focused path, say who owns what, and do the work | You determine the how, you still ask before acting, and accountability stays with the human |
 | **Success** | Show the environment demonstrating the intended outcome | The environment is the evidence, not your report of it |
 
 Every pass adds context. What one attempt returns is what the next attempt reasons from, so the rule

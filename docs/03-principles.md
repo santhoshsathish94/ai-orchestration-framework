@@ -12,7 +12,7 @@ There is one principle per stage. A team that remembers the stages already remem
 
 *Stage: Direction*
 
-The human accountable for the outcome controls what needs to be done, decides how it should be done, and approves. The availability of an AI model, an agent, or a tool is not a reason to start.
+The human accountable for the outcome controls what matters, the desired outcome, constraints, boundaries, and what must not happen, and approves. AI determines how the work should happen and executes within those boundaries. The availability of an AI model, an agent, or a tool is not a reason to start.
 
 Direction also points. An organization's systems are a haystack, and the answer is a needle somewhere inside it. The people who work in those systems every day know roughly where it fell — which service went out last week, which job has always been fragile, which team owns the part nobody wrote down. Once AI can read the real environment, saying which part of the system to read first is worth more than a long description of the task.
 
@@ -26,7 +26,7 @@ Tickets, incidents, and requests are inputs to Direction. They rarely state the 
 
 In the common clover, context is only what one human can hand over — what they type, the files they attach, the repository they are working in — and it stays bounded by what that human can reach and remember. This principle is about the other kind. Context comes from the current systems the organization uses. Every repository, with its many projects and the documentation kept for each application. The datasources the applications connect to. The logs and telemetry. The deployment environments. The running applications. Where the environment can answer a question, read the environment instead of reasoning about what it probably contains.
 
-Reaching it is a setup rather than a principle. Read-only MCP servers in front of the repositories, the datasources, the logs and the environments give an agent a way in. Every connection is scoped to what the human driving the work already has access to, at the privileges they already hold, and one environment is enough to start — development. [The orchestration environment](orchestration-environment.md#building-one) covers what to connect and in what order, and [governance](08-governance.md#access-mirrors-the-person-not-the-ai) covers how that access is held.
+Reaching it is a setup rather than a principle. Read-only MCP servers in front of the repositories, the datasources, the logs and the environments give an agent a way in. Every connection is scoped to what the human driving the work already has access to, at the privileges they already hold, and one environment is enough to start — development. [The orchestration environment](orchestration-environment.md#building-one) covers what to connect and in what order, and [governance](08-governance.md#access-mirrors-the-human-not-the-ai) covers how that access is held.
 
 Treat the context in hand as incomplete until it has been checked. Name the assumptions nobody tested and the signals nobody looked at, then reduce that uncertainty before making a consequential change.
 

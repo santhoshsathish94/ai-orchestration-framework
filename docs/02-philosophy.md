@@ -64,7 +64,7 @@ It runs in a loop. Every pass adds context. Markdown files kept beside the work 
 
 The five stages are Direction, Context, Action, Success, and Growth. They were named carefully, and the reasons are part of the argument.
 
-**Direction, rather than Control.** Control describes the human role well enough today. It also implies that people can keep perfect control of a system that keeps getting more capable. Direction claims less and stays true longer: the human controls what needs to be done, decides how it should be done, and approves, whatever the system turns out to be able to do on its own.
+**Direction, rather than Control.** Control describes the human role well enough today. It also implies that people can keep perfect control of a system that keeps getting more capable. Direction claims less and stays true longer: the human controls what matters, the desired outcome, constraints, boundaries, and what must not happen, and approves, whatever the system turns out to be able to do on its own.
 
 **Context, rather than Understand.** Understanding happens inside a head, and nobody can inspect it. Context is the material the system has to work from, and that can be inspected. A system can be handed the whole context and still reason badly from it, so naming the material keeps the distinction visible.
 

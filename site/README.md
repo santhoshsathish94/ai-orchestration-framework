@@ -100,7 +100,9 @@ The marks are the site's identity and they carry the argument, so they have rule
   collides with
   "AI model".
 - **Say "human"**, never "person" or "the user", for whoever holds Direction. Direction is the human
-  controlling what needs to be done, deciding how it should be done, and approving.
+  controlling what matters, the desired outcome, constraints, boundaries, and what must not happen,
+  and approving. Action is AI determining how the work should happen and executing within those
+  boundaries. Never give the human the detailed "how" — it empties Action.
 - **No rungs, levels, scores or grades.** The evidence ladder and the autonomy ladder were deleted
   from the framework. State what was checked, what was observed, and where the work stopped.
 - **Never invent** metrics, customers, adoption, or results. The React memory leak is a CI-green pull

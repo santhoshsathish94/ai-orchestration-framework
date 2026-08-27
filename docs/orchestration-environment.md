@@ -44,7 +44,7 @@ under load, learn something that invalidated part of the original picture, and g
 started with more than the last.
 
 This is a different thing from retrying a fix. Repeating an attempt that keeps failing is thrashing,
-and [Lesson 2](field-practices.md#lesson-2--understand-before-fixing) says to stop and go back for
+and [Lesson 2](field-practices.md#lesson-2--read-the-system-before-fixing-it) says to stop and go back for
 the context the attempts were missing. A pass that ends with more context is progress. A pass that
 ends with another guess means more attempts of the same kind will not help.
 
@@ -94,7 +94,7 @@ pointed at a new consumer.
 automatically appropriate for touching customer data. Grant it per context, as
 [widening what AI decides](04-framework.md#widening-what-ai-decides) describes.
 
-**Keep every action attributable to a named person.** Work performed through the layer should run
+**Keep every action attributable to a named human.** Work performed through the layer should run
 under the credentials of the human who is accountable for it, so that anything unexpected can be
 traced to someone who can explain and correct it. An action attributed to the AI leaves nobody who
 can do either. [Governance](08-governance.md) covers the mechanisms.

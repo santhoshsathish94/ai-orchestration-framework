@@ -31,9 +31,9 @@ State the outcome worth reaching, the edges of the work, and what would show it 
 > in the real environment, and ask me about anything I have left out — especially what this work must
 > not touch, and which systems you would like to read."
 
-**Ownership:** The human controls what needs to be done, decides how it should be done, and
-approves. AI sharpens the wording, names conflicts between stated goals, and asks about the parts
-nobody mentioned.
+**Ownership:** The human controls what matters, the desired outcome, constraints, boundaries, and
+what must not happen. Approval stays with the human. AI sharpens the wording, names conflicts
+between stated goals, and asks about the parts nobody mentioned.
 
 ---
 
@@ -72,7 +72,7 @@ Take the smallest coherent path to the outcome, with an owner on every step.
 > say who should own it and why. Call out the risks. Then implement step &lt;n&gt; only, and stop
 > before anything outside the agreed scope."
 
-**Ownership:** Action is mostly driven by AI, which does the work inside the agreed boundaries and
+**Ownership:** AI determines how the work should happen and executes within those boundaries, and
 comes back when the evidence contradicts the plan. The human sets those boundaries and approves what
 needs approving.
 
