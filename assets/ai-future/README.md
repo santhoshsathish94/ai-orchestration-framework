@@ -1,11 +1,11 @@
 # AI Future illustrations
 
-These illustrations support the standalone **AI Future** technical hypothesis. They are intentionally conceptual and are not architecture diagrams or claims that the described future exists today. All illustrations in this repository are AI-generated or hand-authored SVG.
+These three SVGs illustrate [the hypothesis](../../hypothesis/ai-future.md), which carries Clover's open question about Growth. That document is not part of the framework, and neither are these images. They are conceptual drawings rather than architecture diagrams, and none of them claims that the situation described has arrived. Every one is hand-authored SVG in the website palette, with no external fonts or assets.
 
-- `ai-future-hero.svg` — the central question: what happens when restraint becomes a competitive disadvantage
-- `01-interaction-experience.svg` — the pieces coming together into a connected system
-- `03-persistent-intelligence.svg` — the observe/decide/act/measure/learn loop closing in the physical world
-- `goal-directed-destination.svg` — human defines the destination, AI adapts the path
+- `ai-future-hero.svg` — the solid black five-leaf clover beside the question the document leaves with: with everything AI can already do, how much more growth do we seek, and in the progress of growth do we still stay in control?
+- `many-systems.svg` — five separate systems with dense traffic between them, and a dashed outline around the level at which behavior appears that nobody chose
+- `missing-piece.svg` — three sessions that each end, the break between them, and what would have to last for a system to choose its own direction
 
-When the hypothesis changes, these change with it. Artwork that describes a superseded argument is a
-bug, not decoration.
+Three earlier illustrations were removed with the rewrite: a rising-capability chart built around restraint as a competitive disadvantage, a connected-system diagram for a progression the document no longer lists, and a physical learning loop that argued embodiment was the route to autonomy. A fourth, `goal-directed-destination.svg`, had gone unreferenced.
+
+When the document changes, these change with it. Artwork that describes a superseded argument is a bug, not decoration.

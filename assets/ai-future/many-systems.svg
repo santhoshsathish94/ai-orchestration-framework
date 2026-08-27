@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 580" width="1200" height="580" role="img" aria-labelledby="ms-title ms-desc" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="ms-title">Separate systems, dense traffic between them</title>
+  <desc id="ms-desc">Five plain circles stand for five systems built by different companies. Each keeps its own weights and its own memory. Lines connect them, standing for traffic where one reads, evaluates, trains or calls another. A dashed outline around all five marks the level at which behavior appears that nobody chose and nobody sees whole.</desc>
+
+  <rect width="1200" height="580" fill="#ffffff"/>
+
+  <text x="90" y="62" font-size="27" font-weight="700" fill="#14181d">Several systems, each improving, each reaching the others</text>
+  <text x="90" y="98" font-size="20" fill="#66717e">Separate weights. Separate memory. No shared objective.</text>
+
+  <rect x="90" y="140" width="1020" height="290" rx="20" fill="#f6f8fa" stroke="#7fb8b0" stroke-width="2.5" stroke-dasharray="9 9"/>
+
+  <g stroke="#7fb8b0" stroke-width="3" fill="none">
+    <path d="M296 300H384"/>
+    <path d="M476 300H564"/>
+    <path d="M656 300H744"/>
+    <path d="M836 300H924"/>
+    <path d="M250 254C250 200 350 176 430 176C510 176 610 200 610 254"/>
+    <path d="M610 254C610 200 710 176 790 176C870 176 970 200 970 254"/>
+    <path d="M430 346C430 400 520 410 610 410C700 410 790 400 790 346"/>
+  </g>
+
+  <g fill="#ffffff" stroke="#14181d" stroke-width="2.5">
+    <circle cx="250" cy="300" r="46"/>
+    <circle cx="430" cy="300" r="46"/>
+    <circle cx="610" cy="300" r="46"/>
+    <circle cx="790" cy="300" r="46"/>
+    <circle cx="970" cy="300" r="46"/>
+  </g>
+  <g fill="#14181d">
+    <circle cx="250" cy="300" r="7"/>
+    <circle cx="430" cy="300" r="7"/>
+    <circle cx="610" cy="300" r="7"/>
+    <circle cx="790" cy="300" r="7"/>
+    <circle cx="970" cy="300" r="7"/>
+  </g>
+
+  <text x="90" y="466" font-size="19" fill="#0a6a5f">the dashed outline: nobody chose what happens at this level, and nobody sees it whole</text>
+  <text x="90" y="502" font-size="19" fill="#66717e">Each circle is one company's system. Each line is traffic: one reads, evaluates, trains or calls another.</text>
+  <text x="90" y="536" font-size="21" fill="#39424d">What passes between them is capability. Purpose stays where it was.</text>
+</svg>
