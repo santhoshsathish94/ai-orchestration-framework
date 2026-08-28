@@ -327,6 +327,33 @@ section[id] { scroll-margin-top: 5rem; }
 .hero__cycle strong { color: var(--accent); }
 .hero__leaves { margin-top: 2rem; }
 
+/* ---------- buttons ---------- */
+
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.7rem 0.8rem; margin-top: 1.6rem; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0.72rem 1.15rem; border-radius: 9px;
+  border: 1px solid var(--line-2); background: var(--bg); color: var(--ink);
+  font-size: 0.95rem; font-weight: 620; line-height: 1.2; text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.btn:hover { border-color: var(--accent-line); color: var(--accent); }
+.btn--primary {
+  background: var(--accent); border-color: var(--accent); color: #fff;
+}
+.btn--primary:hover { background: #085349; border-color: #085349; color: #fff; }
+.btn--plain {
+  border-color: transparent; background: none; color: var(--accent);
+  padding-inline: 0.35rem;
+}
+.btn--plain:hover { border-color: transparent; color: #085349; text-decoration: underline; text-underline-offset: 3px; }
+
+@media (max-width: 480px) {
+  .actions { gap: 0.6rem; }
+  .actions .btn { width: 100%; }
+  .actions .btn--plain { width: auto; }
+}
+
 .hero__top { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.2rem 2rem; align-items: center; }
 @media (max-width: 620px) { .hero__top { grid-template-columns: 1fr; } }
 

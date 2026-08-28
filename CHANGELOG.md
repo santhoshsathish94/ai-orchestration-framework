@@ -4,10 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+### Added
+
+- **Buttons in the hero.** Explore the framework, Getting started, and a plain link to the evidence.
+  The page opened on prose with nothing to act on; there is now somewhere obvious to go from the top.
+
 ### Changed
 
 - **The primary navigation is seven items instead of nine.** The three clover sections and the worked
-  example moved into a **How it works** dropdown, and the remaining links are Getting started,
+  example moved into a **Framework** dropdown, and the remaining links are Getting started,
   Security, Evidence, Glossary, Author and GitHub. Security was not reachable from the nav before.
 - On wide screens the dropdown is a panel with a one-line description under each link. Below 1000px
   it becomes an accordion inside the mobile menu, so the menu opens short and grows only when asked.
