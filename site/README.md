@@ -21,6 +21,7 @@ site/
   index.html        the whole story, one page, eleven sections
   glossary/         searchable terms
   author/           who wrote this, in the first person
+  assets/           the peacock feather, the only image the site loads
   styles.css
   app.js            tabs and the glossary filter
   llms.txt          the repository map for agents
@@ -135,9 +136,10 @@ The marks are the site's identity and they carry the argument, so they have rule
 - `author/index.html` is the one page written in the first person about a life rather than about the
   framework. It is also the one place *Black Clover* may be named, as a favorite anime. It ends on
   the verse, with no closing section and no site footer. Leave all of that alone.
-- **The clover is not used on the author page.** Its mark is a peacock feather, defined once in that
-  page's sprite and `<use>`d twice — beside the name, and above the verse. The clover stands for the
-  framework; the feather stands for the author. Do not swap one for the other.
+- **The clover is not used on the author page.** Its mark is a peacock feather,
+  `site/assets/peacock-feather.png`, shown twice — beside the name, and above the verse. It is the
+  only raster asset the site loads, cropped with the white knocked out to transparency. The clover
+  stands for the framework; the feather stands for the author. Do not swap one for the other.
 - American spelling. No employer, product, cluster or infrastructure names.
 - New terminology goes in [`docs/glossary.md`](../docs/glossary.md) first, then the site.
 

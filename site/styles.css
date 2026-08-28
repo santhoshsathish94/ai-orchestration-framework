@@ -93,9 +93,9 @@ section[id] { scroll-margin-top: 5rem; }
 @media (max-width: 560px) { .author-head { grid-template-columns: 1fr; gap: 0.9rem; } }
 
 /* The peacock feather belongs to the author, not to Clover. It appears only on this page. */
-.feather { display: block; }
-.feather--lg { width: 86px; height: 86px; }
-.feather--sm { width: 52px; height: 52px; margin: 0 auto 0.9rem; }
+.feather { display: block; width: auto; }
+.feather--lg { height: 118px; }
+.feather--sm { height: 76px; margin: 0 auto 1rem; }
 
 .verse { margin: 2.6rem 0 0; padding: 0; border: 0; text-align: center; }
 .verse p[lang="sa"] {
