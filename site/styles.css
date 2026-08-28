@@ -73,6 +73,7 @@ code, .mono { font-family: var(--mono); font-size: 0.88em; }
 .narrow { width: min(760px, 100%); margin-inline: auto; padding-inline: var(--pad); }
 
 section[id] { scroll-margin-top: 5rem; }
+.kv[id], .wrong[id] { scroll-margin-top: 6rem; }
 
 .band { padding-block: clamp(3rem, 7vw, 5rem); border-top: 1px solid var(--line); }
 .band--soft { background: var(--soft); }
@@ -85,12 +86,119 @@ section[id] { scroll-margin-top: 5rem; }
 .lede { font-size: 1.12rem; color: var(--ink-2); }
 .note { font-size: 0.92rem; color: var(--muted); }
 
-.pull {
-  margin: 1.5rem 0; padding: 0.1rem 0 0.1rem 1.1rem;
-  border-left: 3px solid var(--accent-line);
-  font-size: 1.1rem; font-weight: 600; color: var(--ink); max-width: var(--measure);
+/* ---------- author page ---------- */
+
+.author-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.4rem; align-items: center; }
+.author-head h1 { margin-top: 0; }
+@media (max-width: 560px) { .author-head { grid-template-columns: 1fr; gap: 0.9rem; } }
+
+/* The peacock feather belongs to the author, not to Clover. It appears only on this page. */
+.feather { display: block; width: auto; }
+.feather--lg { height: 118px; }
+.feather--sm { height: 76px; margin: 0 auto 1rem; }
+
+.verse { margin: 2.6rem 0 0; padding: 0; border: 0; text-align: center; }
+.verse p[lang="sa"] {
+  font-family: "Nirmala UI", "Noto Sans Devanagari", "Mangal", serif;
+  font-size: 1.16rem; line-height: 1.9; color: var(--ink); margin: 0 0 0.8rem;
 }
-.pull p { margin: 0.5rem 0; }
+.verse__meaning {
+  font-size: 0.95rem; color: var(--ink-2); margin: 0 auto;
+  max-width: 46ch;
+}
+
+/* ---------- the clover mark ---------- */
+/* One <path id="clover-leaf"> lives in a hidden sprite at the top of the page. Every mark is that
+   one leaf <use>d and rotated around (50, 44). No JS, no external assets. */
+
+.clover-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+.clover {
+  display: block; flex: none;
+  width: clamp(72px, 12vw, 112px); height: auto;
+}
+.clover__leaf { fill: none; stroke: var(--accent-line); stroke-width: 3; stroke-linejoin: round; }
+.clover__leaf.is-filled { fill: var(--accent); stroke: var(--accent); stroke-width: 2; }
+.clover__stem { fill: none; stroke: var(--accent-line); stroke-width: 3.5; stroke-linecap: round; }
+
+.clover--hero { width: clamp(104px, 20vw, 160px); }
+.clover--brand { width: 26px; }
+
+/* The three narrative marks: three leaves, then four, then five. */
+.clover--mark { width: clamp(200px, 40vw, 420px); }
+
+/* A leaf that is already part of the ordinary way of working. */
+.clover__leaf.is-soft { fill: var(--accent-soft); stroke: var(--accent-line); stroke-width: 2.5; }
+/* The leaf that just arrived. */
+.clover__leaf.is-new { fill: var(--accent); stroke: var(--accent); stroke-width: 2.5; }
+/* Growth: dotted, because it has not arrived yet. */
+.clover__leaf.is-next {
+  fill: none; stroke: var(--accent-line); stroke-width: 2.5;
+  stroke-dasharray: 5 4.5; stroke-linecap: round;
+}
+
+.clover__label {
+  font-family: var(--font); font-size: 8px; font-weight: 650; letter-spacing: 0.02em;
+  fill: var(--ink-2);
+}
+.clover__label--now { fill: var(--accent); font-weight: 700; }
+.clover__label--next { fill: var(--muted); }
+
+/* Closing question. The mark is black here and carries no labels. */
+.clover--ink .clover__leaf { fill: var(--ink); stroke: var(--ink); stroke-width: 2; }
+.clover--ink .clover__stem { stroke: var(--ink); }
+
+.ask__q {
+  margin-top: 2rem; font-size: clamp(1.15rem, 2.6vw, 1.5rem); line-height: 1.45;
+  font-weight: 600; color: var(--ink); max-width: 44rem; text-wrap: balance;
+}
+
+/* ---------- the narrative arc ---------- */
+
+.arc {
+  display: grid; gap: 1.5rem 2.4rem; align-items: center; margin-top: 1.7rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+@media (max-width: 860px) { .arc { grid-template-columns: minmax(0, 1fr); } }
+
+.arc__mark { margin: 0; display: grid; justify-items: center; gap: 0.7rem; }
+.arc__mark figcaption {
+  font-size: 0.9rem; color: var(--muted); text-align: center; max-width: 34ch;
+}
+.arc__body > :last-child { margin-bottom: 0; }
+.arc__body h3 { margin-bottom: 0.5rem; }
+.arc__body ul { margin: 0 0 1rem; padding-left: 1.15rem; }
+.arc__body li { margin-bottom: 0.2rem; }
+
+/* ---------- leaf sections ---------- */
+
+.holds dt { flex: 0 0 5.5rem; }
+.holds dd { padding-top: 0.1rem; }
+
+.wrong { margin-top: 1.8rem; padding: 0.1rem 0 0.1rem 1.1rem; border-left: 3px solid var(--line-2); }
+.wrong h3 {
+  font-size: 0.83rem; font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--muted); margin: 0.6rem 0 0.5rem;
+}
+.wrong p { font-size: 0.97rem; color: var(--ink-2); }
+.wrong p:last-child { margin-bottom: 0.6rem; }
+
+/* Full-measure variants. The heading stays outside the columns so it cannot flow into one. */
+.wrong__flow, .wrong__cols p { max-width: none; }
+@media (min-width: 900px) {
+  .wrong__flow, .wrong__cols { columns: 2; column-gap: 3rem; }
+  .wrong__cols p { break-inside: avoid; }
+  .wrong__cols p:last-child { margin-bottom: 0.6rem; }
+}
+
+/* Heading and lead on the left, the detail on the right. */
+.split { display: grid; gap: 1.1rem 2.8rem; align-items: start; }
+.split h3 { margin-top: 0; }
+.split__lead > :last-child, .split__body > :last-child { margin-bottom: 0; }
+.split > .split__body { margin-top: 0; }
+@media (min-width: 860px) {
+  .split { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); }
+}
 
 /* ---------- header ---------- */
 
@@ -105,10 +213,11 @@ section[id] { scroll-margin-top: 5rem; }
   min-height: 3.6rem; flex-wrap: wrap;
 }
 .brand {
+  display: inline-flex; align-items: center; gap: 0.5rem;
   font-weight: 680; letter-spacing: -0.02em; color: var(--ink); text-decoration: none;
   margin-right: auto; font-size: 0.98rem;
 }
-.brand span { color: var(--accent); }
+.brand span { color: var(--accent); font-weight: 600; }
 .site-nav { display: flex; gap: 0.35rem 1.15rem; flex-wrap: wrap; }
 .site-nav a {
   color: var(--ink-2); text-decoration: none; font-size: 0.9rem; font-weight: 550;
@@ -120,30 +229,63 @@ section[id] { scroll-margin-top: 5rem; }
 
 .hero { padding-block: clamp(3rem, 9vw, 6rem) clamp(2.5rem, 6vw, 4rem); }
 .hero h1 { max-width: 22ch; }
-.chain { max-width: none; }
 .hero .lede { max-width: 68ch; font-size: clamp(1.05rem, 2.2vw, 1.28rem); }
+.hero__cycle { max-width: 68ch; margin-top: .7rem; color: var(--ink-2); }
+.hero__cycle strong { color: var(--accent); }
+.hero__leaves { margin-top: 2rem; }
 
-.chain {
-  display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;
-  font-size: 0.83rem; font-weight: 600; color: var(--ink-2);
-  margin: 1.6rem 0 2rem; padding: 0;
-  list-style: none;
-}
-.chain li { display: flex; align-items: center; gap: 0.4rem; }
-.chain li::after { content: "→"; color: var(--line-2); }
-.chain li:last-child::after { content: "↺"; color: var(--accent-line); }
-.chain b { font-weight: 600; background: var(--soft-2); padding: 0.25rem 0.6rem; border-radius: 100px; }
+.hero__top { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.2rem 2rem; align-items: center; }
+@media (max-width: 620px) { .hero__top { grid-template-columns: 1fr; } }
 
-.actions { display: flex; flex-wrap: wrap; gap: 0.7rem; align-items: center; }
-.btn {
-  display: inline-block; padding: 0.66rem 1.15rem; border-radius: 8px;
-  font-size: 0.94rem; font-weight: 600; text-decoration: none; border: 1px solid transparent;
+/* ---------- the worked example ---------- */
+/* A numbered run down the page. The rail and the nodes carry the sequence; the chips carry what
+   each leaf touched. No images and nothing to run. */
+
+.run { list-style: none; margin: 1.9rem 0 0; padding: 0; max-width: none; }
+.run > li { position: relative; padding: 0 0 1.6rem 3.4rem; }
+.run > li::before {
+  content: ""; position: absolute; left: 1.05rem; top: 2.5rem; bottom: 0.2rem;
+  width: 2px; background: var(--accent-line);
 }
-.btn--primary { background: var(--accent); color: #fff; }
-.btn--primary:hover { background: #085449; }
-.btn--ghost { border-color: var(--line-2); color: var(--ink); background: #fff; }
-.btn--ghost:hover { border-color: var(--accent-line); color: var(--accent); }
-.btn--text { color: var(--accent); padding-inline: 0.2rem; }
+.run > li:last-child { padding-bottom: 0; }
+.run > li:last-child::before { display: none; }
+
+.run__node {
+  position: absolute; left: 0; top: 0;
+  width: 2.2rem; height: 2.2rem; border-radius: 100px;
+  display: grid; place-items: center;
+  background: var(--accent); color: #fff; font-size: 0.9rem; font-weight: 700;
+}
+.run__leaf {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;
+  font-size: 1.02rem; font-weight: 680; letter-spacing: -0.01em;
+  margin: 0.15rem 0 0.55rem; min-height: 2rem;
+}
+.run__said {
+  margin: 0; padding: 0.7rem 0.9rem; background: #fff;
+  border: 1px solid var(--line); border-left: 3px solid var(--accent-line); border-radius: 8px;
+  color: var(--ink-2);
+}
+.run__line { margin: 0 0 0.5rem; color: var(--ink-2); font-size: 0.95rem; }
+.run__found { margin: 0.7rem 0 0; color: var(--ink-2); font-size: 0.95rem; }
+
+.run__chips {
+  list-style: none; display: flex; flex-wrap: wrap; gap: 0.45rem;
+  margin: 0; padding: 0; max-width: none;
+}
+.run__chips li { margin: 0; }
+.chip--read { background: var(--accent-soft); border-color: var(--accent-line); color: #05564c; }
+.chip--ok { background: #fff; border-color: var(--accent-line); color: var(--ink-2); }
+.chip--ok::before { content: "\2713"; color: var(--accent); font-weight: 700; margin-right: 0.35rem; }
+
+/* The run ends at Success and turns back into Context. */
+.run__loop {
+  display: flex; gap: 0.6rem; align-items: baseline;
+  margin: 1.2rem 0 0; padding: 0.8rem 1rem 0.8rem 0.9rem;
+  max-width: none; color: var(--ink-2); font-size: 0.95rem;
+  background: var(--accent-soft); border-radius: var(--radius);
+}
+.run__loop-mark { color: var(--accent); font-size: 1.25rem; font-weight: 700; line-height: 1; }
 
 /* ---------- grids & cards ---------- */
 
@@ -198,6 +340,8 @@ section[id] { scroll-margin-top: 5rem; }
 
 /* two-column panel body */
 .panel__cols { display: grid; gap: 0.6rem 2rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.panel__cols p { max-width: none; }
+.panel__cols > div > :last-child { margin-bottom: 0; }
 
 .owner {
   display: inline-flex; align-items: center; gap: 0.4rem;
@@ -208,14 +352,7 @@ section[id] { scroll-margin-top: 5rem; }
 .owner--human { border-color: #c9b8d8; background: #f6f1fa; color: #5b3f75; }
 .owner--ai { border-color: var(--accent-line); background: var(--accent-soft); color: #05564c; }
 
-/* ---------- lifecycle diagram ---------- */
-
-.cycle { margin: 0 0 1.4rem; }
-.cycle svg { display: block; width: 100%; height: auto; }
-.cycle-node rect { fill: #fff; stroke: var(--line-2); stroke-width: 1.5; }
-.cycle-node text { fill: var(--ink-2); font-size: 15px; font-weight: 600; font-family: var(--font); }
-.cycle-node.is-active rect { fill: var(--accent); stroke: var(--accent); }
-.cycle-node.is-active text { fill: #fff; }
+/* ---------- stacked definition lists ---------- */
 /* Plain stacked list: one item per row, no card chrome. */
 .stack { margin: 1.3rem 0 0; }
 .stack div { padding: 0.85rem 0; border-top: 1px solid var(--line); }
@@ -228,49 +365,13 @@ section[id] { scroll-margin-top: 5rem; }
   .stack--2 div:nth-child(2) { border-top: 0; padding-top: 0; }
 }
 
-/* Pointer affordance only; keyboard and screen-reader users drive this from the tablist. */
-.js .cycle-node { cursor: pointer; }
-.js .cycle-node rect { transition: fill 120ms ease, stroke 120ms ease; }
-.js .cycle-node:hover:not(.is-active) rect { fill: var(--accent-soft, #eefaf7); stroke: var(--accent); }
-.js .cycle-node:hover:not(.is-active) text { fill: var(--ink); }
-.js .cycle-node:focus { outline: none; }
-.js .cycle-node:focus-visible rect { stroke: var(--accent); stroke-width: 3; }
-.cycle-edge { stroke: var(--line-2); stroke-width: 1.5; fill: none; }
-.cycle-edge--loop { stroke: var(--accent-line); }
-.cycle-edge--fail { stroke: var(--warn); stroke-dasharray: 5 4; }
-.cycle-arrow { fill: var(--line-2); }
-.cycle-arrow--loop { fill: var(--accent-line); }
-.cycle-arrow--fail { fill: var(--warn); }
-.cycle-label { font-size: 12.5px; font-family: var(--font); fill: var(--muted); font-weight: 550; }
-.cycle-label--fail { fill: var(--warn); }
-.cycle-label--loop { fill: #05564c; }
-
-@media (max-width: 800px) { .cycle { display: none; } }
-
-/* The diagram is decorative and hidden from assistive tech, so these notes must stay readable
-   at every width — they carry the two edges the diagram draws. */
-
-/* ---------- comparison rows ---------- */
-
-.compare { display: grid; gap: 0.75rem; margin: 1.5rem 0 0; }
-.compare__row {
-  display: grid; gap: 0.2rem 1.2rem; grid-template-columns: minmax(0, 13rem) 1fr;
-  padding: 0.85rem 1rem; border: 1px solid var(--line); border-radius: 8px; background: #fff;
-}
-.compare__row--now { border-color: var(--accent-line); background: var(--accent-soft); }
-.compare__row dt { font-weight: 650; font-size: 0.93rem; }
-.compare__row dd { margin: 0; font-family: var(--mono); font-size: 0.83rem; color: var(--ink-2); line-height: 1.7; }
-@media (max-width: 620px) { .compare__row { grid-template-columns: 1fr; } }
-
 /* ---------- chips ---------- */
 
 .chip {
+  display: inline-block;
   font-size: 0.78rem; font-weight: 620; border-radius: 100px; padding: 0.2rem 0.65rem;
   background: var(--soft-2); color: var(--ink-2); border: 1px solid var(--line);
 }
-
-.chip-btn { font: inherit; cursor: pointer; }
-.chip-btn:hover { border-color: var(--accent); color: var(--accent); }
 
 /* ---------- evidence / case studies ---------- */
 
@@ -310,5 +411,4 @@ section[id] { scroll-margin-top: 5rem; }
 @media (max-width: 800px) {
   .site-nav a { padding-block: 0.55rem; }
   .tab { padding-block: 0.62rem; }
-  .chip-btn { padding-block: 0.45rem; }
 }

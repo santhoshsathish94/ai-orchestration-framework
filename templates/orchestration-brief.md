@@ -1,116 +1,127 @@
 # Orchestration Brief — &lt;Task or Outcome&gt;
 
-> A one-page brief for running a single task through the AI Orchestration lifecycle:
-> **Opportunity → Understand → Plan → Execute → Proof → Grow ↺**
+> A one-page brief for running a single task through Clover:
+> **Context → Direction → Action → Success**
 >
-> Copy this file, rename it for your task, and fill each section. The prompts are starting points for
-> an AI assistant — adapt them to your tools and context. Keep the brief short; the value is in clear
-> context, ownership, and evidence, not length.
+> Copy this file, rename it for the task, and fill each section as the work proceeds. The prompts are
+> starting points for an AI assistant — adapt them to the tools at hand. Keep the brief short. The
+> value is in real context, clear direction, and honest evidence, not in length.
 
 | Field | Value |
 |---|---|
 | **Task / outcome** | &lt;what are we trying to achieve?&gt; |
 | **Owner (human)** | &lt;who is accountable for the outcome?&gt; |
-| **AI capability** | &lt;which assistant / agent / tools?&gt; |
+| **AI capability** | &lt;which assistant, agents, tools?&gt; |
 | **Date** | &lt;yyyy-mm-dd&gt; |
 
 ---
 
-## 1. Opportunity — *why this is worth doing*
+## 1. Context — *what the real systems show*
 
-State the problem or outcome worth pursuing, and how you'll know it mattered.
-
-- **Problem / trigger:** …
-- **Desired outcome:** …
-- **Success signal (measurable):** …
-
-> **Prompt:** "Here is a problem: &lt;describe&gt;. Restate the outcome we actually want in one
-> sentence, and propose one measurable signal that would prove it was achieved."
-
-**Ownership:** Human frames the opportunity; AI sharpens the wording and proposes signals.
-
----
-
-## 2. Understand — *establish context before acting*
-
-Gather enough context that the problem becomes obvious. Retrieve what's missing.
+Start here. Gather what the problem actually turns on, from the systems the organization already
+runs rather than from assumption. Keep this section current — every pass adds to it.
 
 - **Known context:** …
-- **Unknowns / open questions:** …
-- **Sources to retrieve (code, tickets, logs, docs):** …
+- **Sources read (code, tickets, logs, telemetry, data, environments):** …
+- **Open questions and untested assumptions:** …
+- **Could not reach:** …
+- **What earlier attempts showed, and what they ruled out:** …
 
-> **Prompt:** "Before proposing any solution, read &lt;sources&gt;. Summarize what you now know, list
-> what's still unknown, and tell me what you'd need to be confident."
+> **Prompt:** "Before we agree on what to do, read &lt;sources&gt;. Summarize what you now know about
+> how the system actually behaves, list what is still unknown, and say what you could not reach. For
+> anything you could not reach, name the specific piece of information you need and ask me for it
+> rather than assuming it."
 
-**Ownership:** Human points to trustworthy sources; AI retrieves, summarizes, and surfaces gaps.
+**Ownership:** The human decides which systems may be read, which sources can be trusted, and when
+there is enough to set the direction. AI does most of the gathering and reports the gaps.
 
 ---
 
-## 3. Plan — *choose a focused path*
+## 2. Direction — *what needs to be done*
 
-Pick one path with clear boundaries, dependencies, and ownership. Prefer focus over breadth.
+With the systems read, state the outcome worth reaching, the edges of the work, and what would show
+it happened.
 
-- **Approach (chosen):** …
-- **Out of scope:** …
+- **Problem / trigger:** …
+- **Desired outcome (one sentence):** …
+- **What would demonstrate it:** …
+- **Out of scope / must not change:** …
+- **Needs human approval:** …
+
+> **Prompt:** "Here is the problem: &lt;describe&gt;. Given what you have just read, restate the
+> outcome we actually want in one sentence, propose what would demonstrate that outcome in the real
+> environment, and ask me about anything I have left out — especially what this work must not touch."
+
+**Ownership:** The human controls what matters, the desired outcome, constraints, boundaries, and
+what must not happen. Approval stays with the human. AI sharpens the wording, names conflicts
+between stated goals, and asks about the parts nobody mentioned.
+
+---
+
+## 3. Action — *how the work happens, and doing it*
+
+Take the smallest coherent path to the outcome, with an owner on every step.
+
+- **Approach chosen:** …
 - **Steps, with owner (human / AI) per step:** …
-- **Risks / dependencies:** …
-
-> **Prompt:** "Given that understanding, propose the smallest focused plan. For each step, say who
-> should own it (human or AI) and why. Call out risks and anything out of scope."
-
-**Ownership:** Human approves the plan and boundaries; AI drafts steps and flags risks.
-
----
-
-## 4. Execute — *do the work with explicit ownership*
-
-Perform the work. Keep changes focused and reviewable. AI proposes; humans own decisions.
-
+- **Risks and dependencies:** …
 - **Changes made:** …
-- **Human decisions / approvals:** …
+- **Human decisions and approvals:** …
 
-> **Prompt:** "Implement step &lt;n&gt; only. Keep the change focused and explain what you changed and
-> why. Stop and ask before doing anything outside the agreed scope."
+> **Prompt:** "Given that context, propose the smallest focused path to the outcome. For each step,
+> say who should own it and why. Call out the risks. Then implement step &lt;n&gt; only, and stop
+> before anything outside the agreed scope."
 
-**Ownership:** AI executes within scope; human reviews and owns each decision.
+**Ownership:** AI determines how the work should happen and executes within those boundaries, and
+comes back when the evidence contradicts the plan. The human sets those boundaries and approves what
+needs approving.
 
 ---
 
-## 5. Proof — *show the outcome actually happened*
+## 4. Success — *what the environment showed*
 
-Demonstrate the outcome with concrete evidence — a result, not activity.
+Show the intended outcome happening in the real environment.
 
-- **Evidence (tests, before/after, metrics, logs):** …
-- **What was checked, and where you stopped:** … *(an assertion / seen working once / a repeatable check / measured before and after / observed in the real environment — see [Proof](../docs/07-proof.md#how-strong-is-your-evidence))*
-- **Does the success signal from step 1 now hold?** …
+- **Evidence (tests, before-and-after, telemetry, a run outside production, a user confirming):** …
+- **What was checked, what was observed, and where this stopped:** … *(see [Success](../docs/07-success.md#how-strong-is-your-evidence))*
+- **Does the outcome from Direction now hold?** …
 - **Human verification:** …
-- **Still unproven:** …
+- **Still unverified:** …
 
-> **Prompt:** "Show concrete evidence that the outcome from the Opportunity was achieved. Map each
-> piece of evidence back to the success signal. Say what was checked, what was observed, and where
-> and do not claim a higher one. Note anything still unproven."
+> **Prompt:** "Show concrete evidence that the outcome we stated in Direction was achieved. Map each
+> piece of evidence back to it. Say what you checked, what you observed, and where you stopped. List
+> anything you could not verify."
 
-**Ownership:** AI assembles evidence; human verifies and accepts (or rejects) the proof.
+**Ownership:** The human sets the standard for sufficient evidence and accepts or rejects it. AI runs
+the checks and reports them accurately, including what did not work.
 
-*If the proof does not hold, go back to **Understand** — not to Execute. A failed proof usually means
-the understanding was incomplete.*
-
----
-
-## 6. Grow — *capture learning for the next cycle*
-
-Turn what you learned into reusable context so the next cycle starts stronger.
-
-- **What worked / what didn't:** …
-- **New context to save (docs, prompts, tests, guardrails):** …
-- **Next opportunity this revealed:** …
-
-> **Prompt:** "Summarize what we learned in this cycle, what context is worth saving for next time,
-> and any new opportunity this surfaced."
-
-**Ownership:** Human decides what becomes durable knowledge; AI drafts the summary and artifacts.
+*If the evidence does not hold, go back to **Context**, rather than to Action. A failed check usually
+means something about reality was missing, and repeating the change only reaches the same place
+faster.*
 
 ---
 
-*Part of the [AI Orchestration Framework](../README.md). The lifecycle loops — each Grow feeds the
-next Opportunity.*
+## After each pass — write it back into Context
+
+This is not a fifth stage. Every attempt produces context, whether it succeeded or failed, and that
+context is what the next attempt reasons from.
+
+> After each success and each failure, write the context files before the next attempt.
+
+- **What this attempt showed, and what it ruled out:** …
+- **Worth keeping (docs, prompts, tests, guardrails, context files):** …
+- **Where it is written, so the next cycle actually reads it:** …
+- **Pattern or one-off?** … *(a single good outcome is an anecdote; a pattern has held across several cycles)*
+- **Next direction this revealed:** …
+
+> **Prompt:** "Summarize what this attempt showed and what it ruled out. Write it back into the
+> Context section of this brief, and say where else it should live so the next cycle reads it. Say
+> whether this is a pattern that has held before or a single result."
+
+**Ownership:** The human decides what becomes durable knowledge and what has gone stale. AI writes it
+while the details are still accurate.
+
+---
+
+*Part of [Clover](../README.md). Every pass adds context, and sometimes it changes the Direction
+itself, because the work showed that a different outcome was the one worth having.*

@@ -1,0 +1,67 @@
+name: Direction
+description: Raise a problem, a correction, or a gap in the framework
+title: "[Direction] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Start with what you were looking at, then the problem — the same way the framework does.
+        This follows Context → Direction → Action → Success. Questions and disagreement are welcome,
+        and none of this has to become a pull request.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Where you hit this. The page, the doc, the code, what you were trying to do, relevant links.
+      placeholder: I was working through the Context stage in docs/05-context-engineering.md while setting up read-only access...
+    validations:
+      required: false
+
+  - type: textarea
+    id: direction
+    attributes:
+      label: The problem
+      description: What did you observe, and why does it matter?
+      placeholder: The Context stage doesn't say what to do when the environment can't be read at all...
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: The outcome you're after
+      description: What would better look like?
+    validations:
+      required: true
+
+  - type: textarea
+    id: action
+    attributes:
+      label: A change you have in mind
+      description: Optional. Skip it if you'd rather discuss the problem first.
+    validations:
+      required: false
+
+  - type: textarea
+    id: success
+    attributes:
+      label: What would show it worked
+      description: Optional. How would we know the change actually landed the outcome?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of change is this?
+      options:
+        - Clarity or correctness in the docs
+        - A gap in the framework
+        - A field lesson from real experience
+        - A case study
+        - A reference implementation
+        - Question or discussion
+    validations:
+      required: false

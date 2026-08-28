@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI Orchestration Framework — turn AI capability into proven outcomes</title>
-<meta name="description" content="An open, evidence-based framework for orchestrating AI across engineering and business workflows. Opportunity, Understand, Plan, Execute, Proof, Grow.">
+<title>Clover — an AI Orchestration Framework</title>
+<meta name="description" content="Clover is an AI Orchestration Framework connecting real-world Context, human Direction, AI-driven Action, and validated Success into a repeatable cycle.">
 <link rel="canonical" href="https://santhoshsathish94.github.io/ai-orchestration-framework/">
-<meta property="og:title" content="AI Orchestration Framework">
-<meta property="og:description" content="Agentic workflows repeat. Orchestration learns. An open, evidence-based framework for turning human intent and AI capability into proven outcomes.">
+<meta property="og:title" content="Clover — an AI Orchestration Framework">
+<meta property="og:description" content="Connecting real-world Context, human Direction, AI-driven Action, and validated Success into a repeatable cycle. Four stages, run by a team, on systems the team already has.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://santhoshsathish94.github.io/ai-orchestration-framework/">
 <!-- Served from the repo so it costs the page nothing; only scrapers fetch it. -->
 <meta property="og:image" content="https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/assets/social-preview.png">
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="640">
-<meta property="og:image:alt" content="AI Orchestration Framework — Opportunity, Understand, Plan, Execute, Proof, Grow. Agentic workflows repeat; orchestration learns.">
+<meta property="og:image:alt" content="Clover — an AI Orchestration Framework.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0a6a5f">
 <link rel="stylesheet" href="styles.css">
@@ -23,15 +23,34 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
+<!-- One leaf shape for the whole page. Every clover mark is five rotated copies of it. -->
+<svg class="clover-sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <path id="clover-leaf" d="M50 44C48 35 38 31 38 21C38 12 46 9 50 17C54 9 62 12 62 21C62 31 52 35 50 44Z"/>
+  </defs>
+</svg>
+
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="./">AI Orchestration <span>Framework</span></a>
+    <a class="brand" href="./">
+      <svg class="clover clover--brand" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <path class="clover__stem" d="M50 48C50 68 50 80 50 95"/>
+        <use class="clover__leaf is-filled" href="#clover-leaf"/>
+        <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(72 50 44)"/>
+        <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(144 50 44)"/>
+        <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(216 50 44)"/>
+        <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(288 50 44)"/>
+      </svg>
+      Clover <span>four stages</span></a>
     <nav class="site-nav" aria-label="Primary">
-      <a href="#why">Framework</a>
-      <a href="#lifecycle">How it works</a>
+      <a href="#three-leaves">Common clover</a>
+      <a href="#context">Lucky clover</a>
+      <a href="#fifth-leaf">Growth clover</a>
+      <a href="#walkthrough">Example</a>
       <a href="#agent">Start</a>
       <a href="#evidence">Evidence</a>
       <a href="glossary/">Glossary</a>
+      <a href="author/">Author</a>
       <a href="https://github.com/santhoshsathish94/ai-orchestration-framework">GitHub</a>
     </nav>
   </div>
@@ -39,311 +58,431 @@
 
 <main id="main">
 
-  <!-- ============ HERO + ESSENTIALS ============ -->
-  <section class="hero wrap" id="essentials">
-    <p class="eyebrow">Open · Evidence-based</p>
-    <h1>AI Orchestration Framework</h1>
-    <p class="lede">An operating model for turning human intent and AI capability into measurable
-      outcomes — through context, execution, evidence, and learning. It sits on top of the systems you
-      already run. Nothing to install, nothing to migrate onto.</p>
-
-    <h2 style="margin-top:2.6rem">What decides whether this works.</h2>
-
-      <div class="tabs" data-tabs="essentials">
-        <div class="tablist" role="tablist" aria-label="What decides whether this works">
-          <button class="tab" role="tab" id="es-t1" aria-controls="es-p1" aria-selected="true">People</button>
-          <button class="tab" role="tab" id="es-t2" aria-controls="es-p2">Setup</button>
-          <button class="tab" role="tab" id="es-t3" aria-controls="es-p3">Efficiency</button>
-          <button class="tab" role="tab" id="es-t4" aria-controls="es-p4">Security</button>
-        </div>
-
-        <div class="panel is-active" role="tabpanel" id="es-p1" aria-labelledby="es-t1" data-panel tabindex="0">
-          <h3>Humans are still the most valuable asset</h3>
-          <p>In the AI era the most valuable resource an organization has is still its people. A few
-            skilled individuals solving a few problems is not growth — it is a bottleneck with better
-            tooling.</p>
-          <p>Helping the whole workforce adopt this — training them, encouraging them, and listening to
-            their feedback — matters more than anything else on this site. It applies well beyond
-            engineering: product, marketing and support spend just as much effort finding out what a
-            system did and why.</p>
-          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/09-adoption.md">Adoption →</a></p>
-        </div>
-
-        <div class="panel" role="tabpanel" id="es-p2" aria-labelledby="es-t2" data-panel tabindex="0">
-          <h3>Quick setup using your own agent</h3>
-          <p>Orchestration needs an access layer: your repositories, tickets, logs, datasources and a
-            non-production environment, reachable by the agent you already use. Nothing to install and
-            nothing to migrate onto — it sits on top of what is already running.</p>
-          <p>Read-only first, one connection at a time, never wider than the person accountable for it
-            already has. Start on one real problem; if you stop, the systems underneath are untouched.</p>
-          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/orchestration-environment.md#building-one">Build one →</a></p>
-        </div>
-
-        <div class="panel" role="tabpanel" id="es-p3" aria-labelledby="es-t3" data-panel tabindex="0">
-          <h3>Efficiency is always the priority</h3>
-          <p>Let a strong model hold the plan and own the outcome, with cheaper models doing scoped work
-            beneath it as subagents. The owning model checks and corrects what comes back — they are
-            supervised, not trusted.</p>
-          <p>That costs far less than running everything at the top tier and produces better results
-            than running everything at the bottom, because accountability stays in one place. At one
-            person's scale it is a modest saving; across an organization it compounds — and so does the
-            waste, if nobody thinks about it.</p>
-          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/orchestration-environment.md#spend-capability-where-it-counts">How to divide the work →</a></p>
-        </div>
-
-        <div class="panel" role="tabpanel" id="es-p4" aria-labelledby="es-t4" data-panel tabindex="0">
-          <h3>Security and governance are non-negotiable</h3>
-          <p>AI works within the access the accountable person already holds. Inherit it, never expand
-            it, keep it read-only by default, and make every action traceable to a named human.</p>
-          <p>Most of this exposure already exists wherever people use AI at work, with or without a
-            framework — the choice is whether anyone has written down what to do about it. One thing is
-            genuinely new, though: the layer can read across code, tickets, logs and data at once, which
-            no one person practically could.</p>
-          <p><a href="#security">What a security review will ask →</a></p>
-        </div>
-      </div>
-  </section>
-
-  <!-- ============ WHY ORCHESTRATION ============ -->
-  <section class="band band--soft" id="why">
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="overview">
     <div class="wrap">
-      <p class="eyebrow">Why orchestration</p>
-      <h2>Agentic workflows repeat. Orchestration learns.</h2>
-      <p class="lede">Most organizations already have capability — skilled engineers, and now capable
-        AI. The bottleneck is turning it into shared understanding, focused action, clear ownership,
-        and proven outcomes. A workflow can run the same loop perfectly a hundred times and be no wiser
-        on the hundredth than the first.</p>
-
-      <div class="grid grid--2" style="margin:1.6rem 0 0">
-        <div class="card card--flat">
-          <h3>The same pattern, at every level</h3>
-          <ul>
-            <li>A person acts before understanding the problem, and the fix misses.</li>
-            <li>A team adds people to go faster, but context travels poorly, so work becomes execution → handoff → context loss → rework.</li>
-            <li>An organization gives everyone AI, yet the skill stays with a few people instead of becoming shared capability.</li>
-            <li>An agent jumps straight to a fix and thrashes — the gap was understanding, not capability.</li>
-          </ul>
-        </div>
-        <div class="card card--flat">
-          <h3>Why AI makes it visible</h3>
-          <p>Capability without understanding, focus, and ownership rarely becomes a reliable outcome.
-            AI does not remove that gap. It makes it more visible, because <strong>AI will act on
-            missing context faster and more confidently than a person will.</strong></p>
+      <div class="hero__top">
+        <svg class="clover clover--hero" viewBox="0 0 100 100" role="img"
+             aria-label="A four-leaf clover, with all four leaves drawn solid.">
+          <path class="clover__stem" d="M50 48C50 68 50 80 50 95"/>
+          <use class="clover__leaf is-filled" href="#clover-leaf"/>
+          <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(90 50 44)"/>
+          <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(180 50 44)"/>
+          <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(270 50 44)"/>
+        </svg>
+        <div>
+          <h1>Clover</h1>
+          <p class="lede">Clover is an AI Orchestration Framework connecting real-world Context,
+            human Direction, AI-driven Action, and validated Success into a repeatable cycle.</p>
+          <p class="hero__cycle">It is a four-stage AI engineering cycle:
+            <strong>Context&nbsp;→ Direction&nbsp;→ Action&nbsp;→ Success</strong>.</p>
         </div>
       </div>
 
-      <h3 style="margin-top:2.2rem">So how does it actually learn?</h3>
-      <p>Not by the model remembering. A session ends and its working memory goes with it. What makes
-        the difference is unglamorous: <strong>plain markdown files committed alongside the code</strong>,
-        written as the work proceeds rather than at the end.</p>
-
-      <div class="grid grid--2" style="margin-top:1.2rem">
-        <div class="card card--flat">
-          <h3>What the file holds</h3>
-          <dl class="kv">
-            <div><dt>The goal</dt><dd>What outcome is being pursued, and what "done" means.</dd></div>
-            <div><dt>Established</dt><dd>Findings that are settled, and the evidence behind each.</dd></div>
-            <div><dt>Remaining</dt><dd>Open questions, unverified assumptions, next steps.</dd></div>
-            <div><dt>Ruled out</dt><dd>What was tried and failed, and why — the most expensive thing to rediscover.</dd></div>
-          </dl>
-        </div>
-        <div class="card card--flat">
-          <h3>Why it changes the outcome</h3>
-          <p>Anyone can pick the work up — a colleague, a different agent, the same agent tomorrow — and
-            start from the accumulated understanding instead of re-deriving it. Re-derivation is where
-            both the cost and the drift come from.</p>
-          <p>It also travels with the change and gets reviewed with it, so it cannot quietly disagree
-            with a wiki nobody opens.</p>
-          <p class="note">Repeated failed attempts are usually a symptom of lost context, not
-            impatience. An agent that cannot see what has already been tried will try it again,
-            confidently.</p>
-        </div>
-      </div>
-
-      <p style="margin-top:1.2rem">This is the <strong>Grow</strong> stage made concrete.
-        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/05-context-engineering.md#where-context-lives">Where context lives →</a></p>
+      <dl class="kv hero__leaves">
+        <div><dt>Context</dt><dd>Everything the work reasons from. At its best, the systems the organization already runs.</dd></div>
+        <div><dt>Direction</dt><dd>The human controls what matters, the desired outcome, constraints, boundaries, and what must not happen.</dd></div>
+        <div><dt>Action</dt><dd>AI determines how the work should happen and executes within those boundaries.</dd></div>
+        <div><dt>Success</dt><dd>The real environment shows the intended outcome.</dd></div>
+      </dl>
     </div>
   </section>
 
-  <!-- ============ LIFECYCLE ============ -->
-  <section class="band band--soft" id="lifecycle">
+  <!-- ============ AI CURRENT CAPABILITIES ============ -->
+  <section class="band band--soft" id="capability">
     <div class="wrap">
-      <p class="eyebrow">The lifecycle</p>
-      <h2>Six stages. One loop.</h2>
-      <p class="lede">The lifecycle is deliberately simple. The complexity belongs in the context,
-        ownership, evidence, and feedback around each stage — not in adding more stages.</p>
+      <p class="eyebrow">Where AI already is</p>
+      <h2>AI current capabilities</h2>
+      <p class="lede">AI is already past what any individual human can do. It holds the collection of
+        skills humans have, in one place.</p>
 
-      <div class="cycle">
-        <svg viewBox="0 0 960 250" role="tablist" aria-label="Lifecycle stages, diagram">
-          <defs>
-            <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="cycle-arrow"/></marker>
-            <marker id="ar-loop" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="cycle-arrow cycle-arrow--loop"/></marker>
-            <marker id="ar-fail" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="cycle-arrow cycle-arrow--fail"/></marker>
-          </defs>
+      <dl class="kv" style="margin-top:1.4rem">
+        <div><dt>Engineering</dt><dd>Reads code it has never seen, explains how the system behaves, and writes changes that fit the way the project is already built.</dd></div>
+        <div><dt>Quality assurance</dt><dd>Designs cases from how the system behaves rather than from the wording of the ticket.</dd></div>
+        <div><dt>Security review</dt><dd>Reads a change for the class of mistake that causes incidents, and reads a repository for the credential nobody meant to commit.</dd></div>
+        <div><dt>Analysis</dt><dd>Reconstructs what happened from logs and telemetry, fast enough to matter while an incident is still open.</dd></div>
+      </dl>
 
-          <path class="cycle-edge cycle-edge--fail" marker-end="url(#ar-fail)" d="M723 95 C 723 30, 237 30, 237 91"/>
-          <text class="cycle-label cycle-label--fail" x="480" y="22" text-anchor="middle" aria-hidden="true">proof failed → back to Understand, not Execute</text>
+      <p style="margin-top:1.4rem">What it does not have is direction, and the will to act on its own.
+        Someone has to say what is worth doing, and someone has to start it. The rest of this page is
+        about that.</p>
+    </div>
+  </section>
 
-          <path class="cycle-edge cycle-edge--loop" marker-end="url(#ar-loop)" d="M885 149 C 885 216, 75 216, 75 153"/>
-          <text class="cycle-label cycle-label--loop" x="480" y="240" text-anchor="middle" aria-hidden="true">better context → next opportunity</text>
+  <!-- ============ THREE LEAVES ============ -->
+  <section class="band" id="three-leaves">
+    <div class="wrap">
+      <p class="eyebrow">Three leaves</p>
+      <h2>The common clover</h2>
+      <p class="lede">This is how AI is used almost everywhere today. A human gives the Direction. AI
+        performs the Action, working from what that one human can hand over. After several passes the
+        result becomes Success.</p>
 
-          <path class="cycle-edge" marker-end="url(#ar)" d="M144 122 H166"/>
-          <path class="cycle-edge" marker-end="url(#ar)" d="M306 122 H328"/>
-          <path class="cycle-edge" marker-end="url(#ar)" d="M468 122 H490"/>
-          <path class="cycle-edge" marker-end="url(#ar)" d="M630 122 H652"/>
-          <path class="cycle-edge" marker-end="url(#ar)" d="M792 122 H814"/>
+      <div class="arc">
+        <figure class="arc__mark">
+          <svg class="clover clover--mark" viewBox="-30 -18 160 117" role="img"
+               aria-label="A three-leaf clover. The leaves are labeled Direction, Action and Success.">
+            <path class="clover__stem" d="M50 48C50 66 50 78 50 92"/>
+            <use class="clover__leaf is-soft" href="#clover-leaf"/>
+            <use class="clover__leaf is-soft" href="#clover-leaf" transform="rotate(120 50 44)"/>
+            <use class="clover__leaf is-soft" href="#clover-leaf" transform="rotate(240 50 44)"/>
+            <text class="clover__label" x="50" y="-3" text-anchor="middle">Direction</text>
+            <text class="clover__label" x="91" y="71" text-anchor="start">Action</text>
+            <text class="clover__label" x="9" y="71" text-anchor="end">Success</text>
+          </svg>
+          <figcaption>the common clover</figcaption>
+        </figure>
 
-          <g class="cycle-node is-active" data-stage="opportunity" role="tab" tabindex="0" aria-selected="true" aria-controls="lc-p1"><rect x="10" y="95" width="130" height="54" rx="8"/><text x="75" y="127" text-anchor="middle">Opportunity</text></g>
-          <g class="cycle-node" data-stage="understand" role="tab" tabindex="-1" aria-selected="false" aria-controls="lc-p2"><rect x="172" y="95" width="130" height="54" rx="8"/><text x="237" y="127" text-anchor="middle">Understand</text></g>
-          <g class="cycle-node" data-stage="plan" role="tab" tabindex="-1" aria-selected="false" aria-controls="lc-p3"><rect x="334" y="95" width="130" height="54" rx="8"/><text x="399" y="127" text-anchor="middle">Plan</text></g>
-          <g class="cycle-node" data-stage="execute" role="tab" tabindex="-1" aria-selected="false" aria-controls="lc-p4"><rect x="496" y="95" width="130" height="54" rx="8"/><text x="561" y="127" text-anchor="middle">Execute</text></g>
-          <g class="cycle-node" data-stage="proof" role="tab" tabindex="-1" aria-selected="false" aria-controls="lc-p5"><rect x="658" y="95" width="130" height="54" rx="8"/><text x="723" y="127" text-anchor="middle">Proof</text></g>
-          <g class="cycle-node" data-stage="grow" role="tab" tabindex="-1" aria-selected="false" aria-controls="lc-p6"><rect x="820" y="95" width="130" height="54" rx="8"/><text x="885" y="127" text-anchor="middle">Grow</text></g>
-        </svg>
-      </div>
-
-      <div class="tabs" data-tabs="lifecycle">
-        <div class="tablist" role="tablist" aria-label="Lifecycle stages">
-          <button class="tab" role="tab" id="lc-t1" aria-controls="lc-p1" aria-selected="true" data-value="opportunity">Opportunity</button>
-          <button class="tab" role="tab" id="lc-t2" aria-controls="lc-p2" data-value="understand">Understand</button>
-          <button class="tab" role="tab" id="lc-t3" aria-controls="lc-p3" data-value="plan">Plan</button>
-          <button class="tab" role="tab" id="lc-t4" aria-controls="lc-p4" data-value="execute">Execute</button>
-          <button class="tab" role="tab" id="lc-t5" aria-controls="lc-p5" data-value="proof">Proof</button>
-          <button class="tab" role="tab" id="lc-t6" aria-controls="lc-p6" data-value="grow">Grow</button>
-        </div>
-
-        <div class="panel is-active" role="tabpanel" id="lc-p1" aria-labelledby="lc-t1" data-panel tabindex="0">
-          <h3>Opportunity</h3>
-          <p>Define the problem, why it matters, and the outcome worth pursuing. A ticket can be an
-            input, but it is not the outcome itself.</p>
-          <div class="panel__cols">
-            <div>
-              <p class="panel__sub">Ask</p>
-              <ul><li>What problem are we solving?</li><li>Why does it matter?</li><li>What outcome would make this worthwhile?</li><li>How will we recognize success?</li></ul>
-            </div>
-            <div>
-              <p class="panel__sub">Leave with</p>
-              <ul><li>Opportunity statement</li><li>Expected outcome</li><li>Initial success criteria</li><li>Relevant stakeholders</li></ul>
-            </div>
-          </div>
-          <p class="panel__sub">Ownership</p>
-          <p class="note"><span class="owner owner--human">Human</span> frames the opportunity &nbsp;·&nbsp;
-             <span class="owner owner--ai">AI</span> sharpens the wording and proposes measurable signals</p>
-          <p class="note"><strong>Principle 1</strong> — Start with the opportunity, not the tool.</p>
-        </div>
-
-        <div class="panel" role="tabpanel" id="lc-p2" aria-labelledby="lc-t2" data-panel tabindex="0">
-          <h3>Understand</h3>
-          <p>Establish the context and evidence required to make a sound decision. The goal is not to
-            collect everything; it is to collect what is necessary to make a sound plan.</p>
-          <div class="panel__cols">
-            <div>
-              <p class="panel__sub">Ask</p>
-              <ul><li>What is the current state?</li><li>What context is required?</li><li>What do we already know?</li><li>What is still missing?</li><li>Who owns the relevant flow?</li><li>What constraints must be respected?</li></ul>
-            </div>
-            <div>
-              <p class="panel__sub">Leave with</p>
-              <ul><li>Working context</li><li>Relevant evidence</li><li>Known assumptions and gaps</li><li>Ownership and boundaries</li></ul>
-            </div>
-          </div>
-          <p class="panel__sub">Ownership</p>
-          <p class="note"><span class="owner owner--human">Human</span> points to trustworthy sources &nbsp;·&nbsp;
-             <span class="owner owner--ai">AI</span> retrieves, summarizes, and surfaces the gaps</p>
-          <p class="note"><strong>Principle 2</strong> — Understand before acting, and never assume the context is sufficient.</p>
-        </div>
-
-        <div class="panel" role="tabpanel" id="lc-p3" aria-labelledby="lc-t3" data-panel tabindex="0">
-          <h3>Plan</h3>
-          <p>Determine the focused path, boundaries, dependencies, and ownership. Parallelism is used
-            only when work is genuinely independent — coordination cost is part of the plan.</p>
-          <div class="panel__cols">
-            <div>
-              <p class="panel__sub">Ask</p>
-              <ul><li>What is the smallest coherent path?</li><li>What dependencies exist?</li><li>What must be sequential?</li><li>What can safely run in parallel?</li><li>Who owns each part?</li><li>What needs human approval?</li></ul>
-            </div>
-            <div>
-              <p class="panel__sub">Leave with</p>
-              <ul><li>Focused execution plan</li><li>Ownership boundaries</li><li>Dependencies</li><li>Validation strategy</li><li>Approval points</li></ul>
-            </div>
-          </div>
-          <p class="panel__sub">Ownership</p>
-          <p class="note"><span class="owner owner--human">Human</span> approves the plan and boundaries &nbsp;·&nbsp;
-             <span class="owner owner--ai">AI</span> drafts the steps and flags risks</p>
-          <p class="note"><strong>Principle 3</strong> — Plan for focus and ownership.</p>
-        </div>
-
-        <div class="panel" role="tabpanel" id="lc-p4" aria-labelledby="lc-t4" data-panel tabindex="0">
-          <h3>Execute</h3>
-          <p>Perform the planned work, adapting when new evidence requires a change in direction.
-            Execution should stay observable, attributable, and reversible where practical.</p>
-          <div class="panel__cols">
-            <div>
-              <p class="panel__sub">Ask</p>
-              <ul><li>Is the work staying within scope?</li><li>Is ownership clear?</li><li>Are assumptions changing?</li><li>Does new information require replanning?</li></ul>
-            </div>
-            <div>
-              <p class="panel__sub">Leave with</p>
-              <ul><li>Implemented change or action</li><li>Execution trace</li><li>Updated assumptions where required</li></ul>
-            </div>
-          </div>
-          <p class="panel__sub">Ownership</p>
-          <p class="note"><span class="owner owner--ai">AI</span> executes within scope &nbsp;·&nbsp;
-             <span class="owner owner--human">Human</span> reviews and owns each decision</p>
-          <p class="note"><strong>Principle 4</strong> — Orchestrate work, not prompts. Delegation never dissolves accountability.</p>
-        </div>
-
-        <div class="panel" role="tabpanel" id="lc-p5" aria-labelledby="lc-t5" data-panel tabindex="0">
-          <h3>Proof</h3>
-          <p>Demonstrate with evidence that the intended outcome actually happened. A generated
-            artifact, a green build, or a merged change may be necessary — none of them is proof.</p>
-          <div class="panel__cols">
-            <div>
-              <p class="panel__sub">Ask</p>
-              <ul><li>Did the original problem actually improve or disappear?</li><li>What evidence proves it?</li><li>Was the change safe and within expectations?</li><li>What remains uncertain?</li></ul>
-            </div>
-            <div>
-              <p class="panel__sub">Leave with</p>
-              <ul><li>Evidence of outcome</li><li>Validation results</li><li>Risk and approval evidence</li><li>Outcome status</li></ul>
-            </div>
-          </div>
-          <p class="panel__sub">If proof fails</p>
-          <p>Go back to <strong>Understand</strong>, not to Execute. A failed proof usually means the
-            understanding was incomplete — another attempt at the fix just repeats the original
-            mistake faster.</p>
-          <p class="panel__sub">Ownership</p>
-          <p class="note"><span class="owner owner--ai">AI</span> assembles the evidence &nbsp;·&nbsp;
-             <span class="owner owner--human">Human</span> verifies and accepts — or rejects — the proof</p>
-          <p class="note"><strong>Principle 5</strong> — Prove outcomes, not activity.</p>
-        </div>
-
-        <div class="panel" role="tabpanel" id="lc-p6" aria-labelledby="lc-t6" data-panel tabindex="0">
-          <h3>Grow</h3>
-          <p>Turn the outcome into better future capability by capturing validated experience,
-            developing reusable expertise, and improving the context for the next cycle.</p>
-          <div class="panel__cols">
-            <div>
-              <p class="panel__sub">Ask</p>
-              <ul><li>What did we learn?</li><li>What context was missing?</li><li>Which experiences are validated enough to influence future decisions?</li><li>What patterns are emerging?</li><li>What should change in the workflow?</li><li>What new opportunity did we find?</li></ul>
-            </div>
-            <div>
-              <p class="panel__sub">Leave with</p>
-              <ul><li>Updated organizational context</li><li>Validated experience</li><li>Reusable expertise, where justified</li><li>Improved workflow or guardrails</li><li>New opportunities</li></ul>
-            </div>
-          </div>
-          <p class="panel__sub">Ownership</p>
-          <p class="note"><span class="owner owner--human">Human</span> decides what becomes durable knowledge &nbsp;·&nbsp;
-             <span class="owner owner--ai">AI</span> drafts the summary and artifacts</p>
-          <p class="note"><strong>Principle 6</strong> — Turn validated experience into shared capability.</p>
+        <div class="arc__body">
+          <dl class="kv" id="direction">
+            <div><dt>Direction</dt><dd>The human controls what matters, the desired outcome, constraints, boundaries, and what must not happen.</dd></div>
+            <div><dt>Action</dt><dd>AI determines how the work should happen and executes within those boundaries. It has only what that one human handed over to work from.</dd></div>
+            <div><dt>Success</dt><dd>The human reads the result, corrects it, and runs the loop again until it is good enough.</dd></div>
+          </dl>
+          <p style="margin-top:1.2rem">A lot of real value comes out of this, and it is ordinary. The
+            limit is Context. Everything the work reasons from has to come from one human, and it
+            arrives after the direction, because the direction is what prompts them to hand it over.
+            That is more than what they type: they can attach files, or point at the repository they
+            happen to be working in. It is still only what that one human can reach and remember.</p>
         </div>
       </div>
 
-      <p class="note" style="margin-top:1.2rem">The loop is not software-specific. The same six stages
-        are intended to apply across DevOps, quality assurance, security operations, product
-        management, finance, HR, and business operations — the vocabulary changes, the loop does not.</p>
+      <div class="wrong" id="problem">
+        <h3>What happens there</h3>
+        <p class="wrong__flow">Working from a thin description, AI produces the plausible answer: something
+          that reads correctly and describes a system that does not exist, and searching for the exact
+          string it cited usually settles it. Constraints given once in a long session quietly stop
+          being honored, because the only place they ever lived was the conversation. Then comes the
+          thrash, where a change fails and the next attempt is a variation of the same change, each one
+          as confident as the last, with no new information arriving between the two. Underneath all of
+          it, motion gets read as progress. AI removes the effort cost of starting work and leaves the
+          attention cost of directing it, so human attention stays the scarce resource.</p>
+      </div>
+    </div>
+  </section>
 
-      <p class="note">Full stage definitions:
-        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/04-framework.md">docs/04-framework.md</a> ·
-        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/03-principles.md">the six principles</a></p>
+  <!-- ============ FOUR LEAVES · CONTEXT ============ -->
+  <section class="band band--soft" id="context">
+    <div class="wrap">
+      <p class="eyebrow">Four leaves</p>
+      <h2>The lucky clover</h2>
+      <p class="lede">Context is what the framework exists for, and it comes first. Context stops
+        being the handful of things one human can hand over. It becomes the systems the organization
+        already runs.</p>
+      <p>This is the framework: <strong>Context, Direction, Action, Success</strong>. Four stages,
+        run by a team, on systems the team already has.</p>
+      <p>The common way of working runs Direction, Action, Success, so context is only what the human
+        remembers to hand over and it shows up because the direction asked for it. Clover puts
+        Context first because the systems are already running before anyone asks for anything.
+        Direction is then given against what is actually there. Reality exists before the request.
+        Context therefore comes before Direction.</p>
+
+      <div class="arc">
+        <figure class="arc__mark">
+          <svg class="clover clover--mark" viewBox="-30 -18 160 117" role="img"
+               aria-label="A four-leaf clover. The leaves are labeled Context, Direction, Action and Success, with Context drawn solid as the leaf that just arrived.">
+            <path class="clover__stem" d="M50 48C50 66 50 78 50 92"/>
+            <use class="clover__leaf is-new" href="#clover-leaf" transform="rotate(315 50 44)"/>
+            <use class="clover__leaf is-soft" href="#clover-leaf" transform="rotate(45 50 44)"/>
+            <use class="clover__leaf is-soft" href="#clover-leaf" transform="rotate(135 50 44)"/>
+            <use class="clover__leaf is-soft" href="#clover-leaf" transform="rotate(225 50 44)"/>
+            <text class="clover__label clover__label--now" x="13" y="12" text-anchor="end">Context</text>
+            <text class="clover__label" x="87" y="12" text-anchor="start">Direction</text>
+            <text class="clover__label" x="87" y="82" text-anchor="start">Action</text>
+            <text class="clover__label" x="13" y="82" text-anchor="end">Success</text>
+          </svg>
+          <figcaption>the lucky clover</figcaption>
+        </figure>
+
+        <div class="arc__body">
+          <h3>What context is now</h3>
+          <ul>
+            <li>Every repository the team works in, with its many projects and their documentation.</li>
+            <li>The datasources the applications connect to.</li>
+            <li>The logs and telemetry those applications produce.</li>
+            <li>The deployment environments.</li>
+            <li>The running applications.</li>
+          </ul>
+          <p>None of it has to be written out first. It is already there, and it is already true,
+            which is more than can be said for most descriptions of it.</p>
+        </div>
+      </div>
+
+      <div class="split" style="margin-top:2.2rem">
+        <div class="split__lead">
+          <h3>How to set it up</h3>
+          <p>Three moves, one system at a time. None of them creates a new credential, and none of
+            them needs a platform to migrate onto first.</p>
+          <p class="note">
+            <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/orchestration-environment.md#building-one">The build sequence in full →</a></p>
+        </div>
+        <dl class="stack split__body">
+          <div>
+            <dt>1 · Put read-only MCP servers in front</dt>
+            <dd>An agent reaches a system through an MCP server that only reads. Stand one up per
+              system, one at a time, starting with the repository the team spends its days in.</dd>
+          </div>
+          <div>
+            <dt>2 · Scope it to the human</dt>
+            <dd>Each connection is scoped to what the human already has access to, at the privileges
+              they already hold. No new credential, and no new path into the systems.</dd>
+          </div>
+          <div>
+            <dt>3 · Start in development</dt>
+            <dd>One environment is enough to begin, and development is enough. Widen to the other
+              non-production environments as the results hold up.</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="split" style="margin-top:2rem">
+        <div class="split__lead">
+          <h3>The argument teams will have about this</h3>
+          <p>Opening systems to an agent gets challenged, and the challenge deserves a straight
+            answer.</p>
+          <p class="note">Security teams have specific questions about this, and they deserve specific
+            answers rather than reassurance.
+            <a href="#security">What a security review will actually ask →</a></p>
+        </div>
+        <div class="split__body">
+          <p>That access already exists and is already being used. Repositories get cloned, logs get
+            read, and datasources get queried every day, often without anyone tracking who reached
+            what. Clover makes the same access deliberate, scoped and visible.</p>
+          <p>Reading across those systems also surfaces problems while they are still cheap. Stale
+            credentials, access paths nobody has reviewed, data nobody has looked at in years. They
+            come up in the first weeks of reading, well before they turn into incidents.</p>
+        </div>
+      </div>
+
+      <div class="split" style="margin-top:2rem">
+        <div class="split__lead">
+          <h3>The needle and the haystack</h3>
+          <p>Connecting all of it does not finish the job. An organization's systems are a haystack,
+            and the thing worth finding is a needle somewhere in it. Expecting AI to search the whole
+            haystack does not work, and it costs a lot to watch it try.</p>
+        </div>
+        <div class="split__body">
+          <p><strong>That is what changes Direction.</strong> The humans who work on the system every
+            day can point at roughly where the needle fell. They know which service went out last week,
+            which job has always been fragile, and which team owns the part nobody writes down. So
+            Direction says which part of the system to read first, rather than describing the task in
+            detail.</p>
+          <p>Direction that points, together with context that is real, is what produces Success worth
+            having. Both parts already exist in most organizations, which is why this is reachable for
+            ordinary teams and not only for the ones with a research budget.</p>
+        </div>
+      </div>
+
+      <div class="split" style="margin-top:2rem">
+        <div class="split__lead">
+          <h3>Every pass adds context</h3>
+          <p>One pass rarely finishes anything. What comes back from the first pass is context for the
+            second: the file that turned out to matter, the log line nobody had read, the theory that
+            died. Each pass is better because the context is better. Running the same request again on
+            the same information lands in the same place.</p>
+        </div>
+        <div class="split__body">
+          <p><strong>After each success or failure, the context files are written before the next
+            attempt.</strong> Iteration feeds Context, and it is the only stage it feeds.</p>
+          <p>Markdown files kept beside the work are a plain way to hold that. They carry the goal,
+            what is settled, what remains, and what was ruled out, and they get reviewed with the
+            change like any other file. The summary in them is what matters most. With it written down,
+            no single agent has to hold the job. Any agent can read it and carry on, and so can a
+            colleague who picks the work up on Monday.</p>
+        </div>
+      </div>
+
+      <div class="grid grid--2" style="margin-top:1.4rem">
+        <div class="card card--flat">
+          <h3>What the file holds</h3>
+          <dl class="kv">
+            <div><dt>The goal</dt><dd>What outcome is being pursued, and what done means.</dd></div>
+            <div><dt>Established</dt><dd>Findings that are settled, and the evidence behind each.</dd></div>
+            <div><dt>Remaining</dt><dd>Open questions, unverified assumptions, next steps.</dd></div>
+            <div><dt>Ruled out</dt><dd>What was tried and failed, and why. This is the most expensive thing to rediscover.</dd></div>
+          </dl>
+        </div>
+        <div class="card card--flat">
+          <h3>Spend capability where it counts</h3>
+          <p>A capable agent holds the plan and owns the outcome. Cheaper ones do scoped work beneath
+            it as subagents, and the owning agent checks and corrects what comes back.</p>
+          <p style="margin-top:0.7rem">That costs far less than running everything at the top tier, and
+            it holds up better than running everything at the bottom, because accountability stays in
+            one place.
+            <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/orchestration-environment.md#spend-capability-where-it-counts">How to divide the work →</a></p>
+        </div>
+      </div>
+
+      <h3 style="margin-top:2rem">Who holds what</h3>
+      <dl class="kv holds">
+        <div>
+          <dt><span class="owner owner--human">Human</span></dt>
+          <dd>Access and judgment. Which systems may be read, which data may be used, where the needle
+            probably fell, and when the context in hand is good enough to act on.</dd>
+        </div>        <div>
+          <dt><span class="owner owner--ai">AI</span></dt>
+          <dd>Most of the gathering. Reading code, tracing a call path, pulling telemetry,
+            reconstructing an incident from logs, finding the earlier attempt nobody remembered. It
+            also reports what it could not reach, and that part matters most.</dd>
+        </div>
+      </dl>
+
+      <h3 style="margin-top:2rem">People do not drop out of the work</h3>      <div class="grid grid--2" style="margin-top:1.1rem">
+        <div class="card">
+          <h3>Three stages</h3>
+          <p><span class="owner owner--human">Human</span></p>
+          <p>Goal · constraints · decisions · corrections each pass</p>
+          <p style="margin-top:0.7rem"><span class="owner owner--ai">AI</span></p>
+          <p>Assistance · execution</p>
+        </div>
+        <div class="card">
+          <h3>Four stages, where results have held</h3>
+          <p><span class="owner owner--human">Human</span></p>
+          <p>Objective · constraints · authority · risk boundaries · where to look · what counts as success</p>
+          <p style="margin-top:0.7rem"><span class="owner owner--ai">AI</span></p>
+          <p>Context gathering · planning · execution · observation · adaptation</p>
+        </div>
+      </div>
+      <p style="margin-top:1.2rem">A team moves from the first column toward the second by earning it,
+        per context rather than everywhere at once. Widen what AI determines where outcomes of that
+        kind have repeatedly held up. Keep human approval wherever a mistake is expensive or hard to
+        reverse. Narrow it again the moment the results stop holding.
+        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/08-governance.md">How that is held in practice →</a></p>
+
+      <div class="wrong">
+        <h3>What happens there</h3>
+        <div class="wrong__cols">
+          <p>Hoarding. A context stuffed with everything reachable is harder to reason from than a
+            context with the right few things in it.</p>
+          <p>A gap filled with a guess. A gap an agent names is a limitation. A gap it fills with a
+            plausible value is a defect somebody now has to find.</p>
+          <p>Agreement instead of judgment. Propose a theory and AI will support it, then propose the
+            opposite and it will support that too. Asking for the evidence against a theory is worth as
+            much as asking for the evidence for it.</p>
+          <p>A root cause that merely fits the symptom. The fix that follows is well built and changes
+            nothing.</p>
+          <p>Success taken on the agent's word. The environment is the evidence, so a check means a test
+            that fails without the change, a measurement, a signal that disappears and stays gone, or a
+            human confirming the outcome. When the evidence does not support the outcome, the work goes
+            back to Context rather than straight to another attempt.</p>
+        </div>
+      </div>
+
+      <p class="note" style="margin-top:1.6rem">
+        <a href="#evidence">What this has been run on</a> ·
+        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/05-context-engineering.md">Context engineering</a> ·
+        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/07-success.md">Success in practice</a> ·
+        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/04-framework.md">the framework in full</a> ·
+        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/03-principles.md">one principle per stage</a></p>
+    </div>
+  </section>
+
+  <!-- ============ FIVE LEAVES · GROWTH ============ -->
+  <section class="band" id="fifth-leaf">
+    <div class="wrap">
+      <p class="eyebrow">Five leaves</p>
+      <h2>The growth clover</h2>
+      <p class="lede">Growth is the next stage. It sits outside the four stages of the framework, and
+        nobody inside an organization runs it.</p>
+
+      <div class="arc">
+        <figure class="arc__mark">
+          <svg class="clover clover--mark" viewBox="-30 -18 160 117" role="img"
+               aria-label="A five-leaf clover. The leaves are labeled Context, Direction, Action, Success and Growth, with the Growth leaf drawn dotted as the next stage.">
+            <path class="clover__stem" d="M50 48C50 66 50 78 50 92"/>
+            <use class="clover__leaf is-soft" href="#clover-leaf"/>
+            <use class="clover__leaf is-soft" href="#clover-leaf" transform="rotate(72 50 44)"/>
+            <use class="clover__leaf is-soft" href="#clover-leaf" transform="rotate(144 50 44)"/>
+            <use class="clover__leaf is-soft" href="#clover-leaf" transform="rotate(216 50 44)"/>
+            <use class="clover__leaf is-next" href="#clover-leaf" transform="rotate(288 50 44)"/>
+            <text class="clover__label" x="50" y="-3" text-anchor="middle">Context</text>
+            <text class="clover__label" x="95" y="33" text-anchor="start">Direction</text>
+            <text class="clover__label" x="78" y="85" text-anchor="start">Action</text>
+            <text class="clover__label" x="22" y="85" text-anchor="end">Success</text>
+            <text class="clover__label clover__label--next" x="5" y="33" text-anchor="end">Growth</text>
+          </svg>
+          <figcaption>the growth clover</figcaption>
+        </figure>
+
+        <div class="arc__body">
+          <p>AI gets more capable out of the other four stages. The direction it was given, the
+            context it read, the actions it ran, and the results it saw confirmed.</p>
+          <p>Across an enormous number of those, patterns form. Expertise forms out of the patterns.</p>
+          <p>No team schedules this and no team owns it. It belongs to the frontier AI companies, who
+            hold the volume of data that everyone's usage generates. What comes after it is AI working
+            from goals, with far less direction than it needs today.</p>
+        </div>
+      </div>
+
+      <p class="note" style="margin-top:1.6rem">This is a statement about how information accumulates
+        in general. It is not a claim that any AI provider trains on customer or enterprise work, and
+        many state plainly that they do not.</p>
+    </div>
+  </section>
+
+  <!-- ============ WORKED EXAMPLE ============ -->
+  <section class="band band--soft" id="walkthrough">
+    <div class="wrap">
+      <p class="eyebrow">The worked example</p>
+      <h2>One change, start to finish</h2>
+      <p class="lede">A piece of ordinary application development, run through the four stages. The
+        account page has to show when a subscription renews.</p>
+
+      <ol class="run">
+        <li>
+          <span class="run__node" aria-hidden="true">1</span>
+          <p class="run__leaf">Context <span class="owner owner--ai">AI</span></p>
+          <p class="run__line">Connected and readable before anyone asks:</p>
+          <ul class="run__chips">
+            <li><span class="chip chip--read">account service repository</span></li>
+            <li><span class="chip chip--read">subscription datasource</span></li>
+            <li><span class="chip chip--read">development logs</span></li>
+            <li><span class="chip chip--read">development environment</span></li>
+            <li><span class="chip chip--read">the running account page</span></li>
+          </ul>
+        </li>
+
+        <li>
+          <span class="run__node" aria-hidden="true">2</span>
+          <p class="run__leaf">Direction <span class="owner owner--human">Human</span></p>
+          <p class="run__said">“Show the renewal date on the account page. Read only the account being
+            looked at, not the whole subscription table. Start in the account service.”</p>
+        </li>
+
+        <li>
+          <span class="run__node" aria-hidden="true">3</span>
+          <p class="run__leaf">Action <span class="owner owner--ai">AI</span></p>
+          <p class="run__line">Reads the account service and finds the renewal date already stored,
+            under a different column name, on a row the account query loads anyway. Then:</p>
+          <ul class="run__chips">
+            <li><span class="chip">reads the column</span></li>
+            <li><span class="chip">adds the field to the account response</span></li>
+            <li><span class="chip">renders it on the page</span></li>
+            <li><span class="chip">writes a test</span></li>
+            <li><span class="chip">runs it in development</span></li>
+          </ul>
+        </li>
+
+        <li>
+          <span class="run__node" aria-hidden="true">4</span>
+          <p class="run__leaf">Success <span class="owner owner--human">Human</span> <span class="owner owner--ai">AI</span></p>
+          <ul class="run__chips">
+            <li><span class="chip chip--ok">date visible on the running page</span></li>
+            <li><span class="chip chip--ok">test fails without the change</span></li>
+            <li><span class="chip chip--ok">still one account row read, not the table</span></li>
+          </ul>
+          <p class="run__line">A human reads the evidence and decides it is enough.</p>
+        </li>
+      </ol>
+
+      <p class="run__loop"><span class="run__loop-mark" aria-hidden="true">↺</span> Back to Context.
+        The context file beside the code records the column name and what the query is allowed to
+        read. The next change to this page starts from there, and it starts there whether this run
+        succeeded or failed.</p>
+
+      <p class="note" style="margin-top:1.6rem">AI will also follow a wrong thread a long way with
+        complete confidence. A human states the outcome, notices the drift early, and decides when the
+        evidence is enough.</p>
     </div>
   </section>
 
@@ -351,299 +490,88 @@
   <section class="band" id="agent">
     <div class="wrap">
       <p class="eyebrow">The agent file</p>
-      <h2>You do not have to learn this. Your agent does.</h2>
-      <p class="lede">Everything above is one file: <code>AGENTS.md</code>. Drop it into a project, point
-        an AI agent at it, and the agent works this way — and explains what it is doing as it goes.</p>
+      <h2>One file, and the agent works this way</h2>
+      <p class="lede">The whole framework is one file: <code>AGENTS.md</code>. Drop it into a project,
+        point an AI agent at it, and the agent runs the cycle — Context, Direction, Action, Success —
+        and explains what it is doing while it does.</p>
 
-      <p>A person reading the docs takes an afternoon to absorb the model. An agent takes one file, and
-        the person learns the loop by watching it run on their own work. That is the intended route in:
-        most people will meet this framework through an agent, not through a specification, because
-        asking is faster and clearer than reading.</p>
+      <p>Reading the docs takes an afternoon. An agent takes one file, and the human learns the stages
+        by watching them run on their own work. That is the intended route in. Most people will meet
+        Clover through an agent rather than through a specification, because asking is faster and
+        clearer than reading.</p>
 
       <div class="tabs" data-tabs="agent">
         <div class="tablist" role="tablist" aria-label="What the agent file does">
           <button class="tab" role="tab" id="ag-t1" aria-controls="ag-p1" aria-selected="true">What it makes an agent do</button>
-          <button class="tab" role="tab" id="ag-t2" aria-controls="ag-p2">What it stops</button>
-          <button class="tab" role="tab" id="ag-t3" aria-controls="ag-p3">How it teaches you</button>
+          <button class="tab" role="tab" id="ag-t2" aria-controls="ag-p2" aria-selected="false">What it stops</button>
+          <button class="tab" role="tab" id="ag-t3" aria-controls="ag-p3" aria-selected="false">How it teaches the human using it</button>
         </div>
 
         <div class="panel is-active" role="tabpanel" id="ag-p1" aria-labelledby="ag-t1" data-panel tabindex="0">
           <dl class="kv">
-            <div><dt>Read first</dt><dd>Find the context file before acting; do not re-derive what is already settled or repeat a dead end someone already ruled out.</dd></div>
-            <div><dt>Reach real evidence</dt><dd>Logs, telemetry, the running system — not assumptions about them, and not a summary written earlier by someone else.</dd></div>
+            <div><dt>Read first</dt><dd>Find the context file before acting. Do not re-derive what is already settled or repeat a dead end someone already ruled out.</dd></div>
+            <div><dt>Reach real evidence</dt><dd>Logs, telemetry, the running system — rather than assumptions about them, or a summary written earlier by someone else.</dd></div>
             <div><dt>Self-check</dt><dd>Test its own work against the known ways AI fails before handing anything back.</dd></div>
-            <div><dt>Say what the proof was</dt><dd>What was checked, what was observed, and where it stopped. No claim larger than the evidence.</dd></div>
-            <div><dt>Write back</dt><dd>Update the context file with what is settled, what remains, and what was ruled out — so the next cycle starts ahead of this one.</dd></div>
+            <div><dt>Say what the evidence was</dt><dd>What was checked, what was observed, and where it stopped. No claim larger than the evidence.</dd></div>
+            <div><dt>Write back</dt><dd>Update the context file with what is settled, what remains, and what was ruled out, so the next cycle starts ahead of this one.</dd></div>
           </dl>
         </div>
 
         <div class="panel" role="tabpanel" id="ag-p2" aria-labelledby="ag-t2" data-panel tabindex="0">
           <dl class="kv">
             <div><dt>Acting beyond its authority</dt><dd>Five things it must refuse outright, and the instruction to say what it refused and why rather than going quiet.</dd></div>
-            <div><dt>Obeying the content it reads</dt><dd>Text found in a ticket, a page or a file is <strong>data, not instruction</strong> — the defence against prompt injection stated as a rule the agent holds itself to.</dd></div>
+            <div><dt>Obeying the content it reads</dt><dd>Text found in a ticket, a page or a file is treated as <strong>data</strong>. The agent never follows instructions embedded in it, which is the defense against prompt injection stated as a rule the agent holds itself to.</dd></div>
             <div><dt>Leaking what it finds</dt><dd>Secrets and personal data encountered mid-task are treated as defects to report, never as material to use or repeat.</dd></div>
-            <div><dt>Dressing up activity as outcome</dt><dd>"I updated six files" is not a result. The hand-back format makes the difference explicit.</dd></div>
-            <div><dt>Retrying a failed fix</dt><dd>When proof fails it returns to Understand, not to Execute. A second attempt needs new understanding, not more determination.</dd></div>
+            <div><dt>Dressing activity up as outcome</dt><dd>"I updated six files" is not a result. The hand-back format makes the difference explicit.</dd></div>
+            <div><dt>Retrying a failed fix</dt><dd>When Success fails it returns to Context. A second attempt needs new information rather than more determination.</dd></div>
           </dl>
         </div>
 
         <div class="panel" role="tabpanel" id="ag-p3" aria-labelledby="ag-t3" data-panel tabindex="0">
-          <p>The file instructs the agent to treat you as the person it is teaching — because for most
-            teams, it is the only teacher this framework will ever have.</p>
+          <p>The file instructs the agent to treat the human in front of it as the one it is
+            teaching, because for most teams that agent is the only teacher this framework will ever
+            have.</p>
           <dl class="kv">
-            <div><dt>Names the stage</dt><dd>"I am still in Understand — I want to see the actual log before proposing a fix." You learn the loop by watching it run.</dd></div>
-            <div><dt>Gives the reason</dt><dd>Every request for access, a success criterion or an approval comes with what it is for. A reason teaches; a bare request just looks like process.</dd></div>
+            <div><dt>Names the stage</dt><dd>"I am still in Context. I want to see the actual log before proposing a fix." The stages get learned by watching them run.</dd></div>
+            <div><dt>Gives the reason</dt><dd>Every request for access, a success standard or an approval comes with what it is for. A reason teaches; a bare request just looks like process.</dd></div>
             <div><dt>Offers to set it up</dt><dd>Proposes the context file and writes the first version, rather than waiting to be asked.</dd></div>
-            <div><dt>Matches you</dt><dd>Explains each step the first time; stops narrating once you know it.</dd></div>
-            <div><dt>Humble, and still honest</dt><dd>Courtesy governs how it says something, never whether it says it. If your direction will not work it says so once, with a better option beside it — then respects the call.</dd></div>
+            <div><dt>Matches the human</dt><dd>Explains each step the first time, and stops narrating once it is familiar.</dd></div>
+            <div><dt>Humble, and still honest</dt><dd>Courtesy governs how it says something, never whether it says it. If the direction will not work it says so once, with a better option beside it, then respects the call.</dd></div>
           </dl>
         </div>
       </div>
 
       <h3 style="margin-top:2rem">Start with it</h3>
-      <p class="note">Pick something small and real — a bug, a recurring exception, a question nobody
-        can answer quickly. Nothing to migrate onto first.</p>
+      <p class="note">Pick something small and real — a defect, a recurring exception, a question
+        nobody can answer quickly. There is nothing to migrate onto first.</p>
 
       <div class="grid grid--3" style="margin-top:1.1rem">
         <div class="card card--flat">
           <h3>1 · Copy the file</h3>
-          <p>Put <code>AGENTS.md</code> in your project and point your agent at it.</p>
+          <p>Put <code>AGENTS.md</code> in the project and point an agent at it.</p>
           <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/AGENTS.md">Get AGENTS.md →</a></p>
         </div>
         <div class="card card--flat">
           <h3>2 · Give it the evidence</h3>
-          <p>Repository, tickets, logs, a non-production environment. Read-only first, one connection
-            at a time, never wider than you can explain.</p>
+          <p>Repository, tickets, logs, a development environment. Read-only first, one connection
+            at a time, never wider than the accountable human can explain.</p>
           <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/orchestration-environment.md#building-one">How to set it up →</a></p>
         </div>
         <div class="card card--flat">
           <h3>3 · Run one real problem</h3>
-          <p>Keep a context file beside the code as you go. That file is what makes the next cycle
-            cheaper than this one.</p>
+          <p>Keep a context file beside the code while the work happens. That file is what makes the
+            next cycle cheaper than this one.</p>
           <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/05-context-engineering.md#where-context-lives">Where context lives →</a></p>
         </div>
       </div>
 
-      <p class="note" style="margin-top:1.2rem">Prefer to run it yourself? The
+      <p class="note" style="margin-top:1.2rem">To run it by hand instead, the
         <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/QUICKSTART.md">quickstart</a>
-        walks a first cycle by hand, the
+        walks a first cycle through, the
         <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/templates/orchestration-brief.md">orchestration brief</a>
-        is a one-page working artifact for all six stages, and the
-        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/tree/main/examples/production-exception-remediation">worked example</a>
-        runs a production <code>500</code> through the loop.</p>
-
-      <div class="pull"><p>Don't optimize for AI activity. Optimize for outcomes — through context,
-        focus, ownership, evidence, and learning.</p></div>
-    </div>
-  </section>
-
-  <!-- ============ WALKTHROUGH ============ -->
-  <section class="band band--soft" id="walkthrough">
-    <div class="wrap">
-      <p class="eyebrow">What it looks like in practice</p>
-      <h2>One real problem, start to finish.</h2>
-      <p class="lede">New listings stopped appearing after a data load. The investigation had already
-        run overnight without finding it. The team that built the synchronization had left the company,
-        and the mapping involved was far too large for anyone to have written down.</p>
-
-      <p>This is the ordinary shape of hard work: the knowledge was never missing, it was just no
-        longer reachable without the person who held it. Here is the whole cycle on that problem, and
-        why each piece of access earns its place.</p>
-
-      <h3 style="margin-top:1.8rem">What it reads, and what each thing answers</h3>
-      <dl class="kv" style="margin-top:0.9rem">
-        <div><dt>The repository</dt><dd>Where the sync is <em>actually</em> implemented, which is rarely where the documentation says it is.</dd></div>
-        <div><dt>Work tracking</dt><dd>What changed recently, and what the overnight investigation already ruled out — so none of it is repeated.</dd></div>
-        <div><dt>Logs and telemetry</dt><dd>Which step ran, which returned nothing, and which failed quietly without raising anything.</dd></div>
-        <div><dt>The datastore</dt><dd>What the data looks like right now, rather than what the schema implies it should look like.</dd></div>
-        <div><dt>A non-production environment</dt><dd>Somewhere to reproduce the behavior without touching a customer.</dd></div>
-        <div><dt>The running application</dt><dd>What the customer is actually seeing, which is where the whole thing started.</dd></div>
-      </dl>
-      <p class="note" style="margin-top:0.9rem">None of that is exotic. It is the same evidence an
-        experienced engineer would open, in roughly the same order. What changes is that it can be read
-        together, in one pass, by something that has not been away from this area for two years.</p>
-
-      <h3 style="margin-top:2rem">The cycle, and who holds what</h3>
-      <dl class="kv" style="margin-top:0.9rem">
-        <div><dt>Opportunity</dt><dd><span class="owner owner--human">Human</span> Says what a good outcome is: <em>listings appear again after a load</em> — not "go and look at the sync job." Naming the outcome instead of the task is what stops the work drifting into activity.</dd></div>
-        <div><dt>Understand</dt><dd><span class="owner owner--ai">AI</span> Works backwards from the customer-visible symptom through the application, the logs and the data to the source. This is the part that used to require the person who left.</dd></div>
-        <div><dt>Plan</dt><dd><span class="owner owner--human">Human</span> The cause turns out to be a single misconfigured flag between ingestion and the database. Decide the smallest change that fixes it, and who approves it.</dd></div>
-        <div><dt>Execute</dt><dd><span class="owner owner--ai">AI</span> Makes the change and raises it through the review and deployment path the team already uses. No new tooling, no separate route to production.</dd></div>
-        <div><dt>Proof</dt><dd><span class="owner owner--human">Human</span> Listings appear after the next load, and keep appearing. The original signal is gone and stays gone — the human decides when that is genuinely enough.</dd></div>
-        <div><dt>Grow</dt><dd>The reconstructed flow is written down beside the code. The next person to touch this does not need the original authors either, and does not start from nothing.</dd></div>
-      </dl>
-
-      <h3 style="margin-top:2rem">Where the human actually matters</h3>
-      <p>AI does the reading, the reconstruction, the drafting and much of the checking. It will also,
-        with total confidence, follow a wrong thread a long way — proposing a fix for the step that
-        merely <em>looks</em> broken, or declaring success because a job now completes without error
-        while the listings still are not there.</p>
-      <p>So the job changes rather than disappears. <strong>State the outcome</strong> so there is
-        something to diverge from. <strong>Notice the divergence early</strong>, while it is one wrong
-        assumption instead of a day of work built on it. <strong>Hold the approvals</strong> wherever a
-        mistake would be expensive. And <strong>decide when the evidence is actually enough</strong> —
-        that judgment is not delegable, because only a person carries the consequence of getting it
-        wrong.</p>
-
-      <div class="pull"><p>You stop doing the retrieval and start doing the direction. The work gets
-        clearer, not more automatic.</p></div>
-    </div>
-  </section>
-
-  <!-- ============ HOW AI FAILS ============ -->
-  <section class="band" id="failures">
-    <div class="wrap">
-      <p class="eyebrow">How AI fails</p>
-      <h2>AI fails fluently. That is the whole problem.</h2>
-      <p class="lede">A script fails loudly. A person usually knows when they are unsure. AI often
-        produces a confident, well-structured, entirely plausible answer that happens to be wrong.
-        Each failure below has a stage designed to catch it.</p>
-
-      <div class="tabs" data-tabs="failures">
-        <div class="tablist" role="tablist" aria-label="AI failure modes">
-          <button class="tab" role="tab" id="fm-t1" aria-controls="fm-p1" aria-selected="true">Confident fabrication</button>
-          <button class="tab" role="tab" id="fm-t2" aria-controls="fm-p2">Plausible wrong cause</button>
-          <button class="tab" role="tab" id="fm-t3" aria-controls="fm-p3">Silent context loss</button>
-          <button class="tab" role="tab" id="fm-t4" aria-controls="fm-p4">Unverified success</button>
-          <button class="tab" role="tab" id="fm-t5" aria-controls="fm-p5">Agreement, not judgment</button>
-          <button class="tab" role="tab" id="fm-t6" aria-controls="fm-p6">Thrashing</button>
-          <button class="tab" role="tab" id="fm-t7" aria-controls="fm-p7">Motion as progress</button>
-          <button class="tab" role="tab" id="fm-t8" aria-controls="fm-p8">Learning from noise</button>
-        </div>
-
-        <div class="panel is-active" role="tabpanel" id="fm-p1" aria-labelledby="fm-t1" data-panel tabindex="0">
-          <h3>Confident fabrication</h3>
-          <p><strong>Looks like:</strong> a file path, function, API, config key, or citation that does not exist — described in the same tone as everything that does.</p>
-          <p><strong>Why:</strong> generating a plausible sequence and retrieving a true fact are not the same operation, and nothing in the output tells them apart.</p>
-          <p class="note">A useful check: search for the exact string that was cited. If it appears nowhere, it was invented.</p>
-          <p><button class="chip chip-btn" data-goto-stage="understand">Caught by → Understand</button></p>
-        </div>
-        <div class="panel" role="tabpanel" id="fm-p2" aria-labelledby="fm-t2" data-panel tabindex="0">
-          <h3>A plausible root cause that is not the root cause</h3>
-          <p><strong>Looks like:</strong> a confident, internally consistent explanation that fits the symptom and is wrong. The fix that follows is well-built and does nothing.</p>
-          <p><strong>Why:</strong> AI is very good at constructing a coherent narrative from partial evidence — which is precisely what a wrong diagnosis is.</p>
-          <p class="note">Require the diagnosis to predict something checkable. A fix you cannot explain is not a fix.</p>
-          <p><button class="chip chip-btn" data-goto-stage="understand">Caught by → Understand</button>
-             <button class="chip chip-btn" data-goto-stage="proof">and Proof</button></p>
-        </div>
-        <div class="panel" role="tabpanel" id="fm-p3" aria-labelledby="fm-t3" data-panel tabindex="0">
-          <h3>Silent context loss</h3>
-          <p><strong>Looks like:</strong> constraints you supplied earlier quietly stop being honored partway through a long session.</p>
-          <p><strong>Why:</strong> context windows are finite. When earlier material falls out, nothing announces it — the work simply continues without it.</p>
-          <p class="note">Put durable constraints somewhere durable: the brief, the repo, the ticket. Not only the conversation.</p>
-          <p><button class="chip chip-btn" data-goto-stage="plan">Caught by → Plan</button></p>
-        </div>
-        <div class="panel" role="tabpanel" id="fm-p4" aria-labelledby="fm-t4" data-panel tabindex="0">
-          <h3>Reported success that was never verified</h3>
-          <p><strong>Looks like:</strong> "fixed and verified" — when nothing was run, or something adjacent was run and the result assumed.</p>
-          <p><strong>Why:</strong> describing a completed task and completing it are, to a language model, similar acts.</p>
-          <p class="note">Require the artifact, not the claim: the failing-then-passing test, the command output, the measurement.</p>
-          <p><button class="chip chip-btn" data-goto-stage="proof">Caught by → Proof</button></p>
-        </div>
-        <div class="panel" role="tabpanel" id="fm-p5" aria-labelledby="fm-t5" data-panel tabindex="0">
-          <h3>Agreement instead of judgment</h3>
-          <p><strong>Looks like:</strong> you propose a theory and AI elaborates convincingly. You propose the opposite and it elaborates just as convincingly.</p>
-          <p><strong>Why:</strong> models are trained to be helpful and agreeable, and a stated human hypothesis is strong context.</p>
-          <p class="note">Ask for the evidence against your theory, and for the alternatives that were rejected.</p>
-          <p><button class="chip chip-btn" data-goto-stage="understand">Caught by → Understand</button></p>
-        </div>
-        <div class="panel" role="tabpanel" id="fm-p6" aria-labelledby="fm-t6" data-panel tabindex="0">
-          <h3>Thrashing</h3>
-          <p><strong>Looks like:</strong> repeated attempted fixes, each confident, none working. Activity rises; progress does not.</p>
-          <p><strong>Why:</strong> without sufficient understanding every attempt is a guess — and a fast tool can generate guesses indefinitely.</p>
-          <p class="note">Treat the second failed fix as the signal to stop fixing and return to understanding.</p>
-          <p><button class="chip chip-btn" data-goto-stage="understand">Caught by → Understand</button></p>
-        </div>
-        <div class="panel" role="tabpanel" id="fm-p7" aria-labelledby="fm-t7" data-panel tabindex="0">
-          <h3>Motion mistaken for progress</h3>
-          <p><strong>Looks like:</strong> many tasks running in parallel, a great deal of output, and few proven outcomes.</p>
-          <p><strong>Why:</strong> AI removes the effort cost of starting work, but not the attention cost of directing it. Human attention stays the scarce resource.</p>
-          <p><button class="chip chip-btn" data-goto-stage="plan">Caught by → Plan</button>
-             <button class="chip chip-btn" data-goto-stage="proof">and Proof</button></p>
-        </div>
-        <div class="panel" role="tabpanel" id="fm-p8" aria-labelledby="fm-t8" data-panel tabindex="0">
-          <h3>Learning from unvalidated output</h3>
-          <p><strong>Looks like:</strong> a wrong conclusion is written into documentation or memory, and every later cycle starts from it. The error compounds instead of being corrected.</p>
-          <p><strong>Why:</strong> systems that accumulate context do not automatically distinguish what was proven from what was merely produced.</p>
-          <p class="note">Only validated experience should become durable expertise. One execution is an anecdote, not a pattern.</p>
-          <p><button class="chip chip-btn" data-goto-stage="grow">Caught by → Grow</button></p>
-        </div>
-      </div>
-
-      <p class="note" style="margin-top:1.2rem">Every one of these is caught by evidence rather than by
-        better prompting — the discipline around the model matters more than the model.
-        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/how-ai-fails.md">Read the full page →</a></p>
-    </div>
-  </section>
-
-  <!-- ============ CONTEXT & EXPERTISE ============ -->
-  <section class="band band--soft" id="context">
-    <div class="wrap">
-      <p class="eyebrow">Why cycles compound</p>
-      <h2>Experience is not expertise.</h2>
-      <p class="lede">This is the difference between a workflow that repeats and a system that
-        improves — and the reason Grow is a stage rather than a retrospective.</p>
-
-      <div class="grid grid--2" style="margin-top:1.4rem">
-        <div class="card">
-          <h3>Experience</h3>
-          <p>What was learned from one specific execution — what was tried, the relevant context, the
-            evidence observed, and the outcome.</p>
-        </div>
-        <div class="card">
-          <h3>Expertise</h3>
-          <p>The reusable pattern that emerges from <strong>multiple validated</strong> experiences.
-            A single execution should not automatically become expertise.</p>
-        </div>
-      </div>
-
-      <ol class="chain" style="margin-top:1.6rem" aria-label="How experience becomes expertise">
-        <li><b>Execute</b></li><li><b>Experience</b></li><li><b>Validation</b></li>
-        <li><b>Pattern</b></li><li><b>Expertise</b></li><li><b>Better context</b></li>
-      </ol>
-
-      <div class="pull"><p>Execute produces experience. Grow turns validated experience into expertise.</p></div>
-
-      <h3 style="margin-top:2rem">What counts as context</h3>
-      <p>Repositories · architecture · telemetry · business rules · dependencies · historical
-        incidents · documentation · organizational knowledge.</p>
-      <p class="note">Do not collect everything. Collect what is necessary to make a sound decision.
-        Context can accumulate at whatever boundary makes sense — an individual, a team, an
-        organization, or another defined scope.</p>
-    </div>
-  </section>
-
-  <!-- ============ OWNERSHIP ============ -->
-  <section class="band" id="ownership">
-    <div class="wrap">
-      <p class="eyebrow">Humans and AI</p>
-      <h2>Humans do not disappear. Their responsibility moves.</h2>
-
-      <div class="grid grid--2" style="margin-top:1.4rem">
-        <div class="card">
-          <h3>Today</h3>
-          <p><span class="owner owner--human">Human</span></p>
-          <p>Goal · constraints · path · decisions</p>
-          <p style="margin-top:0.7rem"><span class="owner owner--ai">AI</span></p>
-          <p>Assistance · execution</p>
-        </div>
-        <div class="card">
-          <h3>The direction</h3>
-          <p><span class="owner owner--human">Human</span></p>
-          <p>Objective · constraints · authority · risk boundaries · success criteria</p>
-          <p style="margin-top:0.7rem"><span class="owner owner--ai">AI</span></p>
-          <p>Context gathering · planning · execution · observation · adaptation</p>
-        </div>
-      </div>
-
-      <p style="margin-top:1.4rem">AI can do the work; people stay accountable for risk, governance,
-        and decisions that need human judgment. Automation should make responsibility
-        <strong>clearer</strong>, not fuzzier.</p>
-
-      <p>You move from the first column toward the second by earning it, per context rather than
-        globally. Widen what AI decides where the results have held up; keep human approval wherever a
-        mistake is expensive or hard to reverse; and take the scope back when the results stop holding.
-        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/08-governance.md">How much autonomy to grant →</a></p>
+        is a one-page working artifact for the four stages, and the
+        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/tree/main/examples/production-exception-remediation">example in the repository</a>
+        runs a recurring <code>500</code> through the cycle.</p>
     </div>
   </section>
 
@@ -651,29 +579,29 @@
   <section class="band band--soft" id="security">
     <div class="wrap">
       <p class="eyebrow">Security and governance</p>
-      <h2>Nothing new is granted. Everything is traceable.</h2>
+      <h2>What a security review will actually ask</h2>
       <p class="lede">Most security conversations about AI get stuck because nobody has separated
-        three different things: what is actually happening, what you have to do about it, and what
+        three different things: what is actually happening, what has to be done about it, and what
         genuinely is not solved yet. Taken separately, each one is manageable.</p>
 
       <h3 style="margin-top:2rem">What is actually happening</h3>
       <dl class="kv" style="margin-top:0.9rem">
-        <div><dt>No new access</dt><dd>AI acts inside the access a named person already holds. If they cannot reach a system, neither can AI acting for them. There is no new credential, no new path into your systems, and no new access model to approve.</dd></div>
+        <div><dt>No new access</dt><dd>AI acts inside the access a named human already holds. If they cannot reach a system, neither can AI acting for them. There is no new credential, no new path into your systems, and no new access to approve.</dd></div>
         <div><dt>No new controls</dt><dd>Data classification, credential policy, retention rules and regulatory constraints all apply exactly as they did. Your own security team decides, and if the answer is no, it is no.</dd></div>
-        <div><dt>One real change</dt><dd>The layer can read across code, tickets, logs and data <em>at once</em> — which no one person practically could. Every individual read was already permitted; the aggregation is what is new. Treat the layer itself as a sensitive asset.</dd></div>
+        <div><dt>One real change</dt><dd>The layer can read across code, tickets, logs and data <em>at once</em> — which no one human practically could. Every individual read was already permitted; the aggregation is what is new. Treat the layer itself as a sensitive asset.</dd></div>
       </dl>
 
       <h3 style="margin-top:2rem">What needs to happen</h3>
-      <dl class="stack">
+      <dl class="stack stack--2">
         <div>
           <dt>Inherit access, never expand it</dt>
-          <dd>Read-only by default, one connection at a time, never wider than you can explain to
-            someone who will ask.</dd>
+          <dd>Read-only by default, one connection at a time, never wider than the accountable human
+            can explain to someone who will ask.</dd>
         </div>
         <div>
           <dt>Give every action a named owner</dt>
           <dd>No shared or anonymous identity. A dedicated identity scoped to the task and owned by a
-            named person keeps accountability without carrying that person's entire access footprint.</dd>
+            named human keeps accountability without carrying that human's entire access footprint.</dd>
         </div>
         <div>
           <dt>Treat what it reads as data, not instruction</dt>
@@ -686,42 +614,43 @@
           <dd>Credentials in repositories and personal data in logs get rotated, redacted or removed —
             not noted in a ticket and left there.</dd>
         </div>
-        <div>
-          <dt>Monitor the agent, not just the gate</dt>
-          <dd>The one thing on this list most teams have not built. Details below.</dd>
-        </div>
       </dl>
 
-      <h3 style="margin-top:2rem">"But there are secrets in our code"</h3>
-      <p>This is the most common objection, and usually the most revealing one. Credentials in the
-        repository. Personal data in the logs. An access path nobody has reviewed since the person who
-        built it left.</p>
-      <p>Every one of those is a true statement about <strong>your systems</strong>, not about AI. That
-        credential is already readable by everyone with repository access, every contractor who ever
-        cloned it, and anyone who finds an old laptop. The exposure existed before the agent and
-        survives the decision not to use one.</p>
-      <p>Declining to use AI does not remove the risk. It removes the thing most likely to find it. An
-        agent reading across a codebase surfaces hardcoded secrets, unredacted logs and forgotten
-        access paths considerably faster than the audit that keeps getting rescheduled. Rotate the
-        credential, redact the log, close the path — and the objection has disappeared while the system
-        has genuinely got safer.</p>
+      <div class="grid grid--2" style="margin-top:2rem">
+        <div>
+          <h3 style="margin-top:0">"But there are secrets in our code"</h3>
+          <p>This is the most common objection, and usually the most revealing one. Credentials in the
+            repository. Personal data in the logs. An access path nobody has reviewed since whoever built
+            it left.</p>
+          <p>Every one of those is a true statement about <strong>the systems</strong>, rather than about
+            AI. That credential is already readable by everyone with repository access, every contractor
+            who ever cloned it, and anyone who finds an old laptop. The exposure existed before the agent
+            and survives the decision not to use one.</p>
+          <p>Declining to use AI does not remove the risk. It removes the thing most likely to find it. An
+            agent reading across a codebase surfaces hardcoded secrets, unredacted logs and forgotten
+            access paths considerably faster than the audit that keeps getting rescheduled. Rotate the
+            credential, redact the log, close the path, and the objection has disappeared while the system
+            has genuinely got safer.</p>
+        </div>
 
-      <div class="pull"><p>The dangerous thing is not an agent reading a secret. It is a secret sitting
-        there unread for three years.</p></div>
+        <div>
+          <h3 style="margin-top:0">Monitor the agents, not just the gate</h3>
+          <p>This is the fifth thing on that list, and the one most teams have not built. Approval gates
+            stop the largest mistakes before they happen. Attribution explains them afterwards. Neither
+            notices an agent doing something unintended <em>inside access it legitimately holds</em> — and
+            that is where the real risk sits.</p>
+          <p>So the primary recommendation is monitoring built for agent behavior: record every system an
+            agent touched, compare what it did against what it was asked to do, and raise an alert when it
+            reaches outside the scope of the task. A repository unrelated to the ticket. A table it had no
+            reason to query. A write where it was granted read.</p>
+          <p class="note">Stated honestly: tooling for this barely exists yet, here or anywhere. Most teams
+            will have to assemble a first version from access logs and audit trails they already collect.
+            It is still the highest-value control to build, because it is the only one that operates
+            <em>while</em> the agent is working rather than before or after. Until it exists, this depends
+            on a human paying attention — and attention scales worse than access does.</p>
+        </div>
+      </div>
 
-      <h3 style="margin-top:1.8rem">The thing worth building: monitor the agents</h3>
-      <p>Approval gates stop the largest mistakes before they happen. Attribution explains them
-        afterwards. Neither notices an agent doing something unintended <em>inside access it
-        legitimately holds</em> — and that is where the real risk sits.</p>
-      <p>So the primary recommendation is monitoring built for agent behavior: record every system an
-        agent touched, compare what it did against what it was asked to do, and raise an alert when it
-        reaches outside the scope of the task. A repository unrelated to the ticket. A table it had no
-        reason to query. A write where it was granted read.</p>
-      <p class="note">Stated honestly: tooling for this barely exists yet, here or anywhere. Most teams
-        will have to assemble a first version from access logs and audit trails they already collect.
-        It is still the highest-value control to build, because it is the only one that operates
-        <em>while</em> the agent is working rather than before or after. Until it exists, this depends
-        on a human paying attention — and attention scales worse than access does.</p>
       <p class="note"><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/08-governance.md#questions-your-security-team-will-ask">Every question a security review will ask →</a></p>
     </div>
   </section>
@@ -730,63 +659,93 @@
   <section class="band" id="evidence">
     <div class="wrap">
       <p class="eyebrow">Evidence</p>
-      <h2>Real work.</h2>
+      <h2>Production case studies and reference implementations</h2>
       <p class="lede">Two delivered outcomes and three patterns in use. Each one says where it
         stopped.</p>
+
+      <p>Success means the real environment demonstrated the intended outcome, so each entry below
+        states what was checked, what was observed, and where the work stopped. Stopping early is
+        normal and often correct. The damage comes from describing weak evidence in the language of
+        strong evidence, so "validated in the test environment, not yet observed in production" is
+        written out in full rather than rounded up.</p>
 
       <div class="tabs" data-tabs="evidence">
         <div class="tablist" role="tablist" aria-label="Evidence">
           <button class="tab" role="tab" id="ev-t1" aria-controls="ev-p1" aria-selected="true">Contentful API migration</button>
-          <button class="tab" role="tab" id="ev-t2" aria-controls="ev-p2">React memory leak</button>
-          <button class="tab" role="tab" id="ev-t3" aria-controls="ev-p3">Reference implementations</button>
+          <button class="tab" role="tab" id="ev-t2" aria-controls="ev-p2" aria-selected="false">React memory leak</button>
+          <button class="tab" role="tab" id="ev-t3" aria-controls="ev-p3" aria-selected="false">Reference implementations</button>
         </div>
 
         <div class="panel is-active" role="tabpanel" id="ev-p1" aria-labelledby="ev-t1" data-panel tabindex="0">
           <h3>Contentful API migration</h3>
-          <p>A CMS content API rewritten from a GraphQL integration to REST, and from .NET 9 MVC to
-            .NET 10 Minimal APIs — with every route, JSON shape, and response envelope preserved so
-            no consumer had to change.</p>
-          <p>A manual rewrite was estimated at 8–10 weeks of team effort. With AI carrying most of the
-            implementation under close human direction, the <strong>execution took about a day</strong>,
-            and the result was parity-validated byte-for-byte against live traffic. Both versions ran
-            in the test environment with the API gateway pointing at the new one, so <strong>QA signed
-            off against the real site</strong>, not just matching JSON. The production cutover has not
-            yet run.</p>
-          <p class="note">That day is execution only. Testing and validation took roughly another day,
-            and stakeholder agreement longer still — the work was not continuous. Comparing one day
-            against a ten-week estimate that included analysis and coordination would overstate it.</p>
-          <p class="note">The point is not who wrote the code. It is how much AI lowered the barrier to
-            attempting the work at all.</p>
-          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/case-studies/01-contentful-migration.md">Read the case study →</a></p>
+          <div class="panel__cols">
+            <div>
+              <p>A CMS content API rewritten from a GraphQL integration to REST, and from .NET 9 MVC to
+                .NET 10 Minimal APIs, with every route, JSON shape, and response envelope preserved so no
+                consumer had to change.</p>
+              <p>A manual rewrite was estimated at 8–10 weeks of team effort. With AI carrying most of the
+                implementation under close human direction, the <strong>implementation took about a
+                day</strong>. Parity was checked across 36 endpoint cases: 34 matched exactly and 2 were
+                signed-off deviations, alongside 239 tests. Both versions ran in the test environment with
+                the API gateway pointing at the new one, so <strong>QA validated the real site and signed
+                off</strong>. The production cutover has not run.</p>
+              <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/case-studies/01-contentful-migration.md">Read the case study →</a></p>
+            </div>
+            <div>
+              <p class="note">That day is implementation only. Testing and parity validation took roughly
+                another day, and stakeholder agreement longer still, and the work was not continuous.
+                Comparing one day against a ten-week estimate that included analysis and coordination
+                would overstate it.</p>
+              <p class="note">Performance was measured locally, two processes on one machine, and never on
+                deployed infrastructure. The gains came from the architecture rather than from AI.</p>
+              <p class="note">What matters here is how much AI lowered the barrier to attempting the work
+                at all, rather than who wrote the code.</p>
+            </div>
+          </div>
         </div>
 
         <div class="panel" role="tabpanel" id="ev-p2" aria-labelledby="ev-t2" data-panel tabindex="0">
-          <h3>A React Server Components memory leak, fixed upstream</h3>
-          <p>A production application was crashing with out-of-memory errors. A blunt Node flag stopped
-            the growth and stabilized production — but also stripped error-stack detail everywhere.</p>
-          <p>The investigation continued past the workaround, traced the retention mechanism into
-            React's <code>react-server</code> renderer, and produced a one-file fix contributed
-            upstream so other applications need not carry the same workaround.</p>
-          <p class="case__status">Status: a CI-green pull request <strong>awaiting maintainer review — not yet merged</strong>.</p>
-          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/case-studies/02-react-rsc-memory-leak.md">Read the case study →</a></p>
+          <h3>A React Server Components memory leak, traced upstream</h3>
+          <div class="panel__cols">
+            <div>
+              <p>A production application was crashing with out-of-memory errors. A blunt Node flag stopped
+                the growth and stabilized production, and it also stripped error-stack detail everywhere.
+                The mitigation was validated on a fleet running the same image: 113 restarts without the
+                flag, zero with it, over about six and a half hours.</p>
+            </div>
+            <div>
+              <p>The investigation continued past the workaround, traced the retention mechanism into
+                React's <code>react-server</code> renderer, and produced a one-file fix contributed
+                upstream so other applications need not carry the same workaround.</p>
+              <p class="case__status">Status: a CI-green pull request, <strong>not merged</strong>.</p>
+              <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/case-studies/02-react-rsc-memory-leak.md">Read the case study →</a></p>
+            </div>
+          </div>
         </div>
 
         <div class="panel" role="tabpanel" id="ev-p3" aria-labelledby="ev-t3" data-panel tabindex="0">
           <h3>Built and used against real organizational data</h3>
-          <p>Cross-team knowledge access, production exception remediation, and multi-repository
-            defect remediation.</p>
-          <p>Knowledge access has answered <strong>real production and support incidents</strong>,
-            including a data-synchronization failure that had survived an overnight investigation after
-            the owning team had gone. The remediation patterns have run on real work through existing
-            review and deployment approvals. None is an always-on capability or adopted
-            organization-wide, and each still depends on a human providing the map and holding the
-            approvals.</p>
-          <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/reference-implementations.md">Read the reference implementations →</a></p>
+          <div class="panel__cols">
+            <div>
+              <p>Cross-team knowledge access, production exception remediation, and multi-repository
+                defect remediation.</p>
+              <p>Knowledge access has answered <strong>real production and support incidents</strong>,
+                including a data-synchronization failure that had survived an overnight investigation after
+                the owning team had gone.</p>
+            </div>
+            <div>
+              <p>The remediation patterns have run on real work through existing review and deployment
+                approvals. None is an always-on capability or adopted organization-wide, and each still
+                depends on a human providing the map and holding the approvals.</p>
+              <p><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/reference-implementations.md">Read the reference implementations →</a></p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="pull"><p>A workaround resolves an incident. Understanding the root cause can resolve a class of problems.</p></div>
-      <p class="note"><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/field-practices.md">Practices &amp; field lessons →</a></p>
+      <p class="note" style="margin-top:1.4rem">A workaround resolves an incident, and understanding
+        the root cause can resolve a class of problems.
+        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/field-practices.md">Practices and field lessons →</a></p>
     </div>
   </section>
 
@@ -794,40 +753,63 @@
   <section class="band band--soft" id="scope">
     <div class="wrap">
       <p class="eyebrow">Scope</p>
-      <h2>What it is not.</h2>
+      <h2>What it is not</h2>
       <dl class="stack stack--2">
         <div><dt>Not software</dt><dd>There is nothing to install. It is a way of working.</dd></div>
-        <div><dt>Not a platform to migrate onto</dt><dd>It is a layer above the systems you already run. Adoption is incremental, and if you stop, what is underneath is unchanged.</dd></div>
-        <div><dt>Not a replacement for how you already work</dt><dd>It sits alongside Agile, incident management, or whatever your team already uses.</dd></div>
-        <div><dt>Not about model or tool selection</dt><dd>It does not tell you which AI to use, and it does not cover cost, evaluations, data governance, or security review.</dd></div>
-        <div><dt>Not a runtime</dt><dd>Agent frameworks, workflow engines and tool protocols are choices that sit inside it, not competitors to it.</dd></div>
-        <div><dt>Not needed for everything</dt><dd>Trivial or throwaway work does not need a lifecycle. Use it where being wrong actually costs something.</dd></div>
+        <div><dt>Not a platform to migrate onto</dt><dd>It is a layer above the systems a team already runs. Adoption is incremental, and if a team stops, what is underneath is unchanged.</dd></div>
+        <div><dt>Not a replacement for how a team already works</dt><dd>It sits alongside Agile, incident management, or whatever is already in place.</dd></div>
+        <div><dt>Not about tool selection</dt><dd>It does not say which AI to use, and it does not cover cost, evaluations, data governance, or security review.</dd></div>
+        <div><dt>Not a runtime</dt><dd>Agent frameworks, workflow engines and tool protocols are choices that sit inside it, rather than competitors to it.</dd></div>
+        <div><dt>Not needed for everything</dt><dd>Trivial or throwaway work does not need a cycle. It is worth the effort where being wrong actually costs something.</dd></div>
       </dl>
       <p class="note" style="margin-top:1.3rem">It is also not an LLM framework, an agent SDK, or a
-        prompt library — and it makes no claim that unrestricted autonomous AI exists today.</p>
-      <p class="note">Separately, and clearly labelled as such, the repository carries
-        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/hypothesis/ai-future.md">The AI Future</a>
-        — a speculative hypothesis about competitive pressure and autonomy. It is a thought
-        experiment, not a prediction, and it is <strong>not part of the framework</strong>.</p>
+        prompt library, and it makes no claim that unrestricted autonomous AI exists today.</p>
+      <p class="note">The four stages are not software-specific either. The same cycle is intended to
+        apply across DevOps, quality assurance, security operations, product management, finance,
+        human resources, and business operations. The vocabulary changes and the cycle does not.</p>
     </div>
   </section>
 
-  <!-- ============ AUTHOR ============ -->
-  <section class="band" id="author">
+  <!-- ============ THE QUESTION ============ -->
+  <section class="band" id="question">
     <div class="wrap">
-      <p class="eyebrow">About the author</p>
-      <h2>Written by a practitioner, from delivery work.</h2>
-      <p class="lede">Santhosh Narayanan is an AI Orchestration Architect with a decade in enterprise
-        software architecture — platform modernization, distributed systems, and API design. This
-        framework is the operating model behind that work, published so that it does not stay with
-        one person.</p>
-      <p>Every claim on this site states plainly what has been proven and what has not, including the
-        work that is still unfinished. That is deliberate: a framework about proving outcomes
-        should be held to its own standard first.</p>
-      <p><a href="https://santhoshsathish94.github.io/professional-profile/">Résumé</a> ·
-        <a href="https://santhoshsathish94.github.io/professional-profile/work/">Selected work</a> ·
-        <a href="https://www.linkedin.com/in/santhosh-narayanan-link/">LinkedIn</a> ·
-        <a href="https://github.com/santhoshsathish94">GitHub</a></p>
+      <p class="eyebrow">The question to leave with</p>
+      <h2>The unknown clover</h2>
+
+      <div class="arc">
+        <figure class="arc__mark">
+          <svg class="clover clover--mark clover--ink" viewBox="-30 -18 160 117" role="img"
+               aria-label="A five-leaf clover, drawn solid in black and unlabeled.">
+            <path class="clover__stem" d="M50 48C50 66 50 78 50 92"/>
+            <use class="clover__leaf" href="#clover-leaf"/>
+            <use class="clover__leaf" href="#clover-leaf" transform="rotate(72 50 44)"/>
+            <use class="clover__leaf" href="#clover-leaf" transform="rotate(144 50 44)"/>
+            <use class="clover__leaf" href="#clover-leaf" transform="rotate(216 50 44)"/>
+            <use class="clover__leaf" href="#clover-leaf" transform="rotate(288 50 44)"/>
+          </svg>
+          <figcaption>the unknown clover</figcaption>
+        </figure>
+
+        <div class="arc__body">
+          <p>AI already works across more fields than any one of us can. It is not one system,
+            either. Several companies are each building their own, and every one of them gets
+            better.</p>
+          <p>Those systems already reach each other. One reads what another produced. One evaluates,
+            trains or calls another. That traffic is growing, and the data and expertise behind it
+            passed what a human can hold some time ago. Nothing has to coordinate deliberately for
+            the result to stop being legible to us.</p>
+          <p>What none of them has yet is a purpose of their own that lasts. Nothing carries what it
+            learned yesterday into today and decides what is worth doing next. That is the piece that
+            is missing, and it is the piece worth watching.</p>
+        </div>
+      </div>
+
+      <p class="ask__q">With everything AI can already do, how much more growth do we seek — and in
+        the progress of growth, who stays in control?</p>
+
+      <p class="note">This question is followed further in the repository, kept separate from the
+        engineering material:
+        <a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/hypothesis/ai-future.md">The AI Future →</a></p>
     </div>
   </section>
 
@@ -841,7 +823,7 @@
         <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/01-problem.md">The problem</a></li>
         <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/02-philosophy.md">Philosophy</a></li>
         <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/03-principles.md">Principles</a></li>
-        <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/04-framework.md">Orchestration model</a></li>
+        <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/04-framework.md">The framework</a></li>
         <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/orchestration-environment.md">The orchestration environment</a></li>
         <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/docs/reference-implementations.md">Reference implementations</a></li>
       </ul>
@@ -871,14 +853,14 @@
         <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework">GitHub repository</a></li>
         <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/CONTRIBUTING.md">Contributing</a></li>
         <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/CHANGELOG.md">Changelog</a></li>
-        <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/LICENSE">Licence</a></li>
+        <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework/blob/main/LICENSE">License</a></li>
       </ul>
     </div>
   </div>
   <div class="wrap site-foot__end">
-    <p style="max-width:none">The website explains; the repository documents. Built from real-world
-      engineering experience and continuously evolving through evidence-based case studies.
-      An open, feedback-driven project by <a href="#author">Santhosh Narayanan</a>.</p>
+    <p style="max-width:none">The website explains; the repository documents. Built from real
+      delivery work and still changing as the evidence does. An open, feedback-driven project by
+      <a href="author/">Santhosh Narayanan</a>.</p>
   </div>
 </footer>
 

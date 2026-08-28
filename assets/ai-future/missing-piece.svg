@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img" aria-labelledby="mp-title mp-desc" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="mp-title">What does not carry across sessions</title>
+  <desc id="mp-desc">Three panels in a row, each one a session that runs Context, Direction, Action and Success and then ends. Between the panels the connecting line is broken and marked with a cross, showing that what a session learned does not reach the next one. Below, three items name what would have to persist: continual learning after deployment, credit assignment over long horizons, and goals that outlast a single session.</desc>
+
+  <rect width="1200" height="520" fill="#ffffff"/>
+
+  <text x="90" y="62" font-size="27" font-weight="700" fill="#14181d">What a session learns ends with the session</text>
+  <text x="90" y="98" font-size="20" fill="#66717e">Each run starts from whatever a human hands it.</text>
+
+  <g stroke="#7fb8b0" stroke-width="3" stroke-dasharray="8 8">
+    <path d="M370 220H470"/>
+    <path d="M730 220H830"/>
+  </g>
+  <g fill="#ffffff" stroke="#cfd6de" stroke-width="2">
+    <circle cx="420" cy="220" r="16"/>
+    <circle cx="780" cy="220" r="16"/>
+  </g>
+  <g stroke="#66717e" stroke-width="3" stroke-linecap="round">
+    <path d="M413 213l14 14M427 213l-14 14"/>
+    <path d="M773 213l14 14M787 213l-14 14"/>
+  </g>
+
+  <g fill="#f6f8fa" stroke="#cfd6de" stroke-width="2">
+    <rect x="90" y="140" width="280" height="160" rx="14"/>
+    <rect x="450" y="140" width="280" height="160" rx="14"/>
+    <rect x="810" y="140" width="280" height="160" rx="14"/>
+  </g>
+
+  <g font-size="18" fill="#39424d">
+    <text x="118" y="180" font-weight="700" fill="#0a6a5f">session 1</text>
+    <text x="118" y="216">Context · Direction</text>
+    <text x="118" y="246">Action · Success</text>
+    <text x="118" y="284" font-size="17" fill="#66717e">then it ends</text>
+
+    <text x="478" y="180" font-weight="700" fill="#0a6a5f">session 2</text>
+    <text x="478" y="216">Context · Direction</text>
+    <text x="478" y="246">Action · Success</text>
+    <text x="478" y="284" font-size="17" fill="#66717e">then it ends</text>
+
+    <text x="838" y="180" font-weight="700" fill="#0a6a5f">session 3</text>
+    <text x="838" y="216">Context · Direction</text>
+    <text x="838" y="246">Action · Success</text>
+    <text x="838" y="284" font-size="17" fill="#66717e">then it ends</text>
+  </g>
+
+  <path d="M90 366H1090" stroke="#e2e7ec" stroke-width="2"/>
+  <text x="90" y="412" font-size="22" font-weight="700" fill="#14181d">What would have to last for a system to choose its own direction</text>
+
+  <g font-size="19" fill="#39424d">
+    <text x="90" y="460">continual learning</text>
+    <text x="90" y="488" fill="#66717e" font-size="17">after deployment, not only in training</text>
+
+    <text x="450" y="460">credit assignment</text>
+    <text x="450" y="488" fill="#66717e" font-size="17">over long horizons</text>
+
+    <text x="810" y="460">goals that outlast</text>
+    <text x="810" y="488" fill="#66717e" font-size="17">a single session</text>
+  </g>
+</svg>

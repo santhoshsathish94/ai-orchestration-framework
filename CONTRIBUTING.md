@@ -5,35 +5,39 @@ included. Corrections, questions, ideas, and case studies are all welcome.
 
 ## The short version
 
-1. **Start with the problem, not the solution.** Open an issue describing the opportunity: what you
+1. **Start with the problem, not the solution.** Open an issue describing the direction: what you
    observed, why it matters, and the outcome you're after.
 2. **Discuss before large changes.** For anything beyond a small fix, let's align in the issue first
    so the work stays focused.
 3. **Raise a focused pull request.** Fork, branch, make one coherent change, and open a PR that
-   explains the opportunity → understanding → change → proof.
+   explains the direction, the change, and the evidence behind it.
 
 ## How to raise a pull request
 
-1. Fork the repository and create a branch (for example, `docs/clarify-proof-stage`).
+1. Fork the repository and create a branch (for example, `docs/clarify-the-success-stage`).
 2. Make a small, focused change. Match the existing structure and writing style.
 3. In the PR description, briefly cover:
-   - **Opportunity** — the problem or gap this addresses.
-   - **Change** — what you changed, and why.
-   - **Proof** — for any outcome or production claim, the evidence behind it.
+   - **Direction** — the problem or gap this addresses, and the outcome you're after.
+   - **Action** — what you changed, and why this approach rather than another.
+   - **Success** — the evidence. State what you checked, what you observed, and where you stopped.
+     For a docs change, "I checked every link and heading anchor" is real evidence.
 4. Open the PR against `main`. Expect a friendly review and a little back-and-forth.
 
 ## What we're likely to accept
 
-- Clarity and correctness improvements to the docs and the model.
+- Clarity and correctness improvements to the docs and the framework.
 - Field lessons and practices drawn from real experience.
-- Reference implementations that apply the core lifecycle to a common problem.
-- Case studies with honest, evidence-backed outcomes.
+- Reference implementations that apply the stages to a common problem.
+- Case studies with honest outcomes, including the ones where the outcome was never reached.
 - Anything that keeps the framework **simple, universal, and practical**.
 
 ## What we'll usually push back on
 
-- Added stages, jargon, or complexity the reader doesn't need. The model is deliberately six steps:
-  **Opportunity → Understand → Plan → Execute → Proof → Grow.**
+- Added stages, jargon, or complexity the reader doesn't need. Clover is deliberately four stages:
+  **Context → Direction → Action → Success.**
+- Rungs, levels, scores, or grades for evidence or autonomy. They were removed on purpose, because a
+  number is easier to claim than to justify. Say what you checked, what you observed, and where you
+  stopped.
 - Outcome or production claims without evidence.
 - Overselling AI. AI is a capability within the system, not the hero.
 - Making it about a single person or tool rather than the shared idea.

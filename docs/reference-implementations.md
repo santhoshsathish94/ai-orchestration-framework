@@ -1,26 +1,14 @@
 # Reference Implementations
 
-These are practical patterns teams can adopt and adapt. They are not separate frameworks; they demonstrate how the core lifecycle applies to recurring organizational problems.
+Three patterns teams can adopt and adapt. They are not separate frameworks. Each one shows how [the
+Clover framework](04-framework.md) applies to a recurring organizational problem.
 
 > **Status — what these actually are.** All three have been **built and used against real
 > organizational data** — repositories, logs, telemetry and job definitions.
 >
-> Cross-Team Knowledge Access has since answered **real production and support incidents**: a
-> data-synchronization failure that had already survived an overnight investigation, where the team
-> that originally owned the flow was no longer available and the mapping involved was far too large to
-> have been documented; and a customer-facing support case that had been circulating between teams
-> without a clear owner. In both, the reported signal was traced to its actual cause — the strongest
-> evidence here, observed against the real systems rather than demonstrated.
->
-> Production Exception Remediation and Multi-Repository Defect Remediation have both been run on real
-> work, through existing review and deployment approvals. The defect-remediation cycle produced
-> verified closure for **most, not all**, of a batch — with the remainder carried forward as better
-> context for the next cycle.
->
-> What has **not** happened: none of these is an always-on capability, and none is adopted
-> organization-wide. The knowledge capability is assembled per question rather than running as a
-> product, and every pattern here depends on a human providing the map, reviewing the output, and
-> holding the approvals.
+> None of them is always-on, and none is adopted organization-wide. The knowledge capability is
+> assembled per question rather than running as a product. Each pattern depends on a human providing
+> the map, reviewing the output, and holding the approvals.
 >
 > These patterns assume an [orchestration environment](orchestration-environment.md) is in place —
 > read-only access across the systems the organization already runs.
@@ -53,7 +41,7 @@ A data team asks why a synchronization job did not run. AI reads the relevant re
 
 **Out-of-Context Owner**
 
-Someone accountable for an area they have not worked on — a lead who has been away from the code, a new joiner, anyone returning to a system that moved on without them — asks where a reported behavior originates. The capability reads across the repositories involved and reproduces the behavior in the running application, locating the cause without the person first having to learn the area.
+Someone accountable for an area they have not worked on — a lead who has been away from the code, a new joiner, anyone returning to a system that moved on without them — asks where a reported behavior originates. The capability reads across the repositories involved and reproduces the behavior in the running application, locating the cause without the human first having to learn the area.
 
 The knowledge was never missing. It was in the code and in the running system, and simply had not been reachable without someone who already held it.
 
@@ -61,9 +49,9 @@ The knowledge was never missing. It was in the code and in the running system, a
 
 > Reduce unnecessary coordination by making existing organizational knowledge directly accessible.
 
-Both examples above were run against real systems, and in both the answer was reached by working
+The examples above were run against real systems, and in both the answer was reached by working
 backwards from the reported symptom to the source rather than from a summary prepared in advance.
-That is the part that matters: it is what makes the pattern hold when the question is one nobody
+That is the part that matters. It is what makes the pattern hold when the question is one nobody
 anticipated, and when the people who would have known are no longer there to ask.
 
 ---
@@ -88,7 +76,7 @@ AI should provide concrete evidence before production approval:
 - tests and non-production validation
 - risk and expected production signal
 
-The human remains responsible for production approval. The ticket is closed only when the original production signal is proven resolved.
+The human remains responsible for production approval. The ticket is closed only when the original production signal is shown to be resolved.
 
 ### Direct examples
 
@@ -110,7 +98,8 @@ Incorrect report values trigger remediation. AI traces the transformation, fixes
 
 ### Outcome
 
-> Move from **"the fix was deployed"** to **"the original problem was proven resolved."**
+> Move from a deployed change to a demonstrated outcome — the original production signal stops and
+> stays stopped.
 
 ---
 
@@ -124,7 +113,7 @@ A batch of defects arrives as a single ticket. The work of triaging them is most
 of them are real, which system each one actually originates in, and which of them share a cause.
 
 That navigation is slow because it crosses boundaries. A defect reported against a page may live in
-a downstream service, a data mapping, or a configuration value, and the person triaging usually only
+a downstream service, a data mapping, or a configuration value, and the human triaging usually only
 knows some of those systems well.
 
 ### Implementation
@@ -165,10 +154,15 @@ and deployment gates wired into their real tooling.
 
 ---
 
-## Built on the Core Lifecycle
+## Built on the four working stages
 
-Both implementations use the same universal model:
+All three run the same cycle:
 
-> **Opportunity → Understand → Plan → Execute → Proof → Grow**
+> **Context → Direction → Action → Success**
 
-The implementation adds operational detail where needed, but does not create a new lifecycle.
+Cross-Team Knowledge Access spends most of its time in Context. Production Exception Remediation
+carries a cycle all the way to Success in the real environment. Multi-Repository Defect Remediation
+loops the hardest, because what the unresolved defects showed is written back into Context and is
+what the next pass starts from.
+
+The patterns add operational detail where a recurring problem needs it. None of them adds a stage.

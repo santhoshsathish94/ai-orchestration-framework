@@ -1,7 +1,8 @@
-# Fixing a React Server Components Memory Leak Upstream
+# A React Server Components Memory Leak, Traced Upstream
 
 **Production OOM → workaround → root cause → validated fix → open-source contribution**
-**An AI-assisted investigation that did not stop when the production incident was stabilized.**
+
+An AI-assisted investigation that kept going after the production incident was stabilized.
 
 ## Summary
 
@@ -9,25 +10,26 @@ A production Next.js 16 App Router application under real traffic was crashing w
 (OOM) errors: server memory grew without bound under sustained load until the process died, causing
 recurring production incidents and delaying releases. The immediate mitigation was a blunt workaround — a global Node flag (`NODE_OPTIONS=--stack-trace-limit=0`) that stopped the memory growth but also strips error-stack detail everywhere.
 
-The workaround stabilized production, but the investigation continued. Rather than living with the workaround, the leak was traced to its true source — not in the
-application or Next.js's own code, but one layer deeper, in React's Server Components renderer
-(`react-server`, the "Flight" server) — and fixed there so every consumer of the library benefits.
+The workaround stabilized production, and the investigation continued. Rather than living with the
+workaround, the leak was traced to its true source. It sat neither in the application nor in
+Next.js's own code, but one layer deeper, in React's Server Components renderer (`react-server`, the
+"Flight" server), and it was fixed there so that every consumer of the library could benefit.
 This took **several days of repeated profiling**, and four plausible fixes were implemented and
 disproved before the real one was found. AI carried much of the loop: building a minimal reproduction,
 making the leak measurable, isolating the mechanism, writing the one-file fix, and drafting the public
 issue, pull request, and reproduction repository. That is what made a fix like this practical to
-attempt at all — it still took human judgment to set the direction and to check each result against
+attempt at all. It still took human judgment to set the direction and to check each result against
 real, measured behavior before trusting it.
 
 The result is a personal open-source contribution, filed as a **CI-green pull request awaiting maintainer
-review — not yet merged**. The goal is broader than fixing one application: if the upstream fix is accepted, other applications using the affected React path can benefit without carrying the same workaround. It resolves the React instance of the anti-pattern; the same pattern exists
+review — not yet merged**. The goal is broader than fixing one application: if the upstream fix is accepted, other applications using the affected React path can benefit without carrying the same workaround. It addresses the React instance of the anti-pattern; the same pattern exists
 at a second site in Next.js, independently reported by another engineer, and is tracked separately.
 
 ![React / Next.js memory leak and upstream contribution](../assets/case-study-02-react-rsc-memory-leak.png)
 
 *The visual is intentionally simple: stabilize the incident, continue the investigation, fix the underlying problem, and give the fix back to the ecosystem.*
 
-## The problem
+## Context — what the systems showed
 
 - **Unbounded server memory → OOM.** Under real traffic the application's memory climbed continuously
   and the process eventually crashed — producing production incidents and release delays. (The
@@ -40,16 +42,10 @@ at a second site in Next.js, independently reported by another engineer, and is 
   a partial Next.js fix in 16.0.3 did not fully resolve it. The real defect lived deeper than the
   application code.
 
-## The workaround was not the destination
+### What the investigation took
 
-`NODE_OPTIONS=--stack-trace-limit=0` was the practical production mitigation. It stopped the memory growth and restored stability, so it was useful and necessary. But it also globally disabled stack capture, reducing observability for unrelated errors.
-
-That distinction matters to the framework: **mitigate the incident, then keep investigating the cause.** The objective was not simply to make the pods stop crashing; it was to understand why disabling stack capture changed the behavior and determine whether the underlying defect could be fixed without sacrificing stack traces across the application.
-
-## What it actually took
-
-None of this arrived in one insight. It took **several days of repeated profiling**, and most of that
-time was spent on explanations that turned out to be wrong.
+The root cause did not arrive in one insight. It took **several days of repeated profiling**, and
+most of that time was spent on explanations that turned out to be wrong.
 
 **Even the mitigation was not obvious.** `--stack-trace-limit=0` was not an educated first guess; it
 came out of testing Node flags one at a time against a measured heap curve. The result that mattered
@@ -66,7 +62,7 @@ reasoned about:
 - Nulling `task.model` and `task.thenableState` in React Flight's `abortTask` / `erroredTask` — no
   effect, and stderr instrumentation then proved those handlers **never fire** for the reproduction's
   leak.
-- Application Insights as the retainer — A/B identical. A passenger, not the cause.
+- Application Insights as the retainer — A/B identical. A passenger rather than the cause.
 
 **A measurement trap nearly produced a false positive.** A single light run sometimes drained to
 ~30 MB on its own, which made at least one wrong fix look like it worked. Only multi-round load
@@ -87,7 +83,7 @@ instrumenting `global.Error` to enumerate **every** `Error` constructed during a
 doing the pinning was created by React's Flight server, not by Next.js. The dedupe cache was what got
 retained; React was what retained it.
 
-## Two paths to the same pin
+### Two paths to the same pin
 
 One mechanism produced the leak by two different routes, and conflating them wasted time. In both,
 an `Error`'s **captured stack** references the request's `AsyncResource`, whose store holds React
@@ -112,7 +108,7 @@ reduced how *often* the first path fired but could not stop it, because they bou
 in-flight work while the leak is retention that outlives request completion. Zeroing the stack limit
 addresses both paths, because it removes the reference that does the pinning.
 
-## Root cause
+### Root cause
 
 The leak is in React's `react-server` (Flight) renderer — `packages/react-server/src/ReactFlightServer.js`.
 
@@ -135,7 +131,18 @@ diagnoses of the same shape, in two files, are strong evidence the root cause is
 artifact of one setup. React already limits Flight stack capture elsewhere for exactly this memory
 reason (#34864, #37086, #37158), so the fix fits an accepted, existing pattern.
 
-## The fix
+## Direction — stabilize, then keep going
+
+### The workaround was not the destination
+
+`NODE_OPTIONS=--stack-trace-limit=0` was the practical production mitigation. It stopped the memory growth and restored stability, so it was useful and necessary. But it also globally disabled stack capture, reducing observability for unrelated errors.
+
+The direction was set deliberately at the point the crashes stopped. Stopping the crashes was the
+mitigation. The outcome worth reaching was understanding why disabling stack capture changed the
+behavior, and finding out whether the underlying defect could be fixed without giving up stack
+traces across the application.
+
+## Action — the fix and the contribution
 
 The cleanup reason is internal and never surfaced to users, so it does not need a stack trace at all.
 Create it with stack capture turned off, then restore the previous limit — one file, **+11 / −0**.
@@ -163,7 +170,45 @@ request.cacheController.abort(abortReason);
 This fixes the React (`react-server`) instance of the pattern. The Next.js instance
 (`vercel/next.js#97316`) is a separate, complementary fix.
 
-## Validated under sustained load — a clean A/B
+### How the work ran
+
+AI did much of the legwork below — the reproduction, the analysis, the fix, and the write-ups —
+which is what made this quick to do. It still took human judgment to steer the work and to check each
+result against real, measured behavior, and nothing was accepted on the AI's word. What matters here
+is the lowered barrier rather than the split of credit.
+
+1. **Built a minimal, shareable reproduction.** A `force-dynamic` Server Component that awaits a slow
+   upstream fetch and renders a large list, a load generator that disconnects clients mid-render, and
+   a GC-probe endpoint to read retained heap on demand.
+2. **Made retention measurable rather than anecdotal.** Controlled, multi-round runs that measure
+   retained heap after a **forced GC** each round, turning "it leaks" into a repeatable before/after
+   number.
+3. **Formed and tested hypotheses until the mechanism was isolated.** Most were wrong, and each was
+   tested against loaded code rather than argued about. Proved that only
+   `--stack-trace-limit=0` (which disables **synchronous** frame capture) eliminated the growth, while
+   `--no-async-stack-traces` did not — pinning the cause to synchronous stack capture. Confirmed with
+   heap-snapshot retainer analysis showing retained `_Response` objects tracing back to the `cache()`
+   dedupe map, then instrumented `global.Error` to enumerate every error constructed per request,
+   which is what located the pinning object in React rather than Next.js.
+4. **Implemented the one-file fix** — create the never-surfaced cleanup reason with
+   `Error.stackTraceLimit = 0` (save/restore) so it carries no stack.
+5. **Authored the public issue, pull request, and reproduction repo** — forked, branched, committed,
+   and pushed under a personal identity, and signed the contributor license agreement — all isolated
+   from work identity and tooling.
+6. **Did prior-art due diligence.** Searched both repositories, found the public symptom hub and the
+   independent diagnosis of the same mechanism, deliberately avoided filing a duplicate, and
+   cross-linked everything so the community can connect the reports, the repro, and the fix.
+7. **Kept the judgment human.** Each claim — root cause, mechanism, fix efficacy — was checked
+   against real, measured behavior before it was trusted, rather than accepting generated code or
+   explanations at face value.
+
+The work followed the four working stages. **Context** was reproducing the leak, isolating the mechanism, and gathering the evidence.
+**Direction** was a production incident worth fixing at the root.
+**Action** was the focused one-file fix and the upstream contribution path. **Success** was measured,
+repeatable heap evidence plus independent corroboration. Each failed check sent the work back to Context rather than to another
+attempt at a fix, which is the only reason the four wrong answers were ever ruled out.
+
+## Success — validated under sustained load
 
 The reproduction proved the mechanism in isolation. A later soak test proved it on a real fleet, and
 by accident produced an unusually clean experiment: the **same container image** ran under load
@@ -187,45 +232,7 @@ unnecessary, and it costs stack detail on every error in the service. Second, a 
 showed the surviving ~1.8 GB is genuinely retained rather than lazily uncollected. The leak went from
 unbounded to bounded, which is what stopped the crashes; it did not go to zero.
 
-## How we did it
-
-AI did much of the legwork below — the reproduction, the analysis, the fix, and the write-ups —
-which is what made this quick to do. It still took human judgment to steer the work and to check each
-result against real, measured behavior; nothing was accepted on the AI's word. The point is not who
-did what, but that AI lowered the barrier enough to make a fix like this practical.
-
-1. **Built a minimal, shareable reproduction.** A `force-dynamic` Server Component that awaits a slow
-   upstream fetch and renders a large list, a load generator that disconnects clients mid-render, and
-   a GC-probe endpoint to read retained heap on demand.
-2. **Made retention measurable, not anecdotal.** Controlled, multi-round runs that measure retained
-   heap after a **forced GC** each round — turning "it leaks" into a repeatable before/after number.
-3. **Formed and tested hypotheses until the mechanism was isolated.** Most were wrong, and each was
-   tested against loaded code rather than argued about. Proved that only
-   `--stack-trace-limit=0` (which disables **synchronous** frame capture) eliminated the growth, while
-   `--no-async-stack-traces` did not — pinning the cause to synchronous stack capture. Confirmed with
-   heap-snapshot retainer analysis showing retained `_Response` objects tracing back to the `cache()`
-   dedupe map, then instrumented `global.Error` to enumerate every error constructed per request,
-   which is what located the pinning object in React rather than Next.js.
-4. **Implemented the one-file fix** — create the never-surfaced cleanup reason with
-   `Error.stackTraceLimit = 0` (save/restore) so it carries no stack.
-5. **Authored the public issue, pull request, and reproduction repo** — forked, branched, committed,
-   and pushed under a personal identity, and signed the contributor license agreement — all isolated
-   from work identity and tooling.
-6. **Did prior-art due diligence.** Searched both repositories, found the public symptom hub and the
-   independent diagnosis of the same mechanism, deliberately avoided filing a duplicate, and
-   cross-linked everything so the community can connect the reports, the repro, and the fix.
-7. **Kept the judgment human.** Each claim — root cause, mechanism, fix efficacy — was checked
-   against real, measured behavior before it was trusted, rather than accepting generated code or
-   explanations at face value.
-
-The loop mirrors the framework's model end to end: **Opportunity** (a production incident worth
-fixing at the root) → **Understand** (reproduce the leak, isolate the mechanism, gather evidence) →
-**Plan** (a focused one-file fix and the upstream contribution path) → **Execute** (implement the
-fix; open the issue, PR, and reproduction) → **Proof** (measured, repeatable heap evidence, plus
-independent corroboration) → **Grow** (a reusable upstream fix and lessons captured) — iterated
-until proven.
-
-## Results
+### Results
 
 | Metric | Before | After |
 |---|---|---|
@@ -239,23 +246,27 @@ until proven.
 | Independent corroboration | — | matching production diagnosis (`vercel/next.js#97316`) |
 | Status | production mitigated via a global Node flag | upstream fix filed, CI-green, in review |
 
-## Key takeaways
+## What went back into Context
 
 - **A measurable, repeatable harness turned "it leaks" into a provable before/after.** Multi-round
-  retained-heap-after-GC is the same "prove the outcome, not just the output" principle as the
-  Contentful migration — applied to memory instead of API parity. It also caught a false positive: a
-  single run could drain on its own and make a wrong fix look correct.
+  retained-heap-after-GC applies the same discipline as the Contentful migration's parity harness,
+  to memory instead of API shape. It also caught a false positive: a single run could drain on its
+  own and make a wrong fix look correct.
 - **The layer where a symptom appears is often not the layer that owns it.** Every public report
   named Next.js, and the retained objects belonged to a Next.js cache. The defect was in React. Being
-  willing to keep going one layer down is what turned a local workaround into an upstream fix.
+  willing to keep going one layer down is what turned a local workaround into an upstream
+  contribution.
 - **AI can carry much of the investigation-to-PR loop** — reproduction → hypotheses → heap analysis →
-  patch → upstream authoring — with people setting direction and validating each step. The value is
-  the lowered barrier to making this kind of contribution, not replacing engineering judgment.
-- **A workaround resolves an incident; root-cause analysis can resolve a class of problems.** The production mitigation stabilized the application, but continuing the investigation enabled an upstream fix that can benefit other consumers of the affected React path.
+  patch → upstream authoring — with people setting direction and validating each step. AI lowered the
+  barrier to making this kind of contribution. It did not replace the engineering judgment.
+- **A workaround resolves an incident. Root-cause analysis can resolve a class of problems.** The
+  production mitigation stabilized the application, and continuing the investigation produced an
+  upstream contribution that, if it is accepted, other consumers of the affected React path can
+  benefit from.
 - **Independent corroboration** — another engineer's production heap-snapshot diagnosis of the same
   anti-pattern at a different site — is strong evidence the root cause is real, not a quirk of one
   environment.
-- **Prior-art due diligence is part of orchestrating a good contribution:** don't duplicate,
+- **Prior-art due diligence is part of orchestrating a good contribution.** Do not duplicate,
   cross-link the existing reports, and provide the missing reproduction that ties them together.
 
 ## Public artifacts

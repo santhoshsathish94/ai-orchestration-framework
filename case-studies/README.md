@@ -1,32 +1,31 @@
 # Case Studies
 
-Real work, including what is still unproven.
+Real work, including the parts that are still unproven.
 
-**Both are delivered outcomes**, not illustrations: a migration whose implementation took about a day
-against an 8–10 week estimate, parity-validated against live traffic in preprod, and a production
-out-of-memory failure traced to its root cause in a shared framework and fixed there. Neither is
-finished — the migration's production cutover has not run, and the upstream fix is not yet merged.
-Both say so.
+Both are delivered outcomes rather than illustrations: a migration whose implementation took about a
+day against an 8–10 week estimate, and a production out-of-memory failure traced to its root cause in
+a shared framework and fixed there. Neither is finished. The migration's production cutover has not
+run, and the upstream fix has not been merged. Both say so.
 
-These deliberately span different domains. The lifecycle is the same in each; only the vocabulary
-changes.
+The two span different domains on purpose. The stages are the same in each, and only the
+vocabulary around them changes.
 
 | Case study | Domain | What it shows |
 |---|---|---|
-| [Contentful API Migration](01-contentful-migration.md) | Software engineering | A large GraphQL → REST migration whose implementation took about a day against an 8–10 week estimate, with the public contract preserved and parity-validated against live traffic in preprod. *(Execution time only — validation and sign-off took longer. Production cutover not yet run.)* |
-| [Fixing a React Server Components Memory Leak Upstream](02-react-rsc-memory-leak.md) | Open-source engineering | Production OOM → workaround → root cause → validated fix → upstream contribution. The workaround was not the destination. *(PR CI-green, awaiting maintainer review.)* |
+| [Contentful API migration](01-contentful-migration.md) | Software engineering | A large GraphQL → REST migration whose implementation took about a day against an 8–10 week estimate, with the public contract preserved and parity checked endpoint by endpoint against the current API. *(Execution time only — validation and sign-off took longer. Production cutover not yet run.)* |
+| [A React Server Components memory leak](02-react-rsc-memory-leak.md) | Open-source engineering | Production OOM → workaround → root cause → validated fix → upstream contribution. The workaround was not the destination. *(Pull request CI-green, not merged.)* |
 
 ## A note on evidence
 
 The three [reference implementations](../docs/reference-implementations.md) are described separately.
-Cross-team knowledge access has resolved real production and support incidents; the two remediation
-patterns have run on real work through existing review and deployment approvals. None is an
-always-on capability or adopted organization-wide.
+Cross-team knowledge access has resolved real production and support incidents, and the two
+remediation patterns have run on real work through existing review and deployment approvals. None is
+always-on or adopted organization-wide.
 
-See [Proof](../docs/07-proof.md#how-strong-is-your-evidence) for how we talk about evidence
-generally.
+Each case study says what was checked, what was observed, and where the work stopped. See
+[Success](../docs/07-success.md#how-strong-is-your-evidence) for how evidence is described here.
 
 ## Contributing a case study
 
-Honest case studies are welcome, including ones where the outcome was not achieved. See
+Honest case studies are welcome, including the ones where the outcome was never reached. See
 [CONTRIBUTING.md](../CONTRIBUTING.md).
