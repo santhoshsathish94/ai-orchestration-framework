@@ -37,16 +37,15 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-- **AI current capabilities now cites measurements instead of asserting them.** The section listed
-  four job functions and claimed AI was past what any individual human can do, with nothing behind
-  it. It now gives what is actually published and links the source: SWE-bench Verified, GDPval,
-  METR's task-length work, and what an open-weights model costs per issue. Each figure is stated
-  coarsely and the section is dated, because these numbers move.
-- The section also says where the measurements stop. Every one of those benchmarks hands the model a
-  task that is already written down with its files attached; on ARC-AGI-3, where an agent has to work
-  out the environment by acting, the best score is around a third. METR's controlled trial found
-  experienced developers took 19% longer with AI while believing they had been 20% faster. That is a
-  description of how AI is being used today, and it is the reason the rest of the page exists.
+- **AI capabilities is about the range of the work, not a scoreboard.** The section used to list four
+  job functions and claim AI was past what any individual human can do, with nothing behind it. It
+  now describes the breadth plainly — the same tool reasons like a developer, an operator, a security
+  reviewer, a tester, an analyst and a writer, and any one of those is worth having on its own — and
+  then says how fast that range grew. Two figures are cited and linked: experts across forty-four
+  professions rated a model's work as good as their own or better close to half the time, and the
+  length of job an agent can see through has been doubling roughly every seven months for six years.
+- The section ends by saying the skill is uneven and that it does far better on work that has been
+  described properly than on work it has to guess at. That is the handoff into the rest of the page.
 
 - **The primary navigation is seven items instead of nine.** The three clover sections and the worked
   example moved into a **Framework** dropdown, and the remaining links are Getting started,

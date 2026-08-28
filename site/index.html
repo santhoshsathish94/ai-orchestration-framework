@@ -109,59 +109,43 @@
     </div>
   </section>
 
-  <!-- ============ AI CURRENT CAPABILITIES ============ -->
+  <!-- ============ AI CAPABILITIES ============ -->
   <section class="band band--soft" id="capability">
     <div class="wrap">
       <p class="eyebrow">Where AI already is</p>
-      <h2>AI current capabilities</h2>
-      <p class="lede">AI already holds the collection of skills humans have, in one place. Here is
-        what that is measured at, in August 2026.</p>
+      <h2>AI capabilities</h2>
+      <p class="lede">One tool now holds the working knowledge of a lot of different jobs, and it
+        moves between them in the same conversation. That breadth is what makes it useful.</p>
 
       <dl class="kv" style="margin-top:1.4rem">
-        <div>
-          <dt>Working code</dt>
-          <dd>SWE-bench Verified is 500 human-checked GitHub issues from working open-source
-            projects. The leading agents close about three quarters of them, for under a dollar an
-            issue.
-            <a class="kv__src" href="https://www.swebench.com/" rel="noopener">SWE-bench</a></dd>
-        </div>
-        <div>
-          <dt>Professional work</dt>
-          <dd>GDPval had experts across 44 occupations blindly compare model output against their
-            own work — legal briefs, care plans, engineering drawings. The best model was rated as
-            good as or better than the expert on close to half of them. That measurement is from
-            September 2025, so it is likely conservative now.
-            <a class="kv__src" href="https://openai.com/index/gdpval/" rel="noopener">GDPval</a></dd>
-        </div>
-        <div>
-          <dt>Task length</dt>
-          <dd>METR tracks the length of task an agent can finish half the time. It has doubled
-            roughly every seven months for six years, and the frontier now sits in hours rather
-            than minutes.
-            <a class="kv__src" href="https://metr.org/time-horizons/" rel="noopener">METR</a></dd>
-        </div>
-        <div>
-          <dt>Cost</dt>
-          <dd>An open-weights model you can run yourself scores within a point of the best
-            SWE-bench result, at about seven cents an issue.
-            <a class="kv__src" href="https://www.swebench.com/" rel="noopener">SWE-bench</a></dd>
-        </div>
+        <div><dt>Developer</dt><dd>Reads code it has never seen, works out how the system actually behaves, and writes changes that fit the way the project is already built.</dd></div>
+        <div><dt>Operations</dt><dd>Follows a failing deployment through the pipeline and the cluster, and says which change broke it.</dd></div>
+        <div><dt>Security</dt><dd>Reads a change for the class of mistake that causes incidents, and reads a repository for the credential nobody meant to commit.</dd></div>
+        <div><dt>Quality</dt><dd>Designs test cases from how the system behaves rather than from the wording of the ticket.</dd></div>
+        <div><dt>Analysis</dt><dd>Reconstructs what happened from logs and telemetry, fast enough to matter while an incident is still open.</dd></div>
+        <div><dt>Writing</dt><dd>Turns the change it just made into a description a reviewer, a release note or an auditor can use.</dd></div>
       </dl>
 
-      <p style="margin-top:1.4rem">Every one of those numbers describes work that arrived already
-        specified. The GDPval tasks came with the reference files attached. The SWE-bench issues came
-        with a repository and a written bug report. <a href="https://arcprize.org/leaderboard"
-        rel="noopener">ARC-AGI-3</a> drops an agent into an environment it has to work out by acting,
-        and the best score falls to around a third, with most models in single digits.</p>
+      <p style="margin-top:1.4rem">Hiring that range is a team. Any one of those skills is worth
+        having on its own, and the same tool has all of them at once, at three in the morning, on as
+        many pieces of work as you can give it.</p>
 
-      <p>The felt benefit and the measured benefit also come apart. METR ran a
-        <a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/"
-        rel="noopener">controlled trial</a> with experienced developers on their own repositories and
-        found they took 19% longer with AI, while believing they had been 20% faster.</p>
+      <p>It goes well beyond engineering. When experts across
+        <a href="https://openai.com/index/gdpval/" rel="noopener">forty-four professions</a> — lawyers,
+        nurses, accountants, mechanical engineers — were shown their own work next to a model's
+        without being told which was which, close to half the time they rated the model's as good as
+        their own or better.</p>
 
-      <p>All of that describes how AI is being used today. The capability is real. What is missing
-        sits around it — somebody to say what is worth doing, and enough of the real world in front
-        of it to act on. The rest of this page is about that.</p>
+      <p>And it grew here quickly. Not long ago the useful unit was a suggested line of code, then a
+        function, then a file. Now an agent will work through a real bug in a real repository on its
+        own, and the length of job it can see through has been
+        <a href="https://metr.org/time-horizons/" rel="noopener">roughly doubling every seven
+        months</a>, steadily, for six years.</p>
+
+      <p>It is uneven. It will do something genuinely difficult and then get stuck on something
+        small, and it does far better on work that has been described properly than on work it has to
+        guess at. But the skill is there, and it is waiting. Somebody still has to say what is worth
+        doing, and show it enough of the real world to act on. The rest of this page is about that.</p>
     </div>
   </section>
 

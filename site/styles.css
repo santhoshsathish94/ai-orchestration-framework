@@ -507,7 +507,6 @@ section[id] { scroll-margin-top: 5rem; }
 .kv div:first-child { border-top: 0; }
 .kv dt { flex: 0 0 8.5rem; font-weight: 620; color: var(--ink); }
 .kv dd { margin: 0; color: var(--ink-2); }
-.kv__src { font-size: 0.82rem; white-space: nowrap; }
 
 @media (max-width: 620px) {
   .kv div { flex-direction: column; gap: 0.1rem; }
