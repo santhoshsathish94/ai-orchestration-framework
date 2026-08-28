@@ -133,10 +133,9 @@ The marks are the site's identity and they carry the argument, so they have rule
   `#fifth-leaf`, `#walkthrough`, `#agent` and `#evidence` on this page. Those IDs have to keep
   resolving, and all three navs are identical.
 - `author/index.html` is the one page written in the first person about a life rather than about the
-  framework. It is also the one place *Black Clover* may be named, as a favourite anime. Leave both
-  alone.
-- American spelling. No employer, product, cluster or infrastructure names — except on
-  `author/index.html`, where the author names his own employer in his own bio.
+  framework. It is also the one place *Black Clover* may be named, as a favorite anime. It ends on
+  the verse, with no closing section and no site footer. Leave all of that alone.
+- American spelling. No employer, product, cluster or infrastructure names.
 - New terminology goes in [`docs/glossary.md`](../docs/glossary.md) first, then the site.
 
 ## Social preview
