@@ -11,7 +11,7 @@ where context is whatever the human remembers to hand over, so it arrives as a c
 direction. Clover starts with Context because the systems are already running before anyone asks for
 anything, and Direction is then given against what is actually there.
 
-**[🌐 Read it on the website →](https://santhoshsathish94.github.io/ai-orchestration-framework/)** — the four stages in about three minutes.
+**[🌐 Read it on the website →](https://cloverframework.com/)** — the four stages in about three minutes.
 
 ---
 

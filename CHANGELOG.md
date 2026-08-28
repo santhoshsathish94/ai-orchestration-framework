@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.0.2 — 2026-08-28
+
+### Changed
+
+- **The site has its own domain, cloverframework.com.** `site/CNAME` carries it, and the canonical
+  links, `og:url` and the social card now point there rather than at the GitHub Pages subpath. The
+  old address keeps working and redirects.
+- **The header reads "Clover Framework"** rather than "Clover four stages".
+
 ## v1.0.1 — 2026-08-28
 
 ### Fixed
