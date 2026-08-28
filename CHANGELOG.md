@@ -37,7 +37,13 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-- **AI capabilities is about the range of the work, not a scoreboard.** The section used to list four
+- **A section between the capabilities and the story, saying why any of this needs to change.** The
+  page went straight from what AI can do to a three-leaf clover, with nothing joining them. It now
+  makes the argument: using AI one task at a time was right when it did one job, and it puts a single
+  human in the middle as the only place the context lives. Run ten pieces of work at once and the
+  work moves at the speed that one human can describe it. That is what moves the question from what
+  AI is capable of to how the work reaches it, and it is the first place on the page where the four
+  stages are named in order.
   job functions and claim AI was past what any individual human can do. It now describes the breadth
   plainly — the same tool reasons like a developer, an operator, a security reviewer, a tester, an
   analyst and a writer — and closes on the point that hiring that range is a team. It is short on
