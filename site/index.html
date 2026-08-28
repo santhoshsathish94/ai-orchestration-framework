@@ -17,7 +17,7 @@
 <meta property="og:image:alt" content="Clover — an AI Orchestration Framework.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0a6a5f">
-<link rel="stylesheet" href="styles.css?v=1.0.0">
+<link rel="stylesheet" href="styles.css?v=1.0.1">
 <script>document.documentElement.className = 'js';</script>
 </head>
 <body>
@@ -42,7 +42,10 @@
         <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(288 50 44)"/>
       </svg>
       Clover <span>four stages</span></a>
-    <nav class="site-nav" aria-label="Primary">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__box" aria-hidden="true"><span></span></span>Menu
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
       <a href="#three-leaves">Common clover</a>
       <a href="#context">Lucky clover</a>
       <a href="#fifth-leaf">Growth clover</a>
@@ -864,6 +867,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=1.0.0" defer></script>
+<script src="app.js?v=1.0.1" defer></script>
 </body>
 </html>

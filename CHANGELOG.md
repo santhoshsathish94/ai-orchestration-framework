@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.0.1 — 2026-08-28
+
+### Fixed
+
+- **The navigation on phones.** Nine links wrapped onto three rows inside a sticky header, so the
+  header alone took 183px — nearly a quarter of the screen, on every screen, all the way down the
+  page. Below 1000px the links now collapse behind a **Menu** button and the header is 52px. The
+  panel closes when a link is followed, when Escape is pressed, and when the window widens past the
+  breakpoint. The button is hidden without JavaScript, where the nav stays open as before.
+- **1000px is the breakpoint** because that is the narrowest width at which all nine links still sit
+  on one row. An earlier 860px left a band of widths where the desktop nav wrapped to two rows.
+- **Versioned `styles.css` and `app.js` URLs.** GitHub Pages sends `Cache-Control: max-age=600` on
+  every file and they expire independently, so a returning visitor could get new HTML paired with a
+  ten-minute-old stylesheet. That happened on the 1.0.0 deploy: the clover marks rendered unsized and
+  the header collapsed, while the server was serving entirely correct files.
+
 ## v1.0.0 — 2026-08-28
 
 ### Renamed and rewritten as Clover

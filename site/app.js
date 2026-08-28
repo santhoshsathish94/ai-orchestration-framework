@@ -48,6 +48,36 @@
 
   document.querySelectorAll('[data-tabs]').forEach(initTabs);
 
+  /* Mobile nav. The button only exists visually below 1000px, the width at which the nav still
+     fits on one row; above that the nav is always shown. */
+  var navToggle = document.querySelector('.nav-toggle');
+  var siteNav = document.getElementById('site-nav');
+  if (navToggle && siteNav) {
+    var setNavOpen = function (open) {
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      siteNav.classList.toggle('is-open', open);
+    };
+
+    navToggle.addEventListener('click', function () {
+      setNavOpen(navToggle.getAttribute('aria-expanded') !== 'true');
+    });
+
+    siteNav.addEventListener('click', function (e) {
+      if (e.target.closest('a')) setNavOpen(false);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
+        setNavOpen(false);
+        navToggle.focus();
+      }
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 999) setNavOpen(false);
+    });
+  }
+
   /* Glossary filter. */
   var filter = document.getElementById('term-filter');
   if (filter) {
