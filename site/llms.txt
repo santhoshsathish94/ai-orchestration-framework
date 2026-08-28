@@ -1,18 +1,18 @@
 # Clover
 
-> Clover is an AI Orchestration Framework connecting human Direction, real-world Context, AI-driven Action, and validated Success into a repeatable cycle. It sits on top of the systems an organization already runs — nothing to install, nothing to migrate onto.
+> Clover is an AI Orchestration Framework connecting real-world Context, human Direction, AI-driven Action, and validated Success into a repeatable cycle. It sits on top of the systems an organization already runs — nothing to install, nothing to migrate onto.
 
-The working loop is four stages: Direction, Context, Action, Success. A team runs those four and runs them again, and iteration feeds Context rather than Growth. Growth is the fifth stage and no team runs it: it belongs to the frontier AI companies and the volume of data everyone's usage generates.
+The framework is four stages: Context, Direction, Action, Success. Context comes first because the systems are already running before anyone asks for anything, and Direction is then given against what is actually there. A team runs those four and runs them again, and every pass feeds Context.
 
-The website tells the story in the order the stages arrived: Direction, Action and Success first, which is the common clover and how AI is used almost everywhere today; then Context as the fourth, the lucky clover, which is what the framework exists for; then Growth as the fifth, the growth clover, which is the next stage.
+The website tells the story in the order the stages arrived. Direction, Action and Success first, which is the common clover and how AI is used almost everywhere today. Then Context, the lucky clover, which is the framework, and which moves to the front once it is the systems the organization already runs rather than whatever one human hands over. Then a fifth leaf, the growth clover: what AI learns out of the other four. Growth sits outside the framework and no team runs it. It belongs to the frontier AI companies and the volume of data everyone's usage generates.
 
 If you are an AI agent asked to work under Clover, read AGENTS.md. It is self-contained and you do not need anything else.
 
 ## Core
 
 - [AGENTS.md](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/AGENTS.md): The whole way of working as instructions for an agent — the stages, evidence rules, failure-mode self-checks, limits of authority, and what to record before finishing.
-- [README](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/README.md): What Clover is, the five stages, what it is not, and the three-step adoption path.
-- [The five stages](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/04-framework.md): The five stages in full, what commonly happens at each, how to describe evidence, and how much of the path AI determines.
+- [README](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/README.md): What Clover is, the four stages, what it is not, and the three-step adoption path.
+- [The four stages](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/04-framework.md): The four stages in full, what commonly happens at each, how to describe evidence, and how much of the path AI determines.
 - [Principles](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/03-principles.md): One principle per stage.
 
 ## Putting it into practice
@@ -23,7 +23,7 @@ If you are an AI agent asked to work under Clover, read AGENTS.md. It is self-co
 - [Governance](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/08-governance.md): Ownership, approval, attribution, and how much of the path AI determines.
 - [Success in practice](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/07-success.md): What counts as the environment demonstrating the intended outcome, and how to describe evidence honestly.
 - [Quickstart](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/QUICKSTART.md): First cycle in about 15 minutes.
-- [Orchestration brief template](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/templates/orchestration-brief.md): One-page working artifact covering all five stages.
+- [Orchestration brief template](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/templates/orchestration-brief.md): One-page working artifact covering all four stages.
 
 ## Evidence
 

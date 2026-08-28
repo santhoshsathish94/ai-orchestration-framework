@@ -2,43 +2,25 @@
 
 ## Purpose
 
-**Clover** is the working name and identity of the AI Engineering / AI Orchestration Framework. The five-leaf clover is not merely a logo; it is the framework's central mental model and the personal symbol that should make the framework recognizable.
+**Clover** is the working name and identity of the AI Engineering / AI Orchestration Framework. The five-leaf clover is more than a logo. It is how the framework is pictured, and it is the personal symbol that should make the framework recognizable.
 
-The canonical model is:
+The canonical definition is:
 
-**Direction → Context → Action → Success → Growth → repeat**
+> Clover is an AI Orchestration Framework connecting real-world Context, human Direction, AI-driven Action, and validated Success into a repeatable cycle.
 
-The first four leaves form an engineering cycle. The fifth leaf changes the cycle.
+The framework is four stages:
 
-> **Four leaves make the cycle. The fifth makes it grow.**
+**Context → Direction → Action → Success**
 
----
+The fifth leaf is Growth. Nobody in an organization runs it, and it is the next stage rather than a current one.
 
-## 1. Direction
-
-Direction represents human intent, purpose, priorities, constraints, and control over what should be pursued.
-
-A human determines:
-
-- What should be worked on
-- Why it matters
-- What outcome is wanted
-- What constraints apply
-- What should not be pursued
-
-Direction is the point where human intent enters the system.
-
-**Core question:**
-
-> Where are we going, and what outcome are we trying to achieve?
-
-Direction is preferred over Opportunity or Control as the framework term. Control explains the human role, but Direction does not imply that humans can perfectly control an increasingly capable system forever.
+> **Four leaves make the cycle. The fifth is what AI becomes while the cycle runs.**
 
 ---
 
-## 2. Context
+## 1. Context
 
-Context is the information the AI needs to reason about the real problem and environment. It is much more than a prompt.
+Context is the information the AI needs to reason about the real problem and environment. It is much more than a prompt, and it is there before anyone asks for anything, because it is the systems the organization already runs.
 
 It can include:
 
@@ -66,9 +48,31 @@ Context is preferred over "Understand" because understanding is a cognitive resu
 
 ---
 
+## 2. Direction
+
+Direction represents human intent, purpose, priorities, constraints, and control over what should be pursued. It is given against what the systems already show.
+
+A human determines:
+
+- What should be worked on
+- Why it matters
+- What outcome is wanted
+- What constraints apply
+- What should not be pursued
+
+Direction is the point where human intent enters the system.
+
+**Core question:**
+
+> What needs to be done, and what must not happen?
+
+Direction is preferred over Opportunity or Control as the framework term. Control explains the human role, but Direction does not imply that humans can perfectly control an increasingly capable system forever.
+
+---
+
 ## 3. Action
 
-Action represents what the AI system does with the Direction and Context.
+Action represents what the AI system does with the Context and the Direction.
 
 It includes:
 
@@ -119,7 +123,7 @@ Success is preferred over Results. Results describes what happened; Success asks
 
 Growth is the distinctive fifth leaf.
 
-Growth is different from the first four leaves because it describes what the system accumulates or becomes through repeated cycles.
+Growth is different from the first four leaves because it describes what the system accumulates or becomes through repeated cycles. Nobody in an organization runs it. It belongs to the frontier AI companies, who hold the volume of data that everyone's usage generates, and there is no Growth step for a team to adopt.
 
 Growth can include:
 
@@ -139,13 +143,13 @@ The central idea is:
 
 > **Growth makes each cycle potentially better than the previous one.**
 
-Without Growth, the model is:
+The framework is the first four leaves:
 
-**Direction → Context → Action → Success**
+**Context → Direction → Action → Success**
 
-With Growth:
+Growth comes after them:
 
-**Direction → Context → Action → Success → Growth → repeat**
+**Context → Direction → Action → Success → Growth**
 
 Growth carries experience into future cycles and can influence future Context, Action, and potentially the system's interpretation of Direction.
 
@@ -175,9 +179,9 @@ Clover should have two clearly separated layers.
 
 ## Engineering layer — useful today
 
-**Direction → Context → Action → Success → Growth**
+**Context → Direction → Action → Success**
 
-This is a practical way to think about engineering AI systems around human intent, real context, execution, real-world validation, and accumulated experience.
+This is a practical way to think about engineering AI systems around real context, human intent, execution, and real-world validation. Growth is what AI becomes out of those four, and no team operates it.
 
 ## Hypothesis layer — the question beyond the cycle
 
@@ -237,7 +241,7 @@ Clover must clearly distinguish:
 
 ### What Clover establishes
 
-**Direction → Context → Action → Success → Growth** as an engineering model.
+**Context → Direction → Action → Success** as a way to engineer AI systems. Growth is the fifth leaf, and it sits beyond what a team runs.
 
 ### What Clover hypothesizes
 
@@ -257,7 +261,7 @@ A reader should leave with two things.
 
 ### Practical takeaway
 
-> **Here is a useful way to engineer AI systems: Direction → Context → Action → Success → Growth.**
+> **Here is a useful way to engineer AI systems: Context → Direction → Action → Success.**
 
 ### Deeper question
 
@@ -271,15 +275,15 @@ The goal is to make the reader think about the fifth leaf.
 
 # Canonical Clover Narrative
 
-> **Direction gives AI a purpose.**  
-> **Context gives it the information to understand its environment.**  
+> **Context gives AI the information to understand the environment it is working in.**  
+> **Direction gives it a purpose.**  
 > **Action turns reasoning into execution.**  
 > **Success lets reality validate the outcome.**  
 > **Growth carries the experience forward.**
 
 Then:
 
-> **The first four leaves define the engineering cycle. The fifth leaf changes the cycle.**
+> **The first four leaves are the framework. The fifth is what AI becomes while it runs.**
 
 And finally:
 
@@ -294,7 +298,7 @@ That final question is intentionally unanswered.
 When helping build Clover:
 
 1. Treat **Clover** as the framework's current identity.
-2. Keep **Direction, Context, Action, Success, Growth** as the canonical five leaves unless a genuine conceptual problem is discovered.
+2. Keep **Context, Direction, Action, Success** as the four stages of the framework, and **Growth** as the fifth leaf beyond them, unless a genuine conceptual problem is discovered.
 3. Preserve the five-leaf clover as the visual and conceptual identity.
 4. Keep Growth distinct from simple learning.
 5. Ground the framework in real engineering outcomes and production evidence.

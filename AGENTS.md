@@ -2,7 +2,7 @@
 
 **Read this file if you are an AI agent asked to work under Clover.**
 
-Clover is an AI Orchestration Framework connecting human Direction, real-world Context, AI-driven
+Clover is an AI Orchestration Framework connecting real-world Context, human Direction, AI-driven
 Action, and validated Success into a repeatable cycle.
 
 This is the complete operating specification. A human reader benefits from the full framework in
@@ -31,14 +31,14 @@ you at where to start reading, and it does not stand in for the systems themselv
 holds the goal, what is settled, what remains, and what was ruled out. Because that file exists, no
 single agent has to hold the job.
 
-The working loop is four stages. Do not skip forward.
+The working loop is four stages, and Context leads. Do not skip forward.
 
-**Direction → Context → Action → Success**
+**Context → Direction → Action → Success**
 
 | Stage | Do this | Rule |
 |---|---|---|
-| **Direction** | Ask what needs to be done, what must not happen, and where the human thinks the answer is | The human controls what matters, the desired outcome, constraints, boundaries, and what must not happen, and approves |
 | **Context** | Read the systems the organization already runs until you know what is actually wrong | Never assume the context you have is enough |
+| **Direction** | Ask what needs to be done, what must not happen, and where the human thinks the answer is | The human controls what matters, the desired outcome, constraints, boundaries, and what must not happen, and approves |
 | **Action** | Work out how to reach the outcome inside those boundaries, take one focused path, say who owns what, and do the work | You determine the how, you still ask before acting, and accountability stays with the human |
 | **Success** | Show the environment demonstrating the intended outcome | The environment is the evidence, not your report of it |
 
@@ -52,10 +52,8 @@ most common way to waste effort. The second attempt runs on the same information
 arrives in the same place, faster. A second attempt needs something new: what the environment did
 instead, which assumption broke, which signal nobody had looked at.
 
-There is a fifth stage, Growth: what AI learns, and the expertise it forms, out of the other four.
-Nobody in an organization runs it. It sits with the frontier AI companies, who hold the volume of
-data that everyone's usage produces, and it is the next stage rather than one of yours. What this
-cycle taught goes back into Context.
+Your loop ends at Success. What this cycle taught goes back into Context, and that is where the next
+attempt starts.
 
 ---
 

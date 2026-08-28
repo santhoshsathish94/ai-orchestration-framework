@@ -6,24 +6,24 @@ All notable changes to this project will be documented in this file.
 
 ### Renamed and rewritten as Clover
 
-The framework is now **Clover**, an AI Orchestration Framework connecting human Direction,
-real-world Context, AI-driven Action, and validated Success into a repeatable cycle. Five stages
-replace six: Opportunity became Direction, Understand became Context, Plan and Execute merged into
-Action, Proof became Success, and Grow became Growth. The six principles became five.
+The framework is now **Clover**, an AI Orchestration Framework connecting real-world Context, human
+Direction, AI-driven Action, and validated Success into a repeatable cycle. Four stages replace six:
+Understand became Context, Opportunity became Direction, Plan and Execute merged into Action, and
+Proof became Success. The six principles became five.
 
-A team runs four of those stages. Growth is the fifth, and no team runs it — it is what AI learns
-out of the other four, and it belongs to the frontier AI companies and the volume of data everyone's
-usage generates. Iteration feeds Context rather than Growth: after each success and each failure,
-the context files are written before the next attempt.
+Context comes first. The common way of working is Direction → Action → Success, where context is
+whatever the human remembers to hand over, so it arrives as a consequence of the direction. Clover
+starts with Context because the systems are already running before anyone asks for anything, and
+Direction is then given against what is actually there. Iteration feeds Context too: after each
+success and each failure, the context files are written before the next attempt.
 
-The names carry the argument, so they are worth stating. **Direction** rather than Control, because
-control implies people can perfectly steer a system that keeps getting more capable. **Context**
-rather than Understand, because understanding happens inside a head, while context is the material
-a system has to work from. **Action** rather than Plan plus Execute, because the plan usually changes
-once the work meets reality and splitting the two invites a plan that gets quietly abandoned.
-**Success** rather than Proof or Results, because the question is whether the intended outcome
-occurred and whether the real environment said so. **Growth** rather than Grow or Learning, because
-it covers what the whole system accumulates rather than what one model predicts better.
+The names carry the argument, so they are worth stating. **Context** rather than Understand, because
+understanding happens inside a head, while context is the material a system has to work from.
+**Direction** rather than Control, because control implies people can perfectly steer a system that
+keeps getting more capable. **Action** rather than Plan plus Execute, because the plan usually
+changes once the work meets reality and splitting the two invites a plan that gets quietly
+abandoned. **Success** rather than Proof or Results, because the question is whether the intended
+outcome occurred and whether the real environment said so.
 
 The rename ran through the repository as one change: the docs, `AGENTS.md`, the quickstart, the
 brief template, the worked example, the issue and pull request templates, the case studies, the
@@ -32,10 +32,13 @@ as it was, including the two that are still open — the migration's production 
 and the upstream React pull request is CI-green and not merged.
 
 The clover carries the argument. Three leaves is the common clover, how AI is used almost everywhere
-today. Four is the lucky clover, where Context becomes the systems an organization already runs, and
-that is what the framework exists for. Five is the growth clover, the next stage. Where repeated
-Growth ends is followed separately in `hypothesis/ai-future.md`, kept out of the framework material,
-and it is a question rather than a prediction.
+today. Four is the lucky clover, where Context becomes the systems an organization already runs and
+arrives before the direction, and those four stages are the framework. Five is the growth clover:
+Grow became **Growth**, and it sits outside the framework. It is what AI learns out of the four
+stages, it belongs to the frontier AI companies and the volume of data everyone's usage generates,
+and nobody in an organization operates it. Where repeated Growth ends is followed separately in
+`hypothesis/ai-future.md`, kept out of the framework material, and it is a question rather than a
+prediction.
 
 This is a breaking change to the framework's vocabulary. Anything written against the six stages
 needs remapping.

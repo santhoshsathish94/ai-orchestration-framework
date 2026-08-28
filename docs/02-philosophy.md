@@ -2,7 +2,7 @@
 
 ## What Clover rests on
 
-Clover is an AI Orchestration Framework connecting human Direction, real-world Context, AI-driven Action, and validated Success into a repeatable cycle.
+Clover is an AI Orchestration Framework connecting real-world Context, human Direction, AI-driven Action, and validated Success into a repeatable cycle.
 
 It starts from one belief.
 
@@ -32,21 +32,23 @@ Engineering is where this framework was built and where all of its evidence come
 
 ## Three leaves, then four, then five
 
-Clover has five leaves, and the number carries the argument.
+The number of leaves carries the argument.
 
-**Three leaves — the common clover.** Direction, Action, Success. A human gives the Direction, AI performs the Action from whatever that one human can hand over, and after several passes the result becomes Success. The handover is more than typing — files can be attached, and the repository they are working in can be pointed at — and it stays bounded by what that human can reach and remember. This is how AI is used almost everywhere today, it produces real value, and it is ordinary.
+**Three leaves — the common clover.** Direction, Action, Success. A human gives the Direction, AI performs the Action from whatever that one human can hand over, and after several passes the result becomes Success. The handover is more than typing — files can be attached, and the repository they are working in can be pointed at — and it stays bounded by what that human can reach and remember. It also arrives after the direction, because the direction is what sent somebody looking for it. This is how AI is used almost everywhere today, it produces real value, and it is ordinary.
 
-**Four leaves — the lucky clover.** Context arrives, and it changes what the other three are worth.
+**Four leaves — the lucky clover.** Context arrives, it arrives first, and it changes what the other three are worth.
 
-**Five leaves — the growth clover.** Growth, which is the next stage and not one a team runs.
+**Five leaves — the growth clover.** Growth is the next stage, and nobody in an organization runs it. AI becomes more capable from what it takes out of the other four stages, and that is driven by the frontier AI companies, who hold the volume of data everyone's usage generates. That is a general statement about how information accumulates, and it says nothing about any AI provider training on customer or enterprise work. Direction asks where we should go, and Growth asks what we become along the way. Where that ends is a question rather than a prediction, and it is kept out of the engineering material on purpose. It lives in [the hypothesis](../hypothesis/ai-future.md).
 
-The working loop is four stages: Direction → Context → Action → Success. That is the order the work runs in. The story arrives in a different order, and telling it the second way is what makes the first way make sense.
+The framework is four stages: Context → Direction → Action → Success. That is the order the work runs in. The leaves arrived in a different order, and telling the story that way is what makes the running order make sense.
 
 ---
 
 ## Why Context is the breakthrough
 
 Context is no longer bounded by one human. It is the current systems the organization uses. Every repository, with its many projects and the documentation kept for each application. The datasources the applications connect to. The logs and telemetry. The deployment environments. The running applications. None of it has to be written out first, and none of it is a description of the system from memory.
+
+All of that is running before anyone asks for anything, which is why Context comes before Direction. The direction is then given against what is actually there.
 
 Reaching it is a setup rather than a principle. Stand up **read-only MCP servers** in front of the repositories, the datasources, the logs and the environments, so an agent can read them directly. Scope every connection to what the human driving the work already has access to, at the privileges they already hold. Start with **one environment — development is enough** — and widen to other non-production environments as it proves out. [The orchestration environment](orchestration-environment.md#building-one) covers what to connect and in what order.
 
@@ -62,29 +64,15 @@ It runs in a loop. Every pass adds context. Markdown files kept beside the work 
 
 ## Why these names
 
-The five stages are Direction, Context, Action, Success, and Growth. They were named carefully, and the reasons are part of the argument.
-
-**Direction, rather than Control.** Control describes the human role well enough today. It also implies that people can keep perfect control of a system that keeps getting more capable. Direction claims less and stays true longer: the human controls what matters, the desired outcome, constraints, boundaries, and what must not happen, and approves, whatever the system turns out to be able to do on its own.
+The four stages are Context, Direction, Action, and Success. They were named carefully, and the reasons are part of the argument.
 
 **Context, rather than Understand.** Understanding happens inside a head, and nobody can inspect it. Context is the material the system has to work from, and that can be inspected. A system can be handed the whole context and still reason badly from it, so naming the material keeps the distinction visible.
+
+**Direction, rather than Control.** Control describes the human role well enough today. It also implies that people can keep perfect control of a system that keeps getting more capable. Direction claims less and stays true longer: the human controls what matters, the desired outcome, constraints, boundaries, and what must not happen, and approves, whatever the system turns out to be able to do on its own.
 
 **Action, rather than Plan and Execute.** Deciding how the work should happen and doing it belong on one stage. Splitting them invites a plan that gets written, approved, and then quietly abandoned once the work meets reality.
 
 **Success, rather than Results or Proof.** Results describes whatever came out of the work. Success asks the harder question: did the outcome we wanted actually occur, and did the real environment say so? The environment is the evidence of success, which is why an AI model's own assessment of its work carries no weight here.
-
-**Growth, rather than Grow or Learning.** Learning suggests an AI model getting better at prediction. Growth covers what AI becomes out of the other four stages — patterns that hold up across an enormous number of cycles, and the expertise that forms out of them.
-
----
-
-## Direction and Growth
-
-Direction asks where we should go. Growth asks what we become along the way.
-
-Those two questions pull against each other, and the tension is worth keeping rather than designing out. People set Direction at a moment in time. Growth changes what the system can do after that moment, which can change what the next Direction should be. A team holding only Direction runs a system that never improves. A team watching only Growth loses the thread of why the work was worth doing.
-
-Growth is the next stage, and it happens whether or not anyone chooses it. AI becomes more capable from what it takes out of the other four stages: the direction it was given, the context it read, the actions it ran, and the results it saw confirmed. Patterns form, and expertise forms out of the patterns. Nobody in an organization operates it — it belongs to the frontier AI companies, who hold the volume of data that everyone's usage generates. That is a general statement about how information accumulates, and it says nothing about any AI provider training on customer or enterprise work. Many state plainly that they do not.
-
-Where repeated Growth ends is a question rather than a prediction, and that question is deliberately kept out of the engineering material. It lives in [the hypothesis](../hypothesis/ai-future.md).
 
 ---
 
@@ -136,4 +124,4 @@ These beliefs are what the rest of the framework rests on. The [principles](03-p
 
 ---
 
-The [problem](01-problem.md) explains why this is needed. [The framework](04-framework.md) sets out the five stages in full.
+The [problem](01-problem.md) explains why this is needed. [The framework](04-framework.md) sets out the four stages in full.

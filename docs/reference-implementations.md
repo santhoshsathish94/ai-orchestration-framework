@@ -158,7 +158,7 @@ and deployment gates wired into their real tooling.
 
 All three run the same cycle:
 
-> **Direction → Context → Action → Success**
+> **Context → Direction → Action → Success**
 
 Cross-Team Knowledge Access spends most of its time in Context. Production Exception Remediation
 carries a cycle all the way to Success in the real environment. Multi-Repository Defect Remediation

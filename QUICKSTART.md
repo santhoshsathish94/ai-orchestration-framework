@@ -2,13 +2,13 @@
 
 Run a first Clover cycle on a real task in about 15 minutes.
 
-Clover is an AI Orchestration Framework connecting human Direction, real-world Context, AI-driven
+Clover is an AI Orchestration Framework connecting real-world Context, human Direction, AI-driven
 Action, and validated Success into a repeatable cycle.
 
 There is nothing to install. The cycle runs on real work, with whatever tools and AI assistant are
 already in use.
 
-> **Direction → Context → Action → Success**
+> **Context → Direction → Action → Success**
 
 ## What this cycle adds
 
@@ -16,34 +16,35 @@ Most AI work today runs on three stages. A human gives the Direction, AI perform
 whatever that human typed in, and after several passes the result becomes Success. It works, and it
 is ordinary.
 
-This first cycle adds the fourth stage. The assistant reads the real systems instead of a
-description of them, and the human says where the answer probably is. That pairing is what the rest
-of the framework is about.
+This cycle starts with Context instead. The assistant reads the real systems before anyone describes
+them, and the Direction is given against what is there. That pairing is what the rest of the
+framework is about.
 
 ## 1. Pick a real task (2 min)
 
 Something small and real works best — a bug, a small feature, a recurring exception. The cycle needs
 concrete work to run on.
 
-## 2. Say what you are trying to get done (2 min)
-
-Tell the assistant the outcome, not only the task. What would count as done, what must not happen,
-and what it may read. A good assistant asks for all three before it touches anything, and it asks
-for a specific missing piece rather than guessing when a system cannot be connected.
-[What we ask of agents →](AGENTS.md)
-
-## 3. Give the assistant something real to read (3 min)
+## 2. Give the assistant something real to read (3 min)
 
 Hand over a source instead of describing the problem from memory: the repository, the failing test,
 the log lines, the ticket, the query results, the running application in the development
 environment. A read-only MCP server in front of that one system is enough, scoped to what the human
 driving the work already has access to, at the privileges they already hold. One source is enough to
 start.
+[What to connect, and in what order →](docs/orchestration-environment.md#building-one)
+
+## 3. Say what you are trying to get done (2 min)
+
+Now that the assistant can see the systems, tell it the outcome, not only the task. What would count
+as done, what must not happen, and what it may read. A good assistant asks for all three before it
+changes anything, and it asks for a specific missing piece rather than guessing when a system cannot
+be connected.
+[What we ask of agents →](AGENTS.md)
 
 Then point. Say which service went out last week, which job has always been fragile, which part of
 the code to read first. The systems are a haystack, and a pointer from someone who works in them
 every day is worth more than a longer description of the task.
-[What to connect, and in what order →](docs/orchestration-environment.md#building-one)
 
 ## 4. Copy the orchestration brief (1 min)
 
@@ -58,8 +59,8 @@ assistant and a note on **who owns what**.
 
 | Stage | Leave the stage with… |
 |---|---|
-| **Direction** | A one-sentence outcome, what must not happen, where the answer probably is, and what would demonstrate it |
 | **Context** | What the real systems showed, and the gaps you could not reach named |
+| **Direction** | A one-sentence outcome, what must not happen, where the answer probably is, and what would demonstrate it |
 | **Action** | The smallest focused path, an owner per step, and the change itself |
 | **Success** | Evidence that maps back to the outcome, and what it does not cover |
 

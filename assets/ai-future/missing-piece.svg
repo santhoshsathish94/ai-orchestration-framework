@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img" aria-labelledby="mp-title mp-desc" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
   <title id="mp-title">What does not carry across sessions</title>
-  <desc id="mp-desc">Three panels in a row, each one a session that runs Direction, Context, Action and Success and then ends. Between the panels the connecting line is broken and marked with a cross, showing that what a session learned does not reach the next one. Below, three items name what would have to persist: continual learning after deployment, credit assignment over long horizons, and goals that outlast a single session.</desc>
+  <desc id="mp-desc">Three panels in a row, each one a session that runs Context, Direction, Action and Success and then ends. Between the panels the connecting line is broken and marked with a cross, showing that what a session learned does not reach the next one. Below, three items name what would have to persist: continual learning after deployment, credit assignment over long horizons, and goals that outlast a single session.</desc>
 
   <rect width="1200" height="520" fill="#ffffff"/>
 
@@ -28,17 +28,17 @@
 
   <g font-size="18" fill="#39424d">
     <text x="118" y="180" font-weight="700" fill="#0a6a5f">session 1</text>
-    <text x="118" y="216">Direction · Context</text>
+    <text x="118" y="216">Context · Direction</text>
     <text x="118" y="246">Action · Success</text>
     <text x="118" y="284" font-size="17" fill="#66717e">then it ends</text>
 
     <text x="478" y="180" font-weight="700" fill="#0a6a5f">session 2</text>
-    <text x="478" y="216">Direction · Context</text>
+    <text x="478" y="216">Context · Direction</text>
     <text x="478" y="246">Action · Success</text>
     <text x="478" y="284" font-size="17" fill="#66717e">then it ends</text>
 
     <text x="838" y="180" font-weight="700" fill="#0a6a5f">session 3</text>
-    <text x="838" y="216">Direction · Context</text>
+    <text x="838" y="216">Context · Direction</text>
     <text x="838" y="246">Action · Success</text>
     <text x="838" y="284" font-size="17" fill="#66717e">then it ends</text>
   </g>

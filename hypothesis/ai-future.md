@@ -8,7 +8,7 @@
 
 Clover has two layers, and they are kept apart on purpose.
 
-The engineering layer is the five stages — Direction, Context, Action, Success, Growth. Teams can use it today, and it stands on its own. [The framework in full →](../docs/04-framework.md)
+The engineering layer is four stages — Context, Direction, Action, Success. Teams can use it today, and it stands on its own. Growth sits beyond those four, and nobody in an organization runs it. [The framework in full →](../docs/04-framework.md)
 
 This document is the other layer, and **it is not part of the framework**. No stage depends on it. A team can run every cycle the repository describes, get the outcomes in the [case studies](../case-studies/), and disagree with every word here. The engineering material loses nothing if this document turns out to be wrong.
 
@@ -54,7 +54,7 @@ Robotics supplies none of those three. A fully embodied system that forgets ever
 
 Embodiment matters for a different reason. The physical world can teach a system things no text corpus contains, and reality supplies the evidence directly rather than through somebody's curation. That is worth taking seriously on its own terms. It is also a separate claim from autonomy, and the two get merged often enough that we keep them apart here.
 
-![Three panels in a row, each a session that runs Direction, Context, Action and Success and then ends, with the connecting line broken between them, and below them the three things that would have to last: continual learning after deployment, credit assignment over long horizons, and goals that outlast a single session](../assets/ai-future/missing-piece.svg)
+![Three panels in a row, each a session that runs Context, Direction, Action and Success and then ends, with the connecting line broken between them, and below them the three things that would have to last: continual learning after deployment, credit assignment over long horizons, and goals that outlast a single session](../assets/ai-future/missing-piece.svg)
 
 ---
 
@@ -94,7 +94,7 @@ An AI system does not need to want autonomy for this to run. Competition can cre
 
 The dynamic above has been described before. Competitive pressure eroding safety margins in an AI development race is well-established territory. Armstrong, Bostrom and Shulman's *Racing to the Precipice* modeled it directly, Bostrom's *Superintelligence* treats it at length, and the "race to the top" framing used across frontier labs is an attempt to invert it.
 
-Nothing here claims to have found that dynamic. What this document adds is a narrower question: if autonomy is going to increase under competitive pressure, what does the engineering discipline for granting it look like? That is the question the five stages are trying to answer, and it is why the two layers sit in the same repository.
+Nothing here claims to have found that dynamic. What this document adds is a narrower question: if autonomy is going to increase under competitive pressure, what does the engineering discipline for granting it look like? That is the question the four stages are trying to answer, and it is why the two layers sit in the same repository.
 
 ---
 
@@ -151,9 +151,9 @@ Any one of these would meaningfully weaken the argument. Several together would 
 
 ## The question to leave with
 
-> With everything AI can already do, how much more growth do we seek, and in the progress of growth do we still stay in control?
+> With everything AI can already do, how much more growth do we seek — and in the progress of growth, who stays in control?
 
-Control is the thread through both layers. Clover opens with a human who controls what matters, the desired outcome, constraints, boundaries, and what must not happen, and approves the result. Direction asks where we should go, Growth asks what we become along the way, and the framework is an argument that the first has to keep hold of the second. [Direction and Growth in the engineering layer →](../docs/02-philosophy.md#direction-and-growth)
+Control is the thread through both layers. Clover puts a human in control of what matters, the desired outcome, constraints, boundaries, and what must not happen, and that human approves the result. Direction asks where we should go, Growth asks what we become along the way, and the framework is an argument that the first has to keep hold of the second. [The growth clover in the engineering layer →](../docs/02-philosophy.md#three-leaves-then-four-then-five)
 
 Nobody can say today how far growth runs, or whether there is a point where the direction a human set stops describing the system carrying it out. Clover does not answer that. It keeps the question attached to the stage that raises it.
 
@@ -161,13 +161,13 @@ Nobody can say today how far growth runs, or whether there is a point where the 
 
 ## What this changes about the engineering layer
 
-Very little. The five stages were built for work happening now.
+Very little. The four stages were built for work happening now.
 
 If autonomy does increase because competition rewards it, the useful question is what has to be true before each increment gets granted. The framework already answers that:
 
 - **Success before wider autonomy.** How much AI decides widens where outcomes of that kind have repeatedly held up in the real environment. [How much autonomy to grant →](../docs/08-governance.md#how-much-autonomy-to-grant)
 - **Ownership survives delegation.** As AI takes more of the path, a named human still owns the objective, the constraints, and the risk. Delegation shares work and does not move accountability.
-- **Growth compounds only what held up.** Validated experience becomes expertise, and unvalidated output does not, because a system that learns from its own guesses amplifies them.
+- **Only what held up gets written back.** Validated experience becomes the context the next cycle reads, and unvalidated output does not, because a system that learns from its own guesses amplifies them.
 - **Reversibility.** The faster a system acts, the more the ability to observe and undo matters.
 
 None of this slows a capable team down, and it gives a team something to point at each time it widens what AI decides.

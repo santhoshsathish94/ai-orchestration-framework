@@ -2,8 +2,9 @@
 
 Governance is what keeps the cycle safe as it scales. It makes ownership, access, attribution, and
 approval explicit, and it matters most where AI is the thing acting. It sits across [the Clover
-framework](04-framework.md) rather than inside one stage: Direction is where ownership is stated,
-Action is where approvals bite, and Success is where somebody has to stand behind the evidence.
+framework](04-framework.md) rather than inside one stage: Context is where access is scoped,
+Direction is where ownership is stated, Action is where approvals bite, and Success is where
+somebody has to stand behind the evidence.
 
 ## Keep humans responsible
 

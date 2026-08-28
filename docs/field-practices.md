@@ -21,9 +21,9 @@ productive. Many things were moving, and there was visible activity everywhere.
 The outcomes told a different story. One blocker was ultimately resolved better by someone else. The
 other accumulated band-aid fixes instead of a real resolution. The new feature came out weak.
 
-The problem was not AI capacity. **Human direction and context were spread too thin.** With attention
-divided three ways, the Direction given to each task stayed vague and the Context behind it stayed
-shallow, so the output was shallow too.
+The problem was not AI capacity. **Context and human direction were spread too thin.** With attention
+divided three ways, the Context behind each task stayed shallow and the Direction given to it stayed
+vague, so the output was shallow too.
 
 Dropping the parallelism and working one stream at a time finally resolved the hardest issue at its
 root (see [the React memory leak case study](../case-studies/02-react-rsc-memory-leak.md)).
@@ -32,7 +32,7 @@ root (see [the React memory leak case study](../case-studies/02-react-rsc-memory
 
 - Treat **human attention as the scarce resource**, rather than AI throughput. The ability to run many
   things in parallel is a temptation and not a mandate.
-- Give one workstream focused Direction and real Context before starting the next.
+- Give one workstream real Context and focused Direction before starting the next.
 - Watch for the **illusion of progress**. Motion across many tasks and outcomes are different things,
   and only one of them can be demonstrated.
 - Beware **false economy**. Under-resourcing a task while also spreading attention thin costs more
@@ -70,8 +70,8 @@ fix-first thrashing that preceded it.
   go back for the information the attempts were missing.
 - **A fix nobody can explain is not a diagnosis.** Ask for the reasoning before the change.
 
-**Reinforces:** [Principle 2 — Context comes from the real
-environment](03-principles.md#2-context-comes-from-the-real-environment) and [Principle 4 — Success is
+**Reinforces:** [Principle 1 — Context comes from the real
+environment](03-principles.md#1-context-comes-from-the-real-environment) and [Principle 4 — Success is
 demonstrated by the environment](03-principles.md#4-success-is-demonstrated-by-the-environment).
 
 ---
@@ -102,8 +102,9 @@ applications facing the same class of problem.
   and contribute it upstream where that is appropriate.
 
 **Reinforces:** [Principle 4 — Success is demonstrated by the
-environment](03-principles.md#4-success-is-demonstrated-by-the-environment) and [Principle 5 — Growth
-is validated before it is reused](03-principles.md#5-growth-is-validated-before-it-is-reused). A
+environment](03-principles.md#4-success-is-demonstrated-by-the-environment) and [Principle 1 —
+Context comes from the real
+environment](03-principles.md#1-context-comes-from-the-real-environment). A
 workaround resolves an incident. Understanding the root cause can resolve a class of problems.
 
 ---
@@ -142,9 +143,8 @@ without first being memorized by a person.
 - Keep review proportionate. Being out of context is a reason to look harder at the evidence, and not
   a reason to approve faster because the explanation sounded confident.
 
-**Reinforces:** [Principle 2 — Context comes from the real
-environment](03-principles.md#2-context-comes-from-the-real-environment) and [Principle 5 — Growth is
-validated before it is reused](03-principles.md#5-growth-is-validated-before-it-is-reused). Knowledge
+**Reinforces:** [Principle 1 — Context comes from the real
+environment](03-principles.md#1-context-comes-from-the-real-environment). Knowledge
 held by a system stays available when the people who held it are not.
 
 ---
@@ -166,7 +166,8 @@ In the second, work on a fix in an open-source library, that discipline was not 
 persisted between passes. Without the accumulated context, the full flow was never understood, and the
 work degenerated into repeated attempts at a fix — the same thrashing described in
 [Lesson 2](#lesson-2--read-the-system-before-fixing-it). It recovered when the cycle was applied deliberately:
-state the direction, gather the context, act, check the outcome, keep what was learned, and go again.
+gather the context, state the direction, act, check the outcome, write down what was learned, and go
+again.
 
 The same person, the same tools, the same period. The variable was whether understanding was being
 written down.
@@ -185,15 +186,14 @@ written down.
   context files are written before the next attempt, which is the only thing that makes the next pass
   cheaper than the last.
 
-**Reinforces:** [Principle 5 — Growth is validated before it is
-reused](03-principles.md#5-growth-is-validated-before-it-is-reused), [Principle 2 — Context comes from
-the real environment](03-principles.md#2-context-comes-from-the-real-environment), and
+**Reinforces:** [Principle 1 — Context comes from
+the real environment](03-principles.md#1-context-comes-from-the-real-environment) and
 [Context engineering](05-context-engineering.md#where-context-lives).
 
 ---
 
 ## Closing
 
-These lessons share a root. AI multiplies whatever Direction and Context it is given, so focused
-intent and a context-first workflow multiply into strong outcomes, and scattered attention and
-fix-first guessing multiply into noise. Keeping the direction good is most of the job.
+These lessons share a root. AI multiplies whatever Context and Direction it is given. Teams that read
+the system first and then say what they want get outcomes that hold up. Teams that skip the reading
+get a lot of output and few outcomes.

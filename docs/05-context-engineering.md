@@ -1,6 +1,8 @@
 # Context
 
-Context is the second stage of [the Clover framework](04-framework.md). It covers what the system needs to know about reality before anything acts on it.
+Context is the first stage of [the Clover framework](04-framework.md). It covers what the system needs to know about reality before anything acts on it.
+
+It comes first because the systems are already running before anyone asks for anything. The common way of working is Direction → Action → Success, where context is whatever the human remembers to hand over, so it turns up as a consequence of the direction. Here the direction is given against what is already there.
 
 In the common clover, context is only what one human can hand over. That is more than what they type — they can attach files, or point at the repository they happen to be working in — and it stays bounded by what that one human can reach and remember. In the lucky clover it becomes the current systems the organization uses: every repository with its many projects and documentation, the datasources the applications connect to, the logs and telemetry, the deployment environments, and the running applications. Tests, history, whatever was already tried, and what earlier passes wrote down sit here too.
 

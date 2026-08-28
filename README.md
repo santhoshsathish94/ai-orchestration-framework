@@ -1,15 +1,17 @@
 # Clover
 
-> **Direction → Context → Action → Success**
+> **Context → Direction → Action → Success**
 
-Clover is an AI Orchestration Framework connecting human Direction, real-world Context, AI-driven
+Clover is an AI Orchestration Framework connecting real-world Context, human Direction, AI-driven
 Action, and validated Success into a repeatable cycle. It sits on top of the systems a team already
 runs, so there is nothing to install and nothing to migrate onto.
 
-Five leaves, and a team runs four of them: Direction, Context, Action, Success. The fifth stage is
-Growth, and nobody in an organization operates it.
+Four stages, and Context comes first. The common way of working is Direction → Action → Success,
+where context is whatever the human remembers to hand over, so it arrives as a consequence of the
+direction. Clover starts with Context because the systems are already running before anyone asks for
+anything, and Direction is then given against what is actually there.
 
-**[🌐 Read it on the website →](https://santhoshsathish94.github.io/ai-orchestration-framework/)** — the five stages in about three minutes.
+**[🌐 Read it on the website →](https://santhoshsathish94.github.io/ai-orchestration-framework/)** — the four stages in about three minutes.
 
 ---
 
@@ -36,12 +38,13 @@ performs the Action from whatever that one human can hand over: not only what th
 files they attach and the repository they happen to be working in. After several passes the result
 becomes Success. This is how AI is used almost everywhere today, it produces real value, and it is
 ordinary. The limit is that those three stages only ever see as much of the organization as one
-human can reach and remember.
+human can reach and remember, and what they hand over arrives after the direction rather than before
+it.
 
-**Four leaves — the lucky clover. Context.** Context is no longer bounded by one human. It is
-the current systems the organization uses: every repository with its many projects and their
-documentation, the datasources the applications connect to, the logs and telemetry, the deployment
-environments, and the running applications.
+**Four leaves — the lucky clover. Context.** Context stops being bounded by one human, and it moves
+to the front of the cycle. It is the current systems the organization uses: every repository with
+its many projects and their documentation, the datasources the applications connect to, the logs and
+telemetry, the deployment environments, and the running applications.
 
 Reaching them takes a setup rather than a principle. Stand up **read-only MCP servers** in front of
 the repositories, the datasources, the logs and the environments, so an agent can read them
@@ -79,23 +82,21 @@ training on customer or enterprise work.
 
 ---
 
-## The five stages
+## The four stages
 
-The stages read in the order the work runs in. A team runs the first four.
+The stages read in the order the work runs in.
 
 | Stage | What it covers | The question it answers |
 |---|---|---|
-| **Direction** | The human controls what matters, the desired outcome, constraints, boundaries, and what must not happen, and approves | What needs to be done, and what must not happen? |
 | **Context** | The current systems the organization uses — repositories and their projects and documentation, datasources, logs and telemetry, deployment environments, running applications | What do we need to know about reality before acting? |
+| **Direction** | The human controls what matters, the desired outcome, constraints, boundaries, and what must not happen, and approves | What needs to be done, and what must not happen? |
 | **Action** | AI determines how the work should happen and executes within those boundaries | What should we do, and how should the work happen? |
 | **Success** | The intended outcome demonstrated by the real environment | Did reality validate the intended outcome? |
-| **Growth** | What AI learns, and the expertise it forms, out of the other four stages. The next stage, and not one a team operates | What is AI becoming? |
 
 Each stage has one job. The complexity belongs in the context, the ownership, the evidence and the
-feedback around the stages, rather than in adding more of them. There is one principle per stage, so
-a team that remembers the stages already remembers the principles. If Success does not hold, the
-cycle goes back to Context rather than to Action, because a second attempt on the same information
-lands in the same place, faster.
+feedback around the stages, rather than in adding more of them. If Success does not hold, the cycle
+goes back to Context rather than to Action, because a second attempt on the same information lands
+in the same place, faster.
 
 [The framework in full →](docs/04-framework.md) · [The principles →](docs/03-principles.md)
 

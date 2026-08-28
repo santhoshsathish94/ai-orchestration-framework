@@ -1,11 +1,11 @@
 # Orchestration Brief — &lt;Task or Outcome&gt;
 
 > A one-page brief for running a single task through Clover:
-> **Direction → Context → Action → Success**
+> **Context → Direction → Action → Success**
 >
 > Copy this file, rename it for the task, and fill each section as the work proceeds. The prompts are
 > starting points for an AI assistant — adapt them to the tools at hand. Keep the brief short. The
-> value is in clear direction, real context, and honest evidence, not in length.
+> value is in real context, clear direction, and honest evidence, not in length.
 
 | Field | Value |
 |---|---|
@@ -16,31 +16,10 @@
 
 ---
 
-## 1. Direction — *what needs to be done*
+## 1. Context — *what the real systems show*
 
-State the outcome worth reaching, the edges of the work, and what would show it happened.
-
-- **Problem / trigger:** …
-- **Desired outcome (one sentence):** …
-- **What would demonstrate it:** …
-- **Out of scope / must not change:** …
-- **Needs human approval:** …
-
-> **Prompt:** "Here is a problem: &lt;describe&gt;. Before you read anything or propose anything,
-> restate the outcome we actually want in one sentence, propose what would demonstrate that outcome
-> in the real environment, and ask me about anything I have left out — especially what this work must
-> not touch, and which systems you would like to read."
-
-**Ownership:** The human controls what matters, the desired outcome, constraints, boundaries, and
-what must not happen. Approval stays with the human. AI sharpens the wording, names conflicts
-between stated goals, and asks about the parts nobody mentioned.
-
----
-
-## 2. Context — *what the real systems show*
-
-Gather what the problem actually turns on, from the systems the organization already runs rather
-than from assumption. Keep this section current — every pass adds to it.
+Start here. Gather what the problem actually turns on, from the systems the organization already
+runs rather than from assumption. Keep this section current — every pass adds to it.
 
 - **Known context:** …
 - **Sources read (code, tickets, logs, telemetry, data, environments):** …
@@ -48,13 +27,34 @@ than from assumption. Keep this section current — every pass adds to it.
 - **Could not reach:** …
 - **What earlier attempts showed, and what they ruled out:** …
 
-> **Prompt:** "Before proposing anything, read &lt;sources&gt;. Summarize what you now know about how
-> the system actually behaves, list what is still unknown, and say what you could not reach. For
+> **Prompt:** "Before we agree on what to do, read &lt;sources&gt;. Summarize what you now know about
+> how the system actually behaves, list what is still unknown, and say what you could not reach. For
 > anything you could not reach, name the specific piece of information you need and ask me for it
 > rather than assuming it."
 
 **Ownership:** The human decides which systems may be read, which sources can be trusted, and when
-the context is good enough to act on. AI does most of the gathering and reports the gaps.
+there is enough to set the direction. AI does most of the gathering and reports the gaps.
+
+---
+
+## 2. Direction — *what needs to be done*
+
+With the systems read, state the outcome worth reaching, the edges of the work, and what would show
+it happened.
+
+- **Problem / trigger:** …
+- **Desired outcome (one sentence):** …
+- **What would demonstrate it:** …
+- **Out of scope / must not change:** …
+- **Needs human approval:** …
+
+> **Prompt:** "Here is the problem: &lt;describe&gt;. Given what you have just read, restate the
+> outcome we actually want in one sentence, propose what would demonstrate that outcome in the real
+> environment, and ask me about anything I have left out — especially what this work must not touch."
+
+**Ownership:** The human controls what matters, the desired outcome, constraints, boundaries, and
+what must not happen. Approval stays with the human. AI sharpens the wording, names conflicts
+between stated goals, and asks about the parts nobody mentioned.
 
 ---
 

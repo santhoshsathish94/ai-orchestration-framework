@@ -29,7 +29,7 @@ at a second site in Next.js, independently reported by another engineer, and is 
 
 *The visual is intentionally simple: stabilize the incident, continue the investigation, fix the underlying problem, and give the fix back to the ecosystem.*
 
-## Direction — stabilize, then keep going
+## Context — what the systems showed
 
 - **Unbounded server memory → OOM.** Under real traffic the application's memory climbed continuously
   and the process eventually crashed — producing production incidents and release delays. (The
@@ -42,19 +42,10 @@ at a second site in Next.js, independently reported by another engineer, and is 
   a partial Next.js fix in 16.0.3 did not fully resolve it. The real defect lived deeper than the
   application code.
 
-### The workaround was not the destination
+### What the investigation took
 
-`NODE_OPTIONS=--stack-trace-limit=0` was the practical production mitigation. It stopped the memory growth and restored stability, so it was useful and necessary. But it also globally disabled stack capture, reducing observability for unrelated errors.
-
-The direction was set deliberately at that point. Stopping the crashes was the mitigation. The
-outcome worth reaching was understanding why disabling stack capture changed the behavior, and
-finding out whether the underlying defect could be fixed without giving up stack traces across the
-application.
-
-## Context — what the investigation took
-
-None of this arrived in one insight. It took **several days of repeated profiling**, and most of that
-time was spent on explanations that turned out to be wrong.
+The root cause did not arrive in one insight. It took **several days of repeated profiling**, and
+most of that time was spent on explanations that turned out to be wrong.
 
 **Even the mitigation was not obvious.** `--stack-trace-limit=0` was not an educated first guess; it
 came out of testing Node flags one at a time against a measured heap curve. The result that mattered
@@ -140,6 +131,17 @@ diagnoses of the same shape, in two files, are strong evidence the root cause is
 artifact of one setup. React already limits Flight stack capture elsewhere for exactly this memory
 reason (#34864, #37086, #37158), so the fix fits an accepted, existing pattern.
 
+## Direction — stabilize, then keep going
+
+### The workaround was not the destination
+
+`NODE_OPTIONS=--stack-trace-limit=0` was the practical production mitigation. It stopped the memory growth and restored stability, so it was useful and necessary. But it also globally disabled stack capture, reducing observability for unrelated errors.
+
+The direction was set deliberately at the point the crashes stopped. Stopping the crashes was the
+mitigation. The outcome worth reaching was understanding why disabling stack capture changed the
+behavior, and finding out whether the underlying defect could be fixed without giving up stack
+traces across the application.
+
 ## Action — the fix and the contribution
 
 The cleanup reason is internal and never surfaced to users, so it does not need a stack trace at all.
@@ -200,11 +202,10 @@ is the lowered barrier rather than the split of credit.
    against real, measured behavior before it was trusted, rather than accepting generated code or
    explanations at face value.
 
-The work followed the four working stages. **Direction** was a production incident worth fixing at the root.
-**Context** was reproducing the leak, isolating the mechanism, and gathering the evidence.
+The work followed the four working stages. **Context** was reproducing the leak, isolating the mechanism, and gathering the evidence.
+**Direction** was a production incident worth fixing at the root.
 **Action** was the focused one-file fix and the upstream contribution path. **Success** was measured,
-repeatable heap evidence plus independent corroboration. **Growth** is a reusable upstream fix and
-the lessons recorded here. Each failed check sent the work back to Context rather than to another
+repeatable heap evidence plus independent corroboration. Each failed check sent the work back to Context rather than to another
 attempt at a fix, which is the only reason the four wrong answers were ever ruled out.
 
 ## Success — validated under sustained load

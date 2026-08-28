@@ -35,6 +35,22 @@ size.
 
 ---
 
+## Context — the system as it actually was
+
+The current API's live behavior was the reference for the rewrite, rather than its documentation or
+the original plan. That distinction cost real time later, and it is why the parity harness reads
+live responses instead of expected ones.
+
+What the existing integration was made of:
+
+- ~7,800 lines across 200+ files of hand-written, content-type-specific glue.
+- 99 `Gql*` models and converters, plus a 1,246-line AutoMapper profile carrying 85 hand-written
+  maps.
+- A bespoke rich-text link resolver and a dynamic query builder.
+- 89 `.graphql` query and fragment files, kept in lockstep by hand every time a content type changed.
+- 2–3 GraphQL round trips per request, a general-purpose cache, minimal observability, and nothing
+  standing between unknown-slug traffic and Contentful.
+
 ## Direction — what the work was for
 
 A manual rewrite was estimated at 8–10 weeks of team effort. The question was whether AI, handling
@@ -60,22 +76,6 @@ The reasons to move:
   metrics or alerts.
 - **The stack was aging.** .NET 9 plus a hand-rolled GraphQL client was slower under load and harder
   to extend than a modern Minimal API stack.
-
-## Context — the system as it actually was
-
-The current API's live behavior was the reference for the rewrite, rather than its documentation or
-the original plan. That distinction cost real time later, and it is why the parity harness reads
-live responses instead of expected ones.
-
-What the existing integration was made of:
-
-- ~7,800 lines across 200+ files of hand-written, content-type-specific glue.
-- 99 `Gql*` models and converters, plus a 1,246-line AutoMapper profile carrying 85 hand-written
-  maps.
-- A bespoke rich-text link resolver and a dynamic query builder.
-- 89 `.graphql` query and fragment files, kept in lockstep by hand every time a content type changed.
-- 2–3 GraphQL round trips per request, a general-purpose cache, minimal observability, and nothing
-  standing between unknown-slug traffic and Contentful.
 
 ## Action — how the rewrite ran
 

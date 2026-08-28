@@ -1,7 +1,11 @@
 <!--
-Thanks for contributing. This follows the framework: Direction, then Action,
-then Success. Context is what you read to get there. Keep it short.
+Thanks for contributing. This follows the framework: Context first, then Direction,
+then Action, then Success. Keep it short.
 -->
+
+## Context
+
+<!-- What you read to get here — the pages, the code, the discussion, the behavior you saw. -->
 
 ## Direction
 

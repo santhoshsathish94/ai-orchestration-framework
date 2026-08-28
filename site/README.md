@@ -29,7 +29,7 @@ site/
 The page is the narrative arc, not one section per stage. The clover grows as the reader scrolls:
 three leaves, then four, then five.
 
-1. Hero — the name, a two or three line explanation, the five-leaf mark, one line per stage. Nothing else
+1. Hero — the name, the canonical definition, the four-leaf mark, one line per stage. Nothing else
 2. AI current capabilities — short
 3. Three leaves · the common clover — short
 4. Four leaves · the lucky clover — the largest and most important section on the page
@@ -63,11 +63,11 @@ The marks are the site's identity and they carry the argument, so they have rule
 - **Three marks carry the arc**, each in a `<figure class="arc__mark">` with a caption. The caption
   is only the name — no geometry or construction detail:
   - three leaves at 120 degrees, labeled Direction, Action, Success — "the common clover";
-  - four leaves at 90 degrees, labeled Direction, Context, Action, Success, with Context drawn solid
+  - four leaves at 90 degrees, labeled Context, Direction, Action, Success, with Context drawn solid
     as the leaf that just arrived — "the lucky clover";
-  - five leaves at 72 degrees, with the Growth leaf drawn dotted because it has not arrived yet —
-    "the growth clover". The hero mark carries the same dotted fifth leaf; the small header mark is
-    decorative and stays solid.
+  - five leaves at 72 degrees, with the Growth leaf drawn dotted as the next stage —
+    "the growth clover". The hero mark is four leaves, all solid and unlabeled; the small header mark
+    is decorative and stays solid.
 - Leaf names are real `<text>` labels positioned outside each leaf tip, inside a `viewBox` of
   `-30 -18 160 117` so the labels have room. They are content, not decoration — never replace them
   with a legend.
@@ -83,22 +83,24 @@ The marks are the site's identity and they carry the argument, so they have rule
 
 ## Editing rules
 
-- **The arc is the spine.** Three leaves, then four, then five. Do not flatten it back into five
-  equal sections, and do not reorder the story so Context arrives before Action and Success.
-- **Five stages only:** Direction → Context → Action → Success → Growth. Never introduce a competing
+- **The arc is the spine.** Three leaves, then four, then five. Do not flatten it back into equal
+  sections, and do not move the four-leaf section ahead of the three-leaf one.
+- **Four stages only:** Context → Direction → Action → Success. Never introduce a competing
   arrow-chain, never append "→ repeat" to that one, and never bring back the short form
-  "Where → Know → Do → Validate → Become". Direction is *what*, not *where*.
+  "Where → Know → Do → Validate". Direction is *what*, not *where*.
+- **Growth is not part of the framework**, so it appears in exactly one section, `#fifth-leaf`, and
+  nowhere else on the page. Not in the hero, not in a stage list, not in an example, not in the
+  definition.
 - **"Leaves" is for the picture.** Say leaves when describing a clover mark. Everywhere else on the
   page, say stages.
-- **The working loop is four stages** — Direction, Context, Action, Success. Growth is not something
+- **The framework is four stages** — Context, Direction, Action, Success. Growth is not something
   a team runs, so no example, walkthrough or diagram gets a Growth step. Examples end at Success and
   loop back into Context.
 - **Iteration feeds Context, never Growth.** The page states the rule plainly: after each success or
   failure, the context files are written before the next attempt.
-- **Never call it a model.** Clover is an AI Orchestration Framework connecting human Direction,
-  real-world Context, AI-driven Action, and validated Success into a repeatable cycle. "Model"
-  collides with
-  "AI model".
+- **Never call it a model.** Clover is an AI Orchestration Framework connecting real-world Context,
+  human Direction, AI-driven Action, and validated Success into a repeatable cycle. "Model" collides
+  with "AI model".
 - **Say "human"**, never "person" or "the user", for whoever holds Direction. Direction is the human
   controlling what matters, the desired outcome, constraints, boundaries, and what must not happen,
   and approving. Action is AI determining how the work should happen and executing within those
@@ -109,7 +111,8 @@ The marks are the site's identity and they carry the argument, so they have rule
   request that is *not merged*, and the Contentful production cutover *has not run* — the site must
   keep saying so.
 - The four-leaf section says nothing about production. Development first, then the other
-  non-production environments. Access is read-only and scoped to what the human already holds.
+  non-production environments. Access is read-only and scoped to what the human already holds. It is
+  also where the page explains why Context comes first, and that explanation appears once.
 - Growth is the next stage, never a hypothesis, a prediction or "next phase", and never described as
   dangerous. Do not explain the *Black Clover* or devil association anywhere.
 - Never assert that any AI provider trains on customer or enterprise work. Keep the accumulation

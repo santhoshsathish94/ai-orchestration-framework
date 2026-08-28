@@ -11,7 +11,7 @@ tool-specific, and the prompts work with any capable coding assistant.
 > the results are invented to show the shape of a full cycle. For real, evidence-backed work see
 > the [case studies](../../case-studies/).
 
-> **Direction → Context → Action → Success**
+> **Context → Direction → Action → Success**
 
 | Field | Value |
 |---|---|
@@ -22,38 +22,19 @@ tool-specific, and the prompts work with any capable coding assistant.
 
 ---
 
-## 1. Direction
+## 1. Context
 
-- **Problem / trigger:** Alerting shows `POST /api/checkout` returning `500` roughly 40 times an hour since the last deploy.
-- **Desired outcome:** Checkout succeeds at its normal rate, and this error class stops appearing.
-- **What would demonstrate it:** The `5xx` rate on `/api/checkout` back at its pre-deploy baseline (under 0.1%) and holding for 24 hours.
-- **Out of scope:** Changing how tax or discounts are calculated for orders that already work. The fix covers the failing path only.
-- **Needs human approval:** The deploy.
+The engineer granted read access to the exception logs, the deploy diff and the checkout code before
+any fix was discussed.
 
-> **Prompt used:** "Here is a problem: `POST /api/checkout` is returning 500s, about 40 an hour,
-> since our last deploy. Before you read anything or propose anything, restate the outcome we
-> actually want in one sentence, propose what would demonstrate that outcome in production, and ask
-> me about anything I have left out."
-
-**What the AI asked first:** What counts as done, what the fix must not touch, and whether it could
-read the exception logs, the deploy diff and the checkout code. The engineer granted read access to
-all three.
-
-**Ownership:** The engineer set the outcome and the boundaries. AI sharpened the wording and asked
-what the fix must not touch.
-
----
-
-## 2. Context
-
-- **Known context:** The errors started after deploy `v128`. Only the checkout path is affected.
+- **Known context:** Alerting shows `POST /api/checkout` returning `500` roughly 40 times an hour since the last deploy. The errors started after deploy `v128`. Only the checkout path is affected.
 - **Sources read:** the exception logs, the `v128` diff, `CheckoutController` and its dependencies.
 - **Open questions:** Which change in `v128`? Every request, or a subset?
 - **Could not reach:** Nothing relevant; the logs, the diff, and the code were all available.
 
-> **Prompt used:** "Before proposing any fix, read the last 50 checkout exceptions, the `v128` diff,
-> and `CheckoutController`. Summarize what you now know about how the system actually behaves, what
-> is still unknown, what you could not reach, and what you would need to be confident about the
+> **Prompt used:** "Before we agree on what to do, read the last 50 checkout exceptions, the `v128`
+> diff, and `CheckoutController`. Summarize what you now know about how the system actually behaves,
+> what is still unknown, what you could not reach, and what you would need to be confident about the
 > cause."
 
 **What the AI found:** Every stack trace is a null reference in `TaxCalculator.Apply()` where
@@ -62,6 +43,25 @@ matches the subset pattern — only orders placed without a coupon fail.
 
 **Ownership:** The engineer pointed at the trusted sources. AI read them, correlated the traces, and
 named the assumption that broke.
+
+---
+
+## 2. Direction
+
+- **Problem / trigger:** The recurring `500` on `POST /api/checkout` that started with `v128`.
+- **Desired outcome:** Checkout succeeds at its normal rate, and this error class stops appearing.
+- **What would demonstrate it:** The `5xx` rate on `/api/checkout` back at its pre-deploy baseline (under 0.1%) and holding for 24 hours.
+- **Out of scope:** Changing how tax or discounts are calculated for orders that already work. The fix covers the failing path only.
+- **Needs human approval:** The deploy.
+
+> **Prompt used:** "You have read the exceptions, the `v128` diff and the controller. Restate the
+> outcome we actually want in one sentence, propose what would demonstrate that outcome in
+> production, and ask me about anything I have left out."
+
+**What the AI asked back:** What counts as done, and what the fix must not touch.
+
+**Ownership:** The engineer set the outcome and the boundaries. AI sharpened the wording and named
+the decisions it still needed.
 
 ---
 

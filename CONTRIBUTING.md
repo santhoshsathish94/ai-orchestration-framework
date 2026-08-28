@@ -33,8 +33,8 @@ included. Corrections, questions, ideas, and case studies are all welcome.
 
 ## What we'll usually push back on
 
-- Added stages, jargon, or complexity the reader doesn't need. Clover is deliberately five stages,
-  and a team runs four of them: **Direction → Context → Action → Success.**
+- Added stages, jargon, or complexity the reader doesn't need. Clover is deliberately four stages:
+  **Context → Direction → Action → Success.**
 - Rungs, levels, scores, or grades for evidence or autonomy. They were removed on purpose, because a
   number is easier to claim than to justify. Say what you checked, what you observed, and where you
   stopped.

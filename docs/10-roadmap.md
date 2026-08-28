@@ -17,12 +17,7 @@ help getting real context in front of AI and keeping it there.
   reached.
 - Work on the gap named in [the orchestration environment](orchestration-environment.md): nothing
   today reliably shows when an agent acts outside intent inside access it legitimately holds.
-- Keep the framework at five stages while the material around it grows.
-
-The fifth stage stays where it is. Growth is what AI learns out of the other four, nobody in an
-organization runs it, and it arrives either way, so the framework describes it and moves on. Where
-repeated Growth ends stays labeled as a question and stays out of the engineering material. It lives
-in [the hypothesis](../hypothesis/ai-future.md).
+- Keep the framework at four stages while the material around it grows.
 
 ## Help shape it
 

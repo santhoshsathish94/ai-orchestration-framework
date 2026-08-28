@@ -47,7 +47,7 @@ team will ask before any of it is granted.
 ## Nothing to migrate onto
 
 Orchestration sits above the systems a team already runs. The work already happens somewhere —
-repositories, tickets, pipelines, logs, data stores — and the layer carries direction, context,
+repositories, tickets, pipelines, logs, data stores — and the layer carries context, direction,
 execution, evidence and learning across whatever those happen to be. What changes is how the work
 gets directed. The systems underneath keep running as they are.
 
@@ -63,10 +63,6 @@ questions a security team will ask before any of it is granted.
 
 ## The stages do not cost the same to adopt
 
-**Direction** costs habit and nothing else. Somebody says what needs to be done, what must not
-happen, and where they think the answer is, before the work starts. A team can begin that today with
-no access, no tooling and no approval to wait for.
-
 **Context** is the real investment, and it is where most of the early value shows up. Read-only reach
 into the code, the tickets, the logs and the data lets AI reason about the actual problem instead of
 a description of it. It is also the stage that needs someone to negotiate access, so it is the one
@@ -74,32 +70,35 @@ that stalls. It is where iteration lands too:
 
 > After each success and each failure, the context files are written before the next attempt.
 
-**Action** widens on its own once Direction and Context are steady. What AI is trusted to carry
+What a team writes down goes into those files, beside the work. Most teams skip that, because the
+work feels finished when the change ships.
+
+**Direction** costs habit and nothing else. Somebody says what needs to be done, what must not
+happen, and where they think the answer is, before the work starts. No tooling and no approval sit in
+front of it, and once the systems can be read, the direction is given against what is actually there.
+
+**Action** widens on its own once Context and Direction are steady. What AI is trusted to carry
 follows what has already held up in work of that kind.
 
 **Success** is the first discipline that changes how people report. Teams that start saying what they
 checked, what they observed, and where they stopped find out quickly how much of their reporting had
 been assertion.
 
-**Growth** costs nothing to adopt, because nobody in an organization runs it. It is what AI learns
-out of the other four stages, it belongs to the frontier AI companies who hold the volume of data
-that everyone's usage generates, and it arrives whether or not a team plans for it. What a team
-writes down goes into Context, beside the work. Most teams skip that, because the work feels
-finished when the change ships.
-
 ## A sequence that works
 
 1. **Start with one real problem the team already has** — a recurring exception, a defect nobody can
    place, a question that currently takes three teams to answer. A tool looking for a use does not
    survive contact with a busy week.
-2. **Teach the cycle rather than the tool.** Direction → Context → Action → Success outlives
-   whichever product the team is using this quarter.
-3. **Connect one real source, read-only.** A read-only MCP server in front of the repository, then
+2. **Connect one real source, read-only.** A read-only MCP server in front of the repository, then
    the logs, then the ticket history, then a datasource. Reading cannot break anything, so it is the
    cheapest way to find out whether the output can be trusted, and one connection at a time keeps the
    security conversation small.
-4. **Add the development environment, then the other non-production ones.** That is where checking
+3. **Add the development environment, then the other non-production ones.** That is where checking
    earns its place without new risk, alongside the pipeline triggers that already exist.
+4. **Give the direction against what the team can now see.** Somebody says what needs to be done,
+   what must not happen, and where they think the answer probably is. Teach that cycle rather than
+   the tool: Context → Direction → Action → Success outlives whichever product the team is using
+   this quarter.
 5. **Let people ask in whatever way they find natural.** When most questions can be asked and answered
    in conversation, the bottleneck stops being whoever knows the system best.
 6. **Widen what AI decides as results hold**, following

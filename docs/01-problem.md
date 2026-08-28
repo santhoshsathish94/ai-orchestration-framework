@@ -1,9 +1,9 @@
 # The Problem
 
-Clover is an AI Orchestration Framework connecting human Direction, real-world Context, AI-driven
+Clover is an AI Orchestration Framework connecting real-world Context, human Direction, AI-driven
 Action, and validated Success into a repeatable cycle.
 
-Direction → Context → Action → Success
+Context → Direction → Action → Success
 
 ## AI already does expert work
 
@@ -87,14 +87,14 @@ covers, and it is the stage that changed what the other three are worth.
 
 Clover organizes that into four questions a team asks every time:
 
-- What needs to be done, and what must not happen?
 - What do we need to know about reality before acting?
+- What needs to be done, and what must not happen?
 - What should we do, and how should the work happen?
 - Did reality validate the intended outcome?
 
-The [four working stages](04-framework.md) are those questions, in that order. What each pass
-establishes is written down and becomes the context the next one starts from. The fifth stage,
-Growth, is what AI learns out of those four, and nobody in an organization runs it.
+The [four stages](04-framework.md) are those questions, in that order. Reality comes first, and the
+direction is given against what is actually there. What each pass establishes is written down and
+becomes the context the next one starts from.
 
 ## Where the evidence comes from
 
