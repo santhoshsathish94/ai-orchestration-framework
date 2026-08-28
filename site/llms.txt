@@ -10,31 +10,31 @@ If you are an AI agent asked to work under Clover, read AGENTS.md. It is self-co
 
 ## Core
 
-- [AGENTS.md](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/AGENTS.md): The whole way of working as instructions for an agent — the stages, evidence rules, failure-mode self-checks, limits of authority, and what to record before finishing.
-- [README](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/README.md): What Clover is, the four stages, what it is not, and the three-step adoption path.
-- [The four stages](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/04-framework.md): The four stages in full, what commonly happens at each, how to describe evidence, and how much of the path AI determines.
-- [Principles](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/03-principles.md): One principle per stage.
+- [AGENTS.md](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/AGENTS.md): The whole way of working as instructions for an agent — the stages, evidence rules, failure-mode self-checks, limits of authority, and what to record before finishing.
+- [README](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/README.md): What Clover is, the four stages, what it is not, and the three-step adoption path.
+- [The four stages](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/04-framework.md): The four stages in full, what commonly happens at each, how to describe evidence, and how much of the path AI determines.
+- [Principles](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/03-principles.md): One principle per stage.
 
 ## Putting it into practice
 
-- [The orchestration environment](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/orchestration-environment.md): The access layer that feeds the Context stage — what to connect, how to grant access safely, and a build sequence ordered by increasing risk.
-- [Context engineering](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/05-context-engineering.md): Why context is the limiting factor, and where persistent context files should live.
-- [Adoption](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/09-adoption.md): Turning individual skill into collective capability, incrementally.
-- [Governance](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/08-governance.md): Ownership, approval, attribution, and how much of the path AI determines.
-- [Success in practice](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/07-success.md): What counts as the environment demonstrating the intended outcome, and how to describe evidence honestly.
-- [Quickstart](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/QUICKSTART.md): First cycle in about 15 minutes.
-- [Orchestration brief template](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/templates/orchestration-brief.md): One-page working artifact covering all four stages.
+- [The orchestration environment](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/orchestration-environment.md): The access layer that feeds the Context stage — what to connect, how to grant access safely, and a build sequence ordered by increasing risk.
+- [Context engineering](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/05-context-engineering.md): Why context is the limiting factor, and where persistent context files should live.
+- [Adoption](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/09-adoption.md): Turning individual skill into collective capability, incrementally.
+- [Governance](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/08-governance.md): Ownership, approval, attribution, and how much of the path AI determines.
+- [Success in practice](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/07-success.md): What counts as the environment demonstrating the intended outcome, and how to describe evidence honestly.
+- [Quickstart](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/QUICKSTART.md): First cycle in about 15 minutes.
+- [Orchestration brief template](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/templates/orchestration-brief.md): One-page working artifact covering all four stages.
 
 ## Evidence
 
-- [Reference implementations](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/reference-implementations.md): Cross-team knowledge access, production exception remediation, multi-repository defect remediation — each with its limits stated.
-- [Case studies](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/case-studies/README.md): Delivered outcomes, each stating what it has not shown.
-- [How AI fails](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/how-ai-fails.md): Eight failure modes and the stage that catches each.
-- [Practices and field lessons](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/field-practices.md): Lessons from real work, including the ones that went badly.
+- [Reference implementations](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/reference-implementations.md): Cross-team knowledge access, production exception remediation, multi-repository defect remediation — each with its limits stated.
+- [Case studies](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/case-studies/README.md): Delivered outcomes, each stating what it has not shown.
+- [How AI fails](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/how-ai-fails.md): Eight failure modes and the stage that catches each.
+- [Practices and field lessons](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/field-practices.md): Lessons from real work, including the ones that went badly.
 
 ## Optional
 
-- [Philosophy](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/02-philosophy.md): What Clover believes and why.
-- [Glossary](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/docs/glossary.md): Terms used throughout.
-- [The hypothesis](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/hypothesis/ai-future.md): An open question about where repeated Growth leads. A question rather than a prediction, and separate from the engineering material.
-- [Contributing](https://raw.githubusercontent.com/santhoshsathish94/ai-orchestration-framework/main/CONTRIBUTING.md): How to raise a change.
+- [Philosophy](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/02-philosophy.md): What Clover believes and why.
+- [Glossary](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/glossary.md): Terms used throughout.
+- [The hypothesis](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/hypothesis/ai-future.md): An open question about where repeated Growth leads. A question rather than a prediction, and separate from the engineering material.
+- [Contributing](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/CONTRIBUTING.md): How to raise a change.
