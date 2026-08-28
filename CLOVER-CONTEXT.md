@@ -31,7 +31,9 @@ every link resolves, and the website flows top to bottom with one leaf per secti
   "has not arrived".
 - Clover names: **the common clover** (three), **the lucky clover** (four), **the growth clover**
   (five).
-- Never mention *Black Clover* or any devil association.
+- Never mention *Black Clover* or any devil association. **One exception:** `site/author/index.html`
+  is the author's own page, and it lists *Black Clover* among his favourite anime. That is personal
+  taste, not framework material, and it stays.
 
 ### The framework is four stages
 
@@ -137,6 +139,11 @@ The page has width that is going unused. These sections must use the full measur
 - **Security and governance** — merge "Monitor the agent, not just the gate" into the "the thing
   worth building: monitor the agents" section. They are the same point said twice.
 - **Evidence** — retitle to **"Production case studies and reference implementations"**.
+- **The author** — there is a second sub-page, `site/author/index.html`, alongside the glossary. It
+  carries the author's own writing: who he is, what he likes, why he wrote Clover, and how he sees
+  the world right now, closing on Bhagavad Gita 2.47. It is the one place on the site written in the
+  first person about a life rather than about the framework, and it should stay that way. The nav
+  links to it on every page, and the home page's author section links to it too.
 
 ### The worked example
 

@@ -20,6 +20,7 @@ python -m http.server 8000 --directory site
 site/
   index.html        the whole story, one page, eleven sections
   glossary/         searchable terms
+  author/           who wrote this, in the first person
   styles.css
   app.js            tabs and the glossary filter
   llms.txt          the repository map for agents
@@ -128,9 +129,14 @@ The marks are the site's identity and they carry the argument, so they have rule
 - The worked example is `.run` — plain HTML and CSS, no images and no JavaScript. Keep it to a few
   steps, do not turn it back into prose, and keep it ending at Success with `.run__loop` turning back
   into Context.
-- `glossary/index.html` links back to `#problem`, `#direction`, `#context`, `#walkthrough`, `#agent`,
-  `#evidence` and `#fifth-leaf` on this page. Those IDs have to keep resolving.
-- American spelling. No employer, product, cluster or infrastructure names.
+- `glossary/index.html` and `author/index.html` both link back to `#three-leaves`, `#context`,
+  `#fifth-leaf`, `#walkthrough`, `#agent` and `#evidence` on this page. Those IDs have to keep
+  resolving, and all three navs are identical.
+- `author/index.html` is the one page written in the first person about a life rather than about the
+  framework. It is also the one place *Black Clover* may be named, as a favourite anime. Leave both
+  alone.
+- American spelling. No employer, product, cluster or infrastructure names — except on
+  `author/index.html`, where the author names his own employer in his own bio.
 - New terminology goes in [`docs/glossary.md`](../docs/glossary.md) first, then the site.
 
 ## Social preview

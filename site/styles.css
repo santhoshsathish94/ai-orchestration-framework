@@ -86,6 +86,20 @@ section[id] { scroll-margin-top: 5rem; }
 .lede { font-size: 1.12rem; color: var(--ink-2); }
 .note { font-size: 0.92rem; color: var(--muted); }
 
+/* ---------- author page ---------- */
+
+.author-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.4rem; align-items: center; }
+.author-head h1 { margin-top: 0; }
+@media (max-width: 560px) { .author-head { grid-template-columns: 1fr; gap: 0.9rem; } }
+
+/* Devanagari falls outside the system stack, so name faces that carry it. */
+.verse { margin: 2rem 0 0; padding: 0 0 0 1.1rem; border-left: 2px solid var(--accent-line); }
+.verse p[lang="sa"] {
+  font-family: "Nirmala UI", "Noto Sans Devanagari", "Mangal", serif;
+  font-size: 1.16rem; line-height: 1.9; color: var(--ink); margin: 0 0 0.7rem;
+}
+.verse__meaning { font-size: 0.95rem; color: var(--ink-2); margin: 0; }
+
 /* ---------- the clover mark ---------- */
 /* One <path id="clover-leaf"> lives in a hidden sprite at the top of the page. Every mark is that
    one leaf <use>d and rotated around (50, 44). No JS, no external assets. */
