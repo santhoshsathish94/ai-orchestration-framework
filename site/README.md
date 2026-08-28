@@ -143,6 +143,10 @@ The marks are the site's identity and they carry the argument, so they have rule
   only raster asset the site loads, cropped with the white knocked out to transparency. The clover
   stands for the framework; the feather stands for the author. Do not swap one for the other.
 - American spelling. No employer, product, cluster or infrastructure names.
+- **Bump the `?v=` on `styles.css` and `app.js` whenever either changes.** All three pages carry it.
+  GitHub Pages sends `Cache-Control: max-age=600` on every file and they expire independently, so
+  without it a returning visitor gets new HTML with a ten-minute-old stylesheet and the page renders
+  broken. Match it to the version in `VERSION`.
 - New terminology goes in [`docs/glossary.md`](../docs/glossary.md) first, then the site.
 
 ## Social preview
