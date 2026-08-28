@@ -41,7 +41,9 @@ three leaves, then four, then five.
 8. Security and governance
 9. Production case studies and reference implementations
 10. What it is not
-11. About the author
+11. The unknown clover — the question to leave with
+
+There is no author section on this page. The nav and the footer both link to `author/` instead.
 
 Failure-mode material is folded into the arc sections as "what happens there" rather than kept
 standalone.
