@@ -6,6 +6,16 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- **The site is six pages instead of one.** Getting started, Security and Evidence each have their
+  own page, so a security lead can be sent `/security/` rather than an anchor two thirds of the way
+  down. The home page keeps the whole argument — three stages, then four, then five, and the worked
+  example — because that arc is the thing that would break if it were chopped up.
+- **The setup instructions moved out of the lucky clover and into Getting started.** Read-only MCP
+  servers, scoping to the human, starting in development. It was instruction sitting inside a story;
+  the lucky clover now makes the argument and hands off.
+- **`site/check.ps1`.** Six pages with no build step means the header, nav and footer are copied six
+  times and will drift. It resolves every nav link to a site-root path and fails if the pages
+  disagree, checks the asset versions match, and follows every relative link and every anchor.
 - **Buttons in the hero.** Explore the framework, Getting started, and a plain link to the evidence.
   The page opened on prose with nothing to act on; there is now somewhere obvious to go from the top.
 

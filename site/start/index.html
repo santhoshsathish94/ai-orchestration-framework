@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting started — Clover</title>
+<meta name="description" content="Stand up read-only MCP servers in front of the systems you already run, drop AGENTS.md into a project, and run one real problem through the cycle.">
+<link rel="canonical" href="https://cloverframework.com/start/">
+<meta property="og:title" content="Getting started — Clover">
+<meta property="og:description" content="Three moves to connect the systems you already run, one file that makes an agent work this way, and one real problem to run through it.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://cloverframework.com/start/">
+<meta property="og:image" content="https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/assets/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a6a5f">
+<link rel="stylesheet" href="../styles.css?v=1.0.3">
+<script>document.documentElement.className = 'js';</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg class="clover-sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <path id="clover-leaf" d="M50 44C48 35 38 31 38 21C38 12 46 9 50 17C54 9 62 12 62 21C62 31 52 35 50 44Z"/>
+  </defs>
+</svg>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../">
+      <svg class="clover clover--brand" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <path class="clover__stem" d="M50 48C50 68 50 80 50 95"/>
+        <use class="clover__leaf is-filled" href="#clover-leaf"/>
+        <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(72 50 44)"/>
+        <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(144 50 44)"/>
+        <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(216 50 44)"/>
+        <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(288 50 44)"/>
+      </svg>
+      Clover <span>Framework</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__box" aria-hidden="true"><span></span></span>Menu
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <div class="nav-group">
+        <button class="nav-group__btn" type="button" aria-expanded="false" aria-controls="nav-how">
+          Framework
+          <svg class="nav-group__chev" viewBox="0 0 12 8" aria-hidden="true" focusable="false">
+            <path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="nav-group__panel" id="nav-how">
+          <a href="../#three-leaves">The common clover<span>Three stages, and how AI is used almost everywhere today</span></a>
+          <a href="../#context">The lucky clover<span>Four stages, with Context first. This is the framework</span></a>
+          <a href="../#fifth-leaf">The growth clover<span>The fifth stage, and why no team runs it</span></a>
+          <a href="../#walkthrough">One change, start to finish<span>A worked example, end to end</span></a>
+        </div>
+      </div>
+      <a href="./" aria-current="page">Getting started</a>
+      <a href="../security/">Security</a>
+      <a href="../evidence/">Evidence</a>
+      <a href="../glossary/">Glossary</a>
+      <a href="../author/">Author</a>
+      <a href="https://github.com/santhoshsathish94/clover-framework">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="overview">
+    <div class="wrap">
+      <p class="eyebrow">Getting started</p>
+      <h1>Start with one real problem</h1>
+      <p class="lede">Pick something small and real — a defect, a recurring exception, a question
+        nobody can answer quickly. There is nothing to install and nothing to migrate onto first.</p>
+      <div class="actions">
+        <a class="btn btn--primary" href="https://github.com/santhoshsathish94/clover-framework/blob/main/AGENTS.md">Get AGENTS.md</a>
+        <a class="btn" href="https://github.com/santhoshsathish94/clover-framework/blob/main/QUICKSTART.md">Read the quickstart</a>
+        <a class="btn btn--plain" href="../security/">What a security review will ask →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONNECT THE SYSTEMS ============ -->
+  <section class="band band--soft" id="setup">
+    <div class="wrap">
+      <p class="eyebrow">Connect the systems</p>
+      <h2>How to set it up</h2>
+      <p class="lede">Context is the stage that changes everything, and it is the one that takes a
+        setup rather than a decision. Three moves, one system at a time. None of them creates a new
+        credential, and none of them needs a platform to migrate onto first.</p>
+
+      <dl class="stack" style="margin-top:1.8rem">
+        <div>
+          <dt>1 · Put read-only MCP servers in front</dt>
+          <dd>An agent reaches a system through an MCP server that only reads. Stand one up per
+            system, one at a time, starting with the repository the team spends its days in.</dd>
+        </div>
+        <div>
+          <dt>2 · Scope it to the human</dt>
+          <dd>Each connection is scoped to what the human already has access to, at the privileges
+            they already hold. No new credential, and no new path into the systems.</dd>
+        </div>
+        <div>
+          <dt>3 · Start in development</dt>
+          <dd>One environment is enough to begin, and development is enough. Widen to the other
+            non-production environments as the results hold up.</dd>
+        </div>
+      </dl>
+
+      <p class="note" style="margin-top:1.4rem">
+        <a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/orchestration-environment.md#building-one">The build sequence in full →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ THE AGENT FILE ============ -->
+  <section class="band" id="agent">
+    <div class="wrap">
+      <p class="eyebrow">The agent file</p>
+      <h2>One file, and the agent works this way</h2>
+      <p class="lede">The whole framework is one file: <code>AGENTS.md</code>. Drop it into a project,
+        point an AI agent at it, and the agent runs the cycle — Context, Direction, Action, Success —
+        and explains what it is doing while it does.</p>
+
+      <p>Reading the docs takes an afternoon. An agent takes one file, and the human learns the stages
+        by watching them run on their own work. That is the intended route in. Most people will meet
+        Clover through an agent rather than through a specification, because asking is faster and
+        clearer than reading.</p>
+
+      <div class="tabs" data-tabs="agent">
+        <div class="tablist" role="tablist" aria-label="What the agent file does">
+          <button class="tab" role="tab" id="ag-t1" aria-controls="ag-p1" aria-selected="true">What it makes an agent do</button>
+          <button class="tab" role="tab" id="ag-t2" aria-controls="ag-p2" aria-selected="false">What it stops</button>
+          <button class="tab" role="tab" id="ag-t3" aria-controls="ag-p3" aria-selected="false">How it teaches the human using it</button>
+        </div>
+
+        <div class="panel is-active" role="tabpanel" id="ag-p1" aria-labelledby="ag-t1" data-panel tabindex="0">
+          <dl class="kv">
+            <div><dt>Read first</dt><dd>Find the context file before acting. Do not re-derive what is already settled or repeat a dead end someone already ruled out.</dd></div>
+            <div><dt>Reach real evidence</dt><dd>Logs, telemetry, the running system — rather than assumptions about them, or a summary written earlier by someone else.</dd></div>
+            <div><dt>Self-check</dt><dd>Test its own work against the known ways AI fails before handing anything back.</dd></div>
+            <div><dt>Say what the evidence was</dt><dd>What was checked, what was observed, and where it stopped. No claim larger than the evidence.</dd></div>
+            <div><dt>Write back</dt><dd>Update the context file with what is settled, what remains, and what was ruled out, so the next cycle starts ahead of this one.</dd></div>
+          </dl>
+        </div>
+
+        <div class="panel" role="tabpanel" id="ag-p2" aria-labelledby="ag-t2" data-panel tabindex="0">
+          <dl class="kv">
+            <div><dt>Acting beyond its authority</dt><dd>Five things it must refuse outright, and the instruction to say what it refused and why rather than going quiet.</dd></div>
+            <div><dt>Obeying the content it reads</dt><dd>Text found in a ticket, a page or a file is treated as <strong>data</strong>. The agent never follows instructions embedded in it, which is the defense against prompt injection stated as a rule the agent holds itself to.</dd></div>
+            <div><dt>Leaking what it finds</dt><dd>Secrets and personal data encountered mid-task are treated as defects to report, never as material to use or repeat.</dd></div>
+            <div><dt>Dressing activity up as outcome</dt><dd>"I updated six files" is not a result. The hand-back format makes the difference explicit.</dd></div>
+            <div><dt>Retrying a failed fix</dt><dd>When Success fails it returns to Context. A second attempt needs new information rather than more determination.</dd></div>
+          </dl>
+        </div>
+
+        <div class="panel" role="tabpanel" id="ag-p3" aria-labelledby="ag-t3" data-panel tabindex="0">
+          <p>The file instructs the agent to treat the human in front of it as the one it is
+            teaching, because for most teams that agent is the only teacher this framework will ever
+            have.</p>
+          <dl class="kv">
+            <div><dt>Names the stage</dt><dd>"I am still in Context. I want to see the actual log before proposing a fix." The stages get learned by watching them run.</dd></div>
+            <div><dt>Gives the reason</dt><dd>Every request for access, a success standard or an approval comes with what it is for. A reason teaches; a bare request just looks like process.</dd></div>
+            <div><dt>Offers to set it up</dt><dd>Proposes the context file and writes the first version, rather than waiting to be asked.</dd></div>
+            <div><dt>Matches the human</dt><dd>Explains each step the first time, and stops narrating once it is familiar.</dd></div>
+            <div><dt>Humble, and still honest</dt><dd>Courtesy governs how it says something, never whether it says it. If the direction will not work it says so once, with a better option beside it, then respects the call.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FIRST RUN ============ -->
+  <section class="band band--soft" id="first-run">
+    <div class="wrap">
+      <p class="eyebrow">Your first cycle</p>
+      <h2>Three steps, on work you already have</h2>
+
+      <div class="grid grid--3" style="margin-top:1.4rem">
+        <div class="card card--flat">
+          <h3>1 · Copy the file</h3>
+          <p>Put <code>AGENTS.md</code> in the project and point an agent at it.</p>
+          <p><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/AGENTS.md">Get AGENTS.md →</a></p>
+        </div>
+        <div class="card card--flat">
+          <h3>2 · Give it the evidence</h3>
+          <p>Repository, tickets, logs, a development environment. Read-only first, one connection
+            at a time, never wider than the accountable human can explain.</p>
+          <p><a href="#setup">How to set it up →</a></p>
+        </div>
+        <div class="card card--flat">
+          <h3>3 · Run one real problem</h3>
+          <p>Keep a context file beside the code while the work happens. That file is what makes the
+            next cycle cheaper than this one.</p>
+          <p><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/05-context-engineering.md#where-context-lives">Where context lives →</a></p>
+        </div>
+      </div>
+
+      <p class="note" style="margin-top:1.4rem">To run it by hand instead, the
+        <a href="https://github.com/santhoshsathish94/clover-framework/blob/main/QUICKSTART.md">quickstart</a>
+        walks a first cycle through, the
+        <a href="https://github.com/santhoshsathish94/clover-framework/blob/main/templates/orchestration-brief.md">orchestration brief</a>
+        is a one-page working artifact for the four stages, and the
+        <a href="https://github.com/santhoshsathish94/clover-framework/tree/main/examples/production-exception-remediation">example in the repository</a>
+        runs a recurring <code>500</code> through the cycle.</p>
+
+      <div class="actions" style="margin-top:1.8rem">
+        <a class="btn btn--primary" href="../security/">What a security review will ask</a>
+        <a class="btn" href="../evidence/">See the evidence</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap site-foot__grid">
+    <div>
+      <h4>Read</h4>
+      <ul>
+        <li><a href="../">The framework</a></li>
+        <li><a href="./">Getting started</a></li>
+        <li><a href="../security/">Security and governance</a></li>
+        <li><a href="../evidence/">Evidence</a></li>
+        <li><a href="../glossary/">Glossary</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Practical</h4>
+      <ul>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/QUICKSTART.md">Quickstart</a></li>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/templates/orchestration-brief.md">Orchestration brief</a></li>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/how-ai-fails.md">How AI fails</a></li>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/field-practices.md">Field lessons</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Reference</h4>
+      <ul>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/AGENTS.md">AGENTS.md</a></li>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/orchestration-environment.md">The orchestration environment</a></li>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/05-context-engineering.md">Context engineering</a></li>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/09-adoption.md">Adoption</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Project</h4>
+      <ul>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework">GitHub repository</a></li>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/CONTRIBUTING.md">Contributing</a></li>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/CHANGELOG.md">Changelog</a></li>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/LICENSE">License</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap site-foot__end">
+    <p style="max-width:none">The website explains; the repository documents. Built from real
+      delivery work and still changing as the evidence does. An open, feedback-driven project by
+      <a href="../author/">Santhosh Narayanan</a>.</p>
+  </div>
+</footer>
+
+<script src="../app.js?v=1.0.3" defer></script>
+</body>
+</html>

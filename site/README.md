@@ -18,12 +18,16 @@ python -m http.server 8000 --directory site
 
 ```
 site/
-  index.html        the whole story, one page, eleven sections
+  index.html        the framework: the story, three stages then four then five
+  start/            getting started: read-only access, the agent file, a first cycle
+  security/         security and governance
+  evidence/         case studies and reference implementations
   glossary/         searchable terms
   author/           who wrote this, in the first person
   assets/           the peacock feather, the only image the site loads
   styles.css
-  app.js            tabs and the glossary filter
+  app.js            tabs, the mobile menu, the nav dropdown, the glossary filter
+  check.ps1         run before committing: nav consistency, versions, every link
   llms.txt          the repository map for agents
   .nojekyll
 ```
@@ -142,9 +146,13 @@ The marks are the site's identity and they carry the argument, so they have rule
   `site/assets/peacock-feather.png`, shown twice — beside the name, and above the verse. It is the
   only raster asset the site loads, cropped with the white knocked out to transparency. The clover
   stands for the framework; the feather stands for the author. Do not swap one for the other.
+- **Six pages, no build step, so the header, nav and footer are copied into each one.** They will
+  drift. Run `pwsh -File site/check.ps1` before committing: it resolves every nav link to a
+  site-root path and fails if the six pages disagree, checks the `?v=` versions match, and follows
+  every relative link and every anchor.
 - **The primary nav is seven items, and "Framework" is a dropdown.** The three clover sections and
-  the worked example live inside it. On wide screens it is an absolutely positioned panel; below
-  1000px it becomes an accordion inside the mobile menu, so the menu stays short until asked to grow.
+  the worked example live inside it, pointing at anchors on the home page. On wide screens it is an
+  absolutely positioned panel; below 1000px it becomes an accordion inside the mobile menu.
   Without JavaScript the button is hidden and the panel renders inline, so every link stays reachable.
 - **`.btn` is the only button style.** Plain is the default, `.btn--primary` is the filled one, and
   `.btn--plain` is a bare link that keeps the same height. One primary per group.

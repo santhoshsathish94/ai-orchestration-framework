@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evidence — Clover</title>
+<meta name="description" content="Two delivered outcomes and three patterns in use. Each one says what was checked, what was observed, and where the work stopped.">
+<link rel="canonical" href="https://cloverframework.com/evidence/">
+<meta property="og:title" content="Evidence — Clover">
+<meta property="og:description" content="Production case studies and reference implementations, each stating where it stopped. One cutover has not run and one upstream fix is not merged, and both say so.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://cloverframework.com/evidence/">
+<meta property="og:image" content="https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/assets/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a6a5f">
+<link rel="stylesheet" href="../styles.css?v=1.0.3">
+<script>document.documentElement.className = 'js';</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg class="clover-sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <path id="clover-leaf" d="M50 44C48 35 38 31 38 21C38 12 46 9 50 17C54 9 62 12 62 21C62 31 52 35 50 44Z"/>
+  </defs>
+</svg>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../">
+      <svg class="clover clover--brand" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <path class="clover__stem" d="M50 48C50 68 50 80 50 95"/>
+        <use class="clover__leaf is-filled" href="#clover-leaf"/>
+        <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(72 50 44)"/>
+        <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(144 50 44)"/>
+        <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(216 50 44)"/>
+        <use class="clover__leaf is-filled" href="#clover-leaf" transform="rotate(288 50 44)"/>
+      </svg>
+      Clover <span>Framework</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__box" aria-hidden="true"><span></span></span>Menu
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <div class="nav-group">
+        <button class="nav-group__btn" type="button" aria-expanded="false" aria-controls="nav-how">
+          Framework
+          <svg class="nav-group__chev" viewBox="0 0 12 8" aria-hidden="true" focusable="false">
+            <path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="nav-group__panel" id="nav-how">
+          <a href="../#three-leaves">The common clover<span>Three stages, and how AI is used almost everywhere today</span></a>
+          <a href="../#context">The lucky clover<span>Four stages, with Context first. This is the framework</span></a>
+          <a href="../#fifth-leaf">The growth clover<span>The fifth stage, and why no team runs it</span></a>
+          <a href="../#walkthrough">One change, start to finish<span>A worked example, end to end</span></a>
+        </div>
+      </div>
+      <a href="../start/">Getting started</a>
+      <a href="../security/">Security</a>
+      <a href="./" aria-current="page">Evidence</a>
+      <a href="../glossary/">Glossary</a>
+      <a href="../author/">Author</a>
+      <a href="https://github.com/santhoshsathish94/clover-framework">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="overview">
+    <div class="wrap">
+      <p class="eyebrow">Evidence</p>
+      <h1>Production case studies and reference implementations</h1>
+      <p class="lede">Two delivered outcomes and three patterns in use. Each one says where it
+        stopped.</p>
+      <p>Success means the real environment demonstrated the intended outcome, so each entry below
+        states what was checked, what was observed, and where the work stopped. Stopping early is
+        normal and often correct. The damage comes from describing weak evidence in the language of
+        strong evidence, so "validated in the test environment, not yet observed in production" is
+        written out in full rather than rounded up.</p>
+    </div>
+  </section>
+
+  <!-- ============ THE CASES ============ -->
+  <section class="band band--soft" id="cases">
+    <div class="wrap">
+      <div class="tabs" data-tabs="evidence">
+        <div class="tablist" role="tablist" aria-label="Evidence">
+          <button class="tab" role="tab" id="ev-t1" aria-controls="ev-p1" aria-selected="true">Contentful API migration</button>
+          <button class="tab" role="tab" id="ev-t2" aria-controls="ev-p2" aria-selected="false">React memory leak</button>
+          <button class="tab" role="tab" id="ev-t3" aria-controls="ev-p3" aria-selected="false">Reference implementations</button>
+        </div>
+
+        <div class="panel is-active" role="tabpanel" id="ev-p1" aria-labelledby="ev-t1" data-panel tabindex="0">
+          <h3>Contentful API migration</h3>
+          <div class="panel__cols">
+            <div>
+              <p>A CMS content API rewritten from a GraphQL integration to REST, and from .NET 9 MVC to
+                .NET 10 Minimal APIs, with every route, JSON shape, and response envelope preserved so no
+                consumer had to change.</p>
+              <p>A manual rewrite was estimated at 8–10 weeks of team effort. With AI carrying most of the
+                implementation under close human direction, the <strong>implementation took about a
+                day</strong>. Parity was checked across 36 endpoint cases: 34 matched exactly and 2 were
+                signed-off deviations, alongside 239 tests. Both versions ran in the test environment with
+                the API gateway pointing at the new one, so <strong>QA validated the real site and signed
+                off</strong>. The production cutover has not run.</p>
+              <p><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/case-studies/01-contentful-migration.md">Read the case study →</a></p>
+            </div>
+            <div>
+              <p class="note">That day is implementation only. Testing and parity validation took roughly
+                another day, and stakeholder agreement longer still, and the work was not continuous.
+                Comparing one day against a ten-week estimate that included analysis and coordination
+                would overstate it.</p>
+              <p class="note">Performance was measured locally, two processes on one machine, and never on
+                deployed infrastructure. The gains came from the architecture rather than from AI.</p>
+              <p class="note">What matters here is how much AI lowered the barrier to attempting the work
+                at all, rather than who wrote the code.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel" role="tabpanel" id="ev-p2" aria-labelledby="ev-t2" data-panel tabindex="0">
+          <h3>A React Server Components memory leak, traced upstream</h3>
+          <div class="panel__cols">
+            <div>
+              <p>A production application was crashing with out-of-memory errors. A blunt Node flag stopped
+                the growth and stabilized production, and it also stripped error-stack detail everywhere.
+                The mitigation was validated on a fleet running the same image: 113 restarts without the
+                flag, zero with it, over about six and a half hours.</p>
+            </div>
+            <div>
+              <p>The investigation continued past the workaround, traced the retention mechanism into
+                React's <code>react-server</code> renderer, and produced a one-file fix contributed
+                upstream so other applications need not carry the same workaround.</p>
+              <p class="case__status">Status: a CI-green pull request, <strong>not merged</strong>.</p>
+              <p><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/case-studies/02-react-rsc-memory-leak.md">Read the case study →</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel" role="tabpanel" id="ev-p3" aria-labelledby="ev-t3" data-panel tabindex="0">
+          <h3>Built and used against real organizational data</h3>
+          <div class="panel__cols">
+            <div>
+              <p>Cross-team knowledge access, production exception remediation, and multi-repository
+                defect remediation.</p>
+              <p>Knowledge access has answered <strong>real production and support incidents</strong>,
+                including a data-synchronization failure that had survived an overnight investigation after
+                the owning team had gone.</p>
+            </div>
+            <div>
+              <p>The remediation patterns have run on real work through existing review and deployment
+                approvals. None is an always-on capability or adopted organization-wide, and each still
+                depends on a human providing the map and holding the approvals.</p>
+              <p><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/reference-implementations.md">Read the reference implementations →</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions" style="margin-top:2rem">
+        <a class="btn btn--primary" href="../start/">Try it on your own work</a>
+        <a class="btn" href="https://github.com/santhoshsathish94/clover-framework/tree/main/case-studies">All case studies</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap site-foot__grid">
+    <div>
+      <h4>Read</h4>
+      <ul>
+        <li><a href="../">The framework</a></li>
+        <li><a href="../start/">Getting started</a></li>
+        <li><a href="../security/">Security and governance</a></li>
+        <li><a href="./">Evidence</a></li>
+        <li><a href="../glossary/">Glossary</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Evidence</h4>
+      <ul>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/tree/main/case-studies">All case studies</a></li>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/case-studies/01-contentful-migration.md">Contentful API migration</a></li>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/case-studies/02-react-rsc-memory-leak.md">React RSC memory leak</a></li>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/reference-implementations.md">Reference implementations</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Practical</h4>
+      <ul>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/QUICKSTART.md">Quickstart</a></li>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/templates/orchestration-brief.md">Orchestration brief</a></li>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/how-ai-fails.md">How AI fails</a></li>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/field-practices.md">Field lessons</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Project</h4>
+      <ul>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework">GitHub repository</a></li>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/CONTRIBUTING.md">Contributing</a></li>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/CHANGELOG.md">Changelog</a></li>
+        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/LICENSE">License</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap site-foot__end">
+    <p style="max-width:none">The website explains; the repository documents. Built from real
+      delivery work and still changing as the evidence does. An open, feedback-driven project by
+      <a href="../author/">Santhosh Narayanan</a>.</p>
+  </div>
+</footer>
+
+<script src="../app.js?v=1.0.3" defer></script>
+</body>
+</html>

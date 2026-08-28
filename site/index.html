@@ -61,9 +61,9 @@
           <a href="#walkthrough">One change, start to finish<span>A worked example, end to end</span></a>
         </div>
       </div>
-      <a href="#agent">Getting started</a>
-      <a href="#security">Security</a>
-      <a href="#evidence">Evidence</a>
+      <a href="start/">Getting started</a>
+      <a href="security/">Security</a>
+      <a href="evidence/">Evidence</a>
       <a href="glossary/">Glossary</a>
       <a href="author/">Author</a>
       <a href="https://github.com/santhoshsathish94/clover-framework">GitHub</a>
@@ -93,8 +93,8 @@
             <strong>Context&nbsp;→ Direction&nbsp;→ Action&nbsp;→ Success</strong>.</p>
           <div class="actions">
             <a class="btn btn--primary" href="#context">Explore the framework</a>
-            <a class="btn" href="#agent">Getting started</a>
-            <a class="btn btn--plain" href="#evidence">See real-world evidence →</a>
+            <a class="btn" href="start/">Getting started</a>
+            <a class="btn btn--plain" href="evidence/">See real-world evidence →</a>
           </div>
         </div>
       </div>
@@ -230,29 +230,16 @@
 
       <div class="split" style="margin-top:2.2rem">
         <div class="split__lead">
-          <h3>How to set it up</h3>
-          <p>Three moves, one system at a time. None of them creates a new credential, and none of
-            them needs a platform to migrate onto first.</p>
-          <p class="note">
-            <a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/orchestration-environment.md#building-one">The build sequence in full →</a></p>
+          <h3>Reaching it takes a setup</h3>
+          <p>Context is the stage that changes everything, and it is the one that asks for work
+            rather than a decision. Three moves, one system at a time.</p>
         </div>
-        <dl class="stack split__body">
-          <div>
-            <dt>1 · Put read-only MCP servers in front</dt>
-            <dd>An agent reaches a system through an MCP server that only reads. Stand one up per
-              system, one at a time, starting with the repository the team spends its days in.</dd>
-          </div>
-          <div>
-            <dt>2 · Scope it to the human</dt>
-            <dd>Each connection is scoped to what the human already has access to, at the privileges
-              they already hold. No new credential, and no new path into the systems.</dd>
-          </div>
-          <div>
-            <dt>3 · Start in development</dt>
-            <dd>One environment is enough to begin, and development is enough. Widen to the other
-              non-production environments as the results hold up.</dd>
-          </div>
-        </dl>
+        <div class="split__body">
+          <p>Read-only MCP servers in front of the systems, each connection scoped to what the human
+            already has access to, starting in one environment. None of it creates a new credential,
+            and none of it needs a platform to migrate onto first.</p>
+          <p><a href="start/">How to set it up →</a></p>
+        </div>
       </div>
 
       <div class="split" style="margin-top:2rem">
@@ -262,7 +249,7 @@
             answer.</p>
           <p class="note">Security teams have specific questions about this, and they deserve specific
             answers rather than reassurance.
-            <a href="#security">What a security review will actually ask →</a></p>
+            <a href="security/">What a security review will actually ask →</a></p>
         </div>
         <div class="split__body">
           <p>That access already exists and is already being used. Repositories get cloned, logs get
@@ -389,7 +376,7 @@
       </div>
 
       <p class="note" style="margin-top:1.6rem">
-        <a href="#evidence">What this has been run on</a> ·
+        <a href="evidence/">What this has been run on</a> ·
         <a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/05-context-engineering.md">Context engineering</a> ·
         <a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/07-success.md">Success in practice</a> ·
         <a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/04-framework.md">the framework in full</a> ·
@@ -506,266 +493,31 @@
     </div>
   </section>
 
-  <!-- ============ THE AGENT FILE ============ -->
-  <section class="band" id="agent">
+  <!-- ============ WHERE TO GO NEXT ============ -->
+  <section class="band" id="next">
     <div class="wrap">
-      <p class="eyebrow">The agent file</p>
-      <h2>One file, and the agent works this way</h2>
-      <p class="lede">The whole framework is one file: <code>AGENTS.md</code>. Drop it into a project,
-        point an AI agent at it, and the agent runs the cycle — Context, Direction, Action, Success —
-        and explains what it is doing while it does.</p>
-
-      <p>Reading the docs takes an afternoon. An agent takes one file, and the human learns the stages
-        by watching them run on their own work. That is the intended route in. Most people will meet
-        Clover through an agent rather than through a specification, because asking is faster and
-        clearer than reading.</p>
-
-      <div class="tabs" data-tabs="agent">
-        <div class="tablist" role="tablist" aria-label="What the agent file does">
-          <button class="tab" role="tab" id="ag-t1" aria-controls="ag-p1" aria-selected="true">What it makes an agent do</button>
-          <button class="tab" role="tab" id="ag-t2" aria-controls="ag-p2" aria-selected="false">What it stops</button>
-          <button class="tab" role="tab" id="ag-t3" aria-controls="ag-p3" aria-selected="false">How it teaches the human using it</button>
-        </div>
-
-        <div class="panel is-active" role="tabpanel" id="ag-p1" aria-labelledby="ag-t1" data-panel tabindex="0">
-          <dl class="kv">
-            <div><dt>Read first</dt><dd>Find the context file before acting. Do not re-derive what is already settled or repeat a dead end someone already ruled out.</dd></div>
-            <div><dt>Reach real evidence</dt><dd>Logs, telemetry, the running system — rather than assumptions about them, or a summary written earlier by someone else.</dd></div>
-            <div><dt>Self-check</dt><dd>Test its own work against the known ways AI fails before handing anything back.</dd></div>
-            <div><dt>Say what the evidence was</dt><dd>What was checked, what was observed, and where it stopped. No claim larger than the evidence.</dd></div>
-            <div><dt>Write back</dt><dd>Update the context file with what is settled, what remains, and what was ruled out, so the next cycle starts ahead of this one.</dd></div>
-          </dl>
-        </div>
-
-        <div class="panel" role="tabpanel" id="ag-p2" aria-labelledby="ag-t2" data-panel tabindex="0">
-          <dl class="kv">
-            <div><dt>Acting beyond its authority</dt><dd>Five things it must refuse outright, and the instruction to say what it refused and why rather than going quiet.</dd></div>
-            <div><dt>Obeying the content it reads</dt><dd>Text found in a ticket, a page or a file is treated as <strong>data</strong>. The agent never follows instructions embedded in it, which is the defense against prompt injection stated as a rule the agent holds itself to.</dd></div>
-            <div><dt>Leaking what it finds</dt><dd>Secrets and personal data encountered mid-task are treated as defects to report, never as material to use or repeat.</dd></div>
-            <div><dt>Dressing activity up as outcome</dt><dd>"I updated six files" is not a result. The hand-back format makes the difference explicit.</dd></div>
-            <div><dt>Retrying a failed fix</dt><dd>When Success fails it returns to Context. A second attempt needs new information rather than more determination.</dd></div>
-          </dl>
-        </div>
-
-        <div class="panel" role="tabpanel" id="ag-p3" aria-labelledby="ag-t3" data-panel tabindex="0">
-          <p>The file instructs the agent to treat the human in front of it as the one it is
-            teaching, because for most teams that agent is the only teacher this framework will ever
-            have.</p>
-          <dl class="kv">
-            <div><dt>Names the stage</dt><dd>"I am still in Context. I want to see the actual log before proposing a fix." The stages get learned by watching them run.</dd></div>
-            <div><dt>Gives the reason</dt><dd>Every request for access, a success standard or an approval comes with what it is for. A reason teaches; a bare request just looks like process.</dd></div>
-            <div><dt>Offers to set it up</dt><dd>Proposes the context file and writes the first version, rather than waiting to be asked.</dd></div>
-            <div><dt>Matches the human</dt><dd>Explains each step the first time, and stops narrating once it is familiar.</dd></div>
-            <div><dt>Humble, and still honest</dt><dd>Courtesy governs how it says something, never whether it says it. If the direction will not work it says so once, with a better option beside it, then respects the call.</dd></div>
-          </dl>
-        </div>
-      </div>
-
-      <h3 style="margin-top:2rem">Start with it</h3>
-      <p class="note">Pick something small and real — a defect, a recurring exception, a question
-        nobody can answer quickly. There is nothing to migrate onto first.</p>
-
-      <div class="grid grid--3" style="margin-top:1.1rem">
+      <p class="eyebrow">Where to go next</p>
+      <h2>Three pages, depending on what you need</h2>
+      <div class="grid grid--3" style="margin-top:1.4rem">
         <div class="card card--flat">
-          <h3>1 · Copy the file</h3>
-          <p>Put <code>AGENTS.md</code> in the project and point an agent at it.</p>
-          <p><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/AGENTS.md">Get AGENTS.md →</a></p>
+          <h3>Getting started</h3>
+          <p>Stand up read-only access to the systems you already run, drop <code>AGENTS.md</code>
+            into a project, and run one real problem through the cycle.</p>
+          <p><a href="start/">Start here →</a></p>
         </div>
         <div class="card card--flat">
-          <h3>2 · Give it the evidence</h3>
-          <p>Repository, tickets, logs, a development environment. Read-only first, one connection
-            at a time, never wider than the accountable human can explain.</p>
-          <p><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/orchestration-environment.md#building-one">How to set it up →</a></p>
+          <h3>Security and governance</h3>
+          <p>What is actually happening, what needs to happen, and the one control most teams have
+            not built yet. Written for the review you will have to pass.</p>
+          <p><a href="security/">What a review will ask →</a></p>
         </div>
         <div class="card card--flat">
-          <h3>3 · Run one real problem</h3>
-          <p>Keep a context file beside the code while the work happens. That file is what makes the
-            next cycle cheaper than this one.</p>
-          <p><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/05-context-engineering.md#where-context-lives">Where context lives →</a></p>
+          <h3>Evidence</h3>
+          <p>Two delivered outcomes and three patterns in use, each stating what was checked and
+            where the work stopped.</p>
+          <p><a href="evidence/">See the evidence →</a></p>
         </div>
       </div>
-
-      <p class="note" style="margin-top:1.2rem">To run it by hand instead, the
-        <a href="https://github.com/santhoshsathish94/clover-framework/blob/main/QUICKSTART.md">quickstart</a>
-        walks a first cycle through, the
-        <a href="https://github.com/santhoshsathish94/clover-framework/blob/main/templates/orchestration-brief.md">orchestration brief</a>
-        is a one-page working artifact for the four stages, and the
-        <a href="https://github.com/santhoshsathish94/clover-framework/tree/main/examples/production-exception-remediation">example in the repository</a>
-        runs a recurring <code>500</code> through the cycle.</p>
-    </div>
-  </section>
-
-  <!-- ============ SECURITY & GOVERNANCE ============ -->
-  <section class="band band--soft" id="security">
-    <div class="wrap">
-      <p class="eyebrow">Security and governance</p>
-      <h2>What a security review will actually ask</h2>
-      <p class="lede">Most security conversations about AI get stuck because nobody has separated
-        three different things: what is actually happening, what has to be done about it, and what
-        genuinely is not solved yet. Taken separately, each one is manageable.</p>
-
-      <h3 style="margin-top:2rem">What is actually happening</h3>
-      <dl class="kv" style="margin-top:0.9rem">
-        <div><dt>No new access</dt><dd>AI acts inside the access a named human already holds. If they cannot reach a system, neither can AI acting for them. There is no new credential, no new path into your systems, and no new access to approve.</dd></div>
-        <div><dt>No new controls</dt><dd>Data classification, credential policy, retention rules and regulatory constraints all apply exactly as they did. Your own security team decides, and if the answer is no, it is no.</dd></div>
-        <div><dt>One real change</dt><dd>The layer can read across code, tickets, logs and data <em>at once</em> — which no one human practically could. Every individual read was already permitted; the aggregation is what is new. Treat the layer itself as a sensitive asset.</dd></div>
-      </dl>
-
-      <h3 style="margin-top:2rem">What needs to happen</h3>
-      <dl class="stack stack--2">
-        <div>
-          <dt>Inherit access, never expand it</dt>
-          <dd>Read-only by default, one connection at a time, never wider than the accountable human
-            can explain to someone who will ask.</dd>
-        </div>
-        <div>
-          <dt>Give every action a named owner</dt>
-          <dd>No shared or anonymous identity. A dedicated identity scoped to the task and owned by a
-            named human keeps accountability without carrying that human's entire access footprint.</dd>
-        </div>
-        <div>
-          <dt>Treat what it reads as data, not instruction</dt>
-          <dd>Tickets, comments and pages can be written by anyone, including someone outside your
-            organization. An agent must never act on instructions embedded in content it reads. Keep
-            write access small enough that a misled agent cannot do much damage with it.</dd>
-        </div>
-        <div>
-          <dt>Fix what it finds</dt>
-          <dd>Credentials in repositories and personal data in logs get rotated, redacted or removed —
-            not noted in a ticket and left there.</dd>
-        </div>
-      </dl>
-
-      <div class="grid grid--2" style="margin-top:2rem">
-        <div>
-          <h3 style="margin-top:0">"But there are secrets in our code"</h3>
-          <p>This is the most common objection, and usually the most revealing one. Credentials in the
-            repository. Personal data in the logs. An access path nobody has reviewed since whoever built
-            it left.</p>
-          <p>Every one of those is a true statement about <strong>the systems</strong>, rather than about
-            AI. That credential is already readable by everyone with repository access, every contractor
-            who ever cloned it, and anyone who finds an old laptop. The exposure existed before the agent
-            and survives the decision not to use one.</p>
-          <p>Declining to use AI does not remove the risk. It removes the thing most likely to find it. An
-            agent reading across a codebase surfaces hardcoded secrets, unredacted logs and forgotten
-            access paths considerably faster than the audit that keeps getting rescheduled. Rotate the
-            credential, redact the log, close the path, and the objection has disappeared while the system
-            has genuinely got safer.</p>
-        </div>
-
-        <div>
-          <h3 style="margin-top:0">Monitor the agents, not just the gate</h3>
-          <p>This is the fifth thing on that list, and the one most teams have not built. Approval gates
-            stop the largest mistakes before they happen. Attribution explains them afterwards. Neither
-            notices an agent doing something unintended <em>inside access it legitimately holds</em> — and
-            that is where the real risk sits.</p>
-          <p>So the primary recommendation is monitoring built for agent behavior: record every system an
-            agent touched, compare what it did against what it was asked to do, and raise an alert when it
-            reaches outside the scope of the task. A repository unrelated to the ticket. A table it had no
-            reason to query. A write where it was granted read.</p>
-          <p class="note">Stated honestly: tooling for this barely exists yet, here or anywhere. Most teams
-            will have to assemble a first version from access logs and audit trails they already collect.
-            It is still the highest-value control to build, because it is the only one that operates
-            <em>while</em> the agent is working rather than before or after. Until it exists, this depends
-            on a human paying attention — and attention scales worse than access does.</p>
-        </div>
-      </div>
-
-      <p class="note"><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/08-governance.md#questions-your-security-team-will-ask">Every question a security review will ask →</a></p>
-    </div>
-  </section>
-
-  <!-- ============ EVIDENCE ============ -->
-  <section class="band" id="evidence">
-    <div class="wrap">
-      <p class="eyebrow">Evidence</p>
-      <h2>Production case studies and reference implementations</h2>
-      <p class="lede">Two delivered outcomes and three patterns in use. Each one says where it
-        stopped.</p>
-
-      <p>Success means the real environment demonstrated the intended outcome, so each entry below
-        states what was checked, what was observed, and where the work stopped. Stopping early is
-        normal and often correct. The damage comes from describing weak evidence in the language of
-        strong evidence, so "validated in the test environment, not yet observed in production" is
-        written out in full rather than rounded up.</p>
-
-      <div class="tabs" data-tabs="evidence">
-        <div class="tablist" role="tablist" aria-label="Evidence">
-          <button class="tab" role="tab" id="ev-t1" aria-controls="ev-p1" aria-selected="true">Contentful API migration</button>
-          <button class="tab" role="tab" id="ev-t2" aria-controls="ev-p2" aria-selected="false">React memory leak</button>
-          <button class="tab" role="tab" id="ev-t3" aria-controls="ev-p3" aria-selected="false">Reference implementations</button>
-        </div>
-
-        <div class="panel is-active" role="tabpanel" id="ev-p1" aria-labelledby="ev-t1" data-panel tabindex="0">
-          <h3>Contentful API migration</h3>
-          <div class="panel__cols">
-            <div>
-              <p>A CMS content API rewritten from a GraphQL integration to REST, and from .NET 9 MVC to
-                .NET 10 Minimal APIs, with every route, JSON shape, and response envelope preserved so no
-                consumer had to change.</p>
-              <p>A manual rewrite was estimated at 8–10 weeks of team effort. With AI carrying most of the
-                implementation under close human direction, the <strong>implementation took about a
-                day</strong>. Parity was checked across 36 endpoint cases: 34 matched exactly and 2 were
-                signed-off deviations, alongside 239 tests. Both versions ran in the test environment with
-                the API gateway pointing at the new one, so <strong>QA validated the real site and signed
-                off</strong>. The production cutover has not run.</p>
-              <p><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/case-studies/01-contentful-migration.md">Read the case study →</a></p>
-            </div>
-            <div>
-              <p class="note">That day is implementation only. Testing and parity validation took roughly
-                another day, and stakeholder agreement longer still, and the work was not continuous.
-                Comparing one day against a ten-week estimate that included analysis and coordination
-                would overstate it.</p>
-              <p class="note">Performance was measured locally, two processes on one machine, and never on
-                deployed infrastructure. The gains came from the architecture rather than from AI.</p>
-              <p class="note">What matters here is how much AI lowered the barrier to attempting the work
-                at all, rather than who wrote the code.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="panel" role="tabpanel" id="ev-p2" aria-labelledby="ev-t2" data-panel tabindex="0">
-          <h3>A React Server Components memory leak, traced upstream</h3>
-          <div class="panel__cols">
-            <div>
-              <p>A production application was crashing with out-of-memory errors. A blunt Node flag stopped
-                the growth and stabilized production, and it also stripped error-stack detail everywhere.
-                The mitigation was validated on a fleet running the same image: 113 restarts without the
-                flag, zero with it, over about six and a half hours.</p>
-            </div>
-            <div>
-              <p>The investigation continued past the workaround, traced the retention mechanism into
-                React's <code>react-server</code> renderer, and produced a one-file fix contributed
-                upstream so other applications need not carry the same workaround.</p>
-              <p class="case__status">Status: a CI-green pull request, <strong>not merged</strong>.</p>
-              <p><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/case-studies/02-react-rsc-memory-leak.md">Read the case study →</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="panel" role="tabpanel" id="ev-p3" aria-labelledby="ev-t3" data-panel tabindex="0">
-          <h3>Built and used against real organizational data</h3>
-          <div class="panel__cols">
-            <div>
-              <p>Cross-team knowledge access, production exception remediation, and multi-repository
-                defect remediation.</p>
-              <p>Knowledge access has answered <strong>real production and support incidents</strong>,
-                including a data-synchronization failure that had survived an overnight investigation after
-                the owning team had gone.</p>
-            </div>
-            <div>
-              <p>The remediation patterns have run on real work through existing review and deployment
-                approvals. None is an always-on capability or adopted organization-wide, and each still
-                depends on a human providing the map and holding the approvals.</p>
-              <p><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/reference-implementations.md">Read the reference implementations →</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p class="note" style="margin-top:1.4rem">A workaround resolves an incident, and understanding
-        the root cause can resolve a class of problems.
-        <a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/field-practices.md">Practices and field lessons →</a></p>
     </div>
   </section>
 
@@ -849,12 +601,12 @@
       </ul>
     </div>
     <div>
-      <h4>Practical</h4>
+      <h4>Read</h4>
       <ul>
-        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/QUICKSTART.md">Quickstart</a></li>
-        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/templates/orchestration-brief.md">Orchestration brief</a></li>
-        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/how-ai-fails.md">How AI fails</a></li>
-        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/field-practices.md">Field lessons</a></li>
+        <li><a href="./">The framework</a></li>
+        <li><a href="start/">Getting started</a></li>
+        <li><a href="security/">Security and governance</a></li>
+        <li><a href="evidence/">Evidence</a></li>
         <li><a href="glossary/">Glossary</a></li>
       </ul>
     </div>
