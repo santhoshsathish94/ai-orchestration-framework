@@ -37,6 +37,17 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
+- **AI current capabilities now cites measurements instead of asserting them.** The section listed
+  four job functions and claimed AI was past what any individual human can do, with nothing behind
+  it. It now gives what is actually published and links the source: SWE-bench Verified, GDPval,
+  METR's task-length work, and what an open-weights model costs per issue. Each figure is stated
+  coarsely and the section is dated, because these numbers move.
+- The section also says where the measurements stop. Every one of those benchmarks hands the model a
+  task that is already written down with its files attached; on ARC-AGI-3, where an agent has to work
+  out the environment by acting, the best score is around a third. METR's controlled trial found
+  experienced developers took 19% longer with AI while believing they had been 20% faster. That is a
+  description of how AI is being used today, and it is the reason the rest of the page exists.
+
 - **The primary navigation is seven items instead of nine.** The three clover sections and the worked
   example moved into a **Framework** dropdown, and the remaining links are Getting started,
   Security, Evidence, Glossary, Author and GitHub. Security was not reachable from the nav before.

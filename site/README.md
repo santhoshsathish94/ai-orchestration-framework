@@ -118,6 +118,12 @@ The marks are the site's identity and they carry the argument, so they have rule
 - **Never invent** metrics, customers, adoption, or results. The React memory leak is a CI-green pull
   request that is *not merged*, and the Contentful production cutover *has not run* — the site must
   keep saying so.
+- **`#capability` carries live third-party numbers and a date.** Every figure there links its source
+  and is written coarsely on purpose — "about three quarters", "close to half" — so it survives a few
+  months of leaderboard movement. Re-check all five sources at each release and move the date in the
+  lede; if a number has drifted past its wording, change the wording rather than dropping the source.
+  The section has to keep saying where the measurements stop, because that gap is the argument the
+  rest of the page makes.
 - The four-leaf section says nothing about production. Development first, then the other
   non-production environments. Access is read-only and scoped to what the human already holds. It is
   also where the page explains why Context comes first, and that explanation appears once.
