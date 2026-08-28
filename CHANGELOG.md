@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Changed
+
+- **The primary navigation is seven items instead of nine.** The three clover sections and the worked
+  example moved into a **How it works** dropdown, and the remaining links are Getting started,
+  Security, Evidence, Glossary, Author and GitHub. Security was not reachable from the nav before.
+- On wide screens the dropdown is a panel with a one-line description under each link. Below 1000px
+  it becomes an accordion inside the mobile menu, so the menu opens short and grows only when asked.
+- It closes on an outside click, on Escape with focus returned to the button, and when any link
+  inside it is followed. Without JavaScript the button is hidden and the panel renders inline, so
+  every link stays reachable.
+- Every link now points at `santhoshsathish94/clover-framework` after the repository rename.
+
 ## v1.0.2 — 2026-08-28
 
 ### Changed

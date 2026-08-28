@@ -142,6 +142,10 @@ The marks are the site's identity and they carry the argument, so they have rule
   `site/assets/peacock-feather.png`, shown twice — beside the name, and above the verse. It is the
   only raster asset the site loads, cropped with the white knocked out to transparency. The clover
   stands for the framework; the feather stands for the author. Do not swap one for the other.
+- **The primary nav is seven items, and "How it works" is a dropdown.** The three clover sections and
+  the worked example live inside it. On wide screens it is an absolutely positioned panel; below
+  1000px it becomes an accordion inside the mobile menu, so the menu stays short until asked to grow.
+  Without JavaScript the button is hidden and the panel renders inline, so every link stays reachable.
 - American spelling. No employer, product, cluster or infrastructure names.
 - **Bump the `?v=` on `styles.css` and `app.js` whenever either changes.** All three pages carry it.
   GitHub Pages sends `Cache-Control: max-age=600` on every file and they expire independently, so

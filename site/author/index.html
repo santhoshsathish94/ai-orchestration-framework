@@ -7,7 +7,7 @@
 <meta name="description" content="Santhosh Narayanan. I live in Chennai and work as an engineer. I love simplicity and clarity over noise, and I keep going with the flow.">
 <link rel="canonical" href="https://cloverframework.com/author/">
 <meta name="theme-color" content="#0a6a5f">
-<link rel="stylesheet" href="../styles.css?v=1.0.1">
+<link rel="stylesheet" href="../styles.css?v=1.0.3">
 <script>document.documentElement.className = 'js';</script>
 </head>
 <body>
@@ -36,11 +36,23 @@
       <span class="nav-toggle__box" aria-hidden="true"><span></span></span>Menu
     </button>
     <nav class="site-nav" id="site-nav" aria-label="Primary">
-      <a href="../#three-leaves">Common clover</a>
-      <a href="../#context">Lucky clover</a>
-      <a href="../#fifth-leaf">Growth clover</a>
-      <a href="../#walkthrough">Example</a>
-      <a href="../#agent">Start</a>
+      <div class="nav-group">
+        <button class="nav-group__btn" type="button" aria-expanded="false" aria-controls="nav-how">
+          How it works
+          <svg class="nav-group__chev" viewBox="0 0 12 8" aria-hidden="true" focusable="false">
+            <path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="nav-group__panel" id="nav-how">
+          <a href="../#three-leaves">The common clover<span>Three stages, and how AI is used almost everywhere today</span></a>
+          <a href="../#context">The lucky clover<span>Four stages, with Context first. This is the framework</span></a>
+          <a href="../#fifth-leaf">The growth clover<span>The fifth stage, and why no team runs it</span></a>
+          <a href="../#walkthrough">One change, start to finish<span>A worked example, end to end</span></a>
+        </div>
+      </div>
+      <a href="../#agent">Getting started</a>
+      <a href="../#security">Security</a>
       <a href="../#evidence">Evidence</a>
       <a href="../glossary/">Glossary</a>
       <a href="./" aria-current="page">Author</a>
@@ -112,6 +124,6 @@
   </blockquote>
 </main>
 
-<script src="../app.js?v=1.0.1" defer></script>
+<script src="../app.js?v=1.0.3" defer></script>
 </body>
 </html>
