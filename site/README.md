@@ -156,6 +156,13 @@ The marks are the site's identity and they carry the argument, so they have rule
   Without JavaScript the button is hidden and the panel renders inline, so every link stays reachable.
 - **`.btn` is the only button style.** Plain is the default, `.btn--primary` is the filled one, and
   `.btn--plain` is a bare link that keeps the same height. One primary per group.
+- **The story is one section with a sticky clover and ten steps.** Each `.story__step` carries
+  `data-leaf`, `data-act` and `data-caption`. An IntersectionObserver on a band at the middle of the
+  viewport sets `data-act` on the container, and CSS rotates the leaves into the three, four and five
+  stage arrangements from there. Scrolling is never taken over. The leaves are SVG `<a>` elements, so
+  they are clickable and focusable and still jump to the right step without JavaScript.
+- **The nav's Framework dropdown points into the story** — `#three-leaves`, `#context`, `#fifth-leaf`
+  are step ids now, not section ids. Keep those ids if you move the steps.
 - American spelling. No employer, product, cluster or infrastructure names.
 - **Bump the `?v=` on `styles.css` and `app.js` whenever either changes.** All three pages carry it.
   GitHub Pages sends `Cache-Control: max-age=600` on every file and they expire independently, so

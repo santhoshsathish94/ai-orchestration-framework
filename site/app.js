@@ -48,6 +48,49 @@
 
   document.querySelectorAll('[data-tabs]').forEach(initTabs);
 
+  /* The story. Scrolling moves the highlight; clicking a leaf jumps to where that stage is
+     introduced. Scrolling itself is never taken over. */
+  var story = document.querySelector('[data-story]');
+  if (story) {
+    var steps = Array.prototype.slice.call(story.querySelectorAll('.story__step'));
+    var leaves = Array.prototype.slice.call(story.querySelectorAll('.story__leaf'));
+    var caption = story.querySelector('[data-story-caption]');
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    var activate = function (step) {
+      if (!step) return;
+      story.setAttribute('data-act', step.getAttribute('data-act') || 'common');
+      var leaf = step.getAttribute('data-leaf') || '';
+      leaves.forEach(function (l) {
+        l.classList.toggle('is-active', leaf !== '' && l.getAttribute('data-leaf') === leaf);
+      });
+      steps.forEach(function (s) { s.classList.toggle('is-current', s === step); });
+      if (caption) caption.textContent = step.getAttribute('data-caption') || '';
+    };
+
+    activate(steps[0]);
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) activate(e.target); });
+      }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+      steps.forEach(function (s) { io.observe(s); });
+    } else {
+      steps.forEach(function (s) { s.classList.add('is-current'); });
+    }
+
+    story.querySelectorAll('.story__leaf-link').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        var href = link.getAttribute('href') || '';
+        var target = href.charAt(0) === '#' ? document.getElementById(href.slice(1)) : null;
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' });
+        activate(target);
+      });
+    });
+  }
+
   /* Nav dropdowns. A dropdown on wide screens, an accordion inside the mobile menu. */
   var navGroups = Array.prototype.slice.call(document.querySelectorAll('.nav-group'));
   var groups = navGroups.map(function (group) {

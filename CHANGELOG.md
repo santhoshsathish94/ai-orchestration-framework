@@ -6,6 +6,14 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- **The clover story.** The three clover sections and the closing question became one scrolling
+  story: a clover pinned beside ten steps, growing from three leaves to four to five as the argument
+  does, with the leaf for the current stage lit. The four-stage act says only what *changes* when
+  Context arrives rather than explaining Direction, Action and Success again. It ends on the unknown
+  clover, where the whole mark goes to ink.
+- Scrolling drives the highlight and clicking a leaf jumps to where that stage is introduced.
+  **Scrolling itself is never taken over.** The leaves are SVG anchors, so they are keyboard
+  reachable, and without JavaScript the mark shows all five leaves and every step reads as prose.
 - **The site is six pages instead of one.** Getting started, Security and Evidence each have their
   own page, so a security lead can be sent `/security/` rather than an anchor two thirds of the way
   down. The home page keeps the whole argument — three stages, then four, then five, and the worked
