@@ -209,6 +209,8 @@ section[id] { scroll-margin-top: 5rem; }
 .hero { padding-block: clamp(3rem, 9vw, 6rem) clamp(2.5rem, 6vw, 4rem); }
 .hero h1 { max-width: 22ch; }
 .hero .lede { max-width: 68ch; font-size: clamp(1.05rem, 2.2vw, 1.28rem); }
+.hero__cycle { max-width: 68ch; margin-top: .7rem; color: var(--ink-2); }
+.hero__cycle strong { color: var(--accent); }
 .hero__leaves { margin-top: 2rem; }
 
 .hero__top { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.2rem 2rem; align-items: center; }
