@@ -48,49 +48,69 @@
 
   document.querySelectorAll('[data-tabs]').forEach(initTabs);
 
-  /* The story. Scrolling moves the highlight; clicking a leaf jumps to where that stage is
-     introduced. Scrolling itself is never taken over. */
-  var story = document.querySelector('[data-story]');
-  if (story) {
-    var steps = Array.prototype.slice.call(story.querySelectorAll('.story__step'));
-    var leaves = Array.prototype.slice.call(story.querySelectorAll('.story__leaf'));
-    var caption = story.querySelector('[data-story-caption]');
-    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* The story. Each act is its own block with its own clover, so a leaf always links to a step in
+     the act being read. The nearest step to the middle of the viewport wins, which behaves the same
+     scrolling up as scrolling down. Scrolling itself is never taken over. */
+  var storyBlocks = Array.prototype.slice.call(document.querySelectorAll('[data-story]'));
+  if (storyBlocks.length) {
+    var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    var activate = function (step) {
-      if (!step) return;
-      story.setAttribute('data-act', step.getAttribute('data-act') || 'common');
-      var leaf = step.getAttribute('data-leaf') || '';
-      leaves.forEach(function (l) {
-        l.classList.toggle('is-active', leaf !== '' && l.getAttribute('data-leaf') === leaf);
+    var blocks = storyBlocks.map(function (block) {
+      var steps = Array.prototype.slice.call(block.querySelectorAll('.story__step'));
+      var marks = Array.prototype.slice.call(block.querySelectorAll('.story__leaf, .story__label'));
+      var caption = block.querySelector('[data-story-caption]');
+
+      var apply = function (step) {
+        if (!step) return;
+        var leaf = step.getAttribute('data-leaf') || '';
+        marks.forEach(function (m) {
+          m.classList.toggle('is-active', leaf !== '' && m.getAttribute('data-leaf') === leaf);
+        });
+        steps.forEach(function (s) { s.classList.toggle('is-current', s === step); });
+        block.classList.toggle('is-ink', step.hasAttribute('data-ink'));
+        if (caption && step.getAttribute('data-caption')) {
+          caption.textContent = step.getAttribute('data-caption');
+        }
+      };
+
+      return { block: block, steps: steps, apply: apply };
+    });
+
+    var sync = function () {
+      var mid = window.innerHeight / 2;
+      blocks.forEach(function (b) {
+        var best = null;
+        var bestDist = Infinity;
+        b.steps.forEach(function (s) {
+          var r = s.getBoundingClientRect();
+          var d = Math.abs((r.top + r.height / 2) - mid);
+          if (d < bestDist) { bestDist = d; best = s; }
+        });
+        b.apply(best);
       });
-      steps.forEach(function (s) { s.classList.toggle('is-current', s === step); });
-      if (caption) caption.textContent = step.getAttribute('data-caption') || '';
     };
 
-    activate(steps[0]);
+    var queued = false;
+    var onScroll = function () {
+      if (queued) return;
+      queued = true;
+      window.requestAnimationFrame(function () { queued = false; sync(); });
+    };
 
-    if ('IntersectionObserver' in window) {
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) { if (e.isIntersecting) activate(e.target); });
-      }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
-      steps.forEach(function (s) { io.observe(s); });
-    } else {
-      steps.forEach(function (s) { s.classList.add('is-current'); });
-    }
+    sync();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
 
-    story.querySelectorAll('.story__leaf-link').forEach(function (link) {
+    document.querySelectorAll('.story__leaf-link').forEach(function (link) {
       link.addEventListener('click', function (e) {
         var href = link.getAttribute('href') || '';
         var target = href.charAt(0) === '#' ? document.getElementById(href.slice(1)) : null;
         if (!target) return;
         e.preventDefault();
-        target.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' });
-        activate(target);
+        target.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'center' });
       });
     });
   }
-
   /* Nav dropdowns. A dropdown on wide screens, an accordion inside the mobile menu. */
   var navGroups = Array.prototype.slice.call(document.querySelectorAll('.nav-group'));
   var groups = navGroups.map(function (group) {

@@ -156,11 +156,21 @@ The marks are the site's identity and they carry the argument, so they have rule
   Without JavaScript the button is hidden and the panel renders inline, so every link stays reachable.
 - **`.btn` is the only button style.** Plain is the default, `.btn--primary` is the filled one, and
   `.btn--plain` is a bare link that keeps the same height. One primary per group.
-- **The story is one section with a sticky clover and ten steps.** Each `.story__step` carries
-  `data-leaf`, `data-act` and `data-caption`. An IntersectionObserver on a band at the middle of the
-  viewport sets `data-act` on the container, and CSS rotates the leaves into the three, four and five
-  stage arrangements from there. Scrolling is never taken over. The leaves are SVG `<a>` elements, so
-  they are clickable and focusable and still jump to the right step without JavaScript.
+- **The story is three acts, and each act is its own `[data-story]` block** with its own sticky
+  clover and its own steps: three leaves, then four, then five. They are separate clovers rather than
+  one clover that morphs, because a leaf has to link to a step in the act being read — a shared
+  clover sent every click back to the first act.
+- **Each `.story__step` carries `data-leaf` and `data-caption`**, and the last one carries
+  `data-ink`. `app.js` picks, per block, the step whose centre is nearest the middle of the viewport,
+  and highlights that leaf and its label. Nearest-to-centre is used rather than an
+  IntersectionObserver because it gives the same answer scrolling up as scrolling down; an observer
+  fires on entry and leaves the highlight stale on the way back up. Scrolling is never taken over.
+- **Every leaf carries a `<text class="story__label">`** naming the stage, and the label highlights
+  with its leaf. The labels are content, not decoration — a reader has to be able to tell which stage
+  is being described without counting leaves.
+- **Leaf links are SVG `<a class="story__leaf-link">` scoped to their own act**, with an
+  `aria-label`, so they are clickable and focusable and still jump to the right step without
+  JavaScript.
 - **The nav's Framework dropdown points into the story** — `#three-leaves`, `#context`, `#fifth-leaf`
   are step ids now, not section ids. Keep those ids if you move the steps.
 - American spelling. No employer, product, cluster or infrastructure names.

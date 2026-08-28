@@ -328,111 +328,86 @@ section[id] { scroll-margin-top: 5rem; }
 .hero__leaves { margin-top: 2rem; }
 
 /* ---------- the story ---------- */
+/* Three separate clovers, one per act. Each pins beside its own steps, so a leaf always links to a
+   step in the act you are actually looking at. */
 
 .story {
-  display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-  gap: 2.5rem 3.5rem; align-items: start; margin-top: 2rem;
+  display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 2rem 3.5rem; align-items: start;
 }
+.story + .story { margin-top: 3.5rem; border-top: 1px solid var(--line); padding-top: 2.5rem; }
+.story:first-of-type { margin-top: 2rem; }
+
 .story__stage { position: sticky; top: 5.2rem; text-align: center; }
-.story__clover { width: min(100%, 21rem); height: auto; display: block; margin-inline: auto; }
+.story__clover { width: min(100%, 22rem); height: auto; display: block; margin-inline: auto; }
 .story__stem { fill: none; stroke: var(--accent-line); stroke-width: 3.5; stroke-linecap: round; }
 
 .story__leaf {
   fill: var(--accent-soft); stroke: var(--accent); stroke-width: 2; stroke-linejoin: round;
-  transform-box: view-box; transform-origin: 50px 44px;
-  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), fill 0.3s ease, opacity 0.4s ease;
+  transition: fill 0.25s ease, stroke 0.25s ease;
 }
+.story__leaf.is-next { fill: none; stroke-dasharray: 6 5; }
 .story__leaf.is-active { fill: var(--accent); }
+.story__leaf.is-active.is-next { fill: var(--accent-soft); stroke-dasharray: none; }
+
+.story__label {
+  font-size: 8px; font-weight: 600; fill: var(--muted);
+  transition: fill 0.25s ease, font-weight 0.25s ease;
+}
+.story__label.is-active { fill: var(--accent); font-weight: 700; }
+
 .story__leaf-link { cursor: pointer; outline-offset: 3px; }
 .story__leaf-link:hover .story__leaf { fill: var(--accent); }
+.story__leaf-link:hover .story__label { fill: var(--accent); }
 
-/* Three stages: the leaf for Context has not grown yet, and neither has Growth. */
-.story[data-act="common"] .story__leaf[data-leaf="direction"] { transform: rotate(0deg); }
-.story[data-act="common"] .story__leaf[data-leaf="action"]    { transform: rotate(120deg); }
-.story[data-act="common"] .story__leaf[data-leaf="success"]   { transform: rotate(240deg); }
-.story[data-act="common"] .story__leaf[data-leaf="context"]   { transform: rotate(0deg) scale(0); opacity: 0; }
-.story[data-act="common"] .story__leaf[data-leaf="growth"]    { transform: rotate(288deg) scale(0); opacity: 0; }
+/* The unknown clover: the whole mark goes to ink on the closing step. */
+.story.is-ink .story__leaf { fill: var(--ink); stroke: var(--ink); stroke-dasharray: none; }
+.story.is-ink .story__stem { stroke: var(--ink); }
+.story.is-ink .story__label { fill: var(--ink); }
 
-/* Four stages: Context arrives at the top and the others make room for it. */
-.story[data-act="lucky"] .story__leaf[data-leaf="context"]   { transform: rotate(0deg); }
-.story[data-act="lucky"] .story__leaf[data-leaf="direction"] { transform: rotate(90deg); }
-.story[data-act="lucky"] .story__leaf[data-leaf="action"]    { transform: rotate(180deg); }
-.story[data-act="lucky"] .story__leaf[data-leaf="success"]   { transform: rotate(270deg); }
-.story[data-act="lucky"] .story__leaf[data-leaf="growth"]    { transform: rotate(288deg) scale(0); opacity: 0; }
-
-/* Five stages. Growth is dotted because no team runs it. */
-.story[data-act="growth"] .story__leaf,
-.story[data-act="unknown"] .story__leaf { transform: rotate(0deg); }
-.story[data-act="growth"] .story__leaf[data-leaf="direction"],
-.story[data-act="unknown"] .story__leaf[data-leaf="direction"] { transform: rotate(72deg); }
-.story[data-act="growth"] .story__leaf[data-leaf="action"],
-.story[data-act="unknown"] .story__leaf[data-leaf="action"] { transform: rotate(144deg); }
-.story[data-act="growth"] .story__leaf[data-leaf="success"],
-.story[data-act="unknown"] .story__leaf[data-leaf="success"] { transform: rotate(216deg); }
-.story[data-act="growth"] .story__leaf[data-leaf="growth"],
-.story[data-act="unknown"] .story__leaf[data-leaf="growth"] { transform: rotate(288deg); }
-.story[data-act="growth"] .story__leaf[data-leaf="growth"] {
-  fill: none; stroke-dasharray: 6 5;
-}
-
-/* The unknown clover: the whole mark goes to ink. */
-.story[data-act="unknown"] .story__leaf {
-  fill: var(--ink); stroke: var(--ink); stroke-dasharray: none;
-}
-.story[data-act="unknown"] .story__stem { stroke: var(--ink); }
-
-.story__caption {
-  margin: 1rem 0 0; font-size: 0.95rem; color: var(--muted); font-style: italic;
-}
+.story__caption { margin: 0.9rem 0 0; font-size: 0.95rem; color: var(--muted); font-style: italic; }
 .story__hint { margin: 0.2rem 0 0; font-size: 0.82rem; color: var(--muted); }
 
 .story__steps { list-style: none; margin: 0; padding: 0; }
 .story__step {
-  min-height: 58vh; display: flex; flex-direction: column; justify-content: center;
-  padding-block: 1.5rem;
-  opacity: 0.42; transition: opacity 0.35s ease;
+  min-height: 52vh; display: flex; flex-direction: column; justify-content: center;
+  padding-block: 1.4rem;
+  opacity: 0.4; transition: opacity 0.3s ease;
 }
 .story__step.is-current { opacity: 1; }
-.story__step h3 { margin: 0 0 0.6rem; font-size: clamp(1.3rem, 2.6vw, 1.75rem); }
+.story__step h3 { margin: 0 0 0.6rem; font-size: clamp(1.3rem, 2.6vw, 1.72rem); }
 .story__step p { max-width: 46ch; }
 .story__act {
   margin: 0 0 0.9rem; font-size: 0.76rem; font-weight: 650; letter-spacing: 0.1em;
   text-transform: uppercase; color: var(--accent);
 }
-.story__delta {
-  margin: 0 0 0.6rem; font-size: 0.84rem; font-weight: 620; color: var(--muted);
-}
+.story__delta { margin: 0 0 0.6rem; font-size: 0.84rem; font-weight: 620; color: var(--muted); }
 .story__step .ask__q { max-width: none; }
 
 @media (max-width: 860px) {
   .story { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .story + .story { margin-top: 2rem; padding-top: 1.6rem; }
   .story__stage {
     top: 3.6rem; z-index: 5; padding: 0.6rem 0 0.7rem;
     background: var(--bg); border-bottom: 1px solid var(--line);
   }
   .band--soft .story__stage { background: var(--soft); }
-  .story__clover { width: 8.5rem; }
-  .story__caption { margin-top: 0.4rem; }
+  .story__clover { width: 9.5rem; }
+  .story__label { font-size: 7px; }
+  .story__caption { margin-top: 0.35rem; font-size: 0.85rem; }
   .story__hint { display: none; }
-  .story__step { min-height: 0; padding-block: 1.6rem; opacity: 1; }
+  .story__step { min-height: 0; padding-block: 1.5rem; opacity: 1; }
   .story__step + .story__step { border-top: 1px solid var(--line); }
 }
 
-/* Without JS nothing highlights, so show the finished five-leaf mark and every step at full strength.
-   These need the [data-act] in the selector to outrank the per-act rules above. */
+/* Without JS nothing highlights, so unpin the marks and show every step at full strength. */
 .no-js .story__stage { position: static; }
 .no-js .story__step { opacity: 1; }
 .no-js .story__hint { display: none; }
-.no-js .story[data-act] .story__leaf[data-leaf="context"]   { transform: rotate(0deg); opacity: 1; }
-.no-js .story[data-act] .story__leaf[data-leaf="direction"] { transform: rotate(72deg); opacity: 1; }
-.no-js .story[data-act] .story__leaf[data-leaf="action"]    { transform: rotate(144deg); opacity: 1; }
-.no-js .story[data-act] .story__leaf[data-leaf="success"]   { transform: rotate(216deg); opacity: 1; }
-.no-js .story[data-act] .story__leaf[data-leaf="growth"]    { transform: rotate(288deg); opacity: 1; }
 
 @media (prefers-reduced-motion: reduce) {
-  .story__leaf, .story__step { transition: none; }
+  .story__leaf, .story__label, .story__step { transition: none; }
 }
-
 /* ---------- buttons ---------- */
 
 .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.7rem 0.8rem; margin-top: 1.6rem; }
