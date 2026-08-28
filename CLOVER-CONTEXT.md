@@ -143,7 +143,9 @@ The page has width that is going unused. These sections must use the full measur
   carries the author's own writing: who he is, what he likes, why he wrote Clover, and how he sees
   the world right now, closing on Bhagavad Gita 2.47. It is the one place on the site written in the
   first person about a life rather than about the framework, and it should stay that way. The nav
-  links to it on every page, and the home page's author section links to it too.
+  links to it on every page, and the home page's author section links to it too. **The clover mark is
+  not used on that page** — its mark is a peacock feather, once beside the name and once above the
+  verse. The clover belongs to the framework, the feather to the author.
 
 ### The worked example
 

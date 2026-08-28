@@ -92,13 +92,20 @@ section[id] { scroll-margin-top: 5rem; }
 .author-head h1 { margin-top: 0; }
 @media (max-width: 560px) { .author-head { grid-template-columns: 1fr; gap: 0.9rem; } }
 
-/* Devanagari falls outside the system stack, so name faces that carry it. */
-.verse { margin: 2rem 0 0; padding: 0 0 0 1.1rem; border-left: 2px solid var(--accent-line); }
+/* The peacock feather belongs to the author, not to Clover. It appears only on this page. */
+.feather { display: block; }
+.feather--lg { width: 86px; height: 86px; }
+.feather--sm { width: 52px; height: 52px; margin: 0 auto 0.9rem; }
+
+.verse { margin: 2.6rem 0 0; padding: 0; border: 0; text-align: center; }
 .verse p[lang="sa"] {
   font-family: "Nirmala UI", "Noto Sans Devanagari", "Mangal", serif;
-  font-size: 1.16rem; line-height: 1.9; color: var(--ink); margin: 0 0 0.7rem;
+  font-size: 1.16rem; line-height: 1.9; color: var(--ink); margin: 0 0 0.8rem;
 }
-.verse__meaning { font-size: 0.95rem; color: var(--ink-2); margin: 0; }
+.verse__meaning {
+  font-size: 0.95rem; color: var(--ink-2); margin: 0 auto;
+  max-width: 46ch;
+}
 
 /* ---------- the clover mark ---------- */
 /* One <path id="clover-leaf"> lives in a hidden sprite at the top of the page. Every mark is that
