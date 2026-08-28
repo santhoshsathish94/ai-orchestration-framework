@@ -37,8 +37,9 @@ three leaves, then four, then five.
 
 1. Hero — the name, the canonical definition, the four-leaf mark, one line per stage. Nothing else
 2. AI current capabilities — short
-3. Why now — the bridge: one human feeding one conversation stops working once AI does every job at
-   once. Ends by naming the four stages in order and handing to the story
+3. Why now — the bridge: AI grew from finishing a line to doing whole jobs, the habit that stuck has
+   the human supplying the context, and that is the trade worth changing. Ends by naming the four
+   stages in order and handing to the story
 4. Three leaves · the common clover — short
 5. Four leaves · the lucky clover — the largest and most important section on the page
 6. Five leaves · the growth clover — short
@@ -125,11 +126,13 @@ The marks are the site's identity and they carry the argument, so they have rule
   do not add scores, and do not start arguing about what AI is missing — that argument belongs to the
   story below it, and making it twice weakens both.
 - **`#why-now` is the framework's introduction.** It carries the reason the common clover has to
-  move on: one human feeding one conversation was fine for a tool that did one job, and it becomes
-  the limit the moment AI can do every job at once. It is the first place the four stages are named
-  in order, so it must say Context first and must not mention Growth. Keep it to the argument — the
-  per-clover mechanics belong to the story, and `#st-limit` already says that two of the common
-  clover's three stages rest on one human. Do not repeat that here.
+  move on: AI grew from finishing a line to doing whole jobs, the habit that stuck has the human
+  supplying the context by hand, and the systems that hold the real context can now be read by AI
+  directly. The human moves from being the source of the context to pointing at it. It is the first
+  place the four stages are named in order, so it must say Context first and must not mention Growth.
+  Keep it to the setup — the per-stage mechanics belong to the story, which goes much further
+  (`#st-limit` on what the common clover costs, `#st-direction-2` on Direction pointing rather than
+  describing). State the transition here, then hand over.
 - The four-leaf section says nothing about production. Development first, then the other
   non-production environments. Access is read-only and scoped to what the human already holds. It is
   also where the page explains why Context comes first, and that explanation appears once.
