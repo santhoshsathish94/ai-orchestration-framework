@@ -38,14 +38,10 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - **AI capabilities is about the range of the work, not a scoreboard.** The section used to list four
-  job functions and claim AI was past what any individual human can do, with nothing behind it. It
-  now describes the breadth plainly — the same tool reasons like a developer, an operator, a security
-  reviewer, a tester, an analyst and a writer, and any one of those is worth having on its own — and
-  then says how fast that range grew. Two figures are cited and linked: experts across forty-four
-  professions rated a model's work as good as their own or better close to half the time, and the
-  length of job an agent can see through has been doubling roughly every seven months for six years.
-- The section ends by saying the skill is uneven and that it does far better on work that has been
-  described properly than on work it has to guess at. That is the handoff into the rest of the page.
+  job functions and claim AI was past what any individual human can do. It now describes the breadth
+  plainly — the same tool reasons like a developer, an operator, a security reviewer, a tester, an
+  analyst and a writer — and closes on the point that hiring that range is a team. It is short on
+  purpose. The argument about what AI is missing belongs to the story that follows it.
 
 - **The primary navigation is seven items instead of nine.** The three clover sections and the worked
   example moved into a **Framework** dropdown, and the remaining links are Getting started,

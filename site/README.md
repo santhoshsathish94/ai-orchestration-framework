@@ -118,13 +118,10 @@ The marks are the site's identity and they carry the argument, so they have rule
 - **Never invent** metrics, customers, adoption, or results. The React memory leak is a CI-green pull
   request that is *not merged*, and the Contentful production cutover *has not run* — the site must
   keep saying so.
-- **`#capability` is prose, not a scoreboard.** It describes the range of work AI can already do, in
-  the same voice as the rest of the page. It carries exactly two outside figures, both linked and
-  both written coarsely on purpose — "close to half the time", "roughly doubling every seven months"
-  — so they survive leaderboard movement. Re-check both sources at each release and reword rather
-  than drop if a figure has drifted. Resist turning this back into a benchmark table; the numbers are
-  there to support the description, and the section has to keep ending on the fact that AI does far
-  better on work that has been described properly, because that is the handoff into the story.
+- **`#capability` is short on purpose.** Six roles and one paragraph, in the same voice as the rest
+  of the page. It says what AI can already do and stops there. Do not turn it into a benchmark table,
+  do not add scores, and do not start arguing about what AI is missing — that argument belongs to the
+  story below it, and making it twice weakens both.
 - The four-leaf section says nothing about production. Development first, then the other
   non-production environments. Access is read-only and scoped to what the human already holds. It is
   also where the page explains why Context comes first, and that explanation appears once.
