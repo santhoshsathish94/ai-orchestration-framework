@@ -332,6 +332,10 @@ section[id] { scroll-margin-top: 5rem; }
 
 .story__caption { margin: 0.9rem 0 0; font-size: 0.95rem; color: var(--muted); font-style: italic; }
 
+.story__intro { margin: 0 0 1.8rem; padding-bottom: 1.2rem; border-bottom: 1px solid var(--line); }
+.story__title { margin: 0 0 0.5rem; font-size: clamp(1.5rem, 3.2vw, 2.05rem); }
+.story__lede { max-width: 48ch; color: var(--ink-2); }
+
 .story__steps { list-style: none; margin: 0; padding: 0; }
 .story__step {
   min-height: 52vh; display: flex; flex-direction: column; justify-content: center;
@@ -339,7 +343,7 @@ section[id] { scroll-margin-top: 5rem; }
   opacity: 0.4; transition: opacity 0.3s ease;
 }
 .story__step.is-current { opacity: 1; }
-.story__step h3 { margin: 0 0 0.6rem; font-size: clamp(1.3rem, 2.6vw, 1.72rem); }
+.story__step h4 { margin: 0 0 0.6rem; font-size: clamp(1.2rem, 2.4vw, 1.55rem); }
 .story__step p { max-width: 46ch; }
 .story__act {
   margin: 0 0 0.9rem; font-size: 0.76rem; font-weight: 650; letter-spacing: 0.1em;
