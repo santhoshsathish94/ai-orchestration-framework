@@ -12,6 +12,12 @@ All notable changes to this project will be documented in this file.
   developer could reasonably arrive expecting an SDK. The page already answered that under **What it
   is not**, five screens down, which is after the point the wrong impression forms. The repository
   description on GitHub now carries the same line, since that is the first thing anyone reads.
+- **A step on what the written context is actually worth.** The site mentioned context files eight
+  times and every one of them framed the benefit as continuity between cycles. The consequence that
+  matters more — the next pass does not have to be the same agent, the same tool or the same session,
+  because the picture is written down beside the code rather than held in a conversation — appeared
+  in four documents and on no page. It closes the argument the page opens with: the context used to
+  leave when the human did, and now it stays when the agent does. Getting started says it too.
 - **A step on what happens when Success does not hold.** The sharpest claim in the framework — that a
   second attempt on the same information lands in the same place, faster — was in the docs and nowhere
   on the website. The lucky clover now ends on it, and the leaf that lights up while you read it is
