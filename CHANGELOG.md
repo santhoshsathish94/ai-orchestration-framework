@@ -101,14 +101,14 @@ All notable changes to this project will be documented in this file.
   there to answer. Its opening line now says what the clovers are doing: each one is a way of
   working, each leaf is a stage in it, and the first is where most teams are today.
 
-- **The primary navigation is seven items instead of nine.** The three clover sections and the worked
-  example moved into a **Framework** dropdown, and the remaining links are Getting started,
-  Security, Evidence, Glossary, Author and GitHub. Security was not reachable from the nav before.
-- On wide screens the dropdown is a panel with a one-line description under each link. Below 1000px
-  it becomes an accordion inside the mobile menu, so the menu opens short and grows only when asked.
-- It closes on an outside click, on Escape with focus returned to the button, and when any link
-  inside it is followed. Without JavaScript the button is hidden and the panel renders inline, so
-  every link stays reachable.
+- **The nav is seven plain links, and the first one is "The Story".** It was a "Framework" dropdown
+  holding the three clover sections and the worked example, which meant the first thing in the nav
+  could not be clicked — it only opened a panel. It now goes straight to the story, matching the hero
+  button. The dropdown's CSS, its JavaScript and its mobile accordion went with it, and the story
+  section labels its own leaves, so the deep links it held are still one click away once you are there.
+- Fixed a dead `closeAllGroups()` call left behind on the window resize handler, which would have
+  thrown a ReferenceError on every resize.
+- Security is reachable from the nav, which it was not before the six-page split.
 - Every link now points at `santhoshsathish94/clover-framework` after the repository rename.
 
 ## v1.0.2 — 2026-08-28

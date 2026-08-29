@@ -26,7 +26,7 @@ site/
   author/           who wrote this, in the first person
   assets/           the peacock feather, and the four evidence diagrams (SVG)
   styles.css
-  app.js            tabs, the mobile menu, the nav dropdown, the glossary filter
+  app.js            tabs, the mobile menu, the scrolling story, the glossary filter
   check.ps1         run before committing: nav consistency, versions, every link
   llms.txt          the repository map for agents
   .nojekyll
@@ -165,10 +165,12 @@ The marks are the site's identity and they carry the argument, so they have rule
   drift. Run `pwsh -File site/check.ps1` before committing: it resolves every nav link to a
   site-root path and fails if the six pages disagree, checks the `?v=` versions match, and follows
   every relative link and every anchor.
-- **The primary nav is seven items, and "Framework" is a dropdown.** The three clover sections and
-  the worked example live inside it, pointing at anchors on the home page. On wide screens it is an
-  absolutely positioned panel; below 1000px it becomes an accordion inside the mobile menu.
-  Without JavaScript the button is hidden and the panel renders inline, so every link stays reachable.
+- **The primary nav is seven plain links, and the first is "The Story" pointing at `/#story`.** It was
+  a "Framework" dropdown holding the three clover sections and the worked example. The dropdown is
+  gone, along with its CSS, its JavaScript and its mobile accordion, because the story section labels
+  its own leaves and the reader can pick one there. Do not reintroduce a dropdown to hold anchors that
+  the page already exposes. Nav labels are the only Title Case text on the site; everything else,
+  including the headings those links point at, stays sentence case.
 - **`.btn` is the only button style.** Plain is the default, `.btn--primary` is the filled one, and
   `.btn--plain` is a bare link that keeps the same height. One primary per group.
 - **`.band--wide` drops the 68ch measure** so a section's prose runs the full width of the wrap.
@@ -199,8 +201,9 @@ The marks are the site's identity and they carry the argument, so they have rule
 - **Leaf links are SVG `<a class="story__leaf-link">` scoped to their own act**, with an
   `aria-label`, so they are clickable and focusable and still jump to the right step without
   JavaScript.
-- **The nav's Framework dropdown points into the story** — `#three-leaves`, `#context`, `#fifth-leaf`
-  are step ids now, not section ids. Keep those ids if you move the steps.
+- **`#three-leaves`, `#context` and `#fifth-leaf` are step ids inside the story**, not section ids.
+  Nothing in the nav points at them any more, but keep them — they are the anchors the clover leaves
+  link to, and `check.ps1` follows every one.
 - American spelling. No employer, product, cluster or infrastructure names.
 - **Bump the `?v=` on `styles.css` and `app.js` whenever either changes.** All three pages carry it.
   GitHub Pages sends `Cache-Control: max-age=600` on every file and they expire independently, so
