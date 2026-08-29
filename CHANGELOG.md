@@ -101,6 +101,13 @@ All notable changes to this project will be documented in this file.
   there to answer. Its opening line now says what the clovers are doing: each one is a way of
   working, each leaf is a stage in it, and the first is where most teams are today.
 
+- **Movement between places on the site is eased.** Clicking a nav link used to arrive almost as
+  abruptly as no animation at all, because the browser's own smooth scroll runs at a fixed speed no
+  matter how far it has to go. Anchor scrolling now eases in and out, and the duration scales with the
+  distance, so a jump from the hero to the story takes about a second and a short hop still feels
+  immediate. Same-origin navigations cross-fade instead of flashing white.
+- Both are off when the reader asks for reduced motion, and both degrade to what the site did before
+  in browsers that do not support them.
 - **The nav is seven plain links, and the first one is "The Story".** It was a "Framework" dropdown
   holding the three clover sections and the worked example, which meant the first thing in the nav
   could not be clicked — it only opened a panel. It now goes straight to the story, matching the hero

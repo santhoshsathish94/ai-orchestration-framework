@@ -171,6 +171,14 @@ The marks are the site's identity and they carry the argument, so they have rule
   its own leaves and the reader can pick one there. Do not reintroduce a dropdown to hold anchors that
   the page already exposes. Nav labels are the only Title Case text on the site; everything else,
   including the headings those links point at, stays sentence case.
+- **Anchor scrolling is eased in `app.js`, and the duration scales with the distance.** The browser's
+  own `scroll-behavior: smooth` runs at a fixed speed, so a jump from the hero down to the story
+  arrived almost as abruptly as no animation at all. The CSS rule stays for the no-JS case, and
+  `app.js` sets `scroll-behavior: auto` when it takes over so the two are not fighting over the same
+  scroll. Anything measuring scroll positions in a test has to account for the animation.
+- **Same-origin navigations cross-fade** through `@view-transition`. Browsers without it navigate the
+  way they always did. Both the eased scroll and the cross-fade are inside
+  `prefers-reduced-motion: no-preference` and turn into instant jumps when reduce is set.
 - **`.btn` is the only button style.** Plain is the default, `.btn--primary` is the filled one, and
   `.btn--plain` is a bare link that keeps the same height. One primary per group.
 - **`.band--wide` drops the 68ch measure** so a section's prose runs the full width of the wrap.

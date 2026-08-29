@@ -48,6 +48,69 @@
 
   document.querySelectorAll('[data-tabs]').forEach(initTabs);
 
+  /* Anchor scrolling. The browser's own smooth scroll runs at a fixed speed, so a jump from the top
+     of the page to a section near the bottom arrives almost as abruptly as no animation at all. This
+     eases it and scales the duration with the distance. CSS keeps `scroll-behavior: smooth` for the
+     no-JS case, and this turns it off so the two are not fighting over the same scroll. */
+  var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var canAnimate = !prefersReduced && typeof window.requestAnimationFrame === 'function';
+
+  if (canAnimate) document.documentElement.style.scrollBehavior = 'auto';
+
+  function easeInOutCubic(t) {
+    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  }
+
+  function targetOffset(el, block) {
+    var rect = el.getBoundingClientRect();
+    var top = rect.top + window.scrollY;
+    if (block === 'center') return top - (window.innerHeight - rect.height) / 2;
+    var margin = parseFloat(getComputedStyle(el).scrollMarginTop) || 0;
+    return top - margin;
+  }
+
+  function scrollToElement(el, block) {
+    var limit = document.documentElement.scrollHeight - window.innerHeight;
+    var to = Math.max(0, Math.min(limit, targetOffset(el, block)));
+
+    if (!canAnimate) {
+      window.scrollTo(0, to);
+      return;
+    }
+
+    var from = window.scrollY;
+    var distance = to - from;
+    if (Math.abs(distance) < 2) return;
+
+    // Long jumps get more time, so the page never appears to teleport.
+    var duration = Math.min(1200, Math.max(450, Math.abs(distance) * 0.6));
+    var startedAt = null;
+
+    (function step(now) {
+      if (startedAt === null) startedAt = now;
+      var progress = Math.min(1, (now - startedAt) / duration);
+      window.scrollTo(0, from + distance * easeInOutCubic(progress));
+      if (progress < 1) window.requestAnimationFrame(step);
+    })(performance.now());
+  }
+
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest && e.target.closest('a[href]');
+    if (!link || link.closest('.story__clover')) return;
+    if (link.target === '_blank' || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+
+    var href = link.getAttribute('href') || '';
+    if (href.charAt(0) !== '#' || href === '#') return;
+
+    var el = document.getElementById(href.slice(1));
+    if (!el) return;
+
+    e.preventDefault();
+    scrollToElement(el, 'start');
+    if (history.pushState) history.pushState(null, '', href);
+    else window.location.hash = href;
+  });
+
   /* The story. Each act is its own block with its own clover, so a leaf always links to a step in
      the act being read. The nearest step to the middle of the viewport wins, which behaves the same
      scrolling up as scrolling down. Scrolling itself is never taken over. */
@@ -107,7 +170,7 @@
         var target = href.charAt(0) === '#' ? document.getElementById(href.slice(1)) : null;
         if (!target) return;
         e.preventDefault();
-        target.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'center' });
+        scrollToElement(target, 'center');
       });
     });
   }
