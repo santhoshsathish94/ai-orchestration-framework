@@ -50,6 +50,13 @@ All notable changes to this project will be documented in this file.
   destination, you do not have to hold the context to be accountable for it, and write the context
   down or pay for it again.
 
+### Removed
+
+- **The five PNG infographics.** Four were replaced by the SVG diagrams above, and one,
+  `ai-orchestration-lifecycle.png`, had not been referenced by anything for some time. Together they
+  were 7.1 MB of pictures that disagreed with the documents around them, and leaving them in place
+  invited somebody to use one again. `assets/` is now 195 KB in total, most of it the social preview.
+
 ### Changed
 
 - **The four infographics were replaced, because they contradicted the documents they illustrated.**
