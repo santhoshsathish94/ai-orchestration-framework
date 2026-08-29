@@ -6,6 +6,10 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- **Each clover act opens with a heading saying what it is** — three leaves and where most teams are
+  today, four leaves and the one to adopt, five leaves and what adoption leads to. The acts were
+  separated only by a line of small text before, so a reader could not tell at a glance which clover
+  was which. Step headings dropped to `h4` under the act `h3`, giving the page a real outline.
 - **The clover story.** The three clover sections and the closing question became one scrolling
   story: a clover pinned beside the steps, growing from three leaves to four to five as the argument
   does, with the leaf for the current stage lit. Each act has its own clover, so a leaf always jumps
@@ -52,6 +56,8 @@ All notable changes to this project will be documented in this file.
 
 ### Removed
 
+- **The "Pick a leaf, or keep scrolling" hint** under the first two clovers. The story's opening line
+  already says it once, which is enough.
 - **The five PNG infographics.** Four were replaced by the SVG diagrams above, and one,
   `ai-orchestration-lifecycle.png`, had not been referenced by anything for some time. Together they
   were 7.1 MB of pictures that disagreed with the documents around them, and leaving them in place
@@ -117,6 +123,20 @@ All notable changes to this project will be documented in this file.
   thrown a ReferenceError on every resize.
 - Security is reachable from the nav, which it was not before the six-page split.
 - Every link now points at `santhoshsathish94/clover-framework` after the repository rename.
+
+### Fixed
+
+- **The Growth leaf never appeared to highlight.** The rule existed but filled the active leaf with
+  the same color every inactive leaf already had, so nothing visibly happened when it was the step
+  being read.
+- **"Two of the three stages rest on one person"** and two nearby sentences said *person* where the
+  framework says *human*. Direction is held by a human throughout, and the page now says so.
+- **The author and glossary pages had no Open Graph tags**, so sharing either one produced a bare
+  link with no title, description or image. Both now carry the same card as the other four pages.
+- `<main>` takes `tabindex="-1"` on every page, so activating the skip link moves focus rather than
+  only scrolling.
+- A dead `closeAllGroups()` call on the window resize handler, left behind when the nav dropdown was
+  removed, which would have thrown a ReferenceError on every resize.
 
 ## v1.0.2 — 2026-08-28
 
