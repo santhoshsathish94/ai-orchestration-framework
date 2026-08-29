@@ -311,7 +311,9 @@ section[id] { scroll-margin-top: 5rem; }
 }
 .story__leaf.is-next { fill: none; stroke-dasharray: 6 5; }
 .story__leaf.is-active { fill: var(--accent); }
-.story__leaf.is-active.is-next { fill: var(--accent-soft); stroke-dasharray: none; }
+/* Growth is dotted at rest because nobody runs it, and fills like any other leaf while it is the
+   step being read. --accent-soft here would match the leaves around it and read as no highlight. */
+.story__leaf.is-active.is-next { fill: var(--accent); stroke-dasharray: none; }
 
 .story__label {
   font-size: 8px; font-weight: 600; fill: var(--muted);
