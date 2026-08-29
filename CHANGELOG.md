@@ -32,18 +32,9 @@ All notable changes to this project will be documented in this file.
 - **`site/check.ps1`.** Six pages with no build step means the header, nav and footer are copied six
   times and will drift. It resolves every nav link to a site-root path and fails if the pages
   disagree, checks the asset versions match, and follows every relative link and every anchor.
-- **Buttons in the hero.** Explore the framework, Getting started, and a plain link to the evidence.
-  The page opened on prose with nothing to act on; there is now somewhere obvious to go from the top.
-
-### Changed
-
-- **Headings that say what the section is for.** The bridge is "AI evolved. Let's change the way we
-  use it." and the story it hands to is "What should we change?". The story used to be called "Three
-  stages, then four, then five", which described the picture rather than the question the reader is
-  there to answer. Its opening line now says what the clovers are doing: each one is a way of
-  working, each leaf is a stage in it, and the first is where most teams are today.
-- **`.band--wide`**, which drops the 68ch measure so a section's prose runs the full width of the
-  wrap. Used by the bridge section only.
+- **Buttons in the hero.** Read the story, Getting started, and a plain link to the evidence. The
+  page opened on prose with nothing to act on; there is now somewhere obvious to go from the top.
+- **A section between the capabilities and the story, saying why any of this needs to change.** The
   page went straight from what AI can do to a three-leaf clover, with nothing joining them. It now
   says that AI went from finishing the line you were typing to working through a whole task on its
   own, faster than anybody's habits could change; that the habit which stuck is the common clover,
@@ -51,10 +42,29 @@ All notable changes to this project will be documented in this file.
   the context is already sitting in the systems the organization runs and AI can read them directly.
   The human moves from being the source of the context to pointing at it. It is the first place on
   the page where the four stages are named in order.
-  job functions and claim AI was past what any individual human can do. It now describes the breadth
-  plainly — the same tool reasons like a developer, an operator, a security reviewer, a tester, an
-  analyst and a writer — and closes on the point that hiring that range is a team. It is short on
-  purpose. The argument about what AI is missing belongs to the story that follows it.
+- **`.band--wide`**, which drops the 68ch measure so a section's prose runs the full width of the
+  wrap. Used by that section only.
+
+### Changed
+
+- **The README is an index now, rather than a second copy of the framework.** It re-explained all
+  four stages at length, restated the arc from three leaves to five, and walked through the MCP
+  setup, so it competed with the documents it was supposed to point at. It now opens on the clover
+  mark, tells the same short story the website tells in three paragraphs, keeps the four-stage table
+  and the three steps to start, and puts everything else in linked tables: the framework, putting it
+  to work, and the evidence and lessons. A quarter fewer words, and every document in the repository
+  is reachable from it — `docs/clover-origin.md` was not linked from anywhere before.
+- **AI capabilities is about the range of the work, rather than a scoreboard.** The section listed
+  four job functions and claimed AI was past what any individual human can do. It now describes the
+  breadth plainly — the same tool reasons like a developer, an operator, a security reviewer, a
+  tester, an analyst and a writer — and closes on the point that covering that range would normally
+  take several people. It is short on purpose. The argument about what AI is missing belongs to the
+  story that follows it.
+- **Headings that say what the section is for.** The bridge is "AI evolved. Let's change the way we
+  use it." and the story it hands to is "What should we change?". The story used to be called "Three
+  stages, then four, then five", which described the picture rather than the question the reader is
+  there to answer. Its opening line now says what the clovers are doing: each one is a way of
+  working, each leaf is a stage in it, and the first is where most teams are today.
 
 - **The primary navigation is seven items instead of nine.** The three clover sections and the worked
   example moved into a **Framework** dropdown, and the remaining links are Getting started,

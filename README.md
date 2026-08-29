@@ -1,84 +1,46 @@
-# Clover
+<p align="center">
+  <a href="https://cloverframework.com/">
+    <img src="assets/social-preview.png" width="820"
+         alt="Clover — an AI Orchestration Framework connecting real-world Context, human Direction, AI-driven Action, and validated Success into a repeatable cycle">
+  </a>
+</p>
 
-> **Context → Direction → Action → Success**
+<p align="center">
+  <a href="https://cloverframework.com/"><strong>cloverframework.com</strong></a> ·
+  <a href="QUICKSTART.md">Quickstart</a> ·
+  <a href="AGENTS.md">AGENTS.md</a> ·
+  <a href="docs/04-framework.md">The framework</a> ·
+  <a href="docs/glossary.md">Glossary</a>
+</p>
+
+---
 
 Clover is an AI Orchestration Framework connecting real-world Context, human Direction, AI-driven
 Action, and validated Success into a repeatable cycle. It sits on top of the systems a team already
 runs, so there is nothing to install and nothing to migrate onto.
 
-Four stages, and Context comes first. The common way of working is Direction → Action → Success,
-where context is whatever the human remembers to hand over, so it arrives as a consequence of the
-direction. Clover starts with Context because the systems are already running before anyone asks for
-anything, and Direction is then given against what is actually there.
-
-**[🌐 Read it on the website →](https://cloverframework.com/)** — the four stages in about three minutes.
+This page is the map. The website tells the story, the docs hold the detail, and both are linked from
+here.
 
 ---
 
-## AI already does expert work
+## The short story
 
-AI reads a codebase it has never seen and explains how the system behaves. It reviews a change the
-way an experienced engineer reviews one. It writes test cases from how the system actually works
-rather than from the wording of a ticket. It reads a diff for the class of mistake that causes
-security incidents. During an incident it reconstructs what happened from logs and telemetry while
-the incident is still open.
+AI grew from finishing the line you were typing to working through a whole task on its own. The same
+tool now reasons like a developer, an operator, a security reviewer, a tester and an analyst, and
+covering that range would normally take several people.
 
-Those answers come out of analysis rather than recall, and when somebody goes and checks one it
-usually holds. So capability is not what teams are short of. What decides whether the work becomes an
-outcome anyone can rely on sits around the capability.
+The way we use it has not moved with it. A human gives the Direction, AI takes the Action, and
+somebody checks for Success. Three stages, and that same human also supplies the context — they
+remember which service is involved, they paste in the error, they attach the file, they explain what
+was tried last month. AI only ever sees the part of the system that one human thought to describe.
 
----
+That was a fair trade when AI could handle one small job. The context is already sitting in the
+systems the organization runs, and AI can read those systems directly, so Context becomes a stage of
+its own and it goes first. Direction stays human, and it stops describing the problem from memory and
+starts pointing at the part of the system worth reading first.
 
-## Three leaves, then four, then five
-
-The number of leaves carries the argument.
-
-**Three leaves — the common clover. Direction, Action, Success.** A human gives the Direction. AI
-performs the Action from whatever that one human can hand over: not only what they type, but the
-files they attach and the repository they happen to be working in. After several passes the result
-becomes Success. This is how AI is used almost everywhere today, it produces real value, and it is
-ordinary. The limit is that those three stages only ever see as much of the organization as one
-human can reach and remember, and what they hand over arrives after the direction rather than before
-it.
-
-**Four leaves — the lucky clover. Context.** Context stops being bounded by one human, and it moves
-to the front of the cycle. It is the current systems the organization uses: every repository with
-its many projects and their documentation, the datasources the applications connect to, the logs and
-telemetry, the deployment environments, and the running applications.
-
-Reaching them takes a setup rather than a principle. Stand up **read-only MCP servers** in front of
-the repositories, the datasources, the logs and the environments, so an agent can read them
-directly. Scope every connection to what the human driving the work already has access to, at the
-privileges they already hold. Start with **one environment — development is enough** — and widen to
-other non-production environments as it proves out.
-
-That access already exists and is already used, often with nobody tracking it. Clover makes it
-deliberate, scoped and visible, and it surfaces stale credentials, unreviewed access paths and data
-nobody has looked at before any of those become an incident.
-[Governance](docs/08-governance.md#questions-your-security-team-will-ask) answers the questions a
-security team will ask.
-
-Connecting the material does not finish the job. An organization's systems are a haystack, and the
-thing worth finding is a needle somewhere inside it. Expecting AI to search the whole haystack does
-not work. **That is what changes Direction.** The people who work on a system every day know roughly
-where the needle fell, so Direction becomes a pointer at the part of the system to read first.
-Direction that points, together with context that is real, is what produces Success worth having.
-
-It runs in a loop, and what comes back from one pass is context for the next. Markdown files kept
-beside the work hold the summary, and that summary is what lets any agent pick the job up, so no
-single agent has to hold the work.
-
-> After each success and each failure, the context files are written before the next attempt.
-
-**Five leaves — the growth clover. Growth.** Growth is the next stage, and it happens whether or not
-anyone chooses it. AI becomes more capable from what it takes out of the other four stages: the
-direction it was given, the context it read, the actions it ran, and the results it saw confirmed.
-Patterns form, and expertise forms out of the patterns. Nobody in an organization operates this. It
-belongs to the frontier AI companies, who hold the volume of data everyone's usage generates. That
-is a general statement about how information accumulates, and it says nothing about any AI provider
-training on customer or enterprise work.
-
-[The arc in full →](docs/04-framework.md#three-leaves-then-four-then-five)
+**[Read the whole story on the website →](https://cloverframework.com/)** — about three minutes.
 
 ---
 
@@ -93,45 +55,87 @@ The stages read in the order the work runs in.
 | **Action** | AI determines how the work should happen and executes within those boundaries | What should we do, and how should the work happen? |
 | **Success** | The intended outcome demonstrated by the real environment | Did reality validate the intended outcome? |
 
-Each stage has one job. The complexity belongs in the context, the ownership, the evidence and the
-feedback around the stages, rather than in adding more of them. If Success does not hold, the cycle
-goes back to Context rather than to Action, because a second attempt on the same information lands
-in the same place, faster.
-
-[The framework in full →](docs/04-framework.md) · [The principles →](docs/03-principles.md)
+Each stage has one job. If Success does not hold, the cycle goes back to Context rather than to
+Action, because a second attempt on the same information lands in the same place, faster.
 
 ---
 
 ## Start
 
 **1. Copy [`AGENTS.md`](AGENTS.md) into your project.**
-It is the whole way of working written as instructions for an agent. Point an agent at that one
-file and nothing else is required.
+It is the whole way of working written as instructions for an agent. Point an agent at that one file
+and nothing else is required.
 
 **2. Connect the Context stage.**
 Read-only MCP servers in front of the repositories, the tickets, the logs and the datasources, plus
-one environment to read — development is enough. One connection at a time, each scoped to what the
-human driving the work can already read, at the privileges they already hold. Widen to other
-non-production environments once it proves out.
-[How to set that up →](docs/orchestration-environment.md#building-one)
+one environment to read — development is enough. Scope every connection to what the human driving the
+work can already read, at the privileges they already hold.
 
 **3. Run one real problem through the four stages.**
 A defect, a recurring exception, a question nobody can answer quickly. Say where you think the answer
 is, and keep a markdown file beside the code so the next cycle starts ahead of this one.
 
-Adoption is incremental and reversible, and a team that stops is left with the systems it already
-had. How much of the path AI determines widens where results have held, stays capped by blast radius,
-and is granted per context rather than globally.
-[How much autonomy to grant →](docs/08-governance.md#how-much-autonomy-to-grant) ·
-[How a team gets there →](docs/09-adoption.md)
+Adoption is incremental and reversible, and a team that stops is left with the systems it already had.
+
+[Quickstart](QUICKSTART.md) · [Brief template](templates/orchestration-brief.md) ·
+[Worked example](examples/production-exception-remediation/) ·
+[Setting up the environment](docs/orchestration-environment.md#building-one)
+
+---
+
+## The framework
+
+| | |
+|---|---|
+| [The problem](docs/01-problem.md) | What the framework exists to fix |
+| [Philosophy](docs/02-philosophy.md) | The thinking underneath the four stages |
+| [Principles](docs/03-principles.md) | What makes each stage hold up on real work |
+| [The framework in full](docs/04-framework.md) | The four stages, and the arc from three leaves to five |
+| [Context](docs/05-context-engineering.md) | The first stage: what has to be known about reality before anything acts |
+| [Success](docs/07-success.md) | The last stage: whether the environment confirms the outcome |
+| [Governance](docs/08-governance.md) | Ownership, access and attribution as the cycle scales, and [the questions a security team will ask](docs/08-governance.md#questions-your-security-team-will-ask) |
+| [Adoption](docs/09-adoption.md) | How a team gets there, and [how much autonomy to grant](docs/08-governance.md#how-much-autonomy-to-grant) |
+| [Roadmap](docs/10-roadmap.md) | Where it is going, held loosely |
+| [The name and the mark](docs/clover-origin.md) | Why a clover, and the canonical definition |
+
+---
+
+## Putting it to work
+
+| | |
+|---|---|
+| [AGENTS.md](AGENTS.md) | The whole framework as operating instructions for an agent |
+| [Quickstart](QUICKSTART.md) | A first cycle on a real task, in about fifteen minutes |
+| [The orchestration environment](docs/orchestration-environment.md) | What has to be in place before any of it runs |
+| [Reference implementations](docs/reference-implementations.md) | [Cross-team knowledge access](docs/reference-implementations.md#1-cross-team-knowledge-access), [production exception remediation](docs/reference-implementations.md#2-production-exception-remediation), [multi-repository defect remediation](docs/reference-implementations.md#3-multi-repository-defect-remediation) |
+| [Orchestration brief](templates/orchestration-brief.md) | The template a cycle starts from |
+| [Worked example](examples/production-exception-remediation/) | One cycle, start to finish |
+
+---
+
+## Evidence and lessons
+
+Two cycles are written up end to end, including the parts that are still unproven.
+
+| | |
+|---|---|
+| [Contentful API migration](case-studies/01-contentful-migration.md) | ~7,800 lines across 200+ files, GraphQL → REST and .NET 9 MVC → .NET 10 Minimal APIs, with every route and JSON shape preserved. Implementation took about a day against an 8–10 week estimate, and QA signed off on parity across 36 endpoint cases. **The production cutover has not run.** |
+| [A React Server Components memory leak](case-studies/02-react-rsc-memory-leak.md) | Recurring out-of-memory crashes stabilized with a Node flag, then traced past the workaround into React's renderer. The one-file fix went upstream as a CI-green pull request, which **has not been merged.** |
+| [How AI fails](docs/how-ai-fails.md) | The failures specific to working this way, and which stage catches each one |
+| [Practices and field lessons](docs/field-practices.md) | What running this on high-stakes work actually taught |
+| [Glossary](docs/glossary.md) | Plain-language definitions for every term used here |
+
+The reference implementations have all been built and used against real organizational data. None is
+always-on or adopted organization-wide, and each depends on a human providing the map and holding the
+approvals.
 
 ---
 
 ## What it is not
 
 - **Not software.** There is nothing to install.
-- **Not a runtime.** Clover defines the way of working around AI orchestration and does not
-  prescribe what executes it. Agent frameworks, workflow engines and tool protocols sit inside it.
+- **Not a runtime.** Clover defines the way of working around AI orchestration and does not prescribe
+  what executes it. Agent frameworks, workflow engines and tool protocols sit inside it.
 - **Not a replacement for how a team already works.** It runs alongside Agile, incident management,
   or whatever is already in place.
 - **Not about AI model or tool selection.** It does not say which AI to use, and it does not cover
@@ -141,60 +145,19 @@ and is granted per context rather than globally.
 
 ---
 
-## The work behind it
-
-This comes out of delivery work. Two cycles are written up end to end, including the parts that are
-still unproven.
-
-**A CMS content API migration whose implementation took about a day, against an 8–10 week estimate.**
-GraphQL → REST and .NET 9 MVC → .NET 10 Minimal APIs, replacing ~7,800 lines across 200+ files, with
-every route, JSON shape and response envelope preserved so no consumer had to change. Parity held
-across 36 endpoint cases, and QA validated the real site through the API gateway and signed off.
-Testing took roughly another day and stakeholder agreement longer still, so the day describes
-execution rather than delivery. The production cutover has not run.
-[Read the case study →](case-studies/01-contentful-migration.md)
-
-**A production memory leak traced past its workaround to the root cause.** Recurring out-of-memory
-crashes were stabilized with a blunt Node flag, and the investigation kept going, into React's Server
-Components renderer. The one-file fix was contributed upstream as a CI-green pull request, which has
-not been merged. [Read the case study →](case-studies/02-react-rsc-memory-leak.md)
-
-Three reference implementations apply the stages to recurring problems:
-[cross-team knowledge access](docs/reference-implementations.md#1-cross-team-knowledge-access),
-[production exception remediation](docs/reference-implementations.md#2-production-exception-remediation),
-and [multi-repository defect remediation](docs/reference-implementations.md#3-multi-repository-defect-remediation).
-All have been built and used against real organizational data. None is always-on or adopted
-organization-wide, and each depends on a human providing the map and holding the approvals. Each
-cycle left reusable context behind, which is what the next one starts from.
-
----
-
-## Where to read next
-
-**Start** — [AGENTS.md](AGENTS.md) is the whole framework as instructions for an agent. To run a first
-cycle by hand instead, use the [quickstart](QUICKSTART.md), the
-[brief template](templates/orchestration-brief.md), or the
-[worked example](examples/production-exception-remediation/).
-
-**The framework** — [The problem](docs/01-problem.md) · [Philosophy](docs/02-philosophy.md) ·
-[Principles](docs/03-principles.md) · [The framework in full](docs/04-framework.md) ·
-[Context](docs/05-context-engineering.md) · [Success](docs/07-success.md) ·
-[Governance](docs/08-governance.md) · [Adoption](docs/09-adoption.md) ·
-[Roadmap](docs/10-roadmap.md)
-
-**Putting it to work** — [The orchestration environment](docs/orchestration-environment.md) ·
-[Reference implementations](docs/reference-implementations.md) ·
-[How AI fails](docs/how-ai-fails.md) · [Practices and field lessons](docs/field-practices.md) ·
-[Case studies](case-studies/) · [Glossary](docs/glossary.md) ·
-[The AI Future](hypothesis/ai-future.md), which is speculative and labeled as such.
-
 ## Contributing
 
 Corrections, questions and case studies are welcome, including the ones where the outcome was never
-reached. See [CONTRIBUTING.md](CONTRIBUTING.md).
+reached. See [CONTRIBUTING.md](CONTRIBUTING.md), and [CHANGELOG.md](CHANGELOG.md) for what has
+changed.
+
+[The AI Future](hypothesis/ai-future.md) is a separate hypothesis about where this goes. It is
+speculative and labeled as such.
 
 ## Author
 
 **Santhosh Narayanan**
 
 Clover comes out of real engineering work, and it keeps changing as more of that work gets done.
+
+Licensed under [CC BY 4.0](LICENSE).
