@@ -2,8 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased
-
+## v1.1.3 — 2026-08-29
 ### Added
 
 - **The hero says what kind of thing Clover is.** "A way of working rather than software. There is
