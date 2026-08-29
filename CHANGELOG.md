@@ -44,9 +44,26 @@ All notable changes to this project will be documented in this file.
   the page where the four stages are named in order.
 - **`.band--wide`**, which drops the 68ch measure so a section's prose runs the full width of the
   wrap. Used by that section only.
+- **Four diagrams on the evidence page, and the five field lessons.** Each case study and each
+  reference implementation now carries a diagram, and the lessons from running this on real work sit
+  under them: focus beats parallelism, read the system before fixing it, a workaround is not the
+  destination, you do not have to hold the context to be accountable for it, and write the context
+  down or pay for it again.
 
 ### Changed
 
+- **The four infographics were replaced, because they contradicted the documents they illustrated.**
+  The two reference-implementation images were built on "Opportunity → Understand → Plan → Execute →
+  Proof → Grow", the six stages that were deleted from the framework, and they were the last place
+  those stages survived anywhere in the repository. The migration image showed **Cutover** as a
+  completed step when the production cutover has not run, and repeated "16× faster" and "0
+  vulnerabilities" without the case study's own warning that those are local measurements taken on one
+  developer machine. The memory-leak image said the fix was contributed to **Next.js** when it went to
+  React, claimed it was **verified in production** when only the mitigation ever ran there, and had
+  two labels overlapping each other.
+- They are now hand-written SVG in the site's own palette, with no icon art, and each one ends on a
+  strip naming what the work does not show. Four files at about 4 KB each replace five PNGs at about
+  1.4 MB each, and the same file serves the case study and the website.
 - **The README is an index now, rather than a second copy of the framework.** It re-explained all
   four stages at length, restated the arc from three leaves to five, and walked through the MCP
   setup, so it competed with the documents it was supposed to point at. It now opens on the clover

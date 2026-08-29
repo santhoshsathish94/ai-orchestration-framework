@@ -27,7 +27,7 @@ This becomes especially costly when ownership changes, teams are reorganized, or
 
 Give an AI knowledge capability read-only access to relevant organizational sources so people can ask questions such as **"What happened, and why?"**
 
-![Cross-Team Knowledge Access](../assets/reference-cross-team-knowledge-access.png)
+![Read-only access to repositories, logs, datasources and job definitions feeds an orchestration layer, which answers a human's question with the evidence it was drawn from](../assets/reference-cross-team-knowledge-access.svg)
 
 ### Direct examples
 
@@ -66,7 +66,7 @@ Production exception handling is often fragmented across ticket investigation, c
 
 ### Implementation
 
-![Production Exception Remediation](../assets/reference-production-exception-remediation.png)
+![A production exception signal, reading the running system, a proposal carrying its evidence, and a human approval before anything reaches production](../assets/reference-production-exception-remediation.svg)
 
 AI should provide concrete evidence before production approval:
 

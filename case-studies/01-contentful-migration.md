@@ -29,9 +29,9 @@ size.
 > real traffic. The staged rollout below is the plan the evidence supports, and not a sequence that
 > has already executed.
 
-## Contentful migration model
+## How the cycle ran
 
-![Content Migration Model](../assets/contentful-migration.png)
+![The migration as one Clover cycle: the system as it was, what the work was for, how the rewrite ran, and what reality showed](../assets/case-study-01-contentful-migration.svg)
 
 ---
 

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 302" width="960" height="302" role="img"
+     aria-labelledby="title desc" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif">
+  <title id="title">The Contentful API migration, run as one Clover cycle</title>
+  <desc id="desc">Context: 89 GraphQL files and 99 mappers across 200-plus files. Direction: preserve every route and JSON shape so no consumer changes. Action: one generic mapper, fifteen verifiable tasks, a live parity differ. Success: 36 of 36 endpoint cases and 239 tests, with QA signing off against the real site. Implementation took about a day against an 8 to 10 week estimate. Performance was measured locally only, and the production cutover has not run.</desc>
+
+  <rect width="960" height="302" fill="#ffffff"/>
+
+  <text x="20" y="26" font-size="12" font-weight="700" fill="#0a6a5f" letter-spacing="1.6">CONTEXT → DIRECTION → ACTION → SUCCESS</text>
+  <line x1="20" y1="40" x2="940" y2="40" stroke="#d6e2e0" stroke-width="1"/>
+
+  <g stroke="#7fb8b0" stroke-width="1.5" fill="#e6f2f0">
+    <rect x="21" y="60" width="210" height="140" rx="10"/>
+    <rect x="257" y="60" width="210" height="140" rx="10"/>
+    <rect x="493" y="60" width="210" height="140" rx="10"/>
+    <rect x="729" y="60" width="210" height="140" rx="10"/>
+  </g>
+
+  <g fill="#0a6a5f" font-size="10.5" font-weight="700" letter-spacing="1.3">
+    <text x="37" y="84">CONTEXT</text>
+    <text x="273" y="84">DIRECTION</text>
+    <text x="509" y="84">ACTION</text>
+    <text x="745" y="84">SUCCESS</text>
+  </g>
+
+  <g fill="#14181d" font-size="13.5" font-weight="700">
+    <text x="37" y="106">The system as it was</text>
+    <text x="273" y="106">What the work was for</text>
+    <text x="509" y="106">How the rewrite ran</text>
+    <text x="745" y="106">What reality showed</text>
+  </g>
+
+  <g fill="#39424d" font-size="12">
+    <text x="37" y="128">89 GraphQL query and</text>
+    <text x="37" y="145">fragment files</text>
+    <text x="37" y="166">99 mappers and an 85-map</text>
+    <text x="37" y="183">AutoMapper profile</text>
+
+    <text x="273" y="128">Preserve every route, JSON</text>
+    <text x="273" y="145">shape and response envelope</text>
+    <text x="273" y="166">No consumer changes</text>
+    <text x="273" y="183">anywhere</text>
+
+    <text x="509" y="128">One generic, attribute-driven</text>
+    <text x="509" y="145">mapper replaces all 99</text>
+    <text x="509" y="166">15 verifiable tasks, gated by</text>
+    <text x="509" y="183">a live parity differ</text>
+
+    <text x="745" y="128">36 of 36 endpoint cases,</text>
+    <text x="745" y="145">239 tests passing</text>
+    <text x="745" y="166">QA validated the real site</text>
+    <text x="745" y="183">and signed off</text>
+  </g>
+
+  <g stroke="#0a6a5f" stroke-width="1.5" fill="none">
+    <path d="M237 130h14M251 130l-6-4M251 130l-6 4"/>
+    <path d="M473 130h14M487 130l-6-4M487 130l-6 4"/>
+    <path d="M709 130h14M723 130l-6-4M723 130l-6 4"/>
+  </g>
+
+  <rect x="21" y="216" width="918" height="70" rx="10" fill="#f4f7f7" stroke="#d6e2e0" stroke-width="1"/>
+  <text x="37" y="238" font-size="11.5" font-weight="700" fill="#0a6a5f" letter-spacing="1.2">WHAT THIS DOES NOT SHOW</text>
+  <text x="37" y="258" font-size="12" fill="#39424d">~7,800 lines across 200+ files. Implementation took about a day against an 8–10 week estimate, and testing took roughly another day.</text>
+  <text x="37" y="276" font-size="12" fill="#39424d">Performance was measured locally on one machine, never on deployed infrastructure. <tspan font-weight="700" fill="#14181d">The production cutover has not run.</tspan></text>
+</svg>

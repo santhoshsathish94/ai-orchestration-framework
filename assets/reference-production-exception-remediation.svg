@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" width="960" height="300" role="img"
+     aria-labelledby="title desc" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif">
+  <title id="title">Production exception remediation</title>
+  <desc id="desc">A production exception signal starts the cycle. The orchestration layer reads the running system, then proposes a change carrying the root cause, the exact scope, the tests, and the expected production signal. A human holds the approval, and nothing reaches production without it. After deployment the ticket closes only when the original production signal is shown to be resolved.</desc>
+
+  <rect width="960" height="300" fill="#ffffff"/>
+
+  <text x="20" y="26" font-size="12" font-weight="700" fill="#0a6a5f" letter-spacing="1.6">CONTEXT → DIRECTION → ACTION → SUCCESS</text>
+  <line x1="20" y1="40" x2="940" y2="40" stroke="#d6e2e0" stroke-width="1"/>
+
+  <g stroke="#7fb8b0" stroke-width="1.5" fill="#e6f2f0">
+    <rect x="21" y="60" width="210" height="132" rx="10"/>
+    <rect x="257" y="60" width="210" height="132" rx="10"/>
+    <rect x="493" y="60" width="210" height="132" rx="10"/>
+    <rect x="729" y="60" width="210" height="132" rx="10"/>
+  </g>
+
+  <g fill="#0a6a5f" font-size="10.5" font-weight="700" letter-spacing="1.3">
+    <text x="37" y="84">THE SIGNAL</text>
+    <text x="273" y="84">READ THE SYSTEM</text>
+    <text x="509" y="84">THE PROPOSAL</text>
+    <text x="745" y="84">CONFIRMED</text>
+  </g>
+
+  <g fill="#14181d" font-size="13.5" font-weight="700">
+    <text x="37" y="106">An exception in production</text>
+    <text x="273" y="106">Before proposing anything</text>
+    <text x="509" y="106">Evidence, then a change</text>
+    <text x="745" y="106">By the signal itself</text>
+  </g>
+
+  <g fill="#39424d" font-size="12">
+    <text x="37" y="128">Recurring, and nobody has</text>
+    <text x="37" y="145">had time to read it</text>
+    <text x="37" y="168">A human points at where</text>
+    <text x="37" y="185">the answer probably is</text>
+
+    <text x="273" y="128">The code across every</text>
+    <text x="273" y="145">repository involved</text>
+    <text x="273" y="168">The logs, the telemetry and</text>
+    <text x="273" y="185">the running application</text>
+
+    <text x="509" y="128">Root cause and the evidence</text>
+    <text x="509" y="145">for it, and the exact scope</text>
+    <text x="509" y="168">Tests, non-production checks,</text>
+    <text x="509" y="185">and the signal to expect</text>
+
+    <text x="745" y="128">The ticket closes when the</text>
+    <text x="745" y="145">original production signal</text>
+    <text x="745" y="168">is shown resolved, rather</text>
+    <text x="745" y="185">than when the code merges</text>
+  </g>
+
+  <g stroke="#0a6a5f" stroke-width="1.5" fill="none">
+    <path d="M237 126h14M251 126l-6-4M251 126l-6 4"/>
+    <path d="M473 126h14M487 126l-6-4M487 126l-6 4"/>
+    <path d="M709 126h14M723 126l-6-4M723 126l-6 4"/>
+  </g>
+
+  <rect x="493" y="208" width="446" height="34" rx="8" fill="#0a6a5f"/>
+  <text x="509" y="230" font-size="12.5" font-weight="700" fill="#ffffff">A human approves before anything reaches production</text>
+  <path d="M716 204v-12M716 192l-4 6M716 192l4 6" stroke="#0a6a5f" stroke-width="1.5" fill="none"/>
+
+  <rect x="21" y="256" width="918" height="32" rx="8" fill="#f4f7f7" stroke="#d6e2e0" stroke-width="1"/>
+  <text x="37" y="277" font-size="12" fill="#39424d">Run on real work through existing review and deployment approvals. <tspan font-weight="700" fill="#14181d">Not always-on, and not the routine path for any team's production exceptions yet.</tspan></text>
+</svg>

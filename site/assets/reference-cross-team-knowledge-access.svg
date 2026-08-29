@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" width="960" height="300" role="img"
+     aria-labelledby="title desc" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif">
+  <title id="title">Cross-team knowledge access</title>
+  <desc id="desc">Read-only access to repositories, documentation, logs and telemetry, and job definitions feeds an orchestration layer. A human asks what happened and why, and points at where to look. The answer comes back with the evidence it was drawn from. The capability is assembled per question rather than running as a product, it is read-only, and the human provides the map.</desc>
+
+  <rect width="960" height="300" fill="#ffffff"/>
+
+  <text x="20" y="26" font-size="12" font-weight="700" fill="#0a6a5f" letter-spacing="1.6">CONTEXT → DIRECTION → ACTION → SUCCESS</text>
+  <line x1="20" y1="40" x2="940" y2="40" stroke="#d6e2e0" stroke-width="1"/>
+
+  <text x="21" y="62" font-size="10.5" font-weight="700" fill="#0a6a5f" letter-spacing="1.3">CONTEXT · READ-ONLY</text>
+  <g stroke="#7fb8b0" stroke-width="1.5" fill="#e6f2f0">
+    <rect x="21" y="72" width="228" height="34" rx="8"/>
+    <rect x="21" y="114" width="228" height="34" rx="8"/>
+    <rect x="21" y="156" width="228" height="34" rx="8"/>
+    <rect x="21" y="198" width="228" height="34" rx="8"/>
+  </g>
+  <g fill="#39424d" font-size="12.5">
+    <text x="37" y="94">Repositories and documentation</text>
+    <text x="37" y="136">Logs and telemetry</text>
+    <text x="37" y="178">Datasources</text>
+    <text x="37" y="220">Job and pipeline definitions</text>
+  </g>
+
+  <g stroke="#0a6a5f" stroke-width="1.5" fill="none">
+    <path d="M255 89h60v53h8M323 142l-6-4M323 142l-6 4"/>
+    <path d="M255 131h60v11h8"/>
+    <path d="M255 173h60v-31h8"/>
+    <path d="M255 215h60v-73h8"/>
+  </g>
+
+  <rect x="331" y="100" width="252" height="84" rx="10" fill="#0a6a5f"/>
+  <text x="457" y="128" text-anchor="middle" font-size="11" font-weight="700" fill="#8fd4c9" letter-spacing="1.3">THE ORCHESTRATION LAYER</text>
+  <text x="457" y="150" text-anchor="middle" font-size="13.5" font-weight="700" fill="#ffffff">Reads across all of it</text>
+  <text x="457" y="169" text-anchor="middle" font-size="12" fill="#cdeae4">at the asker's own privileges</text>
+
+  <text x="331" y="216" font-size="10.5" font-weight="700" fill="#0a6a5f" letter-spacing="1.3">DIRECTION · THE HUMAN</text>
+  <text x="331" y="234" font-size="12" fill="#39424d">&#8220;What happened, and why?&#8221; plus where to look first</text>
+  <path d="M457 210v-18M457 192l-4 6M457 192l4 6" stroke="#0a6a5f" stroke-width="1.5" fill="none"/>
+
+  <g stroke="#0a6a5f" stroke-width="1.5" fill="none">
+    <path d="M589 142h56M645 142l-6-4M645 142l-6 4"/>
+  </g>
+
+  <rect x="653" y="72" width="286" height="140" rx="10" fill="#e6f2f0" stroke="#7fb8b0" stroke-width="1.5"/>
+  <text x="669" y="96" font-size="10.5" font-weight="700" fill="#0a6a5f" letter-spacing="1.3">SUCCESS</text>
+  <text x="669" y="118" font-size="13.5" font-weight="700" fill="#14181d">An answer, with its evidence</text>
+  <g fill="#39424d" font-size="12">
+    <text x="669" y="141">What happened, where it happened,</text>
+    <text x="669" y="158">and the files and logs it came from</text>
+    <text x="669" y="181">Checkable, because every claim</text>
+    <text x="669" y="198">points at something real</text>
+  </g>
+
+  <rect x="21" y="244" width="918" height="52" rx="10" fill="#f4f7f7" stroke="#d6e2e0" stroke-width="1"/>
+  <text x="37" y="265" font-size="12" fill="#39424d">Built and used against real organizational data. The human provides the map and holds the approvals.</text>
+  <text x="37" y="283" font-size="12" font-weight="700" fill="#14181d">It is assembled per question rather than running as a product, and it is not adopted organization-wide.</text>
+</svg>

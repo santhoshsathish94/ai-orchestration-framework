@@ -24,7 +24,7 @@ site/
   evidence/         case studies and reference implementations
   glossary/         searchable terms
   author/           who wrote this, in the first person
-  assets/           the peacock feather, the only image the site loads
+  assets/           the peacock feather, and the four evidence diagrams (SVG)
   styles.css
   app.js            tabs, the mobile menu, the nav dropdown, the glossary filter
   check.ps1         run before committing: nav consistency, versions, every link
@@ -174,6 +174,16 @@ The marks are the site's identity and they carry the argument, so they have rule
 - **`.band--wide` drops the 68ch measure** so a section's prose runs the full width of the wrap.
   `#why-now` uses it. Do not spread it around — 68ch is the reading measure everywhere else for a
   reason, and full-width lines only hold up for a short section.
+- **The evidence diagrams are hand-written SVG, and the same four files serve the docs.** They live in
+  `assets/` at the repository root and are copied into `site/assets/`; if you change one, copy it
+  again or the site and the case study will disagree. They are drawn in the site's palette, they carry
+  no icon art, and every one of them ends on a strip naming what the work does **not** show — the
+  cutover that has not run, the pull request that is not merged, the pattern that is not always-on.
+  Keep that strip. It is the reason the diagrams are allowed on the page at all.
+- **The PNG infographics they replaced were wrong** and must not come back. Two of them advertised the
+  deleted six stages, one showed the production cutover as a completed step, and one said the memory
+  leak fix went to Next.js when it went to React. Any new diagram gets checked against the case study
+  text before it ships.
 - **The story is three acts, and each act is its own `[data-story]` block** with its own sticky
   clover and its own steps: three leaves, then four, then five. They are separate clovers rather than
   one clover that morphs, because a leaf has to link to a step in the act being read — a shared

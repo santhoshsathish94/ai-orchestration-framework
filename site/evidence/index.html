@@ -13,7 +13,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/assets/social-preview.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0a6a5f">
-<link rel="stylesheet" href="../styles.css?v=1.0.6">
+<link rel="stylesheet" href="../styles.css?v=1.0.7">
 <script>document.documentElement.className = 'js';</script>
 </head>
 <body>
@@ -118,6 +118,9 @@
                 at all, rather than who wrote the code.</p>
             </div>
           </div>
+          <figure class="diagram">
+            <img src="../assets/case-study-01-contentful-migration.svg" alt="The migration as one Clover cycle. Context: 89 GraphQL files and 99 mappers. Direction: preserve every route and JSON shape. Action: one generic mapper and 15 verifiable tasks gated by a live parity differ. Success: 36 of 36 endpoint cases and 239 tests, with QA signing off. Implementation took about a day against an 8 to 10 week estimate, performance was measured locally only, and the production cutover has not run." loading="lazy" width="960" height="302">
+          </figure>
         </div>
 
         <div class="panel" role="tabpanel" id="ev-p2" aria-labelledby="ev-t2" data-panel tabindex="0">
@@ -137,6 +140,9 @@
               <p><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/case-studies/02-react-rsc-memory-leak.md">Read the case study →</a></p>
             </div>
           </div>
+          <figure class="diagram">
+            <img src="../assets/case-study-02-react-rsc-memory-leak.svg" alt="Four steps. Stabilize the incident with a Node stack-trace flag. Keep investigating past the workaround. Find the cause in React's react-server renderer, where a cleanup Error retains the completed render's cache scope. Contribute a one-file fix upstream. The fleet soak validated the mitigation rather than the patch, and the pull request is CI-green and not merged." loading="lazy" width="960" height="302">
+          </figure>
         </div>
 
         <div class="panel" role="tabpanel" id="ev-p3" aria-labelledby="ev-t3" data-panel tabindex="0">
@@ -156,6 +162,14 @@
               <p><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/reference-implementations.md">Read the reference implementations →</a></p>
             </div>
           </div>
+          <figure class="diagram">
+            <img src="../assets/reference-cross-team-knowledge-access.svg" alt="Cross-team knowledge access. Read-only access to repositories and documentation, logs and telemetry, datasources, and job definitions feeds an orchestration layer that reads across all of it at the asker's own privileges. A human asks what happened and why, and points at where to look first. The answer comes back with the files and logs it was drawn from." loading="lazy" width="960" height="300">
+            <figcaption>Cross-team knowledge access</figcaption>
+          </figure>
+          <figure class="diagram">
+            <img src="../assets/reference-production-exception-remediation.svg" alt="Production exception remediation. A recurring production exception, then reading the code across every repository plus the logs and the running application, then a proposal carrying the root cause, the exact scope, the tests and the signal to expect. A human approves before anything reaches production, and the ticket closes when the original signal is shown resolved." loading="lazy" width="960" height="300">
+            <figcaption>Production exception remediation</figcaption>
+          </figure>
         </div>
       </div>
 
@@ -163,6 +177,60 @@
         <a class="btn btn--primary" href="../start/">Try it on your own work</a>
         <a class="btn" href="https://github.com/santhoshsathish94/clover-framework/tree/main/case-studies">All case studies</a>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ FIELD LESSONS ============ -->
+  <section class="band" id="lessons">
+    <div class="wrap">
+      <p class="eyebrow">What it taught</p>
+      <h2>Five lessons from running this on real work</h2>
+      <p class="lede">These came out of the work above, including the parts that went badly.</p>
+
+      <dl class="kv kv--wide" style="margin-top:1.4rem">
+        <div>
+          <dt>Focus beats parallelism</dt>
+          <dd>Agents made it easy to run three initiatives at once, and context and human direction
+            spread too thin across all of them. Dropping the parallelism and working one stream at a
+            time is what finally resolved the hardest issue at its root. Human attention is the scarce
+            resource, rather than AI throughput.</dd>
+        </div>
+        <div>
+          <dt>Read the system before fixing it</dt>
+          <dd>AI jumped straight to attempted fixes and repeatedly failed, because each attempt was a
+            guess. Gathering what the system was really doing end to end, and adding logging where the
+            picture had holes, found the root cause far faster than the fix-first thrashing that came
+            before it. Thrashing is the signal to stop fixing and go back for the information.</dd>
+        </div>
+        <div>
+          <dt>A workaround is not the destination</dt>
+          <dd>Disabling stack-trace capture stopped the production memory growth, and that was the
+            right immediate mitigation. Continuing past it found the retention mechanism underneath and
+            produced an upstream fix instead of a workaround carried forever. Ask what a workaround is
+            hiding or disabling, rather than only whether the incident stopped.</dd>
+        </div>
+        <div>
+          <dt>You do not have to hold the context to be accountable for it</dt>
+          <dd>A defect arrived in a flow the responsible human had never worked on. The orchestration
+            layer read across the repositories, reproduced the behavior in the running application, and
+            showed where it happened. The knowledge was in the code and the running system the whole
+            time. Treat "I am not current on this area" as a question about access.</dd>
+        </div>
+        <div>
+          <dt>Write the context down, or pay for it again</dt>
+          <dd>Two investigations, the same human, the same tools, the same period. The one that kept
+            findings in markdown beside the code converged. The one where nothing persisted between
+            passes degenerated into repeated attempts at a fix. A file maintained during the work is
+            memory; a write-up produced afterwards is a report.</dd>
+        </div>
+      </dl>
+
+      <p style="margin-top:1.4rem">These share a root. AI multiplies whatever Context and Direction it
+        is given. Teams that read the system first and then say what they want get outcomes that hold
+        up, and teams that skip the reading get a lot of output and few outcomes.</p>
+
+      <p><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/field-practices.md">Read the practices in full →</a>
+        · <a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/how-ai-fails.md">How AI fails, and which stage catches it →</a></p>
     </div>
   </section>
 
@@ -215,6 +283,6 @@
   </div>
 </footer>
 
-<script src="../app.js?v=1.0.6" defer></script>
+<script src="../app.js?v=1.0.7" defer></script>
 </body>
 </html>
