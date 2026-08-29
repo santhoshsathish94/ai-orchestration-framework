@@ -98,6 +98,8 @@ Adoption is incremental and reversible, and a team that stops is left with the s
 | [Roadmap](docs/10-roadmap.md) | Where it is going, held loosely |
 | [The name and the mark](docs/clover-origin.md) | Why a clover, and the canonical definition |
 
+Every document in [`docs/`](docs/) is indexed there, including the ones this table does not list.
+
 ---
 
 ## Putting it to work

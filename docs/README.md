@@ -1,0 +1,45 @@
+# Docs
+
+The framework in full, and the material for putting it to work.
+
+The numbers are reading order rather than a map of the four stages. Context and Success have a
+document to themselves because there is more to say about them than fits in one section; Direction
+and Action are covered in [the framework](04-framework.md) alongside the other two.
+
+**There is no `06`.** It held a short piece on agent orchestration that restated two of the
+principles without adding to them, so it was removed. The later files kept their numbers rather than
+shifting up, because renumbering would break every link that already points at them.
+
+## The framework
+
+| | |
+|---|---|
+| [01 · The problem](01-problem.md) | What the framework exists to fix |
+| [02 · Philosophy](02-philosophy.md) | The thinking underneath the four stages |
+| [03 · Principles](03-principles.md) | What makes each stage hold up on real work |
+| [04 · The framework](04-framework.md) | All four stages, and the arc from three leaves to five |
+| [05 · Context](05-context-engineering.md) | The first stage: what has to be known about reality before anything acts |
+| [07 · Success](07-success.md) | The last stage: whether the environment confirms the outcome |
+| [08 · Governance](08-governance.md) | Ownership, access and attribution as the cycle scales |
+| [09 · Adoption](09-adoption.md) | How a team gets there, and how it stalls |
+| [10 · Roadmap](10-roadmap.md) | Where it is going, held loosely |
+
+## Putting it to work
+
+| | |
+|---|---|
+| [The orchestration environment](orchestration-environment.md) | What has to be in place before any of it runs |
+| [Reference implementations](reference-implementations.md) | Three patterns, built and used against real organizational data |
+| [How AI fails](how-ai-fails.md) | The failures specific to working this way, and which stage catches each |
+| [Practices and field lessons](field-practices.md) | What running this on high-stakes work actually taught |
+
+## Reference
+
+| | |
+|---|---|
+| [Glossary](glossary.md) | Plain-language definitions for every term used here |
+| [The name and the mark](clover-origin.md) | Why a clover, and the canonical definition |
+
+Outside this directory: [`AGENTS.md`](../AGENTS.md) is the whole way of working as instructions for
+an agent, [`QUICKSTART.md`](../QUICKSTART.md) runs a first cycle by hand, and
+[`case-studies/`](../case-studies/) holds the delivered work.
