@@ -6,6 +6,12 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- **The hero says what kind of thing Clover is.** "A way of working rather than software. There is
+  nothing to install, and it runs on top of the systems a team already has." On GitHub, "framework"
+  reads as a library, and "AI orchestration" is a category that mostly contains software, so a
+  developer could reasonably arrive expecting an SDK. The page already answered that under **What it
+  is not**, five screens down, which is after the point the wrong impression forms. The repository
+  description on GitHub now carries the same line, since that is the first thing anyone reads.
 - **A step on what happens when Success does not hold.** The sharpest claim in the framework — that a
   second attempt on the same information lands in the same place, faster — was in the docs and nowhere
   on the website. The lucky clover now ends on it, and the leaf that lights up while you read it is
