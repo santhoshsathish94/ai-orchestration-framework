@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 318" width="960" height="318" role="img"
+     aria-labelledby="title desc" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif">
+  <title id="title">Widening what AI determines</title>
+  <desc id="desc">What moves is how much of the path AI determines: from drafting steps a human approves, through executing a plan agreed up front, to planning within stated constraints. What does not move is who owns the objective, the constraints and the outcome. How far it widens is decided by results rather than confidence, blast radius overrides track record, and it is granted per context rather than globally.</desc>
+
+  <rect width="960" height="318" fill="#ffffff"/>
+
+  <text x="20" y="26" font-size="12" font-weight="700" fill="#0a6a5f" letter-spacing="1.6">WHAT MOVES IS HOW MUCH OF THE PATH AI DETERMINES</text>
+  <line x1="20" y1="40" x2="940" y2="40" stroke="#d6e2e0" stroke-width="1"/>
+
+  <g stroke="#7fb8b0" stroke-width="1.5" fill="#e6f2f0">
+    <rect x="21" y="62" width="290" height="112" rx="10"/>
+    <rect x="335" y="62" width="290" height="112" rx="10"/>
+    <rect x="649" y="62" width="290" height="112" rx="10"/>
+  </g>
+
+  <g fill="#14181d" font-size="13.5" font-weight="700">
+    <text x="37" y="90">It drafts the steps</text>
+    <text x="351" y="90">It executes an agreed plan</text>
+    <text x="665" y="90">It plans within constraints</text>
+  </g>
+
+  <g fill="#39424d" font-size="12">
+    <text x="37" y="114">AI proposes each step and a human</text>
+    <text x="37" y="131">approves it before anything runs.</text>
+
+    <text x="351" y="114">The plan is settled up front, then AI</text>
+    <text x="351" y="131">carries it out and reports back.</text>
+
+    <text x="665" y="114">The human states the objective and</text>
+    <text x="665" y="131">what counts as success. AI works out</text>
+    <text x="665" y="148">the path from the current context.</text>
+  </g>
+
+  <g stroke="#0a6a5f" stroke-width="1.5" fill="none">
+    <path d="M317 118h12M329 118l-6-4M329 118l-6 4"/>
+    <path d="M631 118h12M643 118l-6-4M643 118l-6 4"/>
+  </g>
+
+  <rect x="21" y="190" width="918" height="36" rx="8" fill="#0a6a5f"/>
+  <text x="37" y="213" font-size="12.5" font-weight="700" fill="#ffffff">What does not move: who owns the objective, the constraints, and the outcome</text>
+
+  <rect x="21" y="240" width="918" height="66" rx="10" fill="#f4f7f7" stroke="#d6e2e0" stroke-width="1"/>
+  <text x="37" y="262" font-size="11.5" font-weight="700" fill="#0a6a5f" letter-spacing="1.2">WHAT DECIDES HOW FAR IT WIDENS</text>
+  <text x="37" y="281" font-size="12" fill="#39424d">Results decide, rather than confidence. Widen where outcomes of that kind have repeatedly held up, and narrow the moment they stop.</text>
+  <text x="37" y="299" font-size="12" fill="#39424d">Blast radius overrides track record. Where a mistake is hard to reverse, approval stays. It is granted per context, rather than globally.</text>
+</svg>

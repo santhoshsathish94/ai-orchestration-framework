@@ -64,6 +64,17 @@ All notable changes to this project will be documented in this file.
 - They are now hand-written SVG in the site's own palette, with no icon art, and each one ends on a
   strip naming what the work does not show. Four files at about 4 KB each replace five PNGs at about
   1.4 MB each, and the same file serves the case study and the website.
+- **The two diagrams in the framework doc were redrawn to match.** The capability progression ended on
+  a box labeled "Learning", eighteen lines below the section that names the fifth leaf **Growth**, so
+  the same document had two words for the same idea. It now ends on Growth, drawn dotted the way the
+  growth clover draws it, and the file no longer has "model" in its name.
+- The second one was the deleted autonomy ladder — five boxes marching to "Goal-Directed Autonomous
+  AI", with a caption underneath insisting it was not a progression to climb. It was the last picture
+  of a ladder left in the repository, and it illustrated a claim the surrounding prose does not make.
+  It has been replaced by what that section is actually about: what moves is how much of the path AI
+  determines, from drafting steps a human approves, through executing an agreed plan, to planning
+  within stated constraints. Who owns the objective, the constraints and the outcome does not move,
+  and the three rules that decide how far it widens sit underneath.
 - **The README is an index now, rather than a second copy of the framework.** It re-explained all
   four stages at length, restated the arc from three leaves to five, and walked through the MCP
   setup, so it competed with the documents it was supposed to point at. It now opens on the clover

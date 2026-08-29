@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 264" width="960" height="264" role="img"
+     aria-labelledby="title desc" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif">
+  <title id="title">From AI models to AI orchestration</title>
+  <desc id="desc">AI models answer a question. AI agents act on the answer using tools. Agentic workflows run a known process again and again. AI orchestration keeps what the outcome showed, for the next cycle. Growth, drawn dotted, is what AI becomes while the cycle runs, and nobody in an organization runs it. This is not a strict replacement hierarchy.</desc>
+
+  <rect width="960" height="264" fill="#ffffff"/>
+
+  <text x="20" y="26" font-size="12" font-weight="700" fill="#0a6a5f" letter-spacing="1.6">FROM CAPABILITY TO COORDINATED EXECUTION</text>
+  <line x1="20" y1="40" x2="940" y2="40" stroke="#d6e2e0" stroke-width="1"/>
+
+  <g stroke="#7fb8b0" stroke-width="1.5" fill="#e6f2f0">
+    <rect x="21" y="60" width="166" height="120" rx="10"/>
+    <rect x="209" y="60" width="166" height="120" rx="10"/>
+    <rect x="397" y="60" width="166" height="120" rx="10"/>
+    <rect x="585" y="60" width="166" height="120" rx="10"/>
+  </g>
+  <rect x="773" y="60" width="166" height="120" rx="10" fill="#ffffff" stroke="#7fb8b0" stroke-width="1.5" stroke-dasharray="5 4"/>
+
+  <g fill="#14181d" font-size="13.5" font-weight="700">
+    <text x="37" y="86">AI models</text>
+    <text x="225" y="86">AI agents</text>
+    <text x="413" y="86">Agentic workflows</text>
+    <text x="601" y="86">AI orchestration</text>
+    <text x="789" y="86" fill="#0a6a5f">Growth</text>
+  </g>
+
+  <g fill="#39424d" font-size="11.5">
+    <text x="37" y="110">Intelligence.</text>
+    <text x="37" y="127">They answer a</text>
+    <text x="37" y="144">question.</text>
+
+    <text x="225" y="110">They act on the</text>
+    <text x="225" y="127">answer, with tools</text>
+    <text x="225" y="144">of their own.</text>
+
+    <text x="413" y="110">A known process,</text>
+    <text x="413" y="127">run again and</text>
+    <text x="413" y="144">again.</text>
+
+    <text x="601" y="110">Keeps what the</text>
+    <text x="601" y="127">outcome showed,</text>
+    <text x="601" y="144">for the next cycle.</text>
+
+    <text x="789" y="110">What AI becomes</text>
+    <text x="789" y="127">while the cycle runs.</text>
+    <text x="789" y="144">Nobody in an</text>
+    <text x="789" y="161">organization runs it.</text>
+  </g>
+
+  <g stroke="#0a6a5f" stroke-width="1.5" fill="none">
+    <path d="M191 120h12M203 120l-6-4M203 120l-6 4"/>
+    <path d="M379 120h12M391 120l-6-4M391 120l-6 4"/>
+    <path d="M567 120h12M579 120l-6-4M579 120l-6 4"/>
+    <path d="M755 120h12M767 120l-6-4M767 120l-6 4" stroke-dasharray="4 3"/>
+  </g>
+
+  <rect x="21" y="196" width="918" height="52" rx="10" fill="#f4f7f7" stroke="#d6e2e0" stroke-width="1"/>
+  <text x="37" y="217" font-size="12" fill="#39424d">This is not a strict replacement hierarchy. An agentic workflow can be a building block inside an orchestration.</text>
+  <text x="37" y="235" font-size="12" fill="#39424d">What separates them is the scope of the context, and whether anything is kept from the outcome.</text>
+</svg>

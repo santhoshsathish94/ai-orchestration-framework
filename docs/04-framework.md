@@ -58,7 +58,7 @@ Everything below sets out the four stages one at a time, in the order they run.
 
 AI capability is evolving from models that provide intelligence, to agents that can act, to workflows that repeat and coordinate tasks, to orchestration that keeps what its outcomes taught it.
 
-![From AI models to AI orchestration](../assets/ai-orchestration-model-progression.svg)
+![AI models answer, agents act, agentic workflows repeat a known process, and orchestration keeps what the outcome showed for the next cycle. Growth, drawn dotted, is what AI becomes while the cycle runs](../assets/ai-orchestration-progression.svg)
 
 This is not a strict replacement hierarchy. An agentic workflow can be an important building block inside an orchestration. What separates them is the scope of context and learning. A workflow runs a known process repeatedly. An orchestration captures what the outcome showed and makes that available to the next cycle.
 
@@ -170,7 +170,7 @@ More on this stage in [Success in practice](07-success.md).
 
 The four stages are how the work runs. How much of the work AI determines for itself changes over time, as tooling, context, experience, validation, and trust mature.
 
-![A possible progression toward goal-directed autonomous AI](../assets/goal-directed-autonomy-progression.svg)
+![What moves is how much of the path AI determines: drafting steps a human approves, executing a plan agreed up front, then planning within stated constraints. Who owns the objective, the constraints and the outcome does not move](../assets/widening-what-ai-determines.svg)
 
 Today a human often supplies both the outcome and much of the path. As an orchestration matures, the human can supply the objective, the constraints, and what counts as success, while AI determines and adapts the path from current context and accumulated experience.
 
