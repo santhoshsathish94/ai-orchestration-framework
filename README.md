@@ -40,6 +40,10 @@ systems the organization runs, and AI can read those systems directly, so Contex
 its own and it goes first. Direction stays human, and it stops describing the problem from memory and
 starts pointing at the part of the system worth reading first.
 
+It runs in a loop, and what comes back from one pass is context for the next. Markdown files kept
+beside the work hold the summary, and that summary is what lets any agent pick the job up, so no
+single agent has to hold the work.
+
 **[Read the whole story on the website →](https://cloverframework.com/)** — about three minutes.
 
 ---

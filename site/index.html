@@ -17,7 +17,7 @@
 <meta property="og:image:alt" content="Clover — an AI Orchestration Framework.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0a6a5f">
-<link rel="stylesheet" href="styles.css?v=1.1.0">
+<link rel="stylesheet" href="styles.css?v=1.1.1">
 <script>document.documentElement.className = 'js';</script>
 </head>
 <body>
@@ -289,6 +289,17 @@
             <p>And every pass adds context. After each success and each failure the context files are
               written before the next attempt, so the next cycle starts ahead of this one.</p>
           </li>
+
+          <li class="story__step" id="st-loop" data-leaf="context">
+            <p class="story__delta">When Success does not hold</p>
+            <h4>A failure sends the work back to Context</h4>
+            <p>The obvious move after a failed attempt is another attempt. But a second attempt on the
+              same information lands in the same place, faster.</p>
+            <p>So the failure is treated as the thing it produced: information. What the environment
+              did instead, which assumption broke, which signal nobody had looked at yet. That goes
+              into the context files, and the next attempt starts from a larger picture than the last
+              one did. This is why the leaf lighting up here is Context.</p>
+          </li>
         </ol>
         </div>
       </div>
@@ -519,6 +530,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=1.1.0" defer></script>
+<script src="app.js?v=1.1.1" defer></script>
 </body>
 </html>

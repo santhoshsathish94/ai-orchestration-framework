@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Added
+
+- **A step on what happens when Success does not hold.** The sharpest claim in the framework — that a
+  second attempt on the same information lands in the same place, faster — was in the docs and nowhere
+  on the website. The lucky clover now ends on it, and the leaf that lights up while you read it is
+  Context, so the loop is shown rather than described.
+- **How much the agent gets to decide, on the security page.** A review that settles what an agent can
+  read still has to settle how much of the path it works out for itself. The three rules were in
+  governance and reachable from the site only through a link: results decide rather than confidence,
+  blast radius overrides track record, and it is granted per context rather than globally.
+
+### Fixed
+
+- **The README lost the claim that context outlives the agent.** The rewrite into an index dropped
+  "that summary is what lets any agent pick the job up, so no single agent has to hold the work",
+  which is one of the few things about the framework that is genuinely not obvious. Restored.
+
 ## v1.1.0 — 2026-08-29
 ### Added
 
