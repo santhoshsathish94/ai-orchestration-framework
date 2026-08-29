@@ -37,7 +37,13 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-- **A section between the capabilities and the story, saying why any of this needs to change.** The
+- **Headings that say what the section is for.** The bridge is "AI evolved. Let's change the way we
+  use it." and the story it hands to is "What should we change?". The story used to be called "Three
+  stages, then four, then five", which described the picture rather than the question the reader is
+  there to answer. Its opening line now says what the clovers are doing: each one is a way of
+  working, each leaf is a stage in it, and the first is where most teams are today.
+- **`.band--wide`**, which drops the 68ch measure so a section's prose runs the full width of the
+  wrap. Used by the bridge section only.
   page went straight from what AI can do to a three-leaf clover, with nothing joining them. It now
   says that AI went from finishing the line you were typing to working through a whole task on its
   own, faster than anybody's habits could change; that the habit which stuck is the common clover,

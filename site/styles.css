@@ -77,6 +77,7 @@ section[id] { scroll-margin-top: 5rem; }
 
 .band { padding-block: clamp(3rem, 7vw, 5rem); border-top: 1px solid var(--line); }
 .band--soft { background: var(--soft); }
+.band--wide :is(p, ul, ol) { max-width: none; }
 
 .eyebrow {
   font-size: 0.76rem; font-weight: 650; letter-spacing: 0.1em; text-transform: uppercase;

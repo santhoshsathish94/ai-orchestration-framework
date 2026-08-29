@@ -171,6 +171,9 @@ The marks are the site's identity and they carry the argument, so they have rule
   Without JavaScript the button is hidden and the panel renders inline, so every link stays reachable.
 - **`.btn` is the only button style.** Plain is the default, `.btn--primary` is the filled one, and
   `.btn--plain` is a bare link that keeps the same height. One primary per group.
+- **`.band--wide` drops the 68ch measure** so a section's prose runs the full width of the wrap.
+  `#why-now` uses it. Do not spread it around — 68ch is the reading measure everywhere else for a
+  reason, and full-width lines only hold up for a short section.
 - **The story is three acts, and each act is its own `[data-story]` block** with its own sticky
   clover and its own steps: three leaves, then four, then five. They are separate clovers rather than
   one clover that morphs, because a leaf has to link to a step in the act being read — a shared
