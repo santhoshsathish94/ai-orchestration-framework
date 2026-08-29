@@ -2,8 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased
-
+## v1.1.0 — 2026-08-29
 ### Added
 
 - **Each clover act opens with a heading saying what it is** — three leaves and where most teams are
