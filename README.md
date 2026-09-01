@@ -37,94 +37,131 @@ The model was developed through real software engineering work and is now being 
 
 ## The Clover Cycle
 
-### 🌍 Context — Understand Reality
+Clover connects four stages into a continuous cycle:
 
-Context is gathered from the real systems and sources needed to make the situation clear to both Humans and AI.
+**Context → Direction → Action → Success**
 
-Depending on the work, that can include:
+Each stage has a different responsibility.
 
-- systems and environments
-- data
-- documents
-- people and expertise
-- observations
-- research
-- history
-- users and customers
-- any other source needed to understand what is actually happening
-
-The purpose of Context is not to collect everything.
-
-It is to help Humans and AI build enough shared understanding of reality to make better decisions and take meaningful action.
-
-**Question: What do we need to understand about reality before acting?**
+The purpose is not simply to make AI produce an answer or complete a task. The purpose is to help Humans and AI work from a shared understanding of reality, move toward an outcome that Humans consider worth pursuing, and let the real world determine whether that outcome was actually achieved.
 
 ---
 
-### 🧭 Direction — Decide What Is Worth Pursuing
+### 🌍 Context
 
-Direction is based on Context and the outcomes Humans believe are worth pursuing.
+## Understand what is actually happening.
 
-Humans remain accountable for deciding:
+Context comes from the real world.
 
-- what matters
-- what outcome is desired
-- what priorities exist
-- what constraints apply
-- what must not happen
-- where AI can operate
-- when human approval is required
+It can come from systems, people, data, documents, observations, research, environments, history, users, customers, or any other source needed to make the situation and problem clear to both Humans and AI.
 
-AI can help Humans understand options, consequences, and possibilities.
+Context is not simply background information supplied to an AI prompt.
 
-But the responsibility for deciding what is worth pursuing remains human.
+It is the connection between the work being done and the reality in which that work exists.
 
-**Question: Given what we know, what should we pursue?**
+The Human may already understand parts of that reality. AI may be able to gather, read, analyze, or connect information that would otherwise be difficult for one person to process. Together, the goal is to build enough understanding to avoid acting only on assumptions.
 
----
+Not every piece of information is needed.
 
-### ⚡ Action — Do the Work
+The question is:
 
-Action is where AI capabilities are applied to help move toward the intended outcome.
+> **What context is needed for Humans and AI to understand what is actually happening and make the problem clear enough to act?**
 
-Based on Context and Direction, AI can help:
+Context may also reveal that the original problem was misunderstood.
 
-- analyze
-- investigate
-- create
-- execute
-- coordinate
-- adapt
-- operate within defined boundaries
+That is valuable.
 
-Humans can act alongside AI throughout the process.
-
-Clover does not require AI to replace human work. It provides a way for Human and AI capabilities to work together with clearer context and direction.
-
-**Question: What actions should happen to pursue the outcome?**
+Sometimes understanding reality changes what should happen next.
 
 ---
 
-### ✓ Success — Let Reality Validate the Result
+### 🧭 Direction
 
-Success is determined by what actually happens in the real world.
+## Decide what is worth pursuing.
 
-Neither Humans nor AI should simply claim success.
+Understanding what is happening does not automatically determine what should be done.
 
-The real system, environment, users, evidence, or measurable outcome validates whether the intended result was achieved.
+Humans use the available Context to decide what outcome they want, what matters, and what is worth pursuing.
 
-A result may be:
+Direction connects reality with human intent.
 
-- validated
-- partially validated
-- not validated
-- inconclusive
+Humans define the outcome they are trying to achieve and establish the priorities, constraints, boundaries, and responsibilities around the work.
 
-If the outcome is not validated, the cycle returns to Context so the next decision and action can be based on what reality revealed.
+AI can help Humans explore options, analyze consequences, identify possibilities, and improve understanding.
 
-> **Humans and AI can believe something worked. Reality determines whether it did.**
+But AI should not independently decide what humans value or what outcome is worth pursuing without appropriate human direction.
 
-**Question: What does reality show actually happened?**
+Direction gives AI a meaningful purpose and boundaries within which it can operate.
+
+The question is:
+
+> **Given what we understand about reality, what outcome is worth pursuing, and within what boundaries should AI act?**
+
+This is where Human accountability remains clear.
+
+---
+
+### ⚡ Action
+
+## Do the work.
+
+Once there is sufficient Context and clear Direction, action can happen.
+
+AI helps analyze, investigate, create, execute, coordinate, and adapt actions based on the available Context and human Direction.
+
+Humans may also act throughout the process.
+
+Clover does not assume that AI replaces Humans or that Humans simply hand work to AI and wait.
+
+Different situations may require different combinations of Human judgment, AI capability, automation, tools, and real-world systems.
+
+The important connection is that Action should remain grounded in Context and guided by Direction.
+
+AI is not acting simply because it can.
+
+It is applying its capabilities toward an outcome that Humans have decided is worth pursuing, within the boundaries they have established.
+
+The question is:
+
+> **What actions should Humans and AI take to move toward the intended outcome?**
+
+---
+
+### ✓ Success
+
+## Let reality validate the result.
+
+Success is not something Humans or AI simply claim.
+
+An AI can say that it completed a task. A Human can believe that the work succeeded.
+
+Neither statement alone proves that the intended outcome happened.
+
+The real system, environment, users, data, evidence, or measurable outcome determines whether the action actually worked.
+
+Depending on the situation, validation may come from:
+
+- a production system behaving correctly
+- a customer receiving the intended value
+- data showing a measurable improvement
+- a researcher obtaining evidence
+- a student demonstrating understanding
+- an operational process producing the expected result
+- another real-world signal connected to the intended outcome
+
+Success therefore belongs outside the opinions of either Human or AI.
+
+Reality is the validator.
+
+If the outcome is not validated, that does not simply mean repeating the Action.
+
+The result itself becomes new Context.
+
+Humans and AI can then understand what happened, reconsider the Direction if necessary, and take the next Action based on reality rather than repeating the same assumptions.
+
+The question is:
+
+> **What does the real world show actually happened?**
 
 ---
 
