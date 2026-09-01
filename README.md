@@ -1,132 +1,171 @@
 <p align="center">
   <a href="https://cloverframework.com/">
-    <img src="assets/social-preview.png" width="820"
-         alt="Clover — an AI Orchestration Framework connecting real-world Context, human Direction, AI-driven Action, and validated Success into a repeatable cycle">
+    <img src="assets/social-preview.png" width="820" alt="Clover — How Humans and AI Work Together to Get Real Outcomes">
   </a>
 </p>
 
-<p align="center">
-  <a href="https://cloverframework.com/"><strong>cloverframework.com</strong></a> ·
-  <a href="QUICKSTART.md">Quickstart</a> ·
-  <a href="AGENTS.md">AGENTS.md</a> ·
-  <a href="docs/04-framework.md">The framework</a> ·
-  <a href="docs/glossary.md">Glossary</a>
-</p>
+<p align="center"><strong>Experimental branch</strong> · Testing Clover beyond software</p>
 
 ---
 
-Clover is an AI Orchestration Framework connecting real-world Context, human Direction, AI-driven
-Action, and validated Success into a repeatable cycle. It sits on top of the systems a team already
-runs, so there is nothing to install and nothing to migrate onto.
+# Clover
 
-This page is the map. The website tells the story, the docs hold the detail, and both are linked from
-here.
+## How Humans and AI Work Together to Get Real Outcomes
+
+**Context → Direction → Action → Success**
+
+Clover is a way of working that connects Humans, AI, and the real world in a repeatable cycle.
+
+It is not software. There is nothing to install.
+
+It works on top of the systems, tools, and processes people already use.
+
+> **Clover makes humans accountable, AI capabilities actionable, and real outcomes verifiable.**
+
+## This is an experiment
+
+Clover has evidence from real software engineering work. This branch asks a larger question:
+
+> **Can the same cycle help Humans and AI work together toward real outcomes across different fields?**
+
+We do not yet claim that it can. That claim needs to meet reality.
+
+The purpose of this experiment is not to prove Clover right. It is to let people use it, observe what happens, and collect evidence about where it works, where it does not, where the cycle needs to change, and what real-world outcomes it helps produce.
+
+**Proof is acquired through experimentation and validation.**
+
+# The Clover Cycle
+
+## 1. Context — Understand Reality
+
+Before deciding what to do, Humans and AI need enough understanding of what is actually happening.
+
+Context can come from real systems, data, people, documents, observations, research, environments, history, and any other source needed to make the problem clear.
+
+The goal is not to collect everything. The goal is to gather the context needed to understand reality well enough to act.
+
+**Question: What do we need to understand about reality before acting?**
+
+## 2. Direction — Decide What Is Worth Pursuing
+
+Humans remain accountable for deciding what matters.
+
+Direction is based on available context and the outcome humans believe is worth pursuing. Humans define the desired outcome, priorities, constraints, boundaries, what must not happen, and when approval is required.
+
+AI can help humans understand options and consequences. Direction remains connected to human responsibility.
+
+**Question: Given what we know, what is worth pursuing?**
+
+## 3. Action — Do the Work
+
+AI capabilities become actionable when they have sufficient context and clear direction.
+
+AI can help analyze, investigate, create, execute, coordinate, and adapt within defined boundaries. Humans may act alongside AI.
+
+Clover does not require AI to do everything. It helps clarify how Human and AI capabilities contribute to the work.
+
+**Question: What actions should happen to pursue the intended outcome?**
+
+## 4. Success — Let Reality Validate the Result
+
+Success is not something AI should simply claim. Humans should not simply claim it either.
+
+The real system, environment, users, evidence, or measurable outcome determines whether the intended result actually happened.
+
+A result may be:
+
+- Validated
+- Partially validated
+- Not validated
+- Inconclusive
+
+If reality does not validate the outcome, the cycle returns to Context.
+
+> **Humans and AI can propose that something worked. Reality determines whether it did.**
+
+**Question: What does reality show actually happened?**
+
+# Why the Cycle Matters
+
+Many Human–AI interactions begin directly with Action:
+
+**Ask AI → Get an answer → Assume the work is complete**
+
+Clover asks for something different:
+
+**Understand reality → Choose direction → Take action → Validate against reality**
+
+The outcome of one cycle becomes Context for the next. This makes Clover a way of learning from reality rather than repeatedly acting on assumptions.
+
+# The Experiment
+
+Each experiment should test Clover against a real problem or outcome.
+
+We are interested in Software engineering, Business, Research, Education, Operations, Personal productivity, and other real-world fields.
+
+The question is not whether Clover can be forced to fit everywhere.
+
+> **Does the cycle naturally help Humans and AI work toward better, verifiable outcomes in this situation?**
+
+If the answer is no, that is evidence too.
+
+## How to Run an Experiment
+
+### Context
+What was actually happening? What evidence existed? What was missing? What did both the Human and AI need to understand?
+
+### Direction
+What outcome was worth pursuing? Who was accountable for that decision? What constraints and boundaries existed?
+
+### Action
+What did the Human do? What did AI do? What actions were taken?
+
+### Success
+What was expected? What actually happened? What evidence validated the result?
+
+Record the result as:
+
+- Validated
+- Partially validated
+- Not validated
+- Inconclusive
+
+# Evidence Over Claims
+
+This experiment follows its own principle.
+
+We will not claim that Clover works universally because the idea sounds reasonable. We will collect evidence.
+
+Successful experiments matter. Failed experiments matter. Inconclusive experiments matter.
+
+The framework can only become stronger if it is allowed to be challenged by reality.
+
+> **Clover is the hypothesis. Reality is the test.**
+
+# What This Branch Is Testing
+
+The main Clover framework remains focused on its existing engineering foundation.
+
+This branch explores a broader possibility:
+
+> **Context → Direction → Action → Success may be a general structure for Human–AI collaboration toward real-world outcomes.**
+
+That possibility is unproven.
+
+This branch exists to test it.
+
+## Current Status
+
+🧪 **Experimental**
+
+The framework is evolving through discussion, experimentation, and real-world use.
+
+If you try Clover outside software, the most valuable contribution is not simply saying it worked.
+
+Show the Context, Direction, Action, and what reality validated.
+
+That is how a hypothesis becomes evidence.
 
 ---
 
-## The short story
-
-AI grew from finishing the line you were typing to working through a whole task on its own. The same
-tool now reasons like a developer, an operator, a security reviewer, a tester and an analyst, and
-covering that range would normally take several people.
-
-The way we use it has not moved with it. A human gives the Direction, AI takes the Action, and
-somebody checks for Success. Three stages, and that same human also supplies the context — they
-remember which service is involved, they paste in the error, they attach the file, they explain what
-was tried last month. AI only ever sees the part of the system that one human thought to describe.
-
-That was a fair trade when AI could handle one small job. The context is already sitting in the
-systems the organization runs, and AI can read those systems directly, so Context becomes a stage of
-its own and it goes first. Direction stays human, and it stops describing the problem from memory and
-starts pointing at the part of the system worth reading first.
-
-It runs in a loop, and what comes back from one pass is context for the next. Markdown files kept
-beside the work hold the summary, and that summary is what lets any agent pick the job up, so no
-single agent has to hold the work.
-
-**[Read the whole story on the website →](https://cloverframework.com/)** — about three minutes.
-
----
-
-## The four stages
-
-The stages read in the order the work runs in.
-
-| Stage | What it covers | The question it answers |
-|---|---|---|
-| **Context** | The current systems the organization uses — repositories and their projects and documentation, datasources, logs and telemetry, deployment environments, running applications | What do we need to know about reality before acting? |
-| **Direction** | The human controls what matters, the desired outcome, constraints, boundaries, and what must not happen, and approves | What needs to be done, and what must not happen? |
-| **Action** | AI determines how the work should happen and executes within those boundaries | What should we do, and how should the work happen? |
-| **Success** | The intended outcome demonstrated by the real environment | Did reality validate the intended outcome? |
-
-Each stage has one job. If Success does not hold, the cycle goes back to Context rather than to
-Action, because a second attempt on the same information lands in the same place, faster.
-
----
-
-## Start
-
-**1. Copy [`AGENTS.md`](AGENTS.md) into your project.**
-It is the whole way of working written as instructions for an agent. Point an agent at that one file
-and nothing else is required.
-
-**2. Connect the Context stage.**
-Read-only MCP servers in front of the repositories, the tickets, the logs and the datasources, plus
-one environment to read — development is enough. Scope every connection to what the human driving the
-work can already read, at the privileges they already hold.
-[How to set that up →](docs/orchestration-environment.md#building-one)
-
-**3. Run one real problem through the four stages.**
-A defect, a recurring exception, a question nobody can answer quickly. Say where you think the answer
-is, and keep a markdown file beside the code so the next cycle starts ahead of this one, and so any
-agent can pick the job up from it.
-
-Adoption is incremental and reversible, and a team that stops is left with the systems it already had.
-
----
-
-## Where to go next
-
-| | |
-|---|---|
-| [`docs/`](docs/) | The framework in full, indexed. Start with [the four stages](docs/04-framework.md), then [the principles](docs/03-principles.md) |
-| [`AGENTS.md`](AGENTS.md) | The whole way of working as operating instructions for an agent |
-| [`QUICKSTART.md`](QUICKSTART.md) | A first cycle by hand, in about fifteen minutes |
-| [`case-studies/`](case-studies/) | Two cycles written up end to end. The production cutover **has not run**, and the upstream fix **is not merged**, and both say so |
-| [`examples/`](examples/) | One cycle worked through, start to finish |
-| [`templates/`](templates/) | The brief a cycle starts from |
-| [`hypothesis/ai-future.md`](hypothesis/ai-future.md) | Where this might lead. Speculative, and labeled as such |
-
-The three [reference implementations](docs/reference-implementations.md) have all been built and used
-against real organizational data. None is always-on or adopted organization-wide, and each depends on
-a human providing the map and holding the approvals.
-
----
-
-## What it is not
-
-- **Not software.** There is nothing to install.
-- **Not a runtime.** Clover defines the way of working around AI orchestration and does not prescribe
-  what executes it. Agent frameworks, workflow engines and tool protocols sit inside it.
-- **Not a replacement for how a team already works.** It runs alongside Agile, incident management,
-  or whatever is already in place.
-- **Not about AI model or tool selection.** It does not say which AI to use, and it does not cover
-  cost, evaluations, data governance, or security review.
-- **Not needed for everything.** Throwaway work does not need a cycle. It is worth the effort where
-  being wrong costs something.
-
----
-
-## Contributing
-
-Corrections, questions and case studies are welcome, including the ones where the outcome was never
-reached. See [CONTRIBUTING.md](CONTRIBUTING.md), and [CHANGELOG.md](CHANGELOG.md) for what has
-changed.
-
-## Author
-
-**Santhosh Narayanan**
-
-Clover comes out of real engineering work, and it keeps changing as more of that work gets done.
-
-Licensed under [CC BY 4.0](LICENSE).
+> **Clover makes humans accountable, AI capabilities actionable, and real outcomes verifiable.**
