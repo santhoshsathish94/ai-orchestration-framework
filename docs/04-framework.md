@@ -190,7 +190,7 @@ Planning and doing sit on one stage on purpose. The plan usually changes once th
 
 **Core question.** How should the work happen within the human's Direction and the system's Context?
 
-**What the human holds.** The boundaries and approvals. Which decisions need a human before they happen, what may run unattended, what process constraints matter, and who owns each part when the work is split. Delegation moves the work and leaves accountability where it was.
+**What the human holds.** The boundaries and approvals. Which decisions need a human before they happen, what may be delegated for execution, what process constraints matter, and who owns each part when the work is split. Delegation moves the work and leaves accountability where it was.
 
 **What AI does.** Most of the work, inside those boundaries. Choosing an approach, sequencing the steps, picking tools, running subagents where parts are genuinely independent, implementing, testing, and adapting when evidence contradicts the plan.
 
@@ -217,3 +217,26 @@ Evidence can be a test that fails without the change and passes with it, a befor
 ### Say what the evidence actually is
 
 Not every task has telemetry, and pretending otherwise makes this stage unusable for most work. What matters is describing what was actually done to check, in words a reader can act on.
+
+---
+
+## Delegating execution without transferring Direction
+
+Clover does not use increasing AI capability as a reason to create AI ownership. What can change is how much execution a human chooses to delegate inside **Action**.
+
+A team may move from AI suggesting steps, to AI carrying out a human-approved plan, to AI selecting and executing the operational path inside clearly stated human boundaries. These are differences in **delegated execution**, not transfers of Direction.
+
+The decision to delegate is always made by the accountable human or organization. Results can provide evidence that a particular kind of execution is working. Blast radius can limit what may be delegated even after repeated success. Availability can also matter: a critical operation should not depend on an AI service being available when a human or established mechanism must be able to act.
+
+What does not change:
+
+- The destination remains human-defined.
+- Purpose, acceptable risk, priorities, boundaries, and accountability remain human-owned.
+- The system remains the grounding reality.
+- AI remains a means of carrying out the Direction.
+
+> **Delegation can move work. It does not move Direction.**
+
+The framework therefore avoids treating “more autonomy” as a maturity target. The useful question is narrower: **what execution can be delegated safely and reversibly for this context while human Direction remains intact?**
+
+---
