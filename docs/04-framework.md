@@ -164,6 +164,8 @@ Context is the relevant evidence about system reality that the work needs to rea
 
 The important distinction is that Context is not whatever a human happens to remember to put into a prompt. It is the relevant reality available from the system, together with history, evidence, previous attempts, and other information needed to understand the work correctly. Not everything available belongs in Context; relevance to the current Direction is the bar.
 
+Direct system access does not mean unlimited context. More data can create noise, stale information, contradictory signals, and context-window pressure. **Filter before you hand off.** Prefer the smallest relevant set of trustworthy evidence that is sufficient for the current Direction, and summarize or reduce large sources before passing them into planning or execution.
+
 In the common clover, context is only what one human can hand over — what they type, the files they attach, the repository they are working in. In the lucky clover it can include the current system itself: repositories and documentation, connected datasources, logs and telemetry, deployment environments, running applications, tests, history, earlier attempts, and what previous cycles wrote down.
 
 **Core question.** What do we need to know about reality before acting?
@@ -184,6 +186,8 @@ Direction may also specify an important process or approach when the human decid
 
 Because the system is already readable, Direction can point instead of describing. A human can identify which service, workflow, dataset, or area of the system is most relevant rather than reconstructing the entire environment from memory.
 
+A pointer is not permission to guess. When a human gives a high-level pointer such as a service, workflow, or dataset, preserve that Direction but surface important implicit constraints you can discover in the relevant Context. Ask when a missing constraint could materially change the safe or correct outcome. Do not invent domain policy, architectural invariants, or unwritten business rules merely to make the task look complete.
+
 Clover does not give AI ownership of Direction. AI can sharpen a direction, ask questions, identify conflicts, surface risks, challenge assumptions, and recommend alternatives. It does not become accountable for deciding what outcome the system should pursue. A system operating on partial knowledge should not be allowed to define its own purpose in a real-world environment where even humans cannot fully understand every consequence.
 
 Clover also does not make competitive pressure a basis for changing this boundary. A stronger model, a faster model, or fear of falling behind may change how much of **Action** an organization chooses to automate. None of those things transfers **Direction** to AI.
@@ -202,114 +206,97 @@ Clover also does not make competitive pressure a basis for changing this boundar
 
 ## Stage 3 — Action
 
-Action is where AI capability is applied to the combination of **human Direction and system Context**. AI uses the Direction as instructions and the Context as data to determine how the work should happen and to execute it within the defined boundaries.
+Action is where AI capability is applied to the combination of **human Direction and system Context**. AI uses the Direction as instructions and the Context as data to determine how the work should happen and execute within the boundaries established by the human.
 
 Reasoning, planning, tool selection, AI model selection, orchestration across agents, code changes, tests, debugging, analysis, and interaction with the system all belong here.
 
 Planning and doing sit on one stage on purpose. The plan can change when work meets reality, and adapting to new evidence is part of Action rather than a reason to pretend the original plan was complete.
 
+AI may execute tests and modify test code when the human explicitly directs that as part of the intended outcome. Otherwise, verification artifacts that define whether Success is achieved should remain outside the agent's writable Action scope. Test fixtures, regression assertions, acceptance criteria, and other validation controls should be protected from silent weakening or deletion.
+
 Humans and AI can share execution. The human retains the boundaries, approvals, and accountability even when AI performs most of the work.
 
 Plan the smallest coherent path to the outcome. Run work in parallel only where it is genuinely independent, and replan when new information contradicts the current path.
-
-## Delegated execution is an engineering decision
-
-Delegation is not a reward for AI capability and not a race toward maximum automation. It is an engineering choice made for the current Context.
-
-Before delegating more of an Action, consider:
-
-1. **Evidence** — Has this kind of execution worked reliably in comparable situations?
-2. **Blast radius** — What happens if the action is wrong?
-3. **Observability** — Can we see quickly whether the action produced the intended result?
-4. **Reversibility** — Can we undo it safely and quickly?
-5. **Approval boundary** — What must remain with a human because the consequence is consequential, irreversible, external, or otherwise outside delegated authority?
-
-> **Delegate execution where evidence supports it, keep approval where blast radius demands it, and narrow delegation again when reality stops supporting it.**
-
-Delegation is therefore contextual. A human may delegate a low-risk code search, test run, or non-production change broadly while keeping production release, destructive data changes, or irreversible actions behind explicit approval.
-
-The same capable AI can receive different execution latitude in different Contexts. Capability is not authority.
-
-## What the framework asks us to observe
-
-Clover does not require a manufactured experiment before adoption. The meaningful question is what happens when the cycle is used in real work.
-
-As people and organizations adopt the pattern in the AI era, useful observations may include:
-
-- whether work starts from more relevant system Context;
-- whether human Direction becomes clearer without becoming more verbose;
-- whether more execution can be delegated safely inside defined boundaries;
-- whether Success is grounded more consistently in evidence;
-- whether failed cycles produce useful Context for the next cycle;
-- whether work can continue across humans, agents, and sessions without reconstruction.
-
-These are things to **observe**, not a scorecard that must be passed before Clover can be used. Adoption does not depend on first proving Growth. Growth is what may emerge from meaningful cycles over time.
 
 ---
 
 ## Stage 4 — Success
 
-Success is where the system or relevant environment demonstrates whether the intended outcome happened.
+Success is where the system or environment confirms the meaningful intended outcome. A result is not a Success merely because a task was completed, a build passed, or an AI said it worked.
 
-A passing test, a generated artifact, or an AI claim can be useful evidence, but none is automatically the outcome itself. Evidence should be tied to the human-defined Direction and the reality that the outcome is supposed to change.
+The evidence must connect to the human-defined outcome. A test can show that code behaves a certain way; it does not by itself prove that the outcome matters or that the real system improved.
 
-State what you checked, what the environment showed, and where you stopped. The important boundary is not maximum verification; it is honest verification appropriate to the outcome and risk.
+Verification boundaries matter. Whenever possible, the evidence used to declare Success should come from a check the agent could not silently redefine while performing the Action. Prefer protected test suites, independent fixtures, external assertions, separate environments, before/after measurements, or other validation mechanisms whose acceptance criteria remain outside the change being evaluated.
 
-When the evidence does not support the intended outcome, return to Context. The failed result is new information about reality and should change what the next cycle knows.
+A passing test is only as meaningful as the integrity of the test and its acceptance criteria. Do not weaken, delete, bypass, or rewrite a verification control merely to make the result pass. If the verification control itself must change because the intended outcome or its acceptance criteria changed, make that change explicit in Direction and ensure the resulting Success is validated independently.
 
----
+### Evidence should be attributable
 
-## Growth is the learning that can emerge
+Where the work matters, preserve a concise Success record: what outcome was evaluated, what evidence was used, what environment it came from, what changed, what was not changed, and where verification stopped. The record should be reproducible enough for another human or agent to understand why Success was claimed.
 
-Growth is not a fifth operational stage and nobody has to run it.
+Structured receipts can be useful when many agents or systems need to exchange Success information. They are an implementation choice, not a fifth Clover stage. A markdown context file may be sufficient for a small task; a structured record may be useful at larger scale.
 
-It is what can emerge from repeated meaningful cycles when useful learning is preserved.
+The human holds the standard for what counts as sufficient evidence and remains accountable for the outcome. AI runs checks, gathers evidence, reports it accurately, and makes clear what it could not verify. The system or environment provides the reality against which the outcome is judged.
 
-A cycle may teach something about the System, Direction, Action, Success, or the way the work itself should be performed. That learning can improve a future cycle without changing the underlying four-stage model.
-
-**Good Direction → meaningful Action → real Success or useful failure → preserved Context → better next cycle**
-
-Failure contributes to Growth too. The important point is not that every cycle succeeds. It is that meaningful cycles can leave the system, human, team, organization, or AI-enabled practice with something useful for what comes next.
-
-> **When meaningful cycles repeat, and what they teach is preserved, the system can grow.**
-
-## What one cycle leaves behind
-
-A useful cycle should leave behind some combination of:
-
-- evidence of what happened;
-- a clearer understanding of the System;
-- the settled Direction and its boundaries;
-- what was tried and what was ruled out;
-- what remains unknown;
-- context that makes the next cycle easier to start.
-
-The record is not the Growth itself. It is the carrier for whatever useful learning the cycle produced.
-
-## The claim, without turning it into a test gate
-
-Clover is not a claim that every organization will improve merely by renaming its workflow. It is a way of making an existing systems pattern explicit for AI-era execution and a way to preserve what meaningful cycles teach.
-
-We can therefore apply it without declaring the outcome in advance. **Adoption comes first; observation follows.** If meaningful cycles produce useful learning, that learning can compound. If a particular practice does not help, people can change it without abandoning the underlying cycle.
-
-The framework does not need to manufacture evidence before people are allowed to use it. The work itself supplies the observations.
+When the evidence does not support the intended outcome, return to Context rather than repeating the same Action. The failed result is information about reality and should change what the next cycle knows.
 
 ---
 
-## Closing idea
+## Delegated execution is an engineering decision
 
-Clover is a way of working with **System, Human, and AI** to produce meaningful outcomes.
+More execution can move from the human to AI as capability grows. That movement is not a maturity ladder, and it is not something that should increase merely because a model is more capable.
 
-The relationship is:
+Decide what to delegate using five properties:
 
-**System → Human → AI**
+**Evidence** — has this kind of work held up before?
 
-The working cycle is:
+**Blast radius** — what happens if the action is wrong?
 
-**Context → Direction → Action → Success**
+**Observability** — will we know quickly if it went wrong?
 
-And what can emerge from repeating meaningful cycles is:
+**Reversibility** — can we undo it cheaply and safely?
 
-**Growth**
+**Approval boundary** — does a human need to decide before it happens?
 
-The cycle remains the same from a single table to an interconnected system. The scale of Context, Direction, Action, and Success changes with the work. What matters is that human Direction gives the work meaning, AI can increasingly carry the execution, the System provides reality-based validation, and each meaningful cycle can leave something useful for the next.
+> **Delegate execution where evidence supports it, keep approval where blast radius demands it, and narrow delegation again when reality stops supporting it.**
+
+Delegation is per context. A capability that is safe in development may be inappropriate in production. A model that performs reliably on one class of change may not be reliable on another.
+
+The point is not to maximize how much work AI performs. The point is to use AI capability where it can contribute safely to the human-defined outcome.
+
+---
+
+## The claim Clover makes — and how to observe it
+
+Clover does not ask to be accepted because its terminology sounds good. Its useful claim is simpler: making system reality, Human Direction, AI execution, and Success evidence explicit can provide a clearer way to work when AI performs more of the execution.
+
+That does not create a proof gate before adoption. The underlying pattern predates AI, and the AI-era question is what happens when the execution layer changes. Teams can use the cycle and observe what emerges.
+
+Useful observations include:
+
+- Context is easier to inspect and less dependent on memory.
+- Direction is clearer before consequential Action.
+- More execution can be delegated without obscuring accountability.
+- Success claims are tied to evidence from the system or environment.
+- Failures produce useful Context rather than repeated blind retries.
+- Another human, agent, or session can continue without reconstructing the work.
+
+These observations are not a required scorecard or a condition for using Clover. They are simply ways to notice what the approach produces in practice.
+
+> **Apply the cycle. Preserve what it teaches. Observe what emerges.**
+
+---
+
+## Failure modes
+
+Clover's common failure modes are predictable:
+
+1. **Thin Context** — the agent acts on a request instead of the system.
+2. **Context bloat** — the agent gathers everything and loses the relevant signal.
+3. **Direction ambiguity** — the pointer is mistaken for permission to invent unstated policy.
+4. **Execution overreach** — capability is mistaken for authority.
+5. **Weak verification** — a local result or self-modified test is treated as proof of Success.
+6. **Silent failure repetition** — the same Action is retried without learning.
+7. **Lost continuity** — useful learning remains in one session instead of becoming Context for the next.
+
+The answer to all seven is the same cycle, applied carefully: **Context → Direction → Action → Success**, then carry useful learning into the next cycle.
