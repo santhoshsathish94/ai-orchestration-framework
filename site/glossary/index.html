@@ -68,21 +68,23 @@
     <div><dt>Clover</dt><dd>This framework. An AI Orchestration Framework connecting real-world Context, human Direction, AI-driven Action, and validated Success into a repeatable cycle. Four stages, describing how human intent becomes an outcome the environment confirms, and what the next attempt starts from.</dd></div>
     <div><dt>Stage</dt><dd>One part of the cycle. Each stage has one job, and there are four. In the clover mark each stage is drawn as a leaf.</dd></div>
     <div><dt>The working loop</dt><dd>Context, Direction, Action, Success. The four stages a team runs, over and over.</dd></div>
-    <div><dt>Context</dt><dd>Everything the work reasons from, and the stage the cycle starts in. In the common clover it is only what one human can hand over — what they type, the files they attach, the repository they happen to be working in. In the lucky clover it is the systems the organization already runs: the repositories and their documentation, the datasources, the logs and telemetry, the deployment environments, the running applications.</dd></div>
-    <div><dt>Direction</dt><dd>The human controls what matters, the desired outcome, constraints, boundaries, and what must not happen, and approves. With real context available, Direction also points at where the answer probably is.</dd></div>
-    <div><dt>Action</dt><dd>AI determines how the work should happen and executes within those boundaries: planning, tool choice, orchestration across agents, changes, tests, debugging.</dd></div>
-    <div><dt>Success</dt><dd>The intended outcome demonstrated by the real environment. A closed task, a passing build, or a confident report sits outside this.</dd></div>
-    <div><dt>Growth</dt><dd>The next stage, and not one of the four. AI becoming more capable out of the four stages: patterns form, and expertise forms out of the patterns. No team runs it, because it belongs to the frontier AI companies and the volume of data everyone's usage generates. <a href="../#fifth-leaf">The growth clover</a>.</dd></div>
+    <div><dt>System → Human → AI</dt><dd>The foundational priority in Clover. The system is where reality exists; humans choose the destination and remain accountable; AI provides capability and determines how work happens within human Direction.</dd></div>
+    <div><dt>Context</dt><dd>Everything the work reasons from, and the stage the cycle starts in. It may be an existing system or the reality already established while a system is being built: data, behavior, history, constraints, evidence, and previous cycles.</dd></div>
+    <div><dt>Direction</dt><dd>The human-defined purpose and destination: what matters, the desired outcome, priorities, constraints, boundaries, what must not happen, and accountability. With real context available, Direction also points at where the answer probably is.</dd></div>
+    <div><dt>Action</dt><dd>AI applies its capability to system Context and human Direction, determines how the work should happen, and executes within the defined boundaries.</dd></div>
+    <div><dt>Success</dt><dd>The intended outcome demonstrated by the real environment. A closed task, a passing build, or a confident report sits outside this on its own.</dd></div>
+    <div><dt>Growth</dt><dd>The learning and improvement that can emerge from repeating the four stages. It can accumulate across humans, AI systems, the system itself, teams, organizations, and frontier AI development; it is not owned by one actor.</dd></div>
     <div><dt>The common clover</dt><dd>Three stages — Direction, Action, Success. How AI is used almost everywhere today.</dd></div>
-    <div><dt>The lucky clover</dt><dd>Four stages, with Context added and running first. This is the framework, and the state we are in now. <a href="../#context">The lucky clover</a>.</dd></div>
-    <div><dt>The growth clover</dt><dd>The four stages with Growth drawn beside them as the next stage. It happens whether anyone chooses it or not. <a href="../#fifth-leaf">Growth</a>.</dd></div>
+    <div><dt>The lucky clover</dt><dd>Four stages, with Context added and running first. This is the framework, and the state we are in now.</dd></div>
+    <div><dt>The growth clover</dt><dd>Five leaves. Growth is the learning layer around the four operational stages, not a fifth operational step a team runs.</dd></div>
+    <div><dt>The fifth leaf</dt><dd>Growth. It represents what repeated cycles can teach and the unknown boundary of how far capability and learning may develop.</dd></div>
   </dl>
 
   <h2 style="font-size:1.05rem;margin-top:2rem">Everything else</h2>
   <dl class="terms">
     <div><dt>Orchestration</dt><dd>Coordinating people, AI, tools, and context so that work produces an outcome the environment confirms, rather than each part doing its own thing.</dd></div>
     <div><dt>Orchestration environment</dt><dd>The access layer between AI and the systems an organization already uses. Read-only MCP servers in front of the repositories, datasources, logs and environments. It is what feeds the Context stage.</dd></div>
-    <div><dt>Capability</dt><dd>Anything that can do work: a human, a team, an AI, an agent, a tool, a system.</dd></div>
+    <div><dt>Capability</dt><dd>Anything that can do work: a human, a team, an AI, an agent, a tool, a system. Capability does not by itself grant authority or accountability.</dd></div>
     <div><dt>Intent</dt><dd>What a human actually wants to achieve. The outcome, and not the task.</dd></div>
     <div><dt>Outcome</dt><dd>The change in the real world that was wanted. Distinct from <em>output</em>, which is what got produced.</dd></div>
     <div><dt>Evidence</dt><dd>What was actually done to check a claim — an assertion, one manual look, a repeatable test, a before-and-after measurement, or the original signal gone from the real environment. Say which. <a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/07-success.md">More on Success</a>.</dd></div>
@@ -91,10 +93,10 @@
     <div><dt>Ownership</dt><dd>The named human accountable for an outcome. Work can be delegated; ownership cannot.</dd></div>
     <div><dt>Agent</dt><dd>An AI system that can take actions and use tools, rather than only produce text.</dd></div>
     <div><dt>Agentic workflow</dt><dd>A designed loop of agent steps that repeats a known process. Orchestration differs in that it keeps what the outcome taught it.</dd></div>
-    <div><dt>Autonomy</dt><dd>How much of the <em>path</em> AI is trusted to determine — widened where results have held, capped by blast radius, granted per context rather than globally. <a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/04-framework.md#widening-what-ai-decides">Widening what AI decides</a>.</dd></div>
+    <div><dt>Autonomy</dt><dd>In Clover's current engineering layer, this refers only to how much of the <em>path</em> AI is allowed to determine inside human Direction. It never means ownership of purpose, acceptable risk, priorities, boundaries, or accountability. A more capable model does not create authority over the destination.</dd></div>
     <div><dt>Telemetry</dt><dd>The signals a running system emits about itself — logs, metrics, traces, error rates.</dd></div>
     <div><dt>Blast radius</dt><dd>How much damage a change could do if it is wrong. A bigger blast radius means more human approval.</dd></div>
-    <div><dt>Non-production</dt><dd>Any environment that is not serving real users — local, test, staging. Safe to break.</dd></div>
+    <div><dt>Non-production</dt><dd>Any environment that is not serving real users — local, test, staging. It can still contain sensitive data and is not automatically safe to expose.</dd></div>
     <div><dt>Guardrail</dt><dd>A constraint that keeps work inside safe boundaries: a required approval, a scope limit, a check that must pass.</dd></div>
     <div><dt>Root cause</dt><dd>The underlying reason a problem occurs. Distinct from the symptom, and from the workaround that hides it.</dd></div>
     <div><dt>Workaround</dt><dd>Something that stops the pain without fixing the cause. Legitimate for stabilizing an incident, and not a destination.</dd></div>
