@@ -8,9 +8,9 @@ It starts from a simple relationship:
 
 **System → Human → AI**
 
-The **System** is what becomes reality: the state, data, behavior, history, constraints, and evidence of the thing being worked on. The system is also what can ultimately validate whether an intended outcome actually happened.
+The **System** is the reality in which the outcome must exist: the state, data, behavior, history, constraints, and evidence of the thing being worked on. It is also the primary source of evidence for validating whether an intended outcome actually happened.
 
-The **Human** provides Direction. Humans decide what matters, what outcome is desired, what priorities and boundaries apply, what must not happen, and who remains accountable for the result.
+The **Human** provides Direction. Humans decide what matters, what outcome is desired, what makes that outcome meaningful, what priorities and boundaries apply, what must not happen, and who remains accountable for the result.
 
 **AI** provides capability and can help determine and execute the means of achieving the desired outcome within the human's Direction and the System's Context.
 
@@ -36,7 +36,8 @@ Clover's claim is narrower and more practical: **make that existing relationship
 
 - **System → Human → AI** establishes the relationship: System grounds the work in reality, Human provides Direction and accountability, and AI provides capability and can take on execution.
 - **Context → Direction → Action → Success** gives that relationship an operational shape: understand the relevant reality, establish the desired outcome and boundaries, perform the work, and validate the outcome against reality.
-- The claim is practical rather than universal in form: Clover should be useful from a small interaction to a large system, and it should earn its place through observable improvement in the work.
+- The value of the framework is not the invention of that sequence. It is making the boundaries and feedback between **reality, human purpose, AI execution, and evidence** explicit enough to design, govern, compare, and improve AI-enabled work.
+- The claim is testable: Clover should be useful from a small interaction to a large system, and it should earn its place through observable improvement in the work.
 
 Clover is therefore a way of working with System, Human, and AI, not a mandatory process or replacement for existing workflows. Existing tools, delivery methods, approvals, and agent frameworks can remain in place.
 
@@ -44,9 +45,9 @@ Clover is therefore a way of working with System, Human, and AI, not a mandatory
 
 The central distinction is simple.
 
-**System is what becomes reality and what can validate the outcome.**
+**System is the reality in which the outcome must exist and the primary source of evidence for validating it.**
 
-**Human is what provides Direction toward the desired outcome and remains accountable for it.**
+**Human provides Direction toward the desired outcome, decides what makes that outcome meaningful, and remains accountable for it.**
 
 **AI is capability that can help determine and execute the means of achieving that outcome.**
 
@@ -68,13 +69,13 @@ Take a table.
 
 The **System** is the table and the reality it contains: columns, rows, relationships, constraints, and current data.
 
-The **Human** provides Direction: read this table, answer a particular question, and do not modify it.
+The **Human** provides Direction: read this table, answer a particular question, and do not modify it. The answer matters because it serves the outcome the human is trying to achieve.
 
 The **AI** reads and analyzes the table using the System as Context and the Human's Direction as the boundary. It may choose the query, joins, calculations, tools, or reasoning path needed to answer the question.
 
 The answer is an output, not automatically a Success.
 
-The **System** provides the evidence needed to determine whether the answer is valid.
+The **System** provides the evidence needed to determine whether the answer is valid and whether it satisfies the intended outcome.
 
 If the answer is wrong, the failure reveals information about reality: perhaps a relationship was misunderstood, a join was wrong, or an assumption was false. That information becomes Context for the next cycle.
 
