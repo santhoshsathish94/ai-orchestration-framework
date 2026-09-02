@@ -2,11 +2,17 @@
 
 Context is the first stage of [the Clover framework](04-framework.md). It covers what the system needs to know about reality before anything acts on it.
 
-It comes first because the systems are already running before anyone asks for anything. The common way of working is Direction → Action → Success, where context is whatever the human remembers to hand over, so it turns up as a consequence of the direction. Here the direction is given against what is already there.
+It comes first because the system already exists before anyone asks for anything — or, when a system is being built, because there is already some established reality to reason from. The common way of working is Direction → Action → Success, where context is whatever the human remembers to hand over, so it turns up as a consequence of the direction. Here the direction is given against what is already there.
 
-In the common clover, context is only what one human can hand over. That is more than what they type — they can attach files, or point at the repository they happen to be working in — and it stays bounded by what that one human can reach and remember. In the lucky clover it becomes the current systems the organization uses: every repository with its many projects and documentation, the datasources the applications connect to, the logs and telemetry, the deployment environments, and the running applications. Tests, history, whatever was already tried, and what earlier passes wrote down sit here too.
+In the common clover, context is only what one human can hand over. That is more than what they type — they can attach files, or point at the repository they happen to be working in — and it stays bounded by what that one human can reach and remember. In the lucky clover it becomes the current systems the organization uses: every repository with its many projects and documentation, the datasources the applications connect to, the logs and telemetry, the deployment environments, and the running applications. Tests, history, whatever was already tried, and what earlier passes wrote down sit here too. For a system being built, requirements, designs, dependencies, decisions, experiments, current behavior, constraints, and evidence are part of the same reality.
 
 Capability is only as good as the material it reasons from. A human cannot solve a problem they have never looked at, and an agent cannot either, however good its tools are.
+
+## System first: reality before assumptions
+
+Clover's priority is **System → Human → AI**. The system is the grounding reality. Humans then set Direction and remain accountable. AI uses that system Context and human Direction to determine how work should happen and to execute within those boundaries.
+
+Context is therefore not merely context about an AI task. It is the context of the system itself — including what it is becoming when the system is under construction.
 
 ## Reason from the real environment
 
@@ -56,6 +62,8 @@ Access and judgment stay with a human: which systems may be read, which data may
 
 AI does most of the gathering. Reading code, tracing a call path, pulling telemetry, reconstructing an incident from logs, finding the attempt from a year ago that nobody remembered. This is the stage where a capable agent saves the most time, and it saves it on work people were skipping anyway.
 
+AI can also identify missing context and ask for it. That does not make AI the owner of what matters; it makes AI useful at finding the information needed to act within human Direction.
+
 ## Where context lives
 
 Context that survives the cycle needs somewhere to sit, or it stays a good intention. The mechanism that works is unglamorous: **plain markdown files committed alongside the code they describe.**
@@ -81,6 +89,8 @@ Every pass adds context, and a failed pass adds as much as a successful one. The
 > After each success and each failure, the context files are written before the next attempt.
 
 What one cycle established is what the next cycle starts from. Judgment about what is worth keeping and where a recorded finding has gone stale stays with a human, because a wrong finding written down spreads and somebody has to notice.
+
+Growth can emerge here without changing the underlying AI model: repeated observations can expose system patterns, missing assumptions, and useful practices that improve future cycles. Learning may accumulate in humans, teams, organizations, systems, and AI systems in different ways, but it does not transfer Direction.
 
 ## What happens there
 
