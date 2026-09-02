@@ -123,6 +123,10 @@ More capable AI can increase how much execution a human chooses to delegate. It 
 
 Unless explicitly directed by the human and necessary for the intended outcome, do not modify tests, fixtures, regression assertions, acceptance criteria, or other artifacts that define whether Success is achieved. Treat verification controls as part of the validation boundary, not as ordinary implementation targets.
 
+**Do not rely on this instruction alone when the boundary matters to Success.** Prefer runtime enforcement outside the model: read-only filesystem mounts, container permissions, protected branches, CI identities, tool/MCP write policies, or equivalent controls. The environment should reject a protected write even when an agent attempts it.
+
+The [runtime-enforcement reference](reference/runtime-enforcement/) shows a minimal implementation pattern. It is an example, not a requirement that every Clover deployment use Docker or MCP.
+
 ### Success
 
 Validate against reality.
