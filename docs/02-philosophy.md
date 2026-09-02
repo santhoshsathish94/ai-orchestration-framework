@@ -18,6 +18,14 @@ The capability is already here. AI can perform expert work across many fields, a
 
 The framework therefore is not about making AI the decision-maker. It is about orchestrating the capabilities of the **system, human, and AI** so that each cycle can produce a meaningful outcome and leave the next cycle better informed.
 
+A stronger model does not create a new destination. It changes the means available to reach the destination. **The system is the map. Humans choose the destination. AI is a means of getting there.**
+
+This distinction is deliberately model-independent. An older model, a newer frontier model, several models, or no AI at all can change the available means, but none of them changes who owns the destination. **A more capable means does not change the destination.**
+
+Competition does not change the rule either. Organizations may feel pressure to automate more quickly or delegate more of the path to keep pace. That pressure can affect how much autonomy is granted inside Action, but it does not transfer Direction to AI. **Do not transfer Direction to AI merely because AI becomes capable enough to perform it.** Capability is not authority, and authority is not accountability.
+
+This boundary also matters when AI is unavailable or unsuitable at the moment it is needed most. Critical incidents, production downtime, and other high-blast-radius situations still require accountable human responders and established operational mechanisms. A framework should improve the means of reaching the outcome without making the organization dependent on one particular AI service being available at every critical moment.
+
 ---
 
 ## AI thins the barrier to unfamiliar work
@@ -97,51 +105,3 @@ The four stages are Context, Direction, Action, and Success. They were named car
 Orchestration should not be a run of unconnected interactions.
 
 Every cycle worth running leaves something behind: what was learned, what held up when it was checked, what was missing, which decisions were made and why. Humans supply purpose and accountability. AI contributes reasoning, exploration, retrieval, execution, and evidence. The system supplies reality and the evidence of what actually happened. What comes out becomes part of the context the next cycle starts from.
-
-Value accumulates that way, because the system stops starting from zero. Each cycle builds on the context, evidence, decisions, and patterns already gathered.
-
-Growth is therefore not limited to model training. The human can learn. The AI-enabled process can improve. The system can become clearer. A team can develop reusable practices. An organization can accumulate institutional knowledge. And the underlying AI can independently improve through the mechanisms controlled by its frontier provider.
-
-The important distinction is that these layers are not equally controlled by the same actor. Clover keeps human purpose and accountability with the human even as AI capability expands.
-
-This repository works the same way. Engineering investigations, case studies, documentation, feedback, and open questions each feed the next piece of work rather than closing when they are written.
-
----
-
-## The conversation as an interface
-
-Orchestration does not require a human to drive every underlying tool.
-
-When context, tools, ownership, and validation are connected, a human can work at the level of intent while AI coordinates execution across the systems underneath. The conversation becomes the place the work happens rather than a place to ask questions.
-
-While this framework was being built, one continuous human–AI context covered repository setup, documentation, an engineering investigation, case studies, code changes, pull requests, review responses, and releases.
-
-The shift is in who holds the coordination. A human no longer has to sit between every tool and the next one, which removes coordination boundaries between intent and outcome without moving accountability away from the human.
-
-The upstream React contribution is the clearest example. The work moved from production evidence to root cause, implementation, regression testing, maintainer feedback, further changes, and validation, without resetting the accumulated context at any step. That contribution is a CI-green pull request that upstream has not merged. It shows the orchestration pattern and nothing beyond it.
-
----
-
-## What we believe
-
-These beliefs are what the rest of the framework rests on. The [principles](03-principles.md) turn them into practice, one per stage.
-
-**The system comes first.** Ground the work in the system that exists or the system being built. Reality is the reference point.
-
-**Direction belongs to humans.** Humans decide purpose, the outcome worth pursuing, constraints, boundaries, what must not happen, and any process constraints that matter. They remain accountable for the outcome.
-
-**AI provides capability, not ownership of purpose.** AI can reason, recommend, challenge, plan, and execute. It does not become the authority for Direction.
-
-**Context should be real and inspectable.** A description written from memory is weaker than the system itself whenever the system can answer the question.
-
-**Success belongs to the interaction of all three.** Human purpose, AI capability, and the system/environment have to work together for a meaningful outcome to exist.
-
-**Growth can emerge at every layer.** Repeated cycles create patterns that can improve individuals, AI-enabled work, systems, teams, organizations, and—through separate mechanisms—the frontier AI systems themselves.
-
-**Quality comes from orchestration and evidence.** Generating an answer is one step. Reliable delivery still needs structured work, governance, testing, review, security, and something that shows the outcome occurred.
-
-**Every cycle should improve the next one.** Success or failure is not merely the end of the work. It leaves information that can make the next cycle better.
-
----
-
-The [problem](01-problem.md) explains why this is needed. [The framework](04-framework.md) sets out the four stages in full.
