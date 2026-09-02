@@ -18,7 +18,8 @@ The story must stay human-simple while preserving the framework's deeper princip
 - Reality—not AI confidence—validates Success.
 - A previous run succeeding many times does not guarantee the next run.
 - Failed validation should lead back to Context and new information.
-- Growth is the fifth leaf, shown as curiosity rather than prediction.
+- Growth is the fifth leaf, shown as learning and curiosity rather than prediction.
+- Capability may scale, but Direction remains human.
 
 ---
 
@@ -187,7 +188,7 @@ The camera smoothly pulls back. The four stages appear as a clean, elegant loop:
 
 Keep the diagram visually simple and integrated into the environment, not as a corporate presentation slide.
 
-Then subtly reveal a fifth leaf growing from the completed four-stage form. It should feel organic, intriguing, and calm. Do not depict danger, evil, takeover, humanoid robots, or apocalypse. The meaning is simply that each cycle leaves experience for the next.
+Then subtly reveal a fifth leaf growing from the completed four-stage form. It should feel organic, intriguing, and calm. Do not depict danger, evil, takeover, humanoid robots, or apocalypse. The meaning is simply that each cycle leaves learning for the next.
 
 Finish on a clean bright identity frame with:
 
@@ -211,11 +212,11 @@ End calmly, with enough visual breathing room for the final CLOVER title to be u
 
 # Optional alternative final voiceover
 
-For a version aimed at a more technically mature audience, replace the final two sentences with:
+For a version aimed at a more technically mature audience, use:
 
-"That's CLOVER: Context, Direction, Action, Success. Four leaves make the framework. The fifth is what AI becomes while the cycle runs."
+"That's CLOVER: Context, Direction, Action, Success. Four leaves make the framework. The fifth is what repeated cycles can teach us."
 
-Use this only when the audience is already likely to understand the practical four-stage story.
+Do not use wording that suggests the fifth leaf is AI acquiring ownership, autonomy, or a new destination.
 
 ---
 
@@ -239,8 +240,10 @@ Do not generate:
 - impossible teleportation between environments
 - inconsistent clothing or face
 - exaggerated science-fiction interfaces
+- AI selecting the destination or organizational purpose
+- imagery suggesting capability automatically grants authority
 
-The story is about a practical way of working with capable AI in a real environment.
+The story is about a practical way of working with capable AI in a real environment while keeping human Direction and accountability explicit.
 
 ---
 
@@ -274,4 +277,4 @@ Estimated spoken length: approximately 75–85 words, depending on delivery spee
 6. Do not keep adding prompts merely to increase duration.
 7. If continuity breaks, regenerate the affected continuation from the correct prior frame instead of adding another narrative branch.
 8. Preserve the same primary human and visual environment across all generations.
-9. Keep the first version practical. Save the deeper autonomous-growth hypothesis for a separate video once the audience understands the four-stage cycle.
+9. Keep the first version practical. Save deeper speculative questions about increasing capability for a separate future-facing communication piece once the audience understands the four-stage cycle.
