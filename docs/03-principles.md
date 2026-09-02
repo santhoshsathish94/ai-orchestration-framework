@@ -24,6 +24,20 @@ This is not a claim that AI cannot make decisions. It is a boundary on which dec
 
 ---
 
+## Direction is not delegated by competition
+
+AI capability is not authority, and authority is not accountability. A newer, faster, or more capable model does not create authority over purpose. Competitive pressure can encourage organizations to automate more of the path, but it is not a reason to transfer Direction to AI.
+
+Clover therefore keeps this rule independent of the model generation or competitive environment:
+
+> **Do not transfer Direction to AI merely because AI becomes capable enough to perform it.**
+
+A more capable means can change the speed or quality of the journey without changing the destination. **The system is the map. Humans choose the destination. AI is a means of getting there.**
+
+This boundary also applies in critical situations. AI may be unavailable, delayed, rate-limited, or otherwise unsuitable when an organization needs to respond immediately. Production incidents and other high-blast-radius situations still require accountable humans and established operational mechanisms. Clover should improve the means of reaching an outcome without making the organization dependent on any particular AI service being available.
+
+---
+
 ## 1. Context comes from the real system
 
 *Stage: Context*
@@ -121,24 +135,19 @@ The broader principle is:
 
 > **When cycles repeat, patterns can emerge. When patterns are preserved, future cycles can improve.**
 
-The model may remain the same while the human, team, organization, and system around it become better at using it. The underlying AI may also improve separately through frontier training and refinement.
+The model may remain the same while the human, team, organization, or system around it becomes better at using it. The underlying AI may also improve through frontier training and refinement, but that happens at a different layer and under different control.
 
-Growth therefore belongs to the whole system rather than to one actor. It is the accumulated learning that can emerge from repeated interaction between the **system, human, and AI**.
+Growth does not belong to one actor. It is the accumulated learning that can emerge from repeated interaction between the **system, human, and AI**.
 
 ---
 
-## Summary
+## The four principles in one line
 
-| Stage | Principle |
+| Principle | What it protects |
 |---|---|
-| **Context** | Context comes from the real system |
-| **Direction** | Direction is a human decision |
-| **Action** | Action applies AI capability to Context and Direction |
-| **Success** | Success is the meaningful outcome demonstrated by the system |
-| **Growth** | Learning can emerge from repeated cycles across the system |
+| **Context comes from the real system.** | Reality over assumption. |
+| **Direction is a human decision.** | Purpose and accountability stay human. |
+| **Action applies AI capability to Context and Direction.** | AI determines the path without owning the destination. |
+| **Success is the meaningful outcome demonstrated by the system.** | Evidence over assertion. |
 
-The framework is four operational stages: **Context → Direction → Action → Success**.
-
-**Growth is the learning layer around those stages, not a fifth task.**
-
-Each stage is described in full in [the framework](04-framework.md).
+Growth is the learning layer around these four operational principles. It preserves what repeated cycles reveal so the next cycle can begin from better Context and better understanding.
