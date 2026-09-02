@@ -24,6 +24,22 @@ AI comes third because capability does not transfer accountability. AI can reaso
 
 This is not a statement that AI is incapable of making decisions. It is a boundary on what decisions AI should own in a real-world system: **AI can determine how work happens within human Direction; it does not determine the Direction itself.**
 
+## Capability may scale. Direction remains human.
+
+Clover does not support transferring organizational Direction to AI, regardless of how capable AI becomes. This is not a temporary safeguard for today's models. It is a foundational boundary of the framework.
+
+AI may become dramatically better at reasoning, planning, implementation, coordination, and execution. None of that creates authority over purpose, acceptable risk, priorities, boundaries, or accountability.
+
+> **Capability can increase. Authority does not have to.**
+
+Clover keeps this rule independent of model generation, vendor, architecture, or competitive environment. Competitive pressure may encourage an organization to automate more of the path inside Action. It does not justify handing AI the destination.
+
+> **Do not transfer Direction to AI merely because AI becomes capable enough to perform it.**
+
+A useful analogy is a journey: **the system is the map, humans choose the destination, and AI is a means of getting there.** A more capable means can change the speed, cost, or quality of the journey without changing the destination. Humans may walk, run, drive, or use an AI-enabled tool. The means may change; the intended outcome does not unless humans change it.
+
+This boundary also matters in critical situations. AI may be unavailable, delayed, rate-limited, or otherwise unsuitable when an organization needs to respond immediately. Production incidents and other high-blast-radius situations still require accountable humans and established operational mechanisms. Clover should improve the means of reaching an outcome without making the organization dependent on any particular AI service being available.
+
 ## Three leaves, then four, then five
 
 The number of leaves carries the argument. The stages arrived in a different order than they run in, and the way they arrived is the clearest way to explain them.
@@ -48,7 +64,7 @@ Reaching it takes a setup rather than a principle:
 2. **Scope every connection to what the human driving the work already has access to**, at the privileges they already hold. Nothing new is being granted.
 3. **Start with one environment. Development is enough.** Widen to other non-production environments as it proves out.
 
-[The orchestration environment](orchestration-environment.md#building-one) covers what to connect and in what order, and [governance](08-governance.md#access-mirrors-the-human-not-the-ai) covers how that access is held.
+[The orchestration environment](orchestration-environment.md) covers what to connect and in what order, and [governance](08-governance.md) covers how that access is held.
 
 The approach gets challenged, and the honest answer holds up. That access already exists and is already used, often with nobody tracking it. Clover makes it deliberate, scoped and visible. It also surfaces stale credentials, unreviewed access paths and data nobody has looked at, before any of those become an incident. [The questions a security team will ask](08-governance.md#questions-your-security-team-will-ask) are answered one by one.
 
@@ -152,9 +168,7 @@ Because the system is already readable, Direction can point instead of describin
 
 Clover does not give AI ownership of Direction. AI can sharpen a direction, ask questions, identify conflicts, surface risks, and recommend alternatives. It does not become accountable for deciding what outcome the system should pursue. A system operating on partial knowledge should not be allowed to define its own purpose in a real-world environment where even humans cannot fully understand every consequence.
 
-Clover also does not make competitive pressure a basis for changing this boundary. A stronger model, a faster model, or fear of falling behind may change how much of **Action** an organization chooses to automate. None of those things transfers **Direction** to AI. **Do not transfer Direction to AI merely because AI becomes capable enough to perform it.**
-
-A useful analogy is a journey: **the system is the map, humans choose the destination, and AI is a means of getting there.** Different models can change the speed or capability of the journey, but a more capable means does not change the destination. The same principle holds whether an organization uses an older model, a newer frontier model, several models, or no AI at all.
+Clover also does not make competitive pressure a basis for changing this boundary. A stronger model, a faster model, or fear of falling behind may change how much of **Action** an organization chooses to automate. None of those things transfers **Direction** to AI.
 
 **Core question.** What needs to be done, what outcome is worth pursuing, and what must not happen?
 
@@ -203,40 +217,3 @@ Evidence can be a test that fails without the change and passes with it, a befor
 ### Say what the evidence actually is
 
 Not every task has telemetry, and pretending otherwise makes this stage unusable for most work. What matters is describing what was actually done to check, in words a reader can act on.
-
-Four questions do the work:
-
-- **Did anyone verify it, or is someone asserting it?** "It works" from a human or an AI establishes nothing on its own.
-- **Does it hold up again?** Something seen working once may not repeat. An automated check that fails without the change and passes with it is a different claim from a manual look.
-- **Did the thing we cared about move?** A passing test says the code behaves. A before-and-after measurement says the problem changed.
-- **Did it hold where it counts?** A local run can be useful and still say nothing about the production environment.
-
-A good Success record says what was checked, where, how often, what the result was, and what remains unknown. That record becomes part of Context for the next cycle.
-
-## Failure is also evidence
-
-A failure is not a reason to retry blindly. It is new information about the system.
-
-When an Action fails, the next cycle should start from what the failure established: which assumption was wrong, which constraint appeared, what the system actually did, and what changed between attempts. That is how failure becomes learning instead of repetition.
-
-## Widening what AI decides
-
-Clover does not prescribe one permanent level of AI autonomy. It gives a rule for widening it: **increase autonomy as trust matures, while keeping human ownership of Direction and accountability intact.**
-
-A team can let AI determine more of the path when the results are repeatedly good in that context, the work is observable, and the consequences are acceptable or reversible. When those conditions stop holding, the autonomy should narrow again.
-
-What moves is how much of **Action** AI determines. The ownership boundary does not move merely because AI becomes more capable, because a newer model is available, or because competitors are moving faster.
-
-## Applying the framework
-
-Start with a real problem. Establish what is true about the system. Give clear human Direction against that Context. Let AI determine and execute the path within the stated boundaries. Verify the intended outcome in the real environment. Write down what the cycle established before the next attempt.
-
-The four stages stay simple:
-
-**Context → Direction → Action → Success**
-
-The deeper discipline is the relationship around them:
-
-**System → Human → AI**
-
-The system grounds the work in reality. The human owns purpose and accountability. AI applies capability to determine and execute the path. Repeated cycles can create **Growth** by preserving what reality taught the people, the AI system, and the systems around them.
