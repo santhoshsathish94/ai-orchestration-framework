@@ -22,7 +22,15 @@ A stronger model does not create a new destination. It changes the means availab
 
 This distinction is deliberately model-independent. An older model, a newer frontier model, several models, or no AI at all can change the available means, but none of them changes who owns the destination. **A more capable means does not change the destination.**
 
-Competition does not change the rule either. Organizations may feel pressure to automate more quickly or delegate more of the path to keep pace. That pressure can affect how much autonomy is granted inside Action, but it does not transfer Direction to AI. **Do not transfer Direction to AI merely because AI becomes capable enough to perform it.** Capability is not authority, and authority is not accountability.
+### Capability may scale. Direction remains human.
+
+Clover does not support transferring organizational Direction to AI, regardless of how capable AI becomes. This is not a temporary safeguard for today's models. It is a foundational boundary of the framework.
+
+AI capability may improve by an order of magnitude or more. Models may become much better at reasoning, planning, implementation, coordination, and execution. None of that creates authority over purpose, acceptable risk, organizational priorities, boundaries, or accountability.
+
+> **Capability can increase. Authority does not have to.**
+
+Competition does not change the rule either. Organizations may feel pressure to automate more quickly or delegate more of the path to keep pace. That pressure can affect how much execution is delegated inside Action, but it does not transfer Direction to AI. **Do not transfer Direction to AI merely because AI becomes capable enough to perform it.** Capability is not authority, and authority is not accountability.
 
 This boundary also matters when AI is unavailable or unsuitable at the moment it is needed most. Critical incidents, production downtime, and other high-blast-radius situations still require accountable human responders and established operational mechanisms. A framework should improve the means of reaching the outcome without making the organization dependent on one particular AI service being available at every critical moment.
 
