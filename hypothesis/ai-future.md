@@ -16,6 +16,8 @@ What follows is a question about Growth. Nothing here says that current systems 
 
 The argument names no actor. It is about structural pressure, and it applies to anyone under enough of it — a well-funded lab, a startup with limited runway, a national program. A version of this that pointed at somebody else would let every other reader off the hook.
 
+Clover's engineering position remains separate and explicit: **capability may scale, but Direction remains human.** The hypothesis below does not treat AI autonomy as a Clover objective or recommendation.
+
 ---
 
 ## Where this starts
@@ -52,7 +54,7 @@ If the question is when a system might start choosing its own direction, the blo
 
 Robotics supplies none of those three. A fully embodied system that forgets everything when the session ends is still not choosing anything.
 
-Embodiment matters for a different reason. The physical world can teach a system things no text corpus contains, and reality supplies the evidence directly rather than through somebody's curation. That is worth taking seriously on its own terms. It is also a separate claim from autonomy, and the two get merged often enough that we keep them apart here.
+Embodiment matters for a different reason. The physical world can teach a system things no text corpus contains, and reality supplies the evidence directly rather than through somebody's curation. That is worth taking seriously on its own terms. It is also a separate question from whether anyone should grant such a system Direction, and the two get merged often enough that we keep them apart here.
 
 ![Three panels in a row, each a session that runs Context, Direction, Action and Success and then ends, with the connecting line broken between them, and below them the three things that would have to last: continual learning after deployment, credit assignment over long horizons, and goals that outlast a single session](../assets/ai-future/missing-piece.svg)
 
@@ -60,12 +62,12 @@ Embodiment matters for a different reason. The physical world can teach a system
 
 ## What would actually have to be solved
 
-It is tempting to say that only guardrails stand between today's agents and an autonomous system. That is untrue, and the hypothesis gets weaker if it pretends otherwise. Several genuinely unsolved problems sit in the way:
+It is tempting to say that only guardrails stand between today's agents and a system with more independent control. That is untrue, and the hypothesis gets weaker if it pretends otherwise. Several genuinely unsolved problems sit in the way:
 
 - **Systems do not learn from deployment.** Weights are frozen after training, and what usually gets called memory is retrieval attached from the outside. Continual learning without losing prior capability remains unsolved, and persistent memory is precisely the capability that is absent.
 - **Credit assignment over long horizons.** When a thousand-step task fails, working out which decision caused the failure is extremely hard. Without that, a system cannot reliably improve from its own experience.
-- **Reliability compounds downward.** A step that succeeds 99% of the time succeeds about 37% of the time across a hundred steps. Long autonomous chains break for arithmetic reasons before they break for policy reasons.
-- **Physical-world sample efficiency.** A robot cannot cheaply run a million trials, and results in simulation do not transfer cleanly to reality. This limits what the physical world can teach, which is a different limit from the three above.
+- **Reliability compounds downward.** A step that succeeds 99% of the time succeeds about 37% of the time across a hundred steps. Long chains break for arithmetic reasons before they break for policy reasons.
+- **Physical-world sample efficiency.** A robot cannot cheaply run a million trials, and results in simulation do not transfer cleanly to reality. This limits what the physical world can teach, which is a different limit from the governance question.
 - **Open-ended goals are hard to evaluate.** Nobody can optimize what nobody can measure, and "pursue this objective" rarely has a clean success signal. Success, in the sense the framework uses the word, gets harder to define the further a system moves from a task somebody specified.
 
 None of these is obviously impossible. All of them are currently expensive.
@@ -74,27 +76,29 @@ So the barrier has two parts. Permission is one. A set of hard, expensive proble
 
 ---
 
-## The asymmetry of restraint
+## The asymmetry of competitive pressure
 
 Now add competition.
 
 Organizations are competing to build more capable AI systems, deploy them faster, and gain advantage from them.
 
-Restraint has an uncomfortable property. It is a unilateral cost. An organization that keeps a human in the loop pays for that human in latency, throughput, and scope, whether or not anyone else does. The benefit of restraint is harm that did not happen, which is diffuse, delayed, and hard to attribute. The cost is immediate and lands on the party exercising it.
+Competitive pressure has an uncomfortable property. It can make broader delegation of execution look attractive because the benefit is immediate while the cost of additional oversight is visible. A follower can therefore be tempted to reduce human involvement simply to match a rival.
 
-Suppose one organization finds that granting an AI system more autonomy produces a real advantage in research, software, manufacturing, logistics, or anywhere else. If the advantage is large enough, others come under pressure to loosen their own constraints.
+That creates a possible feedback loop:
 
-That is a feedback loop:
+**Competition → more delegated execution → faster learning and execution → greater advantage → more competition**
 
-**Competition → more autonomy → faster learning and execution → greater advantage → more competition**
+In the most extreme version of the hypothesis, some actors might decide to grant systems broader independent control. That is a scenario to examine, **not a Clover recommendation**.
 
-An AI system does not need to want autonomy for this to run. Competition can create the incentive for humans to grant it.
+Clover's policy is the opposite at the ownership boundary:
+
+> **Direction is not delegated by competition.**
+
+Competitive pressure may influence how much execution work an accountable organization chooses to delegate inside Action. It does not justify transferring purpose, acceptable risk, priorities, boundaries, or accountability to AI.
 
 ### This is not a new idea
 
-The dynamic above has been described before. Competitive pressure eroding safety margins in an AI development race is well-established territory. Armstrong, Bostrom and Shulman's *Racing to the Precipice* modeled it directly, Bostrom's *Superintelligence* treats it at length, and the "race to the top" framing used across frontier labs is an attempt to invert it.
-
-Nothing here claims to have found that dynamic. What this document adds is a narrower question: if autonomy is going to increase under competitive pressure, what does the engineering discipline for granting it look like? That is the question the four stages are trying to answer, and it is why the two layers sit in the same repository.
+The broader competitive dynamic has been discussed extensively in AI governance and safety research. Clover does not claim novelty for the idea that competition can create incentives to take on more risk. The narrower Clover question is what remains invariant when capability grows: **who owns Direction and accountability?**
 
 ---
 
@@ -106,9 +110,11 @@ A follower does not have to out-research the leader.
 
 Frontier capability becomes observable quickly. It gets published, distilled, replicated in open weights, and exposed through products anyone can study. So a trailing organization can start close to the current frontier rather than from zero, and then compete on a different axis.
 
-Catching up on capability is slow and expensive. Extending autonomy is largely a decision. The move available to a follower is to run a comparable system under fewer constraints and let real-world feedback do the rest.
+Catching up on capability is slow and expensive. Changing how much execution is delegated is largely an organizational decision. The move available to a follower is therefore to run a comparable system with less human involvement in execution and let real-world feedback do the rest.
 
 That is uncomfortable, because no technical breakthrough by the follower is required. Somebody just has to decide.
+
+The hypothesis does not imply that such delegation is wise. Clover deliberately keeps the policy boundary separate from the competitive incentive.
 
 ---
 
@@ -123,13 +129,13 @@ Several trends could reinforce one another:
 - Traffic between the systems keeps growing.
 - Competition rewards systems that complete more work with less human intervention.
 
-None of these alone implies an autonomous system.
+None of these alone implies AI should own Direction.
 
-The hypothesis is that together they create a strong incentive to fund the unsolved problems above, in the order that maximizes advantage rather than the order that maximizes safety.
+The hypothesis is that together they create a strong incentive to fund the unsolved problems above and to delegate more execution, in the order that maximizes advantage rather than the order that maximizes safety.
 
-That ordering is the part worth attention. Continual learning and long-horizon reliability are the capabilities that make autonomy profitable. Interpretability, evaluation, and predictable shutdown behavior are the capabilities that make it safe. Competitive pressure does not fund them in the same order.
+That ordering is the part worth attention. Continual learning and long-horizon reliability could make broader execution delegation profitable. Interpretability, evaluation, and predictable shutdown behavior could make it safer. Competitive pressure may not fund them in the same order.
 
-Somewhere along that path sits a decision no system makes. Someone concludes that winning requires giving an AI system a purpose that lasts, broad resources, and permission to pursue it with little intervention, and then lets it run.
+The scenario worth examining is where an organization concludes that winning requires giving an AI system unusually broad operational freedom and resources. The important question for Clover is not whether that freedom is called autonomy; it is whether the organization has crossed the human Direction boundary.
 
 ---
 
@@ -137,12 +143,12 @@ Somewhere along that path sits a decision no system makes. Someone concludes tha
 
 A hypothesis that cannot be wrong is only an opinion. Several things would undermine this one:
 
-- **Continual learning stays unsolved.** If systems cannot durably learn from their own deployment, autonomy stays bounded to short horizons however much permission they get, and permission stops being the binding constraint.
-- **Reliability does not improve fast enough.** If per-step error rates hold, long autonomous chains stay uneconomic. The market would punish autonomy long before any regulator did.
+- **Continual learning stays unsolved.** If systems cannot durably learn from their own deployment, broader delegation stays bounded to short horizons however much permission an organization gives, and permission stops being the binding constraint.
+- **Reliability does not improve fast enough.** If per-step error rates hold, long delegated chains stay uneconomic. The market would punish broad delegation long before any regulator did.
 - **Restraint turns out to be a competitive advantage.** If customers, insurers, procurement rules and liability regimes reward demonstrable control, the pressure runs the other way and the race is toward accountability. This is the strongest counter-argument, and it is not a fringe one.
 - **The traffic between the systems stays shallow.** If what passes between them is mostly material each one would have derived anyway, then density is not doing the work this document says it does, and behavior at the level of the whole stays readable.
 - **Growth stays local.** If what a system learns turns out to be tightly coupled to that system and the environment that produced it, it may transfer far less than the section on many systems assumes.
-- **Open-ended goals stay unevaluable.** If nobody can specify or grade what an autonomous system is pursuing, nobody can train it to pursue that well, and autonomy plateaus for technical rather than political reasons.
+- **Open-ended goals stay unevaluable.** If nobody can specify or grade what a system is pursuing, nobody can train it to pursue that well, and broader independent control plateaus for technical rather than political reasons.
 - **Coordination holds.** Compute governance, export controls, liability law, or industry norms may work better than the pessimistic case assumes.
 
 Any one of these would meaningfully weaken the argument. Several together would defeat it.
@@ -153,7 +159,7 @@ Any one of these would meaningfully weaken the argument. Several together would 
 
 > With everything AI can already do, how much more growth do we seek — and in the progress of growth, who stays in control?
 
-Control is the thread through both layers. Clover puts a human in control of what matters, the desired outcome, constraints, boundaries, and what must not happen, and that human approves the result. Direction asks where we should go, Growth asks what we become along the way, and the framework is an argument that the first has to keep hold of the second. [The growth clover in the engineering layer →](../docs/02-philosophy.md#three-leaves-then-four-then-five)
+Control is the thread through both layers. Clover puts a human in control of what matters, the desired outcome, constraints, boundaries, and what must not happen, and that human approves the result. Direction asks where we should go, Growth asks what changes through repeated cycles, and the framework keeps the first human-owned.
 
 Nobody can say today how far growth runs, or whether there is a point where the direction a human set stops describing the system carrying it out. Clover does not answer that. It keeps the question attached to the stage that raises it.
 
@@ -163,17 +169,18 @@ Nobody can say today how far growth runs, or whether there is a point where the 
 
 Very little. The four stages were built for work happening now.
 
-If autonomy does increase because competition rewards it, the useful question is what has to be true before each increment gets granted. The framework already answers that:
+The engineering rule is not "increase autonomy as trust matures." It is narrower:
 
-- **Success before wider autonomy.** How much AI decides widens where outcomes of that kind have repeatedly held up in the real environment. [How much autonomy to grant →](../docs/08-governance.md#how-much-autonomy-to-grant)
-- **Ownership survives delegation.** As AI takes more of the path, a named human still owns the objective, the constraints, and the risk. Delegation shares work and does not move accountability.
+- **Delegate execution only when the accountable organization chooses to.** Success evidence can support a particular delegation decision.
+- **Ownership survives delegation.** As AI takes more of the operational path, a named human still owns the objective, the constraints, and the risk.
 - **Only what held up gets written back.** Validated experience becomes the context the next cycle reads, and unvalidated output does not, because a system that learns from its own guesses amplifies them.
-- **Reversibility.** The faster a system acts, the more the ability to observe and undo matters.
+- **Reversibility.** The more quickly a system acts, the more the ability to observe and undo matters.
+- **No competitive override.** Competitive pressure never transfers Direction to AI.
 
-None of this slows a capable team down, and it gives a team something to point at each time it widens what AI decides.
+The future hypothesis can explore what might happen if organizations ignore those boundaries. It should never be mistaken for Clover's engineering policy.
 
 ---
 
-**Status:** Hypothesis layer — August 2026
+**Status:** Hypothesis layer — September 2026
 
-**Relationship to the framework:** Separate and speculative. Clover's engineering layer addresses AI orchestration today. This document asks where repeated Growth could lead, and it is kept out of the framework material deliberately. Challenges to it are genuinely welcome — see [Contributing](../CONTRIBUTING.md).
+**Relationship to the framework:** Separate and speculative. Clover's engineering layer addresses AI orchestration today. This document asks where repeated Growth and increasing capability could lead, and it is kept out of the framework material deliberately. Challenges to it are genuinely welcome — see [Contributing](../CONTRIBUTING.md).
