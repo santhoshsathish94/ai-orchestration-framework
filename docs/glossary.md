@@ -36,7 +36,7 @@ that is a bug in the writing — [tell us](../CONTRIBUTING.md).
 | **Ownership** | The named human accountable for an outcome. Work can be delegated; ownership cannot. |
 | **Agent** | An AI system that can take actions and use tools, rather than only produce text. |
 | **Agentic workflow** | A designed loop of agent steps that repeats a known process. Orchestration differs in that it keeps what the outcome taught it. |
-| **Autonomy** | In the current engineering layer, the amount of the *path* AI is allowed to determine inside human Direction. It does not mean ownership of purpose, acceptable risk, priorities, boundaries, or accountability. See [the framework](04-framework.md#widening-what-ai-decides). |
+| **Delegated execution** | The amount of operational work a human or organization chooses to have AI perform inside human Direction. It can expand or contract by context and evidence. It does not transfer purpose, acceptable risk, priorities, boundaries, the destination, or accountability to AI. |
 | **Telemetry** | The signals a running system emits about itself — logs, metrics, traces, error rates. |
 | **Blast radius** | How much damage a change could do if it is wrong. A bigger blast radius means more human approval. |
 | **Non-production** | Any environment that is not serving real users — local, test, staging. It can still contain sensitive data and is not automatically safe to expose. |
