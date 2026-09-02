@@ -2,7 +2,7 @@
 
 Adoption is where [the Clover framework](04-framework.md) becomes how a team works, or stays a document somebody read once.
 
-This page carries more weight than the rest of the framework. Access can be arranged and controls can be written in a week. Whether people actually work this way is what decides whether any of it mattered.
+This page carries more weight than the rest of the framework. Access can be arranged and controls can be written in a week. Whether people actually work this way is what decides what emerges from it.
 
 ## What is actually being adopted
 
@@ -12,24 +12,31 @@ Clover does not ask teams to replace human judgment with AI. It asks teams to ma
 - **Human** owns Direction — purpose, intended outcomes, priorities, acceptable risk, constraints, boundaries, and accountability.
 - **AI** provides capability and execution inside that Direction, using the system as Context to determine and carry out how the work should happen.
 
-The four operational stages remain Context → Direction → Action → Success. Growth is the learning layer that can emerge from repeated cycles; it is not a fifth task a team has to run.
+The four operational stages remain Context → Direction → Action → Success. Growth is the learning layer that can emerge from repeated meaningful cycles; it is not a fifth task a team has to run.
 
 > **Capability may scale. Direction remains human.**
 
-## Adoption is a proposition to test
+## Adoption does not require proof in advance
 
-A team should not adopt Clover because the terminology is attractive. Adopt it where it changes observable work.
+Clover does not require Growth to be demonstrated before people adopt the cycle. The underlying pattern already existed in human-led work; what changes in the AI era is that AI can perform a growing share of the execution.
 
-Look for changes such as:
+A team can adopt the way of working, apply it to real problems, and let the repeated cycles show what happens. Observation follows adoption rather than serving as a gate before it.
 
-- more work starting from verified system evidence rather than remembered context;
+That means a team does not need to prove Clover before using it, and Clover does not promise that every adoption will produce Growth. The useful question over time is what repeated meaningful cycles actually teach and what, if anything, improves as that learning is preserved.
+
+## What to observe after adoption
+
+Observation is useful, but it is not a mandatory scorecard or a prerequisite for using Clover. Watch for whatever becomes visible in the work:
+
+- more work beginning from relevant system evidence rather than remembered context;
 - clearer human outcomes, boundaries, and approval points before consequential Action;
-- less rework or fewer unnecessary handoffs when execution is delegated;
-- more claimed successes supported by evidence tied to the intended outcome;
-- failed attempts producing new Context before the next attempt;
-- another person, agent, or session being able to resume work without reconstructing it.
+- less unnecessary rework or fewer handoffs when execution is delegated;
+- more Success claims tied to evidence and the intended outcome;
+- failed attempts producing useful Context for the next cycle;
+- another person, agent, or session continuing the work without reconstructing it;
+- meaningful cycles producing learning that becomes useful in later cycles.
 
-These are evaluation dimensions, not a mandatory scorecard. The right comparison is with the team's existing way of working. Where Clover produces no meaningful improvement, adapt it or do not keep it.
+These observations are for understanding what emerges, not for manufacturing a predetermined result. The team can keep, adapt, or stop using parts of the approach based on what it experiences.
 
 ## The setup
 
@@ -37,7 +44,7 @@ Three steps, in this order.
 
 1. **Stand up read-only MCP servers** in front of the repositories, the datasources, the logs and telemetry, and the environments. One connection at a time, each one added because a real problem needed it.
 2. **Scope every connection to what the human driving the work already has access to**, at the privileges they already hold. Nothing new is being granted, and the security conversation stays small because there is nothing new to argue about.
-3. **Start with one environment. Development is enough.** Widen to other non-production environments as it proves out.
+3. **Start with one environment. Development is enough.** Widen to other non-production environments as the approach becomes familiar.
 
 The approach gets challenged, and the honest answer holds up. That access already exists and is already used, often with nobody tracking it. Clover makes it deliberate, scoped and visible. It also surfaces stale credentials, unreviewed access paths and data nobody has looked at, before any of those become an incident.
 [The orchestration environment](orchestration-environment.md#building-one) covers what to connect and in what order, and [governance](08-governance.md#questions-your-security-team-will-ask) answers the questions a security team will ask before any of it is granted.
@@ -52,19 +59,19 @@ There is still work in it. The layer needs access to the places the answers live
 
 ## The stages do not cost the same to adopt
 
-**Context** is the real investment, and it is where most of the early value shows up. Read-only reach into the code, the tickets, the logs and the data lets AI reason about the actual problem instead of a description of it. It is also the stage that needs someone to negotiate access, so it is the one that stalls. It is where iteration lands too:
+**Context** is the real investment, and it is where much of the early change may show up. Read-only reach into the code, the tickets, the logs and the data lets AI reason about the actual problem instead of a description of it. It is also the stage that needs someone to negotiate access, so it is the one that can stall. It is where the next cycles gain their starting material too:
 
 > After each success and each failure, the context files are written before the next attempt.
 
 What a team writes down goes into those files, beside the work. Most teams skip that, because the work feels finished when the change ships.
 
-**Direction** costs habit and nothing else. Somebody says what needs to be done, what must not happen, and where they think the answer is, before the work starts. No tooling and no approval sit in front of it, and once the systems can be read, the direction is given against what is actually there.
+**Direction** is the human habit of saying what matters, what outcome is meaningful, what must not happen, and where the relevant answer probably is, before the work starts. Once the systems can be read, the Direction is given against what is actually there.
 
-**Action** grows through delegated execution. What AI is trusted to carry follows what has already held up in work of that kind. More capable models can increase the amount or complexity of execution that a human chooses to delegate inside Action, but they do not change the ownership of Direction.
+**Action** grows through delegated execution. What AI is trusted to carry follows what people choose to delegate within the human-owned Direction. More capable models can increase the amount or complexity of execution that a human chooses to delegate inside Action, but they do not change the ownership of Direction.
 
-Competition may increase pressure to automate faster. Clover treats that as a reason to improve execution, not as a reason to hand purpose or accountability to AI. **Direction is not delegated by competition.**
+Competition may increase pressure to automate faster. Clover treats that as a reason to change execution, not as a reason to hand purpose or accountability to AI. **Direction is not delegated by competition.**
 
-**Success** is the first discipline that changes how people report. Teams that start saying what they checked, what they observed, and where they stopped find out quickly how much of their reporting had been assertion.
+**Success** is where the work meets evidence. Teams that start saying what they checked, what they observed, and where they stopped make the boundary between output and meaningful outcome visible.
 
 ## A sequence that works
 
@@ -73,30 +80,24 @@ Competition may increase pressure to automate faster. Clover treats that as a re
 3. **Add the development environment, then the other non-production ones.** That is where checking earns its place without new risk, alongside the pipeline triggers that already exist.
 4. **Give the Direction against what the team can now see.** Somebody says what needs to be done, what must not happen, and where they think the answer probably is. Teach that cycle rather than the tool: Context → Direction → Action → Success outlives whichever product the team is using this quarter.
 5. **Let people ask in whatever way they find natural.** When most questions can be asked and answered in conversation, the bottleneck stops being whoever knows the system best.
-6. **Delegate execution where evidence supports it**, following [the delegated-execution rules](04-framework.md#delegated-execution-is-an-engineering-decision) rather than enthusiasm. This can change how much of the path AI performs; it does not transfer Direction.
+6. **Delegate execution within the human-owned Direction**, following the delegated-execution rules rather than enthusiasm. This can change how much of the path AI performs; it does not transfer Direction.
 7. **Keep a markdown file beside the work** holding the goal, what is settled, what remains, and what was ruled out. That file is what lets any agent pick the job up, so the work stops depending on one agent or one session. [Context engineering](05-context-engineering.md#where-context-lives) covers where it lives.
 
 ## From individual skill to collective capability
 
-A few people being good at AI does not make an organization capable. The value compounds when context, practices and lessons are shared, and it stalls when they stay with whoever learned fastest. The context files are most of the sharing mechanism, which is why writing them is worth insisting on.
+A few people being good at AI does not make an organization capable. The value can compound when context, practices and lessons are shared, and it can stall when they stay with whoever learned fastest. The context files are most of the sharing mechanism, which is why writing them is worth insisting on.
 
 Growth can emerge from any part of the cycle: new system understanding, analyses, decisions, actions, successes, failures, and patterns that become visible across repeated work. That learning can improve humans, AI usage, the system itself, teams, and organizational practice without requiring the same AI model to change.
 
 Two things make the sharing happen. People need room to try something and have it not work, because a team that is penalized for a failed attempt stops reporting the failed attempts. And somebody has to review what gets kept, so that one good outcome does not become a rule the next ten cycles follow.
 
-## Knowing whether it worked
+## Watching what emerges
 
-Enthusiasm during a rollout says very little. The better signal is whether the way of working continues while whoever introduced it is on leave. A capability that stops when its advocate steps away has been demonstrated rather than adopted.
+There is no required maturity ladder and no predetermined Growth result. The value of adoption is what the repeated cycles reveal.
 
-What is worth watching:
+Watch whether the approach continues when whoever introduced it is on leave. Watch whether context files are actually reused, whether people can continue work without reconstructing it, whether delegated execution expands only where people choose it, and whether the human owner of Direction remains explicit as AI capability changes.
 
-- Whether questions get answered from the sources rather than from whoever remembers.
-- Whether people outside the original group start working this way without being asked.
-- Whether claims arrive with what was checked and where it stopped, unprompted.
-- Whether the context files from earlier cycles are being read, and not only written.
-- Whether anyone had to reconstruct work a previous session already did.
-- Whether delegated execution is expanding based on evidence rather than competitive pressure.
-- Whether the human owner of Direction and accountability remains explicit as AI capability changes.
+These are observations, not proof obligations. Clover's premise can be used as stated; what follows from repeated adoption is something to observe rather than something to declare in advance.
 
 ## Related
 
