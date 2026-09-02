@@ -1,0 +1,6 @@
+services:
+  agent:
+    build: ./agent
+    volumes:
+      - ./workspace/src:/workspace/src:rw
+      - ./workspace/tests:/workspace/tests:ro
