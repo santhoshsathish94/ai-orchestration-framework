@@ -22,7 +22,14 @@ The viewer should understand this without needing to know what an AI orchestrati
 6. **Reality decides Success.** AI saying “done,” model confidence, a plausible answer, or a passing build is not automatically proof that the intended outcome occurred.
 7. **Failures return to Context.** Do not imply that repeated retries alone solve problems. A failed result usually means new information is needed.
 8. **Past success does not guarantee the next success.** Even if an AI system has been correct many times, the next situation can still expose a missing assumption or changed environment.
-9. **Growth is the fifth leaf.** It is the deeper question beyond the current four-stage engineering cycle, not a claim that harmful autonomy is inevitable.
+9. **Growth is the fifth leaf.** It is the learning that can emerge from repeated cycles, not a claim that AI should become autonomous or own the direction.
+10. **Capability may scale. Direction remains human.** More capable AI can change the means of execution without changing who chooses the destination or who is accountable.
+
+## Foundational analogy
+
+> **The system is the map. Humans choose the destination. AI is a means of getting there.**
+
+Use this idea as the conceptual backbone of the visual story without turning the video into a literal travel metaphor.
 
 ## Visual and narrative principle
 
@@ -38,7 +45,7 @@ Then introduce CLOVER as a simple way of working:
 
 **Context → Direction → Action → Success**
 
-Finally reinforce human ownership and allow the fifth leaf / Growth to appear subtly as a question or visual suggestion rather than a heavy explanation.
+Finally reinforce human ownership and allow the fifth leaf / Growth to appear subtly as learning rather than as AI autonomy.
 
 ## 30-second timeline
 
@@ -179,7 +186,7 @@ A subtle fifth leaf grows from the completed loop.
 
 Do not depict an evil AI, takeover, or alarmist future.
 
-The fifth leaf should feel intriguing, not threatening.
+The fifth leaf should feel intriguing, not threatening. It represents learning that can accumulate across repeated cycles.
 
 **Voiceover direction**
 
@@ -195,13 +202,9 @@ Small line:
 
 Subtle fifth leaf / Growth indication.
 
-## Optional sharper final line
+Final principle:
 
-A more provocative ending can replace the final sentence in later versions:
-
-> “Four leaves make the framework. The fifth is what AI becomes while the cycle runs.”
-
-Use this version when the audience already understands the practical four-stage cycle. It should not replace the simple first-version ending unless the video remains immediately understandable.
+> **Capability may scale. Direction remains human.**
 
 ## Voiceover style
 
@@ -238,6 +241,8 @@ Avoid:
 - technical MCP explanations
 - model logos
 - claims about replacing humans
+- imagery suggesting AI should choose the destination
+- imagery suggesting capability automatically creates authority
 
 ## Gemini production plan
 
@@ -289,7 +294,7 @@ The viewer should also understand:
 
 And ideally leave with:
 
-> “What happens as every cycle makes the system better?”
+> “What can repeated cycles teach us?”
 
 ## Credibility guardrails
 
@@ -300,13 +305,18 @@ Never imply:
 - AI replaces human ownership or accountability.
 - AI confidence is evidence.
 - CLOVER guarantees successful outcomes.
-- Growth necessarily leads to harmful autonomy.
+- Growth necessarily means increasing AI autonomy.
 - The fifth leaf is literally evil.
+- Competitive pressure justifies handing Direction to AI.
 
 The first video is practical, not speculative.
 
-The future hypothesis belongs in the background as curiosity, not as the main claim.
+The future hypothesis belongs in the background as curiosity, not as a recommendation to pursue AI autonomy.
 
 ## Canonical one-sentence explanation
 
 > **CLOVER is a way of working with AI to reach real outcomes by putting real Context first, keeping human Direction explicit, letting AI take Action, and letting reality validate Success.**
+
+## Canonical policy line
+
+> **Capability may scale. Direction remains human.**
