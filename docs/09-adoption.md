@@ -22,6 +22,8 @@ relationship explicit: **System → Human → AI**.
 The four operational stages remain Context → Direction → Action → Success. Growth is the learning
 layer that can emerge from repeated cycles; it is not a fifth task a team has to run.
 
+> **Capability may scale. Direction remains human.**
+
 ## The setup
 
 Three steps, in this order.
@@ -77,9 +79,9 @@ work feels finished when the change ships.
 happen, and where they think the answer is, before the work starts. No tooling and no approval sit in
 front of it, and once the systems can be read, the direction is given against what is actually there.
 
-**Action** widens on its own once Context and Direction are steady. What AI is trusted to carry
-follows what has already held up in work of that kind. More capable models can increase what can be
-delegated inside Action, but they do not change the ownership of Direction.
+**Action** grows through delegated execution. What AI is trusted to carry follows what has already held
+up in work of that kind. More capable models can increase the amount or complexity of execution that a
+human chooses to delegate inside Action, but they do not change the ownership of Direction.
 
 Competition may increase pressure to automate faster. Clover treats that as a reason to improve
 execution, not as a reason to hand purpose or accountability to AI. **Direction is not delegated by
@@ -106,9 +108,10 @@ been assertion.
    this quarter.
 5. **Let people ask in whatever way they find natural.** When most questions can be asked and answered
    in conversation, the bottleneck stops being whoever knows the system best.
-6. **Widen what AI decides as results hold**, following
-   [the rules for widening](04-framework.md#widening-what-ai-decides) rather than enthusiasm. This
-   changes delegated execution inside Action; it does not transfer Direction.
+6. **Delegate execution where evidence supports it**, following
+   [the delegated-execution rules](04-framework.md#delegating-execution-without-transferring-direction)
+   rather than enthusiasm. This can change how much of the path AI performs; it does not transfer
+   Direction.
 7. **Keep a markdown file beside the work** holding the goal, what is settled, what remains, and what
    was ruled out. That file is what lets any agent pick the job up, so the work stops depending on one
    agent or one session. [Context engineering](05-context-engineering.md#where-context-lives) covers
@@ -142,12 +145,12 @@ What is worth watching:
 - Whether claims arrive with what was checked and where it stopped, unprompted.
 - Whether the context files from earlier cycles are being read, and not only written.
 - Whether anyone had to reconstruct work a previous session already did.
-- Whether teams are widening AI's execution autonomy based on evidence rather than competitive pressure.
+- Whether delegated execution is expanding based on evidence rather than competitive pressure.
 - Whether the human owner of Direction and accountability remains explicit as AI capability changes.
 
 ## Related
 
 - [The orchestration environment](orchestration-environment.md) — the access the Context stage needs.
-- [Governance](08-governance.md) — ownership, attribution, and approval as this widens.
+- [Governance](08-governance.md) — ownership, attribution, approval, and delegated execution.
 - [Practices and field lessons](field-practices.md) — what this has looked like on real work.
 - [Reference implementations](reference-implementations.md) — patterns to adopt and adapt.
