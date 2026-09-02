@@ -33,9 +33,9 @@ Clover does **not** claim to have invented the underlying way people and systems
 
 What changes in the AI era is the **means of execution**. AI can now perform much more of the Action that humans previously performed themselves. That creates a new engineering problem: how to give AI enough capability and execution latitude to be useful while keeping work grounded in System reality, guided by Human Direction, and validated by evidence.
 
-**System** is what becomes reality: the state, data, behavior, history, constraints, and evidence of the thing being worked on. That reality is also what can validate whether an intended outcome actually happened.
+**System** is the reality in which the outcome must exist: the state, data, behavior, history, constraints, and evidence of the thing being worked on. It is also the primary source of evidence for validating whether an intended outcome actually happened.
 
-**Human** provides Direction. Humans decide what matters, what outcome is desired, what boundaries apply, what must not happen, and who remains accountable for the result.
+**Human** provides Direction. Humans decide what matters, what outcome is desired, what makes that outcome meaningful, what boundaries apply, what must not happen, and who remains accountable for the result.
 
 **AI** provides capability and can help determine the means of achieving the desired outcome within the human's Direction and the System's Context. In the AI era, more of the execution can be delegated to AI without transferring Direction or accountability.
 
@@ -47,7 +47,7 @@ Operationally, the work can be understood through four connected stages:
 
 **Context → Direction → Action → Success**
 
-Context is the relevant understanding available from System reality. Direction is the human-defined outcome and boundaries. Action is where AI and other capabilities determine and perform the means of achieving it. Success is where reality shows whether the intended outcome actually happened.
+Context is the relevant understanding available from System reality. Direction is the human-defined meaningful outcome and boundaries. Action is where AI and other capabilities determine and perform the means of achieving it. Success is where reality shows whether the intended outcome actually happened.
 
 Clover is not software. There is nothing to install, and it does not require replacing existing tools, workflows, systems, or AI products.
 
@@ -61,13 +61,13 @@ Take the smallest useful example: a table.
 
 The **System** is the table and the reality it contains — its columns, rows, relationships, constraints, and current data.
 
-The **Human** gives Direction: read the table, answer a particular question, and do not modify it.
+The **Human** gives Direction: read the table, answer a particular question, and do not modify it. The answer matters because it serves the outcome the human is trying to achieve.
 
 The **AI** performs the reading and analysis using the System as Context and the Human's Direction as the boundary.
 
 The resulting answer is an output, not automatically a Success.
 
-The **System** provides the evidence needed to determine whether the answer is valid.
+The **System** provides the evidence needed to determine whether the answer is valid and whether it satisfies the intended outcome.
 
 If the answer is wrong, the failure reveals something new about reality: perhaps the join was wrong, a relationship was misunderstood, or an assumption was false. That information becomes Context for the next cycle.
 
@@ -100,6 +100,8 @@ The useful distinction for the AI era is the relationship between them:
 **Context → Direction → Action → Success** makes that relationship operational: understand the relevant reality, establish the desired outcome and boundaries, perform the work, and validate the outcome against reality.
 
 So Clover is not presented as a new way humans suddenly began working. It is an attempt to make an existing systems pattern explicit and usable when the **execution layer changes from primarily human-operated to increasingly AI-operated**.
+
+Its value is therefore not the invention of a sequence. Its value is in making the boundaries and feedback between **reality, human purpose, AI execution, and evidence** explicit enough to design, govern, compare, and improve AI-enabled work.
 
 That claim is still testable. A useful Clover implementation should make context more inspectable, Direction more explicit, execution more safely delegable, continuity stronger, and Success harder to claim without evidence. If applying Clover does not improve one or more of those properties, the framework has not earned its place.
 
@@ -139,11 +141,11 @@ The goal is not to collect everything. The goal is to understand enough of reali
 
 Humans provide Direction.
 
-They decide what matters, what outcome is desired, priorities, constraints, boundaries, what must not happen, and what remains their responsibility.
+They decide what matters, what outcome is desired, what makes that outcome meaningful, priorities, constraints, boundaries, what must not happen, and what remains their responsibility.
 
 AI can clarify Direction, challenge assumptions, analyze options, and recommend alternatives. It does not acquire ownership of the purpose merely because it can reason about it.
 
-> **What outcome do we want, and within what boundaries should action happen?**
+> **What outcome do we want, why does it matter, and within what boundaries should action happen?**
 
 ---
 
@@ -169,9 +171,9 @@ A result is not automatically a Success.
 
 AI can say something worked. A human can believe it worked. An artifact can look correct. None of those statements alone proves the intended outcome happened.
 
-The System or relevant environment provides the evidence.
+The System or relevant environment provides the evidence, and that evidence is judged against the intended outcome established in Direction.
 
-> **What does reality show actually happened?**
+> **What does reality show actually happened, and does that evidence meet the intended outcome?**
 
 When the outcome is not validated, the result becomes new Context rather than a reason to blindly repeat the same Action.
 
