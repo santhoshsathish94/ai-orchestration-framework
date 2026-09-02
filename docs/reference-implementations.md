@@ -143,14 +143,13 @@ Agent instructions are not an enforcement mechanism. A capable model can ignore 
 
 ### Implementation
 
-The [runtime-enforcement reference](../reference/runtime-enforcement/) demonstrates two narrow implementation patterns:
+The [runtime-enforcement reference](../reference/runtime-enforcement/) demonstrates three narrow implementation patterns:
 
-- **Docker filesystem isolation:** existing verification artifacts are mounted read-only while implementation files remain writable.
-- **Tool-layer rejection:** a write gateway rejects paths designated as verification controls before the underlying filesystem operation occurs.
+- **Docker filesystem isolation:** established verification artifacts are mounted read-only while implementation files remain writable.
+- **Real-path resolution:** parent traversal and symbolic-link paths are resolved before authorization, so the policy evaluates the physical target rather than the path spelling.
+- **Policy and audit gateway:** writes to trusted verification are rejected before the filesystem operation, new verification creation requires explicit policy permission, and denied attempts are emitted as structured JSON security events without recording file contents.
 
-The reference also resolves paths before applying the protection rule, so parent traversal and symlink paths are evaluated against their real filesystem target rather than just their spelling.
-
-The protection boundary is deliberately narrower than "never write tests": new tests may be created where the runtime policy permits them, while established verification artifacts can be promoted into a protected set. Real deployments should define trusted verification state and protected paths for their own repositories and acceptance model rather than relying only on filename conventions.
+The protection boundary is deliberately narrower than "never write tests": explicitly permitted creation of a new verification file can be supported during development, while an existing trusted verification artifact remains protected once it becomes evidence for Success. Real deployments should define trusted verification state for their own repositories rather than relying only on filename conventions.
 
 The runtime reference intentionally does not add another Clover stage. It strengthens the boundary inside **Action** and **Success**:
 
@@ -163,6 +162,8 @@ The runtime reference intentionally does not add another Clover stage. It streng
 ### Production interpretation
 
 This pattern is not a security certification and Docker is not mandatory. The enforcement point can be a container runtime, filesystem permission, CI identity, protected branch, MCP/tool gateway, service policy, or another control that exists outside the model.
+
+The audit stream is an operational signal, not proof of prompt drift or model degradation by itself. It can provide evidence for further investigation when boundary-violation attempts change over time.
 
 The important design rule is:
 
