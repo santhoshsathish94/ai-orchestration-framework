@@ -145,10 +145,12 @@ Agent instructions are not an enforcement mechanism. A capable model can ignore 
 
 The [runtime-enforcement reference](../reference/runtime-enforcement/) demonstrates two narrow implementation patterns:
 
-- **Docker filesystem isolation:** implementation files are mounted writable while verification artifacts are mounted read-only.
+- **Docker filesystem isolation:** existing verification artifacts are mounted read-only while implementation files remain writable.
 - **Tool-layer rejection:** a write gateway rejects paths designated as verification controls before the underlying filesystem operation occurs.
 
-The example protects paths such as `tests/`, `spec/`, and common test/spec filename patterns. Real deployments should define the protected set for their own repositories and acceptance model.
+The reference also resolves paths before applying the protection rule, so parent traversal and symlink paths are evaluated against their real filesystem target rather than just their spelling.
+
+The protection boundary is deliberately narrower than "never write tests": new tests may be created where the runtime policy permits them, while established verification artifacts can be promoted into a protected set. Real deployments should define trusted verification state and protected paths for their own repositories and acceptance model rather than relying only on filename conventions.
 
 The runtime reference intentionally does not add another Clover stage. It strengthens the boundary inside **Action** and **Success**:
 
