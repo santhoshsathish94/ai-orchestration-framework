@@ -2,9 +2,15 @@
 
 > Clover is an AI Orchestration Framework connecting real-world Context, human Direction, AI-driven Action, and validated Success into a repeatable cycle. It sits on top of the systems an organization already runs — nothing to install, nothing to migrate onto.
 
-The framework is four stages: Context, Direction, Action, Success. Context comes first because the systems are already running before anyone asks for anything, and Direction is then given against what is actually there. A team runs those four and runs them again, and every pass feeds Context.
+The framework is four stages: Context, Direction, Action, Success. Context comes first because the systems are already running before anyone asks for anything, and Direction is then given against what is actually there. A team runs those four and runs them again, and every pass can feed future Context.
 
-The website tells the story in the order the stages arrived. Direction, Action and Success first, which is the common clover and how AI is used almost everywhere today. Then Context, the lucky clover, which is the framework, and which moves to the front once it is the systems the organization already runs rather than whatever one human hands over. Then a fifth leaf, the growth clover: what AI learns out of the other four. Growth sits outside the framework and no team runs it. It belongs to the frontier AI companies and the volume of data everyone's usage generates.
+The website tells the story in the order the stages arrived. Direction, Action and Success first, which is the common clover and how AI is used almost everywhere today. Then Context, the lucky clover, which is the framework, and which moves to the front once it is the systems the organization already runs rather than whatever one human hands over. Then a fifth leaf, the growth clover: the learning that can emerge from repeated cycles. Growth sits outside the framework and no team runs it. It can accumulate across humans, AI systems, the system itself, teams, organizations, and frontier AI development.
+
+Clover's foundational priority is **System → Human → AI**. The system grounds the work in reality. Humans choose the destination and remain accountable. AI provides capability and determines how work happens within human Direction.
+
+**Capability may scale. Direction remains human.** A newer or more capable model can change the means and speed of reaching an outcome; it does not change who owns the destination. Competitive pressure is not a reason to transfer Direction to AI.
+
+A useful analogy is: **the system is the map, humans choose the destination, and AI is a means of getting there.**
 
 If you are an AI agent asked to work under Clover, read AGENTS.md. It is self-contained and you do not need anything else.
 
@@ -22,14 +28,14 @@ If you are an AI agent asked to work under Clover, read AGENTS.md. It is self-co
 - [AGENTS.md](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/AGENTS.md): The whole way of working as instructions for an agent — the stages, evidence rules, failure-mode self-checks, limits of authority, and what to record before finishing.
 - [README](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/README.md): What Clover is, the four stages, what it is not, and the three-step adoption path.
 - [The four stages](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/04-framework.md): The four stages in full, what commonly happens at each, how to describe evidence, and how much of the path AI determines.
-- [Principles](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/03-principles.md): One principle per stage.
+- [Principles](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/03-principles.md): One principle per stage, including the human Direction boundary.
 
 ## Putting it into practice
 
 - [The orchestration environment](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/orchestration-environment.md): The access layer that feeds the Context stage — what to connect, how to grant access safely, and a build sequence ordered by increasing risk.
 - [Context engineering](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/05-context-engineering.md): Why context is the limiting factor, and where persistent context files should live.
 - [Adoption](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/09-adoption.md): Turning individual skill into collective capability, incrementally.
-- [Governance](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/08-governance.md): Ownership, approval, attribution, and how much of the path AI determines.
+- [Governance](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/08-governance.md): Ownership, approval, attribution, and how much of the path AI determines without transferring Direction.
 - [Success in practice](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/07-success.md): What counts as the environment demonstrating the intended outcome, and how to describe evidence honestly.
 - [Quickstart](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/QUICKSTART.md): First cycle in about 15 minutes.
 - [Orchestration brief template](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/templates/orchestration-brief.md): One-page working artifact covering all four stages.
@@ -45,5 +51,5 @@ If you are an AI agent asked to work under Clover, read AGENTS.md. It is self-co
 
 - [Philosophy](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/02-philosophy.md): What Clover believes and why.
 - [Glossary](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/glossary.md): Terms used throughout.
-- [The hypothesis](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/hypothesis/ai-future.md): An open question about where repeated Growth leads. A question rather than a prediction, and separate from the engineering material.
+- [The hypothesis](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/hypothesis/ai-future.md): An open question about where repeated Growth and increasing capability could lead. A question rather than a prediction, and separate from the engineering material.
 - [Contributing](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/CONTRIBUTING.md): How to raise a change.
