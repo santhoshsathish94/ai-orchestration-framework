@@ -24,9 +24,9 @@ The framework's useful claim is that these familiar activities need to be made e
 
 **Context → Direction → Action → Success** establishes the operational cycle: understand the relevant reality, establish the desired outcome and boundaries, perform the work, and validate the outcome against reality.
 
-The value of the framework is therefore not the invention of a sequence. It is making the boundaries and feedback between **reality, human purpose, AI execution, and evidence** explicit enough to design, govern, compare, and improve AI-enabled work.
+The value of the framework is therefore not the invention of a sequence. It is making the boundaries and feedback between **reality, human purpose, AI execution, and evidence** explicit enough to apply to AI-enabled work without losing the pattern that existed before AI.
 
-The framework treats this as a testable engineering claim, not a new invention or just a metaphor. A useful Clover implementation should make context more inspectable, Direction more explicit, execution more safely delegable, continuity stronger, and Success more difficult to claim without evidence. If applying Clover does not improve one or more of those properties, the framework has not earned its place.
+Clover is not presented as a hypothesis that must be proven before people use it. The pattern already existed in human-led work. The AI era changes the execution capability. **Adoption gives us a place to observe what happens when the same underlying cycle is used with AI performing more of the execution.**
 
 Clover is therefore best understood as **a framework for working with System, Human, and AI to produce meaningful outcomes**, not a mandatory process for performing every task. Existing workflows, delivery methods, approvals, agent frameworks, and tools can remain in place.
 
@@ -202,7 +202,7 @@ Clover also does not make competitive pressure a basis for changing this boundar
 
 ## Stage 3 — Action
 
-Action is where AI capability is applied to the combination of **human Direction and system Context**. AI uses the Direction as instructions and the Context as data to determine how the work should happen and to execute it within the defined boundaries.
+Action is where AI capability is applied to the combination of **human Direction and system Context**. AI uses the Direction as instructions and the Context as data to determine how the work should happen and to execute within the boundaries established by the human.
 
 Reasoning, planning, tool selection, AI model selection, orchestration across agents, code changes, tests, debugging, analysis, and interaction with the system all belong here.
 
@@ -212,13 +212,37 @@ Humans and AI can share execution. The human retains the boundaries, approvals, 
 
 Plan the smallest coherent path to the outcome. Run work in parallel only where it is genuinely independent, and replan when new information contradicts the current path.
 
+### Delegated execution is an engineering decision
+
+More capable AI can increase the amount or complexity of execution a human chooses to delegate. That increase is **execution latitude**, not a transfer of Direction.
+
+Decide how much execution to delegate from the context in front of you. Five things matter:
+
+1. **Evidence** — has this kind of Action worked reliably in comparable situations?
+2. **Blast radius** — what is the cost if the Action is wrong?
+3. **Observability** — how quickly will we know whether it worked?
+4. **Reversibility** — how quickly can the change be undone or contained?
+5. **Approval boundary** — what does the human or organization require before the Action happens?
+
+The rule is:
+
+> **Delegate execution where evidence supports it, keep approval where blast radius demands it, and narrow delegation again when reality stops supporting it.**
+
+Delegation is per context. Track record can increase the amount of work delegated in a context that has remained stable, but a new system, new permissions, new data, or a different failure mode resets the decision.
+
+### Direction and Action examples
+
+- “Restore the service within ten minutes” is **Direction**. Choosing the safest restart sequence is **Action**.
+- “Do not expose customer data” is **Direction**. Choosing a redacted log query is **Action**.
+- “Deploy only if a rollback path exists” is **Direction**. Selecting and executing the rollback path inside the approved mechanism is **Action**.
+
+The boundary can be nuanced: a human can make process or approach part of the Direction when that itself matters to the intended outcome. AI still determines the operational path inside that boundary.
+
 ---
 
 ## Stage 4 — Success
 
-Success is the meaningful intended outcome demonstrated by evidence from the system or environment.
-
-The outcome is meaningful because it traces back to the Human's Direction: what the human decided matters, the result worth pursuing, and the boundaries around it. The system or environment then provides the evidence for whether that intended outcome actually happened.
+Success is the meaningful intended outcome demonstrated by evidence from the real system or environment. The outcome matters because the human defined why it was worth pursuing, and the system or environment provides the evidence that tells us what actually happened.
 
 A closed task, a generated artifact, a passing build, or an AI statement that the work succeeded is not enough on its own. The evidence must connect to the outcome the human defined in Direction.
 
@@ -228,74 +252,28 @@ The human holds the standard for what counts as sufficient evidence and remains 
 
 When the evidence does not support the intended outcome, return to Context rather than repeating the same Action. The failed result is information about reality and should change what the next cycle knows.
 
----
+## What one cycle leaves behind
 
-## Growth is the learning that can emerge from repeated cycles
+The useful output of a cycle is not just the immediate result. It also leaves behind **new Context**: what the system showed, what the Action established, what failed, what assumptions were wrong, and what the next cycle needs to know.
 
-Growth is not a fifth operational stage and nobody has to run it. It is what can emerge when the four stages repeat and what they reveal is preserved and learned from.
+The better the preserved Context, the less the next cycle has to reconstruct. Over repeated meaningful cycles, preserved learning may improve the system, the humans working with it, the AI-enabled execution, or the organization's ability to produce and validate outcomes.
 
-Growth can come from **all four stages**. Context can reveal how the system actually behaves and what information was missing. Direction can reveal whether the purpose, constraints, priorities, or process were appropriate. Action can reveal which approaches, tools, and execution patterns work. Success can reveal what actually held, what failed, and what the evidence showed.
+This is where Growth can emerge. It is not another task and it is not a prerequisite that must be proven before the framework is used. **We apply the cycle, preserve what it teaches, and observe what emerges as adoption continues.**
 
-Failure is part of Growth. So are successful outcomes, analyses, discoveries about the current system, repeated patterns, and newly understood constraints. A failed attempt can teach more than a successful one when it exposes an assumption that reality rejected.
+## The claim and the observation
 
-Learning can accumulate at different layers:
+Clover makes a practical claim about the AI era: when the execution layer changes because AI can perform more of the Action, keeping System reality, Human Direction, and evidence of Success explicit gives organizations a coherent way to work with that capability.
 
-- **Human:** better understanding, judgment, expertise, and ability to give useful Direction.
-- **AI:** better performance through whatever learning, adaptation, memory, or refinement mechanisms are actually available to that AI system.
-- **System:** better observability, behavior, architecture, tooling, and ability to expose the information future cycles need.
-- **Team:** shared practices, reusable knowledge, patterns, and better ways of working together.
-- **Organization:** institutional knowledge, improved processes, better decisions, and accumulated context that survives individuals and sessions.
-- **AI frontier:** changes to underlying models through the training, evaluation, and refinement mechanisms controlled by frontier AI providers.
+The framework does not require a prior experiment to justify using the cycle. Its underlying pattern predates AI. What is new is the scale and flexibility of AI execution available inside the same boundary.
 
-Clover does not claim that an AI provider trains on customer or enterprise work. Nor does it require the underlying model to change before learning can occur around it.
+As teams adopt the approach, the useful question is not whether they have “proved Clover.” It is **what happens in practice when the cycle is used repeatedly**: what improves, what does not, what patterns emerge, and what the next cycles teach.
 
-> **When cycles repeat, patterns can emerge. When patterns are preserved, future cycles can improve.**
+Clover can be refined as people learn. It does not need to become a doctrine before adoption can begin.
 
-The model may remain the same while the human, team, organization, and system around it become better at using it. The underlying AI may also improve through frontier training and refinement, but that learning happens at a different layer and under different control.
+## The cycle in one line
 
-Growth therefore does not belong to one actor. It is the accumulated learning that can emerge from repeated interaction between the **system, human, and AI**.
+**System → Human → AI**
 
----
+**Context → Direction → Action → Success → new Context**
 
-## Delegated execution is an engineering decision
-
-Clover does not define a single global level of AI execution. How much execution to delegate should depend on the context in which the work is happening.
-
-The decision should consider at least:
-
-**Evidence.** Has this kind of action held up in this context?
-
-**Blast radius.** What can go wrong, and how much can one error affect?
-
-**Observability.** Will the organization know quickly if reality has diverged from the intended outcome?
-
-**Reversibility.** Can the action be undone safely and completely?
-
-**Approval boundary.** Does the action require a human decision before it happens?
-
-The practical rule is:
-
-> **Delegate execution where evidence supports it, keep approval where blast radius demands it, and narrow delegation again when reality stops supporting it.**
-
-Delegation is therefore an engineering decision per context, not a maturity ladder where more AI autonomy is always better.
-
-Clover's point is not to maximize AI execution. It is to make the amount of execution being delegated explicit, evidence-based, observable, and bounded by Human Direction.
-
-## The claim Clover makes — and how to test it
-
-Clover makes a practical engineering claim: AI-enabled work can become more reliable when system reality is inspectable, human Direction is explicit, execution is delegated within evidence-based boundaries, and Success is validated against the environment.
-
-That claim should be tested rather than assumed.
-
-Useful evaluation dimensions include:
-
-- **Context quality:** Did the work start from the relevant system evidence rather than an incomplete description?
-- **Direction clarity:** Was the intended outcome, boundary, and accountability explicit before consequential Action?
-- **Execution efficiency:** Did delegation reduce unnecessary human execution or handoffs without increasing unacceptable risk?
-- **Outcome validity:** Was Success supported by evidence tied to the intended outcome?
-- **Failure recovery:** Did failure produce new Context that changed the next cycle rather than causing a blind retry?
-- **Continuity:** Could another person, agent, or session resume the work without reconstructing it from scratch?
-
-The strongest comparison is against whatever practice existed before Clover was introduced. If repeated adoption produces no meaningful improvement on the dimensions that matter for the work, that is evidence against using the framework in that setting.
-
-> **Clover should be treated as a proposition to test, not a doctrine to obey.**
+**Meaningful cycles + good Direction + preserved learning → Growth can emerge.**
