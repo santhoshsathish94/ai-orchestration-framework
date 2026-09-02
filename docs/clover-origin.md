@@ -2,17 +2,15 @@
 
 ## Purpose
 
-**Clover** is the working name and identity of the AI Engineering / AI Orchestration Framework. The five-leaf clover is more than a logo. It is how the framework is pictured, and it is the personal symbol that should make the framework recognizable.
+**Clover** is the working name and identity of a way of working with **System, Human, and AI to produce meaningful outcomes**, from the smallest possible use case to the largest and most complex systems.
 
-The canonical definition is:
+The five-leaf clover is more than a logo. It is how the framework is pictured, and it is the personal symbol that should make the framework recognizable.
 
-> Clover is an AI Orchestration Framework connecting real-world Context, human Direction, AI-driven Action, and validated Success into a repeatable cycle.
-
-The framework is four stages:
+The canonical operational cycle is:
 
 **Context → Direction → Action → Success**
 
-The fifth leaf is Growth. Nobody in an organization runs it. Growth describes the learning and improvement that can emerge from repeated cycles across the system, humans, AI, teams, and organizations.
+The fifth leaf is **Growth**. Nobody in an organization runs it. Growth describes the learning and improvement that can emerge from repeated cycles across the system, humans, AI, teams, and organizations.
 
 > **Four leaves make the cycle. The fifth is what the cycle can teach us while it runs.**
 
@@ -24,11 +22,11 @@ Clover begins with a simple priority:
 
 **System → Human → AI**
 
-The system comes first because it is where reality exists. It may be an existing system or the system we are trying to build. Its state, data, behavior, history, constraints, and evidence ground the work.
+The **system** is what becomes reality. Its state, data, behavior, history, constraints, and evidence are what ultimately show whether an intended outcome occurred. The system may already exist, or it may be the system we are trying to build.
 
-The human comes second because purpose and accountability belong together. Humans choose what matters, the intended outcome, priorities, acceptable risk, constraints, boundaries, what must not happen, and any process or approach that is itself part of the outcome. Humans remain accountable after work is delegated.
+The **human** provides Direction. Humans choose what matters, the desired outcome, priorities, acceptable risk, constraints, boundaries, what must not happen, and any process or approach that is itself part of the outcome. Humans remain accountable for what they direct.
 
-AI comes third because capability does not transfer accountability. AI can reason, plan, recommend, coordinate, implement, test, and adapt within human Direction. It does not own Direction.
+**AI** provides capability and helps determine and execute the means of achieving the human-defined outcome. AI can reason, plan, recommend, coordinate, implement, test, adapt, and use tools within the relevant Context and Direction. It does not own the destination.
 
 This boundary is independent of model capability or competition:
 
@@ -36,13 +34,17 @@ This boundary is independent of model capability or competition:
 
 > **Do not transfer Direction to AI merely because AI becomes capable enough to perform it.**
 
-A more capable AI can change the means available to reach an outcome. It does not change who chooses the destination or who is accountable for reaching it.
+A more capable AI can change the means available to reach an outcome. It does not change who chooses the desired outcome or who remains accountable for it.
+
+The simplest analogy is:
+
+> **The system is the reality and the map. Humans choose the destination. AI helps provide the means of getting there.**
 
 ---
 
 ## 1. Context
 
-Context is the information the work needs to reason about the real problem and environment. It is much more than a prompt, and it is grounded in the systems that exist or the reality already established while a system is being built.
+Context is the relevant information about system reality that the work needs in order to understand the situation and act meaningfully.
 
 It can include:
 
@@ -55,7 +57,7 @@ It can include:
 - Tests
 - Actual system behavior
 - History
-- Persistent memory
+- Persistent memory where available
 - Previous experience
 - Decisions and experiments
 
@@ -63,7 +65,7 @@ The principle is:
 
 > **Reason from the real environment rather than assumptions whenever the environment can provide the information.**
 
-Context is preferred over "Understand" because understanding is a cognitive result, while Context is the information available to the system. An AI can receive context and still misunderstand it.
+Context is not everything that happens to be available, and it is not simply whatever a human remembers to put into a prompt. Relevance to the current Direction is the boundary.
 
 **Core question:**
 
@@ -84,23 +86,21 @@ A human determines:
 - What must not happen
 - What process or approach matters when it is part of the intended outcome
 
-Direction is the point where human purpose and accountability enter the system.
+Direction is where human purpose and accountability enter the work. AI can help clarify, challenge, analyze alternatives, and identify risks, but it does not become the owner of Direction.
 
 **Core question:**
 
 > What needs to be done, what outcome is worth pursuing, and what must not happen?
 
-Direction is preferred over Opportunity or Control as the framework term. Control can suggest perfect command over a complex system. Direction makes the boundary clearer: humans own purpose and accountability, while AI can determine how work happens within that Direction.
-
-Clover does not give AI ownership of Direction, even when AI is highly capable. Competitive pressure is not a reason to change that boundary.
+Direction can change when new Context changes what humans believe is worth pursuing.
 
 ---
 
 ## 3. Action
 
-Action represents what the AI system does with the Context and the Direction.
+Action represents the means used to pursue the human-defined outcome from the available Context.
 
-It includes:
+AI may perform much or most of that work, including:
 
 - Reasoning
 - Planning
@@ -114,13 +114,13 @@ It includes:
 - Debugging
 - Interaction with external environments
 
-Clover is not about asking one model one question and accepting its answer. Action is where AI capability is applied to real Context and human Direction, determining how the work should happen and executing within the defined boundaries.
+Clover does not require one model, many agents, a particular tool, or a particular workflow. The point is that capability is applied to real Context and human Direction.
 
 **Core question:**
 
 > How should the work happen within the human's Direction and the system's Context?
 
-AI may perform much or most of the path. The delegation of work does not transfer ownership of the destination.
+Delegation can expand when evidence, observability, reversibility, blast radius, and approval boundaries support it. Delegation of execution does not transfer ownership of the outcome.
 
 ---
 
@@ -134,16 +134,21 @@ Success is NOT:
 - A plausible answer
 - A generated explanation
 - Model confidence
+- An artifact that has not been connected back to the intended outcome
 
-Examples include actual performance improvement, a real memory leak mitigation, passing tests, improved production behavior, or an improved user/customer outcome.
+The system or environment supplies the evidence that matters.
 
-> **The environment is the evidence of success.**
+Examples include actual performance improvement, a real memory leak mitigation, passing tests tied to the intended behavior, improved production behavior, correct data analysis confirmed against the source system, or an improved user/customer outcome.
 
-Success is preferred over Results. Results describes what happened; Success asks whether the intended outcome was actually achieved.
+> **The system becomes the evidence of whether the outcome exists in reality.**
+
+Success is preferred over Results. Results describe what happened; Success asks whether the intended outcome was actually achieved.
 
 **Core question:**
 
 > Did reality validate the intended outcome?
+
+When the outcome is not validated, the result becomes new Context. The next cycle should be materially better informed rather than simply repeating the same Action.
 
 ---
 
@@ -205,7 +210,7 @@ Clover has two clearly separated layers.
 
 **Context → Direction → Action → Success**
 
-This is a practical way to engineer AI systems around real context, human intent, execution, and real-world validation. Growth is the learning that can emerge from repeating those four stages.
+This is a practical way of working with System, Human, and AI around real context, human intent, means of execution, and real-world validation. Growth is the learning that can emerge from repeating those four stages.
 
 ## Hypothesis layer — questions beyond the cycle
 
@@ -257,7 +262,7 @@ Clover must clearly distinguish:
 
 ### What Clover establishes
 
-**Context → Direction → Action → Success** as a way to engineer AI systems. Growth is the fifth leaf and the learning layer that can emerge around repeated cycles.
+**Context → Direction → Action → Success** as a practical way of working with System, Human, and AI to produce meaningful outcomes. Growth is the fifth leaf and the learning layer that can emerge around repeated cycles.
 
 The policy is also explicit:
 
@@ -281,7 +286,7 @@ A reader should leave with two things.
 
 ### Practical takeaway
 
-> **Here is a useful way to engineer AI systems: Context → Direction → Action → Success.**
+> **Here is a useful way of working with System, Human, and AI to produce meaningful outcomes: Context → Direction → Action → Success.**
 
 ### Deeper question
 
@@ -295,9 +300,9 @@ The goal is to make the reader think about the fifth leaf while keeping the huma
 
 # Canonical Clover Narrative
 
-> **Context gives the work the information to understand the environment it is working in.**  
+> **Context gives the work the information to understand the system reality.**  
 > **Direction gives it a human-defined purpose.**  
-> **Action applies AI capability to that Direction and Context.**  
+> **Action applies capability to that Direction and Context.**  
 > **Success lets reality validate the outcome.**  
 > **Growth carries learning into future cycles.**
 
@@ -309,7 +314,7 @@ And finally:
 
 > **Capability may scale. Direction remains human.**
 
-That boundary is intentionally universal.
+That framing is intentionally scale-independent: the same relationship can be applied to the smallest meaningful use case or to large, interconnected systems.
 
 ---
 
@@ -332,7 +337,7 @@ When helping build Clover:
 13. Explore persistent memory, experience, adaptation, collective intelligence, robotics, and increasing capability carefully.
 14. Preserve the creator's personal voice; do not turn Clover into generic AI marketing language.
 15. Use real case studies and engineering evidence to make the framework concrete.
-16. Help the framework remain useful today while asking serious questions about tomorrow without weakening the human ownership boundary.
+16. Keep the framework useful from the smallest meaningful use case to large, complex systems without claiming that every domain follows an identical workflow.
 
 The intended reaction from a technically serious reader is:
 
