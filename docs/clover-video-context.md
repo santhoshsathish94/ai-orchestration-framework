@@ -18,7 +18,15 @@ The framework connects:
 
 The fifth leaf is **Growth**.
 
-The first four leaves are the practical framework. Growth is what AI may become through repeated cycles, and it belongs to the framework's future-looking hypothesis rather than being a fifth operational step a team runs.
+The first four leaves are the practical framework. Growth is the learning and improvement that can emerge through repeated cycles rather than a fifth operational step a team runs.
+
+CLOVER's foundational priority is:
+
+**System → Human → AI**
+
+The system is reality. Humans choose the destination and remain accountable. AI provides capability and determines how work happens within human Direction.
+
+> **Capability may scale. Direction remains human.**
 
 ---
 
@@ -39,6 +47,12 @@ Reality decides whether the work actually succeeded.
 The simplest explanation is:
 
 > **Give AI the real context. Give humans the direction. Let AI do the work. Then let reality prove whether it worked.**
+
+A useful analogy is a journey:
+
+> **The system is the map. Humans choose the destination. AI is a means of getting there.**
+
+A better or faster means can change the journey. It does not change the destination.
 
 ---
 
@@ -120,6 +134,10 @@ Core question:
 
 Direction is human ownership, not human micromanagement.
 
+A more capable AI does not change this boundary. Competitive pressure does not change it either.
+
+> **Do not transfer Direction to AI merely because AI becomes capable enough to perform it.**
+
 ---
 
 ## Action
@@ -143,7 +161,7 @@ The framework does not require a particular AI model or agent framework.
 
 Core question:
 
-> **What should we do, and how should the work happen?**
+> **How should the work happen within human Direction and system Context?**
 
 ---
 
@@ -273,11 +291,13 @@ Delegation does not transfer accountability.
 
 A simple explanation:
 
-> **AI can own the work of execution. Humans still own the outcome.**
+> **AI can perform the work of execution. Humans still own the outcome.**
 
-As AI becomes more capable, what can be delegated may grow.
+As AI becomes more capable, more execution may be possible inside the same human Direction.
 
 What does not move is ownership of the objective, the constraints, and the outcome.
+
+> **Capability may scale. Direction remains human.**
 
 ---
 
@@ -315,7 +335,7 @@ The fifth leaf is **Growth**.
 
 Growth is not another team checklist item.
 
-It represents what may accumulate through repeated cycles:
+It represents learning that can accumulate through repeated cycles:
 
 - experience
 - persistent memory
@@ -324,10 +344,14 @@ It represents what may accumulate through repeated cycles:
 - improved planning
 - adaptation
 - increasing capability
+- better system understanding
+- better team and organizational practice
+
+Growth can emerge at multiple layers. It is not owned by one actor.
 
 The five-leaf idea is therefore:
 
-> **Four leaves make the cycle. The fifth is what AI becomes while the cycle runs.**
+> **Four leaves make the cycle. The fifth is what repeated cycles can teach us.**
 
 ---
 
@@ -341,21 +365,25 @@ Today:
 
 Future question:
 
-What happens if systems continuously accumulate experience, memory, capability, coordination, and autonomy?
+What happens if systems continuously accumulate experience, memory, capability, coordination, and interaction with the real world?
 
 Possible developments may include:
 
 - persistent memory
 - continuous learning
 - improved tool use
-- autonomous execution
+- more capable execution
 - multiple AI systems working together
 - collective intelligence
 - robotics
 - continuous interaction with the physical world
-- increasingly autonomous behavior
+- increasingly capable behavior
 
 These are possibilities, not claims about what must happen.
+
+Importantly, increasing capability does not imply increasing authority. Clover's policy remains:
+
+> **Capability may scale. Direction remains human.**
 
 The fifth leaf represents:
 
@@ -367,7 +395,7 @@ Never describe AI as inherently evil.
 
 Never imply harmful outcomes are inevitable.
 
-The purpose is to create curiosity about where continuous growth could lead.
+The purpose is to create curiosity about where continuous growth could lead while keeping human ownership explicit.
 
 ---
 
@@ -386,6 +414,8 @@ CLOVER is not:
 - an AI safety guarantee
 
 It is a way of working with AI around real outcomes.
+
+It does not give AI ownership of organizational purpose, acceptable risk, priorities, boundaries, or accountability.
 
 ---
 
@@ -411,7 +441,9 @@ Only afterward introduce the formal names:
 
 **Context → Direction → Action → Success**
 
-This is the preferred explanation order for broad audiences.
+For the human/AI boundary, use:
+
+> **The system is the map. Humans choose the destination. AI is a means of getting there.**
 
 ---
 
@@ -612,4 +644,4 @@ It should remain practical, grounded in real engineering, and honest about uncer
 
 ## Canonical Five-Leaf Explanation
 
-> **Four leaves make the cycle. The fifth is what AI becomes while the cycle runs.**
+> **Four leaves make the cycle. The fifth is what repeated cycles can teach us.**
