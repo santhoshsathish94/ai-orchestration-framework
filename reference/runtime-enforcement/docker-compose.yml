@@ -3,4 +3,5 @@ services:
     build: ./agent
     volumes:
       - ./workspace/src:/workspace/src:rw
+      # Existing verification controls are runtime read-only.
       - ./workspace/tests:/workspace/tests:ro
