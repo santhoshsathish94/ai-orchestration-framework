@@ -29,17 +29,21 @@ included. Corrections, questions, ideas, and case studies are all welcome.
 - Field lessons and practices drawn from real experience.
 - Reference implementations that apply the stages to a common problem.
 - Case studies with honest outcomes, including the ones where the outcome was never reached.
-- Anything that keeps the framework **simple, universal, and practical**.
+- Anything that keeps the framework **simple, universal, practical, and explicit about human
+  Direction and accountability**.
 
 ## What we'll usually push back on
 
 - Added stages, jargon, or complexity the reader doesn't need. Clover is deliberately four stages:
   **Context → Direction → Action → Success.**
-- Rungs, levels, scores, or grades for evidence or autonomy. They were removed on purpose, because a
-  number is easier to claim than to justify. Say what you checked, what you observed, and where you
-  stopped.
+- Rungs, levels, scores, or grades for evidence or delegated execution. They were removed on purpose,
+  because a number is easier to claim than to justify. Say what you checked, what you observed, and
+  where you stopped.
 - Outcome or production claims without evidence.
 - Overselling AI. AI is a capability within the system, not the hero.
+- Treating model capability as authority. **Capability may scale. Direction remains human.**
+- Treating competitive pressure as a reason to transfer Direction to AI. **Direction is not delegated
+  by competition.**
 - Making it about a single person or tool rather than the shared idea.
 
 ## Writing style
