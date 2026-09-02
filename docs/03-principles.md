@@ -14,7 +14,7 @@ Clover starts from a simple priority:
 
 **System → Human → AI**
 
-The system comes first because it is where reality exists. It may be an existing system, or the system we are trying to build. Its state, data, behavior, history, constraints, and evidence are the material the work must ultimately be grounded in.
+The system comes first because it is where the outcome must exist. It may be an existing system, or the system we are trying to build. Its state, data, behavior, history, constraints, and evidence are the material the work must ultimately be grounded in.
 
 The human comes second because purpose and accountability belong together. The human decides what matters, what outcome is worth pursuing, what constraints and boundaries apply, what must not happen, and what level of process or approach matters for the work. The human remains accountable for the outcome after delegating work.
 
@@ -42,15 +42,15 @@ This boundary also applies in critical situations. AI may be unavailable, delaye
 
 *Stage: Context*
 
-Context is the reality the work needs to reason from. It may be an existing system or the system we are trying to build: its data, behavior, history, constraints, evidence, previous attempts, and whatever else is needed to understand the situation correctly.
+Context is the relevant evidence about the System needed for the current work. It may be an existing system or the system we are trying to build: its data, behavior, history, constraints, evidence, previous attempts, and whatever else is needed to understand the situation correctly.
+
+Direct system access does not mean unlimited context. More data can create noise, stale information, contradictory signals, and less useful attention. **Filter before you hand off.** Prefer the smallest relevant set of trustworthy evidence that is sufficient for the current Direction, and summarize or reduce large sources before they reach planning or execution.
 
 In the common clover, context is mostly what one human can hand over — what they type, the files they attach, the repository they happen to be working in. In the lucky clover, the relevant system can be read directly. Where the environment can answer a question, read the environment instead of reasoning about what it probably contains.
 
-Those systems are already there before anyone asks for anything, which is why Context comes before Direction. For a system being built, the same principle applies to the reality already established: requirements, code, designs, dependencies, decisions, experiments, current behavior, constraints, and evidence become the context from which the next action should proceed.
-
 Treat the context in hand as incomplete until it has been checked. Name assumptions nobody tested and signals nobody looked at, then reduce that uncertainty before making a consequential change.
 
-Collecting everything is its own failure. Enough context to reason correctly is the bar.
+Collecting everything is its own failure. Enough relevant context to reason correctly is the bar.
 
 Every pass adds context, and iteration feeds this stage rather than any other.
 
@@ -69,6 +69,8 @@ What gets written down and what gets reused are different bars. A single good ou
 The human accountable for the outcome controls what matters, the purpose, the desired outcome worth pursuing, priorities, constraints, boundaries, what must not happen, and any process or approach that is itself part of what matters.
 
 Direction can point into Context. When the system is readable, the human can identify which service, workflow, dataset, or area of the system matters first instead of reconstructing the entire environment from memory.
+
+A pointer is not permission to guess. When the human gives a high-level pointer such as a service, workflow, or dataset, preserve that Direction but surface important implicit constraints you can discover in the relevant Context. Ask when a missing constraint could materially change the safe or correct outcome. Do not invent domain policy, architectural invariants, or unwritten business rules merely to make the task look complete.
 
 Clover does not give AI ownership of Direction. AI can sharpen a direction, ask questions, identify conflicts, surface risks, challenge assumptions, and recommend alternatives. It does not become accountable for deciding what the system should pursue.
 
@@ -90,6 +92,8 @@ Reasoning, planning, tool selection, AI model selection, orchestration across ag
 
 Planning and doing sit on one stage on purpose. The plan can change when work meets reality, and adapting to new evidence is part of Action rather than a reason to pretend the original plan was complete.
 
+AI may execute tests and modify test code when the human explicitly directs that as part of the intended outcome. **Otherwise, verification artifacts that define whether Success is achieved should remain outside the agent's writable Action scope.** Test fixtures, regression assertions, acceptance criteria, and other validation controls should be protected from silent weakening or deletion.
+
 Humans and AI can share execution. The human retains the boundaries, approvals, and accountability even when AI performs most of the work.
 
 Plan the smallest coherent path to the outcome. Run work in parallel only where it is genuinely independent, and replan when new information contradicts the current path.
@@ -103,6 +107,10 @@ Plan the smallest coherent path to the outcome. Run work in parallel only where 
 Success means the intended outcome is demonstrated by evidence from the real system or environment. The meaningful outcome is produced through the interaction of three things: **human purpose and accountability, AI capability and execution, and the system itself**.
 
 A closed task, a generated artifact, a passing build, or an AI statement that the work succeeded is not enough on its own. The evidence must connect to the outcome the human defined in Direction.
+
+Verification boundaries matter. Whenever possible, the evidence used to declare Success should come from a check the agent could not silently redefine while performing the Action. Prefer protected test suites, independent fixtures, external assertions, separate environments, before/after measurements, or other validation mechanisms whose acceptance criteria remain outside the change being evaluated.
+
+A passing test is only as meaningful as the integrity of the test and its acceptance criteria. Do not weaken, delete, bypass, or rewrite a verification control merely to make the result pass. If the test itself must change because the intended outcome changed, that change is part of Direction and should be explicit.
 
 State what you checked, what you observed, and where you stopped. Stopping early is often correct when the available evidence is sufficient for the risk and scope of the work. The failure is describing weak evidence in the language of strong evidence.
 
