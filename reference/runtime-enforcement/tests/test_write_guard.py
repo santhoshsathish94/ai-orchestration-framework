@@ -61,3 +61,14 @@ def test_symlink_to_protected_file_is_rejected(tmp_path) -> None:
         )
 
     assert target.read_text(encoding="utf-8") == "original"
+
+
+def test_new_test_can_be_created_when_policy_allows_it(tmp_path) -> None:
+    workspace = tmp_path / "workspace"
+    workspace.mkdir()
+
+    new_test = workspace / "new.test.js"
+    assert not is_protected(str(new_test))
+
+    guarded_write(str(new_test), "new test")
+    assert new_test.read_text(encoding="utf-8") == "new test"
