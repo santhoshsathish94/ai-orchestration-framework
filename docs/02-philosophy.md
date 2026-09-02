@@ -14,6 +14,14 @@ The **Human** provides Direction. Humans decide what matters, what outcome is de
 
 **AI** provides capability and can help determine and execute the means of achieving the desired outcome within the human's Direction and the System's Context.
 
+### Before AI, humans were already part of the execution
+
+Clover does not claim to have invented the underlying pattern of working with systems to produce outcomes. Long before AI could perform substantial portions of execution, humans were already doing this work: understanding the situation, deciding what should happen, carrying out or coordinating the work, and checking whether the result matched the intended outcome.
+
+The important change is not the existence of the cycle. The change is **who or what can perform the execution**. In the AI era, AI can take on much more of the Action that humans previously performed directly.
+
+That changes the engineering problem. We need to decide what execution can be delegated, what context AI can use, what boundaries remain with the human, and how the system can provide evidence that the intended outcome actually happened.
+
 The capability is already here. AI can reason, analyze, plan, coordinate, create, execute, and adapt across many kinds of work. What matters is how that capability is connected to reality and purpose.
 
 The framework therefore is not about making AI the decision-maker. It is about working with the capabilities of the **System, Human, and AI** so that meaningful outcomes can be pursued and validated.
@@ -22,11 +30,11 @@ A useful analogy is a journey: **the system is the map and terrain, humans choos
 
 ### What makes Clover distinct
 
-The framework does not claim novelty merely from naming Context, Direction, Action, and Success. Understanding, deciding, acting, and validating already exist in engineering, management, research, and many other practices.
+The framework does not claim novelty merely from naming Context, Direction, Action, and Success. Understanding, deciding, acting, and validating already exist in engineering, management, research, operations, and everyday work.
 
-Clover's claim is the relationship it keeps between them:
+Clover's claim is narrower and more practical: **make that existing relationship explicit for an AI era in which execution can increasingly be delegated to AI.**
 
-- **System → Human → AI** establishes the relationship: System grounds the work in reality, Human provides Direction and accountability, and AI provides capability and helps determine the means.
+- **System → Human → AI** establishes the relationship: System grounds the work in reality, Human provides Direction and accountability, and AI provides capability and can take on execution.
 - **Context → Direction → Action → Success** gives that relationship an operational shape: understand the relevant reality, establish the desired outcome and boundaries, perform the work, and validate the outcome against reality.
 - The claim is practical rather than universal in form: Clover should be useful from a small interaction to a large system, and it should earn its place through observable improvement in the work.
 
@@ -92,64 +100,8 @@ Repeated cycles can produce **Growth** when useful learning is preserved.
 
 The number of leaves carries the argument.
 
-**Three leaves — the common clover.** Direction, Action, Success. A human gives the Direction, AI performs the Action from whatever that one human can hand over, and the result is checked. It produces real value, but the available Context is bounded by the human's reach and memory.
+**Three leaves — the common clover.** Direction, Action, Success. A human gives the Direction, humans or their tools perform the Action, and the result is checked. It produces real value, but the available Context is bounded by what the people doing the work can reach, remember, and pass into the execution.
 
 **Four leaves — the lucky clover.** Context arrives from the System and comes into the work explicitly. The work starts from reality rather than only from a description one person assembled. Direction can point at the relevant part of that reality, AI can use it to determine the means, and the outcome can be validated against the same system.
 
 **Five leaves — the growth clover.** Growth is not a fifth task and nobody has to run it. It is what can emerge when the four stages are repeated and what they reveal is preserved and learned from.
-
-Growth can come from all four stages. Context can reveal how the system actually behaves. Direction can reveal which purposes, constraints, and decisions produced good or bad outcomes. Action can reveal which approaches and execution patterns work. Success can reveal what actually held and what the evidence showed.
-
-That learning can accumulate in humans, AI systems, the System being worked on, teams, organizations, or frontier model development. These layers are controlled differently. Clover does not assume that customer or enterprise work trains an underlying provider model.
-
-The principle is:
-
-> **When cycles repeat, patterns can emerge. When patterns are preserved, future cycles can improve.**
-
-The model may remain the same while the human, team, organization, or System around it becomes better at using it. Growth does not belong to one actor.
-
-The framework remains four operational stages: **Context → Direction → Action → Success**. Growth describes what can emerge from repeatedly working through those four.
-
----
-
-## Why Context matters
-
-Context is the relevant evidence about System reality needed for the current work. It is not simply everything available, and it is not whatever a human happens to remember to put into a prompt.
-
-A useful Context can include state, data, behavior, history, telemetry, tests, prior attempts, observations, and other reliable information relevant to the current Direction.
-
-The goal is not to collect everything. The goal is to understand enough of reality to act meaningfully.
-
-When important Context is missing, gathering it becomes part of the work.
-
-All of this can happen at small scale or large scale. A table may be enough. A large production estate may be enough. The relationship does not depend on the amount of Context; it depends on whether the relevant reality is available and connected to the work.
-
-Every pass can add Context. Written summaries, evidence, decisions, failed assumptions, and useful patterns can allow another person, agent, or session to continue without reconstructing the work from zero.
-
----
-
-## Why these names
-
-The four stages are **Context, Direction, Action, and Success**. They describe the relationship between reality, purpose, means, and validation.
-
-**Context, rather than Understand.** Understanding happens inside a head and cannot be inspected directly. Context is the material the work has to reason from, and it can be inspected.
-
-**Direction, rather than Control.** Humans do not need to claim perfect control over every system. Direction identifies what humans own: the desired outcome, purpose, priorities, constraints, boundaries, and accountability.
-
-**Action, rather than Plan and Execute.** Deciding how the work should happen and doing it belong on one stage because plans change when they meet reality.
-
-**Success, rather than Results or Proof.** Results describe what came out of the work. Success asks whether the intended outcome actually occurred and whether the relevant System or environment can demonstrate it.
-
----
-
-## What one cycle leaves behind
-
-Every meaningful cycle can leave something behind: what was learned, what held up when it was checked, what was missing, which decisions were made, and what the System showed.
-
-The stronger practical claim is:
-
-> **Preserved learning should make future work easier to understand, safer to execute, or easier to validate.**
-
-When it does not, the learning is not yet useful enough to carry forward.
-
-That is how a small interaction can improve the next one, and how many small interactions can accumulate into better team and organizational practice.
