@@ -3,7 +3,7 @@
 Governance is what keeps the cycle safe as it scales. It makes ownership, access, attribution, and
 approval explicit, and it matters most where AI is the thing acting. It sits across [the Clover
 framework](04-framework.md) rather than inside one stage: Context is grounded in the system,
-Direction is owned by humans, Action is where approvals and autonomy bite, and Success is where
+Direction is owned by humans, Action is where execution boundaries apply, and Success is where
 somebody has to stand behind the evidence.
 
 ## System → Human → AI
@@ -20,46 +20,59 @@ Clover keeps three responsibilities distinct:
 This boundary does not depend on which model is being used. A more capable model may change how much
 of the path can be delegated inside Action; it does not change who owns the destination.
 
+## Capability may scale. Direction remains human.
+
+Clover does not support transferring organizational Direction to AI, regardless of how capable AI
+becomes. This is not a temporary safeguard for today's models. It is a foundational boundary of the
+framework.
+
+AI may become dramatically better at reasoning, planning, implementation, coordination, and
+execution. None of that creates authority over purpose, acceptable risk, priorities, boundaries, or
+accountability.
+
+> **Capability can increase. Authority does not have to.**
+
 ## Direction is not delegated by competition
 
-AI capability is not authority, and authority is not accountability. Clover does not treat stronger
-models, faster models, competitive pressure, or fear of falling behind as reasons to transfer
-Direction to AI.
+Clover does not treat stronger models, faster models, competitive pressure, or fear of falling behind
+as reasons to transfer Direction to AI.
 
 Organizations may choose to automate more of the path because competition rewards speed. That can
-justify greater autonomy inside Action where the results are understood, observable, and reversible
-within acceptable bounds. It does **not** justify handing AI the authority to choose organizational
-purpose, acceptable risk, priorities, boundaries, or the outcome the organization is accountable for.
+justify greater execution autonomy inside Action where the results are understood, observable, and
+reversible within acceptable bounds. It does **not** justify handing AI the authority to choose
+organizational purpose, acceptable risk, priorities, boundaries, or the outcome the organization is
+accountable for.
 
-The rule is intended to remain valid as models change: **do not transfer Direction to AI merely
-because AI becomes capable enough to perform it.** A model is a capability used to reach a destination;
-it is not the owner of the destination.
+The rule is intended to remain valid as models change:
+
+> **Do not transfer Direction to AI merely because AI becomes capable enough to perform it.**
+
+A model is a capability used to reach a destination; it is not the owner of the destination.
 
 This also matters in critical situations. AI services can be unavailable, rate-limited, delayed, or
 otherwise unsuitable at the moment they are needed most. Production incidents and other high-blast-
 radius situations therefore cannot assume that an AI path will always be available. Human responders
 and established operational mechanisms remain necessary, even in highly AI-enabled environments.
 
-## The destination, the vehicle, and the map
+## The destination, the means, and the map
 
 A useful Clover analogy is a journey:
 
 - **Human Direction is the destination.** It states where we intend to go and what constraints must
   hold on the journey.
-- **AI is the vehicle.** Different models can be slower, faster, more capable, or more economical,
-  just as different vehicles can change the speed and way we travel. Choosing a more capable vehicle
-  does not change the destination.
+- **AI is a means of getting there.** Different models can be slower, faster, more capable, or more
+  economical. They can change the speed and way we travel without owning the destination.
 - **The system is the map and the terrain.** It tells us what exists, where the constraints are, what
   has already happened, and what evidence can show whether we are actually getting there.
 
 Humans can walk, run, drive, or use other tools. The framework cares about whether the intended
-outcome is reached, not about giving the tool ownership of the destination. AI can materially improve
-speed and capability, but the meaningful outcome still belongs to the human/system relationship it is
-serving.
+outcome is reached, not about giving the means ownership of the destination. AI can materially
+improve speed and capability, but the meaningful outcome still belongs to the human/system
+relationship it is serving.
 
 The analogy is intentionally broader than any particular AI product or model generation. It applies
 whether the organization uses an older model, a newer frontier model, several models, or no AI at all.
-AI changes the means; it does not redefine the destination.
+The means can change; the destination does not unless humans change it.
 
 ## Keep humans responsible
 
