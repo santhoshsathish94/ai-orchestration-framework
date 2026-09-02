@@ -10,6 +10,20 @@ Prompts, tools, agents, and AI model choice all sit underneath the cycle. What t
 
 Clover also describes what can emerge when those four stages are repeated: **Growth**. Growth is not a fifth stage a team runs. It is the learning and improvement that can emerge from the entire cycle and feed future Context.
 
+## What makes Clover distinct
+
+Clover is not novel because it names four familiar activities. Understanding, deciding, acting, and validating exist in many engineering and management practices already.
+
+The framework's distinctive claim is the relationship between them:
+
+**System → Human → AI** establishes the order of responsibility. The system is the grounding reality, humans own Direction and accountability, and AI supplies capability and execution.
+
+**Context → Direction → Action → Success** establishes the operational cycle. Context is the relevant evidence about system reality; Direction turns that reality into a human-defined outcome and boundaries; Action determines how the work happens within them; Success is settled by evidence from the environment.
+
+The framework treats that relationship as a testable engineering claim, not just a metaphor. A useful Clover implementation should make context more inspectable, Direction more explicit, execution more safely delegable, and Success more difficult to claim without evidence. If applying Clover does not improve one or more of those properties, the framework has not earned its place.
+
+Clover is therefore best understood as **a framework for reasoning about and governing AI-enabled work, not a mandatory process for performing every task.** Existing workflows, delivery methods, agent frameworks, approvals, and tools can remain in place. Clover asks whether the important connections between system reality, human intent, AI execution, and environmental validation are actually present.
+
 ## The system comes first
 
 Clover is built around a simple priority:
@@ -131,7 +145,7 @@ Each stage has one job. The complexity belongs in the context, ownership, eviden
 
 | Stage | What it is | Core question |
 |---|---|---|
-| **Context** | The reality the work needs to understand — an existing system or the system being built, its data, behavior, history, constraints, evidence, and previous cycles. | What do we need to know about reality before acting? |
+| **Context** | The relevant evidence about system reality needed for the current work — an existing system or the system being built, its data, behavior, history, constraints, evidence, and previous cycles. | What do we need to know about reality before acting? |
 | **Direction** | The human establishes purpose, the outcome worth pursuing, priorities, constraints, boundaries, what must not happen, and accountability for the outcome. Direction can also point AI at where the relevant Context is and can include a process or approach when that itself matters to the intended outcome. | What needs to be done, what outcome is worth pursuing, and what must not happen? |
 | **Action** | AI uses human Direction as instructions and system Context as data to determine how the work should happen and execute within those boundaries. | How should the work happen? |
 | **Success** | The meaningful intended outcome demonstrated by evidence from the system or environment, produced through the interaction of human intent, AI capability, and the system itself. | Did reality validate the intended outcome? |
@@ -142,9 +156,9 @@ A cycle can then run again. What one cycle establishes becomes part of the next 
 
 ## Stage 1 — Context
 
-Context is what the system needs to know about reality before acting, and it is in place before anyone gives a direction. It may describe a system that already exists, or the system we are trying to build.
+Context is the relevant evidence about system reality that the work needs to reason from. It may describe a system that already exists, or the system we are trying to build.
 
-The important distinction is that Context is not whatever a human happens to remember to put into a prompt. It is the relevant reality available from the system, together with history, evidence, previous attempts, and other information needed to understand the work correctly.
+The important distinction is that Context is not whatever a human happens to remember to put into a prompt. It is the relevant reality available from the system, together with history, evidence, previous attempts, and other information needed to understand the work correctly. Not everything available belongs in Context; relevance to the current Direction is the bar.
 
 In the common clover, context is only what one human can hand over — what they type, the files they attach, the repository they are working in. In the lucky clover it can include the current system itself: repositories and documentation, connected datasources, logs and telemetry, deployment environments, running applications, tests, history, earlier attempts, and what previous cycles wrote down.
 
@@ -176,6 +190,8 @@ Clover also does not make competitive pressure a basis for changing this boundar
 
 **What AI does.** Clarifies and challenges Direction without owning it. AI can restate the objective, identify missing constraints, point out conflicts, and turn a vague request into something specific enough to execute.
 
+**Boundary examples.** Choosing to restore service within ten minutes is Direction; choosing which safe restart sequence is fastest is Action. Requiring zero customer-data exposure is Direction; choosing a redacted log query is Action. Deciding that a deployment may proceed only with a rollback path is Direction; selecting and executing that rollback path within the approved mechanism is Action.
+
 **What happens there.** Direction gets skipped because a ticket looks like enough, the work then optimizes for closing the ticket rather than the outcome, or an AI is allowed to choose the goal instead of determining the path toward a human-defined goal. Unstated scope is another failure: nobody said the change must not touch billing, so nothing stopped it.
 
 ---
@@ -196,6 +212,26 @@ Planning and doing sit on one stage on purpose. The plan usually changes once th
 
 **What happens there.** Thrash. A change fails, the next attempt is a variation of the same change, and each attempt sounds as confident as the last. Misplaced parallelism is the other one: splitting work that shares state costs more in coordination and rework than it saves.
 
+## Delegated execution is an engineering decision
+
+Clover does not use “more autonomy” as a maturity target. The useful question is narrower: **what execution can be delegated safely and reversibly for this context while human Direction remains intact?**
+
+The decision should be based on a small set of observable properties:
+
+- **Evidence:** have comparable execution outcomes repeatedly held up without unexplained rework or intervention?
+- **Blast radius:** how much damage could a wrong action do, and how hard would it be to undo?
+- **Observability:** would the team know quickly that the action diverged from the intended task or caused harm?
+- **Reversibility:** can the action be rolled back, contained, or corrected within an acceptable window?
+- **Approval boundary:** which decisions remain human-approved even when surrounding execution is delegated?
+
+No single property is sufficient. Strong evidence does not erase a large blast radius, and reversibility does not help if nobody can observe what happened.
+
+This yields a practical rule:
+
+> **Delegate execution where evidence supports it, keep approval where blast radius demands it, and narrow delegation again when reality stops supporting it.**
+
+Delegation is per context, not one global setting. A team can delegate a well-understood development remediation while requiring human approval for every state-changing operation touching production or regulated data.
+
 ---
 
 ## Stage 4 — Success
@@ -204,39 +240,31 @@ Success means the intended outcome is demonstrated by the real system or environ
 
 The environment is the evidence of success. An AI reporting that it worked, a plausible explanation, a confident tone, or a high model score all fall outside that on their own.
 
-Evidence can be a test that fails without the change and passes with it, a before-and-after measurement, telemetry, a non-production run, a production signal that disappears and stays gone, or a human confirming an outcome that cannot be observed directly by a system.
+Evidence can be a test result, before-and-after measurement, production telemetry, user confirmation, an operational signal, or another observation that connects back to the intended outcome. State what was checked, what was observed, and where the evidence stopped.
 
-**Core question.** Did reality validate the intended outcome?
+When Success holds, the result becomes Context for the next cycle. When Success fails, the failed result is information about reality and the next cycle returns to Context. The point is not to retry blindly but to make the next attempt materially more informed.
 
-**What the human holds.** The standard. What counts as sufficient evidence for this work, what risk is acceptable if the answer turns out to be wrong, and approval for anything expensive or hard to reverse.
+## The claim Clover makes — and how to test it
 
-**What AI does.** Runs checks, gathers evidence, reports it accurately, and makes clear what did not work and what it could not check.
+Clover makes a practical claim rather than a universal one: **AI-enabled work becomes more reliable when system reality is inspectable, human Direction is explicit, delegated execution is bounded, and Success is validated against the environment.**
 
-**What happens there.** Evidence described more strongly than it is. "Verified" covering a single manual look. A merged change reported as a resolved problem. The quiet one is stopping at the artifact: the build passed, so the work is treated as done, and nobody checks whether the original signal changed.
+That claim should be tested in real work, not accepted because the model sounds useful.
 
-### Say what the evidence actually is
+A useful evaluation compares work before and after applying Clover against measures such as:
 
-Not every task has telemetry, and pretending otherwise makes this stage unusable for most work. What matters is describing what was actually done to check, in words a reader can act on.
+- **Context quality:** how often the work started from verified system evidence rather than assumptions or recalled history;
+- **Direction clarity:** how often purpose, boundaries, and approval points were explicit before consequential Action;
+- **Execution efficiency:** rework, unnecessary handoffs, cycle time, and intervention required for delegated execution;
+- **Outcome validity:** the proportion of claimed successes supported by evidence tied to the intended outcome;
+- **Failure recovery:** whether failed attempts produce materially new Context before the next Action;
+- **Continuity:** whether another person, agent, or session can resume from the preserved Context without reconstructing the work.
 
----
+These are evaluation dimensions, not required scorecards. A particular team may need only one or two. The important test is whether Clover changes observable work rather than merely changing vocabulary.
 
-## Delegating execution without transferring Direction
-
-Clover does not use increasing AI capability as a reason to create AI ownership. What can change is how much execution a human chooses to delegate inside **Action**.
-
-A team may move from AI suggesting steps, to AI carrying out a human-approved plan, to AI selecting and executing the operational path inside clearly stated human boundaries. These are differences in **delegated execution**, not transfers of Direction.
-
-The decision to delegate is always made by the accountable human or organization. Results can provide evidence that a particular kind of execution is working. Blast radius can limit what may be delegated even after repeated success. Availability can also matter: a critical operation should not depend on an AI service being available when a human or established mechanism must be able to act.
-
-What does not change:
-
-- The destination remains human-defined.
-- Purpose, acceptable risk, priorities, boundaries, and accountability remain human-owned.
-- The system remains the grounding reality.
-- AI remains a means of carrying out the Direction.
-
-> **Delegation can move work. It does not move Direction.**
-
-The framework therefore avoids treating “more autonomy” as a maturity target. The useful question is narrower: **what execution can be delegated safely and reversibly for this context while human Direction remains intact?**
+This also leaves room for falsification. If repeated adoption produces no improvement in evidence quality, continuity, delegated execution, or outcome reliability relative to the team's existing practice, that is evidence against the framework in that setting. Clover should be treated as a proposition to test, not a doctrine to obey.
 
 ---
+
+## The framework in one paragraph
+
+**System → Human → AI** sets the authority boundary. **Context → Direction → Action → Success** is the four-stage operating cycle. Context is the relevant evidence about system reality. Direction is human-owned purpose, outcome, priorities, constraints, boundaries, and accountability. Action is where AI determines and executes the path within that Direction and Context. Success is demonstrated by the environment. Failed results return to Context. Repeated cycles may produce Growth by preserving useful learning for future work.
