@@ -2,65 +2,128 @@
 
 ## Purpose
 
-Clover describes how humans and AI turn intent into outcomes the environment confirms. The four stages give the structure. These principles are what make each stage hold up on real work.
+Clover describes how the system, humans, and AI work together to turn intent into outcomes the environment confirms. The four stages give the structure. These principles are what make each stage hold up on real work.
 
 There is one principle per stage. A team that remembers the stages already remembers the principles. The first two carry most of the weight, because Context and Direction are what separate the lucky clover from the common one.
 
 ---
 
-## 1. Context comes from the real environment
+## The system comes first
+
+Clover starts from a simple priority:
+
+**System → Human → AI**
+
+The system comes first because it is where reality exists. It may be an existing system, or the system we are trying to build. Its state, data, behavior, history, constraints, and evidence are the material the work must ultimately be grounded in.
+
+The human comes second because purpose and accountability belong together. The human decides what matters, what outcome is worth pursuing, what constraints and boundaries apply, what must not happen, and what level of process or approach matters for the work. The human remains accountable for the outcome after delegating work.
+
+AI comes third because capability does not transfer accountability. AI can reason, recommend, plan, challenge, and execute, but Clover does not give AI ownership of Direction. A capable system can still have partial knowledge of the real world, and even humans cannot fully understand every consequence of complex systems. Clover therefore keeps authority for purpose, boundaries, and accountability with a human.
+
+This is not a claim that AI cannot make decisions. It is a boundary on which decisions AI should own in a real-world system: **AI can determine how work happens within human Direction; it does not determine the Direction itself.**
+
+---
+
+## 1. Context comes from the real system
 
 *Stage: Context*
 
-In the common clover, context is only what one human can hand over — what they type, the files they attach, the repository they are working in — and it stays bounded by what that human can reach and remember. This principle is about the other kind. Context comes from the current systems the organization uses. Every repository, with its many projects and the documentation kept for each application. The datasources the applications connect to. The logs and telemetry. The deployment environments. The running applications. Where the environment can answer a question, read the environment instead of reasoning about what it probably contains.
+Context is the reality the work needs to reason from. It may be an existing system or the system we are trying to build: its data, behavior, history, constraints, evidence, previous attempts, and whatever else is needed to understand the situation correctly.
 
-Those systems are running before anyone asks for anything, which is why this stage comes before the direction rather than after it.
+In the common clover, context is mostly what one human can hand over — what they type, the files they attach, the repository they happen to be working in. In the lucky clover, the relevant system can be read directly. Where the environment can answer a question, read the environment instead of reasoning about what it probably contains.
 
-Reaching it is a setup rather than a principle. Read-only MCP servers in front of the repositories, the datasources, the logs and the environments give an agent a way in. Every connection is scoped to what the human driving the work already has access to, at the privileges they already hold, and one environment is enough to start — development. [The orchestration environment](orchestration-environment.md#building-one) covers what to connect and in what order, and [governance](08-governance.md#access-mirrors-the-human-not-the-ai) covers how that access is held.
+Those systems are already there before anyone asks for anything, which is why Context comes before Direction. For a system being built, the same principle applies to the reality already established: requirements, code, designs, dependencies, decisions, experiments, current behavior, constraints, and evidence become the context from which the next action should proceed.
 
-Treat the context in hand as incomplete until it has been checked. Name the assumptions nobody tested and the signals nobody looked at, then reduce that uncertainty before making a consequential change.
+Treat the context in hand as incomplete until it has been checked. Name assumptions nobody tested and signals nobody looked at, then reduce that uncertainty before making a consequential change.
 
-Collecting everything is its own failure. A context stuffed with irrelevant material buries the few facts the problem turns on. Enough context to reason correctly is the bar, and reaching it takes several passes.
+Collecting everything is its own failure. Enough context to reason correctly is the bar.
 
 Every pass adds context, and iteration feeds this stage rather than any other.
 
 > After each success and each failure, the context files are written before the next attempt.
 
-What gets written is what was tried, the context it ran in, what the environment showed, and what turned out to be wrong. A summary kept in a markdown file beside the work carries all of that, which is what lets any agent pick the job up. Judgment about what is worth keeping and where a recorded lesson has gone stale stays with a human, because a wrong finding written down spreads.
+What gets written is what was tried, the context it ran in, what the environment showed, what turned out to be wrong, and what remains unknown. A summary kept beside the work carries that forward so the next cycle does not start from zero.
 
-What gets written down and what gets reused are different bars. A single good outcome is an anecdote, and promoting it to a rule teaches the next cycle something that is not true yet. A pattern earns its place once it has held across several cycles, and until then it is recorded as what happened rather than as how things are done. Once it has earned its place, and where it can safely be shared, it should not stay with one team or with whoever learned it first, because the next cycle then depends on who happens to be around.
+What gets written down and what gets reused are different bars. A single good outcome is an observation, not automatically a rule. Patterns earn their place when they hold across repeated cycles, and useful patterns can then be shared beyond the person or team that discovered them.
+
+---
 
 ## 2. Direction is a human decision
 
 *Stage: Direction*
 
-The human accountable for the outcome controls what matters, the desired outcome, constraints, boundaries, and what must not happen, and approves. AI determines how the work should happen and executes within those boundaries. The availability of an AI model, an agent, or a tool is not a reason to start.
+The human accountable for the outcome controls what matters, the purpose, the desired outcome worth pursuing, priorities, constraints, boundaries, what must not happen, and any process or approach that is itself part of what matters.
 
-Direction also points. An organization's systems are a haystack, and the answer is a needle somewhere inside it. The people who work in those systems every day know roughly where it fell — which service went out last week, which job has always been fragile, which team owns the part nobody wrote down. Because AI can read the real environment, saying which part of the system to read first is worth more than a long description of the task.
+Direction can point into Context. When the system is readable, the human can identify which service, workflow, dataset, or area of the system matters first instead of reconstructing the entire environment from memory.
 
-Direction carries the boundaries with it: what must not change, what needs approval before it happens, which systems and data the work may touch. A direction that says what to do and never says what must not happen gets read generously by whoever picks it up.
+Clover does not give AI ownership of Direction. AI can sharpen a direction, ask questions, identify conflicts, surface risks, challenge assumptions, and recommend alternatives. It does not become accountable for deciding what the system should pursue.
 
-Tickets, incidents, and requests are inputs to Direction. They rarely state the outcome on their own, and somebody still has to.
+This boundary matters because real-world systems are only partially understood. Giving a capable AI ownership of purpose would combine partial knowledge with authority while leaving no human or organizational accountability inside the AI itself. Clover therefore keeps Direction with a human even when AI determines most of the path used to achieve it.
 
-## 3. Action runs inside a structured workflow
+Direction carries the boundaries with it: what must not change, what needs approval before it happens, which systems and data the work may touch, and what evidence will be sufficient.
+
+Tickets, incidents, requests, or prompts can trigger Direction. They rarely define the complete outcome on their own, and somebody still has to.
+
+---
+
+## 3. Action applies AI capability to Context and Direction
 
 *Stage: Action*
 
-AI works reliably when it has defined context, stated boundaries, the tools the job needs, and clear handoffs. Action is now mostly driven by AI, and humans and AI can share the work. Responsibility for the outcome stays with a named human, whoever or whatever performed each step.
+AI works from two things together: **human Direction as instructions and system Context as data**. Action is where AI determines how the work should happen and executes within the boundaries established by the human.
 
-Plan the smallest coherent path to the outcome. Run work in parallel only where it is genuinely independent, because coordination costs real time and more agents do not make a tangled problem finish sooner.
+Reasoning, planning, tool selection, AI model selection, orchestration across agents, code changes, tests, debugging, analysis, and interaction with the system all belong here.
 
-New information during the work is a reason to replan rather than a reason to push on. Coherent progress is the objective, and maximum AI activity is a poor proxy for it.
+Planning and doing sit on one stage on purpose. The plan can change when work meets reality, and adapting to new evidence is part of Action rather than a reason to pretend the original plan was complete.
 
-## 4. Success is demonstrated by the environment
+Humans and AI can share execution. The human retains the boundaries, approvals, and accountability even when AI performs most of the work.
+
+Plan the smallest coherent path to the outcome. Run work in parallel only where it is genuinely independent, and replan when new information contradicts the current path.
+
+---
+
+## 4. Success is the meaningful outcome demonstrated by the system
 
 *Stage: Success*
 
-A closed task, a generated artifact, a passing build, or a merged change is not the outcome by itself. Success means the environment shows that the intended outcome occurred.
+Success means the intended outcome is demonstrated by evidence from the real system or environment. The meaningful outcome is produced through the interaction of three things: **human purpose and accountability, AI capability and execution, and the system itself**.
 
-State what you checked, what you observed, and where you stopped. Stopping early is often correct — a small change can be genuinely complete once a test covers it, and production observation is not always available or worth its cost. The failure is describing weak evidence in the language of strong evidence. "Validated in the test environment, not yet observed in production" is a complete and honest claim.
+A closed task, a generated artifact, a passing build, or an AI statement that the work succeeded is not enough on its own. The evidence must connect to the outcome the human defined in Direction.
 
-When the evidence does not support the intended outcome, go back to Context. A failed check usually means something about reality was missing, so repeating the action only reaches the same wrong place faster.
+State what you checked, what you observed, and where you stopped. Stopping early is often correct when the available evidence is sufficient for the risk and scope of the work. The failure is describing weak evidence in the language of strong evidence.
+
+The human holds the standard for what counts as sufficient evidence and remains accountable for the outcome. AI runs checks, gathers evidence, reports it accurately, and makes clear what it could not verify. The system or environment provides the reality against which the outcome is judged.
+
+When the evidence does not support the intended outcome, return to Context rather than repeating the same Action. The failed result is information about reality and should change what the next cycle knows.
+
+---
+
+## Growth is the learning that can emerge from repeated cycles
+
+Growth is not a fifth operational stage and nobody has to run it. It is what can emerge when the four stages repeat and what they reveal is preserved and learned from.
+
+Growth can come from **all four stages**. Context can reveal how the system actually behaves and what information was missing. Direction can reveal whether the purpose, constraints, priorities, or process were appropriate. Action can reveal which approaches, tools, and execution patterns work. Success can reveal what actually held, what failed, and what the evidence showed.
+
+Failure is part of Growth. So are successful outcomes, analyses, discoveries about the current system, repeated patterns, and newly understood constraints. A failed attempt can teach more than a successful one when it exposes an assumption that reality rejected.
+
+Learning can accumulate at different layers:
+
+- **Human:** better understanding, judgment, expertise, and ability to give useful Direction.
+- **AI:** better performance through whatever learning, adaptation, memory, or refinement mechanisms are actually available to that AI system.
+- **System:** better observability, behavior, architecture, tooling, and ability to expose the information future cycles need.
+- **Team:** shared practices, reusable knowledge, patterns, and better ways of working together.
+- **Organization:** institutional knowledge, improved processes, better decisions, and accumulated context that survives individuals and sessions.
+- **AI frontier:** changes to underlying models through the training, evaluation, and refinement mechanisms controlled by frontier AI providers.
+
+These layers do not have the same authority or control over learning. Clover does not assume that an AI provider trains on customer or enterprise work, and it does not require the underlying model to change before learning can occur around it.
+
+The broader principle is:
+
+> **When cycles repeat, patterns can emerge. When patterns are preserved, future cycles can improve.**
+
+The model may remain the same while the human, team, organization, and system around it become better at using it. The underlying AI may also improve separately through frontier training and refinement.
+
+Growth therefore belongs to the whole system rather than to one actor. It is the accumulated learning that can emerge from repeated interaction between the **system, human, and AI**.
 
 ---
 
@@ -68,11 +131,14 @@ When the evidence does not support the intended outcome, go back to Context. A f
 
 | Stage | Principle |
 |---|---|
-| **Context** | Context comes from the real environment |
+| **Context** | Context comes from the real system |
 | **Direction** | Direction is a human decision |
-| **Action** | Action runs inside a structured workflow |
-| **Success** | Success is demonstrated by the environment |
+| **Action** | Action applies AI capability to Context and Direction |
+| **Success** | Success is the meaningful outcome demonstrated by the system |
+| **Growth** | Learning can emerge from repeated cycles across the system |
 
-The framework is four stages: Context → Direction → Action → Success.
+The framework is four operational stages: **Context → Direction → Action → Success**.
 
-Each stage is described in full, with what happens there, in [the framework](04-framework.md).
+**Growth is the learning layer around those stages, not a fifth task.**
+
+Each stage is described in full in [the framework](04-framework.md).
