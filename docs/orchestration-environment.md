@@ -91,8 +91,8 @@ standard practice in most enterprises. This is not a new category of access; it 
 pointed at a new consumer.
 
 **Scope per purpose, not per convenience.** Access appropriate for investigating a defect is not
-automatically appropriate for touching customer data. Grant it per context, as
-[widening what AI decides](04-framework.md#widening-what-ai-decides) describes.
+automatically appropriate for touching customer data. Grant it per context rather than broadening it
+merely to make AI more capable.
 
 **Keep every action attributable to a named human.** Work performed through the layer should run
 under the credentials of the human who is accountable for it, so that anything unexpected can be
@@ -100,7 +100,8 @@ traced to someone who can explain and correct it. An action attributed to the AI
 can do either. [Governance](08-governance.md) covers the mechanisms.
 
 **Keep approval at the boundaries.** Merging, releasing, and anything touching production stay with
-a human. The layer can prepare, evidence, and request. It should not decide.
+a human. The layer can prepare, evidence, and request. It should not decide the destination or
+assume authority because the model is capable.
 
 ---
 
@@ -195,12 +196,12 @@ trust. Neither is necessary.
 
 The arrangement that holds up:
 
-- **A strong model holds the plan and owns the outcome.** It frames the problem, decides the
-  approach, and is answerable for whether the result is right.
-- **Smaller, cheaper models do scoped work beneath it**, as subagents with narrow, well-specified
+- **A strong model helps frame and review important work.** It helps reason about the problem, choose
+  an approach, and assess evidence.
+- **Smaller, cheaper models can do scoped work beneath it**, as subagents with narrow, well-specified
   tasks.
-- **The owning model checks and corrects what comes back.** This is the part that makes it work. The
-  cheaper models are not trusted; they are supervised.
+- **A human accountable for Direction remains the owner of the outcome.** AI systems can check and
+  correct work, but model strength never transfers ownership.
 
 That costs far less than top-tier everywhere and produces better results than bottom-tier everywhere
 — but only because **accountability stays in one place** rather than being spread across whichever
@@ -209,7 +210,7 @@ agent happened to touch the task last. It is the same principle as delegation am
 Two cautions:
 
 - **Do not under-resource the thinking to save money.** Choosing a weaker model for the framing or
-  the review is a false economy: the cost reappears as rework, and it usually costs more than was
+  review is a false economy: the cost reappears as rework, and it usually costs more than was
   saved. See [Lesson 1](field-practices.md#lesson-1--focus-beats-parallelism).
 - **Do not confuse fanning out with progress.** Subagents multiply capacity, not direction. A human
   still holds the primary outcome, and diverging attention degrades the result regardless of how many
@@ -253,6 +254,6 @@ outcome, and it is listed as an open direction rather than evidence.
 ## Related
 
 - [Reference implementations](reference-implementations.md) — the patterns this environment produced.
-- [Governance](08-governance.md) — ownership, approval, and how much autonomy to grant.
+- [Governance](08-governance.md) — ownership, approval, and delegated execution.
 - [Adoption](09-adoption.md) — how a team gets from nothing to this, incrementally.
 - [How AI fails](how-ai-fails.md) — what insufficient context looks like in practice.
