@@ -49,11 +49,13 @@ Do not treat Growth as a fifth stage and do not treat it as a task somebody has 
 
 **Growth is what can emerge when meaningful cycles are repeated with good Direction and the learning from those cycles is preserved.**
 
+Here, **good Direction does not mean a well-written prompt or a precise instruction alone.** It means human-owned Direction that is connected to a meaningful outcome and carries the priorities, boundaries, constraints, and accountability needed to pursue that outcome responsibly.
+
 A useful way to think about Clover is that a system becomes better through the accumulation of meaningful, validated cycles:
 
 **Good Direction → meaningful Action → real Success or useful failure → preserved Context → better next cycle**
 
-The important unit is not the number of prompts, tokens, tool calls, commits, or agent runs. The important unit is the **meaningful cycle**: a cycle that was directed toward a real outcome and produced evidence or learning that can improve what happens next.
+The important unit is not the number of prompts, tokens, tool calls, commits, or agent runs. The important unit is the **meaningful cycle**: a cycle that is directed toward a real human-owned outcome and produces evidence or learning that can improve what happens next.
 
 Repeated activity without useful Direction does not automatically produce Growth. A thousand actions aimed at the wrong outcome are not a thousand meaningful cycles.
 
