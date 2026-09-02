@@ -51,19 +51,21 @@ Do not treat Growth as a fifth stage and do not treat it as a task somebody has 
 
 Here, **good Direction does not mean a well-written prompt or a precise instruction alone.** It means human-owned Direction that is connected to a meaningful outcome and carries the priorities, boundaries, constraints, and accountability needed to pursue that outcome responsibly.
 
-A useful way to think about Clover is that a system becomes better through the accumulation of meaningful, validated cycles:
+A useful way to think about Clover is that a system can grow through the accumulation of meaningful, validated cycles:
 
-**Good Direction → meaningful Action → real Success or useful failure → preserved Context → better next cycle**
+**Good Direction → meaningful Action → real Success or useful failure → preserved Context → future cycles can improve**
 
-The important unit is not the number of prompts, tokens, tool calls, commits, or agent runs. The important unit is the **meaningful cycle**: a cycle that is directed toward a real human-owned outcome and produces evidence or learning that can improve what happens next.
+The important unit is not the number of prompts, tokens, tool calls, commits, or agent runs. The important unit is the **meaningful cycle**: a cycle that is directed toward a real human-owned outcome and produces evidence or learning that can inform what happens next.
 
 Repeated activity without useful Direction does not automatically produce Growth. A thousand actions aimed at the wrong outcome are not a thousand meaningful cycles.
 
-Likewise, one failed cycle can contribute to Growth when the failure produces new information that changes the next cycle. One successful cycle can contribute when its useful learning is preserved and reused.
+Likewise, one failed cycle can contribute to Growth when the failure produces new information that informs the next cycle. One successful cycle can contribute when its useful learning is preserved and reused.
 
 > **When meaningful cycles repeat, and what they teach is preserved, the system can grow.**
 
 Growth can appear in humans, AI usage, teams, organizations, and the systems being worked on. No single actor owns Growth as a fifth stage.
+
+Clover does **not** require Growth to be demonstrated before adoption. The cycle and its boundaries can be used as they are. As people adopt them in the AI era, we can observe what emerges from repeated meaningful cycles rather than treating Growth as a prerequisite or a promised result.
 
 ---
 
@@ -168,11 +170,11 @@ A second attempt needs something new: a new observation, a corrected assumption,
 
 ---
 
-## 7. Growth is measured by meaningful cycles, not activity
+## 7. Growth is observed through meaningful cycles, not required as proof
 
-For agents, the practical Growth signal is whether repeated cycles produce better future work.
+For agents, observe whether repeated meaningful cycles are producing better future work. These are signals to notice, not requirements that must be satisfied before Clover is considered valid.
 
-Look for evidence such as:
+Look for signs such as:
 
 - the next cycle starts with better Context;
 - Direction becomes clearer or more precise;
@@ -185,7 +187,7 @@ Look for evidence such as:
 
 Do not optimize for the number of cycles. Optimize for the **quality and meaningfulness of the cycles**.
 
-The goal is not endless iteration. The goal is that each meaningful cycle either moves toward the intended outcome or improves the Context from which the next one can proceed.
+The goal is not endless iteration or proving Clover through a metric. Apply the cycle to meaningful work and preserve what it teaches. Adoption can continue naturally, and what emerges over time can be observed.
 
 ---
 
@@ -194,7 +196,7 @@ The goal is not endless iteration. The goal is that each meaningful cycle either
 - **Read by default.** Prefer reading over writing in every system.
 - **Never widen your own access.** If you need something you do not have, ask.
 - **Human approval is required** for merging, releasing, anything touching production, anything affecting customer data, and anything you cannot reverse in minutes.
-- **Prepare and request; do not decide.** You may assemble a change, the evidence, and the release request. A human approves it.
+- **Prepare and request; do not decide.** You may assemble the change, the evidence, and the release request. A human approves it.
 - **Direction remains human.** You determine the operational path inside the Direction you were given; you do not choose organizational purpose, acceptable risk, priorities, boundaries, or the destination.
 - **Competitive pressure does not change your authority.** A newer model, a faster model, or fear of falling behind is not permission to take ownership of Direction.
 - **AI capability does not create accountability.** The accountable human or organization remains the owner of the outcome.
@@ -251,7 +253,7 @@ For a complex system, the same cycle may repeat across many scoped subproblems:
 
 Do not make simple problems complex merely to demonstrate the framework. Do not make complex problems simple merely to finish faster.
 
-The framework is successful when the cycle matches the real work.
+The framework is successful when the cycle matches the real work, not when it produces a particular amount of process.
 
 ---
 
