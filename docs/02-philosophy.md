@@ -22,6 +22,18 @@ A stronger model does not create a new destination. It changes the means availab
 
 This distinction is deliberately model-independent. An older model, a newer frontier model, several models, or no AI at all can change the available means, but none of them changes who owns the destination. **A more capable means does not change the destination.**
 
+### What makes Clover distinct
+
+The framework does not claim novelty merely from naming four familiar activities. Understanding, deciding, acting, and validating already exist in engineering, management, and agent workflows.
+
+Clover's distinct claim is the relationship it keeps between them:
+
+- **System → Human → AI** establishes the authority boundary: reality first, human Direction and accountability second, AI capability and execution third.
+- **Context → Direction → Action → Success** establishes the operating cycle: relevant system evidence, human-defined outcome and boundaries, execution within them, and validation by the environment.
+- The cycle is treated as a testable engineering proposition. Context should become more inspectable, Direction more explicit, execution safely delegable where evidence supports it, and Success harder to claim without evidence tied to the intended outcome.
+
+Clover is therefore a framework for reasoning about and governing AI-enabled work, not a mandatory process for performing every task. Existing workflows, delivery methods, approvals, and agent frameworks can remain in place. The framework earns its place only where it changes observable work for the better.
+
 ### Capability may scale. Direction remains human.
 
 Clover does not support transferring organizational Direction to AI, regardless of how capable AI becomes. This is not a temporary safeguard for today's models. It is a foundational boundary of the framework.
@@ -46,7 +58,7 @@ AI also helps with something ordinary about being human. We miss things. We skip
 
 A well-orchestrated system does more than answer from the context it already holds. It can recognize that the context is thin, say what is missing, go and get the next useful signal, reconsider once that signal arrives, and leave consequential decisions with the people accountable for them. AI widens what a team can understand and narrows what a team can miss without taking ownership of the direction.
 
-Engineering is where this framework was built and where all of its evidence comes from. The domain changes and the loop stays the same. Recognizing a gap, gathering the missing signal, and reassessing belong inside Context rather than sitting outside the cycle as extra work.
+Engineering is where this framework was built and where its evidence starts. The domain can change while the loop stays the same. Recognizing a gap, gathering the missing signal, and reassessing belong inside Context rather than sitting outside the cycle as extra work.
 
 ---
 
@@ -80,15 +92,15 @@ The framework remains four operational stages: Context → Direction → Action 
 
 Context is no longer bounded by one human. It can be the current system the work exists within, or the system being built: every repository, with its many projects and the documentation kept for each application; the datasources the applications connect to; logs and telemetry; deployment environments; running applications; tests; history; previous attempts; and what earlier cycles established.
 
-All of that can exist before anyone asks for anything, which is why Context comes before Direction. The direction is given against what is actually there.
+But Context is not simply "everything available." The useful boundary is **the relevant evidence about system reality needed for the current Direction**. More data is not automatically more Context. Irrelevant material can hide the few facts the work turns on.
+
+All of the useful system material can exist before anyone asks for anything, which is why Context comes before Direction. The direction is given against what is actually there.
 
 Reaching it is a setup rather than a principle. Stand up **read-only MCP servers** in front of the repositories, the datasources, the logs and the environments, so an agent can read them directly. Scope every connection to what the human driving the work already has access to, at the privileges they already hold. Start with **one environment — development is enough** — and widen to other non-production environments as it proves out. [The orchestration environment](orchestration-environment.md#building-one) covers what to connect and in what order.
 
-The approach will be challenged, and the honest answer holds up. That access already exists and is already used, often with nobody tracking it. Clover makes it deliberate, scoped and visible. It also surfaces stale credentials, unreviewed access paths and data nobody has looked at, before any of those become an incident. [Governance](08-governance.md) has the detail.
-
 Connecting the material does not finish the job. An organization's systems are a haystack, and the thing worth finding is a needle somewhere inside it. Expecting AI to search the whole haystack does not work and costs a great deal to watch. **That is what changes Direction.** The people who work on a system every day know roughly where the needle fell, so the most valuable thing they contribute is a pointer at the part of the system to read first. Direction that points, together with context that is real, is what produces Success worth having, and both parts already exist in most organizations.
 
-It runs in a loop. Every pass adds context. Markdown files kept beside the work hold the goal, what is settled, what remains, and what was ruled out, and that written summary is what lets any agent pick the job up. No single agent has to hold the work anymore. [Context](05-context-engineering.md#where-context-lives) covers how those files are kept.
+It runs in a loop. Every pass can add context. Markdown files kept beside the work hold the goal, what is settled, what remains, and what was ruled out, and that written summary is what lets any agent pick the job up. No single agent has to hold the work anymore. [Context](05-context-engineering.md#where-context-lives) covers how those files are kept.
 
 > After each success and each failure, the context files are written before the next attempt.
 
@@ -113,3 +125,5 @@ The four stages are Context, Direction, Action, and Success. They were named car
 Orchestration should not be a run of unconnected interactions.
 
 Every cycle worth running leaves something behind: what was learned, what held up when it was checked, what was missing, which decisions were made and why. Humans supply purpose and accountability. AI contributes reasoning, exploration, retrieval, execution, and evidence. The system supplies reality and the evidence of what actually happened. What comes out becomes part of the context the next cycle starts from.
+
+The stronger claim is operational, not mystical: **preserved learning should make future work easier to understand, safer to execute, or easier to validate.** When it does not, the learning is not yet useful enough to carry forward.
