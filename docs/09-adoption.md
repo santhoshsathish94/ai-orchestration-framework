@@ -9,18 +9,18 @@ mattered.
 
 ## What is actually being adopted
 
-A team already using AI is already running three of the stages. Somebody gives the Direction, AI
-performs the Action from whatever that one human can hand over, and after several passes the result
-becomes Success. That part needs no rollout.
+Clover does not ask teams to replace human judgment with AI. It asks teams to make the working
+relationship explicit: **System → Human → AI**.
 
-What gets adopted is Context. AI reads the current systems the organization uses — the repositories
-with their many projects and documentation, the datasources the applications connect to, the logs
-and telemetry, the deployment environments, the running applications — instead of reading what one
-human could hand over from memory. Alongside it, the people who work in a system every day start
-saying where the answer probably is, because the systems are a haystack and a pointer is worth more
-than a longer description.
+- **System** is the reality being worked on — an existing system or the system being built, with its
+  data, behavior, state, history, constraints, and evidence.
+- **Human** owns Direction — purpose, intended outcomes, priorities, acceptable risk, constraints,
+  boundaries, and accountability.
+- **AI** provides capability and execution inside that Direction, using the system as Context to
+  determine and carry out how the work should happen.
 
-The rest of this page is about getting that stage in place and keeping it there.
+The four operational stages remain Context → Direction → Action → Success. Growth is the learning
+layer that can emerge from repeated cycles; it is not a fifth task a team has to run.
 
 ## The setup
 
@@ -48,8 +48,8 @@ team will ask before any of it is granted.
 
 Orchestration sits above the systems a team already runs. The work already happens somewhere —
 repositories, tickets, pipelines, logs, data stores — and the layer carries context, direction,
-execution, evidence and learning across whatever those happen to be. What changes is how the work
-gets directed. The systems underneath keep running as they are.
+execution, evidence and learning across whatever those happen to be. What changes is how the work is
+coordinated. The systems underneath keep running as they are.
 
 That is the practical reason adoption can start small. There is no platform decision to make and no
 migration to fund. A team that stops is left with exactly what it had.
@@ -58,8 +58,8 @@ There is still work in it. The layer needs access to the places the answers live
 should be scoped on purpose: read-only where reading is enough, mirroring what the human driving the
 work can already see, and human approval kept wherever a mistake would be expensive or hard to
 reverse. [The orchestration environment](orchestration-environment.md) covers what to connect and in
-what order, and [governance](08-governance.md#questions-your-security-team-will-ask) covers the
-questions a security team will ask before any of it is granted.
+what order, and [governance](08-governance.md) covers the questions a security team will ask before
+any of it is granted.
 
 ## The stages do not cost the same to adopt
 
@@ -78,7 +78,12 @@ happen, and where they think the answer is, before the work starts. No tooling a
 front of it, and once the systems can be read, the direction is given against what is actually there.
 
 **Action** widens on its own once Context and Direction are steady. What AI is trusted to carry
-follows what has already held up in work of that kind.
+follows what has already held up in work of that kind. More capable models can increase what can be
+delegated inside Action, but they do not change the ownership of Direction.
+
+Competition may increase pressure to automate faster. Clover treats that as a reason to improve
+execution, not as a reason to hand purpose or accountability to AI. **Direction is not delegated by
+competition.**
 
 **Success** is the first discipline that changes how people report. Teams that start saying what they
 checked, what they observed, and where they stopped find out quickly how much of their reporting had
@@ -102,7 +107,8 @@ been assertion.
 5. **Let people ask in whatever way they find natural.** When most questions can be asked and answered
    in conversation, the bottleneck stops being whoever knows the system best.
 6. **Widen what AI decides as results hold**, following
-   [the rules for widening](04-framework.md#widening-what-ai-decides) rather than enthusiasm.
+   [the rules for widening](04-framework.md#widening-what-ai-decides) rather than enthusiasm. This
+   changes delegated execution inside Action; it does not transfer Direction.
 7. **Keep a markdown file beside the work** holding the goal, what is settled, what remains, and what
    was ruled out. That file is what lets any agent pick the job up, so the work stops depending on one
    agent or one session. [Context engineering](05-context-engineering.md#where-context-lives) covers
@@ -113,6 +119,11 @@ been assertion.
 A few people being good at AI does not make an organization capable. The value compounds when
 context, practices and lessons are shared, and it stalls when they stay with whoever learned fastest.
 The context files are most of the sharing mechanism, which is why writing them is worth insisting on.
+
+Growth can emerge from any part of the cycle: new system understanding, analyses, decisions, actions,
+successes, failures, and patterns that become visible across repeated work. That learning can improve
+humans, AI usage, the system itself, teams, and organizational practice without requiring the same
+AI model to change.
 
 Two things make the sharing happen. People need room to try something and have it not work, because a
 team that is penalized for a failed attempt stops reporting the failed attempts. And somebody has to
@@ -131,6 +142,8 @@ What is worth watching:
 - Whether claims arrive with what was checked and where it stopped, unprompted.
 - Whether the context files from earlier cycles are being read, and not only written.
 - Whether anyone had to reconstruct work a previous session already did.
+- Whether teams are widening AI's execution autonomy based on evidence rather than competitive pressure.
+- Whether the human owner of Direction and accountability remains explicit as AI capability changes.
 
 ## Related
 
