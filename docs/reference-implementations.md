@@ -1,17 +1,14 @@
 # Reference Implementations
 
-Three patterns teams can adopt and adapt. They are not separate frameworks. Each one shows how [the
-Clover framework](04-framework.md) applies to a recurring organizational problem.
+Four patterns teams can adopt and adapt. They are not separate frameworks. Each one shows how [the Clover framework](04-framework.md) applies to a recurring organizational problem.
 
-> **Status — what these actually are.** All three have been **built and used against real
-> organizational data** — repositories, logs, telemetry and job definitions.
+> **Status — what these actually are.** The first three have been **built and used against real organizational data** — repositories, logs, telemetry and job definitions.
 >
-> None of them is always-on, and none is adopted organization-wide. The knowledge capability is
-> assembled per question rather than running as a product. Each pattern depends on a human providing
-> the map, reviewing the output, and holding the approvals.
+> The runtime enforcement reference is an **executable reference pattern**, not a claim that Clover itself provides a production enforcement service.
 >
-> These patterns assume an [orchestration environment](orchestration-environment.md) is in place —
-> read-only access across the systems the organization already runs.
+> None of these patterns is always-on, and none is adopted organization-wide. The knowledge capability is assembled per question rather than running as a product. Each pattern depends on a human providing the Direction, reviewing the output, and holding the approvals.
+>
+> These patterns assume an [orchestration environment](orchestration-environment.md) is in place — access across the systems the organization already runs, scoped to the work.
 
 ## 1. Cross-Team Knowledge Access
 
@@ -49,10 +46,7 @@ The knowledge was never missing. It was in the code and in the running system, a
 
 > Reduce unnecessary coordination by making existing organizational knowledge directly accessible.
 
-The examples above were run against real systems, and in both the answer was reached by working
-backwards from the reported symptom to the source rather than from a summary prepared in advance.
-That is the part that matters. It is what makes the pattern hold when the question is one nobody
-anticipated, and when the people who would have known are no longer there to ask.
+The examples above were run against real systems, and in both the answer was reached by working backwards from the reported symptom to the source rather than from a summary prepared in advance. That is the part that matters. It is what makes the pattern hold when the question is one nobody anticipated, and when the people who would have known are no longer there to ask.
 
 ---
 
@@ -98,8 +92,7 @@ Incorrect report values trigger remediation. AI traces the transformation, fixes
 
 ### Outcome
 
-> Move from a deployed change to a demonstrated outcome — the original production signal stops and
-> stays stopped.
+> Move from a deployed change to a demonstrated outcome — the original production signal stops and stays stopped.
 
 ---
 
@@ -109,60 +102,80 @@ Incorrect report values trigger remediation. AI traces the transformation, fixes
 
 ### Underlying problem
 
-A batch of defects arrives as a single ticket. The work of triaging them is mostly navigation: which
-of them are real, which system each one actually originates in, and which of them share a cause.
+A batch of defects arrives as a single ticket. The work of triaging them is mostly navigation: which of them are real, which system each one actually originates in, and which of them share a cause.
 
-That navigation is slow because it crosses boundaries. A defect reported against a page may live in
-a downstream service, a data mapping, or a configuration value, and the human triaging usually only
-knows some of those systems well.
+That navigation is slow because it crosses boundaries. A defect reported against a page may live in a downstream service, a data mapping, or a configuration value, and the human triaging usually only knows some of those systems well.
 
 ### Implementation
 
-Give the orchestration layer the ticket reference and read access across the repositories involved,
-then let it work the batch rather than one item at a time:
+Give the orchestration layer the ticket reference and read access across the repositories involved, then let it work the batch rather than one item at a time:
 
 1. Read the ticket and separate it into individual defects.
-2. For each, locate the responsible code — **following dependencies across repositories** rather than
-   assuming the defect lives where it was reported.
+2. For each, locate the responsible code — **following dependencies across repositories** rather than assuming the defect lives where it was reported.
 3. Propose focused changes, each with the reasoning that led to it.
 4. Open them for human review as normal pull requests.
-5. On approval, trigger the existing pipeline and request the human approval the pipeline already
-   requires before a test environment is updated.
-6. Verify the fixes against the running test environment and report which defects are actually
-   closed — and, for the rest, what was learned about why they are not.
+5. On approval, trigger the existing pipeline and request the human approval the pipeline already requires before a test environment is updated.
+6. Verify the fixes against the running test environment and report which defects are actually closed — and, for the rest, what was learned about why they are not.
 
 ### What the human contributes
 
-The map. Which system is responsible for what, and which component talks to which. That context is
-the difference between diagnosis and a confident guess, and it does not come from the code alone.
+The map. Which system is responsible for what, and which component talks to which. That context is the difference between diagnosis and a confident guess, and it does not come from the code alone.
 
-Review and approval also stay human. The volume of change this produces is exactly the situation in
-which rubber-stamping becomes tempting.
+Review and approval also stay human. The volume of change this produces is exactly the situation in which rubber-stamping becomes tempting.
 
 ### Outcome
 
-> Turn a batch of defects from a queue of individual investigations into one orchestrated cycle,
-> ending in evidence of which are genuinely closed.
+> Turn a batch of defects from a queue of individual investigations into one orchestrated cycle, ending in evidence of which are genuinely closed.
 
-A partial result is the normal result, and a useful one. Knowing that some defects remain, and why,
-is what makes the next cycle better informed than the last.
+A partial result is the normal result, and a useful one. Knowing that some defects remain, and why, is what makes the next cycle better informed than the last.
 
-The orchestration itself has been demonstrated end to end — investigation, root cause, focused change,
-validation, and evidence assembled for a human approval decision. What has not been exercised is the
-last mile: standing this up as the routine path for a team's production exceptions, with the approval
-and deployment gates wired into their real tooling.
+The orchestration itself has been demonstrated end to end — investigation, root cause, focused change, validation, and evidence assembled for a human approval decision. What has not been exercised is the last mile: standing this up as the routine path for a team's production exceptions, with the approval and deployment gates wired into their real tooling.
+
+---
+
+## 4. Runtime Enforcement for Verification Boundaries
+
+**Type:** Executable Reference Pattern
+
+### Underlying problem
+
+Agent instructions are not an enforcement mechanism. A capable model can ignore `AGENTS.md`, a system prompt, or a tool convention under pressure. When a verification control is important to the meaning of **Success**, the environment should enforce the boundary rather than relying only on the model to behave correctly.
+
+### Implementation
+
+The [runtime-enforcement reference](../reference/runtime-enforcement/) demonstrates two narrow implementation patterns:
+
+- **Docker filesystem isolation:** implementation files are mounted writable while verification artifacts are mounted read-only.
+- **Tool-layer rejection:** a write gateway rejects paths designated as verification controls before the underlying filesystem operation occurs.
+
+The example protects paths such as `tests/`, `spec/`, and common test/spec filename patterns. Real deployments should define the protected set for their own repositories and acceptance model.
+
+The runtime reference intentionally does not add another Clover stage. It strengthens the boundary inside **Action** and **Success**:
+
+**Direction:** the human decides whether verification controls may change.
+
+**Action:** the agent executes within the permissions the environment grants it.
+
+**Success:** the evidence remains trustworthy because the agent cannot silently redefine the verification boundary.
+
+### Production interpretation
+
+This pattern is not a security certification and Docker is not mandatory. The enforcement point can be a container runtime, filesystem permission, CI identity, protected branch, MCP/tool gateway, service policy, or another control that exists outside the model.
+
+The important design rule is:
+
+> **When a boundary matters to Success, enforce it outside the model wherever the environment allows.**
+
+The reference implementation closes a specific gap between documentation and runtime behavior. It does not claim to solve every agent-security problem, and it does not claim that the current Clover orchestration engine automatically enforces test immutability everywhere.
 
 ---
 
 ## Built on the four working stages
 
-All three run the same cycle:
+All four run the same cycle:
 
 > **Context → Direction → Action → Success**
 
-Cross-Team Knowledge Access spends most of its time in Context. Production Exception Remediation
-carries a cycle all the way to Success in the real environment. Multi-Repository Defect Remediation
-loops the hardest, because what the unresolved defects showed is written back into Context and is
-what the next pass starts from.
+Cross-Team Knowledge Access spends most of its time in Context. Production Exception Remediation carries a cycle all the way to Success in the real environment. Multi-Repository Defect Remediation loops the hardest, because what the unresolved defects showed is written back into Context and is what the next pass starts from. Runtime Enforcement strengthens the execution and validation boundaries without adding a stage.
 
-The patterns add operational detail where a recurring problem needs it. None of them adds a stage.
+The patterns add operational detail where a recurring problem needs it. None of them adds a fifth operational stage.
