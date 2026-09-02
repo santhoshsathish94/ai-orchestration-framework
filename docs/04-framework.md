@@ -152,6 +152,10 @@ Because the system is already readable, Direction can point instead of describin
 
 Clover does not give AI ownership of Direction. AI can sharpen a direction, ask questions, identify conflicts, surface risks, and recommend alternatives. It does not become accountable for deciding what outcome the system should pursue. A system operating on partial knowledge should not be allowed to define its own purpose in a real-world environment where even humans cannot fully understand every consequence.
 
+Clover also does not make competitive pressure a basis for changing this boundary. A stronger model, a faster model, or fear of falling behind may change how much of **Action** an organization chooses to automate. None of those things transfers **Direction** to AI. **Do not transfer Direction to AI merely because AI becomes capable enough to perform it.**
+
+A useful analogy is a journey: **the system is the map, humans choose the destination, and AI is a means of getting there.** Different models can change the speed or capability of the journey, but a more capable means does not change the destination. The same principle holds whether an organization uses an older model, a newer frontier model, several models, or no AI at all.
+
 **Core question.** What needs to be done, what outcome is worth pursuing, and what must not happen?
 
 **What the human holds.** Purpose, priorities, the intended outcome, constraints, risk boundaries, relevant pointers into Context, important process requirements, what counts as good enough, what stays out of scope, and accountability for the outcome.
@@ -205,79 +209,34 @@ Four questions do the work:
 - **Did anyone verify it, or is someone asserting it?** "It works" from a human or an AI establishes nothing on its own.
 - **Does it hold up again?** Something seen working once may not repeat. An automated check that fails without the change and passes with it is a different claim from a manual look.
 - **Did the thing we cared about move?** A passing test says the code behaves. A before-and-after measurement says the problem changed.
-- **Did it hold where it counts?** The strongest evidence is the original signal disappearing in the real environment and staying gone.
+- **Did it hold where it counts?** A local run can be useful and still say nothing about the production environment.
 
-State what you checked, what you observed, and where you stopped. Stopping early is fine and often correct — a small internal change can be genuinely complete once a test covers it, and production observation is not always available or worth its cost. What causes damage is describing weak evidence in the language of strong evidence. "Validated in the test environment, not yet observed in production" is a complete and honest claim. "Verified" on its own is not.
+A good Success record says what was checked, where, how often, what the result was, and what remains unknown. That record becomes part of Context for the next cycle.
 
-### When Success fails
+## Failure is also evidence
 
-A failed check is a normal outcome rather than an exception to handle later. When the evidence does not support the intended outcome, **return to Context, not to Action.**
+A failure is not a reason to retry blindly. It is new information about the system.
 
-Retrying a fix that just failed is the common waste. The second attempt runs on the same information as the first and reaches the same place, faster. A second attempt needs new information: what the environment did instead, which assumption broke, which signal nobody had looked at yet. That new information gets written into the context files before the attempt is made.
-
-Failure contributes to Growth because it changes what the system, human, and AI know for the next cycle. The failure is not merely a reason to try another Action; it is information that can improve future Context and may change future Direction as well.
-
-More on this stage in [Success in practice](07-success.md).
-
----
+When an Action fails, the next cycle should start from what the failure established: which assumption was wrong, which constraint appeared, what the system actually did, and what changed between attempts. That is how failure becomes learning instead of repetition.
 
 ## Widening what AI decides
 
-The four stages are how the work runs. How much of the path AI determines for itself changes over time, as tooling, context, experience, validation, and trust mature.
+Clover does not prescribe one permanent level of AI autonomy. It gives a rule for widening it: **increase autonomy as trust matures, while keeping human ownership of Direction and accountability intact.**
 
-What does not move is the ownership boundary: **the system provides reality, the human owns purpose and accountability, and AI determines and executes the path within human Direction.**
+A team can let AI determine more of the path when the results are repeatedly good in that context, the work is observable, and the consequences are acceptable or reversible. When those conditions stop holding, the autonomy should narrow again.
 
-The human may delegate more of the path as evidence accumulates, but Clover does not turn that delegation into ownership of Direction.
-
-The same three rules apply:
-
-- **Results decide, rather than confidence.** Widen what AI determines for itself where outcomes of that kind have repeatedly held up without rework or intervention. Narrow it again the moment they stop.
-- **Blast radius overrides track record.** Where a mistake is expensive or hard to reverse, human approval stays regardless of how well things have gone.
-- **It is granted per context, rather than globally.** A team may let AI plan and execute freely inside a well-understood remediation flow while approving every step of anything touching customer data.
-
-What moves is how much of the path AI determines. Who owns the objective, the constraints, the boundaries, and the outcome does not move. [Governance](08-governance.md) covers how that is held in practice.
+What moves is how much of **Action** AI determines. The ownership boundary does not move merely because AI becomes more capable, because a newer model is available, or because competitors are moving faster.
 
 ## Applying the framework
 
-Clover is technology independent. It fits anywhere work has an intended outcome that somebody has to stand behind:
+Start with a real problem. Establish what is true about the system. Give clear human Direction against that Context. Let AI determine and execute the path within the stated boundaries. Verify the intended outcome in the real environment. Write down what the cycle established before the next attempt.
 
-- Software engineering
-- DevOps
-- Quality assurance
-- Production operations
-- Customer support
-- Security operations
-- Product management
-- Finance
-- Human resources
-- Business operations
+The four stages stay simple:
 
-The vocabulary changes and the cycle does not. The same priority remains:
+**Context → Direction → Action → Success**
+
+The deeper discipline is the relationship around them:
 
 **System → Human → AI**
 
-And the same learning principle remains:
-
-**Repeated cycles → patterns → learning → better future cycles**
-
-For practical patterns, see **[Reference Implementations](reference-implementations.md)**.
-
-### Example: a recurring production exception
-
-**Context** — the repositories, the logs and telemetry, the deployment environments and the running application are already readable, along with the ticket, the history, and any earlier attempt at this exception.
-
-**Direction** — resolve a recurring production exception. Say which systems the fix may touch, what must not happen, who approves the deployment, and which part of the system to look at first.
-
-**Action** — trace the exception through the logs and the code, identify the root cause, make the focused change, write the regression test, raise it for review, and adapt if the evidence contradicts the diagnosis.
-
-**Success** — validate outside production, give the approver concrete evidence, deploy, and watch until the original exception stops appearing and stays gone.
-
-**Then back to Context** — write what this pass established into the file beside the code, whether the exception stopped or not, so the next attempt or the next incident of that shape starts from it.
-
-### Example: a cross-team knowledge gap
-
-A team should not have to contact several other teams to reconstruct information that already exists in repositories, jobs, telemetry, documentation, and history. An AI knowledge capability can retrieve that Context and explain it, while people keep the decisions and the ownership.
-
----
-
-## Note — the hypothesis layer is not in this document
+The system grounds the work in reality. The human owns purpose and accountability. AI applies capability to determine and execute the path. Repeated cycles can create **Growth** by preserving what reality taught the people, the AI system, and the systems around them.
