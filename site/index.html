@@ -79,11 +79,13 @@
             <strong>Context&nbsp;→ Direction&nbsp;→ Action&nbsp;→ Success</strong>.</p>
           <p class="hero__kind">A way of working rather than software. There is nothing to install,
             and it runs on top of the systems a team already has.</p>
+          <p style="margin-top:1rem"><strong>Capability may scale. Direction remains human.</strong>
+            The system is the map, humans choose the destination, and AI is a means of getting there.</p>
         </div>
       </div>
 
       <dl class="kv hero__leaves">
-        <div><dt>Context</dt><dd>Everything the work reasons from. At its best, the systems the organization already runs.</dd></div>
+        <div><dt>Context</dt><dd>Everything the work reasons from. At its best, the systems the organization already runs or the reality already established in a system being built.</dd></div>
         <div><dt>Direction</dt><dd>The human controls what matters, the desired outcome, constraints, boundaries, and what must not happen.</dd></div>
         <div><dt>Action</dt><dd>AI determines how the work should happen and executes within those boundaries.</dd></div>
         <div><dt>Success</dt><dd>The real environment shows the intended outcome.</dd></div>
@@ -340,21 +342,22 @@
 
         <div class="story__body">
         <header class="story__intro">
-          <p class="story__act">Five leaves · what adoption leads to</p>
+          <p class="story__act">Five leaves · what adoption can produce</p>
           <h3 class="story__title">The growth clover</h3>
-          <p class="story__lede">Nobody chooses this one. It is what happens to AI while the other four
-            stages run, and no team in an organization operates it.</p>
+          <p class="story__lede">Nobody runs this one. It is the learning that can emerge when the other
+            four stages repeat and what they reveal is preserved.</p>
         </header>
 
         <ol class="story__steps">
           <li class="story__step" id="fifth-leaf" data-leaf="growth" data-caption="the growth clover">
             <h4>Growth</h4>
-            <p>What AI learns, and the expertise it forms, out of the other four stages. Nobody in an
-              organization runs it. It belongs to the frontier AI companies, who hold the volume of
-              data that everyone's usage generates.</p>
-            <p class="note">This is a statement about how information accumulates in general. It is
-              not a claim that any AI provider trains on customer or enterprise work, and many state
-              plainly that they do not.</p>
+            <p>What repeated cycles can teach: better system understanding, better human judgment,
+              useful patterns, better team practice, better use of AI, and other accumulated learning.
+              Growth can emerge across the system, humans, AI, teams, and organizations; it does not
+              belong to one actor.</p>
+            <p class="note">The underlying AI may also improve through provider-controlled training and
+              refinement, but this framework does not claim that providers train on customer or
+              enterprise work.</p>
           </li>
 
           <li class="story__step" id="question" data-leaf="" data-caption="the unknown clover" data-ink>
@@ -363,8 +366,8 @@
             <p>AI already works across more fields than any one of us can, and several companies are
               each building their own. Those systems already reach each other, and the data behind
               that traffic passed what a human can hold some time ago.</p>
-            <p class="ask__q">With everything AI can already do, how much more growth do we seek — and
-              in the progress of growth, who stays in control?</p>
+            <p class="ask__q">With capability continuing to grow, how do organizations keep purpose,
+              accountability, and Direction human?</p>
             <p class="note">This question is followed further in the repository, kept separate from
               the engineering material:
               <a href="https://github.com/santhoshsathish94/clover-framework/blob/main/hypothesis/ai-future.md">The AI Future →</a></p>
@@ -388,106 +391,92 @@
         <li>
           <span class="run__node" aria-hidden="true">1</span>
           <p class="run__leaf">Context <span class="owner owner--ai">AI</span></p>
-          <p class="run__line">Connected and readable before anyone asks:</p>
-          <ul class="run__chips">
-            <li><span class="chip chip--read">account service repository</span></li>
-            <li><span class="chip chip--read">subscription datasource</span></li>
-            <li><span class="chip chip--read">development logs</span></li>
-            <li><span class="chip chip--read">development environment</span></li>
-            <li><span class="chip chip--read">the running account page</span></li>
-          </ul>
+          <p>Read the current repository, data model, API, tests and surrounding application behavior.
+            The system supplies the reality; the human does not have to reconstruct it from memory.</p>
         </li>
-
         <li>
           <span class="run__node" aria-hidden="true">2</span>
           <p class="run__leaf">Direction <span class="owner owner--human">Human</span></p>
-          <p class="run__said">“Show the renewal date on the account page. Read only the account being
-            looked at, not the whole subscription table. Start in the account service.”</p>
+          <p>The human sets the intended outcome, what must not change, and what evidence will be enough.
+            AI can challenge or clarify the direction, but does not own it.</p>
         </li>
-
         <li>
           <span class="run__node" aria-hidden="true">3</span>
           <p class="run__leaf">Action <span class="owner owner--ai">AI</span></p>
-          <p class="run__line">Reads the account service and finds the renewal date already stored,
-            under a different column name, on a row the account query loads anyway. Then:</p>
-          <ul class="run__chips">
-            <li><span class="chip">reads the column</span></li>
-            <li><span class="chip">adds the field to the account response</span></li>
-            <li><span class="chip">renders it on the page</span></li>
-            <li><span class="chip">writes a test</span></li>
-            <li><span class="chip">runs it in development</span></li>
-          </ul>
+          <p>AI determines the operational path, makes the focused change, and runs the relevant checks
+            within the stated boundaries.</p>
         </li>
-
         <li>
           <span class="run__node" aria-hidden="true">4</span>
-          <p class="run__leaf">Success <span class="owner owner--human">Human</span> <span class="owner owner--ai">AI</span></p>
-          <ul class="run__chips">
-            <li><span class="chip chip--ok">date visible on the running page</span></li>
-            <li><span class="chip chip--ok">test fails without the change</span></li>
-            <li><span class="chip chip--ok">still one account row read, not the table</span></li>
-          </ul>
-          <p class="run__line">A human reads the evidence and decides it is enough.</p>
+          <p class="run__leaf">Success <span class="owner owner--human">Human + system</span></p>
+          <p>The environment demonstrates whether the intended outcome occurred. The human remains
+            accountable for the result.</p>
         </li>
       </ol>
+    </div>
+  </section>
 
-      <p class="run__loop"><span class="run__loop-mark" aria-hidden="true">↺</span> Back to Context.
-        The context file beside the code records the column name and what the query is allowed to
-        read. The next change to this page starts from there, and it starts there whether this run
-        succeeded or failed.</p>
+  <!-- ============ AGENT FILE ============ -->
+  <section class="band" id="agent-file">
+    <div class="wrap">
+      <p class="eyebrow">For AI agents</p>
+      <h2>One file tells the agent how to work.</h2>
+      <p class="lede">CLOVER ships an <code>AGENTS.md</code> at the repository root. It carries the stages,
+        evidence rules, authority boundaries, and context handoff so the work does not depend on one
+        agent or one session.</p>
+      <a class="btn" href="https://github.com/santhoshsathish94/clover-framework/blob/main/AGENTS.md">Read AGENTS.md →</a>
+    </div>
+  </section>
 
-      <p class="note" style="margin-top:1.6rem">AI will also follow a wrong thread a long way with
-        complete confidence. A human states the outcome, notices the drift early, and decides when the
-        evidence is enough.</p>
+  <!-- ============ SECURITY / GOVERNANCE ============ -->
+  <section class="band band--soft" id="governance">
+    <div class="wrap">
+      <p class="eyebrow">Security and governance</p>
+      <h2>Capability is not authority.</h2>
+      <p class="lede">CLOVER keeps the system, human, and AI responsibilities distinct. More capable AI
+        can change execution. It does not acquire ownership of the destination.</p>
+      <div class="grid grid--3" style="margin-top:1.6rem">
+        <div class="card"><h3>System</h3><p>Reality: data, state, behavior, history, constraints, evidence.</p></div>
+        <div class="card"><h3>Human</h3><p>Direction: purpose, destination, acceptable risk, boundaries, accountability.</p></div>
+        <div class="card"><h3>AI</h3><p>Capability: reasoning, planning, coordination, tools, execution within Direction.</p></div>
+      </div>
+      <p style="margin-top:1.4rem"><strong>Direction is not delegated by competition.</strong> Competitive
+        pressure may increase the desire to automate execution, but it is not a reason to hand purpose
+        or accountability to AI. Production changes and other high-blast-radius actions remain subject
+        to human approval.</p>
+      <a class="btn btn--plain" href="security/">Security and governance →</a>
     </div>
   </section>
 
   <!-- ============ WHAT IT IS NOT ============ -->
-  <section class="band band--soft" id="scope">
+  <section class="band" id="not">
     <div class="wrap">
-      <p class="eyebrow">Scope</p>
-      <h2>What it is not</h2>
-      <dl class="stack stack--2">
-        <div><dt>Not software</dt><dd>There is nothing to install. It is a way of working.</dd></div>
-        <div><dt>Not a platform to migrate onto</dt><dd>It is a layer above the systems a team already runs. Adoption is incremental, and if a team stops, what is underneath is unchanged.</dd></div>
-        <div><dt>Not a replacement for how a team already works</dt><dd>It sits alongside Agile, incident management, or whatever is already in place.</dd></div>
-        <div><dt>Not about tool selection</dt><dd>It does not say which AI to use, and it does not cover cost, evaluations, data governance, or security review.</dd></div>
-        <div><dt>Not a runtime</dt><dd>Agent frameworks, workflow engines and tool protocols are choices that sit inside it, rather than competitors to it.</dd></div>
-        <div><dt>Not needed for everything</dt><dd>Trivial or throwaway work does not need a cycle. It is worth the effort where being wrong actually costs something.</dd></div>
-      </dl>
-      <p class="note" style="margin-top:1.3rem">It is also not an LLM framework, an agent SDK, or a
-        prompt library, and it makes no claim that unrestricted autonomous AI exists today.</p>
-      <p class="note">The four stages are not software-specific either. The same cycle is intended to
-        apply across DevOps, quality assurance, security operations, product management, finance,
-        human resources, and business operations. The vocabulary changes and the cycle does not.</p>
+      <p class="eyebrow">What it is not</p>
+      <h2>No magic, no takeover story.</h2>
+      <ul class="not-list">
+        <li>Not a product people must install</li>
+        <li>Not a replacement for human ownership</li>
+        <li>Not an AI model or model benchmark</li>
+        <li>Not a requirement to use multiple agents</li>
+        <li>Not an AI safety guarantee</li>
+        <li>Not a promise that AI will always be available or correct</li>
+        <li>Not a doctrine that capability should become authority</li>
+      </ul>
     </div>
   </section>
 
-  <!-- ============ WHERE TO GO NEXT ============ -->
-  <section class="band" id="next">
-    <div class="wrap">
-      <p class="eyebrow">Where to go next</p>
-      <h2>Three pages, depending on what you need</h2>
-      <div class="grid grid--3" style="margin-top:1.4rem">
-        <div class="card card--flat">
-          <h3>Getting started</h3>
-          <p>Stand up read-only access to the systems you already run, drop <code>AGENTS.md</code>
-            into a project, and run one real problem through the cycle.</p>
-          <p><a href="start/">Start here →</a></p>
-        </div>
-        <div class="card card--flat">
-          <h3>Security and governance</h3>
-          <p>What is actually happening, what needs to happen, and the one control most teams have
-            not built yet. Written for the review you will have to pass.</p>
-          <p><a href="security/">What a review will ask →</a></p>
-        </div>
-        <div class="card card--flat">
-          <h3>Evidence</h3>
-          <p>Two delivered outcomes and three patterns in use, each stating what was checked and
-            where the work stopped.</p>
-          <p><a href="evidence/">See the evidence →</a></p>
-        </div>
-      </div>
+  <!-- ============ UNKNOWN CLOVER ============ -->
+  <section class="band band--soft" id="unknown">
+    <div class="wrap narrow">
+      <p class="eyebrow">The unknown clover</p>
+      <h2>Capability can keep growing. The boundary does not have to.</h2>
+      <p class="lede">Clover leaves the future open without leaving its policy open. Models, tools, memory,
+        robotics, and collective systems may become far more capable. The framework's question is not
+        whether humans should surrender Direction. It is how far capability can grow while purpose and
+        accountability remain human.</p>
+      <p style="font-size:1.15rem"><strong>The system is the map. Humans choose the destination. AI is a means
+        of getting there.</strong></p>
+      <a class="btn btn--plain" href="https://github.com/santhoshsathish94/clover-framework/blob/main/hypothesis/ai-future.md">Read the future hypothesis →</a>
     </div>
   </section>
 
@@ -495,50 +484,8 @@
 
 <footer class="site-foot">
   <div class="wrap">
-    <div>
-      <h4>The framework</h4>
-      <ul>
-        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/01-problem.md">The problem</a></li>
-        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/02-philosophy.md">Philosophy</a></li>
-        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/03-principles.md">Principles</a></li>
-        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/04-framework.md">The framework</a></li>
-        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/orchestration-environment.md">The orchestration environment</a></li>
-        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/reference-implementations.md">Reference implementations</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Read</h4>
-      <ul>
-        <li><a href="./">The framework</a></li>
-        <li><a href="start/">Getting started</a></li>
-        <li><a href="security/">Security and governance</a></li>
-        <li><a href="evidence/">Evidence</a></li>
-        <li><a href="glossary/">Glossary</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Evidence</h4>
-      <ul>
-        <li><a href="https://github.com/santhoshsathish94/clover-framework/tree/main/case-studies">All case studies</a></li>
-        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/case-studies/01-contentful-migration.md">Contentful API migration</a></li>
-        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/case-studies/02-react-rsc-memory-leak.md">React RSC memory leak</a></li>
-        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/docs/reference-implementations.md">Reference implementations</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Project</h4>
-      <ul>
-        <li><a href="https://github.com/santhoshsathish94/clover-framework">GitHub repository</a></li>
-        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/CONTRIBUTING.md">Contributing</a></li>
-        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/CHANGELOG.md">Changelog</a></li>
-        <li><a href="https://github.com/santhoshsathish94/clover-framework/blob/main/LICENSE">License</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="wrap site-foot__end">
-    <p style="max-width:none">The website explains; the repository documents. Built from real
-      delivery work and still changing as the evidence does. An open, feedback-driven project by
-      <a href="author/">Santhosh Narayanan</a>.</p>
+    <p style="max-width:none">The website explains; the repository documents.
+      <a href="https://github.com/santhoshsathish94/clover-framework">Clover on GitHub</a>.</p>
   </div>
 </footer>
 
