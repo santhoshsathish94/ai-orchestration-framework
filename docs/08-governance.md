@@ -3,8 +3,8 @@
 Governance is what keeps the cycle safe as it scales. It makes ownership, access, attribution, and
 approval explicit, and it matters most where AI is the thing acting. It sits across [the Clover
 framework](04-framework.md) rather than inside one stage: Context is grounded in the system,
-Direction is owned by humans, Action is where execution boundaries apply, and Success is where
-somebody has to stand behind the evidence.
+Direction is owned by humans, Action is where delegated execution and approvals happen, and Success is
+where somebody has to stand behind the evidence.
 
 ## System → Human → AI
 
@@ -17,28 +17,17 @@ Clover keeps three responsibilities distinct:
 - **AI provides capability and execution.** AI can reason, plan, recommend, coordinate, implement,
   test, and adapt within the Direction humans set and the access they authorize.
 
-This boundary does not depend on which model is being used. A more capable model may change how much
-of the path can be delegated inside Action; it does not change who owns the destination.
+This boundary does not depend on which model is being used. A more capable model may increase what can
+be delegated for execution inside Action; it does not change who owns the destination.
 
 ## Capability may scale. Direction remains human.
 
-Clover does not support transferring organizational Direction to AI, regardless of how capable AI
-becomes. This is not a temporary safeguard for today's models. It is a foundational boundary of the
-framework.
-
-AI may become dramatically better at reasoning, planning, implementation, coordination, and
-execution. None of that creates authority over purpose, acceptable risk, priorities, boundaries, or
-accountability.
-
-> **Capability can increase. Authority does not have to.**
-
-## Direction is not delegated by competition
-
-Clover does not treat stronger models, faster models, competitive pressure, or fear of falling behind
-as reasons to transfer Direction to AI.
+AI capability is not authority, and authority is not accountability. Clover does not treat stronger
+models, faster models, competitive pressure, or fear of falling behind as reasons to transfer
+Direction to AI.
 
 Organizations may choose to automate more of the path because competition rewards speed. That can
-justify greater execution autonomy inside Action where the results are understood, observable, and
+justify broader delegated execution inside Action where the results are understood, observable, and
 reversible within acceptable bounds. It does **not** justify handing AI the authority to choose
 organizational purpose, acceptable risk, priorities, boundaries, or the outcome the organization is
 accountable for.
@@ -61,18 +50,16 @@ A useful Clover analogy is a journey:
 - **Human Direction is the destination.** It states where we intend to go and what constraints must
   hold on the journey.
 - **AI is a means of getting there.** Different models can be slower, faster, more capable, or more
-  economical. They can change the speed and way we travel without owning the destination.
+  economical. They can change the speed and way we travel without changing the destination.
 - **The system is the map and the terrain.** It tells us what exists, where the constraints are, what
   has already happened, and what evidence can show whether we are actually getting there.
 
 Humans can walk, run, drive, or use other tools. The framework cares about whether the intended
-outcome is reached, not about giving the means ownership of the destination. AI can materially
-improve speed and capability, but the meaningful outcome still belongs to the human/system
-relationship it is serving.
+outcome is reached, not about giving the means ownership of the destination.
 
 The analogy is intentionally broader than any particular AI product or model generation. It applies
 whether the organization uses an older model, a newer frontier model, several models, or no AI at all.
-The means can change; the destination does not unless humans change it.
+AI changes the means; it does not redefine the destination.
 
 ## Keep humans responsible
 
@@ -218,20 +205,25 @@ Until the tooling catches up, the approach leans on a human paying attention, an
 far worse than access does. Anyone adopting it inherits that limitation and should decide
 deliberately whether it is acceptable at their blast radius.
 
-## How much autonomy to grant
+## Delegated execution
 
-Governance is where ["increase autonomy as trust matures"](04-framework.md#widening-what-ai-decides)
-turns into something a team can decide and defend. Three rules keep it honest:
+Clover does not use "autonomy" as a maturity target. A team can choose to delegate more execution to
+AI inside a clearly defined human Direction, but the decision is made by the accountable human or
+organization.
 
-- **Results decide, rather than confidence.** Widen what AI determines for itself where outcomes of
-  that kind have repeatedly held up without rework. Narrow it again the moment they stop.
+Three rules keep delegated execution honest:
+
+- **Results decide, rather than confidence.** Delegate a particular execution pattern where outcomes
+  of that kind have repeatedly held up without rework. Narrow it again when they stop.
 - **Blast radius overrides track record.** Where a mistake is expensive or hard to reverse, human
   approval stays regardless of how well things have gone.
-- **It is granted per context, rather than globally.** A team may let AI plan and execute inside a
-  well-understood remediation flow while approving every step of anything touching customer data.
+- **Delegation is per context, rather than global.** A team may delegate a well-understood remediation
+  flow while approving every state-changing step touching customer data.
 
-What moves is how much of the path AI determines. Who owns the objective, the constraints, and the
-outcome stays where it was.
+What changes is the amount of execution work AI performs. What does not change is who owns Direction,
+the destination, the acceptable risk, the boundaries, and the outcome.
+
+> **Delegation can move work. It does not move Direction.**
 
 ## Controls are not the hard part
 
