@@ -2,9 +2,64 @@
 
 Governance is what keeps the cycle safe as it scales. It makes ownership, access, attribution, and
 approval explicit, and it matters most where AI is the thing acting. It sits across [the Clover
-framework](04-framework.md) rather than inside one stage: Context is where access is scoped,
-Direction is where ownership is stated, Action is where approvals bite, and Success is where
+framework](04-framework.md) rather than inside one stage: Context is grounded in the system,
+Direction is owned by humans, Action is where approvals and autonomy bite, and Success is where
 somebody has to stand behind the evidence.
+
+## System → Human → AI
+
+Clover keeps three responsibilities distinct:
+
+- **System is reality.** It may be an existing system or the system being built. Its data, behavior,
+  state, history, constraints, and evidence ground the work in what is actually happening.
+- **Human owns Direction.** Humans define purpose, intended outcomes, priorities, acceptable risk,
+  constraints, boundaries, and accountability.
+- **AI provides capability and execution.** AI can reason, plan, recommend, coordinate, implement,
+  test, and adapt within the Direction humans set and the access they authorize.
+
+This boundary does not depend on which model is being used. A more capable model may change how much
+of the path can be delegated inside Action; it does not change who owns the destination.
+
+## Direction is not delegated by competition
+
+AI capability is not authority, and authority is not accountability. Clover does not treat stronger
+models, faster models, competitive pressure, or fear of falling behind as reasons to transfer
+Direction to AI.
+
+Organizations may choose to automate more of the path because competition rewards speed. That can
+justify greater autonomy inside Action where the results are understood, observable, and reversible
+within acceptable bounds. It does **not** justify handing AI the authority to choose organizational
+purpose, acceptable risk, priorities, boundaries, or the outcome the organization is accountable for.
+
+The rule is intended to remain valid as models change: **do not transfer Direction to AI merely
+because AI becomes capable enough to perform it.** A model is a capability used to reach a destination;
+it is not the owner of the destination.
+
+This also matters in critical situations. AI services can be unavailable, rate-limited, delayed, or
+otherwise unsuitable at the moment they are needed most. Production incidents and other high-blast-
+radius situations therefore cannot assume that an AI path will always be available. Human responders
+and established operational mechanisms remain necessary, even in highly AI-enabled environments.
+
+## The destination, the vehicle, and the map
+
+A useful Clover analogy is a journey:
+
+- **Human Direction is the destination.** It states where we intend to go and what constraints must
+  hold on the journey.
+- **AI is the vehicle.** Different models can be slower, faster, more capable, or more economical,
+  just as different vehicles can change the speed and way we travel. Choosing a more capable vehicle
+  does not change the destination.
+- **The system is the map and the terrain.** It tells us what exists, where the constraints are, what
+  has already happened, and what evidence can show whether we are actually getting there.
+
+Humans can walk, run, drive, or use other tools. The framework cares about whether the intended
+outcome is reached, not about giving the tool ownership of the destination. AI can materially improve
+speed and capability, but the meaningful outcome still belongs to the human/system relationship it is
+serving.
+
+The analogy is intentionally broader than any particular AI product or model generation. It applies
+whether the organization uses an older model, a newer frontier model, several models, or no AI at all.
+AI changes the means; it does not redefine the destination.
 
 ## Keep humans responsible
 
@@ -86,9 +141,9 @@ new target. Treat the layer itself as a sensitive asset and scope it accordingly
 
 **"What leaves our environment, and who can see it?"**
 Code, log extracts, ticket contents and query results go to whichever AI provider the organization
-uses. Enterprise agreements commonly cover retention, training exclusion, residency and
-sub-processors, and those terms are **worth verifying rather than assuming.** This is a procurement
-and legal question, and it should be settled before access is granted rather than after.
+uses. Enterprise agreements commonly cover retention, training exclusion, residency and sub-processors,
+and those terms are **worth verifying rather than assuming.** This is a procurement and legal
+question, and it should be settled before access is granted rather than after.
 
 **"What stops secrets and personal data ending up in the context?"**
 By default, nothing. Repositories contain credentials more often than anyone admits, and logs
@@ -172,5 +227,5 @@ right and see no difference in how the work happens, because the constraint was 
 was whether people actually work this way.
 
 [Adoption](09-adoption.md) carries more weight than anything on this page. Keeping execution
-observable, attributable, and reversible where practical is the part this document covers. The rest
-of the effort belongs with the people who have to use it.
+observable, attributable, and reversible where practical is the part this document covers. The rest of
+the effort belongs with the people who have to use it.
