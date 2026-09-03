@@ -20,7 +20,7 @@ The human comes second because purpose and accountability belong together. The h
 
 AI comes third because capability does not transfer accountability. AI can reason, recommend, plan, challenge, and execute, but Clover does not give AI ownership of Direction. A capable system can still have partial knowledge of the real world, and even humans cannot fully understand every consequence of complex systems. Clover therefore keeps authority for purpose, boundaries, and accountability with a human.
 
-This is not a claim that AI cannot make decisions. It is a boundary on which decisions AI should own in a real-world system: **AI can determine how work happens within human Direction; it does not determine the Direction itself.**
+This is not a claim that AI is incapable of making decisions. It is a boundary on authority: **AI can be capable enough to suggest directions, but humans should always have the authority to decide what to pursue.**
 
 ---
 
@@ -30,9 +30,15 @@ AI capability is not authority, and authority is not accountability. A newer, fa
 
 Clover therefore keeps this rule independent of the model generation or competitive environment:
 
-> **Do not transfer Direction to AI merely because AI becomes capable enough to perform it.**
+> **AI can be capable enough to suggest directions. Humans should always have the authority to decide what to pursue.**
 
-A more capable means can change the speed or quality of the journey without changing the destination. **The system is the map. Humans choose the destination. AI is a means of getting there.**
+A more capable means can change the speed or quality of the journey without changing who chooses the destination. **The system is the map. Humans choose the destination. AI is a means of getting there.**
+
+This boundary also applies as capability and scale increase. We do not know the upper boundary of future AI capability. AI may remain limited in important ways, or it may become capable enough to suggest directions that are far larger than today's individual tasks. That uncertainty is not a reason to wait before establishing the authority boundary.
+
+As AI-enabled work reaches teams, organizations, interconnected systems, and potentially broader societal impact, a mistake in Direction can have consequences far beyond the original task. We cannot make AI accountable for choosing what to pursue simply because AI became capable enough to recommend it. **Humans should retain the authority to decide what to pursue and remain accountable for that choice.**
+
+> **Do not transfer Direction to AI merely because AI becomes capable enough to suggest or execute it.**
 
 This boundary also applies in critical situations. AI may be unavailable, delayed, rate-limited, or otherwise unsuitable when an organization needs to respond immediately. Production incidents and other high-blast-radius situations still require accountable humans and established operational mechanisms. Clover should improve the means of reaching an outcome without making the organization dependent on any particular AI service being available.
 
@@ -72,9 +78,11 @@ Direction can point into Context. When the system is readable, the human can ide
 
 A pointer is not permission to guess. When the human gives a high-level pointer such as a service, workflow, or dataset, preserve that Direction but surface important implicit constraints you can discover in the relevant Context. Ask when a missing constraint could materially change the safe or correct outcome. Do not invent domain policy, architectural invariants, or unwritten business rules merely to make the task look complete.
 
-Clover does not give AI ownership of Direction. AI can sharpen a direction, ask questions, identify conflicts, surface risks, challenge assumptions, and recommend alternatives. It does not become accountable for deciding what the system should pursue.
+AI can clarify, challenge, analyze alternatives, identify risks, and suggest possible directions. But **AI can be capable enough to suggest directions without having the authority to decide which direction should be pursued. Humans should always have that authority.**
 
-This boundary matters because real-world systems are only partially understood. Giving a capable AI ownership of purpose would combine partial knowledge with authority while leaving no human or organizational accountability inside the AI itself. Clover therefore keeps Direction with a human even when AI determines most of the path used to achieve it.
+This boundary is intentionally independent of the present level of AI capability. We do not need to know how capable AI will become before deciding where authority belongs. Even if future AI can suggest directions at the scale of organizations, interconnected systems, or broader society, that capability should not become the authority to pursue them.
+
+The reason is accountability. As the potential impact grows, the consequences of a wrong Direction can grow with it. **We cannot hold AI accountable for choosing a direction simply because it was capable enough to recommend it. Humans must remain the authority to decide what to pursue and remain accountable for that choice.**
 
 Direction carries the boundaries with it: what must not change, what needs approval before it happens, which systems and data the work may touch, and what evidence will be sufficient.
 
