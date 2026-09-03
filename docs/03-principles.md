@@ -60,7 +60,7 @@ Collecting everything is its own failure. Enough relevant context to reason corr
 
 Every pass adds context, and iteration feeds this stage rather than any other.
 
-> After each success and each failure, the context files are written before the next attempt.
+> After each favorable and unfavorable Outcome, the context files are written before the next attempt.
 
 What gets written is what was tried, what the environment showed, what turned out to be wrong, and what remains unknown. A summary kept beside the work carries that forward so the next cycle does not start from zero.
 
@@ -100,7 +100,7 @@ Reasoning, planning, tool selection, AI model selection, orchestration across ag
 
 Planning and doing sit on one stage on purpose. The plan can change when work meets reality, and adapting to new evidence is part of Action rather than a reason to pretend the original plan was complete.
 
-AI may execute tests and modify test code when the human explicitly directs that as part of the intended outcome. **Otherwise, verification artifacts that define whether Success is achieved should remain outside the agent's writable Action scope.** Test fixtures, regression assertions, acceptance criteria, and other validation controls should be protected from silent weakening or deletion.
+AI may execute tests and modify test code when the human explicitly directs that as part of the intended outcome. **Otherwise, verification artifacts that define whether the Outcome is acceptable should remain outside the agent's writable Action scope.** Test fixtures, regression assertions, acceptance criteria, and other validation controls should be protected from silent weakening or deletion.
 
 Humans and AI can share execution. The human retains the boundaries, approvals, and accountability even when AI performs most of the work.
 
@@ -108,23 +108,21 @@ Plan the smallest coherent path to the outcome. Run work in parallel only where 
 
 ---
 
-## 4. Success is the meaningful outcome demonstrated by the system
+## 4. Outcome is what reality shows
 
-*Stage: Success*
+*Stage: Outcome*
 
-Success means the intended outcome is demonstrated by evidence from the real system or environment. The meaningful outcome is produced through the interaction of three things: **human purpose and accountability, AI capability and execution, and the system itself**.
+Outcome is where the system or environment shows what actually happened as a result of the Action. It is deliberately broader than success: the Outcome may be favorable, unfavorable, partial, inconclusive, or otherwise different from what was intended.
 
-A closed task, a generated artifact, a passing build, or an AI statement that the work succeeded is not enough on its own. The evidence must connect to the outcome the human defined in Direction.
+The meaningful outcome is judged through evidence from the real system or environment. A closed task, a generated artifact, a passing build, or an AI statement that the work succeeded is not enough on its own.
 
-Verification boundaries matter. Whenever possible, the evidence used to declare Success should come from a check the agent could not silently redefine while performing the Action. Prefer protected test suites, independent fixtures, external assertions, separate environments, before/after measurements, or other validation mechanisms whose acceptance criteria remain outside the change being evaluated.
+Verification boundaries matter. Whenever possible, the evidence used to characterize the Outcome should come from a check the agent could not silently redefine while performing the Action. Prefer protected test suites, independent fixtures, external assertions, separate environments, before/after measurements, production signals, or other validation mechanisms whose acceptance criteria remain outside the change being evaluated.
 
-A passing test is only as meaningful as the integrity of the test and its acceptance criteria. Do not weaken, delete, bypass, or rewrite a verification control merely to make the result pass. If the test itself must change because the intended outcome changed, that change is part of Direction and should be explicit.
+A passing test is only as meaningful as the integrity of the test and its acceptance criteria. Do not weaken, delete, bypass, or rewrite a verification control merely to make the Outcome appear favorable. If the verification control itself must change because the intended outcome or its acceptance criteria changed, make that change explicit in Direction and ensure the resulting Outcome is evaluated independently.
 
-State what you checked, what you observed, and where you stopped. Stopping early is often correct when the available evidence is sufficient for the risk and scope of the work. The failure is describing weak evidence in the language of strong evidence.
+State what you checked, what you observed, what happened, and where observation stopped. The human holds the standard for what counts as sufficient evidence and remains accountable for the outcome. AI runs checks, gathers evidence, reports it accurately, and makes clear what it could not verify. The system or environment provides the reality against which the Outcome is judged.
 
-The human holds the standard for what counts as sufficient evidence and remains accountable for the outcome. AI runs checks, gathers evidence, reports it accurately, and makes clear what it could not verify. The system or environment provides the reality against which the outcome is judged.
-
-When the evidence does not support the intended outcome, return to Context rather than repeating the same Action. The failed result is information about reality and should change what the next cycle knows.
+When the evidence does not support the intended outcome, the unfavorable Outcome is still useful information about reality. Return to Context rather than repeating the same Action unchanged.
 
 ---
 
@@ -132,7 +130,7 @@ When the evidence does not support the intended outcome, return to Context rathe
 
 Growth is not a fifth operational stage and nobody has to run it. It is what can emerge when the four stages repeat and what they reveal is preserved and learned from.
 
-Growth can come from **all four stages**. Context can reveal how the system actually behaves and what information was missing. Direction can reveal whether the purpose, constraints, priorities, or process were appropriate. Action can reveal which approaches, tools, and execution patterns work. Success can reveal what actually held, what failed, and what the evidence showed.
+Growth can come from **all four stages**. Context can reveal how the system actually behaves and what information was missing. Direction can reveal whether the purpose, constraints, priorities, or process were appropriate. Action can reveal which approaches, tools, and execution patterns work. Outcome can reveal what actually happened, what held, what failed, and what the evidence showed.
 
 Failure is part of Growth. So are successful outcomes, analyses, discoveries about the current system, repeated patterns, and newly understood constraints. A failed attempt can teach more than a successful one when it exposes an assumption that reality rejected.
 
@@ -164,6 +162,6 @@ Growth does not belong to one actor. It is the accumulated learning that can eme
 | **Context comes from the real system.** | Reality over assumption. |
 | **Direction is a human decision.** | Purpose and accountability stay human. |
 | **Action applies AI capability to Context and Direction.** | AI determines the path without owning the destination. |
-| **Success is the meaningful outcome demonstrated by the system.** | Evidence over assertion. |
+| **Outcome is what reality shows.** | Evidence over a success-only label. |
 
 Growth is the learning layer around these four operational principles. It preserves what repeated cycles reveal so the next cycle can begin from better Context and better understanding.
