@@ -17,14 +17,14 @@ Clover keeps three responsibilities distinct:
 - **AI provides capability and execution.** AI can reason, plan, recommend, coordinate, implement,
   test, and adapt within the Direction humans set and the access they authorize.
 
-This boundary does not depend on which model is being used. AI can become far more capable, but that
-capability does not transfer authority over what should be pursued.
+This boundary does not depend on which model is being used or on today's model capability. AI can become
+far more capable, but capability does not create authority over what should be pursued.
 
 ## Capability may scale. Human authority remains.
 
 AI capability is not authority, and authority is not accountability. Clover deliberately does not make
-the claim that AI is or is not capable enough today to reason about large directions. The important
-boundary is what happens even if that capability grows enormously.
+the claim that AI is or is not capable enough today to reason about large directions. The boundary is
+what should remain true even if that capability grows enormously.
 
 > **AI can be capable enough to suggest directions. Humans should always have the authority to decide
 > what to pursue.**
@@ -33,10 +33,15 @@ AI may identify opportunities, challenge assumptions, compare alternatives, reco
 or surface consequences the human had not considered. None of that gives AI the authority to decide
 which direction should actually be pursued.
 
-That boundary matters more as scale increases. AI-enabled work is not limited to an individual task.
-It can affect teams, organizations, interconnected systems, and broader society. As the scale grows,
-the consequences of a wrong Direction can grow with it. Clover therefore keeps the authority to decide
-what to pursue with humans, together with accountability for that choice.
+This matters because the scale of AI-enabled action may grow far beyond an individual task. It can affect
+teams, organizations, interconnected systems, and broader society. As the scale grows, the consequences
+of a wrong Direction can grow with it. We cannot make the AI itself accountable for choosing that
+Direction simply because it was capable enough to recommend it. **Humans must retain the authority to
+decide what to pursue and remain accountable for that choice.**
+
+The unknown matters here. We do not know the upper boundary of future AI capability. It may remain
+limited, or it may become capable enough to suggest directions at scales we cannot meaningfully handle
+today. Clover does not require predicting which future arrives before establishing the boundary.
 
 A more capable AI can change the means available to reach an outcome. It does not change who decides
 whether that outcome should be pursued.
