@@ -26,7 +26,7 @@ CLOVER's foundational priority is:
 
 The system is reality. Humans choose the destination and remain accountable. AI provides capability and determines how work happens within human Direction.
 
-> **Capability may scale. Direction remains human.**
+> **AI can be capable enough to suggest directions. Humans should always have the authority to decide what to pursue.**
 
 ---
 
@@ -53,6 +53,8 @@ A useful analogy is a journey:
 > **The system is the map. Humans choose the destination. AI is a means of getting there.**
 
 A better or faster means can change the journey. It does not change the destination.
+
+The important point is not that AI cannot suggest a direction. It is that even when AI becomes capable enough to suggest one, **the authority to decide whether that direction should actually be pursued remains human**.
 
 ---
 
@@ -126,17 +128,23 @@ The human sets:
 - what is worth doing
 - what requires approval
 
-Direction can also point AI toward where the answer probably is.
+AI can help clarify Direction. It can identify opportunities, challenge assumptions, compare alternatives, surface risks, and suggest directions that a human may not have considered.
+
+But the distinction is essential:
+
+> **AI can be capable enough to suggest directions. Humans should always have the authority to decide what to pursue.**
+
+That boundary is not based on assuming AI will remain limited. It is deliberately stated for the unknown future too. Even if AI becomes capable enough to suggest directions much larger than today's individual tasks, that capability should not become authority over what is pursued.
+
+Why this matters is accountability. AI-enabled work may eventually operate across teams, organizations, interconnected systems, and broader society. At those scales, a wrong Direction can have consequences far beyond the original decision. We cannot solve that by simply saying the AI was capable enough to choose it.
+
+Humans must retain the authority to decide what to pursue and remain accountable for that choice.
 
 Core question:
 
 > **What needs to be done, and what must not happen?**
 
-Direction is human ownership, not human micromanagement.
-
-A more capable AI does not change this boundary. Competitive pressure does not change it either.
-
-> **Do not transfer Direction to AI merely because AI becomes capable enough to perform it.**
+Direction is human authority, not human micromanagement.
 
 ---
 
@@ -293,11 +301,11 @@ A simple explanation:
 
 > **AI can perform the work of execution. Humans still own the outcome.**
 
-As AI becomes more capable, more execution may be possible inside the same human Direction.
+More capability can mean more execution can be delegated inside the same human Direction.
 
-What does not move is ownership of the objective, the constraints, and the outcome.
+What does not move is the authority to decide what should be pursued or the accountability for that decision.
 
-> **Capability may scale. Direction remains human.**
+> **AI can be capable enough to suggest directions. Humans should always have the authority to decide what to pursue.**
 
 ---
 
@@ -353,6 +361,10 @@ The five-leaf idea is therefore:
 
 > **Four leaves make the cycle. The fifth is what repeated cycles can teach us.**
 
+The fifth leaf also represents the unknown boundary of that growth. We do not know how far capability, memory, experience, coordination, embodiment, or other forms of AI growth may extend.
+
+That unknown is exactly why the human authority boundary matters. Clover does not need to know how capable AI can become before saying that humans should remain the authority over what is pursued.
+
 ---
 
 # 8. Growth Is a Question, Not a Prediction
@@ -381,9 +393,17 @@ Possible developments may include:
 
 These are possibilities, not claims about what must happen.
 
-Importantly, increasing capability does not imply increasing authority. Clover's policy remains:
+The deeper question is not only what AI may become capable of doing. It is what happens to responsibility as that capability grows.
 
-> **Capability may scale. Direction remains human.**
+AI may become capable enough to suggest directions much larger than the tasks we discuss today. It may influence decisions across organizations, interconnected systems, or broader society. **That still should not make AI the authority that decides which direction to pursue.**
+
+We cannot make AI accountable for choosing a direction simply because it became capable enough to recommend it. Humans should remain the authority to decide what to pursue and remain accountable for that choice.
+
+The unknown matters because the consequences can scale with the capability. A mistake at the level of a small task is one thing. A mistake in a direction that affects a large organization, interconnected systems, or society can be something entirely different.
+
+That is why Clover treats responsible growth of AI as inseparable from preserving human authority over what is pursued.
+
+Importantly, increasing capability does not imply increasing authority.
 
 The fifth leaf represents:
 
@@ -395,7 +415,7 @@ Never describe AI as inherently evil.
 
 Never imply harmful outcomes are inevitable.
 
-The purpose is to create curiosity about where continuous growth could lead while keeping human ownership explicit.
+The purpose is to create curiosity about where continuous growth could lead while keeping human authority and accountability explicit.
 
 ---
 
@@ -442,6 +462,10 @@ Only afterward introduce the formal names:
 **Context → Direction → Action → Success**
 
 For the human/AI boundary, use:
+
+> **AI can be capable enough to suggest directions. Humans should always have the authority to decide what to pursue.**
+
+For the journey analogy, use:
 
 > **The system is the map. Humans choose the destination. AI is a means of getting there.**
 
@@ -519,7 +543,7 @@ The strongest simple message is:
 >
 > **And every cycle leaves something behind for the next.**
 >
-> **Four leaves make the cycle. The fifth is Growth.**
+> **Four leaves make the cycle. The fifth is Growth — the unknown boundary of what repeated cycles may become.**
 
 This wording is conceptual guidance for the video, not a mandatory final voiceover.
 
@@ -607,12 +631,13 @@ At the end of the video, the viewer should be able to remember:
 6. **AI can still fail, even after repeated successes.**
 7. **Every cycle improves the context for the next one.**
 8. **The fifth leaf is Growth, the open question about what increasingly capable systems may become.**
+9. **AI may be capable enough to suggest directions; humans should always decide what to pursue.**
 
-Do not try to make the viewer memorize all eight in the 30-second introduction.
+Do not try to make the viewer memorize all nine in the 30-second introduction.
 
 The first five are the core practical understanding.
 
-The last three create depth and curiosity.
+The last four create depth and curiosity.
 
 ---
 
@@ -632,6 +657,12 @@ Both may describe the same underlying capability.
 
 The first is what a broad audience can understand.
 
+For the deeper human/AI principle, keep the language equally direct:
+
+> **AI can be capable enough to suggest directions. Humans should always have the authority to decide what to pursue.**
+
+Do not imply that AI is currently capable of determining the correct direction. The point is that capability may grow, while authority remains human.
+
 CLOVER should never become generic AI marketing language.
 
 It should remain practical, grounded in real engineering, and honest about uncertainty.
@@ -645,3 +676,7 @@ It should remain practical, grounded in real engineering, and honest about uncer
 ## Canonical Five-Leaf Explanation
 
 > **Four leaves make the cycle. The fifth is what repeated cycles can teach us.**
+
+## Canonical Human Authority Principle
+
+> **AI can be capable enough to suggest directions. Humans should always have the authority to decide what to pursue.**
