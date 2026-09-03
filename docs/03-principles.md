@@ -56,7 +56,7 @@ Every pass adds context, and iteration feeds this stage rather than any other.
 
 > After each success and each failure, the context files are written before the next attempt.
 
-What gets written is what was tried, the context it ran in, what the environment showed, what turned out to be wrong, and what remains unknown. A summary kept beside the work carries that forward so the next cycle does not start from zero.
+What gets written is what was tried, what the environment showed, what turned out to be wrong, and what remains unknown. A summary kept beside the work carries that forward so the next cycle does not start from zero.
 
 What gets written down and what gets reused are different bars. A single good outcome is an observation, not automatically a rule. Patterns earn their place when they hold across repeated cycles, and useful patterns can then be shared beyond the person or team that discovered them.
 
