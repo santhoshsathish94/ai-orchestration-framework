@@ -92,7 +92,6 @@ section[id] { scroll-margin-top: 5rem; }
 .kv[id], .wrong[id] { scroll-margin-top: 6rem; }
 
 .band { padding-block: clamp(3rem, 7vw, 5rem); border-top: 1px solid var(--line); }
-.band--soft { background: var(--soft); }
 .band--wide :is(p, ul, ol) { max-width: none; }
 
 .eyebrow {
@@ -390,7 +389,11 @@ section[id] { scroll-margin-top: 5rem; }
   display: flex; justify-content: flex-end; align-items: flex-start;
 }
 /* .clover centres itself with auto margins, which in a flex row beats justify-content. */
-.pinned__mark > svg { margin-inline: 0; width: var(--mark-w); }
+/* The origin is the leaves' own pivot at 50,44 in the viewBox, not the middle of the box. */
+.pinned__mark > svg {
+  margin-inline: 0; width: var(--mark-w);
+  transform-origin: 50% 49.09%; will-change: transform;
+}
 
 /* The one mark also serves the story: its leaf goes to ink as that step scrolls into view. */
 .pinned__mark .story__leaf { transition: fill 0.25s ease; }
@@ -473,7 +476,6 @@ section[id] { scroll-margin-top: 5rem; }
 }
 .card h3 { margin-bottom: 0.35rem; }
 .card p { font-size: 0.95rem; color: var(--ink-2); margin-bottom: 0; max-width: none; }
-.card--flat { background: var(--soft); border-color: transparent; }
 
 .kv { margin: 0; }
 .kv div { display: flex; gap: 0.6rem; padding: 0.42rem 0; border-top: 1px solid var(--line); font-size: 0.93rem; }
@@ -571,7 +573,7 @@ section[id] { scroll-margin-top: 5rem; }
 /* ---------- footer ---------- */
 
 .site-foot {
-  border-top: 1px solid var(--line); background: var(--soft);
+  border-top: 1px solid var(--line);
   padding-block: 2.5rem; margin-top: 0;
   font-size: 0.9rem; color: var(--muted);
 }

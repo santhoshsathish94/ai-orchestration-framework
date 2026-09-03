@@ -138,8 +138,11 @@ The marks are the site's identity and they carry the argument, so they have rule
   dangerous. Do not explain the *Black Clover* or devil association anywhere.
 - Never assert that any AI provider trains on customer or enterprise work. Keep the accumulation
   argument structural and unattributed.
-- Alternate `.band` and `.band--soft` between adjacent sections so no two neighbors share a
-  background. The hero is white and the footer is soft, so the count has to work out at both ends.
+- One background for the whole site: white. Sections are separated by the `.band` rule alone, never
+  by a tint. There is no `.band--soft` and no `.card--flat`; do not reintroduce either.
+- The mark turns one full revolution between the top and the bottom of the home page, eased toward
+  the scroll position in `app.js` rather than tracking it exactly. `prefers-reduced-motion` stops it.
+  The origin is `50% 49.09%`, the leaves' pivot at 50,44 in the viewBox, not the middle of the box.
 - **Use the width.** Sections must not stack down the left in a 68ch column. `.wrong__flow` and
   `.wrong__cols` run the "what happens there" blocks across both columns, `.split` puts a heading
   and lead on the left with the detail on the right, `.stack--2` gives a two-column definition list,

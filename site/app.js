@@ -175,6 +175,46 @@
       });
     });
   }
+
+  /* The mark turns as the page scrolls: one full revolution from the top of the page to the bottom,
+     so reading the whole page completes the cycle once. The turn eases toward the scroll position
+     instead of tracking it exactly, which is what stops it reading as a twitch. */
+  var wheel = document.querySelector('.pinned__mark > svg');
+  var stillness = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (wheel && !(stillness && stillness.matches)) {
+    var turn = 0;
+    var wanted = 0;
+    var turning = false;
+
+    var readTurn = function () {
+      var span = document.documentElement.scrollHeight - window.innerHeight;
+      var through = span > 0 ? Math.min(1, Math.max(0, window.pageYOffset / span)) : 0;
+      wanted = through * 360;
+    };
+
+    var draw = function () {
+      wheel.style.transform = 'rotate(' + turn.toFixed(2) + 'deg)';
+    };
+
+    var ease = function () {
+      var gap = wanted - turn;
+      if (Math.abs(gap) < 0.05) { turn = wanted; turning = false; } else { turn += gap * 0.12; }
+      draw();
+      if (turning) window.requestAnimationFrame(ease);
+    };
+
+    var onTurn = function () {
+      readTurn();
+      if (!turning) { turning = true; window.requestAnimationFrame(ease); }
+    };
+
+    readTurn();
+    turn = wanted;
+    draw();
+    window.addEventListener('scroll', onTurn, { passive: true });
+    window.addEventListener('resize', onTurn);
+  }
+
   /* Mobile nav. The button only exists visually below 1000px, the width at which the nav still
      fits on one row; above that the nav is always shown. */
   var navToggle = document.querySelector('.nav-toggle');
