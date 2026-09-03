@@ -88,8 +88,8 @@ The marks are the site's identity and they carry the argument, so they have rule
 - **One cycle, shown once.** The page carries a single labelled clover in `#story`. It replaced a
   three-act arc that grew the mark from three leaves to four to five. Do not reintroduce separate
   marks per act.
-- **Two named sets, and both names get used.** `System → Human → AI` is the order: the system is the
-  reality, and the human and AI are **the actors**.
+- **The site does not use the `System → Human → AI` chain.** Say it in words: the system is the
+  reality, and the human and AI are **the actors**. The docs still carry the chain; the site does not.
   `Context → Direction → Execution → Outcome → Growth` is **the system cycle**. Say those names when
   referring to either set. Never introduce a competing arrow-chain, never append "→ repeat" to the
   cycle, and never bring back the short form "Where → Know → Do → Validate". Direction is *what*, not
