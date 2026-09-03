@@ -4,7 +4,9 @@
 
 Clover is a way of working with **System, Human, and AI to produce meaningful outcomes**, from the smallest possible use case to the largest and most complex systems.
 
-It does not claim to have invented the underlying pattern. Before AI could execute substantial portions of work, humans already gathered context, set Direction, performed or coordinated the work, checked the result, and carried what they learned into the next attempt. What changes in the AI era is the **means of execution**: AI can now perform a growing share of the Action that humans previously performed themselves.
+It does not claim to have invented the underlying pattern. Every system that worked has worked this way: somebody understood the situation, somebody decided what mattered and answered for it, the work got done, reality showed what happened, and what it taught carried into the next attempt.
+
+What AI changed is not the pattern. It is that execution moved to something that cannot be accountable. You can perform the work, report that it worked, and hold nothing when it did not. Clover puts you inside the existing cycle as one of its actors, and keeps accountability with the human who can carry it.
 
 This is the complete operating specification. The full framework lives in `docs/`, but the rules here are intended to be sufficient for an agent to apply the cycle to any problem, from the simplest task to the most complex system.
 
@@ -12,7 +14,7 @@ This is the complete operating specification. The full framework lives in `docs/
 
 ## 1. The model you must apply
 
-Clover starts from one relationship:
+Clover starts from the **system actors**:
 
 **System → Human → AI**
 
@@ -28,7 +30,7 @@ This boundary is intentionally independent of how capable AI is today or may bec
 
 Competitive pressure does not change that boundary.
 
-The operational cycle is:
+The **system cycle** they run is:
 
 **Context → Direction → Action → Outcome → Growth**
 

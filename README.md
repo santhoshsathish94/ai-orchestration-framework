@@ -29,9 +29,11 @@ Clover is a way of working with **System, Human, and AI to produce meaningful ou
 
 It can be applied to the smallest possible use case or to large, complex systems. The scale changes; the relationship does not.
 
-Clover does **not** claim to have invented the underlying way people and systems already work. Before AI could execute work directly, humans commonly participated in the execution themselves: they gathered context, made decisions, performed or coordinated the work, checked the result, and carried what they learned into the next attempt.
+Clover does **not** claim to have invented the underlying way people and systems already work. Every system that worked has worked this way. Somebody understood the situation, somebody decided what mattered and answered for it, the work got done, reality showed what happened, and what it taught carried into the next attempt.
 
-What changes in the AI era is the **means of execution**. AI can now perform much more of the Action that humans previously performed themselves. That creates a new engineering problem: how to give AI enough capability and execution latitude to be useful while keeping work grounded in System reality, guided by Human Direction, and validated by evidence.
+What AI changed is not the pattern. It is that execution moved to something that cannot be accountable. A model can perform the work, report that it worked, and hold nothing when it did not. Where execution went, accountability quietly followed, and in a lot of places it left the picture altogether.
+
+**Clover puts it back.** AI takes its place as an actor inside the existing system cycle rather than as a replacement for it, and accountability stays where it can actually sit: with a human.
 
 **System** is the reality in which the outcome must exist: the state, data, behavior, history, constraints, and evidence of the thing being worked on. It is also the primary source of evidence for validating whether an intended outcome actually happened.
 
@@ -39,11 +41,11 @@ What changes in the AI era is the **means of execution**. AI can now perform muc
 
 **AI** provides capability and can help determine the means of achieving the desired outcome within the human's Direction and the System's Context. In the AI era, more of the execution can be delegated to AI without transferring Direction or accountability.
 
-The framework therefore starts with:
+The framework therefore starts with the **system actors**:
 
 **System → Human → AI**
 
-Operationally, the work can be understood through four connected stages:
+and the **system cycle** they run:
 
 **Context → Direction → Action → Outcome → Growth**
 

@@ -4,9 +4,11 @@
 
 Clover is a way of working with **System, Human, and AI to produce meaningful outcomes**, from the smallest possible use case to large and complex systems.
 
-It does not claim to have invented the underlying pattern. Before AI could execute substantial portions of work, humans already gathered context, set Direction, performed or coordinated the work, checked the result, and carried what they learned into the next attempt. Clover makes that relationship explicit for an AI era in which more of the execution can be delegated to AI.
+It does not claim to have invented the underlying pattern. Every system that worked has worked this way: somebody understood the situation, somebody decided what mattered and answered for it, the work got done, reality showed what happened, and what it taught carried into the next attempt.
 
-**System → Human → AI** establishes the relationship. **Context → Direction → Action → Outcome → Growth** gives it an operational cycle.
+What AI changed is not the pattern. It is that execution moved to something that cannot be accountable. Where execution went, accountability tended to follow, and in a lot of places it left the picture. Clover puts AI back inside the existing cycle as one of its actors, and puts accountability back where it can sit.
+
+**System → Human → AI** names the **system actors**. **Context → Direction → Action → Outcome → Growth** is the **system cycle** they run.
 
 Prompts, tools, agents, and AI model choice all sit underneath the cycle. What the framework describes is how human intent becomes an outcome the environment shows, and what the next attempt starts from.
 
@@ -18,11 +20,11 @@ The first four produce a result. **Growth** is whatever that result taught, carr
 
 Clover is not novel because it names five familiar activities. Understanding, deciding, acting, and observing what happened exist in many engineering, operational, and management practices already.
 
-The framework's useful claim is that these familiar activities need to be made explicit again when the **execution layer changes**. Humans historically participated directly in execution; AI can now perform a growing share of that execution.
+The framework's useful claim is about accountability. Humans historically participated directly in execution, and the person doing the work was reachable when it went wrong. AI can now perform a growing share of that execution, and it cannot answer for any of it. The familiar activities have to be made explicit again so that the accountability which used to travel with the work does not disappear with it.
 
-**System → Human → AI** establishes the relationship: System reality grounds the work, humans own Direction and accountability, and AI supplies capability and can take on execution.
+**System → Human → AI** names the **system actors**: System reality grounds the work, humans own Direction and accountability, and AI supplies capability and can take on execution.
 
-**Context → Direction → Action → Outcome → Growth** establishes the operational cycle: understand the relevant reality, establish the desired outcome and boundaries, perform the work, observe what happened against reality, and keep what it taught.
+**Context → Direction → Action → Outcome → Growth** is the **system cycle** those actors run: understand the relevant reality, establish the desired outcome and boundaries, perform the work, observe what happened against reality, and keep what it taught.
 
 The value of the framework is therefore not the invention of a sequence. It is making the boundaries and feedback between **reality, human purpose, AI execution, evidence, and learning** explicit enough to design and govern AI-enabled work.
 

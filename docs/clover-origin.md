@@ -6,7 +6,7 @@
 
 The five-leaf clover is more than a logo. It is how the framework is pictured, and it is the personal symbol that should make the framework recognizable.
 
-The canonical operational cycle is:
+The canonical system cycle is:
 
 **Context → Direction → Action → Outcome → Growth**
 
