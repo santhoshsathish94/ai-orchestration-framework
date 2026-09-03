@@ -38,21 +38,24 @@ The page is one continuous argument rather than one section per stage.
 2. `#capability` — What is Clover: the cycle as it ran before AI, with the human as the actor
 3. `#ai-changes` — What AI changes: every stage easier, better and faster, the cycle unchanged
 4. `#humans` — Why humans matter: accountability, boundaries, and carrying the consequence
-5. `#stage-context` — Context
-6. `#stage-direction` — Direction
-7. `#stage-execution` — Execution
-8. `#stage-outcome` — Outcome
-9. `#stage-growth` — Growth
+5. `#stage-context` — What is Context?
+6. `#stage-direction` — What is Direction?
+7. `#stage-execution` — What is Execution?
+8. `#stage-outcome` — What is Outcome?
+9. `#stage-growth` — What is Growth?
 10. `#scale` — Two dimensions: who is working, and what they are working on
 11. `#try` — Four steps on a real problem the reader already has
 12. `#evidence-preview` — Case studies, reference implementations, how model reviews are reported
 13. `#growth` — The fifth stage: whatever the Outcome taught, carried back into Context
-14. `#governance` — Capability is not authority
-15. `#next` — The closing restatement and where to go
+14. `#next` — The closing restatement and where to go
 
 Each of the five stages is its own `.band.stage` section carrying `data-leaf`. `app.js` reads those
 inside `[data-story]` and inks the matching leaf on the pinned mark as the section reaches the middle
 of the viewport. The `stage` class exists for that hook alone and carries no styling.
+
+Each leaf of the mark is an SVG `<a>` to its own stage, so the mark is also the way into them. The
+generic in-page click handler scrolls them; nothing leaf-specific is needed. The leaves are links,
+not `tabindex` groups, so the keyboard reaches them for free.
 
 There is no author section on this page. The nav and the footer both link to `author/` instead.
 
@@ -115,7 +118,9 @@ The marks are the site's identity and they carry the argument, so they have rule
   oversight".
 - **Accountability lands on a named human.** Governance is where the site shows that the naming is
   real: whose access was used, who approved, and who answers when it goes wrong. Capability is never
-  authority, and authority is never accountability.
+  authority, and authority is never accountability. The home page carries this in `#humans`; the
+  named claim **Capability may scale. Direction remains human.** now lives on the security page and
+  in `llms.txt`, not on the home page.
 - **The system cycle has five stages** — Context, Direction, Execution, Outcome, Growth. All five get
   named wherever the cycle is enumerated: the hero, the stage list, the story, the agent file
   description on `start/`, and `llms.txt`. `#growth` is where the home page explains the fifth stage

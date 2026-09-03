@@ -96,7 +96,7 @@
 
   document.addEventListener('click', function (e) {
     var link = e.target.closest && e.target.closest('a[href]');
-    if (!link || link.closest('.story__clover')) return;
+    if (!link) return;
     if (link.target === '_blank' || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
 
     var href = link.getAttribute('href') || '';
@@ -163,16 +163,6 @@
     sync();
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll);
-
-    document.querySelectorAll('.story__leaf-link').forEach(function (link) {
-      link.addEventListener('click', function (e) {
-        var href = link.getAttribute('href') || '';
-        var target = href.charAt(0) === '#' ? document.getElementById(href.slice(1)) : null;
-        if (!target) return;
-        e.preventDefault();
-        scrollToElement(target, 'center');
-      });
-    });
   }
 
   /* The mark turns as the page scrolls: one full revolution from the top of the page to the bottom,
