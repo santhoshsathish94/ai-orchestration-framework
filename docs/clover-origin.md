@@ -28,13 +28,13 @@ The **human** provides Direction. Humans choose what matters, the desired outcom
 
 **AI** provides capability and helps determine and execute the means of achieving the human-defined outcome. AI can reason, plan, recommend, coordinate, implement, test, adapt, and use tools within the relevant Context and Direction. It does not own the destination.
 
-This boundary is independent of model capability or competition:
+This boundary is independent of current or future model capability:
 
-> **Capability may scale. Direction remains human.**
+> **AI can be capable enough to suggest directions. Humans should always have the authority to decide what to pursue.**
 
-> **Do not transfer Direction to AI merely because AI becomes capable enough to perform it.**
+> **Do not transfer Direction to AI merely because AI becomes capable enough to suggest or execute it.**
 
-A more capable AI can change the means available to reach an outcome. It does not change who chooses the desired outcome or who remains accountable for it.
+A more capable AI can change the means available to reach an outcome. It does not change who chooses what should be pursued or who remains accountable for that choice.
 
 The simplest analogy is:
 
@@ -86,7 +86,7 @@ A human determines:
 - What must not happen
 - What process or approach matters when it is part of the intended outcome
 
-Direction is where human purpose and accountability enter the work. AI can help clarify, challenge, analyze alternatives, and identify risks, but it does not become the owner of Direction.
+Direction is where human purpose and accountability enter the work. AI can help clarify, challenge, analyze alternatives, identify risks, and suggest possible directions, but it does not become the owner of the decision about what to pursue.
 
 **Core question:**
 
@@ -216,7 +216,7 @@ This is a practical way of working with System, Human, and AI around real contex
 
 The hypothesis layer explores what could happen if AI systems, organizations, and surrounding systems continue to accumulate capability, memory, experience, coordination, embodiment, and other forms of growth.
 
-Those developments do **not** imply that AI should receive ownership of Direction. The hypothesis layer asks what increasing capability could make possible; Clover's engineering policy keeps purpose and accountability human regardless of that capability.
+Those developments do **not** imply that AI should receive ownership of Direction. The hypothesis layer asks what increasing capability could make possible; Clover's engineering policy keeps the authority to decide what to pursue, purpose, and accountability human regardless of that capability.
 
 The hypothesis is the question, not a prediction.
 
@@ -230,11 +230,11 @@ A possible progression is:
 
 This is a thought experiment, not a claim that all stages will occur.
 
-The important distinction is that increasing capability does not automatically produce increasing authority. Clover intentionally separates what a system may be capable of doing from who owns Direction and accountability for the outcome.
+The important distinction is that increasing capability does not automatically produce increasing authority. Clover intentionally separates what a system may be capable of doing from who decides what should be pursued and who remains accountable for the outcome.
 
 A useful question is:
 
-**How far can capability grow while the destination, ownership, and accountability remain human?**
+**How far can capability grow while humans retain the authority to decide what to pursue?**
 
 ---
 
@@ -251,6 +251,8 @@ This raises open questions:
 - What changes when intelligence can continuously interact with the physical world?
 - How does embodied learning change the Growth loop?
 - At what point does AI capability assisting humans become qualitatively different?
+- What happens when AI can suggest directions at the scale of organizations, interconnected systems, or broader society?
+- How do we preserve human authority over what is pursued when the capability to influence those directions becomes enormous?
 
 Again, these are questions to investigate, not predetermined conclusions.
 
@@ -266,7 +268,7 @@ Clover must clearly distinguish:
 
 The policy is also explicit:
 
-**Capability may scale. Direction remains human.**
+**AI can be capable enough to suggest directions. Humans should always have the authority to decide what to pursue.**
 
 ### What Clover hypothesizes
 
@@ -290,11 +292,11 @@ A reader should leave with two things.
 
 ### Deeper question
 
-> **If capability keeps growing, how do we keep purpose and accountability human?**
+> **If capability keeps growing, how do we keep the authority to decide what to pursue human?**
 
 The goal is not to tell the reader what the future will be.
 
-The goal is to make the reader think about the fifth leaf while keeping the human ownership boundary clear.
+The goal is to make the reader think about the fifth leaf while keeping the human authority and accountability boundary clear.
 
 ---
 
@@ -312,7 +314,7 @@ Then:
 
 And finally:
 
-> **Capability may scale. Direction remains human.**
+> **AI can be capable enough to suggest directions. Humans should always have the authority to decide what to pursue.**
 
 That framing is intentionally scale-independent: the same relationship can be applied to the smallest meaningful use case or to large, interconnected systems.
 
@@ -332,12 +334,14 @@ When helping build Clover:
 8. Preserve **System → Human → AI** as the foundational priority.
 9. Keep capability, authority, and accountability distinct.
 10. Do not transfer Direction to AI merely because AI becomes more capable.
-11. Do not treat competitive pressure as a justification for transferring Direction to AI.
-12. Separate current engineering practice from future hypotheses.
-13. Explore persistent memory, experience, adaptation, collective intelligence, robotics, and increasing capability carefully.
-14. Preserve the creator's personal voice; do not turn Clover into generic AI marketing language.
-15. Use real case studies and engineering evidence to make the framework concrete.
-16. Keep the framework useful from the smallest meaningful use case to large, complex systems without claiming that every domain follows an identical workflow.
+11. AI may suggest directions; humans retain the authority to decide what to pursue.
+12. Do not treat competitive pressure as a justification for transferring Direction to AI.
+13. Separate current engineering practice from future hypotheses.
+14. Treat the unknown boundary of future AI capability as a question, not an established outcome.
+15. Explore persistent memory, experience, adaptation, collective intelligence, robotics, and increasing capability carefully.
+16. Preserve the creator's personal voice; do not turn Clover into generic AI marketing language.
+17. Use real case studies and engineering evidence to make the framework concrete.
+18. Keep the framework useful from the smallest meaningful use case to large, complex systems without claiming that every domain follows an identical workflow.
 
 The intended reaction from a technically serious reader is:
 
@@ -345,4 +349,4 @@ The intended reaction from a technically serious reader is:
 
 followed by:
 
-> **And the policy remains true even if the AI becomes dramatically more capable.**
+> **And the human authority boundary should still hold even if AI becomes dramatically more capable.**
