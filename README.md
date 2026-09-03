@@ -1,19 +1,19 @@
 <p align="center">
   <a href="https://cloverframework.com/">
     <img src="assets/social-preview.png" width="820"
-         alt="Clover — a way of working with System, Human, and AI to produce meaningful outcomes">
+         alt="Clover — System, Human and AI working together for meaningful outcomes">
   </a>
 </p>
 
 <p align="center">
-  <strong>Clover Framework</strong> · A way of working with System, Human, and AI
+  <strong>Clover Framework</strong> · System, Human and AI working together for meaningful outcomes
 </p>
 
 ---
 
 # Clover
 
-### A way of working with System, Human, and AI to produce meaningful outcomes
+### System, Human and AI working together for meaningful outcomes
 
 **System → Human → AI**
 
