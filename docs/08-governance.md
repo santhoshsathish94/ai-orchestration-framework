@@ -17,31 +17,34 @@ Clover keeps three responsibilities distinct:
 - **AI provides capability and execution.** AI can reason, plan, recommend, coordinate, implement,
   test, and adapt within the Direction humans set and the access they authorize.
 
-This boundary does not depend on which model is being used. A more capable model may increase what can
-be delegated for execution inside Action; it does not change who owns the destination.
+This boundary does not depend on which model is being used. AI can become far more capable, but that
+capability does not transfer authority over what should be pursued.
 
-## Capability may scale. Direction remains human.
+## Capability may scale. Human authority remains.
 
-AI capability is not authority, and authority is not accountability. Clover does not treat stronger
-models, faster models, competitive pressure, or fear of falling behind as reasons to transfer
-Direction to AI.
+AI capability is not authority, and authority is not accountability. Clover deliberately does not make
+the claim that AI is or is not capable enough today to reason about large directions. The important
+boundary is what happens even if that capability grows enormously.
 
-Organizations may choose to automate more of the path because competition rewards speed. That can
-justify broader delegated execution inside Action where the results are understood, observable, and
-reversible within acceptable bounds. It does **not** justify handing AI the authority to choose
-organizational purpose, acceptable risk, priorities, boundaries, or the outcome the organization is
-accountable for.
+> **AI can be capable enough to suggest directions. Humans should always have the authority to decide
+> what to pursue.**
 
-The rule is intended to remain valid as models change:
+AI may identify opportunities, challenge assumptions, compare alternatives, recommend a new direction,
+or surface consequences the human had not considered. None of that gives AI the authority to decide
+which direction should actually be pursued.
 
-> **Do not transfer Direction to AI merely because AI becomes capable enough to perform it.**
+That boundary matters more as scale increases. AI-enabled work is not limited to an individual task.
+It can affect teams, organizations, interconnected systems, and broader society. As the scale grows,
+the consequences of a wrong Direction can grow with it. Clover therefore keeps the authority to decide
+what to pursue with humans, together with accountability for that choice.
 
-A model is a capability used to reach a destination; it is not the owner of the destination.
+A more capable AI can change the means available to reach an outcome. It does not change who decides
+whether that outcome should be pursued.
 
-This also matters in critical situations. AI services can be unavailable, rate-limited, delayed, or
-otherwise unsuitable at the moment they are needed most. Production incidents and other high-blast-
-radius situations therefore cannot assume that an AI path will always be available. Human responders
-and established operational mechanisms remain necessary, even in highly AI-enabled environments.
+Competitive pressure may encourage an organization to automate more execution inside Action. It does
+not justify handing AI the authority to choose the destination.
+
+> **Do not transfer Direction to AI merely because AI becomes capable enough to suggest or execute it.**
 
 ## The destination, the means, and the map
 
