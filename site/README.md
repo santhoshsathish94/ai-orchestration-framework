@@ -43,11 +43,12 @@ The page is one continuous argument rather than one section per stage.
 7. `#stage-execution` — What is Execution?
 8. `#stage-outcome` — What is Outcome?
 9. `#stage-growth` — What is Growth?
-10. `#scale` — Two dimensions: who is working, and what they are working on
-11. `#try` — Four steps on a real problem the reader already has
-12. `#evidence-preview` — Case studies, reference implementations, how model reviews are reported
-13. `#growth` — The fifth stage: whatever the Outcome taught, carried back into Context
-14. `#next` — The closing restatement and where to go
+10. `#why-cycle` — Why is it a cycle? Growth becomes the next Context
+11. `#scale` — Two dimensions: who is working, and what they are working on
+12. `#try` — Four steps on a real problem the reader already has
+13. `#evidence-preview` — Case studies, reference implementations, how model reviews are reported
+14. `#growth` — The fifth stage: whatever the Outcome taught, carried back into Context
+15. `#next` — The closing restatement and where to go
 
 Each of the five stages is its own `.band.stage` section carrying `data-leaf`. `app.js` reads those
 inside `[data-story]` and inks the matching leaf on the pinned mark as the section reaches the middle
