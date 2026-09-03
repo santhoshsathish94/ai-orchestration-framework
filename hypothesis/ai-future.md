@@ -12,11 +12,19 @@ The engineering layer is four stages — Context, Direction, Action, Success. Te
 
 This document is the other layer, and **it is not part of the framework**. No stage depends on it. A team can run every cycle the repository describes, get the outcomes in the [case studies](../case-studies/), and disagree with every word here. The engineering material loses nothing if this document turns out to be wrong.
 
-What follows is a question about Growth and the unknown boundary of increasing capability. Nothing here says that current systems have reached general intelligence, that autonomous systems are on the way, or that autonomy or harm is inevitable. Growth is useful today. A system that keeps what its outcomes taught it plans better, picks tools better, and starts the next cycle further along than the last. The open part is how far that goes.
+What follows is a question about Growth, increasing capability, and the unknown boundary of what AI may eventually become capable of. Nothing here says that current systems have reached general intelligence, that autonomous systems are inevitable, or that harm is inevitable. Growth is useful today. A system that keeps what its outcomes taught it can start the next cycle with better information than the last. The open part is how far that growth can go.
 
 The argument names no actor. It is about structural pressure, and it applies to anyone under enough of it — a well-funded lab, a startup with limited runway, a national program. A version of this that pointed at somebody else would let every other reader off the hook.
 
-Clover's engineering position remains separate and explicit: **AI can be capable enough to suggest directions, but humans should always have the authority to decide what to pursue.** The hypothesis below does not treat AI autonomy as a Clover objective or recommendation.
+Clover's engineering position remains separate and explicit:
+
+> **AI can be capable enough to suggest directions. Humans should always have the authority to decide what to pursue.**
+
+That sentence is deliberately about capability, authority, and accountability rather than about today's model limits. AI may be capable enough to suggest a direction at one scale today and capable enough to suggest directions at a far larger scale in the future. Clover does not depend on knowing where that capability stops. The authority to decide what should actually be pursued remains human.
+
+The reason is accountability. We can ask an AI system for recommendations, analysis, alternatives, warnings, and even a better direction than the one humans currently see. But when a direction can affect an organization, interconnected systems, or the wider world, the consequences of choosing wrongly can become enormous. **We cannot solve that by making the AI itself the accountable authority for the direction it chose.** The human decision remains necessary because somebody must have the authority to decide whether a proposed direction is worth pursuing and remain accountable for that choice.
+
+That is the boundary Clover wants to keep meaningful even in the unknown future: **capability may grow enormously; human authority over what to pursue should not be replaced by that capability.**
 
 ---
 
@@ -56,6 +64,8 @@ Robotics supplies none of those three. A fully embodied system that forgets ever
 
 Embodiment matters for a different reason. The physical world can teach a system things no text corpus contains, and reality supplies the evidence directly rather than through somebody's curation. That is worth taking seriously on its own terms. It is also a separate question from whether anyone should grant such a system Direction, and the two get merged often enough that we keep them apart here.
 
+The unknown is important here. The point is not to prove that AI will reach some specific future capability. The point is that **we do not know the upper boundary**. It may remain limited in ways that are hard today to see, or it may become capable enough to reason about directions far beyond an individual task. Clover's position does not need to predict which one happens. It says that even if capability grows dramatically, the authority to decide what to pursue should remain human because capability does not create accountability.
+
 ![Three panels in a row, each a session that runs Context, Direction, Action and Success and then ends, with the connecting line broken between them, and below them the three things that would have to last: continual learning after deployment, credit assignment over long horizons, and goals that outlast a single session](../assets/ai-future/missing-piece.svg)
 
 ---
@@ -72,7 +82,9 @@ It is tempting to say that only guardrails stand between today's agents and a sy
 
 None of these is obviously impossible. All of them are currently expensive.
 
-So the barrier has two parts. Permission is one. A set of hard, expensive problems is the other, and the question is what happens when someone becomes motivated enough to pay for solving them.
+But this is where the unknown matters to Clover. These are not reasons to assume AI cannot become much more capable. They are reasons not to assume we know where its capability will stop. A future system may be able to suggest a direction that no individual human could have discovered alone. It may be able to reason across enormous systems and long horizons. **That still does not answer whether that direction should be pursued.** The capability to propose a direction and the authority to choose it are different things.
+
+So the barrier has two parts. Technical capability is one. Human permission and accountability are another. Clover deliberately keeps those separate.
 
 ---
 
@@ -92,13 +104,13 @@ In the most extreme version of the hypothesis, some actors might decide to grant
 
 Clover's policy is the opposite at the ownership boundary:
 
-> **Direction is not delegated by competition.**
+> **AI capability does not decide what the world should pursue. Humans do.**
 
 Competitive pressure may influence how much execution work an accountable organization chooses to delegate inside Action. It does not justify transferring purpose, acceptable risk, priorities, boundaries, or accountability to AI.
 
 ### This is not a new idea
 
-The broader competitive dynamic has been discussed extensively in AI governance and safety research. Clover does not claim novelty for the idea that competition can create incentives to take on more risk. The narrower Clover question is what remains invariant when capability grows: **who owns Direction and accountability?**
+The broader competitive dynamic has been discussed extensively in AI governance and safety research. Clover does not claim novelty for the idea that competition can create incentives to take on more risk. The narrower Clover question is what remains invariant when capability grows: **who has the authority to decide what to pursue, and who remains accountable for that decision?**
 
 ---
 
@@ -137,6 +149,8 @@ That ordering is the part worth attention. Continual learning and long-horizon r
 
 The scenario worth examining is where an organization concludes that winning requires giving an AI system unusually broad operational freedom and resources. The important question for Clover is not whether that freedom is called autonomy; it is whether the organization has crossed the human Direction boundary.
 
+A system can be extraordinarily capable and still not be the authority that decides whether its own proposed direction should become the organization's direction. That distinction becomes more important, not less, as the consequences of Action grow.
+
 ---
 
 ## What would make this wrong
@@ -157,11 +171,17 @@ Any one of these would meaningfully weaken the argument. Several together would 
 
 ## The question to leave with
 
-> With everything AI can already do, how much more growth do we seek — and in the progress of growth, who stays in control?
+> **With everything AI can already do, how much more growth do we seek — and as capability grows, who stays in control of what we choose to pursue?**
 
-Control is the thread through both layers. Clover puts a human in control of what matters, the desired outcome, constraints, boundaries, and what must not happen, and that human approves the result. Direction asks where we should go, Growth asks what changes through repeated cycles, and the framework keeps the first human-owned.
+Clover does not assume that AI will remain at today's capability, and it does not assume that we know its eventual boundary. The unknown is part of the reason the boundary matters.
 
-Nobody can say today how far growth runs, or whether there is a point where the direction a human set stops describing the system carrying it out. Clover does not answer that. It keeps the question attached to the stage that raises it.
+AI may become capable enough to suggest directions far larger than an individual task. It may one day suggest directions involving organizations, interconnected systems, or consequences at a scale that no single person can fully model. **That possibility does not make AI the authority over what should be pursued.**
+
+The reason is simple: accountability matters. When the scale becomes large enough, a wrong direction can have consequences far beyond the system that generated it. We cannot solve that by saying the AI is responsible for the direction it chose. Humans must retain the authority to decide what to pursue and therefore remain accountable for that choice.
+
+> **AI can be capable enough to suggest directions. Humans should always have the authority to decide what to pursue.**
+
+That is the part Clover intends to keep true even in the unknown.
 
 ---
 
