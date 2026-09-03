@@ -44,8 +44,8 @@ The page is one continuous argument rather than one section per stage.
 8. `#stage-outcome` — What is Outcome?
 9. `#stage-growth` — What is Growth?
 10. `#why-cycle` — Why is it a cycle? Growth becomes the next Context
-11. `#scale` — Two dimensions: who is working, and what they are working on
-12. `#try` — Five steps on a real problem the reader already has
+11. `#try` — Five steps on a real problem the reader already has
+12. `#scale` — Two dimensions: who is working, and what they are working on
 13. `#evidence-preview` — Case studies, reference implementations, how model reviews are reported
 14. `#next` — The closing restatement and where to go
 15. `#real-world-context` — Context in the real world? Credit stays with the original creators
