@@ -18,7 +18,7 @@ python -m http.server 8000 --directory site
 
 ```
 site/
-  index.html        the framework: the story, three stages then four then five
+  index.html        the framework: one cycle, at any scale
   start/            getting started: read-only access, the agent file, a first cycle
   security/         security and governance
   evidence/         case studies and reference implementations
@@ -32,23 +32,18 @@ site/
   .nojekyll
 ```
 
-The page is the narrative arc, not one section per stage. The clover grows as the reader scrolls:
-three leaves, then four, then five.
+The page is one continuous argument rather than one section per stage.
 
-1. Hero — the name, the canonical definition, the four-leaf mark, one line per stage. Nothing else
-2. AI current capabilities — short
-3. Why now — the bridge: AI grew from finishing a line to doing whole jobs, the habit that stuck has
-   the human supplying the context, and that is the trade worth changing. Ends by naming the four
-   stages in order and handing to the story
-4. Three leaves · the common clover — short
-5. Four leaves · the lucky clover — the largest and most important section on the page
-6. Five leaves · the growth clover — short
-7. The worked example — visual, an end-to-end run, few steps, ending at Outcome
-8. The agent file
-9. Security and governance
-10. Production case studies and reference implementations
-11. What it is not
-12. The unknown clover — the question to leave with
+1. `#overview` — Hero: the name, the tagline, what Clover is in a sentence, the mark, the stages
+2. `#capability` — Where AI already is: what the execution layer can now carry
+3. `#why-now` — The bridge: the pattern is not new, what changed is how much of the Action AI carries
+4. `#story` — One cycle, any scale: the labelled clover and one step per stage
+5. `#scale` — Two dimensions: who is working, and what they are working on
+6. `#try` — Four steps on a real problem the reader already has
+7. `#evidence-preview` — Case studies, reference implementations, how model reviews are reported
+8. `#growth` — What can emerge when meaningful cycles repeat
+9. `#governance` — Capability is not authority
+10. `#next` — The closing restatement and where to go
 
 There is no author section on this page. The nav and the footer both link to `author/` instead.
 
@@ -94,14 +89,14 @@ The marks are the site's identity and they carry the argument, so they have rule
 
 ## Editing rules
 
-- **The arc is the spine.** Three leaves, then four, then five. Do not flatten it back into equal
-  sections, and do not move the four-leaf section ahead of the three-leaf one.
+- **One cycle, shown once.** The page carries a single labelled clover in `#story`. It replaced a
+  three-act arc that grew the mark from three leaves to four to five. Do not reintroduce separate
+  marks per act.
 - **Four stages only:** Context → Direction → Action → Outcome. Never introduce a competing
   arrow-chain, never append "→ repeat" to that one, and never bring back the short form
   "Where → Know → Do → Validate". Direction is *what*, not *where*.
-- **Growth is not part of the framework**, so it appears in exactly one section, `#fifth-leaf`, and
-  nowhere else on the page. Not in the hero, not in a stage list, not in an example, not in the
-  definition.
+- **Growth is not an operational stage**, so it appears in one section, `#growth`, and nowhere else.
+  Not in the hero, not in the stage list, not in the worked steps, not in the definition.
 - **"Leaves" is for the picture.** Say leaves when describing a clover mark. Everywhere else on the
   page, say stages.
 - **The framework is four stages** — Context, Direction, Action, Outcome. Growth is not something
@@ -109,9 +104,8 @@ The marks are the site's identity and they carry the argument, so they have rule
   loop back into Context.
 - **Iteration feeds Context, never Growth.** The page states the rule plainly: after each success or
   failure, the context files are written before the next attempt.
-- **Never call it a model.** Clover is an AI Orchestration Framework connecting real-world Context,
-  human Direction, AI-driven Action, and validated Outcome into a repeatable cycle. "Model" collides
-  with "AI model".
+- **Never call it a model.** Clover is a way of working with System, Human, and AI to produce
+  meaningful outcomes. "Model" collides with "AI model".
 - **Say "human"**, never "person" or "the user", for whoever holds Direction. Direction is the human
   controlling what matters, the desired outcome, constraints, boundaries, and what must not happen,
   and approving. Action is AI determining how the work should happen and executing within those
@@ -133,9 +127,8 @@ The marks are the site's identity and they carry the argument, so they have rule
   Keep it to the setup — the per-stage mechanics belong to the story, which goes much further
   (`#st-limit` on what the common clover costs, `#st-direction-2` on Direction pointing rather than
   describing). State the transition here, then hand over.
-- The four-leaf section says nothing about production. Development first, then the other
-  non-production environments. Access is read-only and scoped to what the human already holds. It is
-  also where the page explains why Context comes first, and that explanation appears once.
+- `#story` says nothing about production. Development first, then the other non-production
+  environments. Access is read-only and scoped to what the human already holds.
 - Growth is the next stage, never a hypothesis, a prediction or "next phase", and never described as
   dangerous. Do not explain the *Black Clover* or devil association anywhere.
 - Never assert that any AI provider trains on customer or enterprise work. Keep the accumulation
@@ -148,12 +141,12 @@ The marks are the site's identity and they carry the argument, so they have rule
   and `.panel__cols` spreads a tab panel across the full measure.
 - Tabs: one generic `initTabs` over `[data-tabs]` groups. The first tab and panel in each group carry
   `aria-selected` and `is-active` in the markup, so nothing flashes before `app.js` runs.
-- The worked example is `.run` — plain HTML and CSS, no images and no JavaScript. Keep it to a few
-  steps, do not turn it back into prose, and keep it ending at Outcome with `.run__loop` turning back
-  into Context.
-- `glossary/index.html` and `author/index.html` both link back to `#three-leaves`, `#context`,
-  `#fifth-leaf`, `#walkthrough`, `#agent` and `#evidence` on this page. Those IDs have to keep
-  resolving, and all three navs are identical.
+- The worked example component is `.run` — plain HTML and CSS, no images and no JavaScript. **No page
+  currently uses it**, though its 14 rules are still in `styles.css`. If it comes back, keep it to a
+  few steps, do not turn it back into prose, and keep it ending at Outcome with `.run__loop` turning
+  back into Context.
+- `#story` is the only home-page anchor linked from another page. Keep it resolving, and keep all six
+  navs identical.
 - `author/index.html` is the one page written in the first person about a life rather than about the
   framework. It is also the one place *Black Clover* may be named, as a favorite anime. It ends on
   the verse, with no closing section and no site footer. Leave all of that alone.
@@ -194,10 +187,9 @@ The marks are the site's identity and they carry the argument, so they have rule
   deleted six stages, one showed the production cutover as a completed step, and one said the memory
   leak fix went to Next.js when it went to React. Any new diagram gets checked against the case study
   text before it ships.
-- **The story is three acts, and each act is its own `[data-story]` block** with its own sticky
-  clover and its own steps: three leaves, then four, then five. They are separate clovers rather than
-  one clover that morphs, because a leaf has to link to a step in the act being read — a shared
-  clover sent every click back to the first act.
+- **The story is a single `[data-story]` block** with its own clover and its own steps. It was three
+  separate acts, each with its own mark, because a leaf had to link to a step in the act being read.
+  With one block that constraint is gone.
 - **Each `.story__step` carries `data-leaf` and `data-caption`**, and the last one carries
   `data-ink`. `app.js` picks, per block, the step whose centre is nearest the middle of the viewport,
   and highlights that leaf and its label. Nearest-to-centre is used rather than an
@@ -209,9 +201,10 @@ The marks are the site's identity and they carry the argument, so they have rule
 - **Leaf links are SVG `<a class="story__leaf-link">` scoped to their own act**, with an
   `aria-label`, so they are clickable and focusable and still jump to the right step without
   JavaScript.
-- **`#three-leaves`, `#context` and `#fifth-leaf` are step ids inside the story**, not section ids.
-  Nothing in the nav points at them any more, but keep them — they are the anchors the clover leaves
-  link to, and `check.ps1` follows every one.
+- **`#context`, `#st-direction-2`, `#st-action-2` and `#st-outcome-2` are step ids inside the
+  story**, not section ids. Nothing in the nav points at them, but keep them — they are the anchors
+  the clover leaves link to, and `check.ps1` follows every one. Each leaf and its step share a
+  `data-leaf` value, so the four values must stay paired.
 - American spelling. No employer, product, cluster or infrastructure names.
 - **Bump the `?v=` on `styles.css` and `app.js` whenever either changes.** All three pages carry it.
   GitHub Pages sends `Cache-Control: max-age=600` on every file and they expire independently, so
