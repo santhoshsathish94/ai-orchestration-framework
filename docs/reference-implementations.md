@@ -48,6 +48,10 @@ The knowledge was never missing. It was in the code and in the running system, a
 
 The examples above were run against real systems, and in both the answer was reached by working backwards from the reported symptom to the source rather than from a summary prepared in advance. That is the part that matters. It is what makes the pattern hold when the question is one nobody anticipated, and when the people who would have known are no longer there to ask.
 
+### Growth
+
+Each answer also establishes something about where the knowledge actually lived, and which path reached it. Written back, that is what lets the next question start nearer the answer instead of repeating the search. The pattern spends most of its time in Context, so the Context it leaves behind is most of what it is worth.
+
 ---
 
 ## 2. Production Exception Remediation
@@ -94,6 +98,10 @@ Incorrect report values trigger remediation. AI traces the transformation, fixes
 
 > Move from a deployed change to a demonstrated outcome — the original production signal stops and stays stopped.
 
+### Growth
+
+The evidence assembled for approval — the root cause, why the change addresses it, and the production signal expected afterwards — outlives the ticket. Kept with the signal it belongs to, a recurring exception is recognized on its second appearance rather than investigated again from nothing, and a prediction that did not match what production then showed is the more useful of the two records.
+
 ---
 
 ## 3. Multi-Repository Defect Remediation
@@ -127,9 +135,11 @@ Review and approval also stay human. The volume of change this produces is exact
 
 > Turn a batch of defects from a queue of individual investigations into one orchestrated cycle, ending in evidence of which are genuinely closed.
 
-A partial result is the normal result, and a useful one. Knowing that some defects remain, and why, is what makes the next cycle better informed than the last. Writing that down is Growth, the fifth stage.
-
 The orchestration itself has been demonstrated end to end — investigation, root cause, focused change, validation, and evidence assembled for a human approval decision. What has not been exercised is the last mile: standing this up as the routine path for a team's production exceptions, with the approval and deployment gates wired into their real tooling.
+
+### Growth
+
+A partial result is the normal result, and a useful one. Knowing that some defects remain, and why, is what makes the next cycle better informed than the last. Writing that down is Growth, and this pattern loops the hardest of the four: what the unresolved defects showed becomes the Context the next pass starts from.
 
 ---
 
@@ -170,6 +180,10 @@ The important design rule is:
 > **When a boundary matters to Outcome, enforce it outside the model wherever the environment allows.**
 
 The reference implementation closes a specific gap between documentation and runtime behavior. It does not claim to solve every agent-security problem, and it does not claim that the current Clover orchestration engine automatically enforces test immutability everywhere.
+
+### Growth
+
+The audit stream is where this pattern learns. A single denied write is an operational signal and nothing more, but the same attempts recurring, or changing shape over time, is evidence worth investigating and worth writing back — either the boundary is drawn in the wrong place, or the work keeps needing something the Direction did not grant. Neither is visible from one cycle.
 
 ---
 

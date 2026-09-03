@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" width="960" height="300" role="img"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 372" width="960" height="372" role="img"
      aria-labelledby="title desc" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif">
   <title id="title">Production exception remediation</title>
-  <desc id="desc">A production exception signal starts the cycle. The orchestration layer reads the running system, then proposes a change carrying the root cause, the exact scope, the tests, and the expected production signal. A human holds the approval, and nothing reaches production without it. After deployment the ticket closes only when the original production signal is shown to be resolved.</desc>
+  <desc id="desc">A production exception signal starts the cycle. The orchestration layer reads the running system, then proposes a change carrying the root cause, the exact scope, the tests, and the expected production signal. A human holds the approval, and nothing reaches production without it. After deployment the ticket closes only when the original production signal is shown to be resolved. What the cycle established outlives the ticket, so a recurring exception is recognized rather than investigated again from nothing.</desc>
 
-  <rect width="960" height="300" fill="#ffffff"/>
+  <rect width="960" height="372" fill="#ffffff"/>
 
-  <text x="20" y="26" font-size="12" font-weight="700" fill="#0a6a5f" letter-spacing="1.6">CONTEXT → DIRECTION → EXECUTION → OUTCOME</text>
+  <text x="20" y="26" font-size="12" font-weight="700" fill="#0a6a5f" letter-spacing="1.6">CONTEXT → DIRECTION → EXECUTION → OUTCOME → GROWTH</text>
   <line x1="20" y1="40" x2="940" y2="40" stroke="#d6e2e0" stroke-width="1"/>
 
   <g stroke="#7fb8b0" stroke-width="1.5" fill="#e6f2f0">
@@ -61,6 +61,11 @@
   <text x="509" y="230" font-size="12.5" font-weight="700" fill="#ffffff">A human approves before anything reaches production</text>
   <path d="M716 204v-12M716 192l-4 6M716 192l4 6" stroke="#0a6a5f" stroke-width="1.5" fill="none"/>
 
-  <rect x="21" y="256" width="918" height="32" rx="8" fill="#f4f7f7" stroke="#d6e2e0" stroke-width="1"/>
-  <text x="37" y="277" font-size="12" fill="#39424d">Run on real work through existing review and deployment approvals. <tspan font-weight="700" fill="#14181d">Not always-on, and not the routine path for any team's production exceptions yet.</tspan></text>
+  <rect x="21" y="252" width="918" height="62" rx="10" fill="#e6f2f0" stroke="#7fb8b0" stroke-width="1.5"/>
+  <text x="37" y="274" font-size="10.5" font-weight="700" fill="#0a6a5f" letter-spacing="1.3">GROWTH · BACK INTO CONTEXT</text>
+  <text x="37" y="295" font-size="12" fill="#39424d">The root cause, and the production signal expected after the change, outlive the ticket. Kept with the signal they belong to, a recurring</text>
+  <text x="37" y="307" font-size="12" fill="#39424d">exception is recognized on its second appearance, and a prediction production then contradicted is the more useful of the two records.</text>
+
+  <rect x="21" y="328" width="918" height="32" rx="8" fill="#f4f7f7" stroke="#d6e2e0" stroke-width="1"/>
+  <text x="37" y="349" font-size="12" fill="#39424d">Run on real work through existing review and deployment approvals. <tspan font-weight="700" fill="#14181d">Not always-on, and not the routine path for any team's production exceptions yet.</tspan></text>
 </svg>
