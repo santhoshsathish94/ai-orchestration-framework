@@ -169,7 +169,7 @@ Action is where AI and other capabilities work from System Context and Human Dir
 
 AI can reason, analyze, plan, choose tools, coordinate work, create, execute, test, and adapt.
 
-The important distinction is that AI can help determine the **means** without becoming the owner of the **destination**.
+The important distinction is that AI can help determine **how the work happens** without becoming the owner of **what is worth pursuing**.
 
 > **How should the work happen within the System's Context and Human Direction?**
 

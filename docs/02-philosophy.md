@@ -57,7 +57,7 @@ The capability is already here. AI can reason, analyze, plan, coordinate, create
 
 The framework is therefore about working with the capabilities of the **System, Human, and AI** so that meaningful outcomes can be pursued and validated. AI takes its place as an actor inside the cycle rather than as its decision-maker, because a decision needs somebody who answers for it.
 
-A useful analogy is a journey: **the system is the map and terrain, humans choose the destination, and AI is a means of getting there.** A more capable means can change the speed, cost, or quality of the journey without becoming the owner of the destination.
+Stated plainly: **the system is the existing reality that can validate the outcome, the human is accountable for that outcome against the purpose they chose to pursue, and AI can help reach it sooner by respecting the cycle.** A more capable AI can change the speed, cost, or quality of the work without becoming the owner of the outcome.
 
 ### What makes Clover distinct
 

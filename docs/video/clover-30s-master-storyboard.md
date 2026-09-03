@@ -27,16 +27,16 @@ The closing carries the point that makes the framework matter:
 7. **Failures return to Context.** Do not imply that repeated retries alone solve problems. A failed result usually means new information is needed.
 8. **Past success does not guarantee the next success.** Even if an AI system has been correct many times, the next situation can still expose a missing assumption or changed environment.
 9. **Growth is the fifth stage of the cycle.** Whatever the Outcome taught is kept, so the next cycle starts from it. One wrong answer, understood and written down, is Growth. A team performs it. It makes no promise about AI autonomy.
-10. **Capability may scale. Direction remains human.** More capable AI can change the means of execution without changing who chooses the destination or who is accountable.
+10. **Capability may scale. Direction remains human.** More capable AI can change the means of execution without changing who decides what to pursue or who is accountable.
 11. **The way of working is old.** Somebody understood the situation, somebody decided what mattered and answered for it, the work got done, reality showed what happened, and what it taught carried forward. AI moved execution to something that cannot be accountable. CLOVER puts accountability back with the human actor who can carry it.
 
-## Foundational analogy
+## Foundational statement
 
-> **The system is the map. Humans choose the destination. AI is a means of getting there.**
+> **The system is the reality that can validate the outcome. The human is accountable for it. AI helps reach it sooner.**
 
 These three are the **system actors**: System → Human → AI.
 
-Use this idea as the conceptual backbone of the visual story without turning the video into a literal travel metaphor.
+Use this idea as the conceptual backbone of the visual story. Show the three actors and the real system, rather than illustrating it as a journey.
 
 ## Visual and narrative principle
 

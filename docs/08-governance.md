@@ -134,27 +134,27 @@ A more capable AI can change the means available to reach an outcome. It does no
 whether that outcome should be pursued.
 
 Competitive pressure may encourage an organization to automate more execution inside Action. It does
-not justify handing AI the authority to choose the destination.
+not justify handing AI the authority to choose what is worth pursuing.
 
 > **Do not transfer Direction to AI merely because AI becomes capable enough to suggest or execute it.**
 
-## The destination, the means, and the map
+## What each actor holds
 
-A useful Clover analogy is a journey:
+Stated plainly:
 
-- **Human Direction is the destination.** It states where we intend to go and what constraints must
-  hold on the journey.
-- **AI is a means of getting there.** Different models can be slower, faster, more capable, or more
-  economical. They can change the speed and way we travel without changing the destination.
-- **The system is the map and the terrain.** It tells us what exists, where the constraints are, what
-  has already happened, and what evidence can show whether we are actually getting there.
+- **Human Direction sets the purpose.** It states which outcome is worth pursuing and what
+  constraints must hold while the work happens. The human answers for that outcome afterwards.
+- **AI is a means of reaching it sooner.** Different models can be slower, faster, more capable, or
+  more economical. They change how the work gets done, not what is worth doing.
+- **The system is the existing reality that can validate the outcome.** It holds what exists, where
+  the constraints are, what has already happened, and the evidence of whether the outcome was
+  actually reached.
 
-Humans can walk, run, drive, or use other tools. The framework cares about whether the intended
-outcome is reached, not about giving the means ownership of the destination.
+The framework cares about whether the intended outcome is reached, not about giving capability
+ownership of the purpose.
 
-The analogy is intentionally broader than any particular AI product or model generation. It applies
-whether the organization uses an older model, a newer frontier model, several models, or no AI at all.
-AI changes the means; it does not redefine the destination.
+This holds whether the organization uses an older model, a newer frontier model, several models, or
+no AI at all. AI changes how the work is done; it does not redefine what is worth doing.
 
 ## Keep humans responsible
 

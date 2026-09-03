@@ -52,11 +52,11 @@ The simplest explanation is:
 
 > **Give AI the real context. Give humans the direction. Let AI do the work. Then let reality prove whether it worked.**
 
-A useful analogy is a journey:
+Stated plainly:
 
-> **The system is the map. Humans choose the destination. AI is a means of getting there.**
+> **The system is the existing reality that can validate the outcome. The human is accountable for that outcome, against the purpose they chose to pursue. AI can help reach it sooner, by respecting the cycle.**
 
-A better or faster means can change the journey. It does not change the destination.
+A better or faster AI can change how the work is done. It does not change what is worth doing.
 
 The important point is not that AI cannot suggest a direction. It is that even when AI becomes capable enough to suggest one, **the authority to decide whether that direction should actually be pursued remains human**.
 
@@ -497,9 +497,9 @@ For the human/AI boundary, use:
 
 > **AI can be capable enough to suggest directions. Humans should always have the authority to decide what to pursue.**
 
-For the journey analogy, use:
+For the three actors, use:
 
-> **The system is the map. Humans choose the destination. AI is a means of getting there.**
+> **The system is the reality that can validate the outcome. The human is accountable for it. AI helps reach it sooner.**
 
 ---
 

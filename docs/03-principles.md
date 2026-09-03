@@ -46,7 +46,7 @@ Clover therefore keeps this rule independent of the model generation or competit
 
 > **AI can be capable enough to suggest directions. Humans should always have the authority to decide what to pursue.**
 
-A more capable means can change the speed or quality of the journey without changing who chooses the destination. **The system is the map. Humans choose the destination. AI is a means of getting there.**
+A more capable AI can change the speed or quality of the work without changing who decides what to pursue. **The system is the existing reality that can validate the outcome. The human is accountable for that outcome, against the purpose they chose to pursue. AI can help reach it sooner, by respecting the cycle.**
 
 This boundary also applies as capability and scale increase. We do not know the upper boundary of future AI capability. AI may remain limited in important ways, or it may become capable enough to suggest directions that are far larger than today's individual tasks. That uncertainty is not a reason to wait before establishing the authority boundary.
 

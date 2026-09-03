@@ -52,9 +52,9 @@ The reason is accountability. **Capability can grow much faster than our ability
 
 A more capable AI can change the means available to reach an outcome. It does not change who chooses what should be pursued or who remains accountable for that choice.
 
-The simplest analogy is:
+The simplest statement of it is:
 
-> **The system is the reality and the map. Humans choose the destination. AI helps provide the means of getting there.**
+> **The system is the existing reality that can validate the outcome. The human is accountable for that outcome, against the purpose they chose to pursue. AI can help reach it sooner, by respecting the cycle.**
 
 ---
 

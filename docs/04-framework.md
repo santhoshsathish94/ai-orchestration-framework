@@ -50,13 +50,13 @@ AI is capable of making decisions. What Clover sets is a boundary on which decis
 
 Clover does not support transferring organizational Direction to AI, regardless of how capable AI becomes. AI may become dramatically better at reasoning, planning, implementation, coordination, and execution. None of that creates authority over purpose, acceptable risk, priorities, boundaries, or accountability.
 
-Competitive pressure may encourage an organization to automate more of the path inside Action. It does not justify handing AI the destination.
+Competitive pressure may encourage an organization to automate more of the path inside Action. It does not justify handing AI the authority to decide what is worth pursuing.
 
 > **Capability can increase. Authority does not have to.**
 
 > **Do not transfer Direction to AI merely because AI becomes capable enough to perform it.**
 
-A useful analogy is a journey: **the system is the map and terrain, humans choose the destination, and AI is a means of getting there.** A more capable means can change the speed, cost, or quality of the journey without changing the destination.
+Stated plainly: **the system is the existing reality that can validate the outcome, the human is accountable for that outcome against the purpose they chose to pursue, and AI can help reach it sooner by respecting the cycle.** A more capable AI can change the speed, cost, or quality of the work without changing what is worth pursuing.
 
 This boundary also matters in critical situations. AI may be unavailable, delayed, rate-limited, or otherwise unsuitable when an organization needs to respond immediately. Production incidents and other high-blast-radius situations still require accountable humans and established operational mechanisms. Clover should improve the means of reaching an outcome without making the organization dependent on any particular AI service being available.
 
