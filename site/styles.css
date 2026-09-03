@@ -97,13 +97,17 @@ section[id] { scroll-margin-top: 5rem; }
 
 .band { padding-block: clamp(3rem, 7vw, 5rem); }
 
-.eyebrow {
-  font-size: 0.76rem; font-weight: 650; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--accent); margin: 0 0 0.7rem;
-}
-
 .lede { font-size: 1.12rem; color: var(--ink-2); }
 .note { font-size: 0.92rem; color: var(--muted); }
+
+/* Section prose sits at the hero's scale on every page, so a heading is not twice the size of the
+   text under it. Only prose directly inside a section: cards, panels and columns keep their density.
+   The floor is 1.12rem rather than the hero's 1.05rem, which is below the 17px body size and would
+   have made narrow screens smaller instead of larger. `main.narrow` rather than `main` so this beats
+   `.lede`, which would otherwise leave a lede smaller than the paragraphs under it. */
+main section.band > .wrap > p,
+main section.band > .wrap > .scale-dimensions > div > p,
+main.narrow > p { font-size: clamp(1.12rem, 2.2vw, 1.28rem); }
 
 /* ---------- author page ---------- */
 
@@ -319,7 +323,7 @@ section[id] { scroll-margin-top: 5rem; }
 .hero { padding-block: clamp(3rem, 9vw, 6rem) clamp(2.5rem, 6vw, 4rem); }
 .hero h1 { max-width: 22ch; margin-bottom: 0.25em; }
 .hero__tagline { max-width: 44ch; margin: 0 0 0.9rem; font-size: clamp(1.15rem, 2.6vw, 1.5rem); font-weight: 600; line-height: 1.3; letter-spacing: -0.015em; color: var(--accent); }
-.hero .lede { max-width: 68ch; font-size: clamp(1.05rem, 2.2vw, 1.28rem); }
+.hero .lede { max-width: 68ch; font-size: clamp(1.12rem, 2.2vw, 1.28rem); }
 
 /* ---------- the five stages ---------- */
 /* One section per stage. The pinned mark carries the highlight; these two rules are what app.js
@@ -369,10 +373,6 @@ section[id] { scroll-margin-top: 5rem; }
    the right by exactly the space the mark occupies. */
 .pinned { position: relative; --mark-w: clamp(260px, 36vw, 400px); --mark-gap: 3rem; }
 .pinned .wrap { padding-right: calc(var(--pad) + var(--mark-w) + var(--mark-gap)); }
-/* Section prose is set at the hero size, so the gap between a heading and its text is not a cliff.
-   The floor is 1.12rem rather than the hero's 1.05rem, which sits below the 17px body size and would
-   have made narrow screens smaller instead of larger. */
-.pinned .wrap > p { font-size: clamp(1.12rem, 2.2vw, 1.28rem); }
 /* Sticky at the vertical middle: 50vh rather than 50%, because a percentage inset on a sticky box
    resolves against the containing block, and .pinned is the whole page tall. The rail has no height,
    so the mark is pulled up by half its own to sit centred on that line. */

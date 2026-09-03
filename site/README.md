@@ -172,8 +172,14 @@ The marks are the site's identity and they carry the argument, so they have rule
   argument structural and unattributed.
 - One background for the whole site: white. Sections carry no tint and no dividing rule; the
   `.band` padding is what separates them. There is no `.band--soft` and no `.card--flat`; do not
-  reintroduce either. The footer keeps its top rule, since nothing else marks where it starts.
-- The mark turns one full revolution between the top and the bottom of the home page, eased toward
+  reintroduce either. The footer keeps its top rule, since nothing else marks where it starts.- **No green labels above headings.** The `.eyebrow` component is gone from every page and its rule
+  is out of the stylesheet. A section is introduced by its heading alone.
+- **Section prose runs at the hero's scale on every page** — `clamp(1.12rem, 2.2vw, 1.28rem)`, which
+  puts a heading at about 1.6 times its text rather than twice. It applies only to prose directly
+  inside a section, plus the two unstyled columns in `#scale`; cards, tab panels, `.panel__cols`,
+  definition lists and the verse keep their own density. The floor is 1.12rem rather than 1.05rem
+  because 1.05rem is 16.8px, below the 17px body size, and would have shrunk narrow screens. Check a
+  new selector against `.lede`, which is 1.12rem and will win on specificity if you are careless.- The mark turns one full revolution between the top and the bottom of the home page, eased toward
   the scroll position in `app.js` rather than tracking it exactly. `prefers-reduced-motion` stops it.
   The turn is an SVG `rotate(deg 50 44)` on `.clover__spin`, inside the viewBox. Rotating the `<svg>`
   element instead grows its box to the diagonal, which pushed the page sideways at narrow widths.
