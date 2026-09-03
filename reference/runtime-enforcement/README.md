@@ -9,6 +9,7 @@ This reference demonstrates how a Clover verification boundary can be enforced o
 - Parent traversal and symbolic-link paths are resolved before authorization.
 - Denied write attempts are emitted as structured JSON security events without recording file contents.
 - Docker can provide a second, physical filesystem boundary by mounting verification artifacts read-only.
+- The container runs on an `internal` network, so the Action stage has no route out of the sandbox.
 
 ## Run the policy tests
 

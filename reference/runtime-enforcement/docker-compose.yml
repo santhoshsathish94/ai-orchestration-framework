@@ -1,7 +1,15 @@
 services:
   agent:
     build: ./agent
+    networks:
+      - sandbox
     volumes:
       - ./workspace/src:/workspace/src:rw
       # Existing verification controls are runtime read-only.
       - ./workspace/tests:/workspace/tests:ro
+
+networks:
+  # Nothing here needs the network once the image is built. Denying egress means a prompt-injected
+  # Action cannot post the workspace anywhere, and the image build is unaffected.
+  sandbox:
+    internal: true
