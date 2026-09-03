@@ -237,5 +237,16 @@ The marks are the site's identity and they carry the argument, so they have rule
 Light background, teal accents, matching the site. Keep important content inside a ~40px margin —
 GitHub crops the edges at some sizes.
 
-> The card still carries the old six-stage artwork. It needs re-exporting for Clover; the `og:image`
-> tags in `index.html` point at it and will pick up the new file with no markup change.
+The mark is five leaves at 72 degrees, the same as everywhere else. It was four at 90 degrees once,
+which no amount of correct wording beside it would have fixed.
+
+To re-export after editing the SVG, rasterize with headless Chrome. Set the scale factor explicitly:
+without it a display running above 100% produces a scaled, soft card that still reports 1280×640.
+
+```powershell
+& 'C:\Program Files\Google\Chrome\Application\chrome.exe' --headless=new --disable-gpu `
+  --hide-scrollbars --force-device-scale-factor=1 --window-size=1280,640 `
+  --screenshot=assets\social-preview.png file:///$PWD/assets/social-preview.svg
+```
+
+The `og:image` tags on every page point at the PNG and pick up a new file with no markup change.

@@ -53,9 +53,10 @@ Work on the `clover-expansion` branch. Not released.
   inbound links repointed.
 - **Three broken anchors in [field practices](docs/field-practices.md).** Links pointed at principle
   headings that had been renamed. Repo-wide markdown links and anchors now all resolve.
-- **The social card said the wrong thing.** `assets/social-preview.svg` still described an "AI
-  Orchestration Framework" ending in Success. **The PNG has not been re-rendered**, so the served
-  card still shows the old wording.
+- **The social card said the wrong thing, and drew the wrong clover.** `assets/social-preview.svg`
+  described an "AI Orchestration Framework" ending in Success, and its mark was built from four
+  leaves at 90 degrees while the framework has five. Both are corrected, and
+  `assets/social-preview.png` has been re-rendered from the source at 1280×640.
 
 ## v1.1.3 — 2026-08-29
 ### Added
