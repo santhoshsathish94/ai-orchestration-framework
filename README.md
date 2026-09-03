@@ -63,7 +63,7 @@ Clover can be used across two dimensions: **who is doing the work** and **what i
 
 **Individual → AI → Team → Organization**
 
-A person can use Clover for their own work. AI can use the same cycle as a capable participant. A team can work through the cycle together. An organization can use it across functions while keeping accountability and Direction explicit.
+A person can use Clover for their own work. AI can participate as a capable executor. A team can work through the cycle together. An organization can use it across functions while keeping accountability and Direction explicit.
 
 ### What are they working on?
 
@@ -75,7 +75,7 @@ These dimensions can combine in many ways:
 
 **Individual + Task** — solve a small problem.
 
-**AI + Feature** — implement a defined change inside human Direction.
+**AI + Feature** — implement a defined change inside Human Direction.
 
 **Team + System** — coordinate work across a system and validate the resulting behavior.
 
@@ -145,11 +145,11 @@ Humans provide Direction.
 
 They decide what matters, what outcome is desired, what makes that outcome meaningful, priorities, constraints, boundaries, what must not happen, and what remains their responsibility.
 
-AI is capable enough to suggest directions. It can identify opportunities, challenge assumptions, compare options, and recommend what may be worth pursuing. But **AI should not decide which direction to pursue. Humans should always have the authority to decide what to pursue.**
+AI may be capable enough to suggest directions. It can identify opportunities, challenge assumptions, compare options, and recommend what may be worth pursuing. But capability alone does not give AI the authority to choose the direction.
 
-That boundary remains even when AI's suggested direction appears better, faster, or more capable than the current human plan. AI can influence the decision with analysis and recommendations; the authority to choose what to pursue remains human.
+Humans should always have the authority to decide what to pursue. AI may influence that decision with analysis and recommendations; the authority to choose remains human.
 
-> **AI can suggest the direction. Humans decide what to pursue.**
+> **AI may suggest a direction. Humans decide what to pursue.**
 
 > **What outcome do we want, why does it matter, and within what boundaries should action happen?**
 
