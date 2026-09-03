@@ -4,7 +4,7 @@
 
 Clover is a way of working with **System, Human, and AI to produce meaningful outcomes**, from the smallest possible use case to the largest and most complex systems.
 
-It does not claim to have invented the underlying pattern. Before AI could execute substantial portions of work, humans already gathered context, set Direction, performed or coordinated the work, and checked the result. What changes in the AI era is the **means of execution**: AI can now perform a growing share of the Action that humans previously performed themselves.
+It does not claim to have invented the underlying pattern. Before AI could execute substantial portions of work, humans already gathered context, set Direction, performed or coordinated the work, checked the result, and carried what they learned into the next attempt. What changes in the AI era is the **means of execution**: AI can now perform a growing share of the Action that humans previously performed themselves.
 
 This is the complete operating specification. The full framework lives in `docs/`, but the rules here are intended to be sufficient for an agent to apply the cycle to any problem, from the simplest task to the most complex system.
 

@@ -19,7 +19,7 @@
 
 **Context → Direction → Action → Outcome → Growth**
 
-> **Clover connects system reality, human Direction, AI capability, and evidence of outcomes.**
+> **Clover connects system reality, human Direction, AI capability, evidence of outcomes, and what those outcomes teach.**
 
 ---
 
@@ -29,7 +29,7 @@ Clover is a way of working with **System, Human, and AI to produce meaningful ou
 
 It can be applied to the smallest possible use case or to large, complex systems. The scale changes; the relationship does not.
 
-Clover does **not** claim to have invented the underlying way people and systems already work. Before AI could execute work directly, humans commonly participated in the execution themselves: they gathered context, made decisions, performed or coordinated the work, and checked the result.
+Clover does **not** claim to have invented the underlying way people and systems already work. Before AI could execute work directly, humans commonly participated in the execution themselves: they gathered context, made decisions, performed or coordinated the work, checked the result, and carried what they learned into the next attempt.
 
 What changes in the AI era is the **means of execution**. AI can now perform much more of the Action that humans previously performed themselves. That creates a new engineering problem: how to give AI enough capability and execution latitude to be useful while keeping work grounded in System reality, guided by Human Direction, and validated by evidence.
 
@@ -99,11 +99,11 @@ The useful distinction for the AI era is the relationship between them:
 
 **System → Human → AI** makes explicit that System reality grounds the work, Human provides Direction and accountability, and AI provides capability and can take on execution.
 
-**Context → Direction → Action → Outcome → Growth** makes that relationship operational: understand the relevant reality, establish the desired outcome and boundaries, perform the work, and observe what happened against reality.
+**Context → Direction → Action → Outcome → Growth** makes that relationship operational: understand the relevant reality, establish the desired outcome and boundaries, perform the work, observe what happened against reality, and keep what it taught.
 
 So Clover is not presented as a new way humans suddenly began working. It is an attempt to make an existing systems pattern explicit and usable when the **execution layer changes from primarily human-operated to increasingly AI-operated**.
 
-Its value is therefore not the invention of a sequence. Its value is in making the boundaries and feedback between **reality, human purpose, AI execution, and evidence** explicit enough to design, govern, compare, and improve AI-enabled work.
+Its value is therefore not the invention of a sequence. Its value is in making the boundaries and feedback between **reality, human purpose, AI execution, evidence, and learning** explicit enough to design, govern, compare, and improve AI-enabled work.
 
 That claim is still testable. A useful Clover implementation should make context more inspectable, Direction more explicit, execution more safely delegable, continuity stronger, and Outcome harder to misrepresent without evidence. If applying Clover does not improve one or more of those properties, the framework has not earned its place.
 
@@ -115,7 +115,7 @@ Clover is therefore best understood as **a framework for working with System, Hu
 
 Clover continuously connects:
 
-**Reality → Human Direction → Means and Action → Reality-based Outcome**
+**Reality → Human Direction → Means and Action → Reality-based Outcome → What It Taught**
 
 The cycle can repeat as many times as needed.
 

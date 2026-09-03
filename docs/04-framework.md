@@ -4,7 +4,7 @@
 
 Clover is a way of working with **System, Human, and AI to produce meaningful outcomes**, from the smallest possible use case to large and complex systems.
 
-It does not claim to have invented the underlying pattern. Before AI could execute substantial portions of work, humans already gathered context, set Direction, performed or coordinated the work, and checked the result. Clover makes that relationship explicit for an AI era in which more of the execution can be delegated to AI.
+It does not claim to have invented the underlying pattern. Before AI could execute substantial portions of work, humans already gathered context, set Direction, performed or coordinated the work, checked the result, and carried what they learned into the next attempt. Clover makes that relationship explicit for an AI era in which more of the execution can be delegated to AI.
 
 **System → Human → AI** establishes the relationship. **Context → Direction → Action → Outcome → Growth** gives it an operational cycle.
 
@@ -24,7 +24,7 @@ The framework's useful claim is that these familiar activities need to be made e
 
 **Context → Direction → Action → Outcome → Growth** establishes the operational cycle: understand the relevant reality, establish the desired outcome and boundaries, perform the work, observe what happened against reality, and keep what it taught.
 
-The value of the framework is therefore not the invention of a sequence. It is making the boundaries and feedback between **reality, human purpose, AI execution, and evidence** explicit enough to design and govern AI-enabled work.
+The value of the framework is therefore not the invention of a sequence. It is making the boundaries and feedback between **reality, human purpose, AI execution, evidence, and learning** explicit enough to design and govern AI-enabled work.
 
 Clover does not require a separate proof stage before people can use it. The underlying pattern predates AI. The AI-era question is what happens when more of the execution can be delegated while the same human Direction and system-based observation remain in place. **We can apply the cycle, preserve what meaningful cycles teach, and observe what emerges through adoption.**
 

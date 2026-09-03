@@ -216,7 +216,7 @@ Clover has two clearly separated layers.
 
 **Context → Direction → Action → Outcome → Growth**
 
-This is a practical way of working with System, Human, and AI around real context, human intent, means of execution, and real-world observation. Growth is the learning that can emerge from repeating those four stages.
+This is a practical way of working with System, Human, and AI around real context, human intent, means of execution, real-world observation, and what that observation teaches. Growth is the learning that can emerge from repeating those four stages.
 
 ## Hypothesis layer — questions beyond the cycle
 

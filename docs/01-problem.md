@@ -40,7 +40,7 @@ We kept seeing the same pattern at every level:
 - An agent makes a change, the change fails, and it tries a variation of the same change. Nothing
   was missing except information.
 
-Each one is the same failure. Capability without direction, real information, and evidence rarely
+Each one is the same failure. Capability without direction, real information, evidence, and anything kept from last time rarely
 turns into a reliable outcome. AI does not create that gap. It makes the gap obvious, because AI
 will act on missing information faster and more confidently than a human will.
 
