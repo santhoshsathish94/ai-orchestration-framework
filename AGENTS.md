@@ -37,9 +37,9 @@ These are not four levels of complexity. They are the same four jobs whether the
 - **Action:** determine and execute the means inside those boundaries.
 - **Success:** let the System or relevant environment provide evidence of whether the intended outcome happened.
 
-The problem may be a single table, a bug, a feature, a service, a production incident, a multi-service architecture, an organization-wide workflow, or an interconnected system. **Do not invent a different cycle for a bigger problem. Scale the Context, Direction, Action, and Success to the problem.**
+The problem may be a single **task**, a **feature**, a production incident, an entire **system**, an organization-wide workflow, or interconnected systems. The work may be carried by an **individual**, **AI**, a **team**, or an **organization**. These are different dimensions: do not confuse who is working with what is being worked on. Do not invent a different cycle for a bigger problem. Scale the Context, Direction, Action, and Success to the problem.
 
-A simple task may need one source, one decision, one action, and one check. A complex task may need many systems, multiple humans, many delegated actions, staged approvals, repeated validation, and many cycles. The relationship remains the same.
+A simple task may need one source, one decision, one action, and one check. A complex problem may need many systems, multiple humans, many delegated actions, staged approvals, repeated validation, and many cycles. The relationship remains the same.
 
 ---
 
