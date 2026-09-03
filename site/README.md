@@ -48,13 +48,13 @@ The page is one continuous argument rather than one section per stage.
 12. `#try` — Five steps on a real problem the reader already has
 13. `#evidence-preview` — Case studies, reference implementations, how model reviews are reported
 14. `#next` — The closing restatement and where to go
-15. `#morally-context` — What Context stands for morally? Credit stays with the original creators
-16. `#morally-direction` — What Direction stands for morally? Capability is not permission to choose
-17. `#morally-execution` — What Execution stands for morally? The environment enforces what instructions cannot
-18. `#morally-outcome` — What Outcome stands for morally? Improve the fields, do not disrupt them
-19. `#morally-growth` — What Growth stands for morally? Learn from the mistakes or never improve
+15. `#real-world-context` — What Context should stand for in the real world? Credit stays with the original creators
+16. `#real-world-direction` — What Direction should stand for in the real world? Capability is not permission to choose
+17. `#real-world-execution` — What Execution should stand for in the real world? The environment enforces what instructions cannot
+18. `#real-world-outcome` — What Outcome should stand for in the real world? Improve the fields, do not disrupt them
+19. `#real-world-growth` — What Growth should stand for in the real world? Learn from the mistakes or never improve
 
-The five moral sections close the page. They are the only place the site says why the boundaries
+The five real-world sections close the page. They are the only place the site says why the boundaries
 exist rather than what they are, and the only place written in the first person outside `author/`.
 They are plain `.band` sections, not `.stage` ones: they carry no `data-leaf`, so the mark stays in
 its plain state while they are read.
