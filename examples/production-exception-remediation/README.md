@@ -93,7 +93,7 @@ The engineer owned the business decision and the approval.
 ## 4. Outcome
 
 - **Evidence:**
-  - The new test fails on `main` and passes with the change.
+  - The new test would fail before the change and passes after it.
   - The full suite is green.
   - Outside production: 200 checkouts with and without coupons, and no `500`s.
   - After the deploy, the `/api/checkout` `5xx` rate returned to baseline and held for 24 hours.

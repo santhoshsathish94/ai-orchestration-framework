@@ -1,6 +1,6 @@
 <!--
 Thanks for contributing. This follows the framework: Context first, then Direction,
-then Action, then Outcome. Keep it short.
+then Action, then Outcome, then Growth. Keep it short.
 -->
 
 ## Context
@@ -24,6 +24,10 @@ then Action, then Outcome. Keep it short.
 ## Anything still unverified
 
 <!-- Optional, and genuinely welcome. Say what you are unsure about. -->
+
+## Growth
+
+<!-- Optional. What did this teach that the next cycle should start from? -->
 
 ---
 

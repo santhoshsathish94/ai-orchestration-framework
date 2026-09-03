@@ -4,7 +4,11 @@ This is the context file the framework asks every piece of work to keep beside i
 the branch so the reasoning travels with the work. Read it first. Write it back after each success
 and each failure, before the next attempt.
 
-Last written: 2026-09-01. Branch: `refine/clover-way-of-working`.
+Last written: 2026-09-03. Branch: `clover-expansion`.
+
+Entries below dated before 2026-09-02 were written against the four-stage model, when the cycle
+ended at Outcome. They are kept as the record of how the work got here. Where one of them contradicts
+the five-stage cycle, the five-stage cycle is what holds.
 
 ---
 
@@ -157,7 +161,7 @@ Direction has been given on the repositioning and on broadening to three startin
 - **Stale branches.** Local `clover` and `site-next`; remote `clover`, `site-next`,
   `agent/core-opportunity-understand-plan-execute-proof-grow`, `agent/visual-assets-update`. Deleting
   a remote branch needs approval and has not been asked for.
-- **Website plan.** `c:\personal\oss\build_the_website_for_the_framework.md` (v2) is the live plan and
+- **Website plan.** The website plan (v2) is the live plan and
   lives outside the repository. Its state against the current site has not been re-read this session.
 - Carried from earlier sessions and **not re-verified**: whether `docs/04-framework.md`'s "Widening
   what AI decides" still frames AI-determines-the-path as a maturity outcome, which sits awkwardly

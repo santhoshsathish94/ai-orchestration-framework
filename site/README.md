@@ -66,14 +66,10 @@ The marks are the site's identity and they carry the argument, so they have rule
 - One `<path id="clover-leaf">` lives in a hidden sprite `<svg>` at the top of each page. Every mark
   is that single leaf `<use>`d and rotated around the point `(50, 44)` over a short stem. There is no
   second leaf path anywhere — add one and the identity drifts.
-- **Three marks carry the arc**, each in a `<figure class="arc__mark">` with a caption. The caption
-  is only the name — no geometry or construction detail:
-  - three leaves at 120 degrees, labeled Direction, Action, Outcome — "the common clover";
-  - five leaves at 72 degrees, labeled Context, Direction, Action, Outcome and Growth, with Context drawn solid
-    as the leaf that just arrived — "the lucky clover";
-  - five leaves at 72 degrees, with the Growth leaf drawn dotted as the next stage —
-    "the growth clover". The hero mark is five leaves, all solid and unlabeled; the small header mark
-    is decorative and stays solid.
+- **One mark carries the story**, drawn with five leaves at 72 degrees and labeled Context,
+  Direction, Action, Outcome and Growth. All five are solid: Growth is a stage of the cycle, not a
+  possibility hanging off the end of it, and drawing it dotted said the opposite. The hero mark is
+  the same five leaves, unlabeled; the small header mark is decorative and stays solid.
 - Leaf names are real `<text>` labels positioned outside each leaf tip, inside a `viewBox` of
   `-30 -18 160 117` so the labels have room. They are content, not decoration — never replace them
   with a legend.

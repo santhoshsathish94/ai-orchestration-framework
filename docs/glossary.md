@@ -32,7 +32,7 @@ that is a bug in the writing — [tell us](../CONTRIBUTING.md).
 | **MCP server** | A small service that gives an agent a scoped way to read one system — a repository, a datasource, a log store, an environment. Read-only, and scoped to what the human driving the work already has access to. This is how the Context stage gets connected. |
 | **Capability** | Anything that can do work: a human, a team, an AI model, an agent, a tool, a system. Capability does not by itself grant authority or accountability. |
 | **Intent** | What a human actually wants to achieve. The outcome, and not the task. |
-| **Outcome** | The change in the real world that was wanted. Distinct from *output*, which is what got produced. |
+| **Output** | What got produced — a file, a patch, a report. Distinct from the **Outcome**, which is the change in the real world that was wanted. Work can produce output and reach no outcome. |
 | **Evidence** | What was actually done to check a claim — an assertion, one manual look, a repeatable test, a before-and-after measurement, or the original signal gone from the real environment. Say which. See [Outcome](07-outcome.md#how-strong-is-your-evidence). |
 | **Experience** | What was learned from one cycle — what was tried, what happened, what the evidence showed. It can become part of the context files beside the work. |
 | **Expertise** | A reusable pattern that emerges from several *validated* experiences. One cycle is not expertise. |

@@ -1,4 +1,4 @@
-$root = 'c:\personal\oss\ai-orchestration-framework\site'
+$root = $PSScriptRoot
 Set-Location $root
 $fail = 0
 

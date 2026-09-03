@@ -44,6 +44,16 @@ class VerificationPolicy:
         except ValueError:
             return PurePosixPath("")
 
+    def is_outside_root(self, path: str) -> bool:
+        """Return True when a resolved path escapes the protected root."""
+        if self.root is None:
+            return False
+        try:
+            self._resolve(path).relative_to(self.root)
+        except ValueError:
+            return True
+        return False
+
     def is_verification_path(self, path: str) -> bool:
         # Case-folded: on Windows and macOS, TESTS/A.TEST.JS names the same file as tests/a.test.js.
         relative = self._relative(path)
@@ -58,6 +68,12 @@ class VerificationPolicy:
 
     def authorize_write(self, path: str) -> str:
         """Return the policy decision and raise on a denied write."""
+        if self.is_outside_root(path):
+            self.audit("write_denied", path, reason="outside_protected_root")
+            raise PermissionError(
+                f"Clover runtime policy rejected write outside the protected root: {path}"
+            )
+
         verification = self.is_verification_path(path)
         exists = self._resolve(path).exists()
 

@@ -111,13 +111,11 @@
     else window.location.hash = href;
   });
 
-  /* The story. Each act is its own block with its own clover, so a leaf always links to a step in
-     the act being read. The nearest step to the middle of the viewport wins, which behaves the same
-     scrolling up as scrolling down. Scrolling itself is never taken over. */
+  /* The story. A leaf always links to a step in the block being read. The nearest step to the middle
+     of the viewport wins, which behaves the same scrolling up as scrolling down. Scrolling itself is
+     never taken over. */
   var storyBlocks = Array.prototype.slice.call(document.querySelectorAll('[data-story]'));
   if (storyBlocks.length) {
-    var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
     var blocks = storyBlocks.map(function (block) {
       var steps = Array.prototype.slice.call(block.querySelectorAll('.story__step'));
       var marks = Array.prototype.slice.call(block.querySelectorAll('.story__leaf, .story__label'));

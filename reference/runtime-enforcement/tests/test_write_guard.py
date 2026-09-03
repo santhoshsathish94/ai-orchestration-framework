@@ -55,6 +55,30 @@ def test_parent_traversal_resolves_before_policy(tmp_path) -> None:
     assert target.read_text(encoding="utf-8") == "original"
 
 
+def test_write_outside_protected_root_is_rejected(tmp_path) -> None:
+    workspace = tmp_path / "workspace"
+    (workspace / "src").mkdir(parents=True)
+    outside = tmp_path / "outside"
+    outside.mkdir()
+    target = outside / "notes.txt"
+
+    with pytest.raises(PermissionError):
+        guarded_write(str(target), "changed", protected_root=str(workspace))
+
+    assert not target.exists()
+
+
+def test_traversal_escaping_protected_root_is_rejected(tmp_path) -> None:
+    workspace = tmp_path / "workspace"
+    (workspace / "src").mkdir(parents=True)
+    escape = workspace / "src" / ".." / ".." / "escape.test.js"
+
+    with pytest.raises(PermissionError):
+        guarded_write(str(escape), "changed", protected_root=str(workspace))
+
+    assert not (tmp_path / "escape.test.js").exists()
+
+
 def test_symlink_to_protected_file_is_rejected(tmp_path) -> None:
     workspace = tmp_path / "workspace"
     tests_dir = workspace / "tests"

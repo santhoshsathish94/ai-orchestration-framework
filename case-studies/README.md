@@ -6,8 +6,8 @@ Real work, including the parts that are still unproven.
 
 Both are delivered outcomes rather than illustrations: a migration whose implementation took about a
 day against an 8–10 week estimate, and a production out-of-memory failure traced to its root cause in
-a shared framework and fixed there. Neither is finished. The migration's production cutover has not
-run, and the upstream fix has not been merged. Both say so.
+a shared framework, with a focused fix contributed upstream. Neither is finished. The migration's
+production cutover has not run, and the upstream fix has not been merged. Both say so.
 
 The two span different domains on purpose. The stages are the same in each, and only the
 vocabulary around them changes.

@@ -80,7 +80,8 @@ needs approving.
 
 ## 4. Outcome — *what the environment showed*
 
-Show the intended outcome happening in the real environment.
+What did the environment show actually happened? Record it whether it was favorable, unfavorable,
+partial, inconclusive, or simply not what was expected.
 
 - **Evidence (tests, before-and-after, telemetry, a run outside production, a user confirming):** …
 - **What was checked, what was observed, and where this stopped:** … *(see [Outcome](../docs/07-outcome.md#how-strong-is-your-evidence))*

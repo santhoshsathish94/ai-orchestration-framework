@@ -71,10 +71,11 @@ moves to AI.
 
 **The System actor must be able to show what happened.** Evidence that no longer exists cannot be
 produced later. Under the EU AI Act, providers of high-risk systems must design them for automatic
-record-keeping across the lifecycle, keep technical documentation, and register the system before it
-is placed on the market ([Arts. 8–21](https://artificialintelligenceact.eu/chapter/3/)). Clover asks
-the same thing for a different reason: the Outcome stage has nothing to judge with if the system
-kept no trace.
+record-keeping across the lifecycle and keep technical documentation
+([Arts. 8–21](https://artificialintelligenceact.eu/chapter/3/)), and must register the system in the
+EU database before it is placed on the market
+([Art. 49](https://artificialintelligenceact.eu/article/49/)). Clover asks the same thing for a
+different reason: the Outcome stage has nothing to judge with if the system kept no trace.
 
 **The Human actor must be reachable, and must be able to intervene.** The EU AI Act requires
 high-risk systems to be designed so a deployer can implement human oversight. The GDPR goes further
