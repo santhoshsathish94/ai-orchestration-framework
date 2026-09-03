@@ -12,7 +12,7 @@ Prompts, tools, agents, and AI model choice all sit underneath the cycle. What t
 
 **The framework is five stages: Context → Direction → Action → Outcome → Growth.**
 
-The first four produce a result. **Growth** is what the team does with what that result taught: preserve it, look across cycles for what repeats, and promote what held into practice the next cycle can start from. Growth closes the loop back into Context.
+The first four produce a result. **Growth** is whatever that result taught, carried back so the next cycle starts from it. It needs no repetition and no scale: one wrong answer, understood and written down, is Growth. Growth closes the loop into Context.
 
 ## What makes Clover distinct
 
@@ -249,37 +249,45 @@ When the evidence does not support the intended outcome, return to Context rathe
 
 ## Stage 5 — Growth
 
-Growth is where a cycle is turned into something the next cycle can use. Without it the cycle still
-produces a result, and the team starts the next one from the same place it started this one.
+Growth is whatever the Outcome taught, carried back so the next cycle starts from it.
 
-The work is small and specific:
+It does not need repetition, scale, or a threshold. A single cycle that answered a question wrongly
+has produced Growth the moment somebody records why: the relationship that was misunderstood, the
+assumption that turned out to be false, the signal nobody had looked at. That is the whole of it at
+the smallest size, and it is the same stage at the largest.
 
-- **Preserve what the cycle established.** What was tried, what the environment showed, what turned
-  out to be wrong, and what is still unknown, written where the next cycle will find it rather than
-  held in a conversation that ends.
-- **Look across cycles.** A single result is an observation. Repetition is what turns it into a
-  pattern worth naming — a recurring failure, an approach that keeps working, a constraint nobody
-  had written down.
-- **Promote what has held.** When a pattern has survived enough cycles, make it the default: a
-  practice, a check, a template, a piece of Direction that no longer has to be rediscovered.
+Unfavorable Outcomes feed it as much as favorable ones, and often more. A cycle that disproved an
+assumption has taught something a cycle that confirmed one did not.
 
-Unfavorable Outcomes feed this stage as much as favorable ones. A cycle that disproved an assumption
-has produced something worth keeping.
+What the stage does:
+
+- **Keep what the cycle taught.** What was tried, what the environment showed, what turned out to be
+  wrong, what is still unknown — written where the next cycle will find it rather than left in a
+  conversation that ends.
+- **Feed it back into Context.** Growth is not a separate store. What it keeps becomes the Context
+  the next cycle reads, which is how the loop closes.
+- **Notice what repeats, when it does.** Across cycles a pattern can appear — a recurring failure, an
+  approach that keeps working, a constraint nobody wrote down. Naming it is useful. Making it a
+  default is a human decision, and one good outcome is not yet a rule.
+
+Growth is not reserved for scale. It is not something only frontier AI providers do with volumes of
+interaction data, and it does not require a team, an organization, or a repeated pattern. One person,
+one table, one wrong answer, one thing learned is Growth.
 
 **Core question.** What did this teach, and what should the next cycle start from?
 
-**What the human holds.** The judgment about what is worth keeping and what is worth promoting, and
-accountability for a practice once it becomes a default.
+**What the human holds.** The judgment about what is worth keeping, and accountability for anything
+that becomes a default.
 
 **What AI does.** Most of the writing back — recording what the pass established, what it could not
-reach, and what contradicted an earlier assumption — and surfacing patterns across cycles that no
-one was tracking.
+reach, and what contradicted an earlier assumption — and surfacing patterns across cycles that nobody
+was tracking.
 
 **What happens there.** The stage gets skipped, because the result is in and the work feels finished.
-The next cycle then rediscovers what the last one already knew. The opposite failure is promoting too
-early: one good outcome becomes a rule, and the rule turns out to be a coincidence.
+The next cycle then rediscovers what the last one already knew. The opposite failure is treating one
+outcome as a rule.
 
-Growth closes the loop. What it preserves is [Context](05-context-engineering.md) for the next pass.
+Growth closes the loop. What it keeps is [Context](05-context-engineering.md) for the next pass.
 
 ---
 

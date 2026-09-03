@@ -48,7 +48,9 @@ A simple task may need one source, one decision, one action, and one check. A co
 
 ## 2. Growth comes from meaningful cycles
 
-Growth is the fifth stage, and it is the one you perform last. It is small and specific: **preserve what the cycle established, and say what it should change for the next one.**
+Growth is the fifth stage, and it is the one you perform last. It is whatever the Outcome taught, written back so the next cycle starts from it.
+
+It needs no repetition and no scale. One wrong answer, understood and recorded, is Growth. An unfavorable Outcome usually teaches more than a favorable one.
 
 **What accumulates from it can emerge anywhere** — in humans, in AI usage, in teams, organizations, and the systems being worked on. You cannot make that happen. You can make it possible by doing the stage properly.
 

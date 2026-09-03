@@ -12,7 +12,7 @@ The canonical operational cycle is:
 
 The fifth leaf is **Growth**. Nobody in an organization runs it. Growth describes the learning and improvement that can emerge from repeated cycles across the system, humans, AI, teams, and organizations.
 
-> **Four leaves make the cycle. The fifth is what the cycle can teach us while it runs.**
+> **Five leaves make the cycle. The fifth is what the other four taught us.**
 
 ---
 
@@ -162,7 +162,7 @@ When the Outcome does not match the intended outcome, the result becomes new Con
 
 Growth is the distinctive fifth leaf.
 
-Growth is different from the first four leaves because it describes learning and improvement that can emerge through repeated cycles. Nobody in an organization runs Growth as a separate task or stage.
+Growth differs from the first four leaves in what it produces rather than in whether it is performed. It is the stage that keeps what a cycle taught, and what accumulates from it is learning and improvement that can emerge through repeated cycles. Nobody in an organization runs Growth as a separate task or stage.
 
 Growth can emerge from every part of the cycle:
 
@@ -322,7 +322,7 @@ The goal is to make the reader think about the fifth leaf while keeping the huma
 
 Then:
 
-> **The first four leaves are the framework. The fifth is what repeated cycles can teach us.**
+> **All five leaves are the framework. The fifth is what the other four taught us.**
 
 And finally:
 

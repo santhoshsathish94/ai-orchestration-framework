@@ -69,10 +69,10 @@ The marks are the site's identity and they carry the argument, so they have rule
 - **Three marks carry the arc**, each in a `<figure class="arc__mark">` with a caption. The caption
   is only the name — no geometry or construction detail:
   - three leaves at 120 degrees, labeled Direction, Action, Outcome — "the common clover";
-  - four leaves at 90 degrees, labeled Context, Direction, Action, Outcome, with Context drawn solid
+  - five leaves at 72 degrees, labeled Context, Direction, Action, Outcome and Growth, with Context drawn solid
     as the leaf that just arrived — "the lucky clover";
   - five leaves at 72 degrees, with the Growth leaf drawn dotted as the next stage —
-    "the growth clover". The hero mark is four leaves, all solid and unlabeled; the small header mark
+    "the growth clover". The hero mark is five leaves, all solid and unlabeled; the small header mark
     is decorative and stays solid.
 - Leaf names are real `<text>` labels positioned outside each leaf tip, inside a `viewBox` of
   `-30 -18 160 117` so the labels have room. They are content, not decoration — never replace them

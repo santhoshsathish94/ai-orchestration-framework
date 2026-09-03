@@ -193,16 +193,18 @@ When the Outcome does not match the intended outcome, return to Context rather t
 
 # Growth
 
-Growth is the fifth stage, and it is where a cycle becomes something the next cycle can use.
+Growth is the fifth stage: whatever the Outcome taught, carried back so the next cycle starts from it.
 
-The first four stages produce a result. Growth is what the team does with what that result taught:
-preserve what the cycle established, look across cycles for what repeats, and promote what has held
-into practice the next cycle can start from.
+It needs no repetition and no scale. A single cycle that answered a question wrongly has produced
+Growth the moment somebody records why. Unfavorable Outcomes feed it as much as favorable ones, and
+often teach more.
 
 A cycle can teach something about the System, the human's Direction, the Action that was taken, the Outcome that occurred, or the way the work itself should be performed.
 
-Without this stage the cycle still produces a result, and the next one starts from the same place
-this one did. What Growth preserves becomes Context, which is how the loop closes.
+Growth is not reserved for frontier AI providers learning from volumes of interaction data. That is
+one layer it can reach. One person, one table, one wrong answer, one thing learned is also Growth.
+
+What it keeps becomes Context, which is how the loop closes.
 
 When cycles repeat, patterns can emerge. When patterns are preserved, future cycles can improve.
 

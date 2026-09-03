@@ -92,7 +92,7 @@ Clover organizes that into four questions a team asks every time:
 - What should we do, and how should the work happen?
 - Did reality validate the intended outcome?
 
-The [four stages](04-framework.md) are those questions, in that order. Reality comes first, and the
+The [five stages](04-framework.md) are those questions, in that order. Reality comes first, and the
 direction is given against what is actually there. What each pass establishes is written down and
 becomes the context the next one starts from.
 

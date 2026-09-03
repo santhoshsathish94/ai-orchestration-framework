@@ -246,7 +246,7 @@ unbounded to bounded, which is what stopped the crashes; it did not go to zero.
 | Independent corroboration | — | matching production diagnosis (`vercel/next.js#97316`) |
 | Status | production mitigated via a global Node flag | upstream fix filed, CI-green, in review |
 
-## What went back into Context
+## Growth — what went back into Context
 
 - **A measurable, repeatable harness turned "it leaks" into a provable before/after.** Multi-round
   retained-heap-after-GC applies the same discipline as the Contentful migration's parity harness,

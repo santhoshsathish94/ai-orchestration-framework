@@ -144,6 +144,8 @@ The **System** provides the evidence needed to determine whether the answer is v
 
 If the answer is wrong, the failure reveals information about reality: perhaps a relationship was misunderstood, a join was wrong, or an assumption was false. That information becomes Context for the next cycle.
 
+That last step is **Growth**, at the smallest size it comes in. One table, one wrong answer, one thing understood and written down. No repetition, no scale, and nothing that belongs only to a frontier AI provider learning from volumes of interaction data.
+
 When useful learning is preserved, future work can begin from a better understanding.
 
 The example is deliberately small. Clover does not become valid only when the system is complex. The same way of working can scale across both dimensions:
