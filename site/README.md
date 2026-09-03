@@ -56,8 +56,8 @@ The page is one continuous argument rather than one section per stage.
 
 The five real-world sections close the page. They are the only place the site says why the boundaries
 exist rather than what they are, and the only place written in the first person outside `author/`.
-They are plain `.band` sections, not `.stage` ones: they carry no `data-leaf`, so the mark stays in
-its plain state while they are read.
+They are `.band.stage` sections carrying `data-leaf`, the same as the five stages, so the matching
+leaf goes to ink as each one is read.
 
 **The mark ripens over them.** Once the first of the five reaches the middle of the viewport,
 `app.js` puts `is-mature` on `<html>`, the leaf gradient turns from green to autumn, and each leaf
