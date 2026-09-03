@@ -48,7 +48,7 @@ The page is one continuous argument rather than one section per stage.
 12. `#try` — Five steps on a real problem the reader already has
 13. `#evidence-preview` — Case studies, reference implementations, how model reviews are reported
 14. `#next` — The closing restatement and where to go
-15. `#stands-for` — What Clover stands for? The final word
+15. `#stands-for` — What Clover stands for morally? The final word
 
 Each of the five stages is its own `.band.stage` section carrying `data-leaf`. `app.js` reads those
 inside `[data-story]` and inks the matching leaf on the pinned mark as the section reaches the middle
