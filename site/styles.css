@@ -318,34 +318,32 @@ section[id] { scroll-margin-top: 5rem; }
 
 .story__stage { position: sticky; top: 5.2rem; text-align: center; }
 .story__clover { width: min(100%, 22rem); height: auto; display: block; margin-inline: auto; }
-.story__stem { fill: none; stroke: var(--accent-line); stroke-width: 3.5; stroke-linecap: round; }
 
+/* Same mark as the hero. The active leaf goes to ink as its step scrolls into view. */
 .story__leaf {
-  fill: var(--accent-soft); stroke: var(--accent); stroke-width: 2; stroke-linejoin: round;
-  transition: fill 0.25s ease, stroke 0.25s ease;
+  fill: url(#leaf-fade);
+  transition: fill 0.25s ease;
 }
-.story__leaf.is-next { fill: none; stroke-dasharray: 6 5; }
-.story__leaf.is-active { fill: var(--accent); }
-/* Growth is dotted at rest because nobody runs it, and fills like any other leaf while it is the
-   step being read. --accent-soft here would match the leaves around it and read as no highlight. */
-.story__leaf.is-active.is-next { fill: var(--accent); stroke-dasharray: none; }
+.story__leaf.is-active { fill: var(--ink); }
+.story__vein {
+  fill: none; stroke: #ffffff; stroke-opacity: 0.5; stroke-width: 1.25;
+  stroke-linecap: round; stroke-linejoin: round; pointer-events: none;
+}
 
 .story__label {
-  font-size: 8px; font-weight: 600; fill: var(--muted);
+  font-family: var(--font); font-size: 6px; font-weight: 650; letter-spacing: 0.02em;
+  fill: var(--ink-2);
   transition: fill 0.25s ease, font-weight 0.25s ease;
 }
-.story__label.is-active { fill: var(--accent); font-weight: 700; }
+.story__label.is-active { fill: var(--ink); font-weight: 800; }
 
 .story__leaf-link { cursor: pointer; outline-offset: 3px; }
-.story__leaf-link:hover .story__leaf { fill: var(--accent); }
-.story__leaf-link:hover .story__label { fill: var(--accent); }
+.story__leaf-link:hover .story__leaf { fill: var(--ink); }
+.story__leaf-link:hover .story__label { fill: var(--ink); }
 
 /* The unknown clover: the whole mark goes to ink on the closing step. */
-.story.is-ink .story__leaf { fill: var(--ink); stroke: var(--ink); stroke-dasharray: none; }
-.story.is-ink .story__stem { stroke: var(--ink); }
+.story.is-ink .story__leaf { fill: var(--ink); }
 .story.is-ink .story__label { fill: var(--ink); }
-
-.story__caption { margin: 0.9rem 0 0; font-size: 0.95rem; color: var(--muted); font-style: italic; }
 
 .story__intro { margin: 0 0 1.8rem; padding-bottom: 1.2rem; border-bottom: 1px solid var(--line); }
 .story__title { margin: 0 0 0.5rem; font-size: clamp(1.5rem, 3.2vw, 2.05rem); }
@@ -377,7 +375,6 @@ section[id] { scroll-margin-top: 5rem; }
   .band--soft .story__stage { background: var(--soft); }
   .story__clover { width: 9.5rem; }
   .story__label { font-size: 7px; }
-  .story__caption { margin-top: 0.35rem; font-size: 0.85rem; }
   .story__step { min-height: 0; padding-block: 1.5rem; opacity: 1; }
   .story__step + .story__step { border-top: 1px solid var(--line); }
 }
