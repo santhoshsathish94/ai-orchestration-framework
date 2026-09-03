@@ -416,6 +416,28 @@ section[id] { scroll-margin-top: 5rem; }
 .hero__top { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1.2rem 2rem; align-items: center; }
 @media (max-width: 620px) { .hero__top { grid-template-columns: 1fr; } }
 
+/* The mark spans the hero and the section under it, so it stays pinned while that text scrolls. */
+.pinned {
+  width: min(1120px, 100%); margin-inline: auto; padding-inline: var(--pad);
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 3rem; align-items: start;
+}
+.pinned > section { grid-column: 1; }
+.pinned .wrap { width: 100%; padding-inline: 0; }
+.pinned__mark { grid-column: 2; grid-row: 1 / -1; position: sticky; top: 5.5rem; }
+
+@media (max-width: 860px) {
+  .pinned { grid-template-columns: 1fr; }
+  /* Above the text and pinned to the top bar, small enough to leave the page readable behind it. */
+  .pinned__mark {
+    grid-column: 1; grid-row: auto; order: -1; top: 3.6rem; z-index: 5;
+    justify-self: center; padding-block: 0.5rem 0.7rem;
+    background: var(--bg); border-bottom: 1px solid var(--line);
+  }
+  .pinned__mark .clover--hero { width: clamp(110px, 30vw, 160px); }
+}
+
+.no-js .pinned__mark { position: static; }
+
 /* ---------- the worked example ---------- */
 /* A numbered run down the page. The rail and the nodes carry the sequence; the chips carry what
    each leaf touched. No images and nothing to run. */
