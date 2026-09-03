@@ -12,11 +12,11 @@ The engineering layer is four stages — Context, Direction, Action, Success. Te
 
 This document is the other layer, and **it is not part of the framework**. No stage depends on it. A team can run every cycle the repository describes, get the outcomes in the [case studies](../case-studies/), and disagree with every word here. The engineering material loses nothing if this document turns out to be wrong.
 
-What follows is a question about Growth. Nothing here says that current systems have reached general intelligence, that autonomous systems are on the way, or that autonomy or harm is inevitable. Growth is useful today. A system that keeps what its outcomes taught it plans better, picks tools better, and starts the next cycle further along than the last. The open part is how far that goes.
+What follows is a question about Growth and the unknown boundary of increasing capability. Nothing here says that current systems have reached general intelligence, that autonomous systems are on the way, or that autonomy or harm is inevitable. Growth is useful today. A system that keeps what its outcomes taught it plans better, picks tools better, and starts the next cycle further along than the last. The open part is how far that goes.
 
 The argument names no actor. It is about structural pressure, and it applies to anyone under enough of it — a well-funded lab, a startup with limited runway, a national program. A version of this that pointed at somebody else would let every other reader off the hook.
 
-Clover's engineering position remains separate and explicit: **capability may scale, but Direction remains human.** The hypothesis below does not treat AI autonomy as a Clover objective or recommendation.
+Clover's engineering position remains separate and explicit: **AI can be capable enough to suggest directions, but humans should always have the authority to decide what to pursue.** The hypothesis below does not treat AI autonomy as a Clover objective or recommendation.
 
 ---
 
@@ -183,4 +183,4 @@ The future hypothesis can explore what might happen if organizations ignore thos
 
 **Status:** Hypothesis layer — September 2026
 
-**Relationship to the framework:** Separate and speculative. Clover's engineering layer addresses AI orchestration today. This document asks where repeated Growth and increasing capability could lead, and it is kept out of the framework material deliberately. Challenges to it are genuinely welcome — see [Contributing](../CONTRIBUTING.md).
+**Relationship to the framework:** Separate and speculative. Clover's engineering layer addresses AI orchestration today. This document asks where repeated Growth and increasing capability could lead, including the unknown boundary of what future AI may become capable of, and it is kept out of the framework material deliberately. Challenges to it are genuinely welcome — see [Contributing](../CONTRIBUTING.md).
