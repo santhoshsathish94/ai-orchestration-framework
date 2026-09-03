@@ -41,7 +41,37 @@ Clover's claim is narrower and more practical: **make that existing relationship
 
 Clover is therefore a way of working with System, Human, and AI, not a mandatory process or replacement for existing workflows. Existing tools, delivery methods, approvals, and agent frameworks can remain in place.
 
-### System is reality. Human provides Direction. AI provides means.
+## The same way of working at two dimensions
+
+Clover can vary along two separate dimensions: **who is doing the work** and **what is being worked on**. These dimensions can grow independently and can combine in many ways.
+
+### Who is working?
+
+**Individual → AI → Team → Organization**
+
+An individual can use the cycle for personal work. AI can participate as a capable executor within Human Direction. A team can share Context and coordinate Action. An organization can carry the same relationship across functions and responsibilities.
+
+### What is being worked on?
+
+**Task → Feature → System**
+
+The work can be a small task, a feature being built or changed, or an entire system. A larger scope may contain many smaller scopes, but it does not require a different Clover cycle.
+
+For example:
+
+**Individual + Task** can be a small analysis or decision.
+
+**AI + Feature** can be an implementation performed within Human Direction.
+
+**Team + System** can be coordinated work across services and responsibilities.
+
+**Organization + System** can be a complex outcome that crosses functions, people, processes, and technology.
+
+These are examples, not limits. The actors and the scope of the work can become much larger or more complex while the core remains the same.
+
+> **The complexity can grow without bound. The core stays simple.**
+
+## System is reality. Human provides Direction. AI provides means.
 
 The central distinction is simple.
 
@@ -81,11 +111,15 @@ If the answer is wrong, the failure reveals information about reality: perhaps a
 
 When useful learning is preserved, future work can begin from a better understanding.
 
-The example is deliberately small. Clover does not become valid only when the system is complex. The same way of working can scale:
+The example is deliberately small. Clover does not become valid only when the system is complex. The same way of working can scale across both dimensions:
 
-**one table → one application → one production system → one organization → interconnected systems**
+**Individual → AI → Team → Organization**
 
-The objects and tools change. The relationship remains:
+and
+
+**Task → Feature → System**
+
+The objects, actors, tools, and scope change. The relationship remains:
 
 **System → Human → AI**
 
@@ -94,8 +128,6 @@ and the work can be understood through:
 **Context → Direction → Action → Success**
 
 Repeated meaningful cycles can produce **Growth** when useful learning is preserved.
-
----
 
 ## Three leaves, then four, then five
 
