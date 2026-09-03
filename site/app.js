@@ -206,6 +206,46 @@
     window.addEventListener('resize', onTurn);
   }
 
+  /* The mark ripens over the closing sections, and its leaves point at them instead of the stages.
+     Same leaf, later in its life: what the stage is, then what it should come to. */
+  var ripeMark = document.querySelector('.pinned__mark');
+  var firstRipe = document.getElementById('real-world-context');
+  if (ripeMark && firstRipe) {
+    var leafLinks = Array.prototype.slice.call(ripeMark.querySelectorAll('a.clover__leaf-hit[href]'));
+    leafLinks.forEach(function (a) {
+      a.setAttribute('data-stage-href', a.getAttribute('href'));
+      a.setAttribute('data-stage-label', a.getAttribute('aria-label') || '');
+    });
+
+    var ripe = null;
+    var setRipe = function (on) {
+      if (on === ripe) return;
+      ripe = on;
+      document.documentElement.classList.toggle('is-mature', on);
+      leafLinks.forEach(function (a) {
+        var stageHref = a.getAttribute('data-stage-href') || '';
+        var target = on ? document.getElementById('real-world-' + stageHref.replace('#stage-', '')) : null;
+        if (target) {
+          var heading = target.querySelector('h2');
+          a.setAttribute('href', '#' + target.id);
+          // The name has to name where the link now goes, so take it from the heading itself.
+          if (heading) a.setAttribute('aria-label', heading.textContent);
+        } else {
+          a.setAttribute('href', stageHref);
+          a.setAttribute('aria-label', a.getAttribute('data-stage-label'));
+        }
+      });
+    };
+
+    var syncRipe = function () {
+      setRipe(firstRipe.getBoundingClientRect().top <= window.innerHeight / 2);
+    };
+
+    syncRipe();
+    window.addEventListener('scroll', syncRipe, { passive: true });
+    window.addEventListener('resize', syncRipe);
+  }
+
   /* Mobile nav. The button only exists visually below 1000px, the width at which the nav still
      fits on one row; above that the nav is always shown. */
   var navToggle = document.querySelector('.nav-toggle');

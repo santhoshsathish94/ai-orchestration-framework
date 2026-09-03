@@ -59,6 +59,14 @@ exist rather than what they are, and the only place written in the first person 
 They are plain `.band` sections, not `.stage` ones: they carry no `data-leaf`, so the mark stays in
 its plain state while they are read.
 
+**The mark ripens over them.** Once the first of the five reaches the middle of the viewport,
+`app.js` puts `is-mature` on `<html>`, the leaf gradient turns from green to autumn, and each leaf
+repoints from `#stage-*` to its `#real-world-*` section with an `aria-label` taken from that
+section's heading. Scrolling back turns it green and restores the stage links. The colour is driven
+by `--leaf-1/2/3` on the root rather than by swapping the fill, because a fill cannot animate between
+two `url()` paints but `stop-color` can. The gradient serves the hero mark alone, so the header logo
+stays green either way.
+
 Each of the five stages is its own `.band.stage` section carrying `data-leaf`. `app.js` reads those
 inside `[data-story]` and inks the matching leaf on the pinned mark as the section reaches the middle
 of the viewport. The `stage` class exists for that hook alone and carries no styling.

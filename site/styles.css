@@ -10,6 +10,10 @@
   --accent: #0a6a5f;
   --accent-soft: #e6f2f0;
   --accent-line: #7fb8b0;
+  /* The hero leaf gradient, as variables so the mark can ripen. */
+  --leaf-1: #17907f;
+  --leaf-2: #0a6a5f;
+  --leaf-3: #064f47;
   --warn: #8a5a00;
   --warn-soft: #fdf4e3;
   --radius: 10px;
@@ -170,6 +174,20 @@ section[id] { scroll-margin-top: 5rem; }
 
 /* Only the hero mark is shaded and veined. The smaller marks stay flat. */
 .clover--hero .clover__leaf.is-filled { fill: url(#leaf-fade); stroke: none; }
+
+/* The mark ripens once the closing sections arrive: the same leaves, later in their life. The stops
+   are driven by variables because a fill cannot animate between two url() paints, but stop-color
+   can. Set on the root so the gradient in the sprite inherits them; it serves the hero mark alone,
+   so the header logo stays green. */
+:root.is-mature {
+  --leaf-1: #e8b23a;
+  --leaf-2: #d8812c;
+  --leaf-3: #a34f1e;
+}
+#leaf-fade stop { transition: stop-color 700ms ease; }
+#leaf-fade stop:nth-of-type(1) { stop-color: var(--leaf-1); }
+#leaf-fade stop:nth-of-type(2) { stop-color: var(--leaf-2); }
+#leaf-fade stop:nth-of-type(3) { stop-color: var(--leaf-3); }
 .clover--hero .clover__leaf-hit:hover .clover__leaf,
 .clover--hero .clover__leaf-hit:focus-visible .clover__leaf { fill: var(--ink); stroke: none; }
 .clover__vein { fill: none; stroke: #ffffff; stroke-opacity: 0.5; stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; }
