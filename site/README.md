@@ -208,7 +208,9 @@ The marks are the site's identity and they carry the argument, so they have rule
   drift. Run `pwsh -File site/check.ps1` before committing: it resolves every nav link to a
   site-root path and fails if the six pages disagree, checks the `?v=` versions match, and follows
   every relative link and every anchor.
-- **The primary nav is six plain links, and it does not point at any section of the home page.** It was
+- **The primary nav is seven plain links, and it does not point at any section of the home page.** It
+  opens on **Clover**, which is the way back to the home page from anywhere; on the home page itself
+  that link carries `aria-current="page"`. It was
   a "Framework" dropdown holding the three clover sections and the worked example, and later carried a
   first link to `/#story`. Both are gone, because the pinned mark labels its own leaves and links
   each one to its stage section, so the reader can pick one there. Do not reintroduce a dropdown to
