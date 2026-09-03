@@ -1,6 +1,6 @@
 # The Problem
 
-Clover is a way of working with the system actors — **System → Human → AI** — through the system
+Clover is a way of working with the reality and the actors in it — **System → Human → AI** — through the system
 cycle they run: **Context → Direction → Execution → Outcome → Growth**.
 
 None of that is a new way of working. Every system that worked has worked this way: somebody

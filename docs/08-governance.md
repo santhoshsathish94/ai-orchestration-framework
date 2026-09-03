@@ -16,7 +16,7 @@ its place as an actor inside the existing cycle rather than as a replacement for
 
 ## System → Human → AI
 
-**System → Human → AI** are the **system actors**. The **system cycle** they run is Context →
+**System → Human → AI**: the system is the reality, and the human and AI are the **actors**. The **system cycle** they run is Context →
 Direction → Execution → Outcome → Growth. Clover keeps the three responsibilities distinct:
 
 - **System is reality.** It may be an existing system or the system being built. Its data, behavior,
@@ -69,7 +69,7 @@ What Clover does is keep the cycle arranged so those obligations stay satisfiabl
 assume a named human is answerable, and that assumption is exactly what gets lost when execution
 moves to AI.
 
-**The System actor must be able to show what happened.** Evidence that no longer exists cannot be
+**The system must be able to show what happened.** Evidence that no longer exists cannot be
 produced later. Under the EU AI Act, providers of high-risk systems must design them for automatic
 record-keeping across the lifecycle and keep technical documentation
 ([Arts. 8–21](https://artificialintelligenceact.eu/chapter/3/)), and must register the system in the

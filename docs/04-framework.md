@@ -8,7 +8,7 @@ It does not claim to have invented the underlying pattern. Every system that wor
 
 What AI changed is not the pattern. It is that execution moved to something that cannot be accountable. Where execution went, accountability tended to follow, and in a lot of places it left the picture. Clover puts AI back inside the existing cycle as one of its actors, and puts accountability back where it can sit.
 
-**System → Human → AI** names the **system actors**. **Context → Direction → Execution → Outcome → Growth** is the **system cycle** they run.
+**System → Human → AI**: the system is the reality, and the human and AI are the **actors**. **Context → Direction → Execution → Outcome → Growth** is the **system cycle** they run.
 
 Prompts, tools, agents, and AI model choice all sit underneath the cycle. What the framework describes is how human intent becomes an outcome the environment shows, and what the next attempt starts from.
 
@@ -22,7 +22,7 @@ Naming five familiar activities is not what makes Clover worth using. Understand
 
 The framework's useful claim is about accountability. Humans historically participated directly in execution, and the person doing the work was reachable when it went wrong. AI can now perform a growing share of that execution, and it cannot answer for any of it. The familiar activities have to be made explicit again so that the accountability which used to travel with the work does not disappear with it.
 
-**System → Human → AI** names the **system actors**: System reality grounds the work, humans own Direction and accountability, and AI supplies capability and can take on execution.
+**System → Human → AI**: the system is the reality the work happens in, humans own Direction and accountability, and AI supplies capability and can take on execution. The human and AI are the **actors**.
 
 **Context → Direction → Execution → Outcome → Growth** is the **system cycle** those actors run: understand the relevant reality, establish the desired outcome and boundaries, perform the work, observe what happened against reality, and keep what it taught.
 

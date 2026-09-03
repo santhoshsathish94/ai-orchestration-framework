@@ -14,7 +14,7 @@ This is the complete operating specification. The full framework lives in `docs/
 
 ## 1. The model you must apply
 
-Clover starts from the **system actors**:
+Clover starts from the reality and the **actors** who work in it:
 
 **System → Human → AI**
 

@@ -2,7 +2,7 @@
 
 Run a first Clover cycle on a real task in about 15 minutes.
 
-Clover is a way of working with the system actors — System, Human and AI — through the system cycle
+Clover is a way of working with the reality and the actors in it — System, Human and AI — through the system cycle
 they run. Every system that worked has worked this way. What AI did was move execution somewhere
 accountability could not follow, and Clover puts it back with the human actor who can take up the
 role.

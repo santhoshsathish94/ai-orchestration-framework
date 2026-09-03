@@ -4,7 +4,7 @@
 
 Clover is a way of working with **System, Human, and AI to produce meaningful outcomes**, from the smallest possible use case to large and complex systems.
 
-It starts from the **system actors**:
+It starts from the reality and the **actors** who work in it:
 
 **System → Human → AI**
 
@@ -65,7 +65,7 @@ The framework does not claim novelty from naming Context, Direction, Execution, 
 
 Clover's claim is narrower and more practical: **make that existing relationship explicit for an AI era in which execution can increasingly be delegated to AI while accountability cannot.**
 
-- **System → Human → AI** names the **system actors**: System grounds the work in reality, Human provides Direction and accountability, and AI provides capability and can take on execution.
+- **System → Human → AI**: the system is the reality the work happens in, the Human provides Direction and accountability, and AI provides capability and can take on execution. The Human and AI are the **actors**.
 - **Context → Direction → Execution → Outcome → Growth** is the **system cycle** those actors run: understand the relevant reality, establish the desired outcome and boundaries, perform the work, validate the outcome against reality, and carry what it taught into the next Context.
 - The value of the framework is in making the boundaries and feedback between **reality, human purpose, AI execution, evidence, and learning** explicit enough to apply AI-enabled work without losing the pattern that existed before AI, or the accountability that used to travel with it.
 - The claim is not a prerequisite for adoption. Clover does not need to be proven before people use it; adoption in the AI era gives us the opportunity to observe what emerges when the same underlying cycle is used with AI performing more of the execution.

@@ -24,7 +24,7 @@ The story must stay human-simple while preserving the framework's deeper princip
 
 The two chains the video is built on:
 
-- the **system actors**: System → Human → AI
+- the reality and the **actors**: System → Human → AI
 - the **system cycle**: Context → Direction → Execution → Outcome → Growth
 
 ---

@@ -41,7 +41,7 @@ What AI changed is not the pattern. It is that execution moved to something that
 
 **AI** provides capability and can help determine the means of achieving the desired outcome within the human's Direction and the System's Context. In the AI era, more of the execution can be delegated to AI without transferring Direction or accountability.
 
-The framework therefore starts with the **system actors**:
+The framework therefore starts with the reality and the **actors** who work in it:
 
 **System → Human → AI**
 

@@ -8,7 +8,8 @@ that is a bug in the writing — [tell us](../CONTRIBUTING.md).
 | Term | What it means here |
 |---|---|
 | **Clover** | This framework. Clover is a way of working with System, Human, and AI to produce meaningful outcomes through real Context, human Direction, delegated Execution, validated Outcome, and the Growth each cycle carries into the next. See [the framework](04-framework.md). |
-| **System actors** | The three participants in any cycle — **System → Human → AI**. The System is the reality the outcome must exist in, the Human holds Direction and accountability, and AI supplies capability and execution. |
+| **System** | The reality the work happens in. Outcomes are the changes that get applied to it. |
+| **Actors** | The two participants in any cycle — the **Human**, who holds Direction and accountability, and **AI**, which supplies capability and execution. Their order runs **System → Human → AI**. |
 | **System cycle** | The five stages the actors run — **Context → Direction → Execution → Outcome → Growth**. |
 | **Stage** | One part of the system cycle. Each stage has one job. There are five. |
 | **Accountability** | Being answerable for the outcome afterward. It cannot sit with AI, which can perform work and report on it but cannot carry the consequence. When execution moved to AI, accountability tended to move out of scope with it. Clover establishes it back in the system, on the human actor who can truly take up the role. |
@@ -46,7 +47,7 @@ that is a bug in the writing — [tell us](../CONTRIBUTING.md).
 | **Non-production** | Any environment that is not serving real users — local, test, staging. It can still contain sensitive data and is not automatically safe to expose. |
 | **Guardrail** | A constraint that keeps work inside safe boundaries: a required approval, a scope limit, a check that must pass. |
 | **Boundary** | A limit on the work set by human Direction — scope, approval points, what must not happen. A boundary can be widened or narrowed by the accountable human. |
-| **Obligation** | A duty that comes from law, regulation, or an organization's own rules. It sits outside Clover's boundaries, applies to all three actors, and no one inside a cycle can trade it away. Adopting Clover neither satisfies it nor removes it. See [governance](08-governance.md#the-rules-each-actor-works-inside). |
+| **Obligation** | A duty that comes from law, regulation, or an organization's own rules. It sits outside Clover's boundaries, applies to the system and to both actors, and no one inside a cycle can trade it away. Adopting Clover neither satisfies it nor removes it. See [governance](08-governance.md#the-rules-each-actor-works-inside). |
 | **Root cause** | The underlying reason a problem occurs. Distinct from the symptom, and from the workaround that hides it. |
 | **Workaround** | Something that stops the pain without fixing the cause. Legitimate for stabilizing an incident, and not a destination. |
 | **Thrashing** | Repeated confident attempts at a fix, none of which work. The signal to stop fixing and go back to Context. |

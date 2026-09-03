@@ -88,7 +88,8 @@ The marks are the site's identity and they carry the argument, so they have rule
 - **One cycle, shown once.** The page carries a single labelled clover in `#story`. It replaced a
   three-act arc that grew the mark from three leaves to four to five. Do not reintroduce separate
   marks per act.
-- **Two named sets, and both names get used.** `System → Human → AI` is **the system actors**.
+- **Two named sets, and both names get used.** `System → Human → AI` is the order: the system is the
+  reality, and the human and AI are **the actors**.
   `Context → Direction → Execution → Outcome → Growth` is **the system cycle**. Say those names when
   referring to either set. Never introduce a competing arrow-chain, never append "→ repeat" to the
   cycle, and never bring back the short form "Where → Know → Do → Validate". Direction is *what*, not
@@ -138,7 +139,7 @@ The marks are the site's identity and they carry the argument, so they have rule
   directly. The human moves from being the source of the context to pointing at it. It is the setup,
   so it stays on the Execution stage and hands the per-stage mechanics to the story, which goes much
   further (`#st-limit` on what the common clover costs, `#st-direction-2` on Direction pointing rather
-  than describing). The hero above it already names the system actors and the whole system cycle in
+  than describing). The hero above it already names the actors and the whole system cycle in
   order. State the transition here, then hand over.
 - `#story` says nothing about production. Development first, then the other non-production
   environments. Access is read-only and scoped to what the human already holds.
@@ -219,12 +220,12 @@ The marks are the site's identity and they carry the argument, so they have rule
   the clover leaves link to, and `check.ps1` follows every one. Each leaf and its step share a
   `data-leaf` value, so the four values must stay paired.
 - American spelling. No employer, product, cluster or infrastructure names.
-- **Bump the `?v=` on `styles.css` and `app.js` whenever either changes.** All three pages carry it.
+- **Bump the `?v=` on `styles.css` and `app.js` whenever either changes.** All six pages carry it.
   GitHub Pages sends `Cache-Control: max-age=600` on every file and they expire independently, so
   without it a returning visitor gets new HTML with a ten-minute-old stylesheet and the page renders
   broken. Match it to the version in `VERSION`.
 - New terminology goes in [`docs/glossary.md`](../docs/glossary.md) first, then the site. The site
-  glossary must define **system actors**, **system cycle**, **Growth** and **accountability** the way
+  glossary must define **System**, **actors**, **system cycle**, **Growth** and **accountability** the way
   the docs define them, and its `<div><dt>…</dt><dd>…</dd></div>` rows are what the filter in `app.js`
   reads, so keep that markup.
 

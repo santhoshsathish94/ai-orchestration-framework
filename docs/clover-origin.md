@@ -284,7 +284,7 @@ Clover must clearly distinguish:
 
 ### What Clover establishes
 
-**Context → Direction → Execution → Outcome → Growth** as a practical way of working with System, Human, and AI to produce meaningful outcomes. **System → Human → AI** are the system actors. The five stages are the system cycle those actors run, and Growth is the fifth of them.
+**Context → Direction → Execution → Outcome → Growth** as a practical way of working with System, Human, and AI to produce meaningful outcomes. **System → Human → AI**: the system is the reality, and the human and AI are the actors. The five stages are the system cycle those actors run, and Growth is the fifth of them.
 
 Clover also establishes accountability back in the system, on the human actor who can truly take up the role. AI takes its place as an actor inside the cycle rather than as a replacement for it.
 
@@ -351,7 +351,7 @@ That framing is intentionally scale-independent: the same relationship can be ap
 When helping build Clover:
 
 1. Treat **Clover** as the framework's current identity.
-2. Call **System → Human → AI** the **system actors**, and keep that order as the foundational priority.
+2. Keep **System → Human → AI** in that order as the foundational priority: the system is the reality, and the human and AI are the **actors**.
 3. Call **Context → Direction → Execution → Outcome → Growth** the **system cycle**, and keep it at five stages unless a genuine conceptual problem is discovered.
 4. Keep **Growth** as the fifth stage: whatever the Outcome taught, at any size, carried back into Context. No repetition and no scale are required for it to count.
 5. Never describe Growth as something nobody runs, or as something sitting outside the framework.

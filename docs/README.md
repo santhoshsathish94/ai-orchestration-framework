@@ -2,7 +2,7 @@
 
 The framework in full, and the material for putting it to work.
 
-The system actors are **System → Human → AI**. The system cycle they run is **Context → Direction →
+The system is the reality, and the actors in it are **System → Human → AI**. The system cycle they run is **Context → Direction →
 Execution → Outcome → Growth**. Growth is the fifth stage of that cycle.
 
 The numbers are reading order rather than a map of the five stages. Context and Outcome have a

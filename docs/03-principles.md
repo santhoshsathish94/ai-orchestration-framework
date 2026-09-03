@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Clover describes how the system actors — **System → Human → AI** — turn intent into outcomes the environment confirms. The system cycle — **Context → Direction → Execution → Outcome → Growth** — gives the structure. These principles are what make each stage hold up on real work.
+Clover describes how the **actors** — the Human and AI — turn intent into outcomes the environment confirms, working in the reality of the **System**. **System → Human → AI** is the order that runs in. The system cycle — **Context → Direction → Execution → Outcome → Growth** — gives the structure. These principles are what make each stage hold up on real work.
 
 Every one of them exists for the same reason. Every system that worked has worked this way. What AI changed is accountability: execution moved to something that cannot be accountable, and accountability went out of scope with it. These principles are how it gets established back in the system, on the human actor who can truly take up the role.
 
@@ -76,7 +76,7 @@ The rule holds whether the content looks hostile or helpful. When something read
 
 ## Clover's boundaries sit inside larger ones
 
-The boundaries in a cycle come from human Direction: the scope, the approval points, what must not happen. Those are not the outermost boundaries. Law, regulation, and an organization's own obligations sit outside them and apply to all three actors — the System that has to be able to show what happened, the Human who has to be reachable and able to intervene, and the AI whose use has to be disclosed.
+The boundaries in a cycle come from human Direction: the scope, the approval points, what must not happen. Those are not the outermost boundaries. Law, regulation, and an organization's own obligations sit outside them and apply across all of it — the system that has to be able to show what happened, the human who has to be reachable and able to intervene, and the AI whose use has to be disclosed.
 
 Clover certifies nothing and discharges nothing. What it does is keep a cycle arranged so those obligations stay satisfiable: evidence that still exists, a named human who can answer for the work, and an approval somebody actually performs. [Governance](08-governance.md#the-rules-each-actor-works-inside) sets out what each actor works inside.
 

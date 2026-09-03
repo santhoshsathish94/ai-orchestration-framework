@@ -4,7 +4,7 @@ Most of the framework describes how to think. This page describes what has to be
 thinking to reach anything real.
 
 An orchestration environment is the **access layer** between AI and the systems an organization
-already runs. It gives the **system actors** — System → Human → AI — one shared view of the same
+already runs. It gives the **actors** — the human and AI, working in the reality of the system — one shared view of the same
 reality. It is what feeds [Context](05-context-engineering.md), the first stage of [the Clover
 framework](04-framework.md) — source code, tickets, logs, data, and the behavior of the running
 system. There is no platform to buy and nothing to migrate onto. It is a set of connections to things

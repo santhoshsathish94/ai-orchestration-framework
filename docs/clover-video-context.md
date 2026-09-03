@@ -18,7 +18,7 @@ The **system cycle** is:
 
 All five leaves make the cycle. The fifth leaf is **Growth**: whatever the Outcome taught, at any size, carried back into Context. A team performs it the same way it performs the other four. One wrong answer, understood and written down, is Growth.
 
-The **system actors** are:
+The reality and the **actors** are:
 
 **System → Human → AI**
 
@@ -497,7 +497,7 @@ For the human/AI boundary, use:
 
 > **AI can be capable enough to suggest directions. Humans should always have the authority to decide what to pursue.**
 
-For the three actors, use:
+For the actors, use:
 
 > **The system is the reality that can validate the outcome. The human is accountable for it. AI helps reach it sooner.**
 
