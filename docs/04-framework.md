@@ -6,27 +6,27 @@ Clover is a way of working with **System, Human, and AI to produce meaningful ou
 
 It does not claim to have invented the underlying pattern. Before AI could execute substantial portions of work, humans already gathered context, set Direction, performed or coordinated the work, and checked the result. Clover makes that relationship explicit for an AI era in which more of the execution can be delegated to AI.
 
-**System → Human → AI** establishes the relationship. **Context → Direction → Action → Success** gives it an operational cycle.
+**System → Human → AI** establishes the relationship. **Context → Direction → Action → Outcome** gives it an operational cycle.
 
-Prompts, tools, agents, and AI model choice all sit underneath the cycle. What the framework describes is how human intent becomes an outcome the environment confirms, and what the next attempt starts from.
+Prompts, tools, agents, and AI model choice all sit underneath the cycle. What the framework describes is how human intent becomes an outcome the environment shows, and what the next attempt starts from.
 
-**The framework is four stages: Context → Direction → Action → Success.**
+**The framework is four stages: Context → Direction → Action → Outcome.**
 
 Clover also describes what can emerge when those four stages are repeated: **Growth**. Growth is not a fifth stage a team runs. It is the learning and improvement that can emerge from the entire cycle and feed future Context.
 
 ## What makes Clover distinct
 
-Clover is not novel because it names four familiar activities. Understanding, deciding, acting, and validating exist in many engineering, operational, and management practices already.
+Clover is not novel because it names four familiar activities. Understanding, deciding, acting, and observing what happened exist in many engineering, operational, and management practices already.
 
 The framework's useful claim is that these familiar activities need to be made explicit again when the **execution layer changes**. Humans historically participated directly in execution; AI can now perform a growing share of that execution.
 
 **System → Human → AI** establishes the relationship: System reality grounds the work, humans own Direction and accountability, and AI supplies capability and can take on execution.
 
-**Context → Direction → Action → Success** establishes the operational cycle: understand the relevant reality, establish the desired outcome and boundaries, perform the work, and validate the outcome against reality.
+**Context → Direction → Action → Outcome** establishes the operational cycle: understand the relevant reality, establish the desired outcome and boundaries, perform the work, and observe what happened against reality.
 
 The value of the framework is therefore not the invention of a sequence. It is making the boundaries and feedback between **reality, human purpose, AI execution, and evidence** explicit enough to design and govern AI-enabled work.
 
-Clover does not require a separate proof stage before people can use it. The underlying pattern predates AI. The AI-era question is what happens when more of the execution can be delegated while the same human Direction and system-based validation remain in place. **We can apply the cycle, preserve what meaningful cycles teach, and observe what emerges through adoption.**
+Clover does not require a separate proof stage before people can use it. The underlying pattern predates AI. The AI-era question is what happens when more of the execution can be delegated while the same human Direction and system-based observation remain in place. **We can apply the cycle, preserve what meaningful cycles teach, and observe what emerges through adoption.**
 
 Clover is therefore best understood as **a framework for working with System, Human, and AI to produce meaningful outcomes**, not a mandatory process for performing every task. Existing workflows, delivery methods, approvals, agent frameworks, and tools can remain in place.
 
@@ -36,7 +36,7 @@ Clover is built around a simple priority:
 
 **System → Human → AI**
 
-The system comes first because it is where the outcome must exist. It may be an existing system, or the system we are trying to build. Its state, data, behavior, history, constraints, and evidence are the material the work must ultimately be grounded in, and the primary source of evidence for validating the outcome.
+The system comes first because it is where the outcome must exist. It may be an existing system, or the system we are trying to build. Its state, data, behavior, history, constraints, and evidence are the material the work must ultimately be grounded in, and the primary source of evidence for observing what happened.
 
 The human comes second because purpose and accountability belong together. The human decides what matters, what outcome is worth pursuing, what makes that outcome meaningful, what constraints and boundaries apply, what must not happen, and what process or approach matters where that is part of the intended outcome. The human remains accountable for the outcome after delegating work.
 
@@ -64,7 +64,7 @@ The number of leaves carries the argument. The stages arrived in a different ord
 
 ### Three leaves — the common clover
 
-Direction, Action, Success. This is how work commonly happened before AI could execute substantial portions directly: a human established the Direction, humans or tools performed the Action, and the result was checked. It works, and a lot of real value comes out of it.
+Direction, Action, Outcome. This is how work commonly happened before AI could execute substantial portions directly: a human established the Direction, humans or tools performed the Action, and the result was observed. It works, and a lot of real value comes out of it.
 
 Its Context is often bounded by what the people doing the work can reach, remember, collect, and hand over to the execution.
 
@@ -86,11 +86,11 @@ Reaching it takes a setup rather than a principle:
 
 The approach gets challenged, and the honest answer holds up. That access already exists and is already used, often with nobody tracking it. Clover makes it deliberate, scoped and visible. It also surfaces stale credentials, unreviewed access paths and data nobody has looked at, before any of those become an incident. [The questions a security team will ask](08-governance.md#questions-your-security-team-will-ask) are answered one by one.
 
-Connecting the material does not finish the job. An organization's systems are a haystack and the thing worth finding is a needle somewhere inside it, and expecting AI to search the whole haystack does not work. **That is what changes Direction.** The people who work on a system every day know roughly where the needle fell, so Direction becomes a pointer at the part of the system to read first. Direction that points, together with context that is real, is what produces Success worth having.
+Connecting the material does not finish the job. An organization's systems are a haystack and the thing worth finding is a needle somewhere inside it, and expecting AI to search the whole haystack does not work. **That is what changes Direction.** The people who work on a system every day know roughly where the needle fell, so Direction becomes a pointer at the part of the system to read first. Direction that points, together with context that is real, is what enables a meaningful Outcome.
 
 It runs in a loop. What comes back from one pass is context for the next. Markdown files kept beside the work hold the summary, and that summary is what lets any agent pick the job up, so no single agent has to hold the work. [Context](05-context-engineering.md#where-context-lives) covers how those files are kept.
 
-> After each success and each failure, the context files are written before the next attempt.
+> After each favorable and unfavorable Outcome, the context files are written before the next attempt.
 
 A lucky clover is the rare one, and this is the stage that makes it rare. It is also where organizations are now.
 
@@ -101,11 +101,11 @@ Growth is not a fifth task and nobody has to run it. It is what can emerge when 
 A Clover cycle can produce useful learning from **all four stages**:
 
 - Context can reveal how the system actually behaves, what was previously unknown, and what information was missing.
-- Direction can reveal which purposes, constraints, priorities, processes, or decisions produced good or bad outcomes.
+- Direction can reveal which purposes, constraints, priorities, processes, or decisions produced favorable or unfavorable outcomes.
 - Action can reveal which approaches, tools, processes, or execution patterns work and which do not.
-- Success can reveal whether the intended outcome held, where it held, where it failed, and what the evidence actually showed.
+- Outcome can reveal what actually happened, what held, what failed, and what the evidence showed.
 
-Failure is part of Growth too. A failed result is new information about reality. An analysis can expose a pattern. Understanding the current system can expose an assumption that was wrong. A successful approach can become a reusable practice. Repeated cycles can reveal relationships that were invisible in one pass.
+Favorable and unfavorable Outcomes are both part of Growth. An unfavorable Outcome is new information about reality. An analysis can expose a pattern. Understanding the current system can expose an assumption that was wrong. A favorable approach can become a reusable practice. Repeated cycles can reveal relationships that were invisible in one pass.
 
 Growth can therefore happen at every layer participating in the system:
 
@@ -135,11 +135,11 @@ Everything below sets out the four stages one at a time, in the order they run.
 
 ## From AI models to AI orchestration
 
-AI capability is evolving from models that provide intelligence, to agents that can act, to workflows that repeat and coordinate tasks, to orchestration that keeps what its outcomes taught it.
+AI capability is evolving from models that provide intelligence, to agents that can act, to workflows that repeat and coordinate tasks, to orchestration that keeps what its Outcomes taught it.
 
 ![AI models answer, agents act, agentic workflows repeat a known process, and orchestration keeps what the outcome showed for the next cycle. Growth, drawn dotted, is what can emerge while the cycle runs](../assets/ai-orchestration-progression.svg)
 
-This is not a strict replacement hierarchy. An agentic workflow can be an important building block inside an orchestration. What separates them is the scope of context and learning. A workflow runs a known process repeatedly. An orchestration captures what the outcome showed and makes that available to the next cycle.
+This is not a strict replacement hierarchy. An agentic workflow can be an important building block inside an orchestration. What separates them is the scope of context and learning. A workflow runs a known process repeatedly. An orchestration captures what the Outcome showed and makes that available to the next cycle.
 
 Context can accumulate at whatever scope fits — a human, a team, an organization, a system, or another defined boundary.
 
@@ -152,9 +152,9 @@ Each stage has one job. The complexity belongs in the context, ownership, eviden
 | **Context** | The relevant evidence about system reality needed for the current work — an existing system or the system being built, its data, behavior, history, constraints, evidence, and previous cycles. | What do we need to know about reality before acting? |
 | **Direction** | The human establishes purpose, the outcome worth pursuing, priorities, constraints, boundaries, what must not happen, and accountability for the outcome. Direction can also point AI at where the relevant Context is and can include a process or approach when that itself matters to the intended outcome. | What needs to be done, what outcome is worth pursuing, and what must not happen? |
 | **Action** | AI uses human Direction as instructions and system Context as data to determine how the work should happen and execute within those boundaries. | How should the work happen? |
-| **Success** | The meaningful intended outcome demonstrated by evidence from the system or environment, produced through the interaction of human intent, AI capability, and the system itself. | Did reality validate the intended outcome? |
+| **Outcome** | What the system or environment shows actually happened as a result of the Action, whether favorable, unfavorable, partial, inconclusive, or otherwise different from what was intended. | What does reality show happened, and what can this Outcome teach the next cycle? |
 
-A cycle can then run again. What one cycle establishes becomes part of the next cycle's Context. The result may change the next Action, and it may also change Direction when reality shows that a different outcome or constraint is now appropriate.
+A cycle can then run again. What one cycle establishes becomes part of the next cycle's Context. The Outcome may change the next Action, and it may also change Direction when reality shows that a different outcome or constraint is now appropriate.
 
 ---
 
@@ -212,7 +212,7 @@ Reasoning, planning, tool selection, AI model selection, orchestration across ag
 
 Planning and doing sit on one stage on purpose. The plan can change when work meets reality, and adapting to new evidence is part of Action rather than a reason to pretend the original plan was complete.
 
-AI may execute tests and modify test code when the human explicitly directs that as part of the intended outcome. Otherwise, verification artifacts that define whether Success is achieved should remain outside the agent's writable Action scope. Test fixtures, regression assertions, acceptance criteria, and other validation controls should be protected from silent weakening or deletion.
+AI may execute tests and modify test code when the human explicitly directs that as part of the intended outcome. Otherwise, verification artifacts that help characterize the Outcome should remain outside the agent's writable Action scope. Test fixtures, regression assertions, acceptance criteria, and other observation controls should be protected from silent weakening or deletion.
 
 Humans and AI can share execution. The human retains the boundaries, approvals, and accountability even when AI performs most of the work.
 
@@ -220,25 +220,25 @@ Plan the smallest coherent path to the outcome. Run work in parallel only where 
 
 ---
 
-## Stage 4 — Success
+## Stage 4 — Outcome
 
-Success is where the system or environment confirms the meaningful intended outcome. A result is not a Success merely because a task was completed, a build passed, or an AI said it worked.
+Outcome is where the system or environment shows what actually happened as a result of the Action. It is deliberately broader than Success: the Outcome may be favorable, unfavorable, partial, inconclusive, or otherwise different from what was intended.
 
-The evidence must connect to the human-defined outcome. A test can show that code behaves a certain way; it does not by itself prove that the outcome matters or that the real system improved.
+The evidence must connect to the human-defined intended outcome, but the fourth stage does not treat favorable evidence as the only meaningful endpoint. An unfavorable Outcome can reveal a false assumption, an unexpected system behavior, a missing constraint, or another fact that changes the next cycle.
 
-Verification boundaries matter. Whenever possible, the evidence used to declare Success should come from a check the agent could not silently redefine while performing the Action. Prefer protected test suites, independent fixtures, external assertions, separate environments, before/after measurements, or other validation mechanisms whose acceptance criteria remain outside the change being evaluated.
+Verification boundaries matter. Whenever possible, the evidence used to characterize the Outcome should come from a check the agent could not silently redefine while performing the Action. Prefer protected test suites, independent fixtures, external assertions, separate environments, before/after measurements, production signals, or other validation mechanisms whose acceptance criteria remain outside the change being evaluated.
 
-A passing test is only as meaningful as the integrity of the test and its acceptance criteria. Do not weaken, delete, bypass, or rewrite a verification control merely to make the result pass. If the verification control itself must change because the intended outcome or its acceptance criteria changed, make that change explicit in Direction and ensure the resulting Success is validated independently.
+A passing test is only as meaningful as the integrity of the test and its acceptance criteria. Do not weaken, delete, bypass, or rewrite a verification control merely to make the Outcome appear favorable. If the verification control itself must change because the intended outcome or its acceptance criteria changed, make that change explicit in Direction and ensure the resulting Outcome is evaluated independently.
 
 ### Evidence should be attributable
 
-Where the work matters, preserve a concise Success record: what outcome was evaluated, what evidence was used, what environment it came from, what changed, what was not changed, and where verification stopped. The record should be reproducible enough for another human or agent to understand why Success was claimed.
+Where the work matters, preserve a concise Outcome record: what intended outcome was evaluated, what evidence was used, what environment it came from, what changed, what was not changed, what actually happened, and where observation stopped. The record should be reproducible enough for another human or agent to understand the Outcome and why it was characterized that way.
 
-Structured receipts can be useful when many agents or systems need to exchange Success information. They are an implementation choice, not a fifth Clover stage. A markdown context file may be sufficient for a small task; a structured record may be useful at larger scale.
+Structured receipts can be useful when many agents or systems need to exchange Outcome information. They are an implementation choice, not a fifth Clover stage. A markdown context file may be sufficient for a small task; a structured record may be useful at larger scale.
 
-The human holds the standard for what counts as sufficient evidence and remains accountable for the outcome. AI runs checks, gathers evidence, reports it accurately, and makes clear what it could not verify. The system or environment provides the reality against which the outcome is judged.
+The human holds the standard for what counts as sufficient evidence and remains accountable for the outcome. AI runs checks, gathers evidence, reports it accurately, and makes clear what it could not observe. The system or environment provides the reality against which the Outcome is judged.
 
-When the evidence does not support the intended outcome, return to Context rather than repeating the same Action. The failed result is information about reality and should change what the next cycle knows.
+When the evidence does not support the intended outcome, return to Context rather than repeating the same Action. The unfavorable Outcome is information about reality and should change what the next cycle knows.
 
 ---
 
@@ -268,7 +268,7 @@ The point is not to maximize how much work AI performs. The point is to use AI c
 
 ## The claim Clover makes — and how to observe it
 
-Clover does not ask to be accepted because its terminology sounds good. Its useful claim is simpler: making system reality, Human Direction, AI execution, and Success evidence explicit can provide a clearer way to work when AI performs more of the execution.
+Clover does not ask to be accepted because its terminology sounds good. Its useful claim is simpler: making system reality, Human Direction, AI execution, and Outcome evidence explicit can provide a clearer way to work when AI performs more of the execution.
 
 That does not create a proof gate before adoption. The underlying pattern predates AI, and the AI-era question is what happens when the execution layer changes. Teams can use the cycle and observe what emerges.
 
@@ -277,8 +277,8 @@ Useful observations include:
 - Context is easier to inspect and less dependent on memory.
 - Direction is clearer before consequential Action.
 - More execution can be delegated without obscuring accountability.
-- Success claims are tied to evidence from the system or environment.
-- Failures produce useful Context rather than repeated blind retries.
+- Outcome claims are tied to evidence from the system or environment.
+- Unfavorable Outcomes produce useful Context rather than repeated blind retries.
 - Another human, agent, or session can continue without reconstructing the work.
 
 These observations are not a required scorecard or a condition for using Clover. They are simply ways to notice what the approach produces in practice.
@@ -295,8 +295,8 @@ Clover's common failure modes are predictable:
 2. **Context bloat** — the agent gathers everything and loses the relevant signal.
 3. **Direction ambiguity** — the pointer is mistaken for permission to invent unstated policy.
 4. **Execution overreach** — capability is mistaken for authority.
-5. **Weak verification** — a local result or self-modified test is treated as proof of Success.
-6. **Silent failure repetition** — the same Action is retried without learning.
+5. **Weak observation** — a local result or self-modified test is treated as proof of the intended outcome.
+6. **Silent unfavorable-outcome repetition** — the same Action is retried without learning.
 7. **Lost continuity** — useful learning remains in one session instead of becoming Context for the next.
 
-The answer to all seven is the same cycle, applied carefully: **Context → Direction → Action → Success**, then carry useful learning into the next cycle.
+The answer to all seven is the same cycle, applied carefully: **Context → Direction → Action → Outcome**, then carry useful learning into the next cycle.
