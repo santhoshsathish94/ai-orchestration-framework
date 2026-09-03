@@ -106,7 +106,9 @@
     if (!el) return;
 
     e.preventDefault();
-    scrollToElement(el, 'start');
+    // A stage is centred, not topped: the highlight tracks the middle of the viewport, so landing a
+    // stage at the top would light the section below it.
+    scrollToElement(el, el.classList.contains('stage') ? 'center' : 'start');
     if (history.pushState) history.pushState(null, '', href);
     else window.location.hash = href;
   });
