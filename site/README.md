@@ -172,9 +172,9 @@ The marks are the site's identity and they carry the argument, so they have rule
   drift. Run `pwsh -File site/check.ps1` before committing: it resolves every nav link to a
   site-root path and fails if the six pages disagree, checks the `?v=` versions match, and follows
   every relative link and every anchor.
-- **The primary nav is seven plain links, and the first is "The Story" pointing at `/#story`.** It was
-  a "Framework" dropdown holding the three clover sections and the worked example. The dropdown is
-  gone, along with its CSS, its JavaScript and its mobile accordion, because the story section labels
+- **The primary nav is six plain links, and it does not point at any section of the home page.** It was
+  a "Framework" dropdown holding the three clover sections and the worked example, and later carried a
+  first link to `/#story`. Both are gone, because the story section labels
   its own leaves and the reader can pick one there. Do not reintroduce a dropdown to hold anchors that
   the page already exposes. Nav labels are the only Title Case text on the site; everything else,
   including the headings those links point at, stays sentence case.
