@@ -351,13 +351,16 @@ section[id] { scroll-margin-top: 5rem; }
    the right by exactly the space the mark occupies. */
 .pinned { position: relative; --mark-w: clamp(260px, 36vw, 400px); --mark-gap: 3rem; }
 .pinned .wrap { padding-right: calc(var(--pad) + var(--mark-w) + var(--mark-gap)); }
+/* Sticky at the vertical middle: 50vh rather than 50%, because a percentage inset on a sticky box
+   resolves against the containing block, and .pinned is the whole page tall. The rail has no height,
+   so the mark is pulled up by half its own to sit centred on that line. */
 .pinned__mark {
-  position: sticky; top: 5.5rem; z-index: 2; height: 0;
+  position: sticky; top: 50vh; z-index: 2; height: 0;
   width: min(1120px, 100%); margin-inline: auto; padding-inline: var(--pad);
   display: flex; justify-content: flex-end; align-items: flex-start;
 }
 /* .clover centres itself with auto margins, which in a flex row beats justify-content. */
-.pinned__mark > svg { margin-inline: 0; width: var(--mark-w); }
+.pinned__mark > svg { margin-inline: 0; width: var(--mark-w); transform: translateY(-50%); }
 /* The turn happens inside the viewBox, around the leaves' own pivot at 50,44. Rotating the element
    instead would grow its box to the diagonal and push the page sideways. */
 .clover__spin { will-change: transform; }
@@ -379,9 +382,11 @@ section[id] { scroll-margin-top: 5rem; }
     padding-block: 0.9rem 0.7rem;
     background: var(--bg); border-bottom: 1px solid var(--line);
   }
+  .pinned__mark > svg { transform: none; }
 }
 
 .no-js .pinned__mark { position: static; height: auto; justify-content: center; }
+.no-js .pinned__mark > svg { transform: none; }
 .no-js .pinned .wrap { padding-right: var(--pad); }
 
 /* ---------- the worked example ---------- */
