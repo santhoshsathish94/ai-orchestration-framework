@@ -75,7 +75,7 @@ These dimensions can combine in many ways:
 
 **Individual + Task** — solve a small problem.
 
-**AI + Feature** — implement a defined change inside Human Direction.
+**AI + Feature** — implement a defined change inside human Direction.
 
 **Team + System** — coordinate work across a system and validate the resulting behavior.
 
@@ -152,6 +152,10 @@ Humans should always have the authority to decide what to pursue. AI may influen
 > **AI may suggest a direction. Humans decide what to pursue.**
 
 > **What outcome do we want, why does it matter, and within what boundaries should action happen?**
+
+This is a deliberate boundary, not a statement that AI capabilities cannot grow. AI capabilities may grow enormously, including the ability to reason about directions far larger than an individual task. Clover still keeps the authority to decide what to pursue with humans.
+
+That matters because the scale of AI-enabled action can extend beyond an individual or a single system. As the potential impact grows from local work toward organizations, interconnected systems, and broader society, the consequences of a wrong Direction can grow with it. Clover therefore treats human authority over what to pursue as a responsibility to preserve as capability and scale increase.
 
 ---
 
