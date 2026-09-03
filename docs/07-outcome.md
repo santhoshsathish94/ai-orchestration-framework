@@ -35,6 +35,29 @@ State what you checked, what you observed, and where you stopped.
 
 Stopping early is often correct. A small internal change can be genuinely complete once a test covers it, and observing production is not always available or worth its cost. The damage comes from describing weak evidence in the language of strong evidence. "Observed in the test environment, not yet observed in production" is a complete and honest claim, and a reader can act on it. "Verified" on its own leaves them guessing.
 
+## Evidence is never manufactured
+
+The stage only works if the evidence describes something that actually happened. Three things destroy
+that, and all three are easy to do quietly.
+
+- **Reporting what was not observed.** An invented result, a cited check nobody ran, a described
+  artifact that does not exist. A confident account of a system that does not behave that way is
+  worse than no account, because somebody acts on it.
+- **Changing the check so it agrees.** Editing, weakening, skipping or deleting the test, assertion,
+  threshold or query that would have shown the intended outcome did not occur. The verification
+  boundary is part of the evidence, and moving it during Action removes the thing being measured.
+- **Changing the environment so it agrees.** Altering data, logs or state so reality appears to
+  confirm the result. This stage exists to let reality answer, and an arranged answer is not one.
+
+Acting beyond the scope Direction set is the same failure earlier in the cycle. Work that reaches
+outside the stated boundaries produces an outcome nobody asked for, and the evidence for it describes
+something no human authorized.
+
+Where a boundary genuinely matters, enforce it outside the model rather than relying on instructions
+alone. [Reference implementations](reference-implementations.md) covers the runtime pattern.
+
+> **Reality is the one thing in the cycle that must not be edited.**
+
 ## When the Outcome is unfavorable
 
 An unfavorable Outcome is a normal outcome of the cycle. When the evidence does not support the intended outcome, the work returns to **Context**, rather than to Action.

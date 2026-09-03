@@ -14,7 +14,7 @@ The goal is to make one idea immediately understandable:
 
 The framework connects:
 
-**Context → Direction → Action → Success**
+**Context → Direction → Action → Outcome**
 
 The fifth leaf is **Growth**.
 
@@ -173,9 +173,9 @@ Core question:
 
 ---
 
-## Success
+## Outcome
 
-Success is not AI saying “done.”
+Outcome is not AI saying “done.”
 
 It is not confidence.
 
@@ -185,7 +185,7 @@ It is not merely a generated artifact.
 
 It is not automatically a passing build or a merged change.
 
-Success means the intended outcome is demonstrated by the real environment.
+Outcome means the intended outcome is demonstrated by the real environment.
 
 Core question:
 
@@ -249,7 +249,7 @@ Therefore:
 
 > **Trust should come from observed results, not from how confident AI sounds or how many times it succeeded before.**
 
-This is why CLOVER keeps Context and Success in the cycle every time.
+This is why CLOVER keeps Context and Outcome in the cycle every time.
 
 ---
 
@@ -261,7 +261,7 @@ CLOVER is not:
 
 It is:
 
-**Context → Direction → Action → Success → Context → ...**
+**Context → Direction → Action → Outcome → Context → ...**
 
 Every cycle leaves something behind.
 
@@ -317,7 +317,7 @@ The leaf story explains the evolution.
 
 ### Three leaves — the common clover
 
-**Direction → Action → Success**
+**Direction → Action → Outcome**
 
 A human gives AI a task.
 
@@ -329,7 +329,7 @@ This is useful and common.
 
 ### Four leaves — the lucky clover
 
-**Context → Direction → Action → Success**
+**Context → Direction → Action → Outcome**
 
 The real environment comes first.
 
@@ -373,7 +373,7 @@ CLOVER must separate today's engineering framework from its future hypothesis.
 
 Today:
 
-**Context → Direction → Action → Success**
+**Context → Direction → Action → Outcome**
 
 Future question:
 
@@ -459,7 +459,7 @@ Then show the simple sequence:
 
 Only afterward introduce the formal names:
 
-**Context → Direction → Action → Success**
+**Context → Direction → Action → Outcome**
 
 For the human/AI boundary, use:
 
@@ -509,7 +509,7 @@ The four leaves appear in order:
 
 **Action** — AI does the work.
 
-**Success** — reality shows whether it worked.
+**Outcome** — reality shows whether it worked.
 
 ### Loop
 
@@ -539,7 +539,7 @@ The strongest simple message is:
 >
 > **CLOVER is a way of working with AI to reach real outcomes.**
 >
-> **Start with the real Context. Humans give the Direction. AI takes Action. Reality validates Success.**
+> **Start with the real Context. Humans give the Direction. AI takes Action. Reality validates Outcome.**
 >
 > **And every cycle leaves something behind for the next.**
 >
@@ -597,7 +597,7 @@ Continue the established scene.
 
 Approximately the final 10–12 seconds.
 
-Show Action, Success, the cycle feeding forward, and a subtle appearance of the fifth leaf / Growth.
+Show Action, Outcome, the cycle feeding forward, and a subtle appearance of the fifth leaf / Growth.
 
 Do not keep adding prompts after the core 30 seconds works merely to extend the video.
 
@@ -627,7 +627,7 @@ At the end of the video, the viewer should be able to remember:
 2. **Real Context comes first.**
 3. **Humans still provide Direction and keep ownership.**
 4. **AI can do the Action.**
-5. **Reality—not AI's own claim—validates Success.**
+5. **Reality—not AI's own claim—validates Outcome.**
 6. **AI can still fail, even after repeated successes.**
 7. **Every cycle improves the context for the next one.**
 8. **The fifth leaf is Growth, the open question about what increasingly capable systems may become.**
@@ -671,7 +671,7 @@ It should remain practical, grounded in real engineering, and honest about uncer
 
 # 18. Canonical One-Line Explanation
 
-> **CLOVER is a way of working with AI to reach real outcomes: start with the real Context, keep human Direction and ownership, let AI take Action, and let reality validate Success.**
+> **CLOVER is a way of working with AI to reach real outcomes: start with the real Context, keep human Direction and ownership, let AI take Action, and let reality validate Outcome.**
 
 ## Canonical Five-Leaf Explanation
 

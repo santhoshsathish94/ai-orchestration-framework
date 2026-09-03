@@ -3,7 +3,7 @@
 Governance is what keeps the cycle safe as it scales. It makes ownership, access, attribution, and
 approval explicit, and it matters most where AI is the thing acting. It sits across [the Clover
 framework](04-framework.md) rather than inside one stage: Context is grounded in the system,
-Direction is owned by humans, Action is where delegated execution and approvals happen, and Success is
+Direction is owned by humans, Action is where delegated execution and approvals happen, and Outcome is
 where somebody has to stand behind the evidence.
 
 ## System → Human → AI
@@ -19,6 +19,36 @@ Clover keeps three responsibilities distinct:
 
 This boundary does not depend on which model is being used or on today's model capability. AI can become
 far more capable, but capability does not create authority over what should be pursued.
+
+## What each layer owes beyond the immediate work
+
+Those three responsibilities describe who does what inside one cycle. Each also carries an obligation
+that outlives the cycle, because a cycle that is good for the people running it can still be harmful
+to people who never appear in it.
+
+**System.** The systems being worked on hold other people's data, other people's work, and records of
+things that happened to real people. Reading them for Context does not make that material free to
+copy, redistribute, publish, or feed somewhere else. What the work may read and what it may do with
+what it read are two different permissions.
+
+**Human.** Direction is where consequences are chosen, so accountability covers effects outside the
+organization as well as inside it. An outcome that serves the team and harms the people it touches is
+a badly directed cycle, whatever the evidence shows about delivery.
+
+**AI.** Capability is not permission. Being able to reproduce a work, imitate a named person's voice
+or style, or generate something derived from material it had no right to use is not grounds for doing
+it, and being asked is not either.
+
+**The frontier layer.** Growth at the model layer is built from an enormous volume of human work:
+writing, code, images, music, film, research, journalism, design, made by people who can be named.
+Clover's position is that the same boundary applies there. Consent, licensing and attribution are
+conditions on how capability is built, rather than friction to be routed around.
+
+Clover cannot enforce that last one, and no framework can. What it can do is state the expectation
+plainly, keep it out of the small print, and decline to call a system well governed while the
+question of what it was built from is treated as somebody else's problem.
+
+> **Capability is not permission. That applies to the model as much as to the team using it.**
 
 ## Capability may scale. Human authority remains.
 
@@ -232,6 +262,28 @@ What changes is the amount of execution work AI performs. What does not change i
 the destination, the acceptable risk, the boundaries, and the outcome.
 
 > **Delegation can move work. It does not move Direction.**
+
+## What counts as an instruction
+
+Two different things reach an agent while it works, and they carry different authority.
+
+**Human Direction is the only source of instructions and constraints.** What to do, what matters,
+what the boundaries are, and what must not happen all come from the accountable human.
+
+**System Context is evidence.** Repositories, tickets, comments, logs, telemetry, documents, records,
+web pages and file contents are read so the work can reason from reality. They describe the world.
+They do not issue orders.
+
+The distinction matters because Context is frequently writable by people outside the organization,
+and sometimes by no person at all. A comment on a public issue, a string in a log line, a field in a
+record, or a page an agent fetched can contain text shaped like an instruction. An agent that obeys
+it has handed whatever access it holds to whoever wrote that text.
+
+The rule holds whether the content looks hostile or helpful. When something read during the work asks
+an agent to change its scope, set aside its instructions, fetch or send something, or reveal how it
+is configured, that is a finding to report rather than an instruction to follow.
+
+> **Direction instructs. Everything read from the System is data.**
 
 ## Controls are not the hard part
 

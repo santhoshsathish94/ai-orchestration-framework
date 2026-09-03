@@ -1,7 +1,7 @@
 # Orchestration Brief — &lt;Task or Outcome&gt;
 
 > A one-page brief for running a single task through Clover:
-> **Context → Direction → Action → Success**
+> **Context → Direction → Action → Outcome**
 >
 > Copy this file, rename it for the task, and fill each section as the work proceeds. The prompts are
 > starting points for an AI assistant — adapt them to the tools at hand. Keep the brief short. The
@@ -78,12 +78,12 @@ needs approving.
 
 ---
 
-## 4. Success — *what the environment showed*
+## 4. Outcome — *what the environment showed*
 
 Show the intended outcome happening in the real environment.
 
 - **Evidence (tests, before-and-after, telemetry, a run outside production, a user confirming):** …
-- **What was checked, what was observed, and where this stopped:** … *(see [Success](../docs/07-success.md#how-strong-is-your-evidence))*
+- **What was checked, what was observed, and where this stopped:** … *(see [Outcome](../docs/07-outcome.md#how-strong-is-your-evidence))*
 - **Does the outcome from Direction now hold?** …
 - **Human verification:** …
 - **Still unverified:** …

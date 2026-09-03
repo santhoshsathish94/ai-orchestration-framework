@@ -8,7 +8,7 @@
 
 Clover has two layers, and they are kept apart on purpose.
 
-The engineering layer is four stages — Context, Direction, Action, Success. Teams can use it today, and it stands on its own. Growth sits beyond those four, and nobody in an organization runs it. [The framework in full →](../docs/04-framework.md)
+The engineering layer is four stages — Context, Direction, Action, Outcome. Teams can use it today, and it stands on its own. Growth sits beyond those four, and nobody in an organization runs it. [The framework in full →](../docs/04-framework.md)
 
 This document is the other layer, and **it is not part of the framework**. No stage depends on it. A team can run every cycle the repository describes, get the outcomes in the [case studies](../case-studies/), and disagree with every word here. The engineering material loses nothing if this document turns out to be wrong.
 
@@ -52,7 +52,7 @@ Some questions worth investigating, none of them settled:
 - Who holds Direction when work is spread across many systems and no single one owns the outcome.
 - How a mistake spreads when one system's output becomes another's input. Bad material compounds the same way good material does.
 
-That last one is a problem today, not only in the question. A system that learns from its own unvalidated output amplifies its own errors, which is why Growth promotes only what [Success](../docs/07-success.md) confirmed.
+That last one is a problem today, not only in the question. A system that learns from its own unvalidated output amplifies its own errors, which is why Growth promotes only what [Outcome](../docs/07-outcome.md) confirmed.
 
 ---
 
@@ -66,7 +66,7 @@ Embodiment matters for a different reason. The physical world can teach a system
 
 The unknown is important here. The point is not to prove that AI will reach some specific future capability. The point is that **we do not know the upper boundary**. It may remain limited in ways that are hard today to see, or it may become capable enough to reason about directions far beyond an individual task. Clover's position does not need to predict which one happens. It says that even if capability grows dramatically, the authority to decide what to pursue should remain human because capability does not create accountability.
 
-![Three panels in a row, each a session that runs Context, Direction, Action and Success and then ends, with the connecting line broken between them, and below them the three things that would have to last: continual learning after deployment, credit assignment over long horizons, and goals that outlast a single session](../assets/ai-future/missing-piece.svg)
+![Three panels in a row, each a session that runs Context, Direction, Action and Outcome and then ends, with the connecting line broken between them, and below them the three things that would have to last: continual learning after deployment, credit assignment over long horizons, and goals that outlast a single session](../assets/ai-future/missing-piece.svg)
 
 ---
 
@@ -78,7 +78,7 @@ It is tempting to say that only guardrails stand between today's agents and a sy
 - **Credit assignment over long horizons.** When a thousand-step task fails, working out which decision caused the failure is extremely hard. Without that, a system cannot reliably improve from its own experience.
 - **Reliability compounds downward.** A step that succeeds 99% of the time succeeds about 37% of the time across a hundred steps. Long chains break for arithmetic reasons before they break for policy reasons.
 - **Physical-world sample efficiency.** A robot cannot cheaply run a million trials, and results in simulation do not transfer cleanly to reality. This limits what the physical world can teach, which is a different limit from the governance question.
-- **Open-ended goals are hard to evaluate.** Nobody can optimize what nobody can measure, and "pursue this objective" rarely has a clean success signal. Success, in the sense the framework uses the word, gets harder to define the further a system moves from a task somebody specified.
+- **Open-ended goals are hard to evaluate.** Nobody can optimize what nobody can measure, and "pursue this objective" rarely has a clean success signal. Outcome, in the sense the framework uses the word, gets harder to define the further a system moves from a task somebody specified.
 
 None of these is obviously impossible. All of them are currently expensive.
 
@@ -191,7 +191,7 @@ Very little. The four stages were built for work happening now.
 
 The engineering rule is not "increase autonomy as trust matures." It is narrower:
 
-- **Delegate execution only when the accountable organization chooses to.** Success evidence can support a particular delegation decision.
+- **Delegate execution only when the accountable organization chooses to.** Outcome evidence can support a particular delegation decision.
 - **Ownership survives delegation.** As AI takes more of the operational path, a named human still owns the objective, the constraints, and the risk.
 - **Only what held up gets written back.** Validated experience becomes the context the next cycle reads, and unvalidated output does not, because a system that learns from its own guesses amplifies them.
 - **Reversibility.** The more quickly a system acts, the more the ability to observe and undo matters.

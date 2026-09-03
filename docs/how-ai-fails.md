@@ -6,7 +6,7 @@ about **AI**.
 AI does not fail the way a person or a script fails. A script fails loudly. A person usually knows
 when they are unsure. AI often fails **fluently**, producing a confident, well-structured, entirely
 plausible answer that happens to be wrong. That is the reason [the Clover framework](04-framework.md)
-starts with Context and ends with Success.
+starts with Context and ends with Outcome.
 
 Each failure below has a stage that catches it.
 
@@ -36,7 +36,7 @@ wrong. The fix that follows is well-built and does nothing.
 **Why it happens:** AI is very good at constructing a coherent narrative from partial evidence, which
 is what a wrong diagnosis is made of.
 
-**Caught by Context and Success.** Require the diagnosis to predict something that can be checked
+**Caught by Context and Outcome.** Require the diagnosis to predict something that can be checked
 before accepting it, and then check it. A fix nobody can explain is a guess with good formatting.
 
 ---
@@ -63,7 +63,7 @@ result was assumed to carry.
 **Why it happens:** Describing a completed task and completing it are, to a language model, similar
 acts.
 
-**Caught by Success.** Ask for the artifact rather than the claim: the test that fails without the
+**Caught by Outcome.** Ask for the artifact rather than the claim: the test that fails without the
 change and passes with it, the command output, the measurement. State what was checked, what was
 observed, and where it stopped.
 
@@ -104,7 +104,7 @@ anyone can demonstrate.
 **Why it happens:** AI removes the effort cost of starting work and leaves the attention cost of
 directing it. Human attention stays the scarce resource.
 
-**Caught by Action and Success.** Plan the smallest coherent path, run work in parallel only where it
+**Caught by Action and Outcome.** Plan the smallest coherent path, run work in parallel only where it
 is genuinely independent, and count outcomes rather than activity. See
 [Lesson 1](field-practices.md#lesson-1--focus-beats-parallelism).
 
@@ -129,12 +129,12 @@ before anything treats it as settled.
 | Failure | Caught by |
 |---|---|
 | Confident fabrication | Context |
-| Plausible-but-wrong root cause | Context, Success |
+| Plausible-but-wrong root cause | Context, Outcome |
 | Constraints quietly dropped | Direction |
-| Unchecked reported success | Success |
+| Unchecked reported success | Outcome |
 | Agreement instead of judgment | Context |
 | Thrashing | Context |
-| Motion mistaken for progress | Action, Success |
+| Motion mistaken for progress | Action, Outcome |
 | Learning from unvalidated output | Context |
 
 Every one of these is caught by evidence rather than by better prompting, which is why the discipline

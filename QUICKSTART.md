@@ -3,17 +3,17 @@
 Run a first Clover cycle on a real task in about 15 minutes.
 
 Clover is an AI Orchestration Framework connecting real-world Context, human Direction, AI-driven
-Action, and validated Success into a repeatable cycle.
+Action, and validated Outcome into a repeatable cycle.
 
 There is nothing to install. The cycle runs on real work, with whatever tools and AI assistant are
 already in use.
 
-> **Context → Direction → Action → Success**
+> **Context → Direction → Action → Outcome**
 
 ## What this cycle adds
 
 Most AI work today runs on three stages. A human gives the Direction, AI performs the Action from
-whatever that human typed in, and after several passes the result becomes Success. It works, and it
+whatever that human typed in, and after several passes the result becomes Outcome. It works, and it
 is ordinary.
 
 This cycle starts with Context instead. The assistant reads the real systems before anyone describes
@@ -62,11 +62,11 @@ assistant and a note on **who owns what**.
 | **Context** | What the real systems showed, and the gaps you could not reach named |
 | **Direction** | A one-sentence outcome, what must not happen, where the answer probably is, and what would demonstrate it |
 | **Action** | The smallest focused path, an owner per step, and the change itself |
-| **Success** | Evidence that maps back to the outcome, and what it does not cover |
+| **Outcome** | Evidence that maps back to the outcome, and what it does not cover |
 
-> **At Success, say what you checked, what you observed, and where you stopped.** Reaching the
+> **At Outcome, say what you checked, what you observed, and where you stopped.** Reaching the
 > strongest available evidence every time is not the goal. Being accurate about what you have is.
-> See [Success](docs/07-success.md#how-strong-is-your-evidence).
+> See [Outcome](docs/07-outcome.md#how-strong-is-your-evidence).
 >
 > If the evidence does not hold, go back to **Context**, rather than to Action.
 

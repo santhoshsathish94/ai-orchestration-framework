@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://cloverframework.com/">
     <img src="assets/social-preview.png" width="820"
-         alt="Clover — How Humans and AI Work Together to Get Real Outcomes">
+         alt="Clover — a way of working with System, Human, and AI to produce meaningful outcomes">
   </a>
 </p>
 

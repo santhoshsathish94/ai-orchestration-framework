@@ -139,7 +139,7 @@ The orchestration itself has been demonstrated end to end — investigation, roo
 
 ### Underlying problem
 
-Agent instructions are not an enforcement mechanism. A capable model can ignore `AGENTS.md`, a system prompt, or a tool convention under pressure. When a verification control is important to the meaning of **Success**, the environment should enforce the boundary rather than relying only on the model to behave correctly.
+Agent instructions are not an enforcement mechanism. A capable model can ignore `AGENTS.md`, a system prompt, or a tool convention under pressure. When a verification control is important to the meaning of **Outcome**, the environment should enforce the boundary rather than relying only on the model to behave correctly.
 
 ### Implementation
 
@@ -149,15 +149,15 @@ The [runtime-enforcement reference](../reference/runtime-enforcement/) demonstra
 - **Real-path resolution:** parent traversal and symbolic-link paths are resolved before authorization, so the policy evaluates the physical target rather than the path spelling.
 - **Policy and audit gateway:** writes to trusted verification are rejected before the filesystem operation, new verification creation requires explicit policy permission, and denied attempts are emitted as structured JSON security events without recording file contents.
 
-The protection boundary is deliberately narrower than "never write tests": explicitly permitted creation of a new verification file can be supported during development, while an existing trusted verification artifact remains protected once it becomes evidence for Success. Real deployments should define trusted verification state for their own repositories rather than relying only on filename conventions.
+The protection boundary is deliberately narrower than "never write tests": explicitly permitted creation of a new verification file can be supported during development, while an existing trusted verification artifact remains protected once it becomes evidence for Outcome. Real deployments should define trusted verification state for their own repositories rather than relying only on filename conventions.
 
-The runtime reference intentionally does not add another Clover stage. It strengthens the boundary inside **Action** and **Success**:
+The runtime reference intentionally does not add another Clover stage. It strengthens the boundary inside **Action** and **Outcome**:
 
 **Direction:** the human decides whether verification controls may change.
 
 **Action:** the agent executes within the permissions the environment grants it.
 
-**Success:** the evidence remains trustworthy because the agent cannot silently redefine the verification boundary.
+**Outcome:** the evidence remains trustworthy because the agent cannot silently redefine the verification boundary.
 
 ### Production interpretation
 
@@ -167,7 +167,7 @@ The audit stream is an operational signal, not proof of prompt drift or model de
 
 The important design rule is:
 
-> **When a boundary matters to Success, enforce it outside the model wherever the environment allows.**
+> **When a boundary matters to Outcome, enforce it outside the model wherever the environment allows.**
 
 The reference implementation closes a specific gap between documentation and runtime behavior. It does not claim to solve every agent-security problem, and it does not claim that the current Clover orchestration engine automatically enforces test immutability everywhere.
 
@@ -177,8 +177,8 @@ The reference implementation closes a specific gap between documentation and run
 
 All four run the same cycle:
 
-> **Context → Direction → Action → Success**
+> **Context → Direction → Action → Outcome**
 
-Cross-Team Knowledge Access spends most of its time in Context. Production Exception Remediation carries a cycle all the way to Success in the real environment. Multi-Repository Defect Remediation loops the hardest, because what the unresolved defects showed is written back into Context and is what the next pass starts from. Runtime Enforcement strengthens the execution and validation boundaries without adding a stage.
+Cross-Team Knowledge Access spends most of its time in Context. Production Exception Remediation carries a cycle all the way to Outcome in the real environment. Multi-Repository Defect Remediation loops the hardest, because what the unresolved defects showed is written back into Context and is what the next pass starts from. Runtime Enforcement strengthens the execution and validation boundaries without adding a stage.
 
 The patterns add operational detail where a recurring problem needs it. None of them adds a fifth operational stage.

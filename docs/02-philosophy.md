@@ -14,6 +14,33 @@ The **Human** provides Direction. Humans decide what matters, what outcome is de
 
 **AI** provides capability and can help determine and execute the means of achieving the desired outcome within the human's Direction and the System's Context.
 
+### Why a process is needed at all
+
+Neither side can see the whole consequence of what it does.
+
+A human giving Direction is working from partial knowledge. They cannot hold every dependency of a
+large system in mind, they do not know everything that changed since they last looked, and the
+intended outcome can be wrong in ways nobody notices until reality answers. Being accountable for a
+decision is not the same as being right about it.
+
+AI is working from partial knowledge too. It reasons from what it was given, states mistakes with the
+same fluency as facts, and cannot tell the difference between a system it has understood and one it
+has merely described convincingly.
+
+So the framework does not rest on either side being correct. It rests on a process that keeps both
+connected to something that can contradict them:
+
+- **Context** exists because memory and confidence are not reliable descriptions of a system.
+- **Direction** is written down because an intention nobody stated cannot be checked against what happened.
+- **Action** stays inside boundaries because the cost of being wrong is not evenly distributed.
+- **Outcome** is judged by the environment because neither a human nor an AI can validate its own work.
+
+The rules therefore apply to both. A human is not exempt from stating what must not happen, and an AI
+is not exempt from reporting what it could not verify. The point is not to constrain AI on behalf of
+humans. It is to keep the work answerable to reality when nobody involved has the full picture.
+
+> **The process exists because neither side sees the whole consequence.**
+
 ### Before AI, humans were already part of the execution
 
 Clover does not claim to have invented the underlying pattern of working with systems to produce outcomes. Long before AI could perform substantial portions of execution, humans were already doing this work: understanding the situation, deciding what should happen, carrying out or coordinating the work, and checking whether the result matched the intended outcome.
@@ -30,12 +57,12 @@ A useful analogy is a journey: **the system is the map and terrain, humans choos
 
 ### What makes Clover distinct
 
-The framework does not claim novelty merely from naming Context, Direction, Action, and Success. Understanding, deciding, acting, and validating already exist in engineering, management, research, operations, and everyday work.
+The framework does not claim novelty merely from naming Context, Direction, Action, and Outcome. Understanding, deciding, acting, and validating already exist in engineering, management, research, operations, and everyday work.
 
 Clover's claim is narrower and more practical: **make that existing relationship explicit for an AI era in which execution can increasingly be delegated to AI.**
 
 - **System → Human → AI** establishes the relationship: System grounds the work in reality, Human provides Direction and accountability, and AI provides capability and can take on execution.
-- **Context → Direction → Action → Success** gives that relationship an operational shape: understand the relevant reality, establish the desired outcome and boundaries, perform the work, and validate the outcome against reality.
+- **Context → Direction → Action → Outcome** gives that relationship an operational shape: understand the relevant reality, establish the desired outcome and boundaries, perform the work, and validate the outcome against reality.
 - The value of the framework is not the invention of that sequence. It is making the boundaries and feedback between **reality, human purpose, AI execution, and evidence** explicit enough to apply AI-enabled work without losing the pattern that existed before AI.
 - The claim is not a prerequisite for adoption. Clover does not need to be proven before people use it; adoption in the AI era gives us the opportunity to observe what emerges when the same underlying cycle is used with AI performing more of the execution.
 
@@ -109,7 +136,7 @@ The **Human** provides Direction: read this table, answer a particular question,
 
 The **AI** reads and analyzes the table using the System as Context and the Human's Direction as the boundary. It may choose the query, joins, calculations, tools, or reasoning path needed to answer the question.
 
-The answer is an output, not automatically a Success.
+The answer is an output, not automatically a Outcome.
 
 The **System** provides the evidence needed to determine whether the answer is valid and whether it satisfies the intended outcome.
 
@@ -131,7 +158,7 @@ The objects, actors, tools, and scope change. The relationship remains:
 
 and the work can be understood through:
 
-**Context → Direction → Action → Success**
+**Context → Direction → Action → Outcome**
 
 Repeated meaningful cycles can produce **Growth** when useful learning is preserved.
 
@@ -139,7 +166,7 @@ Repeated meaningful cycles can produce **Growth** when useful learning is preser
 
 The number of leaves carries the argument.
 
-**Three leaves — the common clover.** Direction, Action, Success. A human gives the Direction, humans or their tools perform the Action, and the result is checked. It produces real value, but the available Context is bounded by what the people doing the work can reach, remember, and pass into the execution.
+**Three leaves — the common clover.** Direction, Action, Outcome. A human gives the Direction, humans or their tools perform the Action, and the result is checked. It produces real value, but the available Context is bounded by what the people doing the work can reach, remember, and pass into the execution.
 
 **Four leaves — the lucky clover.** Context arrives from the System and comes into the work explicitly. The work starts from reality rather than only from a description one person assembled. Direction can point at the relevant part of that reality, AI can use it to determine the means, and the outcome can be validated against the same system.
 

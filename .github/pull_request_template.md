@@ -1,6 +1,6 @@
 <!--
 Thanks for contributing. This follows the framework: Context first, then Direction,
-then Action, then Success. Keep it short.
+then Action, then Outcome. Keep it short.
 -->
 
 ## Context
@@ -15,7 +15,7 @@ then Action, then Success. Keep it short.
 
 <!-- What you changed, and why this approach rather than another. -->
 
-## Success
+## Outcome
 
 <!-- Evidence that the change does what you say it does.
      State what you checked, what you observed, and where you stopped.

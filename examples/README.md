@@ -1,6 +1,6 @@
 # Examples
 
-> **Context → Direction → Action → Success**
+> **Context → Direction → Action → Outcome**
 
 Worked walkthroughs that run a real task through the four stages. Each one fills in the
 [Orchestration Brief](../templates/orchestration-brief.md), so another scenario can be swapped in and

@@ -45,4 +45,4 @@ This is a reference pattern, not a security certification or a complete agent sa
 
 The key Clover rule is:
 
-> **When a boundary matters to Success, enforce it outside the model wherever the environment allows.**
+> **When a boundary matters to Outcome, enforce it outside the model wherever the environment allows.**

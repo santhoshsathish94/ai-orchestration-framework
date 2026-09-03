@@ -2,7 +2,7 @@
 
 The framework in full, and the material for putting it to work.
 
-The numbers are reading order rather than a map of the four stages. Context and Success have a
+The numbers are reading order rather than a map of the four stages. Context and Outcome have a
 document to themselves because there is more to say about them than fits in one section; Direction
 and Action are covered in [the framework](04-framework.md) alongside the other two.
 
@@ -19,7 +19,7 @@ shifting up, because renumbering would break every link that already points at t
 | [03 · Principles](03-principles.md) | What makes each stage hold up on real work |
 | [04 · The framework](04-framework.md) | All four stages, and the arc from three leaves to five |
 | [05 · Context](05-context-engineering.md) | The first stage: what has to be known about reality before anything acts |
-| [07 · Success](07-success.md) | The last stage: whether the environment confirms the outcome |
+| [07 · Outcome](07-outcome.md) | The last stage: whether the environment confirms the outcome |
 | [08 · Governance](08-governance.md) | Ownership, access and attribution as the cycle scales |
 | [09 · Adoption](09-adoption.md) | How a team gets there, and how it stalls |
 | [10 · Roadmap](10-roadmap.md) | Where it is going, held loosely |

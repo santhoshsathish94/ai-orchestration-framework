@@ -19,7 +19,7 @@ included. Corrections, questions, ideas, and case studies are all welcome.
 3. In the PR description, briefly cover:
    - **Direction** — the problem or gap this addresses, and the outcome you're after.
    - **Action** — what you changed, and why this approach rather than another.
-   - **Success** — the evidence. State what you checked, what you observed, and where you stopped.
+   - **Outcome** — the evidence. State what you checked, what you observed, and where you stopped.
      For a docs change, "I checked every link and heading anchor" is real evidence.
 4. Open the PR against `main`. Expect a friendly review and a little back-and-forth.
 
@@ -35,7 +35,7 @@ included. Corrections, questions, ideas, and case studies are all welcome.
 ## What we'll usually push back on
 
 - Added stages, jargon, or complexity the reader doesn't need. Clover is deliberately four stages:
-  **Context → Direction → Action → Success.**
+  **Context → Direction → Action → Outcome.**
 - Rungs, levels, scores, or grades for evidence or delegated execution. They were removed on purpose,
   because a number is easier to claim than to justify. Say what you checked, what you observed, and
   where you stopped.

@@ -19,7 +19,7 @@ The viewer should understand this without needing to know what an AI orchestrati
 3. **Context comes first.** CLOVER starts from the real environment rather than only from what a person remembers to tell AI.
 4. **Humans keep ownership.** Humans determine what matters, the desired outcome, constraints, boundaries, and approvals. AI does not replace human judgment or accountability.
 5. **AI does much of the work.** It can reason, plan, use tools, execute, test, and adapt inside the human-defined boundaries.
-6. **Reality decides Success.** AI saying “done,” model confidence, a plausible answer, or a passing build is not automatically proof that the intended outcome occurred.
+6. **Reality decides Outcome.** AI saying “done,” model confidence, a plausible answer, or a passing build is not automatically proof that the intended outcome occurred.
 7. **Failures return to Context.** Do not imply that repeated retries alone solve problems. A failed result usually means new information is needed.
 8. **Past success does not guarantee the next success.** Even if an AI system has been correct many times, the next situation can still expose a missing assumption or changed environment.
 9. **Growth is the fifth leaf.** It is the learning that can emerge from repeated cycles, not a claim that AI should become autonomous or own the direction.
@@ -43,7 +43,7 @@ Then reveal that the real system already contains the information needed to reas
 
 Then introduce CLOVER as a simple way of working:
 
-**Context → Direction → Action → Success**
+**Context → Direction → Action → Outcome**
 
 Finally reinforce human ownership and allow the fifth leaf / Growth to appear subtly as learning rather than as AI autonomy.
 
@@ -110,7 +110,7 @@ For example, visually:
 
 “Do not change this part.”
 
-“Success means this behavior is restored.”
+“Outcome means this behavior is restored.”
 
 Avoid dense UI or technical language.
 
@@ -148,7 +148,7 @@ Optional caption:
 
 “AI does the work.”
 
-### 22–26 seconds — Reality validates Success
+### 22–26 seconds — Reality validates Outcome
 
 **Visual**
 
@@ -166,7 +166,7 @@ Keep it simple and universal.
 
 **On-screen text**
 
-**Success**
+**Outcome**
 
 Optional caption:
 
@@ -178,7 +178,7 @@ Optional caption:
 
 The four stages form a clean loop:
 
-**Context → Direction → Action → Success**
+**Context → Direction → Action → Outcome**
 
 The human remains present next to the loop.
 
@@ -198,7 +198,7 @@ The fifth leaf should feel intriguing, not threatening. It represents learning t
 
 Small line:
 
-**Context → Direction → Action → Success**
+**Context → Direction → Action → Outcome**
 
 Subtle fifth leaf / Growth indication.
 
@@ -264,7 +264,7 @@ Develop the human Direction and transition naturally into AI Action.
 
 The AI should visibly perform meaningful work.
 
-### Prompt 3 — Success, ownership, and the fifth leaf
+### Prompt 3 — Outcome, ownership, and the fifth leaf
 
 Continue the exact scene.
 
@@ -315,7 +315,7 @@ The future hypothesis belongs in the background as curiosity, not as a recommend
 
 ## Canonical one-sentence explanation
 
-> **CLOVER is a way of working with AI to reach real outcomes by putting real Context first, keeping human Direction explicit, letting AI take Action, and letting reality validate Success.**
+> **CLOVER is a way of working with AI to reach real outcomes by putting real Context first, keeping human Direction explicit, letting AI take Action, and letting reality validate Outcome.**
 
 ## Canonical policy line
 

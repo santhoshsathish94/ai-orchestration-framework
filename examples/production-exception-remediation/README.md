@@ -11,7 +11,7 @@ tool-specific, and the prompts work with any capable coding assistant.
 > the results are invented to show the shape of a full cycle. For real, evidence-backed work see
 > the [case studies](../../case-studies/).
 
-> **Context → Direction → Action → Success**
+> **Context → Direction → Action → Outcome**
 
 | Field | Value |
 |---|---|
@@ -90,7 +90,7 @@ The engineer owned the business decision and the approval.
 
 ---
 
-## 4. Success
+## 4. Outcome
 
 - **Evidence:**
   - The new test fails on `main` and passes with the change.
@@ -115,7 +115,7 @@ and accepted it.
 
 ## After the pass — written back into Context
 
-There is no fifth step. The cycle ends at Success, the brief gets updated, and the next attempt on
+There is no fifth step. The cycle ends at Outcome, the brief gets updated, and the next attempt on
 anything of this shape starts further along.
 
 - **What this pass showed:** Reproducing with a test before changing anything made the evidence

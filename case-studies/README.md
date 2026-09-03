@@ -23,7 +23,7 @@ remediation patterns have run on real work through existing review and deploymen
 always-on or adopted organization-wide.
 
 Each case study says what was checked, what was observed, and where the work stopped. See
-[Success](../docs/07-success.md#how-strong-is-your-evidence) for how evidence is described here.
+[Outcome](../docs/07-outcome.md#how-strong-is-your-evidence) for how evidence is described here.
 
 ## Contributing a case study
 

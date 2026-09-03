@@ -15,7 +15,7 @@ The story must stay human-simple while preserving the framework's deeper princip
 - The real system already contains useful context.
 - Humans retain purpose, ownership, judgment, boundaries, and approvals.
 - AI performs substantial work within those boundaries.
-- Reality—not AI confidence—validates Success.
+- Reality—not AI confidence—validates Outcome.
 - A previous run succeeding many times does not guarantee the next run.
 - Failed validation should lead back to Context and new information.
 - Growth is the fifth leaf, shown as learning and curiosity rather than prediction.
@@ -89,7 +89,7 @@ Prefer very short labels:
 - Context
 - Direction
 - Action
-- Success
+- Outcome
 - CLOVER
 
 The generated video should prioritize visuals and voiceover over complex UI text.
@@ -134,7 +134,7 @@ Voiceover timing for this section should feel natural and conversational:
 
 "AI can be incredibly capable. But it can still get the answer wrong when it doesn't have the whole picture. The information was already there—in the system, the data, the logs, the history."
 
-Do not introduce the full CLOVER loop yet. Do not show Direction, Action, Success, or the fifth leaf as labels yet.
+Do not introduce the full CLOVER loop yet. Do not show Direction, Action, Outcome, or the fifth leaf as labels yet.
 
 Target duration for this continuation: approximately 10–12 seconds total including the initial problem beat and context reveal.
 
@@ -166,7 +166,7 @@ Do not show the fifth leaf yet. Keep the story grounded and practical.
 
 ---
 
-# Prompt 3 — Success → Ownership → CLOVER → Growth
+# Prompt 3 — Outcome → Ownership → CLOVER → Growth
 
 Continue directly from the previous final frame. Preserve the exact same human and complete visual world. No character or environment redesign.
 
@@ -176,7 +176,7 @@ Show a simple, universally understandable validation transformation: the origina
 
 Briefly show the AI interface as if it could say "Done," but immediately make it clear that the environment itself is what decides. The human watches the evidence.
 
-Introduce the label **Success** with a short visual caption:
+Introduce the label **Outcome** with a short visual caption:
 
 **Reality is the evidence.**
 
@@ -184,7 +184,7 @@ Then show the human still standing beside the process—not replaced, not absent
 
 The camera smoothly pulls back. The four stages appear as a clean, elegant loop:
 
-**Context → Direction → Action → Success**
+**Context → Direction → Action → Outcome**
 
 Keep the diagram visually simple and integrated into the environment, not as a corporate presentation slide.
 
@@ -196,7 +196,7 @@ Finish on a clean bright identity frame with:
 
 and below it:
 
-**Context → Direction → Action → Success**
+**Context → Direction → Action → Outcome**
 
 The fifth leaf should remain visible but understated.
 
@@ -214,7 +214,7 @@ End calmly, with enough visual breathing room for the final CLOVER title to be u
 
 For a version aimed at a more technically mature audience, use:
 
-"That's CLOVER: Context, Direction, Action, Success. Four leaves make the framework. The fifth is what repeated cycles can teach us."
+"That's CLOVER: Context, Direction, Action, Outcome. Four leaves make the framework. The fifth is what repeated cycles can teach us."
 
 Do not use wording that suggests the fifth leaf is AI acquiring ownership, autonomy, or a new destination.
 

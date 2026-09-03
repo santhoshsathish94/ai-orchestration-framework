@@ -204,11 +204,11 @@ is the lowered barrier rather than the split of credit.
 
 The work followed the four working stages. **Context** was reproducing the leak, isolating the mechanism, and gathering the evidence.
 **Direction** was a production incident worth fixing at the root.
-**Action** was the focused one-file fix and the upstream contribution path. **Success** was measured,
+**Action** was the focused one-file fix and the upstream contribution path. **Outcome** was measured,
 repeatable heap evidence plus independent corroboration. Each failed check sent the work back to Context rather than to another
 attempt at a fix, which is the only reason the four wrong answers were ever ruled out.
 
-## Success — validated under sustained load
+## Outcome — validated under sustained load
 
 The reproduction proved the mechanism in isolation. A later soak test proved it on a real fleet, and
 by accident produced an unusually clean experiment: the **same container image** ran under load

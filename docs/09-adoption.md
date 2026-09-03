@@ -12,7 +12,7 @@ Clover does not ask teams to replace human judgment with AI. It asks teams to ma
 - **Human** owns Direction — purpose, intended outcomes, priorities, acceptable risk, constraints, boundaries, and accountability.
 - **AI** provides capability and execution inside that Direction, using the system as Context to determine and carry out how the work should happen.
 
-The four operational stages remain Context → Direction → Action → Success. Growth is the learning layer that can emerge from repeated meaningful cycles; it is not a fifth task a team has to run.
+The four operational stages remain Context → Direction → Action → Outcome. Growth is the learning layer that can emerge from repeated meaningful cycles; it is not a fifth task a team has to run.
 
 > **Capability may scale. Direction remains human.**
 
@@ -31,7 +31,7 @@ Observation is useful, but it is not a mandatory scorecard or a prerequisite for
 - more work beginning from relevant system evidence rather than remembered context;
 - clearer human outcomes, boundaries, and approval points before consequential Action;
 - less unnecessary rework or fewer handoffs when execution is delegated;
-- more Success claims tied to evidence and the intended outcome;
+- more Outcome claims tied to evidence and the intended outcome;
 - failed attempts producing useful Context for the next cycle;
 - another person, agent, or session continuing the work without reconstructing it;
 - meaningful cycles producing learning that becomes useful in later cycles.
@@ -71,14 +71,14 @@ What a team writes down goes into those files, beside the work. Most teams skip 
 
 Competition may increase pressure to automate faster. Clover treats that as a reason to change execution, not as a reason to hand purpose or accountability to AI. **Direction is not delegated by competition.**
 
-**Success** is where the work meets evidence. Teams that start saying what they checked, what they observed, and where they stopped make the boundary between output and meaningful outcome visible.
+**Outcome** is where the work meets evidence. Teams that start saying what they checked, what they observed, and where they stopped make the boundary between output and meaningful outcome visible.
 
 ## A sequence that works
 
 1. **Start with one real problem the team already has** — a recurring exception, a defect nobody can place, a question that currently takes three teams to answer. A tool looking for a use does not survive contact with a busy week.
 2. **Connect one real source, read-only.** A read-only MCP server in front of the repository, then the logs, then the ticket history, then a datasource. Reading cannot break anything, so it is the cheapest way to find out whether the output can be trusted, and one connection at a time keeps the security conversation small.
 3. **Add the development environment, then the other non-production ones.** That is where checking earns its place without new risk, alongside the pipeline triggers that already exist.
-4. **Give the Direction against what the team can now see.** Somebody says what needs to be done, what must not happen, and where they think the answer probably is. Teach that cycle rather than the tool: Context → Direction → Action → Success outlives whichever product the team is using this quarter.
+4. **Give the Direction against what the team can now see.** Somebody says what needs to be done, what must not happen, and where they think the answer probably is. Teach that cycle rather than the tool: Context → Direction → Action → Outcome outlives whichever product the team is using this quarter.
 5. **Let people ask in whatever way they find natural.** When most questions can be asked and answered in conversation, the bottleneck stops being whoever knows the system best.
 6. **Delegate execution within the human-owned Direction**, following the delegated-execution rules rather than enthusiasm. This can change how much of the path AI performs; it does not transfer Direction.
 7. **Keep a markdown file beside the work** holding the goal, what is settled, what remains, and what was ruled out. That file is what lets any agent pick the job up, so the work stops depending on one agent or one session. [Context engineering](05-context-engineering.md#where-context-lives) covers where it lives.

@@ -38,8 +38,8 @@ root (see [the React memory leak case study](../case-studies/02-react-rsc-memory
 - Beware **false economy**. Under-resourcing a task while also spreading attention thin costs more
   than it saves.
 
-**Reinforces:** [Principle 3 — Action runs inside a structured
-workflow](03-principles.md#3-action-runs-inside-a-structured-workflow). Run work in parallel only
+**Reinforces:** [Principle 3 — Action applies AI capability to Context and
+Direction](03-principles.md#3-action-applies-ai-capability-to-context-and-direction). Run work in parallel only
 where it is genuinely independent.
 
 ---
@@ -71,8 +71,8 @@ fix-first thrashing that preceded it.
 - **A fix nobody can explain is not a diagnosis.** Ask for the reasoning before the change.
 
 **Reinforces:** [Principle 1 — Context comes from the real
-environment](03-principles.md#1-context-comes-from-the-real-environment) and [Principle 4 — Success is
-demonstrated by the environment](03-principles.md#4-success-is-demonstrated-by-the-environment).
+system](03-principles.md#1-context-comes-from-the-real-system) and [Principle 4 — Outcome is what
+reality shows](03-principles.md#4-outcome-is-what-reality-shows).
 
 ---
 
@@ -101,10 +101,10 @@ applications facing the same class of problem.
 - Prefer a **generalized fix** when the underlying defect belongs to a shared framework or dependency,
   and contribute it upstream where that is appropriate.
 
-**Reinforces:** [Principle 4 — Success is demonstrated by the
-environment](03-principles.md#4-success-is-demonstrated-by-the-environment) and [Principle 1 —
+**Reinforces:** [Principle 4 — Outcome is what reality
+shows](03-principles.md#4-outcome-is-what-reality-shows) and [Principle 1 —
 Context comes from the real
-environment](03-principles.md#1-context-comes-from-the-real-environment). A
+system](03-principles.md#1-context-comes-from-the-real-system). A
 workaround resolves an incident. Understanding the root cause can resolve a class of problems.
 
 ---
@@ -144,7 +144,7 @@ without first being memorized by a person.
   a reason to approve faster because the explanation sounded confident.
 
 **Reinforces:** [Principle 1 — Context comes from the real
-environment](03-principles.md#1-context-comes-from-the-real-environment). Knowledge
+system](03-principles.md#1-context-comes-from-the-real-system). Knowledge
 held by a system stays available when the people who held it are not.
 
 ---
@@ -187,7 +187,7 @@ written down.
   cheaper than the last.
 
 **Reinforces:** [Principle 1 — Context comes from
-the real environment](03-principles.md#1-context-comes-from-the-real-environment) and
+the real environment](03-principles.md#1-context-comes-from-the-real-system) and
 [Context engineering](05-context-engineering.md#where-context-lives).
 
 ---

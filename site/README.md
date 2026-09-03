@@ -43,7 +43,7 @@ three leaves, then four, then five.
 4. Three leaves · the common clover — short
 5. Four leaves · the lucky clover — the largest and most important section on the page
 6. Five leaves · the growth clover — short
-7. The worked example — visual, an end-to-end run, few steps, ending at Success
+7. The worked example — visual, an end-to-end run, few steps, ending at Outcome
 8. The agent file
 9. Security and governance
 10. Production case studies and reference implementations
@@ -73,8 +73,8 @@ The marks are the site's identity and they carry the argument, so they have rule
   second leaf path anywhere — add one and the identity drifts.
 - **Three marks carry the arc**, each in a `<figure class="arc__mark">` with a caption. The caption
   is only the name — no geometry or construction detail:
-  - three leaves at 120 degrees, labeled Direction, Action, Success — "the common clover";
-  - four leaves at 90 degrees, labeled Context, Direction, Action, Success, with Context drawn solid
+  - three leaves at 120 degrees, labeled Direction, Action, Outcome — "the common clover";
+  - four leaves at 90 degrees, labeled Context, Direction, Action, Outcome, with Context drawn solid
     as the leaf that just arrived — "the lucky clover";
   - five leaves at 72 degrees, with the Growth leaf drawn dotted as the next stage —
     "the growth clover". The hero mark is four leaves, all solid and unlabeled; the small header mark
@@ -96,7 +96,7 @@ The marks are the site's identity and they carry the argument, so they have rule
 
 - **The arc is the spine.** Three leaves, then four, then five. Do not flatten it back into equal
   sections, and do not move the four-leaf section ahead of the three-leaf one.
-- **Four stages only:** Context → Direction → Action → Success. Never introduce a competing
+- **Four stages only:** Context → Direction → Action → Outcome. Never introduce a competing
   arrow-chain, never append "→ repeat" to that one, and never bring back the short form
   "Where → Know → Do → Validate". Direction is *what*, not *where*.
 - **Growth is not part of the framework**, so it appears in exactly one section, `#fifth-leaf`, and
@@ -104,13 +104,13 @@ The marks are the site's identity and they carry the argument, so they have rule
   definition.
 - **"Leaves" is for the picture.** Say leaves when describing a clover mark. Everywhere else on the
   page, say stages.
-- **The framework is four stages** — Context, Direction, Action, Success. Growth is not something
-  a team runs, so no example, walkthrough or diagram gets a Growth step. Examples end at Success and
+- **The framework is four stages** — Context, Direction, Action, Outcome. Growth is not something
+  a team runs, so no example, walkthrough or diagram gets a Growth step. Examples end at Outcome and
   loop back into Context.
 - **Iteration feeds Context, never Growth.** The page states the rule plainly: after each success or
   failure, the context files are written before the next attempt.
 - **Never call it a model.** Clover is an AI Orchestration Framework connecting real-world Context,
-  human Direction, AI-driven Action, and validated Success into a repeatable cycle. "Model" collides
+  human Direction, AI-driven Action, and validated Outcome into a repeatable cycle. "Model" collides
   with "AI model".
 - **Say "human"**, never "person" or "the user", for whoever holds Direction. Direction is the human
   controlling what matters, the desired outcome, constraints, boundaries, and what must not happen,
@@ -149,7 +149,7 @@ The marks are the site's identity and they carry the argument, so they have rule
 - Tabs: one generic `initTabs` over `[data-tabs]` groups. The first tab and panel in each group carry
   `aria-selected` and `is-active` in the markup, so nothing flashes before `app.js` runs.
 - The worked example is `.run` — plain HTML and CSS, no images and no JavaScript. Keep it to a few
-  steps, do not turn it back into prose, and keep it ending at Success with `.run__loop` turning back
+  steps, do not turn it back into prose, and keep it ending at Outcome with `.run__loop` turning back
   into Context.
 - `glossary/index.html` and `author/index.html` both link back to `#three-leaves`, `#context`,
   `#fifth-leaf`, `#walkthrough`, `#agent` and `#evidence` on this page. Those IDs have to keep

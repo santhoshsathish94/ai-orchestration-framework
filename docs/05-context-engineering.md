@@ -2,7 +2,7 @@
 
 Context is the first stage of [the Clover framework](04-framework.md). It covers what the system needs to know about reality before anything acts on it.
 
-It comes first because the system already exists before anyone asks for anything — or, when a system is being built, because there is already some established reality to reason from. The common way of working is Direction → Action → Success, where context is whatever the human remembers to hand over, so it turns up as a consequence of the direction. Here the direction is given against what is already there.
+It comes first because the system already exists before anyone asks for anything — or, when a system is being built, because there is already some established reality to reason from. The common way of working is Direction → Action → Outcome, where context is whatever the human remembers to hand over, so it turns up as a consequence of the direction. Here the direction is given against what is already there.
 
 In the common clover, context is only what one human can hand over. That is more than what they type — they can attach files, or point at the repository they happen to be working in — and it stays bounded by what that one human can reach and remember. In the lucky clover it becomes the current systems the organization uses: every repository with its many projects and documentation, the datasources the applications connect to, the logs and telemetry, the deployment environments, and the running applications. Tests, history, whatever was already tried, and what earlier passes wrote down sit here too. For a system being built, requirements, designs, dependencies, decisions, experiments, current behavior, constraints, and evidence are part of the same reality.
 
@@ -96,4 +96,4 @@ Growth can emerge here without changing the underlying AI model: repeated observ
 
 This stage catches most of the AI-specific failures. Fabricated references, a root cause that is plausible and wrong, and agreement offered where judgment was needed all come from acting on material that was never checked. [How AI fails](how-ai-fails.md) covers each pattern and why it happens.
 
-It is also where a failed check lands. When [Success](07-success.md) shows that the intended outcome did not occur, the cycle returns here rather than to Action, because the usual reason a change failed is that something about reality was missing. The next attempt needs new information: what the environment did instead, which assumption broke, which signal nobody had looked at yet.
+It is also where a failed check lands. When [Outcome](07-outcome.md) shows that the intended outcome did not occur, the cycle returns here rather than to Action, because the usual reason a change failed is that something about reality was missing. The next attempt needs new information: what the environment did instead, which assumption broke, which signal nobody had looked at yet.

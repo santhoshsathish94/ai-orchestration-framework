@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 302" width="960" height="302" role="img"
      aria-labelledby="title desc" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif">
   <title id="title">The Contentful API migration, run as one Clover cycle</title>
-  <desc id="desc">Context: 89 GraphQL files and 99 mappers across 200-plus files. Direction: preserve every route and JSON shape so no consumer changes. Action: one generic mapper, fifteen verifiable tasks, a live parity differ. Success: 36 of 36 endpoint cases and 239 tests, with QA signing off against the real site. Implementation took about a day against an 8 to 10 week estimate. Performance was measured locally only, and the production cutover has not run.</desc>
+  <desc id="desc">Context: 89 GraphQL files and 99 mappers across 200-plus files. Direction: preserve every route and JSON shape so no consumer changes. Action: one generic mapper, fifteen verifiable tasks, a live parity differ. Outcome: 36 of 36 endpoint cases and 239 tests, with QA signing off against the real site. Implementation took about a day against an 8 to 10 week estimate. Performance was measured locally only, and the production cutover has not run.</desc>
 
   <rect width="960" height="302" fill="#ffffff"/>
 

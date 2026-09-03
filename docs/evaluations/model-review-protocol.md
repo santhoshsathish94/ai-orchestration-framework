@@ -52,7 +52,7 @@ Define the categories before reviewing. For example:
 | Human/AI authority boundary | 15% |
 | Context engineering | 10% |
 | Action/delegation | 10% |
-| Success/verification | 15% |
+| Outcome/verification | 15% |
 | Runtime enforcement | 10% |
 | Growth | 5% |
 | Enterprise readiness | 5% |

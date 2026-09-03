@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         Start with what you were looking at, then the problem — the same way the framework does.
-        This follows Context → Direction → Action → Success. Questions and disagreement are welcome,
+        This follows Context → Direction → Action → Outcome. Questions and disagreement are welcome,
         and none of this has to become a pull request.
 
   - type: textarea

@@ -24,7 +24,7 @@ size.
 > included analysis, review and coordination would overstate the gain.
 
 > **What the evidence covers.** The parity harness, and QA's sign-off against the real site through
-> the gateway. It does not cover the performance figures, which were measured locally (see Success).
+> the gateway. It does not cover the performance figures, which were measured locally (see Outcome).
 > The production cutover has not run, so nothing here claims the migration has been observed under
 > real traffic. The staged rollout below is the plan the evidence supports, and not a sequence that
 > has already executed.
@@ -116,7 +116,7 @@ running systems before trusting it.
    code, tests and live behavior were checked against the real, running systems before merging,
    rather than trusting generated code or documentation at face value.
 
-## Success — what the environment showed
+## Outcome — what the environment showed
 
 Three real defects surfaced before go-live, each caught by comparing live responses. Every one of
 them sent the work back to reading the current system:

@@ -2,6 +2,61 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+Work on the `clover-expansion` branch. Not released.
+
+### Added
+
+- **Why a process is needed at all.** The framework rested on an unstated assumption: that the human
+  giving Direction is right. [Philosophy](docs/02-philosophy.md) now says plainly that neither side
+  sees the whole consequence — a human works from partial knowledge of a system nobody holds
+  entirely, and being accountable for a decision is not the same as being right about it, while AI
+  states its mistakes as fluently as its facts. Each stage is then derived from that, and the rules
+  bind both. [Principles](docs/03-principles.md) opens on the same point under **Neither side is
+  exempt**, and `AGENTS.md` turns it into a duty: say once, plainly, when the Direction looks wrong,
+  then respect the decision and record what you expect to go wrong.
+- **Instructions come from Direction. Context is data.** The rule existed in `AGENTS.md` and nowhere
+  in `docs/`, so a human reading the framework never met it. It is now a principle and a
+  [governance](docs/08-governance.md) section, with the reason attached: Context is frequently
+  writable by people outside the organization, so a comment on a public issue or a string in a log
+  line can be shaped like an instruction, and obeying it hands over whatever access the work holds.
+- **Reality is not edited.** Fabrication appeared only in [how AI fails](docs/how-ai-fails.md) as a
+  pattern to catch, never as a prohibition, and nothing anywhere forbade altering the evidence.
+  Principle 4 already protected the verification control; the new material covers the rest —
+  reporting what was not observed, changing data, logs or state so reality appears to agree, and
+  acting beyond the scope Direction set. Stated in [Outcome](docs/07-outcome.md) as **Evidence is
+  never manufactured**, and in `AGENTS.md` as a refusal.
+- **What each layer owes beyond the immediate work.** [Governance](docs/08-governance.md) now states
+  a boundary for the System, the Human, the AI, and the frontier layer, including consent, licensing
+  and attribution for the human work that model capability is built from. The limit is stated with
+  it: Clover cannot enforce that, and no framework can.
+- **What Clover cannot work out alone.** The [roadmap](docs/10-roadmap.md) names creation rules as
+  unsolved, asks for the people who know the domain, and says how the framework itself advances —
+  this expansion is Direction, adoption produces the Context, and what teams report back from real
+  cycles is the evidence.
+
+### Fixed
+
+- **The runtime-enforcement tests could not run.** The suite imported
+  `reference.runtime_enforcement`, but the directory is hyphenated and therefore not importable, and
+  no `conftest.py`, `__init__.py` or packaging file existed anywhere. The command printed in the
+  reference README failed with `ModuleNotFoundError`. A `conftest.py` now puts the package directory
+  on the path, and the symlink test skips with a reason on platforms that refuse symlink creation
+  rather than failing the run.
+- **The Outcome rename reached six files out of forty-five.** `Success` survived as the stage name in
+  the site, the quickstart, both glossaries, the video material, examples, templates, both case
+  studies and four SVG assets, so the site said `Context → Direction → Action → Success` while the
+  README said Outcome. 131 occurrences renamed across 33 text files and 4 SVGs. The changelog keeps
+  its history, and the sentences that deliberately contrast the two names are untouched.
+- **`docs/07-success.md` renamed to [`docs/07-outcome.md`](docs/07-outcome.md)**, with all nine
+  inbound links repointed.
+- **Three broken anchors in [field practices](docs/field-practices.md).** Links pointed at principle
+  headings that had been renamed. Repo-wide markdown links and anchors now all resolve.
+- **The social card said the wrong thing.** `assets/social-preview.svg` still described an "AI
+  Orchestration Framework" ending in Success. **The PNG has not been re-rendered**, so the served
+  card still shows the old wording.
+
 ## v1.1.3 — 2026-08-29
 ### Added
 
