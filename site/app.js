@@ -69,10 +69,7 @@
     return top - margin;
   }
 
-  function scrollToElement(el, block) {
-    var limit = document.documentElement.scrollHeight - window.innerHeight;
-    var to = Math.max(0, Math.min(limit, targetOffset(el, block)));
-
+  function scrollToY(to) {
     if (!canAnimate) {
       window.scrollTo(0, to);
       return;
@@ -94,12 +91,35 @@
     })(performance.now());
   }
 
+  function scrollToElement(el, block) {
+    var limit = document.documentElement.scrollHeight - window.innerHeight;
+    scrollToY(Math.max(0, Math.min(limit, targetOffset(el, block))));
+  }
+
+  // "/dir/" and "/dir/index.html" are the same page; the nav uses the first and the address bar the second.
+  function samePage(link) {
+    if (link.protocol !== window.location.protocol || link.host !== window.location.host) return false;
+    var strip = function (path) { return path.replace(/index\.html$/, ''); };
+    return strip(link.pathname) === strip(window.location.pathname);
+  }
+
   document.addEventListener('click', function (e) {
     var link = e.target.closest && e.target.closest('a[href]');
     if (!link) return;
     if (link.target === '_blank' || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
 
     var href = link.getAttribute('href') || '';
+
+    // The nav link for the page you are already on: go to the top rather than fetch it again.
+    if (href.charAt(0) !== '#' && !link.hash && samePage(link)) {
+      e.preventDefault();
+      scrollToY(0);
+      if (window.location.hash && history.pushState) {
+        history.pushState(null, '', window.location.pathname + window.location.search);
+      }
+      return;
+    }
+
     if (href.charAt(0) !== '#' || href === '#') return;
 
     var el = document.getElementById(href.slice(1));

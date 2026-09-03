@@ -210,7 +210,10 @@ The marks are the site's identity and they carry the argument, so they have rule
   every relative link and every anchor.
 - **The primary nav is seven plain links, and it does not point at any section of the home page.** It
   opens on **Clover**, which is the way back to the home page from anywhere; on the home page itself
-  that link carries `aria-current="page"`. It was
+  that link carries `aria-current="page"`. A nav link to the page you are already on eases to the top
+  instead of fetching the page again, and clears any fragment from the address bar. `app.js` decides
+  that by comparing resolved paths with a trailing `index.html` stripped, since the nav says `./`
+  where the address bar says `index.html`. It was
   a "Framework" dropdown holding the three clover sections and the worked example, and later carried a
   first link to `/#story`. Both are gone, because the pinned mark labels its own leaves and links
   each one to its stage section, so the reader can pick one there. Do not reintroduce a dropdown to
