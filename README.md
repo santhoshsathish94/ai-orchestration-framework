@@ -145,9 +145,9 @@ Humans provide Direction.
 
 They decide what matters, what outcome is desired, what makes that outcome meaningful, priorities, constraints, boundaries, what must not happen, and what remains their responsibility.
 
-AI can suggest directions. It can identify opportunities, challenge assumptions, compare options, and recommend what may be worth pursuing. But **humans should always have the authority to decide what to pursue**.
+AI is capable enough to suggest directions. It can identify opportunities, challenge assumptions, compare options, and recommend what may be worth pursuing. But **AI should not decide which direction to pursue. Humans should always have the authority to decide what to pursue.**
 
-AI capability does not transfer that authority. A capable AI may suggest a direction that is useful, surprising, or better than the current plan; the human remains the one who decides whether that direction should actually be pursued.
+That boundary remains even when AI's suggested direction appears better, faster, or more capable than the current human plan. AI can influence the decision with analysis and recommendations; the authority to choose what to pursue remains human.
 
 > **AI can suggest the direction. Humans decide what to pursue.**
 
