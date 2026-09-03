@@ -138,8 +138,9 @@ The marks are the site's identity and they carry the argument, so they have rule
   dangerous. Do not explain the *Black Clover* or devil association anywhere.
 - Never assert that any AI provider trains on customer or enterprise work. Keep the accumulation
   argument structural and unattributed.
-- One background for the whole site: white. Sections are separated by the `.band` rule alone, never
-  by a tint. There is no `.band--soft` and no `.card--flat`; do not reintroduce either.
+- One background for the whole site: white. Sections carry no tint and no dividing rule; the
+  `.band` padding is what separates them. There is no `.band--soft` and no `.card--flat`; do not
+  reintroduce either. The footer keeps its top rule, since nothing else marks where it starts.
 - The mark turns one full revolution between the top and the bottom of the home page, eased toward
   the scroll position in `app.js` rather than tracking it exactly. `prefers-reduced-motion` stops it.
   The turn is an SVG `rotate(deg 50 44)` on `.clover__spin`, inside the viewBox. Rotating the `<svg>`
