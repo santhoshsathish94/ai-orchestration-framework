@@ -12,7 +12,7 @@ The engineering layer is four stages — Context, Direction, Action, Success. Te
 
 This document is the other layer, and **it is not part of the framework**. No stage depends on it. A team can run every cycle the repository describes, get the outcomes in the [case studies](../case-studies/), and disagree with every word here. The engineering material loses nothing if this document turns out to be wrong.
 
-What follows is a question about Growth, increasing capability, and the unknown boundary of what AI may eventually become capable of. Nothing here says that current systems have reached general intelligence, that autonomous systems are inevitable, or that harm is inevitable. Growth is useful today. A system that keeps what its outcomes taught it can start the next cycle with better information than the last. The open part is how far that growth can go.
+What follows is a question about Growth, increasing capability, and the unknown boundary of what AI may eventually become capable of. Nothing here says that current systems have reached general intelligence, that future AI capabilities are inevitable, or that harm is inevitable. Growth is useful today. A system that keeps what its outcomes taught it can start the next cycle with better information than the last. The open part is how far that growth can go.
 
 The argument names no actor. It is about structural pressure, and it applies to anyone under enough of it — a well-funded lab, a startup with limited runway, a national program. A version of this that pointed at somebody else would let every other reader off the hook.
 
