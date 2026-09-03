@@ -35,14 +35,16 @@ site/
 The page is one continuous argument rather than one section per stage.
 
 1. `#overview` — Hero: the name, the tagline, what Clover is in a sentence, the mark, the stages
-2. `#capability` — What is Clover: the cycle before AI, why AI matters, why humans matter
-3. `#story` — One cycle, any scale: the labelled clover and one step per stage
-4. `#scale` — Two dimensions: who is working, and what they are working on
-5. `#try` — Four steps on a real problem the reader already has
-6. `#evidence-preview` — Case studies, reference implementations, how model reviews are reported
-7. `#growth` — The fifth stage: whatever the Outcome taught, carried back into Context
-8. `#governance` — Capability is not authority
-9. `#next` — The closing restatement and where to go
+2. `#capability` — What is Clover: the cycle as it ran before AI, with the human as the actor
+3. `#ai-changes` — What AI changes: every stage easier, better and faster, the cycle unchanged
+4. `#humans` — Why humans matter: accountability, boundaries, and carrying the consequence
+5. `#story` — One cycle, any scale: the labelled clover and one step per stage
+6. `#scale` — Two dimensions: who is working, and what they are working on
+7. `#try` — Four steps on a real problem the reader already has
+8. `#evidence-preview` — Case studies, reference implementations, how model reviews are reported
+9. `#growth` — The fifth stage: whatever the Outcome taught, carried back into Context
+10. `#governance` — Capability is not authority
+11. `#next` — The closing restatement and where to go
 
 There is no author section on this page. The nav and the footer both link to `author/` instead.
 
