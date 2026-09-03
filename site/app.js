@@ -121,15 +121,16 @@
       var marks = Array.prototype.slice.call(block.querySelectorAll('.story__leaf, .story__label'));
       var caption = block.querySelector('[data-story-caption]');
 
+      /* A null step means the reader is not in the steps yet, or has passed them. The mark then
+         goes back to the plain state it holds everywhere else on the page. */
       var apply = function (step) {
-        if (!step) return;
-        var leaf = step.getAttribute('data-leaf') || '';
+        var leaf = step ? (step.getAttribute('data-leaf') || '') : '';
         marks.forEach(function (m) {
           m.classList.toggle('is-active', leaf !== '' && m.getAttribute('data-leaf') === leaf);
         });
         steps.forEach(function (s) { s.classList.toggle('is-current', s === step); });
-        block.classList.toggle('is-ink', step.hasAttribute('data-ink'));
-        if (caption && step.getAttribute('data-caption')) {
+        block.classList.toggle('is-ink', !!step && step.hasAttribute('data-ink'));
+        if (step && caption && step.getAttribute('data-caption')) {
           caption.textContent = step.getAttribute('data-caption');
         }
       };
@@ -142,12 +143,14 @@
       blocks.forEach(function (b) {
         var best = null;
         var bestDist = Infinity;
+        var reading = false;
         b.steps.forEach(function (s) {
           var r = s.getBoundingClientRect();
+          if (r.top <= mid && r.bottom >= mid) reading = true;
           var d = Math.abs((r.top + r.height / 2) - mid);
           if (d < bestDist) { bestDist = d; best = s; }
         });
-        b.apply(best);
+        b.apply(reading ? best : null);
       });
     };
 

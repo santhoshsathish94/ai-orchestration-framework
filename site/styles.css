@@ -325,24 +325,15 @@ section[id] { scroll-margin-top: 5rem; }
 .pinned.is-ink .story__leaf { fill: var(--ink); }
 .pinned.is-ink .story__label { fill: var(--ink); }
 
-.story__intro { margin: 0 0 1.8rem; padding-bottom: 1.2rem; border-bottom: 1px solid var(--line); }
-.story__title { margin: 0 0 0.5rem; font-size: clamp(1.5rem, 3.2vw, 2.05rem); }
-.story__lede { max-width: 48ch; color: var(--ink-2); }
-
 .story__steps { list-style: none; margin: 0; padding: 0; }
 .story__step {
-  min-height: 52vh; display: flex; flex-direction: column; justify-content: center;
+  min-height: 38vh; display: flex; flex-direction: column; justify-content: center;
   padding-block: 1.4rem;
   opacity: 0.4; transition: opacity 0.3s ease;
 }
 .story__step.is-current { opacity: 1; }
-.story__step h4 { margin: 0 0 0.6rem; font-size: clamp(1.2rem, 2.4vw, 1.55rem); }
+.story__step h3 { margin: 0 0 0.6rem; font-size: clamp(1.2rem, 2.4vw, 1.55rem); }
 .story__step p { max-width: 46ch; }
-.story__act {
-  margin: 0 0 0.9rem; font-size: 0.76rem; font-weight: 650; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--accent);
-}
-.story__delta { margin: 0 0 0.6rem; font-size: 0.84rem; font-weight: 620; color: var(--muted); }
 .story__step .ask__q { max-width: none; }
 
 @media (max-width: 860px) {
@@ -388,14 +379,18 @@ section[id] { scroll-margin-top: 5rem; }
 .hero__top { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1.2rem 2rem; align-items: center; }
 @media (max-width: 620px) { .hero__top { grid-template-columns: 1fr; } }
 
-/* The mark spans the hero and the section under it, so it stays pinned while that text scrolls. */
-.pinned {
+/* One mark for the whole page. The sections stay full-bleed so their tint and rule still reach the
+   edges; the mark rides above them in a zero-height sticky rail, and the text column is narrowed on
+   the right by exactly the space the mark occupies. */
+.pinned { position: relative; --mark-w: clamp(260px, 36vw, 400px); --mark-gap: 3rem; }
+.pinned .wrap { padding-right: calc(var(--pad) + var(--mark-w) + var(--mark-gap)); }
+.pinned__mark {
+  position: sticky; top: 5.5rem; z-index: 2; height: 0;
   width: min(1120px, 100%); margin-inline: auto; padding-inline: var(--pad);
-  display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 3rem; align-items: start;
+  display: flex; justify-content: flex-end; align-items: flex-start;
 }
-.pinned > section { grid-column: 1; }
-.pinned .wrap { width: 100%; padding-inline: 0; }
-.pinned__mark { grid-column: 2; grid-row: 1 / -1; position: sticky; top: 5.5rem; }
+/* .clover centres itself with auto margins, which in a flex row beats justify-content. */
+.pinned__mark > svg { margin-inline: 0; width: var(--mark-w); }
 
 /* The one mark also serves the story: its leaf goes to ink as that step scrolls into view. */
 .pinned__mark .story__leaf { transition: fill 0.25s ease; }
@@ -403,17 +398,18 @@ section[id] { scroll-margin-top: 5rem; }
 .pinned__mark .story__label.is-active { fill: var(--ink); font-weight: 800; }
 
 @media (max-width: 860px) {
-  .pinned { grid-template-columns: 1fr; }
   /* Above the text and pinned to the top bar, small enough to leave the page readable behind it. */
+  .pinned .wrap { padding-right: var(--pad); }
   .pinned__mark {
-    grid-column: 1; grid-row: auto; order: -1; top: 3.6rem; z-index: 5;
-    justify-self: center; padding-block: 0.5rem 0.7rem;
+    height: auto; top: 3.6rem; z-index: 5; justify-content: center;
+    padding-block: 0.5rem 0.7rem;
     background: var(--bg); border-bottom: 1px solid var(--line);
   }
   .pinned__mark .clover--hero { width: clamp(110px, 30vw, 160px); }
 }
 
-.no-js .pinned__mark { position: static; }
+.no-js .pinned__mark { position: static; height: auto; justify-content: center; }
+.no-js .pinned .wrap { padding-right: var(--pad); }
 
 /* ---------- the worked example ---------- */
 /* A numbered run down the page. The rail and the nodes carry the sequence; the chips carry what
