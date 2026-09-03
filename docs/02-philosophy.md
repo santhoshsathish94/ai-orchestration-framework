@@ -28,12 +28,12 @@ same fluency as facts, and cannot tell the difference between a system it has un
 has merely described convincingly.
 
 So the framework does not rest on either side being correct. It rests on the **system cycle** —
-**Context → Direction → Action → Outcome → Growth** — which keeps both connected to something that
+**Context → Direction → Execution → Outcome → Growth** — which keeps both connected to something that
 can contradict them:
 
 - **Context** exists because memory and confidence are not reliable descriptions of a system.
 - **Direction** is written down because an intention nobody stated cannot be checked against what happened.
-- **Action** stays inside boundaries because the cost of being wrong is not evenly distributed.
+- **Execution** stays inside boundaries because the cost of being wrong is not evenly distributed.
 - **Outcome** is judged by the environment because neither a human nor an AI can validate its own work.
 - **Growth** carries what the Outcome taught back into Context, because a team should not have to learn the same thing twice.
 
@@ -49,7 +49,7 @@ Clover does not claim to have invented the underlying pattern of working with sy
 
 What AI changed is accountability. Execution moved to something that cannot be accountable. A model can perform the work, report that it worked, and hold nothing when it did not. Where execution went, accountability tended to go with it, out of scope entirely. Clover establishes accountability back in the system, through the human actor who can truly take up the role.
 
-The cycle itself carried over unchanged. What changed is **who or what can perform the execution**, and what became of accountability when it moved. In the AI era, AI can take on much more of the Action that humans previously performed directly.
+The cycle itself carried over unchanged. What changed is **who or what can perform the execution**, and what became of accountability when it moved. In the AI era, AI can take on much more of the Execution that humans previously performed directly.
 
 That changes the engineering problem. We need to decide what execution can be delegated, what context AI can use, what boundaries remain with the human, which human answers for the result, and how the system can provide evidence that the intended outcome actually happened.
 
@@ -61,12 +61,12 @@ Stated plainly: **the system is the existing reality that can validate the outco
 
 ### What makes Clover distinct
 
-The framework does not claim novelty from naming Context, Direction, Action, Outcome, and Growth. Every system that worked has worked this way. Understanding, deciding, acting, validating, and learning already exist in engineering, management, research, operations, and everyday work.
+The framework does not claim novelty from naming Context, Direction, Execution, Outcome, and Growth. Every system that worked has worked this way. Understanding, deciding, acting, validating, and learning already exist in engineering, management, research, operations, and everyday work.
 
 Clover's claim is narrower and more practical: **make that existing relationship explicit for an AI era in which execution can increasingly be delegated to AI while accountability cannot.**
 
 - **System → Human → AI** names the **system actors**: System grounds the work in reality, Human provides Direction and accountability, and AI provides capability and can take on execution.
-- **Context → Direction → Action → Outcome → Growth** is the **system cycle** those actors run: understand the relevant reality, establish the desired outcome and boundaries, perform the work, validate the outcome against reality, and carry what it taught into the next Context.
+- **Context → Direction → Execution → Outcome → Growth** is the **system cycle** those actors run: understand the relevant reality, establish the desired outcome and boundaries, perform the work, validate the outcome against reality, and carry what it taught into the next Context.
 - The value of the framework is in making the boundaries and feedback between **reality, human purpose, AI execution, evidence, and learning** explicit enough to apply AI-enabled work without losing the pattern that existed before AI, or the accountability that used to travel with it.
 - The claim is not a prerequisite for adoption. Clover does not need to be proven before people use it; adoption in the AI era gives us the opportunity to observe what emerges when the same underlying cycle is used with AI performing more of the execution.
 
@@ -80,7 +80,7 @@ Clover can vary along two separate dimensions: **who is doing the work** and **w
 
 **Individual → AI → Team → Organization**
 
-An individual can use the cycle for personal work. AI can participate as a capable executor within Human Direction. A team can share Context and coordinate Action. An organization can carry the same relationship across functions and responsibilities.
+An individual can use the cycle for personal work. AI can participate as a capable executor within Human Direction. A team can share Context and coordinate Execution. An organization can carry the same relationship across functions and responsibilities.
 
 ### What is being worked on?
 
@@ -166,7 +166,7 @@ The objects, actors, tools, and scope change. The relationship remains:
 
 and the work can be understood through:
 
-**Context → Direction → Action → Outcome → Growth**
+**Context → Direction → Execution → Outcome → Growth**
 
 One cycle produces **Growth** when what it taught is preserved. Repeated cycles compound it.
 
@@ -174,7 +174,7 @@ One cycle produces **Growth** when what it taught is preserved. Repeated cycles 
 
 The number of leaves carries the argument.
 
-**Three leaves — the common clover.** Direction, Action, Outcome. A human gives the Direction, humans or their tools perform the Action, and the result is checked. It produces real value, but the available Context is bounded by what the people doing the work can reach, remember, and pass into the execution.
+**Three leaves — the common clover.** Direction, Execution, Outcome. A human gives the Direction, humans or their tools perform the Execution, and the result is checked. It produces real value, but the available Context is bounded by what the people doing the work can reach, remember, and pass into the execution.
 
 **Four leaves — the lucky clover.** Context arrives from the System and comes into the work explicitly. The work starts from reality rather than only from a description one person assembled. Direction can point at the relevant part of that reality, AI can use it to determine the means, and the outcome can be validated against the same system.
 

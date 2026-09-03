@@ -14,7 +14,7 @@ The goal is to make one idea immediately understandable:
 
 The **system cycle** is:
 
-**Context → Direction → Action → Outcome → Growth**
+**Context → Direction → Execution → Outcome → Growth**
 
 All five leaves make the cycle. The fifth leaf is **Growth**: whatever the Outcome taught, at any size, carried back into Context. A team performs it the same way it performs the other four. One wrong answer, understood and written down, is Growth.
 
@@ -152,7 +152,7 @@ Direction is human authority, not human micromanagement.
 
 ---
 
-## Action
+## Execution
 
 AI determines how the work should happen within the human-defined boundaries.
 
@@ -291,7 +291,7 @@ CLOVER is not:
 
 It is:
 
-**Context → Direction → Action → Outcome → Growth → Context → ...**
+**Context → Direction → Execution → Outcome → Growth → Context → ...**
 
 Every cycle leaves something behind.
 
@@ -347,7 +347,7 @@ The leaf story explains the evolution.
 
 ### Three leaves — the common clover
 
-**Direction → Action → Outcome**
+**Direction → Execution → Outcome**
 
 A human gives AI a task.
 
@@ -359,7 +359,7 @@ This is useful and common.
 
 ### Four leaves — the lucky clover
 
-**Context → Direction → Action → Outcome**
+**Context → Direction → Execution → Outcome**
 
 The real environment comes first.
 
@@ -367,7 +367,7 @@ This changes the quality of the entire cycle.
 
 ### Five leaves — the growth clover
 
-**Context → Direction → Action → Outcome → Growth**
+**Context → Direction → Execution → Outcome → Growth**
 
 The fifth leaf is **Growth**, and a team performs it the same way it performs the other four.
 
@@ -405,7 +405,7 @@ CLOVER must separate today's engineering framework from its future hypothesis.
 
 Today:
 
-**Context → Direction → Action → Outcome → Growth**
+**Context → Direction → Execution → Outcome → Growth**
 
 Future question:
 
@@ -491,7 +491,7 @@ Then show the simple sequence:
 
 Only afterward introduce the formal names of the system cycle:
 
-**Context → Direction → Action → Outcome → Growth**
+**Context → Direction → Execution → Outcome → Growth**
 
 For the human/AI boundary, use:
 
@@ -539,7 +539,7 @@ The five leaves appear in order:
 
 **Direction** — humans decide what matters.
 
-**Action** — AI does the work.
+**Execution** — AI does the work.
 
 **Outcome** — reality shows whether it worked.
 
@@ -571,7 +571,7 @@ The strongest simple message is:
 >
 > **CLOVER is a way of working with AI to reach real outcomes.**
 >
-> **Start with the real Context. Humans give the Direction. AI takes Action. Reality validates Outcome. Growth keeps what it taught.**
+> **Start with the real Context. Humans give the Direction. AI takes Execution. Reality validates Outcome. Growth keeps what it taught.**
 >
 > **Five leaves make the cycle. The fifth is what the other four taught us.**
 >
@@ -629,7 +629,7 @@ Continue the established scene.
 
 Approximately the final 10–12 seconds.
 
-Show Action, Outcome, and Growth as the fifth stage, then the completed five-leaf cycle feeding forward.
+Show Execution, Outcome, and Growth as the fifth stage, then the completed five-leaf cycle feeding forward.
 
 Do not keep adding prompts after the core 30 seconds works merely to extend the video.
 
@@ -658,7 +658,7 @@ At the end of the video, the viewer should be able to remember:
 1. **CLOVER is a way of working with AI to reach real outcomes.**
 2. **Real Context comes first.**
 3. **Humans still provide Direction and keep ownership.**
-4. **AI can do the Action.**
+4. **AI can do the Execution.**
 5. **Reality—not AI's own claim—validates Outcome.**
 6. **Growth is the fifth stage: what the outcome taught is kept for the next cycle.**
 7. **AI can still fail, even after repeated successes.**
@@ -703,7 +703,7 @@ It should remain practical, grounded in real engineering, and honest about uncer
 
 # 18. Canonical One-Line Explanation
 
-> **CLOVER is a way of working with AI to reach real outcomes: start with the real Context, keep human Direction and ownership, let AI take Action, let reality validate Outcome, and keep what it taught as Growth.**
+> **CLOVER is a way of working with AI to reach real outcomes: start with the real Context, keep human Direction and ownership, let AI take Execution, let reality validate Outcome, and keep what it taught as Growth.**
 
 ## Canonical Five-Leaf Explanation
 

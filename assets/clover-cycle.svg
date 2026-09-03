@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
   <title id="title">The Clover cycle</title>
-  <desc id="desc">An interactive five-part Clover showing Context, Direction, Action, Outcome, and Growth.</desc>
+  <desc id="desc">An interactive five-part Clover showing Context, Direction, Execution, Outcome, and Growth.</desc>
 
   <defs>
     <linearGradient id="leafGradient" x1="0" y1="0" x2="1" y2="1">
@@ -30,7 +30,7 @@
   <!-- Labels -->
   <text class="label" x="360" y="58" text-anchor="middle">Context</text>
   <text class="label" x="614" y="205" text-anchor="middle">Direction</text>
-  <text class="label" x="570" y="454" text-anchor="middle">Action</text>
+  <text class="label" x="570" y="454" text-anchor="middle">Execution</text>
   <text class="label" x="150" y="454" text-anchor="middle">Outcome</text>
   <text class="label" x="106" y="205" text-anchor="middle">Growth</text>
 
@@ -53,8 +53,8 @@
       d="M370 272 C397 220 443 193 484 207 C516 218 525 250 506 273 C478 308 423 309 370 272 Z"/>
   </a>
 
-  <!-- Action -->
-  <a class="leaf" href="#action" aria-label="Go to Action">
+  <!-- Execution -->
+  <a class="leaf" href="#execution" aria-label="Go to Execution">
     <path fill="url(#leafGradient)" filter="url(#shadow)"
       d="M368 285 C423 282 463 315 461 358 C459 391 432 407 406 393 C366 372 350 321 368 285 Z"/>
   </a>

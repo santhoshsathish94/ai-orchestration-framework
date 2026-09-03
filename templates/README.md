@@ -1,6 +1,6 @@
 # Templates
 
-> **Context → Direction → Action → Outcome → Growth**
+> **Context → Direction → Execution → Outcome → Growth**
 
 Reusable artifacts for running work through the cycle. Copy a template, rename it for the task, and
 fill it in as the work proceeds. The value is in real context, clear direction, and honest evidence,

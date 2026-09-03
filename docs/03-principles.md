@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Clover describes how the system actors — **System → Human → AI** — turn intent into outcomes the environment confirms. The system cycle — **Context → Direction → Action → Outcome → Growth** — gives the structure. These principles are what make each stage hold up on real work.
+Clover describes how the system actors — **System → Human → AI** — turn intent into outcomes the environment confirms. The system cycle — **Context → Direction → Execution → Outcome → Growth** — gives the structure. These principles are what make each stage hold up on real work.
 
 Every one of them exists for the same reason. Every system that worked has worked this way. What AI changed is accountability: execution moved to something that cannot be accountable, and accountability went out of scope with it. These principles are how it gets established back in the system, on the human actor who can truly take up the role.
 
@@ -130,17 +130,17 @@ Tickets, incidents, requests, or prompts can trigger Direction. They rarely defi
 
 ---
 
-## 3. Action applies AI capability to Context and Direction
+## 3. Execution applies AI capability to Context and Direction
 
-*Stage: Action*
+*Stage: Execution*
 
-AI works from two things together: **human Direction as instructions and system Context as data**. Action is where AI determines how the work should happen and executes within the boundaries established by the human.
+AI works from two things together: **human Direction as instructions and system Context as data**. Execution is where AI determines how the work should happen and executes within the boundaries established by the human.
 
 Reasoning, planning, tool selection, AI model selection, orchestration across agents, code changes, tests, debugging, analysis, and interaction with the system all belong here.
 
-Planning and doing sit on one stage on purpose. The plan can change when work meets reality, and adapting to new evidence is part of Action rather than a reason to pretend the original plan was complete.
+Planning and doing sit on one stage on purpose. The plan can change when work meets reality, and adapting to new evidence is part of Execution rather than a reason to pretend the original plan was complete.
 
-AI may execute tests and modify test code when the human explicitly directs that as part of the intended outcome. **Otherwise, verification artifacts that define whether the Outcome is acceptable should remain outside the agent's writable Action scope.** Test fixtures, regression assertions, acceptance criteria, and other validation controls should be protected from silent weakening or deletion.
+AI may execute tests and modify test code when the human explicitly directs that as part of the intended outcome. **Otherwise, verification artifacts that define whether the Outcome is acceptable should remain outside the agent's writable Execution scope.** Test fixtures, regression assertions, acceptance criteria, and other validation controls should be protected from silent weakening or deletion.
 
 Humans and AI can share execution. The human retains the boundaries, approvals, and accountability even when AI performs most of the work.
 
@@ -152,17 +152,17 @@ Plan the smallest coherent path to the outcome. Run work in parallel only where 
 
 *Stage: Outcome*
 
-Outcome is where the system or environment shows what actually happened as a result of the Action. It is deliberately broader than success: the Outcome may be favorable, unfavorable, partial, inconclusive, or otherwise different from what was intended.
+Outcome is where the system or environment shows what actually happened as a result of the Execution. It is deliberately broader than success: the Outcome may be favorable, unfavorable, partial, inconclusive, or otherwise different from what was intended.
 
 The meaningful outcome is judged through evidence from the real system or environment. A closed task, a generated artifact, a passing build, or an AI statement that the work succeeded is not enough on its own.
 
-Verification boundaries matter. Whenever possible, the evidence used to characterize the Outcome should come from a check the agent could not silently redefine while performing the Action. Prefer protected test suites, independent fixtures, external assertions, separate environments, before/after measurements, production signals, or other validation mechanisms whose acceptance criteria remain outside the change being evaluated.
+Verification boundaries matter. Whenever possible, the evidence used to characterize the Outcome should come from a check the agent could not silently redefine while performing the Execution. Prefer protected test suites, independent fixtures, external assertions, separate environments, before/after measurements, production signals, or other validation mechanisms whose acceptance criteria remain outside the change being evaluated.
 
 A passing test is only as meaningful as the integrity of the test and its acceptance criteria. Do not weaken, delete, bypass, or rewrite a verification control merely to make the Outcome appear favorable. If the verification control itself must change because the intended outcome or its acceptance criteria changed, make that change explicit in Direction and ensure the resulting Outcome is evaluated independently.
 
 State what you checked, what you observed, what happened, and where observation stopped. The human holds the standard for what counts as sufficient evidence and remains accountable for the outcome. AI runs checks, gathers evidence, reports it accurately, and makes clear what it could not verify. The system or environment provides the reality against which the Outcome is judged.
 
-When the evidence does not support the intended outcome, the unfavorable Outcome is still useful information about reality. Return to Context rather than repeating the same Action unchanged.
+When the evidence does not support the intended outcome, the unfavorable Outcome is still useful information about reality. Return to Context rather than repeating the same Execution unchanged.
 
 ---
 
@@ -188,7 +188,7 @@ Growth is the fifth stage, and it is performed. What accumulates from performing
 
 Growth needs no repetition and no scale. Whatever the Outcome taught, at any size, carried back into Context, is Growth. One wrong answer, understood and written down, counts. It is not something reserved for frontier AI providers learning from volumes of interaction data.
 
-Growth can come from **every stage**. Context can reveal how the system actually behaves and what information was missing. Direction can reveal whether the purpose, constraints, priorities, or process were appropriate. Action can reveal which approaches, tools, and execution patterns work. Outcome can reveal what actually happened, what held, what failed, and what the evidence showed.
+Growth can come from **every stage**. Context can reveal how the system actually behaves and what information was missing. Direction can reveal whether the purpose, constraints, priorities, or process were appropriate. Execution can reveal which approaches, tools, and execution patterns work. Outcome can reveal what actually happened, what held, what failed, and what the evidence showed.
 
 Failure is part of Growth. So are successful outcomes, analyses, discoveries about the current system, repeated patterns, and newly understood constraints. A failed attempt can teach more than a successful one when it exposes an assumption that reality rejected.
 
@@ -219,7 +219,7 @@ Growth does not belong to one actor. It is the accumulated learning that can eme
 |---|---|
 | **Context comes from the real system.** | Reality over assumption. |
 | **Direction is a human decision.** | Purpose and accountability stay human. |
-| **Action applies AI capability to Context and Direction.** | AI determines the path without owning the destination. |
+| **Execution applies AI capability to Context and Direction.** | AI determines the path without owning the destination. |
 | **Outcome is what reality shows.** | Evidence over a success-only label. |
 | **Growth keeps what a cycle taught.** | What was learned survives the cycle that produced it. |
 

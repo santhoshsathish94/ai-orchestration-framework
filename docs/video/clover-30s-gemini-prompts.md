@@ -25,7 +25,7 @@ The story must stay human-simple while preserving the framework's deeper princip
 The two chains the video is built on:
 
 - the **system actors**: System → Human → AI
-- the **system cycle**: Context → Direction → Action → Outcome → Growth
+- the **system cycle**: Context → Direction → Execution → Outcome → Growth
 
 ---
 
@@ -94,7 +94,7 @@ Use minimal on-screen text.
 Prefer very short labels, and show them in this order:
 - Context
 - Direction
-- Action
+- Execution
 - Outcome
 - Growth
 - CLOVER
@@ -141,13 +141,13 @@ Voiceover timing for this section should feel natural and conversational:
 
 "AI can be incredibly capable. It can still be wrong when it doesn't have the whole picture. The information was already there—in the system, the data, the logs, the history."
 
-Do not introduce the full CLOVER loop yet. Do not show Direction, Action, Outcome, or Growth as labels yet.
+Do not introduce the full CLOVER loop yet. Do not show Direction, Execution, Outcome, or Growth as labels yet.
 
 Target duration for this continuation: approximately 11 seconds total including the initial problem beat and context reveal.
 
 ---
 
-# Prompt 2 — Direction → Action
+# Prompt 2 — Direction → Execution
 
 Continue the exact same scene and visual world from the final frame of Prompt 1. Preserve the exact same primary human, clothing, face, workstation, environment, lighting, physical props, and cinematic camera language.
 
@@ -197,7 +197,7 @@ Introduce the label **Growth** with a short visual caption:
 
 The camera smoothly pulls back. The five stages appear as a clean, elegant loop, with the fifth leaf completing the clover as the note lands:
 
-**Context → Direction → Action → Outcome → Growth**
+**Context → Direction → Execution → Outcome → Growth**
 
 Keep the diagram visually simple and integrated into the environment, not as a corporate presentation slide. Draw all five leaves with equal weight. Do not set the fifth leaf apart, make it faint, or show it sprouting on its own as something the AI produced.
 
@@ -207,7 +207,7 @@ Finish on a clean bright identity frame with:
 
 and below it:
 
-**Context → Direction → Action → Outcome → Growth**
+**Context → Direction → Execution → Outcome → Growth**
 
 Then a closing caption, held long enough to read:
 
@@ -227,7 +227,7 @@ End calmly, with enough visual breathing room for the final CLOVER title and clo
 
 For a version aimed at a more technically mature audience, use:
 
-"That's CLOVER: Context, Direction, Action, Outcome, Growth. Five leaves make the cycle. The fifth is what the other four taught us."
+"That's CLOVER: Context, Direction, Execution, Outcome, Growth. Five leaves make the cycle. The fifth is what the other four taught us."
 
 Do not use wording that suggests Growth is AI acquiring ownership, autonomy, or a new destination.
 

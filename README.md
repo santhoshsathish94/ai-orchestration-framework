@@ -17,7 +17,7 @@
 
 **System → Human → AI**
 
-**Context → Direction → Action → Outcome → Growth**
+**Context → Direction → Execution → Outcome → Growth**
 
 > **Clover connects system reality, human Direction, AI capability, evidence of outcomes, and what those outcomes teach.**
 
@@ -47,9 +47,9 @@ The framework therefore starts with the **system actors**:
 
 and the **system cycle** they run:
 
-**Context → Direction → Action → Outcome → Growth**
+**Context → Direction → Execution → Outcome → Growth**
 
-Context is the relevant understanding available from System reality. Direction is the human-defined meaningful outcome and boundaries. Action is where AI and other capabilities determine and perform the means of achieving it. Outcome is what reality shows actually happened, whether favorable, unfavorable, partial, or inconclusive.
+Context is the relevant understanding available from System reality. Direction is the human-defined meaningful outcome and boundaries. Execution is where AI and other capabilities determine and perform the means of achieving it. Outcome is what reality shows actually happened, whether favorable, unfavorable, partial, or inconclusive.
 
 Clover is not software. There is nothing to install, and it does not require replacing existing tools, workflows, systems, or AI products.
 
@@ -87,7 +87,7 @@ The combinations can become much larger than these examples. The core does not c
 
 **System → Human → AI**
 
-**Context → Direction → Action → Outcome → Growth**
+**Context → Direction → Execution → Outcome → Growth**
 
 > **The complexity can grow without bound. The core stays simple.**
 
@@ -95,13 +95,13 @@ The combinations can become much larger than these examples. The core does not c
 
 # What makes Clover distinct?
 
-Clover does not claim novelty merely from naming Context, Direction, Action, Outcome, and Growth. Those activities already existed in engineering, management, research, operations, and everyday work before AI could perform substantial portions of execution.
+Clover does not claim novelty merely from naming Context, Direction, Execution, Outcome, and Growth. Those activities already existed in engineering, management, research, operations, and everyday work before AI could perform substantial portions of execution.
 
 The useful distinction for the AI era is the relationship between them:
 
 **System → Human → AI** makes explicit that System reality grounds the work, Human provides Direction and accountability, and AI provides capability and can take on execution.
 
-**Context → Direction → Action → Outcome → Growth** makes that relationship operational: understand the relevant reality, establish the desired outcome and boundaries, perform the work, observe what happened against reality, and keep what it taught.
+**Context → Direction → Execution → Outcome → Growth** makes that relationship operational: understand the relevant reality, establish the desired outcome and boundaries, perform the work, observe what happened against reality, and keep what it taught.
 
 So Clover is not presented as a new way humans suddenly began working. It is an attempt to make an existing systems pattern explicit and usable when the **execution layer changes from primarily human-operated to increasingly AI-operated**.
 
@@ -117,11 +117,11 @@ Clover is therefore best understood as **a framework for working with System, Hu
 
 Clover continuously connects:
 
-**Reality → Human Direction → Means and Action → Reality-based Outcome → What It Taught**
+**Reality → Human Direction → Means and Execution → Reality-based Outcome → What It Taught**
 
 The cycle can repeat as many times as needed.
 
-A result creates new information. That information becomes Context. Context may change Direction. Direction guides the next Action. Reality shows what happened.
+A result creates new information. That information becomes Context. Context may change Direction. Direction guides the next Execution. Reality shows what happened.
 
 The work continues until the intended outcome is achieved, the Direction changes, or reality shows that something else should happen.
 
@@ -161,11 +161,11 @@ That matters because the scale of AI-enabled action can extend beyond an individ
 
 ---
 
-## ⚡ Action
+## ⚡ Execution
 
 ### Use the available means to pursue the outcome.
 
-Action is where AI and other capabilities work from System Context and Human Direction.
+Execution is where AI and other capabilities work from System Context and Human Direction.
 
 AI can reason, analyze, plan, choose tools, coordinate work, create, execute, test, and adapt.
 
@@ -179,17 +179,17 @@ The important distinction is that AI can help determine **how the work happens**
 
 ### Let reality show what happened.
 
-Outcome is where the system or environment shows what actually happened as a result of the Action.
+Outcome is where the system or environment shows what actually happened as a result of the Execution.
 
 An Outcome can be favorable, unfavorable, partial, inconclusive, or otherwise different from what was intended. The point is not to reserve the stage for a win. The point is to make the actual result visible and evidence-based.
 
 A result is not meaningful merely because a task was completed, a build passed, or an AI said it worked. The system or relevant environment provides the evidence, and that evidence is judged against the intended outcome established in Direction.
 
-Verification boundaries matter. Whenever possible, evidence should come from a check the agent could not silently redefine while performing the Action. Prefer protected tests, independent fixtures, external assertions, separate environments, before/after measurements, production signals, or other validation mechanisms whose acceptance criteria remain outside the change being evaluated.
+Verification boundaries matter. Whenever possible, evidence should come from a check the agent could not silently redefine while performing the Execution. Prefer protected tests, independent fixtures, external assertions, separate environments, before/after measurements, production signals, or other validation mechanisms whose acceptance criteria remain outside the change being evaluated.
 
 > **What does reality show actually happened, and what does that teach us about the next cycle?**
 
-When the Outcome does not match the intended outcome, return to Context rather than repeating the same Action unchanged. The unfavorable Outcome is still information about reality and can contribute to Growth.
+When the Outcome does not match the intended outcome, return to Context rather than repeating the same Execution unchanged. The unfavorable Outcome is still information about reality and can contribute to Growth.
 
 ---
 
@@ -203,7 +203,7 @@ It needs no repetition and no scale. A single cycle that answered a question wro
 Growth the moment somebody records why. Unfavorable Outcomes feed it as much as favorable ones, and
 often teach more.
 
-A cycle can teach something about the System, the human's Direction, the Action that was taken, the Outcome that occurred, or the way the work itself should be performed.
+A cycle can teach something about the System, the human's Direction, the Execution that was taken, the Outcome that occurred, or the way the work itself should be performed.
 
 Growth is not reserved for frontier AI providers learning from volumes of interaction data. That is
 one layer it can reach. One person, one table, one wrong answer, one thing learned is also Growth.

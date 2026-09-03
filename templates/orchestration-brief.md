@@ -1,7 +1,7 @@
 # Orchestration Brief — &lt;Task or Outcome&gt;
 
 > A one-page brief for running a single task through Clover:
-> **Context → Direction → Action → Outcome → Growth**
+> **Context → Direction → Execution → Outcome → Growth**
 >
 > Copy this file, rename it for the task, and fill each section as the work proceeds. The prompts are
 > starting points for an AI assistant — adapt them to the tools at hand. Keep the brief short. The
@@ -58,7 +58,7 @@ between stated goals, and asks about the parts nobody mentioned.
 
 ---
 
-## 3. Action — *how the work happens, and doing it*
+## 3. Execution — *how the work happens, and doing it*
 
 Take the smallest coherent path to the outcome, with an owner on every step.
 
@@ -96,7 +96,7 @@ partial, inconclusive, or simply not what was expected.
 **Ownership:** The human sets the standard for sufficient evidence and accepts or rejects it. AI runs
 the checks and reports them accurately, including what did not work.
 
-*If the evidence does not hold, go back to **Context**, rather than to Action. A failed check usually
+*If the evidence does not hold, go back to **Context**, rather than to Execution. A failed check usually
 means something about reality was missing, and repeating the change only reaches the same place
 faster.*
 

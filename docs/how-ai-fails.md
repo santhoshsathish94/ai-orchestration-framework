@@ -104,7 +104,7 @@ anyone can demonstrate.
 **Why it happens:** AI removes the effort cost of starting work and leaves the attention cost of
 directing it. Human attention stays the scarce resource.
 
-**Caught by Action and Outcome.** Plan the smallest coherent path, run work in parallel only where it
+**Caught by Execution and Outcome.** Plan the smallest coherent path, run work in parallel only where it
 is genuinely independent, and count outcomes rather than activity. See
 [Lesson 1](field-practices.md#lesson-1--focus-beats-parallelism).
 
@@ -136,7 +136,7 @@ several that point the same way before anything treats it as settled. What Growt
 | Unchecked reported success | Outcome |
 | Agreement instead of judgment | Context |
 | Thrashing | Context |
-| Motion mistaken for progress | Action, Outcome |
+| Motion mistaken for progress | Execution, Outcome |
 | Learning from unvalidated output | Growth |
 
 Every one of these is caught by evidence rather than by better prompting, which is why the discipline

@@ -38,8 +38,8 @@ root (see [the React memory leak case study](../case-studies/02-react-rsc-memory
 - Beware **false economy**. Under-resourcing a task while also spreading attention thin costs more
   than it saves.
 
-**Reinforces:** [Principle 3 — Action applies AI capability to Context and
-Direction](03-principles.md#3-action-applies-ai-capability-to-context-and-direction). Run work in parallel only
+**Reinforces:** [Principle 3 — Execution applies AI capability to Context and
+Direction](03-principles.md#3-execution-applies-ai-capability-to-context-and-direction). Run work in parallel only
 where it is genuinely independent.
 
 ---

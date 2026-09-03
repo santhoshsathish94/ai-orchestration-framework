@@ -77,7 +77,7 @@ The reasons to move:
 - **The stack was aging.** .NET 9 plus a hand-rolled GraphQL client was slower under load and harder
   to extend than a modern Minimal API stack.
 
-## Action — how the rewrite ran
+## Execution — how the rewrite ran
 
 AI carried most of the implementation. People made the calls and checked each result against real,
 running systems before trusting it.

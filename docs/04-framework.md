@@ -8,11 +8,11 @@ It does not claim to have invented the underlying pattern. Every system that wor
 
 What AI changed is not the pattern. It is that execution moved to something that cannot be accountable. Where execution went, accountability tended to follow, and in a lot of places it left the picture. Clover puts AI back inside the existing cycle as one of its actors, and puts accountability back where it can sit.
 
-**System → Human → AI** names the **system actors**. **Context → Direction → Action → Outcome → Growth** is the **system cycle** they run.
+**System → Human → AI** names the **system actors**. **Context → Direction → Execution → Outcome → Growth** is the **system cycle** they run.
 
 Prompts, tools, agents, and AI model choice all sit underneath the cycle. What the framework describes is how human intent becomes an outcome the environment shows, and what the next attempt starts from.
 
-**The framework is five stages: Context → Direction → Action → Outcome → Growth.**
+**The framework is five stages: Context → Direction → Execution → Outcome → Growth.**
 
 The first four produce a result. **Growth** is whatever that result taught, carried back so the next cycle starts from it. It needs no repetition and no scale: one wrong answer, understood and written down, is Growth. Growth closes the loop into Context.
 
@@ -24,7 +24,7 @@ The framework's useful claim is about accountability. Humans historically partic
 
 **System → Human → AI** names the **system actors**: System reality grounds the work, humans own Direction and accountability, and AI supplies capability and can take on execution.
 
-**Context → Direction → Action → Outcome → Growth** is the **system cycle** those actors run: understand the relevant reality, establish the desired outcome and boundaries, perform the work, observe what happened against reality, and keep what it taught.
+**Context → Direction → Execution → Outcome → Growth** is the **system cycle** those actors run: understand the relevant reality, establish the desired outcome and boundaries, perform the work, observe what happened against reality, and keep what it taught.
 
 The value of the framework is therefore not the invention of a sequence. It is making the boundaries and feedback between **reality, human purpose, AI execution, evidence, and learning** explicit enough to design and govern AI-enabled work.
 
@@ -50,7 +50,7 @@ AI is capable of making decisions. What Clover sets is a boundary on which decis
 
 Clover does not support transferring organizational Direction to AI, regardless of how capable AI becomes. AI may become dramatically better at reasoning, planning, implementation, coordination, and execution. None of that creates authority over purpose, acceptable risk, priorities, boundaries, or accountability.
 
-Competitive pressure may encourage an organization to automate more of the path inside Action. It does not justify handing AI the authority to decide what is worth pursuing.
+Competitive pressure may encourage an organization to automate more of the path inside Execution. It does not justify handing AI the authority to decide what is worth pursuing.
 
 > **Capability can increase. Authority does not have to.**
 
@@ -66,7 +66,7 @@ The number of leaves carries the argument. The stages arrived in a different ord
 
 ### Three leaves — the common clover
 
-Direction, Action, Outcome. This is how work commonly happened before AI could execute substantial portions directly: a human established the Direction, humans or tools performed the Action, and the result was observed. It works, and a lot of real value comes out of it.
+Direction, Execution, Outcome. This is how work commonly happened before AI could execute substantial portions directly: a human established the Direction, humans or tools performed the Execution, and the result was observed. It works, and a lot of real value comes out of it.
 
 Its Context is often bounded by what the people doing the work can reach, remember, collect, and hand over to the execution.
 
@@ -108,7 +108,7 @@ A Clover cycle can produce useful learning from **every stage before it**:
 
 - Context can reveal how the system actually behaves, what was previously unknown, and what information was missing.
 - Direction can reveal which purposes, constraints, priorities, processes, or decisions produced favorable or unfavorable outcomes.
-- Action can reveal which approaches, tools, processes, or execution patterns work and which do not.
+- Execution can reveal which approaches, tools, processes, or execution patterns work and which do not.
 - Outcome can reveal what actually happened, what held, what failed, and what the evidence showed.
 
 Favorable and unfavorable Outcomes are both part of Growth. An unfavorable Outcome is new information about reality. An analysis can expose a pattern. Understanding the current system can expose an assumption that was wrong. A favorable approach can become a reusable practice. Repeated cycles can reveal relationships that were invisible in one pass.
@@ -157,11 +157,11 @@ Each stage has one job. The complexity belongs in the context, ownership, eviden
 |---|---|---|
 | **Context** | The relevant evidence about system reality needed for the current work — an existing system or the system being built, its data, behavior, history, constraints, evidence, and previous cycles. | What do we need to know about reality before acting? |
 | **Direction** | The human establishes purpose, the outcome worth pursuing, priorities, constraints, boundaries, what must not happen, and accountability for the outcome. Direction can also point AI at where the relevant Context is and can include a process or approach when that itself matters to the intended outcome. | What needs to be done, what outcome is worth pursuing, and what must not happen? |
-| **Action** | AI uses human Direction as instructions and system Context as data to determine how the work should happen and execute within those boundaries. | How should the work happen? |
-| **Outcome** | What the system or environment shows actually happened as a result of the Action, whether favorable, unfavorable, partial, inconclusive, or otherwise different from what was intended. | What does reality show happened? |
+| **Execution** | AI uses human Direction as instructions and system Context as data to determine how the work should happen and execute within those boundaries. | How should the work happen? |
+| **Outcome** | What the system or environment shows actually happened as a result of the Execution, whether favorable, unfavorable, partial, inconclusive, or otherwise different from what was intended. | What does reality show happened? |
 | **Growth** | What the cycle taught, preserved where the next cycle will find it, and promoted into practice when it has held across enough cycles. | What did this teach, and what should the next cycle start from? |
 
-A cycle can then run again. Growth is what carries one cycle into the next: what it preserves becomes part of the next cycle's Context. The Outcome may change the next Action, and it may also change Direction when reality shows that a different outcome or constraint is now appropriate.
+A cycle can then run again. Growth is what carries one cycle into the next: what it preserves becomes part of the next cycle's Context. The Outcome may change the next Execution, and it may also change Direction when reality shows that a different outcome or constraint is now appropriate.
 
 ---
 
@@ -197,7 +197,7 @@ A pointer is not permission to guess. When a human gives a high-level pointer su
 
 Clover does not give AI ownership of Direction. AI can sharpen a direction, ask questions, identify conflicts, surface risks, challenge assumptions, and recommend alternatives. It does not become accountable for deciding what outcome the system should pursue. A system operating on partial knowledge should not be allowed to define its own purpose in a real-world environment where even humans cannot fully understand every consequence.
 
-Clover also does not make competitive pressure a basis for changing this boundary. A stronger model, a faster model, or fear of falling behind may change how much of **Action** an organization chooses to automate. None of those things transfers **Direction** to AI.
+Clover also does not make competitive pressure a basis for changing this boundary. A stronger model, a faster model, or fear of falling behind may change how much of **Execution** an organization chooses to automate. None of those things transfers **Direction** to AI.
 
 **Core question.** What needs to be done, what outcome is worth pursuing, why does it matter, and what must not happen?
 
@@ -205,21 +205,21 @@ Clover also does not make competitive pressure a basis for changing this boundar
 
 **What AI does.** Clarifies and challenges Direction without owning it. AI can restate the objective, identify missing constraints, point out conflicts, and turn a vague request into something specific enough to execute.
 
-**Boundary examples.** Choosing to restore service within ten minutes is Direction; choosing which safe restart sequence is fastest is Action. Requiring zero customer-data exposure is Direction; choosing a redacted log query is Action. Deciding that a deployment may proceed only with a rollback path is Direction; selecting and executing that rollback path within the approved mechanism is Action.
+**Boundary examples.** Choosing to restore service within ten minutes is Direction; choosing which safe restart sequence is fastest is Execution. Requiring zero customer-data exposure is Direction; choosing a redacted log query is Execution. Deciding that a deployment may proceed only with a rollback path is Direction; selecting and executing that rollback path within the approved mechanism is Execution.
 
 **What happens there.** Direction gets skipped because a ticket looks like enough, the work then optimizes for closing the ticket rather than the outcome, or an AI is allowed to choose the goal instead of determining the path toward a human-defined goal. Unstated scope is another failure: nobody said the change must not touch billing, so nothing stopped it.
 
 ---
 
-## Stage 3 — Action
+## Stage 3 — Execution
 
-Action is where AI capability is applied to the combination of **human Direction and system Context**. AI uses the Direction as instructions and the Context as data to determine how the work should happen and execute within the boundaries established by the human.
+Execution is where AI capability is applied to the combination of **human Direction and system Context**. AI uses the Direction as instructions and the Context as data to determine how the work should happen and execute within the boundaries established by the human.
 
 Reasoning, planning, tool selection, AI model selection, orchestration across agents, code changes, tests, debugging, analysis, and interaction with the system all belong here.
 
-Planning and doing sit on one stage on purpose. The plan can change when work meets reality, and adapting to new evidence is part of Action rather than a reason to pretend the original plan was complete.
+Planning and doing sit on one stage on purpose. The plan can change when work meets reality, and adapting to new evidence is part of Execution rather than a reason to pretend the original plan was complete.
 
-AI may execute tests and modify test code when the human explicitly directs that as part of the intended outcome. Otherwise, verification artifacts that help characterize the Outcome should remain outside the agent's writable Action scope. Test fixtures, regression assertions, acceptance criteria, and other observation controls should be protected from silent weakening or deletion.
+AI may execute tests and modify test code when the human explicitly directs that as part of the intended outcome. Otherwise, verification artifacts that help characterize the Outcome should remain outside the agent's writable Execution scope. Test fixtures, regression assertions, acceptance criteria, and other observation controls should be protected from silent weakening or deletion.
 
 Humans and AI can share execution. The human retains the boundaries, approvals, and accountability even when AI performs most of the work.
 
@@ -229,11 +229,11 @@ Plan the smallest coherent path to the outcome. Run work in parallel only where 
 
 ## Stage 4 — Outcome
 
-Outcome is where the system or environment shows what actually happened as a result of the Action. It is deliberately broader than Success: the Outcome may be favorable, unfavorable, partial, inconclusive, or otherwise different from what was intended.
+Outcome is where the system or environment shows what actually happened as a result of the Execution. It is deliberately broader than Success: the Outcome may be favorable, unfavorable, partial, inconclusive, or otherwise different from what was intended.
 
 The evidence must connect to the human-defined intended outcome, but the fourth stage does not treat favorable evidence as the only meaningful endpoint. An unfavorable Outcome can reveal a false assumption, an unexpected system behavior, a missing constraint, or another fact that changes the next cycle.
 
-Verification boundaries matter. Whenever possible, the evidence used to characterize the Outcome should come from a check the agent could not silently redefine while performing the Action. Prefer protected test suites, independent fixtures, external assertions, separate environments, before/after measurements, production signals, or other validation mechanisms whose acceptance criteria remain outside the change being evaluated.
+Verification boundaries matter. Whenever possible, the evidence used to characterize the Outcome should come from a check the agent could not silently redefine while performing the Execution. Prefer protected test suites, independent fixtures, external assertions, separate environments, before/after measurements, production signals, or other validation mechanisms whose acceptance criteria remain outside the change being evaluated.
 
 A passing test is only as meaningful as the integrity of the test and its acceptance criteria. Do not weaken, delete, bypass, or rewrite a verification control merely to make the Outcome appear favorable. If the verification control itself must change because the intended outcome or its acceptance criteria changed, make that change explicit in Direction and ensure the resulting Outcome is evaluated independently.
 
@@ -245,7 +245,7 @@ Structured receipts can be useful when many agents or systems need to exchange O
 
 The human holds the standard for what counts as sufficient evidence and remains accountable for the outcome. AI runs checks, gathers evidence, reports it accurately, and makes clear what it could not observe. The system or environment provides the reality against which the Outcome is judged.
 
-When the evidence does not support the intended outcome, return to Context rather than repeating the same Action. The unfavorable Outcome is information about reality and should change what the next cycle knows.
+When the evidence does not support the intended outcome, return to Context rather than repeating the same Execution. The unfavorable Outcome is information about reality and should change what the next cycle knows.
 
 ---
 
@@ -326,7 +326,7 @@ That does not create a proof gate before adoption. The underlying pattern predat
 Useful observations include:
 
 - Context is easier to inspect and less dependent on memory.
-- Direction is clearer before consequential Action.
+- Direction is clearer before consequential Execution.
 - More execution can be delegated without obscuring accountability.
 - Outcome claims are tied to evidence from the system or environment.
 - Unfavorable Outcomes produce useful Context rather than repeated blind retries.
@@ -347,7 +347,7 @@ Clover's common failure modes are predictable:
 3. **Direction ambiguity** — the pointer is mistaken for permission to invent unstated policy.
 4. **Execution overreach** — capability is mistaken for authority.
 5. **Weak observation** — a local result or self-modified test is treated as proof of the intended outcome.
-6. **Silent unfavorable-outcome repetition** — the same Action is retried without learning.
+6. **Silent unfavorable-outcome repetition** — the same Execution is retried without learning.
 7. **Lost continuity** — useful learning remains in one session instead of becoming Context for the next.
 
-The answer to all seven is the same cycle, applied carefully: **Context → Direction → Action → Outcome → Growth**, then carry useful learning into the next cycle.
+The answer to all seven is the same cycle, applied carefully: **Context → Direction → Execution → Outcome → Growth**, then carry useful learning into the next cycle.

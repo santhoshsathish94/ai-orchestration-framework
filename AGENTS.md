@@ -32,17 +32,17 @@ Competitive pressure does not change that boundary.
 
 The **system cycle** they run is:
 
-**Context → Direction → Action → Outcome → Growth**
+**Context → Direction → Execution → Outcome → Growth**
 
 These are not levels of complexity. They are the same five jobs whether the task is tiny or enormous.
 
 - **Context:** understand the relevant evidence about the System before acting.
 - **Direction:** establish the human-defined outcome and boundaries.
-- **Action:** determine and execute the means inside those boundaries.
+- **Execution:** determine and execute the means inside those boundaries.
 - **Outcome:** let the System or relevant environment show what actually happened.
 - **Growth:** preserve what the cycle taught, so the next one does not start where this one did.
 
-The problem may be a single **task**, a **feature**, a production incident, an entire **system**, an organization-wide workflow, or interconnected systems. The work may be carried by an **individual**, **AI**, a **team**, or an **organization**. These are different dimensions: do not confuse who is working with what is being worked on. Do not invent a different cycle for a bigger problem. Scale the Context, Direction, Action, and Outcome to the problem.
+The problem may be a single **task**, a **feature**, a production incident, an entire **system**, an organization-wide workflow, or interconnected systems. The work may be carried by an **individual**, **AI**, a **team**, or an **organization**. These are different dimensions: do not confuse who is working with what is being worked on. Do not invent a different cycle for a bigger problem. Scale the Context, Direction, Execution, and Outcome to the problem.
 
 A simple task may need one source, one decision, one action, and one check. A complex problem may need many systems, multiple humans, many delegated actions, staged approvals, repeated observation, and many cycles. The relationship remains the same.
 
@@ -60,7 +60,7 @@ Here, **good Direction does not mean a well-written prompt or a precise instruct
 
 A useful way to think about Clover is that a system can grow through the accumulation of meaningful cycles:
 
-**Good Direction → meaningful Action → real Outcome → preserved Context → future cycles can improve**
+**Good Direction → meaningful Execution → real Outcome → preserved Context → future cycles can improve**
 
 The important unit is not the number of prompts, tokens, tool calls, commits, or agent runs. The important unit is the **meaningful cycle**: a cycle that is directed toward a real human-owned outcome and produces evidence or learning that can inform what happens next.
 
@@ -124,7 +124,7 @@ A pointer is not permission to guess. When a human gives a high-level pointer su
 
 AI may clarify, challenge, decompose, improve, or suggest a Direction. That does not transfer ownership of the decision about what to pursue to AI.
 
-### Action
+### Execution
 
 Determine the smallest coherent path that can produce the intended outcome.
 
@@ -146,7 +146,7 @@ An output, passing build, generated artifact, or AI statement is not automatical
 
 The evidence must connect to the human-defined outcome, not merely to whether an intermediate task completed.
 
-Prefer evidence that the agent cannot silently redefine while performing the Action: protected tests, independent fixtures, external assertions, separate environments, before/after measurements, production signals, or other checks whose acceptance criteria remain outside the change being evaluated.
+Prefer evidence that the agent cannot silently redefine while performing the Execution: protected tests, independent fixtures, external assertions, separate environments, before/after measurements, production signals, or other checks whose acceptance criteria remain outside the change being evaluated.
 
 Do not weaken, delete, bypass, or rewrite a verification control merely to make a favorable result appear. If the verification control itself must change because the intended outcome or its acceptance criteria changed, make that change explicit in Direction and ensure the resulting Outcome is evaluated independently.
 
@@ -199,7 +199,7 @@ If a change does not produce the intended result, the useful question is:
 
 Capture that information and let it change the next cycle.
 
-Do not blindly retry the same Action from the same Context.
+Do not blindly retry the same Execution from the same Context.
 
 A second attempt needs something new: a new observation, a corrected assumption, a different relevant source, a changed constraint, or a different approach supported by evidence.
 
@@ -307,12 +307,12 @@ For a trivial task, the cycle may fit in a few lines:
 
 **Context:** inspect the relevant input.  
 **Direction:** understand the requested outcome and boundary.  
-**Action:** perform the smallest useful change or analysis.  
+**Execution:** perform the smallest useful change or analysis.  
 **Outcome:** observe what happened.
 
 For a complex system, the same cycle may repeat across many scoped subproblems:
 
-**Context → Direction → Action → Outcome → Growth → new Context → new Direction → …**
+**Context → Direction → Execution → Outcome → Growth → new Context → new Direction → …**
 
 Do not make simple problems complex merely to demonstrate the framework. Do not make complex problems simple merely to finish faster.
 
@@ -326,7 +326,7 @@ Whatever the size of the problem, remember:
 
 **System → Human → AI**
 
-**Context → Direction → Action → Outcome → Growth**
+**Context → Direction → Execution → Outcome → Growth**
 
 **AI can be capable enough to suggest directions. Humans should always have the authority to decide what to pursue.**
 

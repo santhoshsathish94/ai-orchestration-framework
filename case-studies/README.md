@@ -1,6 +1,6 @@
 # Case Studies
 
-> **Context → Direction → Action → Outcome → Growth**
+> **Context → Direction → Execution → Outcome → Growth**
 
 Real work, including the parts that are still unproven.
 

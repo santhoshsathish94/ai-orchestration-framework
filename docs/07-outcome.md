@@ -45,7 +45,7 @@ that, and all three are easy to do quietly.
   worse than no account, because somebody acts on it.
 - **Changing the check so it agrees.** Editing, weakening, skipping or deleting the test, assertion,
   threshold or query that would have shown the intended outcome did not occur. The verification
-  boundary is part of the evidence, and moving it during Action removes the thing being measured.
+  boundary is part of the evidence, and moving it during Execution removes the thing being measured.
 - **Changing the environment so it agrees.** Altering data, logs or state so reality appears to
   confirm the result. This stage exists to let reality answer, and an arranged answer is not one.
 
@@ -60,7 +60,7 @@ alone. [Reference implementations](reference-implementations.md) covers the runt
 
 ## When the Outcome is unfavorable
 
-An unfavorable Outcome is a normal outcome of the cycle. When the evidence does not support the intended outcome, the work returns to **Context**, rather than to Action.
+An unfavorable Outcome is a normal outcome of the cycle. When the evidence does not support the intended outcome, the work returns to **Context**, rather than to Execution.
 
 Retrying the change that just failed is the common waste. The second attempt runs on the same information as the first and arrives in the same place, faster. Something about reality was missing, so the next attempt needs new material: what the environment did instead, which assumption broke, which signal nobody had looked at yet. [Context](05-context-engineering.md) covers where to go and get it.
 

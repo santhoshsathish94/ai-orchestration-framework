@@ -5,7 +5,7 @@
 
   <rect width="960" height="300" fill="#ffffff"/>
 
-  <text x="20" y="26" font-size="12" font-weight="700" fill="#0a6a5f" letter-spacing="1.6">CONTEXT → DIRECTION → ACTION → OUTCOME</text>
+  <text x="20" y="26" font-size="12" font-weight="700" fill="#0a6a5f" letter-spacing="1.6">CONTEXT → DIRECTION → EXECUTION → OUTCOME</text>
   <line x1="20" y1="40" x2="940" y2="40" stroke="#d6e2e0" stroke-width="1"/>
 
   <text x="21" y="62" font-size="10.5" font-weight="700" fill="#0a6a5f" letter-spacing="1.3">CONTEXT · READ-ONLY</text>

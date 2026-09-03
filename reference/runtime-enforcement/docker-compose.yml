@@ -10,6 +10,6 @@ services:
 
 networks:
   # Nothing here needs the network once the image is built. Denying egress means a prompt-injected
-  # Action cannot post the workspace anywhere, and the image build is unaffected.
+  # Execution cannot post the workspace anywhere, and the image build is unaffected.
   sandbox:
     internal: true

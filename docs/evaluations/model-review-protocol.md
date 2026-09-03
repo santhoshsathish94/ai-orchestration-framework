@@ -51,7 +51,7 @@ Define the categories before reviewing. For example:
 | Conceptual coherence | 10% |
 | Human/AI authority boundary | 15% |
 | Context engineering | 10% |
-| Action/delegation | 10% |
+| Execution/delegation | 10% |
 | Outcome/verification | 15% |
 | Runtime enforcement | 10% |
 | Growth | 5% |

@@ -18,7 +18,7 @@ included. Corrections, questions, ideas, and case studies are all welcome.
 2. Make a small, focused change. Match the existing structure and writing style.
 3. In the PR description, briefly cover:
    - **Direction** — the problem or gap this addresses, and the outcome you're after.
-   - **Action** — what you changed, and why this approach rather than another.
+   - **Execution** — what you changed, and why this approach rather than another.
    - **Outcome** — the evidence. State what you checked, what you observed, and where you stopped.
      For a docs change, "I checked every link and heading anchor" is real evidence.
    - **Growth** — what the change taught that should outlive it, and where that is written down. For
@@ -37,7 +37,7 @@ included. Corrections, questions, ideas, and case studies are all welcome.
 ## What we'll usually push back on
 
 - Added stages, jargon, or complexity the reader doesn't need. Clover is deliberately five stages:
-  **Context → Direction → Action → Outcome → Growth.**
+  **Context → Direction → Execution → Outcome → Growth.**
 - Rungs, levels, scores, or grades for evidence or delegated execution. They were removed on purpose,
   because a number is easier to claim than to justify. Say what you checked, what you observed, and
   where you stopped.

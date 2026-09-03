@@ -50,7 +50,7 @@ Then reveal that the real system already contains the information needed to reas
 
 Then introduce CLOVER as a simple way of working. This is the **system cycle**:
 
-**Context → Direction → Action → Outcome → Growth**
+**Context → Direction → Execution → Outcome → Growth**
 
 All five leaves are the cycle. Growth is the fifth stage, and it is where what the Outcome taught is kept.
 
@@ -137,7 +137,7 @@ Optional caption:
 
 “Humans keep the purpose.”
 
-### 15–20 seconds — AI Action
+### 15–20 seconds — AI Execution
 
 **Visual**
 
@@ -153,7 +153,7 @@ The human does not disappear. The human remains visible or represented as the ac
 
 **On-screen text**
 
-**Action**
+**Execution**
 
 Optional caption:
 
@@ -193,7 +193,7 @@ The fifth leaf completes the clover as that note lands. Growth is the stage bein
 
 The five stages then form a clean loop:
 
-**Context → Direction → Action → Outcome → Growth**
+**Context → Direction → Execution → Outcome → Growth**
 
 The human remains present next to the loop, clearly the one who answers for it.
 
@@ -217,7 +217,7 @@ Optional caption:
 
 Small line:
 
-**Context → Direction → Action → Outcome → Growth**
+**Context → Direction → Execution → Outcome → Growth**
 
 All five leaves solid. None of them dotted or set apart.
 
@@ -279,13 +279,13 @@ The prompt must establish the exact human, environment, camera language, lightin
 
 End with the wider environment beginning to reveal the missing context.
 
-### Prompt 2 — Direction and Action
+### Prompt 2 — Direction and Execution
 
 Continue the exact scene without changing the primary human, setting, style, or visual identity.
 
 Cover roughly seconds 11 to 20.
 
-Develop the human Direction and transition naturally into AI Action.
+Develop the human Direction and transition naturally into AI Execution.
 
 The AI should visibly perform meaningful work.
 
@@ -346,7 +346,7 @@ The future hypothesis belongs in the background as curiosity, not as a recommend
 
 ## Canonical one-sentence explanation
 
-> **CLOVER is a way of working with AI to reach real outcomes by putting real Context first, keeping human Direction explicit, letting AI take Action, letting reality validate Outcome, and keeping what it taught as Growth.**
+> **CLOVER is a way of working with AI to reach real outcomes by putting real Context first, keeping human Direction explicit, letting AI take Execution, letting reality validate Outcome, and keeping what it taught as Growth.**
 
 ## Canonical accountability line
 

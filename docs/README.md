@@ -3,11 +3,11 @@
 The framework in full, and the material for putting it to work.
 
 The system actors are **System → Human → AI**. The system cycle they run is **Context → Direction →
-Action → Outcome → Growth**. Growth is the fifth stage of that cycle.
+Execution → Outcome → Growth**. Growth is the fifth stage of that cycle.
 
 The numbers are reading order rather than a map of the five stages. Context and Outcome have a
 document to themselves because there is more to say about them than fits in one section; Direction,
-Action and Growth are covered in [the framework](04-framework.md) alongside the other two.
+Execution and Growth are covered in [the framework](04-framework.md) alongside the other two.
 
 **There is no `06`.** It held a short piece on agent orchestration that restated two of the
 principles without adding to them, so it was removed. The later files kept their numbers rather than

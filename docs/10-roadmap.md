@@ -18,7 +18,7 @@ help getting real context in front of AI and keeping it there.
   reached.
 - Work on the gap named in [the orchestration environment](orchestration-environment.md): nothing
   today reliably shows when an agent acts outside intent inside access it legitimately holds.
-- Keep the system cycle at five stages — Context → Direction → Action → Outcome → Growth — while the
+- Keep the system cycle at five stages — Context → Direction → Execution → Outcome → Growth — while the
   material around it grows.
 
 ## What Clover cannot work out alone

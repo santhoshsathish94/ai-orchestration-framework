@@ -8,7 +8,7 @@
 
 Clover has two layers, and they are kept apart on purpose.
 
-The engineering layer is the system cycle: five stages — Context, Direction, Action, Outcome, Growth. Teams can use it today, and it stands on its own. Growth is the fifth of those stages. Whatever the Outcome taught, at any size, is carried back into Context, and a team performs it the same way it performs the other four. One wrong answer, understood and written down, is Growth. [The framework in full →](../docs/04-framework.md)
+The engineering layer is the system cycle: five stages — Context, Direction, Execution, Outcome, Growth. Teams can use it today, and it stands on its own. Growth is the fifth of those stages. Whatever the Outcome taught, at any size, is carried back into Context, and a team performs it the same way it performs the other four. One wrong answer, understood and written down, is Growth. [The framework in full →](../docs/04-framework.md)
 
 Hold that apart from what this page is about. Frontier AI providers hold volumes of interaction data and decide what to train on. Where that leads is a much larger question, and it is the question here. Growth as a stage depends on none of it.
 
@@ -68,7 +68,7 @@ Embodiment matters for a different reason. The physical world can teach a system
 
 The unknown is important here. The point is not to prove that AI will reach some specific future capability. The point is that **we do not know the upper boundary**. It may remain limited in ways that are hard today to see, or it may become capable enough to reason about directions far beyond an individual task. Clover's position does not need to predict which one happens. It says that even if capability grows dramatically, the authority to decide what to pursue should remain human because capability does not create accountability.
 
-![Three panels in a row, each a session that runs Context, Direction, Action and Outcome and then ends, with the connecting line broken between them, and below them the three things that would have to last: continual learning after deployment, credit assignment over long horizons, and goals that outlast a single session](../assets/ai-future/missing-piece.svg)
+![Three panels in a row, each a session that runs Context, Direction, Execution and Outcome and then ends, with the connecting line broken between them, and below them the three things that would have to last: continual learning after deployment, credit assignment over long horizons, and goals that outlast a single session](../assets/ai-future/missing-piece.svg)
 
 ---
 
@@ -108,7 +108,7 @@ Clover's policy is the opposite at the ownership boundary:
 
 > **AI capability does not decide what the world should pursue. Humans do.**
 
-Competitive pressure may influence how much execution work an accountable organization chooses to delegate inside Action. It does not justify transferring purpose, acceptable risk, priorities, boundaries, or accountability to AI.
+Competitive pressure may influence how much execution work an accountable organization chooses to delegate inside Execution. It does not justify transferring purpose, acceptable risk, priorities, boundaries, or accountability to AI.
 
 ### This is not a new idea
 
@@ -151,7 +151,7 @@ That ordering is the part worth attention. Continual learning and long-horizon r
 
 The scenario worth examining is where an organization concludes that winning requires giving an AI system unusually broad operational freedom and resources. The important question for Clover is not whether that freedom is called autonomy; it is whether the organization has crossed the human Direction boundary.
 
-A system can be extraordinarily capable and still not be the authority that decides whether its own proposed direction should become the organization's direction. That distinction becomes more important, not less, as the consequences of Action grow.
+A system can be extraordinarily capable and still not be the authority that decides whether its own proposed direction should become the organization's direction. That distinction becomes more important, not less, as the consequences of Execution grow.
 
 ---
 

@@ -142,7 +142,7 @@ mitigation. The outcome worth reaching was understanding why disabling stack cap
 behavior, and finding out whether the underlying defect could be fixed without giving up stack
 traces across the application.
 
-## Action — the fix and the contribution
+## Execution — the fix and the contribution
 
 The cleanup reason is internal and never surfaced to users, so it does not need a stack trace at all.
 Create it with stack capture turned off, then restore the previous limit — one file, **+11 / −0**.
@@ -204,7 +204,7 @@ is the lowered barrier rather than the split of credit.
 
 The work followed the four working stages. **Context** was reproducing the leak, isolating the mechanism, and gathering the evidence.
 **Direction** was a production incident worth fixing at the root.
-**Action** was the focused one-file fix and the upstream contribution path. **Outcome** was measured,
+**Execution** was the focused one-file fix and the upstream contribution path. **Outcome** was measured,
 repeatable heap evidence plus independent corroboration. Each failed check sent the work back to Context rather than to another
 attempt at a fix, which is the only reason the four wrong answers were ever ruled out.
 

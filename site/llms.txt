@@ -1,22 +1,22 @@
 # Clover
 
-> Clover is a way of working with System, Human, and AI to produce meaningful outcomes. Three system actors — System, Human and AI — run one system cycle: Context, Direction, Action, Outcome, Growth. It sits on top of the systems an organization already runs — nothing to install, nothing to migrate onto.
+> Clover is a way of working with System, Human, and AI to produce meaningful outcomes. Three system actors — System, Human and AI — run one system cycle: Context, Direction, Execution, Outcome, Growth. It sits on top of the systems an organization already runs — nothing to install, nothing to migrate onto.
 
-Clover is a framework for reasoning about and governing AI-enabled work. It is not a mandatory process. The **system actors** are **System → Human → AI**: the system grounds reality; the human establishes purpose, Direction, and accountability; AI provides capability and determines how work happens within human Direction. The **system cycle** those actors run is **Context → Direction → Action → Outcome → Growth**.
+Clover is a framework for reasoning about and governing AI-enabled work. It is not a mandatory process. The **system actors** are **System → Human → AI**: the system grounds reality; the human establishes purpose, Direction, and accountability; AI provides capability and determines how work happens within human Direction. The **system cycle** those actors run is **Context → Direction → Execution → Outcome → Growth**.
 
 Clover is not a new way of working. Every system that worked in the past has worked this way: somebody understood the situation, somebody decided what mattered and answered for it, the work got done, reality showed what happened, and what it taught carried into the next attempt. What AI did was move execution to something that cannot be accountable, and accountability went out of scope with it. A model can perform the work, report that it worked, and hold nothing when it did not. Clover establishes accountability back into the system, through the human actor who can truly take up the role. AI takes its place as an actor inside the existing cycle rather than as a replacement for it.
 
-The five stages of the system cycle. Context is the relevant evidence about system reality needed for the current work. Direction is the human-defined outcome, priorities, constraints, boundaries, and accountability. Action is AI determining and executing the path within that Context and Direction. Outcome is what the real system or environment shows actually happened, favorable or not. Growth is whatever that Outcome taught, carried back into Context.
+The five stages of the system cycle. Context is the relevant evidence about system reality needed for the current work. Direction is the human-defined outcome, priorities, constraints, boundaries, and accountability. Execution is AI determining and executing the path within that Context and Direction. Outcome is what the real system or environment shows actually happened, favorable or not. Growth is whatever that Outcome taught, carried back into Context.
 
 What makes Clover distinct is the relationship between those five stages and the authority boundary around them. The claim is testable: context should become more inspectable, Direction more explicit, execution safely delegable where evidence supports it, and Outcome harder to claim without environmental evidence tied to the intended outcome. A team should keep Clover only where applying it improves observable work.
 
-**Capability may scale. Direction remains human.** Competitive pressure or stronger models may increase delegated execution inside Action. They do not transfer purpose, acceptable risk, priorities, boundaries, or accountability to AI.
+**Capability may scale. Direction remains human.** Competitive pressure or stronger models may increase delegated execution inside Execution. They do not transfer purpose, acceptable risk, priorities, boundaries, or accountability to AI.
 
 Clover's boundaries sit inside the law, never above it. Legal, regulatory and organizational obligations are set outside Clover, and where one of them disagrees with a Clover boundary, the obligation wins. Clover is a way of working, and adopting it certifies nothing. A boundary comes from human Direction and can be widened or narrowed by the accountable human. An obligation cannot be traded away by anyone inside a cycle. What Clover does is keep the cycle arranged so those obligations stay satisfiable: the System able to show what happened, the Human reachable and able to intervene, the AI disclosed.
 
 Delegated execution is an engineering decision. Consider evidence from comparable outcomes, blast radius, observability, reversibility, and approval boundaries. **Delegation can move work. It does not move Direction.**
 
-A failed result returns the cycle to Context with new information. The goal is not to retry the same Action on the same evidence.
+A failed result returns the cycle to Context with new information. The goal is not to retry the same Execution on the same evidence.
 
 When a boundary matters to Outcome, an implementation should prefer runtime enforcement over model instructions alone. Verification controls can be protected outside the model with filesystem permissions, containers, CI identities, protected branches, tool gateways, MCP policies, or equivalent environment controls. Clover does not require a particular implementation, and the framework does not claim that its current orchestration engine automatically enforces every such control.
 

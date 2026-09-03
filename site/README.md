@@ -36,7 +36,7 @@ The page is one continuous argument rather than one section per stage.
 
 1. `#overview` — Hero: the name, the tagline, what Clover is in a sentence, the mark, the stages
 2. `#capability` — Where AI already is: what the execution layer can now carry
-3. `#why-now` — The bridge: the pattern is not new, what changed is how much of the Action AI carries
+3. `#why-now` — The bridge: the pattern is not new, what changed is how much of the Execution AI carries
 4. `#story` — One cycle, any scale: the labelled clover and one step per stage
 5. `#scale` — Two dimensions: who is working, and what they are working on
 6. `#try` — Four steps on a real problem the reader already has
@@ -67,7 +67,7 @@ The marks are the site's identity and they carry the argument, so they have rule
   is that single leaf `<use>`d and rotated around the point `(50, 44)` over a short stem. There is no
   second leaf path anywhere — add one and the identity drifts.
 - **One mark carries the story**, drawn with five leaves at 72 degrees and labeled Context,
-  Direction, Action, Outcome and Growth. All five are solid: Growth is a stage of the cycle, not a
+  Direction, Execution, Outcome and Growth. All five are solid: Growth is a stage of the cycle, not a
   possibility hanging off the end of it, and drawing it dotted said the opposite. The hero mark is
   the same five leaves, unlabeled; the small header mark is decorative and stays solid.
 - Leaf names are real `<text>` labels positioned outside each leaf tip, inside a `viewBox` of
@@ -89,7 +89,7 @@ The marks are the site's identity and they carry the argument, so they have rule
   three-act arc that grew the mark from three leaves to four to five. Do not reintroduce separate
   marks per act.
 - **Two named sets, and both names get used.** `System → Human → AI` is **the system actors**.
-  `Context → Direction → Action → Outcome → Growth` is **the system cycle**. Say those names when
+  `Context → Direction → Execution → Outcome → Growth` is **the system cycle**. Say those names when
   referring to either set. Never introduce a competing arrow-chain, never append "→ repeat" to the
   cycle, and never bring back the short form "Where → Know → Do → Validate". Direction is *what*, not
   *where*.
@@ -106,7 +106,7 @@ The marks are the site's identity and they carry the argument, so they have rule
 - **Accountability lands on a named human.** Governance is where the site shows that the naming is
   real: whose access was used, who approved, and who answers when it goes wrong. Capability is never
   authority, and authority is never accountability.
-- **The system cycle has five stages** — Context, Direction, Action, Outcome, Growth. All five get
+- **The system cycle has five stages** — Context, Direction, Execution, Outcome, Growth. All five get
   named wherever the cycle is enumerated: the hero, the stage list, the story, the agent file
   description on `start/`, and `llms.txt`. `#growth` is where the home page explains the fifth stage
   at length.
@@ -121,8 +121,8 @@ The marks are the site's identity and they carry the argument, so they have rule
   meaningful outcomes. "Model" collides with "AI model".
 - **Say "human"**, never "person" or "the user", for whoever holds Direction. Direction is the human
   controlling what matters, the desired outcome, constraints, boundaries, and what must not happen,
-  and approving. Action is AI determining how the work should happen and executing within those
-  boundaries. Never give the human the detailed "how" — it empties Action.
+  and approving. Execution is AI determining how the work should happen and executing within those
+  boundaries. Never give the human the detailed "how" — it empties Execution.
 - **No rungs, levels, scores or grades.** The evidence ladder and the autonomy ladder were deleted
   from the framework. State what was checked, what was observed, and where the work stopped.
 - **Never invent** metrics, customers, adoption, or results. The React memory leak is a CI-green pull
@@ -136,7 +136,7 @@ The marks are the site's identity and they carry the argument, so they have rule
   move on: AI grew from finishing a line to doing whole jobs, the habit that stuck has the human
   supplying the context by hand, and the systems that hold the real context can now be read by AI
   directly. The human moves from being the source of the context to pointing at it. It is the setup,
-  so it stays on the Action stage and hands the per-stage mechanics to the story, which goes much
+  so it stays on the Execution stage and hands the per-stage mechanics to the story, which goes much
   further (`#st-limit` on what the common clover costs, `#st-direction-2` on Direction pointing rather
   than describing). The hero above it already names the system actors and the whole system cycle in
   order. State the transition here, then hand over.
@@ -214,7 +214,7 @@ The marks are the site's identity and they carry the argument, so they have rule
 - **Leaf links are SVG `<a class="story__leaf-link">` scoped to their own act**, with an
   `aria-label`, so they are clickable and focusable and still jump to the right step without
   JavaScript.
-- **`#context`, `#st-direction-2`, `#st-action-2` and `#st-outcome-2` are step ids inside the
+- **`#context`, `#st-direction-2`, `#st-execution-2` and `#st-outcome-2` are step ids inside the
   story**, not section ids. Nothing in the nav points at them, but keep them — they are the anchors
   the clover leaves link to, and `check.ps1` follows every one. Each leaf and its step share a
   `data-leaf` value, so the four values must stay paired.

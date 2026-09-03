@@ -10,11 +10,11 @@ role.
 There is nothing to install. The cycle runs on real work, with whatever tools and AI assistant are
 already in use.
 
-> **Context → Direction → Action → Outcome → Growth**
+> **Context → Direction → Execution → Outcome → Growth**
 
 ## What this cycle adds
 
-Most AI work today runs on three stages. A human gives the Direction, AI performs the Action from
+Most AI work today runs on three stages. A human gives the Direction, AI performs the Execution from
 whatever that human typed in, and after several passes the result becomes Outcome. It works, and it
 is ordinary.
 
@@ -63,7 +63,7 @@ assistant and a note on **who owns what**.
 |---|---|
 | **Context** | What the real systems showed, and the gaps you could not reach named |
 | **Direction** | A one-sentence outcome, what must not happen, where the answer probably is, and what would demonstrate it |
-| **Action** | The smallest focused path, an owner per step, and the change itself |
+| **Execution** | The smallest focused path, an owner per step, and the change itself |
 | **Outcome** | Evidence that maps back to the outcome, and what it does not cover |
 | **Growth** | What the pass taught, written back into Context, and where the next cycle will read it |
 
@@ -71,7 +71,7 @@ assistant and a note on **who owns what**.
 > strongest available evidence every time is not the goal. Being accurate about what you have is.
 > See [Outcome](docs/07-outcome.md#how-strong-is-your-evidence).
 >
-> If the evidence does not hold, go back to **Context**, rather than to Action.
+> If the evidence does not hold, go back to **Context**, rather than to Execution.
 
 ## 6. Growth — write back what the pass taught (1 min)
 

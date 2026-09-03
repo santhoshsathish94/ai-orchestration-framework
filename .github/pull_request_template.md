@@ -1,6 +1,6 @@
 <!--
 Thanks for contributing. This follows the framework: Context first, then Direction,
-then Action, then Outcome, then Growth. Keep it short.
+then Execution, then Outcome, then Growth. Keep it short.
 -->
 
 ## Context
@@ -11,7 +11,7 @@ then Action, then Outcome, then Growth. Keep it short.
 
 <!-- What problem or gap does this address, and what outcome are you after? -->
 
-## Action
+## Execution
 
 <!-- What you changed, and why this approach rather than another. -->
 

@@ -1,7 +1,7 @@
 # The Problem
 
 Clover is a way of working with the system actors — **System → Human → AI** — through the system
-cycle they run: **Context → Direction → Action → Outcome → Growth**.
+cycle they run: **Context → Direction → Execution → Outcome → Growth**.
 
 None of that is a new way of working. Every system that worked has worked this way: somebody
 understood the situation, somebody decided what mattered and answered for it, the work got done,

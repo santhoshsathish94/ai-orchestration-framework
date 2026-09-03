@@ -11,7 +11,7 @@ tool-specific, and the prompts work with any capable coding assistant.
 > the results are invented to show the shape of a full cycle. For real, evidence-backed work see
 > the [case studies](../../case-studies/).
 
-> **Context → Direction → Action → Outcome → Growth**
+> **Context → Direction → Execution → Outcome → Growth**
 
 | Field | Value |
 |---|---|
@@ -65,7 +65,7 @@ the decisions it still needed.
 
 ---
 
-## 3. Action
+## 3. Execution
 
 - **Approach:** Guard the null coupon in `TaxCalculator.Apply()`, so no coupon means a zero discount.
 - **Steps:**

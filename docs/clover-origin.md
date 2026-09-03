@@ -8,7 +8,7 @@ The five-leaf clover is more than a logo. It is how the framework is pictured, a
 
 The canonical system cycle is:
 
-**Context → Direction → Action → Outcome → Growth**
+**Context → Direction → Execution → Outcome → Growth**
 
 The fifth leaf is **Growth**. Growth is the fifth stage of the cycle. Whatever the Outcome taught, at any size, is carried back into Context. A team performs it the same way it performs the other four.
 
@@ -112,9 +112,9 @@ Direction can change when new Context changes what humans believe is worth pursu
 
 ---
 
-## 3. Action
+## 3. Execution
 
-Action represents the means used to pursue the human-defined outcome from the available Context.
+Execution represents the means used to pursue the human-defined outcome from the available Context.
 
 AI may perform much or most of that work, including:
 
@@ -142,7 +142,7 @@ Delegation can expand when evidence, observability, reversibility, blast radius,
 
 ## 4. Outcome
 
-Outcome means what the system or environment shows actually happened as a result of the Action.
+Outcome means what the system or environment shows actually happened as a result of the Execution.
 
 Outcome is intentionally broader than Success. It may be:
 
@@ -164,7 +164,7 @@ Examples include actual performance improvement, a real memory leak mitigation, 
 
 > What does reality show actually happened, and what does that teach us about the next cycle?
 
-When the Outcome does not match the intended outcome, the result becomes new Context. The next cycle should be materially better informed rather than simply repeating the same Action.
+When the Outcome does not match the intended outcome, the result becomes new Context. The next cycle should be materially better informed rather than simply repeating the same Execution.
 
 ---
 
@@ -178,7 +178,7 @@ Growth can come from every part of the cycle:
 
 - Context can reveal how the system behaves, what was unknown, or what information was missing.
 - Direction can reveal which purposes, priorities, constraints, or decisions produced favorable or unfavorable outcomes.
-- Action can reveal which approaches, tools, processes, and execution patterns work or fail.
+- Execution can reveal which approaches, tools, processes, and execution patterns work or fail.
 - Outcome can reveal what actually happened, what held, what failed, and what the evidence showed.
 
 Growth can accumulate at different layers:
@@ -226,7 +226,7 @@ Clover has two clearly separated layers.
 
 ## Engineering layer — useful today
 
-**Context → Direction → Action → Outcome → Growth**
+**Context → Direction → Execution → Outcome → Growth**
 
 This is a practical way of working with System, Human, and AI around real context, human intent, means of execution, real-world observation, and what that observation teaches. Growth is the fifth stage of that cycle, and it holds what the Outcome taught.
 
@@ -236,7 +236,7 @@ The hypothesis layer explores what could happen if AI systems, organizations, an
 
 Those developments do **not** imply that AI should receive ownership of Direction. The hypothesis layer asks what increasing capability could make possible; Clover's engineering policy keeps the authority to decide what to pursue, purpose, and accountability human regardless of that capability.
 
-The unknown is part of the hypothesis by design. We do not know how far AI capability can grow, what forms future capability may take, or how large the consequences of AI-enabled Action may become. Clover therefore avoids making today's capability boundary the basis for tomorrow's governance rule.
+The unknown is part of the hypothesis by design. We do not know how far AI capability can grow, what forms future capability may take, or how large the consequences of AI-enabled Execution may become. Clover therefore avoids making today's capability boundary the basis for tomorrow's governance rule.
 
 The hypothesis is the question, not a prediction.
 
@@ -284,7 +284,7 @@ Clover must clearly distinguish:
 
 ### What Clover establishes
 
-**Context → Direction → Action → Outcome → Growth** as a practical way of working with System, Human, and AI to produce meaningful outcomes. **System → Human → AI** are the system actors. The five stages are the system cycle those actors run, and Growth is the fifth of them.
+**Context → Direction → Execution → Outcome → Growth** as a practical way of working with System, Human, and AI to produce meaningful outcomes. **System → Human → AI** are the system actors. The five stages are the system cycle those actors run, and Growth is the fifth of them.
 
 Clover also establishes accountability back in the system, on the human actor who can truly take up the role. AI takes its place as an actor inside the cycle rather than as a replacement for it.
 
@@ -314,7 +314,7 @@ A reader should leave with two things.
 
 ### Practical takeaway
 
-> **Here is a useful way of working with System, Human, and AI to produce meaningful outcomes: Context → Direction → Action → Outcome → Growth.**
+> **Here is a useful way of working with System, Human, and AI to produce meaningful outcomes: Context → Direction → Execution → Outcome → Growth.**
 
 ### Deeper question
 
@@ -330,7 +330,7 @@ The goal is to make the reader think about the fifth leaf while keeping the huma
 
 > **Context gives the work the information to understand the system reality.**  
 > **Direction gives it a human-defined purpose.**  
-> **Action applies capability to that Direction and Context.**  
+> **Execution applies capability to that Direction and Context.**  
 > **Outcome shows what reality says happened.**  
 > **Growth carries learning into future cycles.**
 
@@ -352,7 +352,7 @@ When helping build Clover:
 
 1. Treat **Clover** as the framework's current identity.
 2. Call **System → Human → AI** the **system actors**, and keep that order as the foundational priority.
-3. Call **Context → Direction → Action → Outcome → Growth** the **system cycle**, and keep it at five stages unless a genuine conceptual problem is discovered.
+3. Call **Context → Direction → Execution → Outcome → Growth** the **system cycle**, and keep it at five stages unless a genuine conceptual problem is discovered.
 4. Keep **Growth** as the fifth stage: whatever the Outcome taught, at any size, carried back into Context. No repetition and no scale are required for it to count.
 5. Never describe Growth as something nobody runs, or as something sitting outside the framework.
 6. Keep Growth as a stage separate from the larger question of what frontier AI providers do with volumes of interaction data. That question belongs to the hypothesis layer.

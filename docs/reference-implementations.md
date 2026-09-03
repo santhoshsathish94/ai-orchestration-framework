@@ -151,11 +151,11 @@ The [runtime-enforcement reference](../reference/runtime-enforcement/) demonstra
 
 The protection boundary is deliberately narrower than "never write tests": explicitly permitted creation of a new verification file can be supported during development, while an existing trusted verification artifact remains protected once it becomes evidence for Outcome. Real deployments should define trusted verification state for their own repositories rather than relying only on filename conventions.
 
-The runtime reference intentionally does not add another Clover stage. It strengthens the boundary inside **Action** and **Outcome**:
+The runtime reference intentionally does not add another Clover stage. It strengthens the boundary inside **Execution** and **Outcome**:
 
 **Direction:** the human decides whether verification controls may change.
 
-**Action:** the agent executes within the permissions the environment grants it.
+**Execution:** the agent executes within the permissions the environment grants it.
 
 **Outcome:** the evidence remains trustworthy because the agent cannot silently redefine the verification boundary.
 
@@ -177,7 +177,7 @@ The reference implementation closes a specific gap between documentation and run
 
 All four run the same cycle:
 
-> **Context → Direction → Action → Outcome → Growth**
+> **Context → Direction → Execution → Outcome → Growth**
 
 Cross-Team Knowledge Access spends most of its time in Context. Production Exception Remediation carries a cycle all the way to Outcome in the real environment. Multi-Repository Defect Remediation loops the hardest: what the unresolved defects showed is written back into Context, which is Growth, and it is what the next pass starts from. Runtime Enforcement strengthens the execution and validation boundaries without adding a stage.
 

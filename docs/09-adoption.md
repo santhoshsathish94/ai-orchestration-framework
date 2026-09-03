@@ -14,7 +14,7 @@ What adoption restores is accountability. Every system that worked has worked th
 - **Human** owns Direction — purpose, intended outcomes, priorities, acceptable risk, constraints, boundaries, and accountability.
 - **AI** provides capability and execution inside that Direction, using the system as Context to determine and carry out how the work should happen.
 
-The system cycle those actors run remains **Context → Direction → Action → Outcome → Growth**. Growth is the fifth stage: whatever the Outcome taught, at any size, carried back into Context. One thing understood and written down counts, so it needs no repetition and no scale to be real.
+The system cycle those actors run remains **Context → Direction → Execution → Outcome → Growth**. Growth is the fifth stage: whatever the Outcome taught, at any size, carried back into Context. One thing understood and written down counts, so it needs no repetition and no scale to be real.
 
 Adoption changes how the work is organized, and it leaves every existing obligation exactly where it was. Whatever law, regulation, and internal rules already require of an organization still applies in full to work run as a Clover cycle, and running one certifies nothing. [Governance](08-governance.md#the-rules-each-actor-works-inside) sets out the obligations each actor works inside.
 
@@ -33,7 +33,7 @@ That means a team does not need to prove Clover before using it, and Clover does
 Observation is useful, but it is not a mandatory scorecard or a prerequisite for using Clover. Watch for whatever becomes visible in the work:
 
 - more work beginning from relevant system evidence rather than remembered context;
-- clearer human outcomes, boundaries, and approval points before consequential Action;
+- clearer human outcomes, boundaries, and approval points before consequential Execution;
 - less unnecessary rework or fewer handoffs when execution is delegated;
 - more Outcome claims tied to evidence and the intended outcome;
 - failed attempts producing useful Context for the next cycle;
@@ -71,7 +71,7 @@ What a team writes down goes into those files, beside the work. Most teams skip 
 
 **Direction** is the human habit of saying what matters, what outcome is meaningful, what must not happen, and where the relevant answer probably is, before the work starts. Once the systems can be read, the Direction is given against what is actually there.
 
-**Action** grows through delegated execution. What AI is trusted to carry follows what people choose to delegate within the human-owned Direction. More capable models can increase the amount or complexity of execution that a human chooses to delegate inside Action, but they do not change the ownership of Direction.
+**Execution** grows through delegated execution. What AI is trusted to carry follows what people choose to delegate within the human-owned Direction. More capable models can increase the amount or complexity of execution that a human chooses to delegate inside Execution, but they do not change the ownership of Direction.
 
 Competition may increase pressure to automate faster. Clover treats that as a reason to change execution, not as a reason to hand purpose or accountability to AI. **Direction is not delegated by competition.**
 
@@ -82,7 +82,7 @@ Competition may increase pressure to automate faster. Clover treats that as a re
 1. **Start with one real problem the team already has** — a recurring exception, a defect nobody can place, a question that currently takes three teams to answer. A tool looking for a use does not survive contact with a busy week.
 2. **Connect one real source, read-only.** A read-only MCP server in front of the repository, then the logs, then the ticket history, then a datasource. Reading cannot break anything, so it is the cheapest way to find out whether the output can be trusted, and one connection at a time keeps the security conversation small.
 3. **Add the development environment, then the other non-production ones.** That is where checking earns its place without new risk, alongside the pipeline triggers that already exist.
-4. **Give the Direction against what the team can now see.** Somebody says what needs to be done, what must not happen, and where they think the answer probably is. Teach that cycle rather than the tool: Context → Direction → Action → Outcome → Growth outlives whichever product the team is using this quarter.
+4. **Give the Direction against what the team can now see.** Somebody says what needs to be done, what must not happen, and where they think the answer probably is. Teach that cycle rather than the tool: Context → Direction → Execution → Outcome → Growth outlives whichever product the team is using this quarter.
 5. **Let people ask in whatever way they find natural.** When most questions can be asked and answered in conversation, the bottleneck stops being whoever knows the system best.
 6. **Delegate execution within the human-owned Direction**, following the delegated-execution rules rather than enthusiasm. This can change how much of the path AI performs; it does not transfer Direction.
 7. **Keep a markdown file beside the work** holding the goal, what is settled, what remains, and what was ruled out. That file is what lets any agent pick the job up, so the work stops depending on one agent or one session. [Context engineering](05-context-engineering.md#where-context-lives) covers where it lives.
