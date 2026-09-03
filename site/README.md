@@ -48,7 +48,16 @@ The page is one continuous argument rather than one section per stage.
 12. `#try` — Five steps on a real problem the reader already has
 13. `#evidence-preview` — Case studies, reference implementations, how model reviews are reported
 14. `#next` — The closing restatement and where to go
-15. `#stands-for` — What Clover stands for morally? The final word
+15. `#morally-context` — What Context stands for morally? Credit stays with the original creators
+16. `#morally-direction` — What Direction stands for morally? Capability is not permission to choose
+17. `#morally-execution` — What Execution stands for morally? The environment enforces what instructions cannot
+18. `#morally-outcome` — What Outcome stands for morally? Improve the fields, do not disrupt them
+19. `#morally-growth` — What Growth stands for morally? Learn from the mistakes or never improve
+
+The five moral sections close the page. They are the only place the site says why the boundaries
+exist rather than what they are, and the only place written in the first person outside `author/`.
+They are plain `.band` sections, not `.stage` ones: they carry no `data-leaf`, so the mark stays in
+its plain state while they are read.
 
 Each of the five stages is its own `.band.stage` section carrying `data-leaf`. `app.js` reads those
 inside `[data-story]` and inks the matching leaf on the pinned mark as the section reaches the middle
