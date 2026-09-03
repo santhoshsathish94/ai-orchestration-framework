@@ -55,37 +55,39 @@ It is a way of working that can sit on top of what already exists.
 
 ---
 
-# Why Clover can work from the smallest use case to the largest
+# One way of working, from small to large
 
-Take the smallest useful example: a table.
+Clover can be used across two dimensions: **who is doing the work** and **what is being worked on**.
 
-The **System** is the table and the reality it contains — its columns, rows, relationships, constraints, and current data.
+### Who is working?
 
-The **Human** gives Direction: read the table, answer a particular question, and do not modify it. The answer matters because it serves the outcome the human is trying to achieve.
+**Individual → AI → Team → Organization**
 
-The **AI** performs the reading and analysis using the System as Context and the Human's Direction as the boundary.
+A person can use Clover for their own work. AI can use the same cycle as a capable participant. A team can work through the cycle together. An organization can use it across functions while keeping accountability and Direction explicit.
 
-The resulting answer is an output, not automatically a Success.
+### What are they working on?
 
-The **System** provides the evidence needed to determine whether the answer is valid and whether it satisfies the intended outcome.
+**Task → Feature → System**
 
-If the answer is wrong, the failure reveals something new about reality: perhaps the join was wrong, a relationship was misunderstood, or an assumption was false. That information becomes Context for the next cycle.
+The work can be a small task, a feature being built or changed, or an entire system. The same cycle applies at each level.
 
-When useful learning is preserved, future work can start from a better understanding.
+These dimensions can combine in many ways:
 
-The same relationship can scale from:
+**Individual + Task** — solve a small problem.
 
-**one table → one application → one production system → one organization → interconnected systems**
+**AI + Feature** — implement a defined change inside human Direction.
 
-The objects and tools change. The way of working remains:
+**Team + System** — coordinate work across a system and validate the resulting behavior.
+
+**Organization + System** — pursue an organizational outcome across a complex real-world system.
+
+The combinations can become much larger than these examples. The core does not change:
 
 **System → Human → AI**
 
-producing meaningful outcomes through:
-
 **Context → Direction → Action → Success**
 
-with learning from repeated cycles contributing to **Growth**.
+> **The complexity can grow without bound. The core stays simple.**
 
 ---
 
