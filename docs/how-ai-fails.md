@@ -6,7 +6,7 @@ about **AI**.
 AI does not fail the way a person or a script fails. A script fails loudly. A person usually knows
 when they are unsure. AI often fails **fluently**, producing a confident, well-structured, entirely
 plausible answer that happens to be wrong. That is the reason [the Clover framework](04-framework.md)
-starts with Context and ends with Outcome.
+starts with Context, checks the result at Outcome, and keeps what the cycle taught at Growth.
 
 Each failure below has a stage that catches it.
 
@@ -118,9 +118,11 @@ and every later cycle starts from it. The error compounds instead of being corre
 **Why it happens:** Systems that accumulate context do not automatically separate what was
 demonstrated from what was merely produced.
 
-**Caught by Context.** What goes into the context files is what the environment showed, alongside what
-was only produced. One cycle is an anecdote, and a pattern needs several that point the same way
-before anything treats it as settled.
+**Caught by Growth.** Growth is the stage that decides what a cycle keeps, so it is the stage that
+can refuse a conclusion the environment never showed. What goes into the context files is what the
+environment showed, alongside what was only produced. One cycle is an anecdote, and a pattern needs
+several that point the same way before anything treats it as settled. What Growth keeps becomes
+[Context](05-context-engineering.md) for every later cycle, which is why a wrong entry spreads.
 
 ---
 
@@ -135,7 +137,7 @@ before anything treats it as settled.
 | Agreement instead of judgment | Context |
 | Thrashing | Context |
 | Motion mistaken for progress | Action, Outcome |
-| Learning from unvalidated output | Context |
+| Learning from unvalidated output | Growth |
 
 Every one of these is caught by evidence rather than by better prompting, which is why the discipline
 around the model matters as much as the choice of model.

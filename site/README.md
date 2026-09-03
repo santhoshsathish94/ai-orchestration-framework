@@ -41,7 +41,7 @@ The page is one continuous argument rather than one section per stage.
 5. `#scale` — Two dimensions: who is working, and what they are working on
 6. `#try` — Four steps on a real problem the reader already has
 7. `#evidence-preview` — Case studies, reference implementations, how model reviews are reported
-8. `#growth` — What can emerge when meaningful cycles repeat
+8. `#growth` — The fifth stage: whatever the Outcome taught, carried back into Context
 9. `#governance` — Capability is not authority
 10. `#next` — The closing restatement and where to go
 
@@ -92,18 +92,35 @@ The marks are the site's identity and they carry the argument, so they have rule
 - **One cycle, shown once.** The page carries a single labelled clover in `#story`. It replaced a
   three-act arc that grew the mark from three leaves to four to five. Do not reintroduce separate
   marks per act.
-- **Five stages only:** Context → Direction → Action → Outcome → Growth. Never introduce a competing
-  arrow-chain, never append "→ repeat" to that one, and never bring back the short form
-  "Where → Know → Do → Validate". Direction is *what*, not *where*.
-- **Growth is the fifth stage**, and `#growth` is where the page explains it.
-  Not in the hero, not in the stage list, not in the worked steps, not in the definition.
+- **Two named sets, and both names get used.** `System → Human → AI` is **the system actors**.
+  `Context → Direction → Action → Outcome → Growth` is **the system cycle**. Say those names when
+  referring to either set. Never introduce a competing arrow-chain, never append "→ repeat" to the
+  cycle, and never bring back the short form "Where → Know → Do → Validate". Direction is *what*, not
+  *where*.
+- **Clover is not a new way of working, and the site has to say so.** Every system that worked in the
+  past has worked this way: somebody understood the situation, somebody decided what mattered and
+  answered for it, the work got done, reality showed what happened, and what it taught carried into
+  the next attempt. What AI did was remove accountability out of scope. Execution moved to something
+  that cannot be accountable, and a model can perform the work, report that it worked, and hold
+  nothing when it did not. Clover establishes accountability back into the system, through the human
+  actor who can truly take up the role, and AI takes its place as an actor inside the existing cycle
+  rather than as a replacement for it. `#capability` on the home page and `#policy` on the security
+  page both carry this claim, and `llms.txt` carries it for agents. Do not soften it into "AI needs
+  oversight".
+- **Accountability lands on a named human.** Governance is where the site shows that the naming is
+  real: whose access was used, who approved, and who answers when it goes wrong. Capability is never
+  authority, and authority is never accountability.
+- **The system cycle has five stages** — Context, Direction, Action, Outcome, Growth. All five get
+  named wherever the cycle is enumerated: the hero, the stage list, the story, the agent file
+  description on `start/`, and `llms.txt`. `#growth` is where the home page explains the fifth stage
+  at length.
+- **Growth is whatever the Outcome taught, carried back into Context**, at any size. No repetition and
+  no scale is required. One wrong answer, understood and written down, is Growth. It is not reserved
+  for frontier AI providers with volumes of interaction data. Writing the context file after each
+  success and each failure is Growth, and what that file keeps becomes the next cycle's Context — so a
+  walkthrough may end on that write, and must not present it as something outside the cycle.
 - **"Leaves" is for the picture.** Say leaves when describing a clover mark. Everywhere else on the
   page, say stages.
-- **The framework is five stages** — Context, Direction, Action, Outcome, Growth. Growth is something
-  a team runs, so no example, walkthrough or diagram gets a Growth step. Examples end at Outcome and
-  loop back into Context.
-- **Iteration feeds Context, never Growth.** The page states the rule plainly: after each success or
-  failure, the context files are written before the next attempt.
 - **Never call it a model.** Clover is a way of working with System, Human, and AI to produce
   meaningful outcomes. "Model" collides with "AI model".
 - **Say "human"**, never "person" or "the user", for whoever holds Direction. Direction is the human
@@ -122,11 +139,11 @@ The marks are the site's identity and they carry the argument, so they have rule
 - **`#why-now` is the framework's introduction.** It carries the reason the common clover has to
   move on: AI grew from finishing a line to doing whole jobs, the habit that stuck has the human
   supplying the context by hand, and the systems that hold the real context can now be read by AI
-  directly. The human moves from being the source of the context to pointing at it. It is the first
-  place the five stages are named in order, so it must say Context first and must not mention Growth.
-  Keep it to the setup — the per-stage mechanics belong to the story, which goes much further
-  (`#st-limit` on what the common clover costs, `#st-direction-2` on Direction pointing rather than
-  describing). State the transition here, then hand over.
+  directly. The human moves from being the source of the context to pointing at it. It is the setup,
+  so it stays on the Action stage and hands the per-stage mechanics to the story, which goes much
+  further (`#st-limit` on what the common clover costs, `#st-direction-2` on Direction pointing rather
+  than describing). The hero above it already names the system actors and the whole system cycle in
+  order. State the transition here, then hand over.
 - `#story` says nothing about production. Development first, then the other non-production
   environments. Access is read-only and scoped to what the human already holds.
 - Growth is the next stage, never a hypothesis, a prediction or "next phase", and never described as
@@ -210,7 +227,10 @@ The marks are the site's identity and they carry the argument, so they have rule
   GitHub Pages sends `Cache-Control: max-age=600` on every file and they expire independently, so
   without it a returning visitor gets new HTML with a ten-minute-old stylesheet and the page renders
   broken. Match it to the version in `VERSION`.
-- New terminology goes in [`docs/glossary.md`](../docs/glossary.md) first, then the site.
+- New terminology goes in [`docs/glossary.md`](../docs/glossary.md) first, then the site. The site
+  glossary must define **system actors**, **system cycle**, **Growth** and **accountability** the way
+  the docs define them, and its `<div><dt>…</dt><dd>…</dd></div>` rows are what the filter in `app.js`
+  reads, so keep that markup.
 
 ## Social preview
 

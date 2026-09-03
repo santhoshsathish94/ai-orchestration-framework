@@ -11,13 +11,15 @@ help getting real context in front of AI and keeping it there.
 - Deepen each stage with guidance a team can pick up and use the same week.
 - More on connecting the real systems: which read-only MCP servers to stand up, in what order, and
   what to bring to a security review before asking for any of it.
-- More on the markdown files that carry context between passes, so any agent can pick the work up.
+- More on the markdown files that carry context between passes, since that is where Growth gets
+  performed, so any agent can pick the work up.
 - Add reference implementations for problems many organizations share.
 - Build out the evidence base with real case studies, including the ones where the outcome was not
   reached.
 - Work on the gap named in [the orchestration environment](orchestration-environment.md): nothing
   today reliably shows when an agent acts outside intent inside access it legitimately holds.
-- Keep the framework at five stages while the material around it grows.
+- Keep the system cycle at five stages — Context → Direction → Action → Outcome → Growth — while the
+  material around it grows.
 
 ## What Clover cannot work out alone
 
@@ -35,7 +37,8 @@ engineering practice does not.
 
 Clover grows the way it says work grows. This expansion is Direction. Adoption is what produces the
 Context. What teams report back from real cycles, including the ones where Clover did not help, is
-the evidence. There is no route to the next version except being used and corrected.
+the evidence. Whatever that evidence teaches goes back into the framework, and that is Growth. There
+is no route to the next version except being used and corrected.
 
 > **Clover runs its own cycle, and it is early in it.**
 

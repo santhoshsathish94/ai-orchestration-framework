@@ -9,7 +9,7 @@ follow the same path.
 ## Available examples
 
 - **[Production Exception Remediation](production-exception-remediation/)** — a recurring production
-  `500`, from the alert to evidence that the original signal is gone, and what went back into
-  Context afterwards.
+  `500`, from the alert to evidence that the original signal is gone, and on to Growth, where what
+  the pass taught goes back into Context.
 
 New to Clover? Start with the [Quickstart](../QUICKSTART.md).

@@ -2,7 +2,9 @@
 
 ## Purpose
 
-Clover describes how the system, humans, and AI work together to turn intent into outcomes the environment confirms. The five stages give the structure. These principles are what make each stage hold up on real work.
+Clover describes how the system actors — **System → Human → AI** — turn intent into outcomes the environment confirms. The system cycle — **Context → Direction → Action → Outcome → Growth** — gives the structure. These principles are what make each stage hold up on real work.
+
+Every one of them exists for the same reason. Every system that worked has worked this way. What AI changed is accountability: execution moved to something that cannot be accountable, and accountability went out of scope with it. These principles are how it gets established back in the system, on the human actor who can truly take up the role.
 
 There is one principle per stage. A team that remembers the stages already remembers the principles. The first two carry most of the weight, because Context and Direction are what separate the lucky clover from the common one.
 
@@ -102,6 +104,8 @@ What gets written down and what gets reused are different bars. A single good ou
 
 The human accountable for the outcome controls what matters, the purpose, the desired outcome worth pursuing, priorities, constraints, boundaries, what must not happen, and any process or approach that is itself part of what matters.
 
+Direction is where accountability is established back in the system. When execution moves to AI, accountability does not travel with it, and it does not return on its own. A human has to take it up deliberately, for work they will not perform themselves. Stating the outcome, the boundaries, and what must not happen is that act, and it is what makes the result answerable again.
+
 Direction can point into Context. When the system is readable, the human can identify which service, workflow, dataset, or area of the system matters first instead of reconstructing the entire environment from memory.
 
 A pointer is not permission to guess. When the human gives a high-level pointer such as a service, workflow, or dataset, preserve that Direction but surface important implicit constraints you can discover in the relevant Context. Ask when a missing constraint could materially change the safe or correct outcome. Do not invent domain policy, architectural invariants, or unwritten business rules merely to make the task look complete.
@@ -170,9 +174,11 @@ Where a boundary genuinely matters, enforce it outside the model rather than rel
 
 ---
 
-## Growth is the learning that can emerge from repeated cycles
+## Growth keeps what a cycle taught
 
 Growth is the fifth stage, and it is performed. What accumulates from performing it is what can emerge when the five stages repeat and what they reveal is preserved and learned from.
+
+Growth needs no repetition and no scale. Whatever the Outcome taught, at any size, carried back into Context, is Growth. One wrong answer, understood and written down, counts. It is not something reserved for frontier AI providers learning from volumes of interaction data.
 
 Growth can come from **every stage**. Context can reveal how the system actually behaves and what information was missing. Direction can reveal whether the purpose, constraints, priorities, or process were appropriate. Action can reveal which approaches, tools, and execution patterns work. Outcome can reveal what actually happened, what held, what failed, and what the evidence showed.
 
@@ -207,5 +213,6 @@ Growth does not belong to one actor. It is the accumulated learning that can eme
 | **Direction is a human decision.** | Purpose and accountability stay human. |
 | **Action applies AI capability to Context and Direction.** | AI determines the path without owning the destination. |
 | **Outcome is what reality shows.** | Evidence over a success-only label. |
+| **Growth keeps what a cycle taught.** | What was learned survives the cycle that produced it. |
 
-Growth is the fifth of these, and the one that carries a cycle into the next. It preserves what repeated cycles reveal so the next cycle can begin from better Context and better understanding.
+Growth is the fifth of these, and the one that carries a cycle into the next. It preserves what a cycle revealed, at whatever size it came in, so the next cycle can begin from better Context and better understanding.

@@ -2,9 +2,12 @@
 
 The framework in full, and the material for putting it to work.
 
+The system actors are **System → Human → AI**. The system cycle they run is **Context → Direction →
+Action → Outcome → Growth**. Growth is the fifth stage of that cycle.
+
 The numbers are reading order rather than a map of the five stages. Context and Outcome have a
-document to themselves because there is more to say about them than fits in one section; Direction
-and Action are covered in [the framework](04-framework.md) alongside the other two.
+document to themselves because there is more to say about them than fits in one section; Direction,
+Action and Growth are covered in [the framework](04-framework.md) alongside the other two.
 
 **There is no `06`.** It held a short piece on agent orchestration that restated two of the
 principles without adding to them, so it was removed. The later files kept their numbers rather than
@@ -19,7 +22,7 @@ shifting up, because renumbering would break every link that already points at t
 | [03 · Principles](03-principles.md) | What makes each stage hold up on real work |
 | [04 · The framework](04-framework.md) | Every stage, and the arc from three leaves to five |
 | [05 · Context](05-context-engineering.md) | The first stage: what has to be known about reality before anything acts |
-| [07 · Outcome](07-outcome.md) | The last stage: whether the environment confirms the outcome |
+| [07 · Outcome](07-outcome.md) | The fourth stage: whether the environment confirms the outcome |
 | [08 · Governance](08-governance.md) | Ownership, access and attribution as the cycle scales |
 | [09 · Adoption](09-adoption.md) | How a team gets there, and how it stalls |
 | [10 · Roadmap](10-roadmap.md) | Where it is going, held loosely |
@@ -29,7 +32,7 @@ shifting up, because renumbering would break every link that already points at t
 | | |
 |---|---|
 | [The orchestration environment](orchestration-environment.md) | What has to be in place before any of it runs |
-| [Reference implementations](reference-implementations.md) | Three patterns, built and used against real organizational data |
+| [Reference implementations](reference-implementations.md) | Four patterns, three of them built and used against real organizational data |
 | [How AI fails](how-ai-fails.md) | The failures specific to working this way, and which stage catches each |
 | [Practices and field lessons](field-practices.md) | What running this on high-stakes work actually taught |
 
@@ -38,7 +41,7 @@ shifting up, because renumbering would break every link that already points at t
 | | |
 |---|---|
 | [Glossary](glossary.md) | Plain-language definitions for every term used here |
-| [The name and the mark](clover-origin.md) | Why a clover, and the canonical definition |
+| [The name and the mark](clover-origin.md) | Why a clover, why accountability had to come back, and the canonical rules |
 
 Outside this directory: [`AGENTS.md`](../AGENTS.md) is the whole way of working as instructions for
 an agent, [`QUICKSTART.md`](../QUICKSTART.md) runs a first cycle by hand, and

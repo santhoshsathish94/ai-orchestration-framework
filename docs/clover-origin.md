@@ -10,9 +10,19 @@ The canonical system cycle is:
 
 **Context → Direction → Action → Outcome → Growth**
 
-The fifth leaf is **Growth**. Nobody in an organization runs it. Growth describes the learning and improvement that can emerge from repeated cycles across the system, humans, AI, teams, and organizations.
+The fifth leaf is **Growth**. Growth is the fifth stage of the cycle. Whatever the Outcome taught, at any size, is carried back into Context. A team performs it the same way it performs the other four.
 
 > **Five leaves make the cycle. The fifth is what the other four taught us.**
+
+---
+
+## Why Clover exists
+
+Clover is not a new way of working. Every system that worked in the past has worked this way. Somebody understood the situation. Somebody decided what mattered and answered for it. The work got done. Reality showed what happened. What it taught carried into the next attempt.
+
+AI did not remove that pattern. It moved execution to something that cannot be accountable. A model can perform the work, report that it worked, and hold nothing when it did not. Where execution went, accountability followed it out of scope.
+
+Clover establishes accountability back in the system, through the human actor who can truly take up the role. AI takes its place as an actor inside the existing cycle rather than as a replacement for it.
 
 ---
 
@@ -160,11 +170,11 @@ When the Outcome does not match the intended outcome, the result becomes new Con
 
 ## 5. Growth
 
-Growth is the distinctive fifth leaf.
+Growth is the fifth leaf and the fifth stage of the cycle.
 
-Growth differs from the first four leaves in what it produces rather than in whether it is performed. It is the stage that keeps what a cycle taught, and what accumulates from it is learning and improvement that can emerge through repeated cycles. Nobody in an organization runs Growth as a separate task or stage.
+Growth is whatever the Outcome taught, at any size, carried back into Context. It needs no repetition and no scale to count. One wrong answer, understood and written down, is Growth. Somebody performs it, in the same way somebody performs the other four stages.
 
-Growth can emerge from every part of the cycle:
+Growth can come from every part of the cycle:
 
 - Context can reveal how the system behaves, what was unknown, or what information was missing.
 - Direction can reveal which purposes, priorities, constraints, or decisions produced favorable or unfavorable outcomes.
@@ -181,6 +191,8 @@ Growth can accumulate at different layers:
 - Frontier AI model improvements through provider-controlled training and evaluation
 
 These layers do not have the same authority or control over learning. Clover does not assume that AI providers train on customer or enterprise work.
+
+The last layer is a larger and separate question. What frontier AI providers do with volumes of interaction data is followed in [the hypothesis layer](../hypothesis/ai-future.md). A team needs none of it to perform Growth.
 
 The broader principle is:
 
@@ -216,7 +228,7 @@ Clover has two clearly separated layers.
 
 **Context → Direction → Action → Outcome → Growth**
 
-This is a practical way of working with System, Human, and AI around real context, human intent, means of execution, real-world observation, and what that observation teaches. Growth is the learning that can emerge from repeating those four stages.
+This is a practical way of working with System, Human, and AI around real context, human intent, means of execution, real-world observation, and what that observation teaches. Growth is the fifth stage of that cycle, and it holds what the Outcome taught.
 
 ## Hypothesis layer — questions beyond the cycle
 
@@ -272,7 +284,9 @@ Clover must clearly distinguish:
 
 ### What Clover establishes
 
-**Context → Direction → Action → Outcome → Growth** as a practical way of working with System, Human, and AI to produce meaningful outcomes. Growth is the fifth leaf and the learning layer that can emerge around repeated cycles.
+**Context → Direction → Action → Outcome → Growth** as a practical way of working with System, Human, and AI to produce meaningful outcomes. **System → Human → AI** are the system actors. The five stages are the system cycle those actors run, and Growth is the fifth of them.
+
+Clover also establishes accountability back in the system, on the human actor who can truly take up the role. AI takes its place as an actor inside the cycle rather than as a replacement for it.
 
 The policy is also explicit:
 
@@ -337,24 +351,27 @@ That framing is intentionally scale-independent: the same relationship can be ap
 When helping build Clover:
 
 1. Treat **Clover** as the framework's current identity.
-2. Keep **Context, Direction, Action, Outcome** as the five stages of the framework, and **Growth** as the fifth leaf and learning layer, unless a genuine conceptual problem is discovered.
-3. Preserve the five-leaf clover as the visual and conceptual identity.
-4. Keep Growth as the fifth stage: performed each cycle, with what accumulates from it left as an observation rather than a promise.
-5. Ground the framework in real engineering outcomes and production evidence.
-6. Keep Outcome tied to what the real environment shows.
-7. Keep human Direction explicit and accountable.
-8. Preserve **System → Human → AI** as the foundational priority.
-9. Keep capability, authority, and accountability distinct.
-10. Do not transfer Direction to AI merely because AI becomes more capable.
-11. AI may be capable enough to suggest directions; humans retain the authority to decide what to pursue.
-12. Do not make today's AI capability boundary the basis for a future governance rule.
-13. Do not treat competitive pressure as a justification for transferring Direction to AI.
-14. Separate current engineering practice from future hypotheses.
-15. Treat the unknown boundary of future AI capability as a question, not an established outcome.
-16. Explore persistent memory, experience, adaptation, collective intelligence, robotics, and increasing capability carefully.
-17. Preserve the creator's personal voice; do not turn Clover into generic AI marketing language.
-18. Use real case studies and engineering evidence to make the framework concrete.
-19. Keep the framework useful from the smallest meaningful use case to large, complex systems without claiming that every domain follows an identical workflow.
+2. Call **System → Human → AI** the **system actors**, and keep that order as the foundational priority.
+3. Call **Context → Direction → Action → Outcome → Growth** the **system cycle**, and keep it at five stages unless a genuine conceptual problem is discovered.
+4. Keep **Growth** as the fifth stage: whatever the Outcome taught, at any size, carried back into Context. No repetition and no scale are required for it to count.
+5. Never describe Growth as something nobody runs, or as something sitting outside the framework.
+6. Keep Growth as a stage separate from the larger question of what frontier AI providers do with volumes of interaction data. That question belongs to the hypothesis layer.
+7. Say plainly that the pattern is old, that AI moved execution to something that cannot be accountable, and that Clover establishes accountability back in the system through the human actor who can truly take up the role.
+8. Preserve the five-leaf clover as the visual and conceptual identity.
+9. Ground the framework in real engineering outcomes and production evidence.
+10. Keep Outcome tied to what the real environment shows.
+11. Keep human Direction explicit and accountable.
+12. Keep capability, authority, and accountability distinct.
+13. Do not transfer Direction to AI merely because AI becomes more capable.
+14. AI may be capable enough to suggest directions; humans retain the authority to decide what to pursue.
+15. Do not make today's AI capability boundary the basis for a future governance rule.
+16. Do not treat competitive pressure as a justification for transferring Direction to AI.
+17. Separate current engineering practice from future hypotheses.
+18. Treat the unknown boundary of future AI capability as a question, not an established outcome.
+19. Explore persistent memory, experience, adaptation, collective intelligence, robotics, and increasing capability carefully.
+20. Preserve the creator's personal voice; do not turn Clover into generic AI marketing language.
+21. Use real case studies and engineering evidence to make the framework concrete.
+22. Keep the framework useful from the smallest meaningful use case to large, complex systems without claiming that every domain follows an identical workflow.
 
 The intended reaction from a technically serious reader is:
 

@@ -6,19 +6,21 @@ This page carries more weight than the rest of the framework. Access can be arra
 
 ## What is actually being adopted
 
-Clover does not ask teams to replace human judgment with AI. It asks teams to make the working relationship explicit: **System → Human → AI**.
+Clover does not ask teams to replace human judgment with AI. It asks teams to make the system actors explicit: **System → Human → AI**.
+
+What adoption restores is accountability. Every system that worked has worked this way: somebody understood the situation, somebody decided what mattered and answered for it, the work got done, and reality showed what happened. When execution moved to AI, accountability tended to go out of scope with it. Adoption is what establishes accountability back in the system, on the human actor who can truly take up the role.
 
 - **System** is the reality being worked on — an existing system or the system being built, with its data, behavior, state, history, constraints, and evidence.
 - **Human** owns Direction — purpose, intended outcomes, priorities, acceptable risk, constraints, boundaries, and accountability.
 - **AI** provides capability and execution inside that Direction, using the system as Context to determine and carry out how the work should happen.
 
-The five operational stages remain Context → Direction → Action → Outcome → Growth. Growth is the stage that preserves what a cycle taught, and what accumulates from it emerges from repeated meaningful cycles; it is not a fifth task a team has to run.
+The system cycle those actors run remains **Context → Direction → Action → Outcome → Growth**. Growth is the fifth stage: whatever the Outcome taught, at any size, carried back into Context. One thing understood and written down counts, so it needs no repetition and no scale to be real.
 
 > **Capability may scale. Direction remains human.**
 
 ## Adoption does not require proof in advance
 
-Clover does not require Growth to be demonstrated before people adopt the cycle. The underlying pattern already existed in human-led work; what changes in the AI era is that AI can perform a growing share of the execution.
+Clover does not require Growth to be demonstrated before people adopt the cycle. The underlying pattern already existed in human-led work; what changes in the AI era is that AI can perform a growing share of the execution, and accountability has to be taken up deliberately instead of coming along with the work.
 
 A team can adopt the way of working, apply it to real problems, and let the repeated cycles show what happens. Observation follows adoption rather than serving as a gate before it.
 

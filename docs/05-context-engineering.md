@@ -1,6 +1,6 @@
 # Context
 
-Context is the first stage of [the Clover framework](04-framework.md). It covers what the system needs to know about reality before anything acts on it.
+Context is the first stage of [the Clover framework](04-framework.md). It covers what the system needs to know about reality before anything acts on it. It is also where the cycle closes: what Growth keeps from the last Outcome arrives here as Context for the next pass.
 
 It comes first because the system already exists before anyone asks for anything — or, when a system is being built, because there is already some established reality to reason from. The common way of working is Direction → Action → Outcome, where context is whatever the human remembers to hand over, so it turns up as a consequence of the direction. Here the direction is given against what is already there.
 
@@ -10,7 +10,7 @@ Capability is only as good as the material it reasons from. A human cannot solve
 
 ## System first: reality before assumptions
 
-Clover's priority is **System → Human → AI**. The system is the grounding reality. Humans then set Direction and remain accountable. AI uses that system Context and human Direction to determine how work should happen and to execute within those boundaries.
+Clover's priority is the **system actors**, **System → Human → AI**. The system is the grounding reality. Humans then set Direction and remain accountable. AI uses that system Context and human Direction to determine how work should happen and to execute within those boundaries.
 
 Context is therefore not merely context about an AI task. It is the context of the system itself — including what it is becoming when the system is under construction.
 
@@ -90,10 +90,10 @@ Every pass adds context, and a failed pass adds as much as a successful one. The
 
 What one cycle established is what the next cycle starts from. Judgment about what is worth keeping and where a recorded finding has gone stale stays with a human, because a wrong finding written down spreads and somebody has to notice.
 
-Growth can emerge here without changing the underlying AI model: repeated observations can expose system patterns, missing assumptions, and useful practices that improve future cycles. Learning may accumulate in humans, teams, organizations, systems, and AI systems in different ways, but it does not transfer Direction.
+Writing that file is Growth, the fifth stage of the system cycle, and what it keeps becomes Context. That is how the loop closes, and it happens without changing the underlying AI model: repeated observations can expose system patterns, missing assumptions, and useful practices that improve future cycles. What accumulates may sit with humans, teams, organizations, systems, and AI systems in different ways, and none of it transfers Direction.
 
 ## What happens there
 
 This stage catches most of the AI-specific failures. Fabricated references, a root cause that is plausible and wrong, and agreement offered where judgment was needed all come from acting on material that was never checked. [How AI fails](how-ai-fails.md) covers each pattern and why it happens.
 
-It is also where a failed check lands. When [Outcome](07-outcome.md) shows that the intended outcome did not occur, the cycle returns here rather than to Action, because the usual reason a change failed is that something about reality was missing. The next attempt needs new information: what the environment did instead, which assumption broke, which signal nobody had looked at yet.
+It is also where a failed check lands. When [Outcome](07-outcome.md) shows that the intended outcome did not occur, what that taught is kept and the cycle returns here rather than to Action, because the usual reason a change failed is that something about reality was missing. The next attempt needs new information: what the environment did instead, which assumption broke, which signal nobody had looked at yet.

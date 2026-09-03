@@ -66,6 +66,7 @@ fix-first thrashing that preceded it.
   3. Decide the change based on what the environment showed.
   4. Make the change.
   5. Check that the intended outcome actually happened.
+  6. Write down what the attempt taught before starting the next one.
 - When an agent starts **thrashing** on repeated failed fixes, that is the signal to stop fixing and
   go back for the information the attempts were missing.
 - **A fix nobody can explain is not a diagnosis.** Ask for the reasoning before the change.
@@ -184,7 +185,8 @@ written down.
   already been tried will try it again, confidently.
 - **Write the file back into Context before the next pass.** After each success and each failure, the
   context files are written before the next attempt, which is the only thing that makes the next pass
-  cheaper than the last.
+  cheaper than the last. That write is Growth, the fifth stage of the system cycle, and one corrected
+  wrong answer is enough for it to count.
 
 **Reinforces:** [Principle 1 — Context comes from
 the real environment](03-principles.md#1-context-comes-from-the-real-system) and
@@ -197,3 +199,6 @@ the real environment](03-principles.md#1-context-comes-from-the-real-system) and
 These lessons share a root. AI multiplies whatever Context and Direction it is given. Teams that read
 the system first and then say what they want get outcomes that hold up. Teams that skip the reading
 get a lot of output and few outcomes.
+
+Every lesson here came out of the fifth stage. Somebody ran a cycle, watched what it produced, and
+wrote down what it taught. None of them needed repetition or scale before they were worth keeping.

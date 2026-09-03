@@ -21,6 +21,8 @@ included. Corrections, questions, ideas, and case studies are all welcome.
    - **Action** — what you changed, and why this approach rather than another.
    - **Outcome** — the evidence. State what you checked, what you observed, and where you stopped.
      For a docs change, "I checked every link and heading anchor" is real evidence.
+   - **Growth** — what the change taught that should outlive it, and where that is written down. For
+     a docs change, that might be a wording rule the next contributor will run into too.
 4. Open the PR against `main`. Expect a friendly review and a little back-and-forth.
 
 ## What we're likely to accept

@@ -1,9 +1,14 @@
 # The Problem
 
-Clover is an AI Orchestration Framework connecting real-world Context, human Direction, AI-driven
-Action, and validated Outcome into a repeatable cycle.
+Clover is a way of working with the system actors — **System → Human → AI** — through the system
+cycle they run: **Context → Direction → Action → Outcome → Growth**.
 
-Context → Direction → Action → Outcome → Growth
+None of that is a new way of working. Every system that worked has worked this way: somebody
+understood the situation, somebody decided what mattered and answered for it, the work got done,
+reality showed what happened, and what it taught carried into the next attempt. What AI changed is
+accountability. Execution moved to something that cannot be accountable, and accountability went out
+of scope with it. Clover establishes accountability back in the system, through the human actor who
+can truly take up the role.
 
 ## AI already does expert work
 
@@ -46,11 +51,25 @@ will act on missing information faster and more confidently than a human will.
 
 That is the problem Clover addresses.
 
-## Why the old way of working does not hold
+## Accountability went out of scope
 
-Our ways of working were built for humans working with humans. A handoff assumes a human on both
-ends. A review assumes an author who can explain their reasoning. "Done" assumes somebody looked. An
-AI participant breaks all three assumptions at once, and nothing in the process notices.
+Underneath every symptom above is one loss. In a system that worked, the human who did the work
+could be asked about it afterward. They could explain the reasoning, say what they had assumed, and
+answer for the result. Execution and accountability traveled together, and mostly nobody had to
+think about it.
+
+AI broke that pairing. It can do the work, describe the work convincingly, report that the work
+succeeded, and answer for none of it. When execution moved, accountability tended to move with it —
+straight out of scope. What is left is output nobody owns.
+
+Our ways of working were built for humans working with humans, and they assume the pairing. A handoff
+assumes a human on both ends. A review assumes an author who can explain their reasoning. "Done"
+assumes somebody looked. An AI participant breaks all three at once, and nothing in the process
+notices.
+
+Clover's answer is to establish accountability back in the system, on the human actor who can truly
+take up the role. AI takes its place as an actor inside the system cycle rather than as a replacement
+for it. None of that requires slowing AI down.
 
 The symptoms look the same wherever it happens:
 
@@ -83,14 +102,15 @@ themselves.
 
 Nobody has to write any of that out first. It is there, and it is current, which is more than can be
 said for most descriptions of it. Reaching it is what the [Context stage](05-context-engineering.md)
-covers, and it is the stage that changed what the other three are worth.
+covers, and it is the stage that changed what the other four are worth.
 
-Clover organizes that into four questions a team asks every time:
+Clover organizes that into five questions a team asks every time:
 
 - What do we need to know about reality before acting?
-- What needs to be done, and what must not happen?
+- What needs to be done, what must not happen, and who answers for the result?
 - What should we do, and how should the work happen?
 - Did reality validate the intended outcome?
+- What did that teach, and where is it written down for the next pass?
 
 The [five stages](04-framework.md) are those questions, in that order. Reality comes first, and the
 direction is given against what is actually there. What each pass establishes is written down and

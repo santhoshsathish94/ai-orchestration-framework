@@ -12,15 +12,13 @@ The goal is to make one idea immediately understandable:
 
 > **CLOVER is a way of working with AI to reach real outcomes.**
 
-The framework connects:
+The **system cycle** is:
 
 **Context → Direction → Action → Outcome → Growth**
 
-The fifth leaf is **Growth**.
+All five leaves make the cycle. The fifth leaf is **Growth**: whatever the Outcome taught, at any size, carried back into Context. A team performs it the same way it performs the other four. One wrong answer, understood and written down, is Growth.
 
-The first four leaves are the practical framework. Growth is the learning and improvement that can emerge through repeated cycles rather than a fifth operational step a team runs.
-
-CLOVER's foundational priority is:
+The **system actors** are:
 
 **System → Human → AI**
 
@@ -32,9 +30,15 @@ The system is reality. Humans choose the destination and remain accountable. AI 
 
 # 1. The Core Idea
 
-CLOVER is not about making AI replace people.
+CLOVER is not a new way of working.
 
-It is about making AI useful inside real work.
+Every system that worked in the past has worked this way. Somebody understood the situation. Somebody decided what mattered and answered for it. The work got done. Reality showed what happened. What it taught carried into the next attempt.
+
+AI did not remove that pattern. AI moved execution to something that cannot be accountable. A model can perform the work, report that it worked, and hold nothing when it did not. Where execution went, accountability followed it out of scope.
+
+CLOVER establishes accountability back into the system, through the human actor who can truly take up the role. AI takes its place as an actor inside the existing cycle rather than as a replacement for it.
+
+So AI becomes useful inside real work.
 
 Humans still own the outcome.
 
@@ -62,9 +66,9 @@ The important point is not that AI cannot suggest a direction. It is that even w
 
 AI can already do highly capable work.
 
-The problem is that AI often works from only what one person remembers to tell it.
+The problem is that AI often works from only what one human remembers to tell it.
 
-A person may provide:
+A human may provide:
 
 - a prompt
 - a few files
@@ -94,7 +98,7 @@ Instead of beginning with a human description and then searching for context, th
 
 ---
 
-# 3. The Four Leaves
+# 3. The Five Leaves
 
 ## Context
 
@@ -202,6 +206,32 @@ Examples include:
 The key rule is:
 
 > **The environment is the evidence of success.**
+
+---
+
+## Growth
+
+Growth is the fifth stage, and it runs last.
+
+Whatever the Outcome taught is written back before the next attempt.
+
+It needs no repetition and no scale. One wrong answer, understood and recorded, is Growth.
+
+What gets kept can include:
+
+- what the system actually does
+- what was missing from Context
+- which Direction held and which did not
+- which approach worked
+- what the evidence showed
+
+Core question:
+
+> **What did this cycle teach, and where is it kept?**
+
+An unfavorable Outcome usually teaches more than a favorable one.
+
+What accumulates across many cycles is a separate thing. It can appear in humans, in AI usage, in teams, in organizations, and in the systems being worked on. Performing the stage is the job. What grows out of it cannot be forced.
 
 ---
 
@@ -321,7 +351,7 @@ The leaf story explains the evolution.
 
 A human gives AI a task.
 
-AI works from what that person gives it.
+AI works from what that human gives it.
 
 The result is checked.
 
@@ -329,21 +359,23 @@ This is useful and common.
 
 ### Four leaves — the lucky clover
 
-**Context → Direction → Action → Outcome → Growth**
+**Context → Direction → Action → Outcome**
 
 The real environment comes first.
 
 This changes the quality of the entire cycle.
 
-This is the practical CLOVER framework.
-
 ### Five leaves — the growth clover
 
-The fifth leaf is **Growth**.
+**Context → Direction → Action → Outcome → Growth**
 
-Growth is not another team checklist item.
+The fifth leaf is **Growth**, and a team performs it the same way it performs the other four.
 
-It represents learning that can accumulate through repeated cycles:
+Whatever the Outcome taught is written back before the next attempt. That is the whole job, and it is small.
+
+This is the CLOVER framework.
+
+What accumulates from doing it every cycle is a separate thing:
 
 - experience
 - persistent memory
@@ -355,19 +387,19 @@ It represents learning that can accumulate through repeated cycles:
 - better system understanding
 - better team and organizational practice
 
-Growth can emerge at multiple layers. It is not owned by one actor.
+What accumulates can appear at multiple layers. It is not owned by one actor.
 
 The five-leaf idea is therefore:
 
-> **Four leaves make the cycle. The fifth is what repeated cycles can teach us.**
+> **Five leaves make the cycle. The fifth is what the other four taught us.**
 
-The fifth leaf also represents the unknown boundary of that growth. We do not know how far capability, memory, experience, coordination, embodiment, or other forms of AI growth may extend.
+What accumulates from Growth has an unknown boundary. We do not know how far capability, memory, experience, coordination, embodiment, or other forms of AI growth may extend.
 
 That unknown is exactly why the human authority boundary matters. Clover does not need to know how capable AI can become before saying that humans should remain the authority over what is pursued.
 
 ---
 
-# 8. Growth Is a Question, Not a Prediction
+# 8. Where Growth Leads Is a Question, Not a Prediction
 
 CLOVER must separate today's engineering framework from its future hypothesis.
 
@@ -405,9 +437,9 @@ That is why Clover treats responsible growth of AI as inseparable from preservin
 
 Importantly, increasing capability does not imply increasing authority.
 
-The fifth leaf represents:
+The open question is:
 
-> **the unknown boundary of growth.**
+> **the unknown boundary of what growth may produce.**
 
 Never present this speculation as established fact.
 
@@ -455,9 +487,9 @@ CLOVER brings that reality into the process before the work begins.
 
 Then show the simple sequence:
 
-**See reality → set direction → do the work → check reality**
+**See reality → set direction → do the work → check reality → keep what it taught**
 
-Only afterward introduce the formal names:
+Only afterward introduce the formal names of the system cycle:
 
 **Context → Direction → Action → Outcome → Growth**
 
@@ -483,9 +515,9 @@ Recommended story arc:
 
 ### Opening — Familiar problem
 
-Someone asks AI to solve a real problem.
+A human asks AI to solve a real problem.
 
-The person gives AI a description.
+The human gives AI a description.
 
 AI produces a confident answer.
 
@@ -501,7 +533,7 @@ The AI simply did not start from it.
 
 ### CLOVER appears
 
-The four leaves appear in order:
+The five leaves appear in order:
 
 **Context** — see what is really there.
 
@@ -511,23 +543,23 @@ The four leaves appear in order:
 
 **Outcome** — reality shows whether it worked.
 
+**Growth** — keep what the outcome taught.
+
 ### Loop
 
-The result feeds the next cycle.
+Growth carries into the next cycle.
 
-A successful cycle improves future context.
+A successful cycle leaves useful evidence.
 
-A failed cycle also improves future context because the team now knows what was wrong.
+A failed cycle leaves useful information, because the team now knows what was wrong.
 
 ### Final visual
 
-A fifth leaf appears subtly.
+The five-leaf clover completes, with Growth as the fifth leaf.
 
-**Growth.**
+Then the closing point: people always worked this way, AI took the accountability out, and CLOVER puts it back with the human.
 
-Do not over-explain it in this first video.
-
-Let it create curiosity.
+Do not over-explain Growth in this first video. Show it as the stage where the learning is kept.
 
 ---
 
@@ -539,11 +571,11 @@ The strongest simple message is:
 >
 > **CLOVER is a way of working with AI to reach real outcomes.**
 >
-> **Start with the real Context. Humans give the Direction. AI takes Action. Reality validates Outcome.**
+> **Start with the real Context. Humans give the Direction. AI takes Action. Reality validates Outcome. Growth keeps what it taught.**
 >
-> **And every cycle leaves something behind for the next.**
+> **Five leaves make the cycle. The fifth is what the other four taught us.**
 >
-> **Four leaves make the cycle. The fifth is Growth — the unknown boundary of what repeated cycles may become.**
+> **People always worked this way. AI took the accountability out. CLOVER puts it back with the human.**
 
 This wording is conceptual guidance for the video, not a mandatory final voiceover.
 
@@ -597,7 +629,7 @@ Continue the established scene.
 
 Approximately the final 10–12 seconds.
 
-Show Action, Outcome, the cycle feeding forward, and a subtle appearance of the fifth leaf / Growth.
+Show Action, Outcome, and Growth as the fifth stage, then the completed five-leaf cycle feeding forward.
 
 Do not keep adding prompts after the core 30 seconds works merely to extend the video.
 
@@ -609,7 +641,7 @@ The priority is coherent continuity, not maximum duration or complexity.
 
 The starting image should NOT immediately show the complete Clover diagram.
 
-It should show a person facing a recognizable real-world problem with AI helping them.
+It should show a human facing a recognizable real-world problem with AI helping them.
 
 The audience should first recognize the situation.
 
@@ -628,16 +660,16 @@ At the end of the video, the viewer should be able to remember:
 3. **Humans still provide Direction and keep ownership.**
 4. **AI can do the Action.**
 5. **Reality—not AI's own claim—validates Outcome.**
-6. **AI can still fail, even after repeated successes.**
-7. **Every cycle improves the context for the next one.**
-8. **The fifth leaf is Growth, the open question about what increasingly capable systems may become.**
+6. **Growth is the fifth stage: what the outcome taught is kept for the next cycle.**
+7. **AI can still fail, even after repeated successes.**
+8. **People always worked this way. AI took the accountability out. CLOVER puts it back with the human.**
 9. **AI may be capable enough to suggest directions; humans should always decide what to pursue.**
 
 Do not try to make the viewer memorize all nine in the 30-second introduction.
 
-The first five are the core practical understanding.
+The first six are the core practical understanding.
 
-The last four create depth and curiosity.
+The last three are what makes the framework worth caring about.
 
 ---
 
@@ -647,7 +679,7 @@ For public explanations, keep the language human and concrete.
 
 Prefer:
 
-> “See what is really there. Decide what matters. Let AI do the work. Check whether it actually worked.”
+> “See what is really there. Decide what matters. Let AI do the work. Check whether it actually worked. Keep what it taught.”
 
 Over:
 
@@ -671,11 +703,15 @@ It should remain practical, grounded in real engineering, and honest about uncer
 
 # 18. Canonical One-Line Explanation
 
-> **CLOVER is a way of working with AI to reach real outcomes: start with the real Context, keep human Direction and ownership, let AI take Action, and let reality validate Outcome.**
+> **CLOVER is a way of working with AI to reach real outcomes: start with the real Context, keep human Direction and ownership, let AI take Action, let reality validate Outcome, and keep what it taught as Growth.**
 
 ## Canonical Five-Leaf Explanation
 
-> **Four leaves make the cycle. The fifth is what repeated cycles can teach us.**
+> **Five leaves make the cycle. The fifth is what the other four taught us.**
+
+## Canonical Accountability Line
+
+> **People always worked this way. AI took the accountability out. CLOVER puts it back with the human.**
 
 ## Canonical Human Authority Principle
 

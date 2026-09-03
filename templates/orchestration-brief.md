@@ -101,10 +101,12 @@ faster.*
 
 ---
 
-## After each pass — write it back into Context
+## 5. Growth — *what the cycle taught, carried back into Context*
 
-This is the fifth stage. Every attempt produces context, whether it succeeded or failed, and that
-context is what the next attempt reasons from.
+Growth is the fifth stage, and a team performs it like the other four. Whatever the Outcome taught,
+at any size, goes back into Context. One wrong answer, understood and written down, counts. Every
+attempt produces context, whether it succeeded or failed, and that context is what the next attempt
+reasons from.
 
 > After each success and each failure, write the context files before the next attempt.
 

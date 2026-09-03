@@ -18,8 +18,14 @@ The story must stay human-simple while preserving the framework's deeper princip
 - Reality—not AI confidence—validates Outcome.
 - A previous run succeeding many times does not guarantee the next run.
 - Failed validation should lead back to Context and new information.
-- Growth is the fifth leaf, shown as learning and curiosity rather than prediction.
+- Growth is the fifth stage of the cycle. Whatever the Outcome taught is written down and carried forward. A human performs it, in the same weight as the four stages before it.
 - Capability may scale, but Direction remains human.
+- People always worked this way. AI took the accountability out. CLOVER puts it back with the human.
+
+The two chains the video is built on:
+
+- the **system actors**: System → Human → AI
+- the **system cycle**: Context → Direction → Action → Outcome → Growth
 
 ---
 
@@ -85,11 +91,12 @@ It should visibly reason and work across connected information sources.
 ### Text
 
 Use minimal on-screen text.
-Prefer very short labels:
+Prefer very short labels, and show them in this order:
 - Context
 - Direction
 - Action
 - Outcome
+- Growth
 - CLOVER
 
 The generated video should prioritize visuals and voiceover over complex UI text.
@@ -100,7 +107,7 @@ The generated video should prioritize visuals and voiceover over complex UI text
 
 Create the first frame of a realistic cinematic 30-second technology story about a human working with AI to solve a real engineering problem.
 
-A single professional adult is seated at a clean modern workstation in a bright contemporary engineering office. The person is looking at a large monitor displaying a simple AI assistant conversation. The AI has just produced a polished, confident answer to a difficult system problem. The person looks attentive and slightly uncertain rather than impressed or frightened.
+A single professional adult is seated at a clean modern workstation in a bright contemporary engineering office. The human is looking at a large monitor displaying a simple AI assistant conversation. The AI has just produced a polished, confident answer to a difficult system problem. The human looks attentive and slightly uncertain rather than impressed or frightened.
 
 The screen should communicate a plausible engineering issue without requiring readable code. Keep the interface simple and believable: a short problem description, a confident AI response, and subtle visual hints that the answer may not match the actual system.
 
@@ -112,7 +119,7 @@ Lighting: bright natural daylight with soft professional office illumination.
 
 Style: premium realistic cinematic technology documentary, believable human emotion, restrained visual effects, clean light palette, high detail, consistent physical environment.
 
-Do not show the CLOVER diagram yet. Do not show four or five leaves yet. Do not show a robot. Do not show a futuristic city. Do not make the AI look evil. Do not use dramatic warning imagery.
+Do not show the CLOVER diagram yet. Do not show the clover or any of its leaves yet. Do not show a robot. Do not show a futuristic city. Do not make the AI look evil. Do not use dramatic warning imagery.
 
 The first frame should feel like an ordinary real work problem that many people could recognize.
 
@@ -122,7 +129,7 @@ The first frame should feel like an ordinary real work problem that many people 
 
 Continue directly from the starting image. Preserve the exact same human, clothing, face, workstation, office, monitor design, lighting, color palette, camera language, and realistic cinematic style.
 
-The person briefly follows the AI's confident recommendation. Then a subtle mismatch appears: the real system behavior on another part of the screen does not agree with the AI's answer. The person notices the discrepancy. Do not portray the AI as stupid; the answer should look reasonable and competent, but incomplete because the AI did not have the whole picture.
+The human briefly follows the AI's confident recommendation. Then a subtle mismatch appears: the real system behavior on another part of the screen does not agree with the AI's answer. The human notices the discrepancy. Do not portray the AI as stupid; the answer should look reasonable and competent, but incomplete because the AI did not have the whole picture.
 
 The camera slowly pulls back from the narrow AI conversation view into the larger environment. As the view widens, reveal that the surrounding system already contains the missing information: source code and repository history, live logs and telemetry, relevant data, test results, deployment/runtime state, and previous investigation notes. Represent these as believable screens and environmental signals, not giant holograms.
 
@@ -132,11 +139,11 @@ End this continuation with the word **Context** appearing simply and clearly for
 
 Voiceover timing for this section should feel natural and conversational:
 
-"AI can be incredibly capable. But it can still get the answer wrong when it doesn't have the whole picture. The information was already there—in the system, the data, the logs, the history."
+"AI can be incredibly capable. It can still be wrong when it doesn't have the whole picture. The information was already there—in the system, the data, the logs, the history."
 
-Do not introduce the full CLOVER loop yet. Do not show Direction, Action, Outcome, or the fifth leaf as labels yet.
+Do not introduce the full CLOVER loop yet. Do not show Direction, Action, Outcome, or Growth as labels yet.
 
-Target duration for this continuation: approximately 10–12 seconds total including the initial problem beat and context reveal.
+Target duration for this continuation: approximately 11 seconds total including the initial problem beat and context reveal.
 
 ---
 
@@ -146,7 +153,7 @@ Continue the exact same scene and visual world from the final frame of Prompt 1.
 
 The human now clearly takes ownership of the task. They indicate the relevant part of the connected system and communicate a simple outcome and boundary to the AI. Visually, make this understandable without technical jargon: one area is highlighted as the problem to solve, another area is clearly marked as something not to change, and a simple destination state is indicated.
 
-The human remains present and visibly responsible. Do not show the person handing everything over or disappearing.
+The human remains present and visibly responsible. Do not show the human handing everything over or disappearing.
 
 Introduce the label **Direction** briefly and elegantly.
 
@@ -160,13 +167,13 @@ Voiceover for this section:
 
 "Then humans set the direction—what matters, what must not happen, and what success should look like. AI figures out how to do the work and acts within those boundaries."
 
-Target duration: approximately 9–10 seconds.
+Target duration: approximately 9 seconds, covering roughly seconds 11 to 20.
 
-Do not show the fifth leaf yet. Keep the story grounded and practical.
+Do not show Outcome or Growth yet. Keep the story grounded and practical.
 
 ---
 
-# Prompt 3 — Outcome → Ownership → CLOVER → Growth
+# Prompt 3 — Outcome → Growth → CLOVER
 
 Continue directly from the previous final frame. Preserve the exact same human and complete visual world. No character or environment redesign.
 
@@ -182,13 +189,17 @@ Introduce the label **Outcome** with a short visual caption:
 
 Then show the human still standing beside the process—not replaced, not absent, still clearly accountable.
 
-The camera smoothly pulls back. The five stages appear as a clean, elegant loop:
+Now show the human perform the fifth stage. They write down what this cycle taught and leave it beside the work, where the next cycle will start from it. Keep it small, ordinary, and deliberate: a short note added, picked up by the surrounding system. This is a human action with weight, equal to the four stages before it.
+
+Introduce the label **Growth** with a short visual caption:
+
+**Keep what it taught.**
+
+The camera smoothly pulls back. The five stages appear as a clean, elegant loop, with the fifth leaf completing the clover as the note lands:
 
 **Context → Direction → Action → Outcome → Growth**
 
-Keep the diagram visually simple and integrated into the environment, not as a corporate presentation slide.
-
-Then subtly reveal a fifth leaf growing from the completed four-stage form. It should feel organic, intriguing, and calm. Do not depict danger, evil, takeover, humanoid robots, or apocalypse. The meaning is simply that each cycle leaves learning for the next.
+Keep the diagram visually simple and integrated into the environment, not as a corporate presentation slide. Draw all five leaves with equal weight. Do not set the fifth leaf apart, make it faint, or show it sprouting on its own as something the AI produced.
 
 Finish on a clean bright identity frame with:
 
@@ -198,15 +209,17 @@ and below it:
 
 **Context → Direction → Action → Outcome → Growth**
 
-The fifth leaf should remain visible but understated.
+Then a closing caption, held long enough to read:
+
+**People always worked this way. AI took the accountability out. CLOVER puts it back with the human.**
 
 Voiceover:
 
-"Then reality decides: did it actually work? That's CLOVER—a way of working with AI to reach real outcomes. Humans keep the ownership. And every cycle leaves experience for the next."
+"Then reality decides: did it actually work? And we keep what it taught. That's CLOVER—a way of working with AI to reach real outcomes. The human stays accountable."
 
-Target duration: approximately 10 seconds.
+Target duration: approximately 10 seconds, covering roughly seconds 20 to 30.
 
-End calmly, with enough visual breathing room for the final CLOVER title to be understood.
+End calmly, with enough visual breathing room for the final CLOVER title and closing caption to be understood.
 
 ---
 
@@ -214,9 +227,9 @@ End calmly, with enough visual breathing room for the final CLOVER title to be u
 
 For a version aimed at a more technically mature audience, use:
 
-"That's CLOVER: Context, Direction, Action, Outcome. Four leaves make the framework. The fifth is what repeated cycles can teach us."
+"That's CLOVER: Context, Direction, Action, Outcome, Growth. Five leaves make the cycle. The fifth is what the other four taught us."
 
-Do not use wording that suggests the fifth leaf is AI acquiring ownership, autonomy, or a new destination.
+Do not use wording that suggests Growth is AI acquiring ownership, autonomy, or a new destination.
 
 ---
 
@@ -242,6 +255,8 @@ Do not generate:
 - exaggerated science-fiction interfaces
 - AI selecting the destination or organizational purpose
 - imagery suggesting capability automatically grants authority
+- the fifth leaf appearing on its own, as something AI produced
+- the fifth leaf drawn faint, dotted, or set apart from the other four
 
 The story is about a practical way of working with capable AI in a real environment while keeping human Direction and accountability explicit.
 
@@ -249,7 +264,7 @@ The story is about a practical way of working with capable AI in a real environm
 
 # Voiceover Master Script
 
-> "AI can be incredibly capable. But it can still get the answer wrong when it doesn't have the whole picture.
+> "AI can be incredibly capable. It can still be wrong when it doesn't have the whole picture.
 >
 > The information was already there—in the system, the data, the logs, the history.
 >
@@ -259,11 +274,15 @@ The story is about a practical way of working with capable AI in a real environm
 >
 > Then reality decides: did it actually work?
 >
-> That's CLOVER—a way of working with AI to reach real outcomes.
+> And we keep what it taught.
 >
-> Humans keep the ownership. And every cycle leaves experience for the next."
+> That's CLOVER—a way of working with AI to reach real outcomes. The human stays accountable."
 
-Estimated spoken length: approximately 75–85 words, depending on delivery speed and pauses. Keep delivery calm and conversational rather than commercial.
+Closing caption, on screen rather than spoken:
+
+> **People always worked this way. AI took the accountability out. CLOVER puts it back with the human.**
+
+Estimated spoken length: approximately 85–95 words, depending on delivery speed and pauses. Keep delivery calm and conversational rather than commercial.
 
 ---
 
@@ -277,4 +296,4 @@ Estimated spoken length: approximately 75–85 words, depending on delivery spee
 6. Do not keep adding prompts merely to increase duration.
 7. If continuity breaks, regenerate the affected continuation from the correct prior frame instead of adding another narrative branch.
 8. Preserve the same primary human and visual environment across all generations.
-9. Keep the first version practical. Save deeper speculative questions about increasing capability for a separate future-facing communication piece once the audience understands the four-stage cycle.
+9. Keep the first version practical. Save deeper speculative questions about increasing capability for a separate future-facing communication piece once the audience understands the five-stage cycle.

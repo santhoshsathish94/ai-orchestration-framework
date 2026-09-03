@@ -8,9 +8,10 @@ not in length.
 
 ## Available templates
 
-- **[Orchestration Brief](orchestration-brief.md)** — a one-page brief covering every stage,
-  with copy-and-paste AI prompts and explicit human and AI ownership at each stage. It opens with
-  Context, and after each pass it writes back into Context, which is where the next attempt starts.
+- **[Orchestration Brief](orchestration-brief.md)** — a one-page brief with a section per stage,
+  with copy-and-paste AI prompts and explicit human and AI ownership at each one. It opens with
+  Context and ends at Growth, where what the pass taught is written back into Context, which is
+  where the next attempt starts.
 
 See it applied end to end in
 [`examples/production-exception-remediation/`](../examples/production-exception-remediation/), or start

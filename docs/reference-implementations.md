@@ -127,7 +127,7 @@ Review and approval also stay human. The volume of change this produces is exact
 
 > Turn a batch of defects from a queue of individual investigations into one orchestrated cycle, ending in evidence of which are genuinely closed.
 
-A partial result is the normal result, and a useful one. Knowing that some defects remain, and why, is what makes the next cycle better informed than the last.
+A partial result is the normal result, and a useful one. Knowing that some defects remain, and why, is what makes the next cycle better informed than the last. Writing that down is Growth, the fifth stage.
 
 The orchestration itself has been demonstrated end to end — investigation, root cause, focused change, validation, and evidence assembled for a human approval decision. What has not been exercised is the last mile: standing this up as the routine path for a team's production exceptions, with the approval and deployment gates wired into their real tooling.
 
@@ -173,12 +173,12 @@ The reference implementation closes a specific gap between documentation and run
 
 ---
 
-## Built on the four working stages
+## Built on the same five stages
 
 All four run the same cycle:
 
 > **Context → Direction → Action → Outcome → Growth**
 
-Cross-Team Knowledge Access spends most of its time in Context. Production Exception Remediation carries a cycle all the way to Outcome in the real environment. Multi-Repository Defect Remediation loops the hardest, because what the unresolved defects showed is written back into Context and is what the next pass starts from. Runtime Enforcement strengthens the execution and validation boundaries without adding a stage.
+Cross-Team Knowledge Access spends most of its time in Context. Production Exception Remediation carries a cycle all the way to Outcome in the real environment. Multi-Repository Defect Remediation loops the hardest: what the unresolved defects showed is written back into Context, which is Growth, and it is what the next pass starts from. Runtime Enforcement strengthens the execution and validation boundaries without adding a stage.
 
-The patterns add operational detail where a recurring problem needs it. None of them adds a stage.
+The patterns add operational detail where a recurring problem needs it. None of them adds a stage, and none of them leaves one out.

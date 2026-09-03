@@ -1,5 +1,7 @@
 # Case Studies
 
+> **Context → Direction → Action → Outcome → Growth**
+
 Real work, including the parts that are still unproven.
 
 Both are delivered outcomes rather than illustrations: a migration whose implementation took about a
@@ -24,6 +26,10 @@ always-on or adopted organization-wide.
 
 Each case study says what was checked, what was observed, and where the work stopped. See
 [Outcome](../docs/07-outcome.md#how-strong-is-your-evidence) for how evidence is described here.
+
+Each one then ends at Growth, in a section named *Growth — what went back into Context*, which
+records what the cycle taught. That section keeps within the evidence above it and adds no result of
+its own.
 
 ## Contributing a case study
 

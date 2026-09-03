@@ -1,10 +1,12 @@
 # Clover
 
-> Clover is an AI Orchestration Framework connecting real-world Context, human Direction, AI-driven Action, and validated Outcome into a repeatable cycle. It sits on top of the systems an organization already runs — nothing to install, nothing to migrate onto.
+> Clover is an AI Orchestration Framework. Three system actors — System, Human and AI — run one system cycle: Context, Direction, Action, Outcome, Growth. It sits on top of the systems an organization already runs — nothing to install, nothing to migrate onto.
 
-Clover is a framework for reasoning about and governing AI-enabled work, not a mandatory process. Its foundational priority is **System → Human → AI**: the system grounds reality; humans establish purpose, Direction, and accountability; AI provides capability and determines how work happens within human Direction.
+Clover is a framework for reasoning about and governing AI-enabled work. It is not a mandatory process. The **system actors** are **System → Human → AI**: the system grounds reality; the human establishes purpose, Direction, and accountability; AI provides capability and determines how work happens within human Direction. The **system cycle** those actors run is **Context → Direction → Action → Outcome → Growth**.
 
-The framework has five operational stages: **Context → Direction → Action → Outcome → Growth**. Context is the relevant evidence about system reality needed for the current work. Direction is the human-defined outcome, priorities, constraints, boundaries, and accountability. Action is AI determining and executing the path within that Context and Direction. Outcome is what the real system or environment shows actually happened, favorable or not. Growth is whatever that Outcome taught, written back so the next cycle starts from it.
+Clover is not a new way of working. Every system that worked in the past has worked this way: somebody understood the situation, somebody decided what mattered and answered for it, the work got done, reality showed what happened, and what it taught carried into the next attempt. What AI did was remove accountability out of scope. Execution moved to something that cannot be accountable. A model can perform the work, report that it worked, and hold nothing when it did not. Clover establishes accountability back into the system, through the human actor who can truly take up the role. AI takes its place as an actor inside the existing cycle rather than as a replacement for it.
+
+The five stages of the system cycle. Context is the relevant evidence about system reality needed for the current work. Direction is the human-defined outcome, priorities, constraints, boundaries, and accountability. Action is AI determining and executing the path within that Context and Direction. Outcome is what the real system or environment shows actually happened, favorable or not. Growth is whatever that Outcome taught, carried back into Context.
 
 What makes Clover distinct is the relationship between those five stages and the authority boundary around them. The claim is testable: context should become more inspectable, Direction more explicit, execution safely delegable where evidence supports it, and Outcome harder to claim without environmental evidence tied to the intended outcome. A team should keep Clover only where applying it improves observable work.
 
@@ -16,13 +18,13 @@ A failed result returns the cycle to Context with new information. The goal is n
 
 When a boundary matters to Outcome, an implementation should prefer runtime enforcement over model instructions alone. Verification controls can be protected outside the model with filesystem permissions, containers, CI identities, protected branches, tool gateways, MCP policies, or equivalent environment controls. Clover does not require a particular implementation, and the framework does not claim that its current orchestration engine automatically enforces every such control.
 
-Growth is the fifth stage: whatever the Outcome taught, carried back into Context. It needs no repetition and no scale, and it is not reserved for frontier providers learning from volumes of interaction data. One wrong answer, understood and recorded, is Growth. Growth can accumulate across humans, AI systems, the system being worked on, teams, organizations, and frontier AI development; these layers are controlled differently. Clover does not assume customer work trains an AI provider's underlying model.
+Growth is the fifth stage of the system cycle: whatever the Outcome taught, at any size, carried back into Context. It needs no repetition and no scale, and it is not reserved for frontier AI providers learning from volumes of interaction data. One wrong answer, understood and recorded, is Growth. Growth can accumulate across humans, AI systems, the system being worked on, teams, organizations, and frontier AI development; these layers are controlled differently. Clover does not assume customer work trains an AI provider's underlying model.
 
 ## Pages
 
-- [The framework](https://cloverframework.com/): the full argument and the four-stage cycle.
+- [The framework](https://cloverframework.com/): the full argument, the system actors, and the system cycle.
 - [Getting started](https://cloverframework.com/start/): read-only system access, AGENTS.md, and a first cycle.
-- [Security and governance](https://cloverframework.com/security/): access, attribution, approvals, agent behavior, and delegated execution.
+- [Security and governance](https://cloverframework.com/security/): access, attribution, approvals, agent behavior, delegated execution, and the named human who is accountable.
 - [Evidence](https://cloverframework.com/evidence/): case studies and reference implementations, each stating where it stopped.
 - [Glossary](https://cloverframework.com/glossary/): plain-language definitions.
 - [The author](https://cloverframework.com/author/): who wrote it.
@@ -37,7 +39,7 @@ Growth is the fifth stage: whatever the Outcome taught, carried back into Contex
 ## Putting it into practice
 
 - [The orchestration environment](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/orchestration-environment.md): The access layer that feeds Context — what to connect, how to grant access safely, and a build sequence ordered by increasing risk.
-- [Context engineering](https://raw.githubusercontent.com/santhoshsath94/clover-framework/main/docs/05-context-engineering.md): Why context matters and where persistent context files should live.
+- [Context engineering](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/05-context-engineering.md): Why context matters and where persistent context files should live.
 - [Adoption](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/09-adoption.md): How to test whether Clover changes observable work.
 - [Governance](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/08-governance.md): Ownership, approval, attribution, access, and delegated execution.
 - [Outcome in practice](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/07-outcome.md): What counts as evidence of the intended outcome.

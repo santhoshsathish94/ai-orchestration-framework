@@ -4,7 +4,7 @@
 
 Clover is a way of working with **System, Human, and AI to produce meaningful outcomes**, from the smallest possible use case to large and complex systems.
 
-It starts from a simple relationship:
+It starts from the **system actors**:
 
 **System → Human → AI**
 
@@ -27,13 +27,15 @@ AI is working from partial knowledge too. It reasons from what it was given, sta
 same fluency as facts, and cannot tell the difference between a system it has understood and one it
 has merely described convincingly.
 
-So the framework does not rest on either side being correct. It rests on a process that keeps both
-connected to something that can contradict them:
+So the framework does not rest on either side being correct. It rests on the **system cycle** —
+**Context → Direction → Action → Outcome → Growth** — which keeps both connected to something that
+can contradict them:
 
 - **Context** exists because memory and confidence are not reliable descriptions of a system.
 - **Direction** is written down because an intention nobody stated cannot be checked against what happened.
 - **Action** stays inside boundaries because the cost of being wrong is not evenly distributed.
 - **Outcome** is judged by the environment because neither a human nor an AI can validate its own work.
+- **Growth** carries what the Outcome taught back into Context, because a team should not have to learn the same thing twice.
 
 The rules therefore apply to both. A human is not exempt from stating what must not happen, and an AI
 is not exempt from reporting what it could not verify. The point is not to constrain AI on behalf of
@@ -43,27 +45,29 @@ humans. It is to keep the work answerable to reality when nobody involved has th
 
 ### Before AI, humans were already part of the execution
 
-Clover does not claim to have invented the underlying pattern of working with systems to produce outcomes. Long before AI could perform substantial portions of execution, humans were already doing this work: understanding the situation, deciding what should happen, carrying out or coordinating the work, and checking whether the result matched the intended outcome.
+Clover does not claim to have invented the underlying pattern of working with systems to produce outcomes. Every system that worked has worked this way. Long before AI could perform substantial portions of execution, humans were already doing this work: understanding the situation, deciding what should happen and answering for it, carrying out or coordinating the work, checking whether the result matched the intended outcome, and carrying what they learned into the next attempt.
 
-The important change is not the existence of the cycle. The change is **who or what can perform the execution**. In the AI era, AI can take on much more of the Action that humans previously performed directly.
+What AI changed is accountability. Execution moved to something that cannot be accountable. A model can perform the work, report that it worked, and hold nothing when it did not. Where execution went, accountability tended to go with it, out of scope entirely. Clover establishes accountability back in the system, through the human actor who can truly take up the role.
 
-That changes the engineering problem. We need to decide what execution can be delegated, what context AI can use, what boundaries remain with the human, and how the system can provide evidence that the intended outcome actually happened.
+The cycle itself carried over unchanged. What changed is **who or what can perform the execution**, and what became of accountability when it moved. In the AI era, AI can take on much more of the Action that humans previously performed directly.
+
+That changes the engineering problem. We need to decide what execution can be delegated, what context AI can use, what boundaries remain with the human, which human answers for the result, and how the system can provide evidence that the intended outcome actually happened.
 
 The capability is already here. AI can reason, analyze, plan, coordinate, create, execute, and adapt across many kinds of work. What matters is how that capability is connected to reality and purpose.
 
-The framework therefore is not about making AI the decision-maker. It is about working with the capabilities of the **System, Human, and AI** so that meaningful outcomes can be pursued and validated.
+The framework is therefore about working with the capabilities of the **System, Human, and AI** so that meaningful outcomes can be pursued and validated. AI takes its place as an actor inside the cycle rather than as its decision-maker, because a decision needs somebody who answers for it.
 
 A useful analogy is a journey: **the system is the map and terrain, humans choose the destination, and AI is a means of getting there.** A more capable means can change the speed, cost, or quality of the journey without becoming the owner of the destination.
 
 ### What makes Clover distinct
 
-The framework does not claim novelty merely from naming Context, Direction, Action, and Outcome. Understanding, deciding, acting, and validating already exist in engineering, management, research, operations, and everyday work.
+The framework does not claim novelty from naming Context, Direction, Action, Outcome, and Growth. Every system that worked has worked this way. Understanding, deciding, acting, validating, and learning already exist in engineering, management, research, operations, and everyday work.
 
-Clover's claim is narrower and more practical: **make that existing relationship explicit for an AI era in which execution can increasingly be delegated to AI.**
+Clover's claim is narrower and more practical: **make that existing relationship explicit for an AI era in which execution can increasingly be delegated to AI while accountability cannot.**
 
 - **System → Human → AI** names the **system actors**: System grounds the work in reality, Human provides Direction and accountability, and AI provides capability and can take on execution.
-- **Context → Direction → Action → Outcome → Growth** gives that relationship an operational shape: understand the relevant reality, establish the desired outcome and boundaries, perform the work, and validate the outcome against reality.
-- The value of the framework is not the invention of that sequence. It is making the boundaries and feedback between **reality, human purpose, AI execution, evidence, and learning** explicit enough to apply AI-enabled work without losing the pattern that existed before AI.
+- **Context → Direction → Action → Outcome → Growth** is the **system cycle** those actors run: understand the relevant reality, establish the desired outcome and boundaries, perform the work, validate the outcome against reality, and carry what it taught into the next Context.
+- The value of the framework is in making the boundaries and feedback between **reality, human purpose, AI execution, evidence, and learning** explicit enough to apply AI-enabled work without losing the pattern that existed before AI, or the accountability that used to travel with it.
 - The claim is not a prerequisite for adoption. Clover does not need to be proven before people use it; adoption in the AI era gives us the opportunity to observe what emerges when the same underlying cycle is used with AI performing more of the execution.
 
 Clover is therefore a way of working with System, Human, and AI, not a mandatory process or replacement for existing workflows. Existing tools, delivery methods, approvals, and agent frameworks can remain in place.
@@ -164,7 +168,7 @@ and the work can be understood through:
 
 **Context → Direction → Action → Outcome → Growth**
 
-Repeated meaningful cycles can produce **Growth** when useful learning is preserved.
+One cycle produces **Growth** when what it taught is preserved. Repeated cycles compound it.
 
 ## Three leaves, then four, then five
 
@@ -174,7 +178,7 @@ The number of leaves carries the argument.
 
 **Four leaves — the lucky clover.** Context arrives from the System and comes into the work explicitly. The work starts from reality rather than only from a description one person assembled. Direction can point at the relevant part of that reality, AI can use it to determine the means, and the outcome can be validated against the same system.
 
-**Five leaves — the growth clover.** Growth is the fifth stage: preserve what the cycle established and promote what has held. What accumulates from doing it is what can emerge when the five stages are repeated and what they reveal is preserved and learned from.
+**Five leaves — the growth clover.** Growth is the fifth stage: preserve what the cycle established and promote what has held. One cycle can do it, and repetition is what makes it compound. What accumulates from doing it is what can emerge when the five stages are repeated and what they reveal is preserved and learned from.
 
 Growth is not a prerequisite for adoption. It is not a result that Clover promises in advance. The framework can be used as it is, and as people adopt it in the AI era, the repeated meaningful cycles give us something to observe.
 

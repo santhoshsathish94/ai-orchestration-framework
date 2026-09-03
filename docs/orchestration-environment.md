@@ -4,7 +4,8 @@ Most of the framework describes how to think. This page describes what has to be
 thinking to reach anything real.
 
 An orchestration environment is the **access layer** between AI and the systems an organization
-already runs. It is what feeds [Context](05-context-engineering.md), the first stage of [the Clover
+already runs. It gives the **system actors** — System → Human → AI — one shared view of the same
+reality. It is what feeds [Context](05-context-engineering.md), the first stage of [the Clover
 framework](04-framework.md) — source code, tickets, logs, data, and the behavior of the running
 system. There is no platform to buy and nothing to migrate onto. It is a set of connections to things
 that already exist, plus the rules governing what may be done through them.
@@ -42,6 +43,9 @@ Hard problems are rarely one query. A memory-exhaustion investigation, for examp
 evidence, form a hypothesis, gather more evidence against it, make a change, deploy it, observe it
 under load, learn something that invalidated part of the original picture, and go again. Each pass
 started with more than the last.
+
+Keeping what a pass taught is Growth, the fifth stage of the system cycle, and what it keeps reaches
+the next pass as Context.
 
 This is a different thing from retrying a fix. Repeating an attempt that keeps failing is thrashing,
 and [Lesson 2](field-practices.md#lesson-2--read-the-system-before-fixing-it) says to stop and go back for
@@ -155,7 +159,7 @@ one at all.
 9. **Keep a context file per effort**, committed with the code. See
    [Context Engineering](05-context-engineering.md#where-context-lives). Without this, every session
    restarts from zero. After each success and each failure, the file is written before the next
-   attempt.
+   attempt. That file is where Growth is performed.
 
 ### Choosing what to grant
 

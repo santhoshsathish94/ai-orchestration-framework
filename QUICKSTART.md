@@ -2,8 +2,10 @@
 
 Run a first Clover cycle on a real task in about 15 minutes.
 
-Clover is an AI Orchestration Framework connecting real-world Context, human Direction, AI-driven
-Action, and validated Outcome into a repeatable cycle.
+Clover is a way of working with the system actors — System, Human and AI — through the system cycle
+they run. Every system that worked has worked this way. What AI did was move execution somewhere
+accountability could not follow, and Clover puts it back with the human actor who can take up the
+role.
 
 There is nothing to install. The cycle runs on real work, with whatever tools and AI assistant are
 already in use.
@@ -63,6 +65,7 @@ assistant and a note on **who owns what**.
 | **Direction** | A one-sentence outcome, what must not happen, where the answer probably is, and what would demonstrate it |
 | **Action** | The smallest focused path, an owner per step, and the change itself |
 | **Outcome** | Evidence that maps back to the outcome, and what it does not cover |
+| **Growth** | What the pass taught, written back into Context, and where the next cycle will read it |
 
 > **At Outcome, say what you checked, what you observed, and where you stopped.** Reaching the
 > strongest available evidence every time is not the goal. Being accurate about what you have is.
@@ -70,7 +73,11 @@ assistant and a note on **who owns what**.
 >
 > If the evidence does not hold, go back to **Context**, rather than to Action.
 
-## 6. Write the context back (1 min)
+## 6. Growth — write back what the pass taught (1 min)
+
+Growth is the fifth stage, and a human performs it like the other four. Whatever the Outcome taught,
+at any size, goes back into Context. One wrong answer, understood and written down, counts. No
+repetition and no scale are needed for it to be real.
 
 Every pass adds context, and that includes the passes that failed. Before the next attempt, write
 what the attempt showed and what it ruled out back into the Context section of the brief.

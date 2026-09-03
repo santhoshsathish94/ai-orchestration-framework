@@ -113,10 +113,10 @@ and accepted it.
 
 ---
 
-## After the pass — written back into Context
+## 5. Growth
 
-There is no fifth step. The cycle ends at Outcome, the brief gets updated, and the next attempt on
-anything of this shape starts further along.
+Growth is the fifth stage, and the engineer performs it like the other four. Whatever the Outcome
+taught goes back into Context, so the next attempt on anything of this shape starts further along.
 
 - **What this pass showed:** Reproducing with a test before changing anything made the evidence
   trivial to produce afterwards.
@@ -125,6 +125,8 @@ anything of this shape starts further along.
 - **Worth keeping:**
   - The regression test now guards the no-coupon path.
   - A note where the team will read it: a new optional field has to be null-safe on every consumer.
+- **Where it is written:** the filled-in brief goes on the pull request, and the null-safety note
+  goes in the team's engineering guidelines. The next cycle reads both.
 - **Pattern or one-off?** The team has seen this shape before, on two earlier optional fields. It is
   worth treating as a pattern rather than as one result.
 - **Next direction this revealed:** Audit the other `v128` additions for the same assumption.
@@ -143,7 +145,7 @@ were still accurate.
 1. Copy [`templates/orchestration-brief.md`](../../templates/orchestration-brief.md) and rename it for the exception at hand.
 2. Replace the checkout scenario above with the real alert.
 3. Walk the five stages with an assistant, using the prompts as starting points.
-4. Write the context back after each pass, whether it succeeded or failed.
+4. Perform Growth after each pass, whether it succeeded or failed: write the context back.
 5. Keep the filled-in brief with the change. It carries the evidence and what the cycle taught.
 
 The gap this closes is between "the fix was deployed" and "the original signal is gone from

@@ -3,12 +3,21 @@
 Governance is what keeps the cycle safe as it scales. It makes ownership, access, attribution, and
 approval explicit, and it matters most where AI is the thing acting. It sits across [the Clover
 framework](04-framework.md) rather than inside one stage: Context is grounded in the system,
-Direction is owned by humans, Action is where delegated execution and approvals happen, and Outcome is
-where somebody has to stand behind the evidence.
+Direction is owned by humans, Action is where delegated execution and approvals happen, Outcome is
+where somebody has to stand behind the evidence, and Growth is where what the cycle taught is kept.
+
+Accountability is the subject of this page, and it is the thing AI took out of scope. The way of
+working is old. Somebody understood the situation, somebody decided what mattered and answered for
+it, the work got done, reality showed what happened, and what it taught carried into the next
+attempt. What changed is that execution moved to something that cannot be accountable. A model can
+perform the work, report that it worked, and hold nothing when it did not. Clover establishes
+accountability back into the system, through the human actor who can truly take it up, and AI takes
+its place as an actor inside the existing cycle rather than as a replacement for it.
 
 ## System → Human → AI
 
-Clover keeps three responsibilities distinct:
+**System → Human → AI** are the **system actors**. The **system cycle** they run is Context →
+Direction → Action → Outcome → Growth. Clover keeps the three responsibilities distinct:
 
 - **System is reality.** It may be an existing system or the system being built. Its data, behavior,
   state, history, constraints, and evidence ground the work in what is actually happening.
@@ -101,9 +110,10 @@ AI changes the means; it does not redefine the destination.
 
 ## Keep humans responsible
 
-AI can do the work. People stay accountable for risk, governance, and the decisions that need human
-judgment. Automation should leave responsibility clearer than it found it, and an arrangement where
-nobody can say who owns an action has moved the wrong way.
+AI can do the work. A named human stays accountable for risk, governance, and the decisions that need
+human judgment. Delegation moves the work and leaves the accountability where it was. Automation
+should leave responsibility clearer than it found it, and an arrangement where nobody can say who
+owns an action has moved the wrong way.
 
 ## In practice
 
