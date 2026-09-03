@@ -35,15 +35,14 @@ site/
 The page is one continuous argument rather than one section per stage.
 
 1. `#overview` — Hero: the name, the tagline, what Clover is in a sentence, the mark, the stages
-2. `#capability` — Where AI already is: what the execution layer can now carry
-3. `#why-now` — The bridge: the pattern is not new, what changed is how much of the Execution AI carries
-4. `#story` — One cycle, any scale: the labelled clover and one step per stage
-5. `#scale` — Two dimensions: who is working, and what they are working on
-6. `#try` — Four steps on a real problem the reader already has
-7. `#evidence-preview` — Case studies, reference implementations, how model reviews are reported
-8. `#growth` — The fifth stage: whatever the Outcome taught, carried back into Context
-9. `#governance` — Capability is not authority
-10. `#next` — The closing restatement and where to go
+2. `#capability` — What is Clover: the cycle before AI, why AI matters, why humans matter
+3. `#story` — One cycle, any scale: the labelled clover and one step per stage
+4. `#scale` — Two dimensions: who is working, and what they are working on
+5. `#try` — Four steps on a real problem the reader already has
+6. `#evidence-preview` — Case studies, reference implementations, how model reviews are reported
+7. `#growth` — The fifth stage: whatever the Outcome taught, carried back into Context
+8. `#governance` — Capability is not authority
+9. `#next` — The closing restatement and where to go
 
 There is no author section on this page. The nav and the footer both link to `author/` instead.
 
@@ -133,14 +132,6 @@ The marks are the site's identity and they carry the argument, so they have rule
   of the page. It says what AI can already do and stops there. Do not turn it into a benchmark table,
   do not add scores, and do not start arguing about what AI is missing — that argument belongs to the
   story below it, and making it twice weakens both.
-- **`#why-now` is the framework's introduction.** It carries the reason the common clover has to
-  move on: AI grew from finishing a line to doing whole jobs, the habit that stuck has the human
-  supplying the context by hand, and the systems that hold the real context can now be read by AI
-  directly. The human moves from being the source of the context to pointing at it. It is the setup,
-  so it stays on the Execution stage and hands the per-stage mechanics to the story, which goes much
-  further (`#st-limit` on what the common clover costs, `#st-direction-2` on Direction pointing rather
-  than describing). The hero above it already names the actors and the whole system cycle in
-  order. State the transition here, then hand over.
 - `#story` says nothing about production. Development first, then the other non-production
   environments. Access is read-only and scoped to what the human already holds.
 - Growth is the next stage, never a hypothesis, a prediction or "next phase", and never described as
@@ -189,7 +180,7 @@ The marks are the site's identity and they carry the argument, so they have rule
 - **`.btn` is the only button style.** Plain is the default, `.btn--primary` is the filled one, and
   `.btn--plain` is a bare link that keeps the same height. One primary per group.
 - **`.band--wide` drops the 68ch measure** so a section's prose runs the full width of the wrap.
-  `#why-now` uses it. Do not spread it around — 68ch is the reading measure everywhere else for a
+  `#growth` uses it. Do not spread it around — 68ch is the reading measure everywhere else for a
   reason, and full-width lines only hold up for a short section.
 - **The evidence diagrams are hand-written SVG, and the same four files serve the docs.** They live in
   `assets/` at the repository root and are copied into `site/assets/`; if you change one, copy it
