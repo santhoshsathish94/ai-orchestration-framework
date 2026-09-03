@@ -59,6 +59,52 @@ question of what it was built from is treated as somebody else's problem.
 
 > **Capability is not permission. That applies to the model as much as to the team using it.**
 
+## The rules each actor works inside
+
+Clover's boundaries are not the outer boundary. Law, regulation and an organization's own
+obligations sit outside them, and where the two disagree the law wins. Clover is a way of working,
+not a compliance regime, and running a Clover cycle certifies nothing.
+
+What Clover does is keep the cycle arranged so those obligations stay satisfiable. Several of them
+assume a named human is answerable, and that assumption is exactly what gets lost when execution
+moves to AI.
+
+**The System actor must be able to show what happened.** Evidence that no longer exists cannot be
+produced later. Under the EU AI Act, providers of high-risk systems must design them for automatic
+record-keeping across the lifecycle, keep technical documentation, and register the system before it
+is placed on the market ([Arts. 8–21](https://artificialintelligenceact.eu/chapter/3/)). Clover asks
+the same thing for a different reason: the Outcome stage has nothing to judge with if the system
+kept no trace.
+
+**The Human actor must be reachable, and must be able to intervene.** The EU AI Act requires
+high-risk systems to be designed so a deployer can implement human oversight. The GDPR goes further
+for decisions made about people: where a decision is based solely on automated processing and
+produces legal or similarly significant effects, the data subject has the right not to be subject to
+it, and where it is permitted the safeguards must include **at least the right to obtain human
+intervention, to express a point of view, and to contest the decision**
+([Art. 22](https://gdpr-info.eu/art-22-gdpr/)). An oversight step that nobody performs does not
+satisfy that. Neither does an approval nobody reads.
+
+**The AI actor must be disclosed, and must stay out of the prohibited set.** The AI Act's
+transparency obligations require that people are told when they are interacting with AI, and its
+prohibited practices are prohibited outright rather than risk-assessed
+([Art. 5](https://artificialintelligenceact.eu/article/5/)). Providers of general-purpose models
+carry their own duties, including a copyright policy and a public summary of the content used for
+training. An AI actor inside a Clover cycle inherits whatever obligations attach to the system it is
+part of.
+
+Two well-known instruments give an organization somewhere to start rather than inventing its own
+scheme. The **NIST AI Risk Management Framework** (AI RMF 1.0, January 2023) is voluntary and
+organizes the work as Govern, Map, Measure and Manage, with a Generative AI Profile added in 2024.
+**ISO/IEC 42001:2023** is the first certifiable AI management system standard. Clover sits
+underneath both: it describes how a single piece of work runs, and they describe how an organization
+governs many.
+
+Sector rules stack on top of all of it. Health, payments, financial services and public
+administration each carry their own, and they do not relax because AI performed the work.
+
+> **Clover's boundaries sit inside the law, never above it.**
+
 ## Capability may scale. Human authority remains.
 
 AI capability is not authority, and authority is not accountability. Clover deliberately does not make

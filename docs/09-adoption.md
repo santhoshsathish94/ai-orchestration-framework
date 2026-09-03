@@ -16,6 +16,8 @@ What adoption restores is accountability. Every system that worked has worked th
 
 The system cycle those actors run remains **Context → Direction → Action → Outcome → Growth**. Growth is the fifth stage: whatever the Outcome taught, at any size, carried back into Context. One thing understood and written down counts, so it needs no repetition and no scale to be real.
 
+Adoption changes how the work is organized, and it leaves every existing obligation exactly where it was. Whatever law, regulation, and internal rules already require of an organization still applies in full to work run as a Clover cycle, and running one certifies nothing. [Governance](08-governance.md#the-rules-each-actor-works-inside) sets out the obligations each actor works inside.
+
 > **Capability may scale. Direction remains human.**
 
 ## Adoption does not require proof in advance

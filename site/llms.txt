@@ -12,6 +12,8 @@ What makes Clover distinct is the relationship between those five stages and the
 
 **Capability may scale. Direction remains human.** Competitive pressure or stronger models may increase delegated execution inside Action. They do not transfer purpose, acceptable risk, priorities, boundaries, or accountability to AI.
 
+Clover's boundaries sit inside the law, never above it. Legal, regulatory and organizational obligations are set outside Clover, and where one of them disagrees with a Clover boundary, the obligation wins. Clover is a way of working, and adopting it certifies nothing. A boundary comes from human Direction and can be widened or narrowed by the accountable human. An obligation cannot be traded away by anyone inside a cycle. What Clover does is keep the cycle arranged so those obligations stay satisfiable: the System able to show what happened, the Human reachable and able to intervene, the AI disclosed.
+
 Delegated execution is an engineering decision. Consider evidence from comparable outcomes, blast radius, observability, reversibility, and approval boundaries. **Delegation can move work. It does not move Direction.**
 
 A failed result returns the cycle to Context with new information. The goal is not to retry the same Action on the same evidence.

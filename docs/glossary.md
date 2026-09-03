@@ -44,6 +44,8 @@ that is a bug in the writing — [tell us](../CONTRIBUTING.md).
 | **Blast radius** | How much damage a change could do if it is wrong. A bigger blast radius means more human approval. |
 | **Non-production** | Any environment that is not serving real users — local, test, staging. It can still contain sensitive data and is not automatically safe to expose. |
 | **Guardrail** | A constraint that keeps work inside safe boundaries: a required approval, a scope limit, a check that must pass. |
+| **Boundary** | A limit on the work set by human Direction — scope, approval points, what must not happen. A boundary can be widened or narrowed by the accountable human. |
+| **Obligation** | A duty that comes from law, regulation, or an organization's own rules. It sits outside Clover's boundaries, applies to all three actors, and no one inside a cycle can trade it away. Adopting Clover neither satisfies it nor removes it. See [governance](08-governance.md#the-rules-each-actor-works-inside). |
 | **Root cause** | The underlying reason a problem occurs. Distinct from the symptom, and from the workaround that hides it. |
 | **Workaround** | Something that stops the pain without fixing the cause. Legitimate for stabilizing an incident, and not a destination. |
 | **Thrashing** | Repeated confident attempts at a fix, none of which work. The signal to stop fixing and go back to Context. |

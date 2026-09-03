@@ -74,6 +74,14 @@ The rule holds whether the content looks hostile or helpful. When something read
 
 ---
 
+## Clover's boundaries sit inside larger ones
+
+The boundaries in a cycle come from human Direction: the scope, the approval points, what must not happen. Those are not the outermost boundaries. Law, regulation, and an organization's own obligations sit outside them and apply to all three actors — the System that has to be able to show what happened, the Human who has to be reachable and able to intervene, and the AI whose use has to be disclosed.
+
+Clover certifies nothing and discharges nothing. What it does is keep a cycle arranged so those obligations stay satisfiable: evidence that still exists, a named human who can answer for the work, and an approval somebody actually performs. [Governance](08-governance.md#the-rules-each-actor-works-inside) sets out what each actor works inside.
+
+---
+
 ## 1. Context comes from the real system
 
 *Stage: Context*
