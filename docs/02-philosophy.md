@@ -80,9 +80,11 @@ An individual can use the cycle for personal work. AI can participate as a capab
 
 ### What is being worked on?
 
-**Task → Feature → System**
+**Task → Feature → System → Connected System**
 
-The work can be a small task, a feature being built or changed, or an entire system. A larger scope may contain many smaller scopes, but it does not require a different Clover cycle.
+The work can be a small task, a feature being built or changed, an entire system, or several systems
+connected to each other. A larger scope may contain many smaller scopes, but it does not require a
+different Clover cycle.
 
 For example:
 
@@ -136,7 +138,7 @@ The **Human** provides Direction: read this table, answer a particular question,
 
 The **AI** reads and analyzes the table using the System as Context and the Human's Direction as the boundary. It may choose the query, joins, calculations, tools, or reasoning path needed to answer the question.
 
-The answer is an output, not automatically a Outcome.
+The answer is an output, not automatically an Outcome.
 
 The **System** provides the evidence needed to determine whether the answer is valid and whether it satisfies the intended outcome.
 
@@ -150,7 +152,7 @@ The example is deliberately small. Clover does not become valid only when the sy
 
 and
 
-**Task → Feature → System**
+**Task → Feature → System → Connected System**
 
 The objects, actors, tools, and scope change. The relationship remains:
 

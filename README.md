@@ -67,9 +67,9 @@ A person can use Clover for their own work. AI can participate as a capable exec
 
 ### What are they working on?
 
-**Task → Feature → System**
+**Task → Feature → System → Connected System**
 
-The work can be a small task, a feature being built or changed, or an entire system. The same cycle applies at each level.
+The work can be a small task, a feature being built or changed, an entire system, or several systems connected to each other. The same cycle applies at each level.
 
 These dimensions can combine in many ways:
 
