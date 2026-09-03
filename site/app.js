@@ -111,13 +111,12 @@
     else window.location.hash = href;
   });
 
-  /* The story. A leaf always links to a step in the block being read. The nearest step to the middle
-     of the viewport wins, which behaves the same scrolling up as scrolling down. Scrolling itself is
-     never taken over. */
+  /* The five stages. A leaf goes to ink as its own stage reaches the middle of the viewport, which
+     behaves the same scrolling up as scrolling down. Scrolling itself is never taken over. */
   var storyBlocks = Array.prototype.slice.call(document.querySelectorAll('[data-story]'));
   if (storyBlocks.length) {
     var blocks = storyBlocks.map(function (block) {
-      var steps = Array.prototype.slice.call(block.querySelectorAll('.story__step'));
+      var steps = Array.prototype.slice.call(block.querySelectorAll('.stage'));
       var marks = Array.prototype.slice.call(block.querySelectorAll('.story__leaf, .story__label'));
       var caption = block.querySelector('[data-story-caption]');
 

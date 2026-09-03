@@ -38,13 +38,21 @@ The page is one continuous argument rather than one section per stage.
 2. `#capability` — What is Clover: the cycle as it ran before AI, with the human as the actor
 3. `#ai-changes` — What AI changes: every stage easier, better and faster, the cycle unchanged
 4. `#humans` — Why humans matter: accountability, boundaries, and carrying the consequence
-5. `#story` — One cycle, any scale: the labelled clover and one step per stage
-6. `#scale` — Two dimensions: who is working, and what they are working on
-7. `#try` — Four steps on a real problem the reader already has
-8. `#evidence-preview` — Case studies, reference implementations, how model reviews are reported
-9. `#growth` — The fifth stage: whatever the Outcome taught, carried back into Context
-10. `#governance` — Capability is not authority
-11. `#next` — The closing restatement and where to go
+5. `#stage-context` — Context
+6. `#stage-direction` — Direction
+7. `#stage-execution` — Execution
+8. `#stage-outcome` — Outcome
+9. `#stage-growth` — Growth
+10. `#scale` — Two dimensions: who is working, and what they are working on
+11. `#try` — Four steps on a real problem the reader already has
+12. `#evidence-preview` — Case studies, reference implementations, how model reviews are reported
+13. `#growth` — The fifth stage: whatever the Outcome taught, carried back into Context
+14. `#governance` — Capability is not authority
+15. `#next` — The closing restatement and where to go
+
+Each of the five stages is its own `.band.stage` section carrying `data-leaf`. `app.js` reads those
+inside `[data-story]` and inks the matching leaf on the pinned mark as the section reaches the middle
+of the viewport. The `stage` class exists for that hook alone and carries no styling.
 
 There is no author section on this page. The nav and the footer both link to `author/` instead.
 

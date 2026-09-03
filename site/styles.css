@@ -304,49 +304,18 @@ section[id] { scroll-margin-top: 5rem; }
 .hero__tagline { max-width: 44ch; margin: 0 0 0.9rem; font-size: clamp(1.15rem, 2.6vw, 1.5rem); font-weight: 600; line-height: 1.3; letter-spacing: -0.015em; color: var(--accent); }
 .hero .lede { max-width: 68ch; font-size: clamp(1.05rem, 2.2vw, 1.28rem); }
 
-/* ---------- the story ---------- */
-/* Three separate clovers, one per act. Each pins beside its own steps, so a leaf always links to a
-   step in the act you are actually looking at. */
-
-.story {
-  display: grid; grid-template-columns: minmax(0, 1fr);
-  gap: 2rem; align-items: start;
-}
-.story + .story { margin-top: 3.5rem; border-top: 1px solid var(--line); padding-top: 2.5rem; }
-.story:first-of-type { margin-top: 2rem; }
-
-/* The story has no mark of its own. The pinned mark carries the highlight; these two rules are
-   what app.js toggles on it, and they are kept here beside the steps that drive them. */
+/* ---------- the five stages ---------- */
+/* One section per stage. The pinned mark carries the highlight; these two rules are what app.js
+   toggles on it, and they are kept here beside the sections that drive them. */
 .story__leaf { transition: fill 0.25s ease; }
 .story__label { transition: fill 0.25s ease, font-weight 0.25s ease; }
 
-/* The unknown clover: the whole mark goes to ink on the closing step. */
+/* The unknown clover: the whole mark goes to ink on the closing stage. */
 .pinned.is-ink .story__leaf { fill: var(--ink); }
 .pinned.is-ink .story__label { fill: var(--ink); }
 
-.story__steps { list-style: none; margin: 0; padding: 0; }
-.story__step {
-  min-height: 38vh; display: flex; flex-direction: column; justify-content: center;
-  padding-block: 1.4rem;
-  opacity: 0.4; transition: opacity 0.3s ease;
-}
-.story__step.is-current { opacity: 1; }
-.story__step h3 { margin: 0 0 0.6rem; font-size: clamp(1.2rem, 2.4vw, 1.55rem); }
-.story__step p { max-width: 46ch; }
-.story__step .ask__q { max-width: none; }
-
-@media (max-width: 860px) {
-  .story { grid-template-columns: minmax(0, 1fr); gap: 0; }
-  .story + .story { margin-top: 2rem; padding-top: 1.6rem; }
-  .story__step { min-height: 0; padding-block: 1.5rem; opacity: 1; }
-  .story__step + .story__step { border-top: 1px solid var(--line); }
-}
-
-/* Without JS nothing highlights, so show every step at full strength. */
-.no-js .story__step { opacity: 1; }
-
 @media (prefers-reduced-motion: reduce) {
-  .story__leaf, .story__label, .story__step { transition: none; }
+  .story__leaf, .story__label { transition: none; }
 }
 /* ---------- buttons ---------- */
 
