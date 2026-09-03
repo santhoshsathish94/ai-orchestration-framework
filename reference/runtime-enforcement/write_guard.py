@@ -45,9 +45,10 @@ class VerificationPolicy:
             return PurePosixPath("")
 
     def is_verification_path(self, path: str) -> bool:
+        # Case-folded: on Windows and macOS, TESTS/A.TEST.JS names the same file as tests/a.test.js.
         relative = self._relative(path)
-        parts = set(relative.parts)
-        name = relative.name
+        parts = {part.lower() for part in relative.parts}
+        name = relative.name.lower()
         return bool(parts & PROTECTED_NAMES) or name.endswith(PROTECTED_SUFFIXES)
 
     def is_protected(self, path: str) -> bool:

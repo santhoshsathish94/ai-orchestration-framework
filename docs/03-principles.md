@@ -34,7 +34,7 @@ The human comes second because purpose and accountability belong together. The h
 
 AI comes third because capability does not transfer accountability. AI can reason, recommend, plan, challenge, and execute, but Clover does not give AI ownership of Direction. A capable system can still have partial knowledge of the real world, and even humans cannot fully understand every consequence of complex systems. Clover therefore keeps authority for purpose, boundaries, and accountability with a human.
 
-This is not a claim that AI is incapable of making decisions. It is a boundary on authority: **AI can be capable enough to suggest directions, but humans should always have the authority to decide what to pursue.**
+AI is capable of making decisions. What Clover sets is a boundary on authority: **AI can be capable enough to suggest directions, but humans should always have the authority to decide what to pursue.**
 
 ---
 

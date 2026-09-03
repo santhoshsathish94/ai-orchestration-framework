@@ -18,7 +18,7 @@ The first four produce a result. **Growth** is whatever that result taught, carr
 
 ## What makes Clover distinct
 
-Clover is not novel because it names five familiar activities. Understanding, deciding, acting, and observing what happened exist in many engineering, operational, and management practices already.
+Naming five familiar activities is not what makes Clover worth using. Understanding, deciding, acting, and observing what happened exist in many engineering, operational, and management practices already.
 
 The framework's useful claim is about accountability. Humans historically participated directly in execution, and the person doing the work was reachable when it went wrong. AI can now perform a growing share of that execution, and it cannot answer for any of it. The familiar activities have to be made explicit again so that the accountability which used to travel with the work does not disappear with it.
 
@@ -44,7 +44,7 @@ The human comes second because purpose and accountability belong together. The h
 
 AI comes third because capability does not transfer accountability. AI can reason, recommend, plan, challenge, and execute, but Clover does not give AI ownership of Direction. A capable system can still have partial knowledge of the real world, and even humans cannot fully understand every consequence of complex systems. Clover therefore keeps authority for purpose, boundaries, and accountability with a human.
 
-This is not a statement that AI is incapable of making decisions. It is a boundary on what decisions AI should own in a real-world system: **AI can determine how work happens within human Direction; it does not determine the Direction itself.**
+AI is capable of making decisions. What Clover sets is a boundary on which decisions AI owns in a real-world system: **AI can determine how work happens within human Direction; it does not determine the Direction itself.**
 
 ## Capability may scale. Direction remains human.
 

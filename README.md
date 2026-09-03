@@ -113,7 +113,7 @@ Clover is therefore best understood as **a framework for working with System, Hu
 
 ---
 
-# The Clover Cycle
+# The Clover cycle
 
 Clover continuously connects:
 
@@ -193,7 +193,9 @@ When the Outcome does not match the intended outcome, return to Context rather t
 
 ---
 
-# Growth
+## 🌱 Growth
+
+### Carry what the Outcome taught into the next cycle.
 
 Growth is the fifth stage: whatever the Outcome taught, carried back so the next cycle starts from it.
 

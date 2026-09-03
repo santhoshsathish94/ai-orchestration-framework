@@ -85,9 +85,10 @@ intervention, to express a point of view, and to contest the decision**
 ([Art. 22](https://gdpr-info.eu/art-22-gdpr/)). An oversight step that nobody performs does not
 satisfy that. Neither does an approval nobody reads.
 
-**The AI actor must be disclosed, and must stay out of the prohibited set.** The AI Act's
-transparency obligations require that people are told when they are interacting with AI, and its
-prohibited practices are prohibited outright rather than risk-assessed
+**The AI actor must be disclosed, and must stay out of the prohibited set.** A system built to
+interact with people has to be designed so those people are told they are dealing with AI
+([Art. 50](https://artificialintelligenceact.eu/article/50/)). A separate set of practices is
+prohibited outright rather than risk-assessed
 ([Art. 5](https://artificialintelligenceact.eu/article/5/)). Providers of general-purpose models
 carry their own duties, including a copyright policy and a public summary of the content used for
 training. An AI actor inside a Clover cycle inherits whatever obligations attach to the system it is

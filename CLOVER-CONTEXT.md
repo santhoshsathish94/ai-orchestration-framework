@@ -1,8 +1,8 @@
 # Clover — working context
 
-Local only, and gitignored on purpose. This is the context file the framework asks every piece of
-work to keep beside itself. Read it first. Write it back after each success and each failure, before
-the next attempt.
+This is the context file the framework asks every piece of work to keep beside itself. It is kept in
+the branch so the reasoning travels with the work. Read it first. Write it back after each success
+and each failure, before the next attempt.
 
 Last written: 2026-09-01. Branch: `refine/clover-way-of-working`.
 

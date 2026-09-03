@@ -67,6 +67,7 @@
   <dl class="terms">
     <div><dt>Clover</dt><dd>This framework. A way of working with System, Human, and AI to produce meaningful outcomes, through Context, Direction, Action, Outcome and Growth. Five stages, describing how human intent becomes an outcome the environment confirms, and what the next attempt starts from.</dd></div>
     <div><dt>Stage</dt><dd>One part of the system cycle. Each stage has one job, and there are five. In the clover mark each stage is drawn as a leaf.</dd></div>
+    <div><dt>Leaf</dt><dd>A leaf of the clover mark. The picture has five. In the documents the parts of the cycle are called stages, and the fifth leaf represents Growth.</dd></div>
     <div><dt>System actors</dt><dd>The three participants in any cycle — <strong>System → Human → AI</strong>. The system is the reality the outcome must exist in. The human holds Direction and accountability. AI supplies capability and execution, and determines how work happens within human Direction.</dd></div>
     <div><dt>System cycle</dt><dd>The five stages the actors run — <strong>Context → Direction → Action → Outcome → Growth</strong>. A team runs it over and over.</dd></div>
     <div><dt>Accountability</dt><dd>Being answerable for the outcome afterward. It cannot sit with AI, which can perform work and report on it but cannot carry the consequence. When execution moved to AI, accountability tended to move out of scope with it. Clover establishes it back in the system, on the human actor who can truly take up the role.</dd></div>
@@ -85,6 +86,7 @@
   <dl class="terms">
     <div><dt>Orchestration</dt><dd>Coordinating people, AI, tools, and context so that work produces an outcome the environment confirms, rather than each part doing its own thing.</dd></div>
     <div><dt>Orchestration environment</dt><dd>The access layer between AI and the systems an organization already uses. Read-only MCP servers in front of the repositories, datasources, logs and environments. It is what feeds the Context stage.</dd></div>
+    <div><dt>MCP server</dt><dd>A small service that gives an agent a scoped way to read one system — a repository, a datasource, a log store, an environment. Read-only, and scoped to what the human driving the work already has access to. This is how the Context stage gets connected.</dd></div>
     <div><dt>Capability</dt><dd>Anything that can do work: a human, a team, an AI, an agent, a tool, a system. Capability does not by itself grant authority or accountability.</dd></div>
     <div><dt>Intent</dt><dd>What a human actually wants to achieve. The outcome, and not the task.</dd></div>
     <div><dt>Outcome</dt><dd>The change in the real world that was wanted. Distinct from <em>output</em>, which is what got produced.</dd></div>
@@ -95,6 +97,7 @@
     <div><dt>Agent</dt><dd>An AI system that can take actions and use tools, rather than only produce text.</dd></div>
     <div><dt>Agentic workflow</dt><dd>A designed loop of agent steps that repeats a known process. Orchestration differs in that it keeps what the outcome taught it.</dd></div>
     <div><dt>Autonomy</dt><dd>In Clover's current engineering layer, this refers only to how much of the <em>path</em> AI is allowed to determine inside human Direction. It never means ownership of purpose, acceptable risk, priorities, boundaries, or accountability. A more capable model does not create authority over the destination.</dd></div>
+    <div><dt>Delegated execution</dt><dd>The amount of operational work a human or organization chooses to have AI perform inside human Direction. It can expand or contract by context and evidence. It does not transfer purpose, acceptable risk, priorities, boundaries, the destination, or accountability to AI.</dd></div>
     <div><dt>Telemetry</dt><dd>The signals a running system emits about itself — logs, metrics, traces, error rates.</dd></div>
     <div><dt>Blast radius</dt><dd>How much damage a change could do if it is wrong. A bigger blast radius means more human approval.</dd></div>
     <div><dt>Non-production</dt><dd>Any environment that is not serving real users — local, test, staging. It can still contain sensitive data and is not automatically safe to expose.</dd></div>
