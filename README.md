@@ -17,7 +17,7 @@
 
 **System → Human → AI**
 
-**Context → Direction → Action → Success**
+**Context → Direction → Action → Outcome**
 
 > **Clover connects system reality, human Direction, AI capability, and evidence of outcomes.**
 
@@ -45,9 +45,9 @@ The framework therefore starts with:
 
 Operationally, the work can be understood through four connected stages:
 
-**Context → Direction → Action → Success**
+**Context → Direction → Action → Outcome**
 
-Context is the relevant understanding available from System reality. Direction is the human-defined meaningful outcome and boundaries. Action is where AI and other capabilities determine and perform the means of achieving it. Success is where reality shows whether the intended outcome actually happened.
+Context is the relevant understanding available from System reality. Direction is the human-defined meaningful outcome and boundaries. Action is where AI and other capabilities determine and perform the means of achieving it. Outcome is what reality shows actually happened, whether favorable, unfavorable, partial, or inconclusive.
 
 Clover is not software. There is nothing to install, and it does not require replacing existing tools, workflows, systems, or AI products.
 
@@ -85,7 +85,7 @@ The combinations can become much larger than these examples. The core does not c
 
 **System → Human → AI**
 
-**Context → Direction → Action → Success**
+**Context → Direction → Action → Outcome**
 
 > **The complexity can grow without bound. The core stays simple.**
 
@@ -93,19 +93,19 @@ The combinations can become much larger than these examples. The core does not c
 
 # What makes Clover distinct?
 
-Clover does not claim novelty merely from naming Context, Direction, Action, and Success. Those activities already existed in engineering, management, research, operations, and everyday work before AI could perform substantial portions of execution.
+Clover does not claim novelty merely from naming Context, Direction, Action, and Outcome. Those activities already existed in engineering, management, research, operations, and everyday work before AI could perform substantial portions of execution.
 
 The useful distinction for the AI era is the relationship between them:
 
 **System → Human → AI** makes explicit that System reality grounds the work, Human provides Direction and accountability, and AI provides capability and can take on execution.
 
-**Context → Direction → Action → Success** makes that relationship operational: understand the relevant reality, establish the desired outcome and boundaries, perform the work, and validate the outcome against reality.
+**Context → Direction → Action → Outcome** makes that relationship operational: understand the relevant reality, establish the desired outcome and boundaries, perform the work, and observe what happened against reality.
 
 So Clover is not presented as a new way humans suddenly began working. It is an attempt to make an existing systems pattern explicit and usable when the **execution layer changes from primarily human-operated to increasingly AI-operated**.
 
 Its value is therefore not the invention of a sequence. Its value is in making the boundaries and feedback between **reality, human purpose, AI execution, and evidence** explicit enough to design, govern, compare, and improve AI-enabled work.
 
-That claim is still testable. A useful Clover implementation should make context more inspectable, Direction more explicit, execution more safely delegable, continuity stronger, and Success harder to claim without evidence. If applying Clover does not improve one or more of those properties, the framework has not earned its place.
+That claim is still testable. A useful Clover implementation should make context more inspectable, Direction more explicit, execution more safely delegable, continuity stronger, and Outcome harder to misrepresent without evidence. If applying Clover does not improve one or more of those properties, the framework has not earned its place.
 
 Clover is therefore best understood as **a framework for working with System, Human, and AI to produce meaningful outcomes**, from very small interactions to large and complex systems.
 
@@ -115,11 +115,11 @@ Clover is therefore best understood as **a framework for working with System, Hu
 
 Clover continuously connects:
 
-**Reality → Human Direction → Means and Action → Reality-based validation**
+**Reality → Human Direction → Means and Action → Reality-based Outcome**
 
 The cycle can repeat as many times as needed.
 
-A result creates new information. That information becomes Context. Context may change Direction. Direction guides the next Action. Reality validates what happened.
+A result creates new information. That information becomes Context. Context may change Direction. Direction guides the next Action. Reality shows what happened.
 
 The work continues until the intended outcome is achieved, the Direction changes, or reality shows that something else should happen.
 
@@ -173,19 +173,21 @@ The important distinction is that AI can help determine the **means** without be
 
 ---
 
-## ✓ Success
+## ◇ Outcome
 
-### Let reality validate the result.
+### Let reality show what happened.
 
-A result is not automatically a Success.
+Outcome is where the system or environment shows what actually happened as a result of the Action.
 
-AI can say something worked. A human can believe it worked. An artifact can look correct. None of those statements alone proves the intended outcome happened.
+An Outcome can be favorable, unfavorable, partial, inconclusive, or otherwise different from what was intended. The point is not to reserve the stage for a win. The point is to make the actual result visible and evidence-based.
 
-The System or relevant environment provides the evidence, and that evidence is judged against the intended outcome established in Direction.
+A result is not meaningful merely because a task was completed, a build passed, or an AI said it worked. The system or relevant environment provides the evidence, and that evidence is judged against the intended outcome established in Direction.
 
-> **What does reality show actually happened, and does that evidence meet the intended outcome?**
+Verification boundaries matter. Whenever possible, evidence should come from a check the agent could not silently redefine while performing the Action. Prefer protected tests, independent fixtures, external assertions, separate environments, before/after measurements, production signals, or other validation mechanisms whose acceptance criteria remain outside the change being evaluated.
 
-When the outcome is not validated, the result becomes new Context rather than a reason to blindly repeat the same Action.
+> **What does reality show actually happened, and what does that teach us about the next cycle?**
+
+When the Outcome does not match the intended outcome, return to Context rather than repeating the same Action unchanged. The unfavorable Outcome is still information about reality and can contribute to Growth.
 
 ---
 
@@ -195,7 +197,7 @@ Growth is not a fifth operational stage.
 
 It is the learning and improvement that can emerge from repeated interaction between System, Human, and AI.
 
-A cycle can teach something about the System, the human's Direction, the Action that was taken, the evidence of Success or failure, or the way the work itself should be performed.
+A cycle can teach something about the System, the human's Direction, the Action that was taken, the Outcome that occurred, or the way the work itself should be performed.
 
 When cycles repeat, patterns can emerge. When patterns are preserved, future cycles can improve.
 
