@@ -47,8 +47,7 @@ The page is one continuous argument rather than one section per stage.
 11. `#scale` — Two dimensions: who is working, and what they are working on
 12. `#try` — Four steps on a real problem the reader already has
 13. `#evidence-preview` — Case studies, reference implementations, how model reviews are reported
-14. `#growth` — The fifth stage: whatever the Outcome taught, carried back into Context
-15. `#next` — The closing restatement and where to go
+14. `#next` — The closing restatement and where to go
 
 Each of the five stages is its own `.band.stage` section carrying `data-leaf`. `app.js` reads those
 inside `[data-story]` and inks the matching leaf on the pinned mark as the section reaches the middle
@@ -124,8 +123,8 @@ The marks are the site's identity and they carry the argument, so they have rule
   in `llms.txt`, not on the home page.
 - **The system cycle has five stages** — Context, Direction, Execution, Outcome, Growth. All five get
   named wherever the cycle is enumerated: the hero, the stage list, the story, the agent file
-  description on `start/`, and `llms.txt`. `#growth` is where the home page explains the fifth stage
-  at length.
+  description on `start/`, and `llms.txt`. `#stage-growth` and `#why-cycle` are where the home page
+  explains the fifth stage and why the five come round again.
 - **Growth is whatever the Outcome taught, carried back into Context**, at any size. No repetition and
   no scale is required. One wrong answer, understood and written down, is Growth. It is not reserved
   for frontier AI providers with volumes of interaction data. Writing the context file after each
@@ -203,9 +202,6 @@ The marks are the site's identity and they carry the argument, so they have rule
   `prefers-reduced-motion: no-preference` and turn into instant jumps when reduce is set.
 - **`.btn` is the only button style.** Plain is the default, `.btn--primary` is the filled one, and
   `.btn--plain` is a bare link that keeps the same height. One primary per group.
-- **`.band--wide` drops the 68ch measure** so a section's prose runs the full width of the wrap.
-  `#growth` uses it. Do not spread it around — 68ch is the reading measure everywhere else for a
-  reason, and full-width lines only hold up for a short section.
 - **The evidence diagrams are hand-written SVG, and the same four files serve the docs.** They live in
   `assets/` at the repository root and are copied into `site/assets/`; if you change one, copy it
   again or the site and the case study will disagree. They are drawn in the site's palette, they carry
