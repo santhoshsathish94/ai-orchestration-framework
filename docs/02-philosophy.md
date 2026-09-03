@@ -81,13 +81,17 @@ The central distinction is simple.
 
 **AI is capability that can help determine and execute the means of achieving that outcome.**
 
-AI may become dramatically better at reasoning, planning, implementation, coordination, and execution. None of that automatically transfers ownership of purpose, acceptable risk, priorities, boundaries, or accountability to AI.
+AI may become dramatically better at reasoning, planning, implementation, coordination, and execution. It may also become capable enough to suggest directions that are broader than today's individual tasks. That capability still does not give AI authority to decide which direction should be pursued.
 
-> **Capability can increase. Authority does not have to.**
+> **AI can suggest a direction. Humans decide what to pursue.**
+
+This is deliberately about the unknown as well as the present. Clover does not depend on assuming that AI capability will stop growing. Even if future AI becomes capable enough to reason about large directions, the authority to choose what to pursue remains human.
+
+The reason is responsibility at scale. AI-enabled action can move beyond an individual task toward organizations, interconnected systems, and impacts across society. As the scale grows, a wrong Direction can affect far more than the original decision. Capability may grow enormously, but that does not remove the need for a human authority who can decide whether a proposed direction should actually be pursued and who remains accountable for that choice.
+
+> **Do not transfer Direction to AI merely because AI becomes capable enough to suggest or execute larger directions.**
 
 Competitive pressure may encourage organizations to automate more of the path, but competition does not determine the destination. **Direction is not delegated by competition.**
-
-> **Do not transfer Direction to AI merely because AI becomes capable enough to perform it.**
 
 This boundary also matters when AI is unavailable or unsuitable. Critical incidents and high-blast-radius situations still require accountable human responders and established operational mechanisms. The means may change; the destination and accountability do not unless humans change them.
 
