@@ -7,7 +7,7 @@ that is a bug in the writing — [tell us](../CONTRIBUTING.md).
 
 | Term | What it means here |
 |---|---|
-| **Clover** | This framework. Clover is a way of working with System, Human, and AI to produce meaningful outcomes through real Context, human Direction, delegated Action, and validated Outcome. See [the framework](04-framework.md). |
+| **Clover** | This framework. Clover is a way of working with System, Human, and AI to produce meaningful outcomes through real Context, human Direction, delegated Action, validated Outcome, and the Growth each cycle carries into the next. See [the framework](04-framework.md). |
 | **System actors** | The three participants in any cycle — **System → Human → AI**. The System is the reality the outcome must exist in, the Human holds Direction and accountability, and AI supplies capability and execution. |
 | **System cycle** | The five stages the actors run — **Context → Direction → Action → Outcome → Growth**. |
 | **Stage** | One part of the system cycle. Each stage has one job. There are five. |

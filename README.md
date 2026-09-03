@@ -95,7 +95,7 @@ The combinations can become much larger than these examples. The core does not c
 
 # What makes Clover distinct?
 
-Clover does not claim novelty merely from naming Context, Direction, Action, and Outcome. Those activities already existed in engineering, management, research, operations, and everyday work before AI could perform substantial portions of execution.
+Clover does not claim novelty merely from naming Context, Direction, Action, Outcome, and Growth. Those activities already existed in engineering, management, research, operations, and everyday work before AI could perform substantial portions of execution.
 
 The useful distinction for the AI era is the relationship between them:
 
