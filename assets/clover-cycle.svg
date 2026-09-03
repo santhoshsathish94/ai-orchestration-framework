@@ -1,83 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
-  <title id="title">The Clover cycle</title>
-  <desc id="desc">An interactive five-part Clover showing Context, Direction, Execution, Outcome, and Growth.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -16 124 122" width="720" height="709" role="img" aria-labelledby="cc-title cc-desc">
+  <title id="cc-title">The Clover cycle</title>
+  <desc id="cc-desc">A five-leaf clover. Clockwise from the top, the leaves are Context, Direction, Execution, Outcome and Growth.</desc>
 
   <defs>
-    <linearGradient id="leafGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#2a7a70"/>
-      <stop offset="100%" stop-color="#155c55"/>
+    <linearGradient id="cc-leaf-fade" x1="0.18" y1="0.05" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#17907f"/>
+      <stop offset="0.55" stop-color="#0a6a5f"/>
+      <stop offset="1" stop-color="#064f47"/>
     </linearGradient>
-    <linearGradient id="growthGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#3c9084"/>
-      <stop offset="100%" stop-color="#216b62"/>
-    </linearGradient>
-    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f3f3a" flood-opacity=".14"/>
-    </filter>
-    <style>
-      .leaf { cursor:pointer; outline:none; }
-      .leaf path { transition: transform .2s ease, filter .2s ease, opacity .2s ease; transform-box:fill-box; transform-origin:center; }
-      .leaf:hover path, .leaf:focus path { transform:scale(1.055); filter:brightness(1.08); }
-      .label { font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#46515b; font-size:22px; font-weight:650; letter-spacing:.2px; }
-      .sub { font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#7a858d; font-size:14px; }
-      .connector { fill:none; stroke:#b7d4cf; stroke-width:2; stroke-linecap:round; opacity:.8; }
-    </style>
+
+    <path id="cc-leaf" d="M50 44C48 35 38 31 38 21C38 12 46 9 50 17C54 9 62 12 62 21C62 31 52 35 50 44Z"/>
+    <path id="cc-vein" d="M45.9 23.4C47.6 25 48.9 26.1 50 26.8C51.1 26.1 52.4 25 54.1 23.4"/>
+
+    <!-- Label baselines. The lower two run anticlockwise so the text stays upright. -->
+    <path id="cc-arc-top"         d="M28.20 12.87 A38 38 0 0 1 71.80 12.87"/>
+    <path id="cc-arc-upper-right" d="M72.87 13.65 A38 38 0 0 1 86.34 55.11"/>
+    <path id="cc-arc-lower-right" d="M50.77 87.99 A44 44 0 0 0 91.60 58.33"/>
+    <path id="cc-arc-lower-left"  d="M8.40 58.33 A44 44 0 0 0 49.23 87.99"/>
+    <path id="cc-arc-upper-left"  d="M13.66 55.11 A38 38 0 0 1 27.13 13.65"/>
   </defs>
 
-  <rect width="720" height="520" rx="28" fill="#fbfcfb"/>
-  <circle cx="360" cy="278" r="154" fill="#edf6f4"/>
+  <!-- Each leaf sits a degree or two off the even split and a fraction off true scale, so no two are
+       identical. The variation is deliberate and meant to go unnoticed. -->
+  <g fill="url(#cc-leaf-fade)">
+    <g transform="translate(50 44) scale(1.005 1.02) translate(-50 -44)"><use href="#cc-leaf"/></g>
+    <g transform="rotate(70.8 50 44) translate(50 44) scale(0.968 0.994) translate(-50 -44)"><use href="#cc-leaf"/></g>
+    <g transform="rotate(145.4 50 44) translate(50 44) scale(1.038 0.972) translate(-50 -44)"><use href="#cc-leaf"/></g>
+    <g transform="rotate(215.2 50 44) translate(50 44) scale(0.984 1.031) translate(-50 -44)"><use href="#cc-leaf"/></g>
+    <g transform="rotate(288.9 50 44) translate(50 44) scale(1.022 0.963) translate(-50 -44)"><use href="#cc-leaf"/></g>
+  </g>
 
-  <!-- Labels -->
-  <text class="label" x="360" y="58" text-anchor="middle">Context</text>
-  <text class="label" x="614" y="205" text-anchor="middle">Direction</text>
-  <text class="label" x="570" y="454" text-anchor="middle">Execution</text>
-  <text class="label" x="150" y="454" text-anchor="middle">Outcome</text>
-  <text class="label" x="106" y="205" text-anchor="middle">Growth</text>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="translate(50 44) scale(1.005 1.02) translate(-50 -44)"><use href="#cc-vein"/></g>
+    <g transform="rotate(70.8 50 44) translate(50 44) scale(0.968 0.994) translate(-50 -44)"><use href="#cc-vein"/></g>
+    <g transform="rotate(145.4 50 44) translate(50 44) scale(1.038 0.972) translate(-50 -44)"><use href="#cc-vein"/></g>
+    <g transform="rotate(215.2 50 44) translate(50 44) scale(0.984 1.031) translate(-50 -44)"><use href="#cc-vein"/></g>
+    <g transform="rotate(288.9 50 44) translate(50 44) scale(1.022 0.963) translate(-50 -44)"><use href="#cc-vein"/></g>
+  </g>
 
-  <!-- subtle connectors -->
-  <path class="connector" d="M360 82 L360 120"/>
-  <path class="connector" d="M565 216 L520 232"/>
-  <path class="connector" d="M535 420 L490 382"/>
-  <path class="connector" d="M185 420 L230 382"/>
-  <path class="connector" d="M155 216 L200 232"/>
-
-  <!-- Context -->
-  <a class="leaf" href="#context" aria-label="Go to Context">
-    <path fill="url(#leafGradient)" filter="url(#shadow)"
-      d="M360 265 C316 228 304 178 327 139 C344 110 376 110 394 139 C417 178 404 228 360 265 Z"/>
-  </a>
-
-  <!-- Direction -->
-  <a class="leaf" href="#direction" aria-label="Go to Direction">
-    <path fill="url(#leafGradient)" filter="url(#shadow)"
-      d="M370 272 C397 220 443 193 484 207 C516 218 525 250 506 273 C478 308 423 309 370 272 Z"/>
-  </a>
-
-  <!-- Execution -->
-  <a class="leaf" href="#execution" aria-label="Go to Execution">
-    <path fill="url(#leafGradient)" filter="url(#shadow)"
-      d="M368 285 C423 282 463 315 461 358 C459 391 432 407 406 393 C366 372 350 321 368 285 Z"/>
-  </a>
-
-  <!-- Outcome -->
-  <a class="leaf" href="#outcome" aria-label="Go to Outcome">
-    <path fill="url(#leafGradient)" filter="url(#shadow)"
-      d="M352 285 C370 321 354 372 314 393 C288 407 261 391 259 358 C257 315 297 282 352 285 Z"/>
-  </a>
-
-  <!-- Growth -->
-  <a class="leaf" href="#growth" aria-label="Go to Growth">
-    <path fill="url(#growthGradient)" filter="url(#shadow)"
-      d="M350 272 C297 309 242 308 214 273 C195 250 204 218 236 207 C277 193 323 220 350 272 Z"/>
-  </a>
-
-  <!-- Center -->
-  <circle cx="360" cy="278" r="20" fill="#f7fbfa"/>
-  <circle cx="360" cy="278" r="10" fill="#2a7a70"/>
-
-  <!-- Stem -->
-  <path d="M360 300 C360 350 360 393 360 438" fill="none" stroke="#6fa89f" stroke-width="9" stroke-linecap="round"/>
-  <path d="M360 318 C382 340 399 352 421 360" fill="none" stroke="#9bc6bf" stroke-width="4" stroke-linecap="round" opacity=".8"/>
-
-  <text class="sub" x="360" y="492" text-anchor="middle">Click a leaf to explore the Clover principles</text>
+  <g font-family="Segoe UI,Helvetica Neue,Arial,sans-serif" font-size="6" font-weight="650" fill="#39424d" text-anchor="middle">
+    <text><textPath href="#cc-arc-top" startOffset="50%">Context</textPath></text>
+    <text><textPath href="#cc-arc-upper-right" startOffset="50%">Direction</textPath></text>
+    <text><textPath href="#cc-arc-lower-right" startOffset="50%">Execution</textPath></text>
+    <text><textPath href="#cc-arc-lower-left" startOffset="50%">Outcome</textPath></text>
+    <text><textPath href="#cc-arc-upper-left" startOffset="50%">Growth</textPath></text>
+  </g>
 </svg>
