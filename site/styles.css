@@ -351,6 +351,10 @@ section[id] { scroll-margin-top: 5rem; }
    the right by exactly the space the mark occupies. */
 .pinned { position: relative; --mark-w: clamp(260px, 36vw, 400px); --mark-gap: 3rem; }
 .pinned .wrap { padding-right: calc(var(--pad) + var(--mark-w) + var(--mark-gap)); }
+/* Section prose is set at the hero size, so the gap between a heading and its text is not a cliff.
+   The floor is 1.12rem rather than the hero's 1.05rem, which sits below the 17px body size and would
+   have made narrow screens smaller instead of larger. */
+.pinned .wrap > p { font-size: clamp(1.12rem, 2.2vw, 1.28rem); }
 /* Sticky at the vertical middle: 50vh rather than 50%, because a percentage inset on a sticky box
    resolves against the containing block, and .pinned is the whole page tall. The rail has no height,
    so the mark is pulled up by half its own to sit centred on that line. */
