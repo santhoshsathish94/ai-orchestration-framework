@@ -142,7 +142,11 @@ The marks are the site's identity and they carry the argument, so they have rule
   by a tint. There is no `.band--soft` and no `.card--flat`; do not reintroduce either.
 - The mark turns one full revolution between the top and the bottom of the home page, eased toward
   the scroll position in `app.js` rather than tracking it exactly. `prefers-reduced-motion` stops it.
-  The origin is `50% 49.09%`, the leaves' pivot at 50,44 in the viewBox, not the middle of the box.
+  The turn is an SVG `rotate(deg 50 44)` on `.clover__spin`, inside the viewBox. Rotating the `<svg>`
+  element instead grows its box to the diagonal, which pushed the page sideways at narrow widths.
+- On mobile the mark is a sticky white band under the header. Its `top` is deliberately a little less
+  than the header height, so the two overlap; at an exact match the page scrolled through the sliver
+  between them.
 - **Use the width.** Sections must not stack down the left in a 68ch column. `.wrong__flow` and
   `.wrong__cols` run the "what happens there" blocks across both columns, `.split` puts a heading
   and lead on the left with the detail on the right, `.stack--2` gives a two-column definition list,

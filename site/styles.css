@@ -389,11 +389,10 @@ section[id] { scroll-margin-top: 5rem; }
   display: flex; justify-content: flex-end; align-items: flex-start;
 }
 /* .clover centres itself with auto margins, which in a flex row beats justify-content. */
-/* The origin is the leaves' own pivot at 50,44 in the viewBox, not the middle of the box. */
-.pinned__mark > svg {
-  margin-inline: 0; width: var(--mark-w);
-  transform-origin: 50% 49.09%; will-change: transform;
-}
+.pinned__mark > svg { margin-inline: 0; width: var(--mark-w); }
+/* The turn happens inside the viewBox, around the leaves' own pivot at 50,44. Rotating the element
+   instead would grow its box to the diagonal and push the page sideways. */
+.clover__spin { will-change: transform; }
 
 /* The one mark also serves the story: its leaf goes to ink as that step scrolls into view. */
 .pinned__mark .story__leaf { transition: fill 0.25s ease; }
@@ -401,14 +400,17 @@ section[id] { scroll-margin-top: 5rem; }
 .pinned__mark .story__label.is-active { fill: var(--ink); font-weight: 800; }
 
 @media (max-width: 860px) {
-  /* Above the text and pinned to the top bar, small enough to leave the page readable behind it. */
+  /* Above the text and pinned to the top bar, small enough to leave the page readable behind it.
+     The header is 3.2rem here, so the band starts a little under it: at 3.6rem the page scrolled
+     through the sliver between the two. Both are white, so the overlap is invisible, and it holds
+     if the header grows. */
   .pinned .wrap { padding-right: var(--pad); }
+  .pinned { --mark-w: clamp(110px, 30vw, 160px); }
   .pinned__mark {
-    height: auto; top: 3.6rem; z-index: 5; justify-content: center;
-    padding-block: 0.5rem 0.7rem;
+    height: auto; top: 3rem; z-index: 5; justify-content: center;
+    padding-block: 0.9rem 0.7rem;
     background: var(--bg); border-bottom: 1px solid var(--line);
   }
-  .pinned__mark .clover--hero { width: clamp(110px, 30vw, 160px); }
 }
 
 .no-js .pinned__mark { position: static; height: auto; justify-content: center; }

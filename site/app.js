@@ -179,7 +179,7 @@
   /* The mark turns as the page scrolls: one full revolution from the top of the page to the bottom,
      so reading the whole page completes the cycle once. The turn eases toward the scroll position
      instead of tracking it exactly, which is what stops it reading as a twitch. */
-  var wheel = document.querySelector('.pinned__mark > svg');
+  var wheel = document.querySelector('.pinned__mark .clover__spin');
   var stillness = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
   if (wheel && !(stillness && stillness.matches)) {
     var turn = 0;
@@ -193,7 +193,7 @@
     };
 
     var draw = function () {
-      wheel.style.transform = 'rotate(' + turn.toFixed(2) + 'deg)';
+      wheel.setAttribute('transform', 'rotate(' + turn.toFixed(2) + ' 50 44)');
     };
 
     var ease = function () {
