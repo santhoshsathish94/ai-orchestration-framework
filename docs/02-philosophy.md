@@ -83,11 +83,13 @@ The central distinction is simple.
 
 AI may become dramatically better at reasoning, planning, implementation, coordination, and execution. It may also become capable enough to suggest directions that are broader than today's individual tasks. That capability still does not give AI authority to decide which direction should be pursued.
 
-> **AI can suggest a direction. Humans decide what to pursue.**
+> **AI can be capable enough to suggest directions. Humans should always have the authority to decide what to pursue.**
 
-This is deliberately about the unknown as well as the present. Clover does not depend on assuming that AI capability will stop growing. Even if future AI becomes capable enough to reason about large directions, the authority to choose what to pursue remains human.
+This is deliberately about the unknown as well as the present. Clover does not depend on assuming that AI capability will stop growing. Even if future AI becomes capable enough to suggest or reason about directions far larger than an individual task, the authority to choose what to pursue remains human.
 
-The reason is responsibility at scale. AI-enabled action can move beyond an individual task toward organizations, interconnected systems, and impacts across society. As the scale grows, a wrong Direction can affect far more than the original decision. Capability may grow enormously, but that does not remove the need for a human authority who can decide whether a proposed direction should actually be pursued and who remains accountable for that choice.
+The reason is accountability at scale. AI-enabled action may extend beyond an individual or a single system toward teams, organizations, interconnected systems, and broader society. As the scale grows, the consequences of a wrong Direction can grow with it. We should not assume that because AI becomes capable enough to suggest a direction, AI can therefore be held accountable for deciding to pursue it.
+
+Humans should remain the authority to decide what to pursue and remain accountable for that choice, especially as the potential impact becomes larger than any one person or system can fully understand.
 
 > **Do not transfer Direction to AI merely because AI becomes capable enough to suggest or execute larger directions.**
 
