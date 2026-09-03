@@ -17,7 +17,7 @@
 
 **System → Human → AI**
 
-**Context → Direction → Action → Outcome**
+**Context → Direction → Action → Outcome → Growth**
 
 > **Clover connects system reality, human Direction, AI capability, and evidence of outcomes.**
 
@@ -45,7 +45,7 @@ The framework therefore starts with:
 
 Operationally, the work can be understood through four connected stages:
 
-**Context → Direction → Action → Outcome**
+**Context → Direction → Action → Outcome → Growth**
 
 Context is the relevant understanding available from System reality. Direction is the human-defined meaningful outcome and boundaries. Action is where AI and other capabilities determine and perform the means of achieving it. Outcome is what reality shows actually happened, whether favorable, unfavorable, partial, or inconclusive.
 
@@ -85,7 +85,7 @@ The combinations can become much larger than these examples. The core does not c
 
 **System → Human → AI**
 
-**Context → Direction → Action → Outcome**
+**Context → Direction → Action → Outcome → Growth**
 
 > **The complexity can grow without bound. The core stays simple.**
 
@@ -99,7 +99,7 @@ The useful distinction for the AI era is the relationship between them:
 
 **System → Human → AI** makes explicit that System reality grounds the work, Human provides Direction and accountability, and AI provides capability and can take on execution.
 
-**Context → Direction → Action → Outcome** makes that relationship operational: understand the relevant reality, establish the desired outcome and boundaries, perform the work, and observe what happened against reality.
+**Context → Direction → Action → Outcome → Growth** makes that relationship operational: understand the relevant reality, establish the desired outcome and boundaries, perform the work, and observe what happened against reality.
 
 So Clover is not presented as a new way humans suddenly began working. It is an attempt to make an existing systems pattern explicit and usable when the **execution layer changes from primarily human-operated to increasingly AI-operated**.
 
@@ -193,11 +193,16 @@ When the Outcome does not match the intended outcome, return to Context rather t
 
 # Growth
 
-Growth is not a fifth operational stage.
+Growth is the fifth stage, and it is where a cycle becomes something the next cycle can use.
 
-It is the learning and improvement that can emerge from repeated interaction between System, Human, and AI.
+The first four stages produce a result. Growth is what the team does with what that result taught:
+preserve what the cycle established, look across cycles for what repeats, and promote what has held
+into practice the next cycle can start from.
 
 A cycle can teach something about the System, the human's Direction, the Action that was taken, the Outcome that occurred, or the way the work itself should be performed.
+
+Without this stage the cycle still produces a result, and the next one starts from the same place
+this one did. What Growth preserves becomes Context, which is how the loop closes.
 
 When cycles repeat, patterns can emerge. When patterns are preserved, future cycles can improve.
 

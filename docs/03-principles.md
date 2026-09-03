@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Clover describes how the system, humans, and AI work together to turn intent into outcomes the environment confirms. The four stages give the structure. These principles are what make each stage hold up on real work.
+Clover describes how the system, humans, and AI work together to turn intent into outcomes the environment confirms. The five stages give the structure. These principles are what make each stage hold up on real work.
 
 There is one principle per stage. A team that remembers the stages already remembers the principles. The first two carry most of the weight, because Context and Direction are what separate the lucky clover from the common one.
 
@@ -172,9 +172,9 @@ Where a boundary genuinely matters, enforce it outside the model rather than rel
 
 ## Growth is the learning that can emerge from repeated cycles
 
-Growth is not a fifth operational stage and nobody has to run it. It is what can emerge when the four stages repeat and what they reveal is preserved and learned from.
+Growth is the fifth stage, and it is performed. What accumulates from performing it is what can emerge when the five stages repeat and what they reveal is preserved and learned from.
 
-Growth can come from **all four stages**. Context can reveal how the system actually behaves and what information was missing. Direction can reveal whether the purpose, constraints, priorities, or process were appropriate. Action can reveal which approaches, tools, and execution patterns work. Outcome can reveal what actually happened, what held, what failed, and what the evidence showed.
+Growth can come from **every stage**. Context can reveal how the system actually behaves and what information was missing. Direction can reveal whether the purpose, constraints, priorities, or process were appropriate. Action can reveal which approaches, tools, and execution patterns work. Outcome can reveal what actually happened, what held, what failed, and what the evidence showed.
 
 Failure is part of Growth. So are successful outcomes, analyses, discoveries about the current system, repeated patterns, and newly understood constraints. A failed attempt can teach more than a successful one when it exposes an assumption that reality rejected.
 
@@ -199,7 +199,7 @@ Growth does not belong to one actor. It is the accumulated learning that can eme
 
 ---
 
-## The four principles in one line
+## The five principles in one line
 
 | Principle | What it protects |
 |---|---|
@@ -208,4 +208,4 @@ Growth does not belong to one actor. It is the accumulated learning that can eme
 | **Action applies AI capability to Context and Direction.** | AI determines the path without owning the destination. |
 | **Outcome is what reality shows.** | Evidence over a success-only label. |
 
-Growth is the learning layer around these four operational principles. It preserves what repeated cycles reveal so the next cycle can begin from better Context and better understanding.
+Growth is the fifth of these, and the one that carries a cycle into the next. It preserves what repeated cycles reveal so the next cycle can begin from better Context and better understanding.

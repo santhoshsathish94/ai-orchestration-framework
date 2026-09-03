@@ -33,7 +33,7 @@ Use this idea as the conceptual backbone of the visual story without turning the
 
 ## Visual and narrative principle
 
-Do not begin by presenting a diagram or a list of four stages.
+Do not begin by presenting a diagram or a list of five stages.
 
 Begin with a situation people already understand:
 
@@ -43,7 +43,7 @@ Then reveal that the real system already contains the information needed to reas
 
 Then introduce CLOVER as a simple way of working:
 
-**Context → Direction → Action → Outcome**
+**Context → Direction → Action → Outcome → Growth**
 
 Finally reinforce human ownership and allow the fifth leaf / Growth to appear subtly as learning rather than as AI autonomy.
 
@@ -176,9 +176,9 @@ Optional caption:
 
 **Visual**
 
-The four stages form a clean loop:
+The five stages form a clean loop:
 
-**Context → Direction → Action → Outcome**
+**Context → Direction → Action → Outcome → Growth**
 
 The human remains present next to the loop.
 
@@ -198,7 +198,7 @@ The fifth leaf should feel intriguing, not threatening. It represents learning t
 
 Small line:
 
-**Context → Direction → Action → Outcome**
+**Context → Direction → Action → Outcome → Growth**
 
 Subtle fifth leaf / Growth indication.
 

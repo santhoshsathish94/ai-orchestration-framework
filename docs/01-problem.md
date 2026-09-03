@@ -3,7 +3,7 @@
 Clover is an AI Orchestration Framework connecting real-world Context, human Direction, AI-driven
 Action, and validated Outcome into a repeatable cycle.
 
-Context → Direction → Action → Outcome
+Context → Direction → Action → Outcome → Growth
 
 ## AI already does expert work
 

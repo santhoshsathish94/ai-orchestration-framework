@@ -14,7 +14,7 @@ The goal is to make one idea immediately understandable:
 
 The framework connects:
 
-**Context → Direction → Action → Outcome**
+**Context → Direction → Action → Outcome → Growth**
 
 The fifth leaf is **Growth**.
 
@@ -261,7 +261,7 @@ CLOVER is not:
 
 It is:
 
-**Context → Direction → Action → Outcome → Context → ...**
+**Context → Direction → Action → Outcome → Growth → Context → ...**
 
 Every cycle leaves something behind.
 
@@ -329,7 +329,7 @@ This is useful and common.
 
 ### Four leaves — the lucky clover
 
-**Context → Direction → Action → Outcome**
+**Context → Direction → Action → Outcome → Growth**
 
 The real environment comes first.
 
@@ -373,7 +373,7 @@ CLOVER must separate today's engineering framework from its future hypothesis.
 
 Today:
 
-**Context → Direction → Action → Outcome**
+**Context → Direction → Action → Outcome → Growth**
 
 Future question:
 
@@ -459,7 +459,7 @@ Then show the simple sequence:
 
 Only afterward introduce the formal names:
 
-**Context → Direction → Action → Outcome**
+**Context → Direction → Action → Outcome → Growth**
 
 For the human/AI boundary, use:
 
@@ -563,7 +563,7 @@ Use real-world visual situations rather than abstract technical diagrams at the 
 
 Keep text on screen minimal.
 
-Show the four stages visually rather than explaining them with paragraphs.
+Show the five stages visually rather than explaining them with paragraphs.
 
 Make the transition from confusion to clarity visually obvious.
 

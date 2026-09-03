@@ -8,7 +8,7 @@ Action, and validated Outcome into a repeatable cycle.
 There is nothing to install. The cycle runs on real work, with whatever tools and AI assistant are
 already in use.
 
-> **Context → Direction → Action → Outcome**
+> **Context → Direction → Action → Outcome → Growth**
 
 ## What this cycle adds
 
@@ -52,7 +52,7 @@ Take [`templates/orchestration-brief.md`](templates/orchestration-brief.md), cop
 for the task — `checkout-500.md`, for example. That one page is the working artifact for the whole
 cycle, and it lives beside the work rather than in a chat window.
 
-## 5. Walk the four stages (6 min)
+## 5. Walk the five stages (6 min)
 
 Fill each section in order. Every stage in the brief carries a **copy-and-paste prompt** for an AI
 assistant and a note on **who owns what**.
@@ -82,7 +82,7 @@ investigation.
 ## See a full example
 
 [`examples/production-exception-remediation/`](examples/production-exception-remediation/) runs a
-recurring production `500` through the four stages, with the prompts used at each one. Swap in
+recurring production `500` through the five stages, with the prompts used at each one. Swap in
 another scenario and follow the same path.
 
 ## If you remember one thing

@@ -3,21 +3,21 @@
 Plain-language definitions for the terms used across this framework. If a term here is not clear,
 that is a bug in the writing — [tell us](../CONTRIBUTING.md).
 
-## Clover and the four stages
+## Clover and the five stages
 
 | Term | What it means here |
 |---|---|
 | **Clover** | This framework. Clover is a way of working with System, Human, and AI to produce meaningful outcomes through real Context, human Direction, delegated Action, and validated Outcome. See [the framework](04-framework.md). |
-| **Stage** | One part of the cycle. Each stage has one job. The framework has four of them — Context → Direction → Action → Outcome. |
+| **Stage** | One part of the cycle. Each stage has one job. The framework has four of them — Context → Direction → Action → Outcome → Growth. |
 | **Leaf** | A leaf of the clover mark. The picture has five. In the documents the parts of the cycle are called stages; the fifth leaf represents Growth. |
 | **The common clover** | Three leaves: Direction, Action, Outcome. A common way of working where context is mostly what a human provides. |
 | **The lucky clover** | Four leaves. Context arrives from System reality and comes first, changing what the other three are worth. |
-| **The growth clover** | Five leaves. Growth, the learning layer that can emerge from repeated cycles; it is not a fifth operational stage. |
+| **The growth clover** | Five leaves. Growth is the fifth stage: preserve what the cycle taught and promote what has held. |
 | **Context** | What the work reasons from, and where the cycle starts. It may be an existing system or the reality already established while a system is being built: data, behavior, history, constraints, evidence, and previous cycles. |
 | **Direction** | Where human purpose and accountability enter the system. Humans choose what matters, the desired outcome, priorities, constraints, boundaries, and what must not happen. AI can be capable enough to suggest directions, but humans should always have the authority to decide what to pursue. |
 | **Action** | AI applies its capability to system Context and human Direction, determines how the work should happen, and executes within the defined boundaries. |
 | **Outcome** | The intended outcome demonstrated by the real environment. A closed task, a passing build, or a confident report sits outside this on its own. |
-| **Growth** | The learning and improvement that can emerge from repeating the four stages. It can accumulate across humans, AI systems, systems being worked on, teams, organizations, and frontier AI development; it is not owned by one actor. |
+| **Growth** | The learning and improvement that can emerge from repeating the five stages. It can accumulate across humans, AI systems, systems being worked on, teams, organizations, and frontier AI development; it is not owned by one actor. |
 | **The fifth leaf** | Growth. It represents the learning that can emerge around repeated cycles and the unknown boundary of how far capability and learning may develop. |
 
 ## Everything else

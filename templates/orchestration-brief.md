@@ -1,7 +1,7 @@
 # Orchestration Brief — &lt;Task or Outcome&gt;
 
 > A one-page brief for running a single task through Clover:
-> **Context → Direction → Action → Outcome**
+> **Context → Direction → Action → Outcome → Growth**
 >
 > Copy this file, rename it for the task, and fill each section as the work proceeds. The prompts are
 > starting points for an AI assistant — adapt them to the tools at hand. Keep the brief short. The
@@ -103,7 +103,7 @@ faster.*
 
 ## After each pass — write it back into Context
 
-This is not a fifth stage. Every attempt produces context, whether it succeeded or failed, and that
+This is the fifth stage. Every attempt produces context, whether it succeeded or failed, and that
 context is what the next attempt reasons from.
 
 > After each success and each failure, write the context files before the next attempt.

@@ -11,7 +11,7 @@ tool-specific, and the prompts work with any capable coding assistant.
 > the results are invented to show the shape of a full cycle. For real, evidence-backed work see
 > the [case studies](../../case-studies/).
 
-> **Context → Direction → Action → Outcome**
+> **Context → Direction → Action → Outcome → Growth**
 
 | Field | Value |
 |---|---|
@@ -142,7 +142,7 @@ were still accurate.
 
 1. Copy [`templates/orchestration-brief.md`](../../templates/orchestration-brief.md) and rename it for the exception at hand.
 2. Replace the checkout scenario above with the real alert.
-3. Walk the four stages with an assistant, using the prompts as starting points.
+3. Walk the five stages with an assistant, using the prompts as starting points.
 4. Write the context back after each pass, whether it succeeded or failed.
 5. Keep the filled-in brief with the change. It carries the evidence and what the cycle taught.
 

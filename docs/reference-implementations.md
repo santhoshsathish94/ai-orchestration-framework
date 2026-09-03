@@ -177,8 +177,8 @@ The reference implementation closes a specific gap between documentation and run
 
 All four run the same cycle:
 
-> **Context → Direction → Action → Outcome**
+> **Context → Direction → Action → Outcome → Growth**
 
 Cross-Team Knowledge Access spends most of its time in Context. Production Exception Remediation carries a cycle all the way to Outcome in the real environment. Multi-Repository Defect Remediation loops the hardest, because what the unresolved defects showed is written back into Context and is what the next pass starts from. Runtime Enforcement strengthens the execution and validation boundaries without adding a stage.
 
-The patterns add operational detail where a recurring problem needs it. None of them adds a fifth operational stage.
+The patterns add operational detail where a recurring problem needs it. None of them adds a stage.

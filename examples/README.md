@@ -1,8 +1,8 @@
 # Examples
 
-> **Context → Direction → Action → Outcome**
+> **Context → Direction → Action → Outcome → Growth**
 
-Worked walkthroughs that run a real task through the four stages. Each one fills in the
+Worked walkthroughs that run a real task through the five stages. Each one fills in the
 [Orchestration Brief](../templates/orchestration-brief.md), so another scenario can be swapped in and
 follow the same path.
 

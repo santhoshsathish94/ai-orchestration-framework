@@ -8,7 +8,7 @@ The five-leaf clover is more than a logo. It is how the framework is pictured, a
 
 The canonical operational cycle is:
 
-**Context → Direction → Action → Outcome**
+**Context → Direction → Action → Outcome → Growth**
 
 The fifth leaf is **Growth**. Nobody in an organization runs it. Growth describes the learning and improvement that can emerge from repeated cycles across the system, humans, AI, teams, and organizations.
 
@@ -214,7 +214,7 @@ Clover has two clearly separated layers.
 
 ## Engineering layer — useful today
 
-**Context → Direction → Action → Outcome**
+**Context → Direction → Action → Outcome → Growth**
 
 This is a practical way of working with System, Human, and AI around real context, human intent, means of execution, and real-world observation. Growth is the learning that can emerge from repeating those four stages.
 
@@ -272,7 +272,7 @@ Clover must clearly distinguish:
 
 ### What Clover establishes
 
-**Context → Direction → Action → Outcome** as a practical way of working with System, Human, and AI to produce meaningful outcomes. Growth is the fifth leaf and the learning layer that can emerge around repeated cycles.
+**Context → Direction → Action → Outcome → Growth** as a practical way of working with System, Human, and AI to produce meaningful outcomes. Growth is the fifth leaf and the learning layer that can emerge around repeated cycles.
 
 The policy is also explicit:
 
@@ -300,7 +300,7 @@ A reader should leave with two things.
 
 ### Practical takeaway
 
-> **Here is a useful way of working with System, Human, and AI to produce meaningful outcomes: Context → Direction → Action → Outcome.**
+> **Here is a useful way of working with System, Human, and AI to produce meaningful outcomes: Context → Direction → Action → Outcome → Growth.**
 
 ### Deeper question
 
@@ -337,9 +337,9 @@ That framing is intentionally scale-independent: the same relationship can be ap
 When helping build Clover:
 
 1. Treat **Clover** as the framework's current identity.
-2. Keep **Context, Direction, Action, Outcome** as the four stages of the framework, and **Growth** as the fifth leaf and learning layer, unless a genuine conceptual problem is discovered.
+2. Keep **Context, Direction, Action, Outcome** as the five stages of the framework, and **Growth** as the fifth leaf and learning layer, unless a genuine conceptual problem is discovered.
 3. Preserve the five-leaf clover as the visual and conceptual identity.
-4. Keep Growth distinct from a fifth operational stage.
+4. Keep Growth as the fifth stage: performed each cycle, with what accumulates from it left as an observation rather than a promise.
 5. Ground the framework in real engineering outcomes and production evidence.
 6. Keep Outcome tied to what the real environment shows.
 7. Keep human Direction explicit and accountable.

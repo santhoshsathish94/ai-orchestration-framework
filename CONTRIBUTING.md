@@ -14,7 +14,7 @@ included. Corrections, questions, ideas, and case studies are all welcome.
 
 ## How to raise a pull request
 
-1. Fork the repository and create a branch (for example, `docs/clarify-the-success-stage`).
+1. Fork the repository and create a branch (for example, `docs/clarify-the-outcome-stage`).
 2. Make a small, focused change. Match the existing structure and writing style.
 3. In the PR description, briefly cover:
    - **Direction** — the problem or gap this addresses, and the outcome you're after.
@@ -34,8 +34,8 @@ included. Corrections, questions, ideas, and case studies are all welcome.
 
 ## What we'll usually push back on
 
-- Added stages, jargon, or complexity the reader doesn't need. Clover is deliberately four stages:
-  **Context → Direction → Action → Outcome.**
+- Added stages, jargon, or complexity the reader doesn't need. Clover is deliberately five stages:
+  **Context → Direction → Action → Outcome → Growth.**
 - Rungs, levels, scores, or grades for evidence or delegated execution. They were removed on purpose,
   because a number is easier to claim than to justify. Say what you checked, what you observed, and
   where you stopped.

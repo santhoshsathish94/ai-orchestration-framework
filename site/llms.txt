@@ -4,9 +4,9 @@
 
 Clover is a framework for reasoning about and governing AI-enabled work, not a mandatory process. Its foundational priority is **System → Human → AI**: the system grounds reality; humans establish purpose, Direction, and accountability; AI provides capability and determines how work happens within human Direction.
 
-The framework has four operational stages: **Context → Direction → Action → Outcome**. Context is the relevant evidence about system reality needed for the current work. Direction is the human-defined outcome, priorities, constraints, boundaries, and accountability. Action is AI determining and executing the path within that Context and Direction. Outcome is the intended outcome demonstrated by evidence from the real system or environment.
+The framework has five operational stages: **Context → Direction → Action → Outcome → Growth**. Context is the relevant evidence about system reality needed for the current work. Direction is the human-defined outcome, priorities, constraints, boundaries, and accountability. Action is AI determining and executing the path within that Context and Direction. Outcome is the intended outcome demonstrated by evidence from the real system or environment.
 
-What makes Clover distinct is the relationship between those four stages and the authority boundary around them. The claim is testable: context should become more inspectable, Direction more explicit, execution safely delegable where evidence supports it, and Outcome harder to claim without environmental evidence tied to the intended outcome. A team should keep Clover only where applying it improves observable work.
+What makes Clover distinct is the relationship between those five stages and the authority boundary around them. The claim is testable: context should become more inspectable, Direction more explicit, execution safely delegable where evidence supports it, and Outcome harder to claim without environmental evidence tied to the intended outcome. A team should keep Clover only where applying it improves observable work.
 
 **Capability may scale. Direction remains human.** Competitive pressure or stronger models may increase delegated execution inside Action. They do not transfer purpose, acceptable risk, priorities, boundaries, or accountability to AI.
 
@@ -16,7 +16,7 @@ A failed result returns the cycle to Context with new information. The goal is n
 
 When a boundary matters to Outcome, an implementation should prefer runtime enforcement over model instructions alone. Verification controls can be protected outside the model with filesystem permissions, containers, CI identities, protected branches, tool gateways, MCP policies, or equivalent environment controls. Clover does not require a particular implementation, and the framework does not claim that its current orchestration engine automatically enforces every such control.
 
-Growth is not a fifth operational stage. It is the learning that can emerge when the four stages repeat and useful learning is preserved. Growth can accumulate across humans, AI systems, the system being worked on, teams, organizations, and frontier AI development; these layers are controlled differently. Clover does not assume customer work trains an AI provider's underlying model.
+Growth is the fifth stage: preserve what the cycle taught and promote what has held. What accumulates from doing it emerges when cycles repeat. Growth can accumulate across humans, AI systems, the system being worked on, teams, organizations, and frontier AI development; these layers are controlled differently. Clover does not assume customer work trains an AI provider's underlying model.
 
 ## Pages
 
@@ -30,8 +30,8 @@ Growth is not a fifth operational stage. It is the learning that can emerge when
 ## Core
 
 - [AGENTS.md](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/AGENTS.md): Instructions for agents — stages, evidence rules, authority boundaries, failure checks, and context handoff.
-- [README](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/README.md): What Clover is, what makes it distinct, the four stages, adoption, and limits.
-- [The four stages](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/04-framework.md): The framework, distinction, delegated execution, and evaluation model.
+- [README](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/README.md): What Clover is, what makes it distinct, the five stages, adoption, and limits.
+- [The five stages](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/04-framework.md): The framework, distinction, delegated execution, and evaluation model.
 - [Principles](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/03-principles.md): One principle per stage, including the human Direction boundary.
 
 ## Putting it into practice
@@ -42,7 +42,7 @@ Growth is not a fifth operational stage. It is the learning that can emerge when
 - [Governance](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/08-governance.md): Ownership, approval, attribution, access, and delegated execution.
 - [Outcome in practice](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/docs/07-outcome.md): What counts as evidence of the intended outcome.
 - [Quickstart](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/QUICKSTART.md): First cycle in about 15 minutes.
-- [Orchestration brief template](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/templates/orchestration-brief.md): One-page working artifact covering all four stages.
+- [Orchestration brief template](https://raw.githubusercontent.com/santhoshsathish94/clover-framework/main/templates/orchestration-brief.md): One-page working artifact covering every stage.
 
 ## Evidence
 

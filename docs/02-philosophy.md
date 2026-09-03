@@ -62,7 +62,7 @@ The framework does not claim novelty merely from naming Context, Direction, Acti
 Clover's claim is narrower and more practical: **make that existing relationship explicit for an AI era in which execution can increasingly be delegated to AI.**
 
 - **System → Human → AI** establishes the relationship: System grounds the work in reality, Human provides Direction and accountability, and AI provides capability and can take on execution.
-- **Context → Direction → Action → Outcome** gives that relationship an operational shape: understand the relevant reality, establish the desired outcome and boundaries, perform the work, and validate the outcome against reality.
+- **Context → Direction → Action → Outcome → Growth** gives that relationship an operational shape: understand the relevant reality, establish the desired outcome and boundaries, perform the work, and validate the outcome against reality.
 - The value of the framework is not the invention of that sequence. It is making the boundaries and feedback between **reality, human purpose, AI execution, and evidence** explicit enough to apply AI-enabled work without losing the pattern that existed before AI.
 - The claim is not a prerequisite for adoption. Clover does not need to be proven before people use it; adoption in the AI era gives us the opportunity to observe what emerges when the same underlying cycle is used with AI performing more of the execution.
 
@@ -160,7 +160,7 @@ The objects, actors, tools, and scope change. The relationship remains:
 
 and the work can be understood through:
 
-**Context → Direction → Action → Outcome**
+**Context → Direction → Action → Outcome → Growth**
 
 Repeated meaningful cycles can produce **Growth** when useful learning is preserved.
 
@@ -172,7 +172,7 @@ The number of leaves carries the argument.
 
 **Four leaves — the lucky clover.** Context arrives from the System and comes into the work explicitly. The work starts from reality rather than only from a description one person assembled. Direction can point at the relevant part of that reality, AI can use it to determine the means, and the outcome can be validated against the same system.
 
-**Five leaves — the growth clover.** Growth is not a fifth task and nobody has to run it. It is what can emerge when the four stages are repeated and what they reveal is preserved and learned from.
+**Five leaves — the growth clover.** Growth is the fifth stage: preserve what the cycle established and promote what has held. What accumulates from doing it is what can emerge when the five stages are repeated and what they reveal is preserved and learned from.
 
 Growth is not a prerequisite for adoption. It is not a result that Clover promises in advance. The framework can be used as it is, and as people adopt it in the AI era, the repeated meaningful cycles give us something to observe.
 

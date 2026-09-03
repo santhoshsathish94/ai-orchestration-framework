@@ -8,7 +8,7 @@
 
 Clover has two layers, and they are kept apart on purpose.
 
-The engineering layer is four stages — Context, Direction, Action, Outcome. Teams can use it today, and it stands on its own. Growth sits beyond those four, and nobody in an organization runs it. [The framework in full →](../docs/04-framework.md)
+The engineering layer is five stages — Context, Direction, Action, Outcome, Growth. Teams can use it today, and it stands on its own. Growth sits beyond those four, and nobody in an organization runs it. [The framework in full →](../docs/04-framework.md)
 
 This document is the other layer, and **it is not part of the framework**. No stage depends on it. A team can run every cycle the repository describes, get the outcomes in the [case studies](../case-studies/), and disagree with every word here. The engineering material loses nothing if this document turns out to be wrong.
 
@@ -187,7 +187,7 @@ That is the part Clover intends to keep true even in the unknown.
 
 ## What this changes about the engineering layer
 
-Very little. The four stages were built for work happening now.
+Very little. The five stages were built for work happening now.
 
 The engineering rule is not "increase autonomy as trust matures." It is narrower:
 

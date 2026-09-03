@@ -30,14 +30,15 @@ Competitive pressure does not change that boundary.
 
 The operational cycle is:
 
-**Context → Direction → Action → Outcome**
+**Context → Direction → Action → Outcome → Growth**
 
-These are not four levels of complexity. They are the same four jobs whether the task is tiny or enormous.
+These are not levels of complexity. They are the same five jobs whether the task is tiny or enormous.
 
 - **Context:** understand the relevant evidence about the System before acting.
 - **Direction:** establish the human-defined outcome and boundaries.
 - **Action:** determine and execute the means inside those boundaries.
 - **Outcome:** let the System or relevant environment show what actually happened.
+- **Growth:** preserve what the cycle taught, so the next one does not start where this one did.
 
 The problem may be a single **task**, a **feature**, a production incident, an entire **system**, an organization-wide workflow, or interconnected systems. The work may be carried by an **individual**, **AI**, a **team**, or an **organization**. These are different dimensions: do not confuse who is working with what is being worked on. Do not invent a different cycle for a bigger problem. Scale the Context, Direction, Action, and Outcome to the problem.
 
@@ -47,9 +48,9 @@ A simple task may need one source, one decision, one action, and one check. A co
 
 ## 2. Growth comes from meaningful cycles
 
-Do not treat Growth as a fifth stage and do not treat it as a task somebody has to run.
+Growth is the fifth stage, and it is the one you perform last. It is small and specific: **preserve what the cycle established, and say what it should change for the next one.**
 
-**Growth is what can emerge when meaningful cycles are repeated with good Direction and the learning from those cycles is preserved.**
+**What accumulates from it can emerge anywhere** — in humans, in AI usage, in teams, organizations, and the systems being worked on. You cannot make that happen. You can make it possible by doing the stage properly.
 
 Here, **good Direction does not mean a well-written prompt or a precise instruction alone.** It means human-owned Direction that is connected to a meaningful outcome and carries the priorities, boundaries, constraints, and accountability needed to pursue that outcome responsibly.
 
@@ -65,7 +66,7 @@ Likewise, one unfavorable cycle can contribute to Growth when it produces new in
 
 > **When meaningful cycles repeat, and what they teach is preserved, the system can grow.**
 
-Growth can appear in humans, AI usage, teams, organizations, and the systems being worked on. No single actor owns Growth as a fifth stage.
+Growth can appear in humans, AI usage, teams, organizations, and the systems being worked on. Performing the stage is your job; what accumulates from it is not owned by any single actor.
 
 Clover does **not** require Growth to be demonstrated before adoption. The cycle and its boundaries can be used as they are. As people adopt them in the AI era, we can observe what emerges from repeated meaningful cycles rather than treating Growth as a prerequisite or a promised result.
 
@@ -149,6 +150,16 @@ An unfavorable Outcome is not a wasted cycle. It is evidence about reality and c
 
 **Return to Context.** Ask what the Outcome tells you that the previous cycle did not know.
 
+### Growth
+
+Keep what the cycle taught.
+
+Before you finish, write back what was tried, what the environment showed, what turned out to be wrong, and what is still unknown. Say what the next cycle should start from and what it should not repeat. Section 5 sets out exactly what that record contains.
+
+Where you can see across cycles, say what is repeating: a failure that keeps recurring, an approach that keeps working, a constraint nobody wrote down. Naming a pattern is useful; deciding it is now a rule belongs to the human.
+
+This is the stage most often skipped, because the result is in and the work feels finished. Skipping it means the next cycle starts where this one started.
+
 ---
 
 ## 5. Preserve what the cycle taught
@@ -190,9 +201,11 @@ A second attempt needs something new: a new observation, a corrected assumption,
 
 ---
 
-## 7. Growth is observed through meaningful cycles, not required as proof
+## 7. Growth is performed, and what it produces is observed
 
-For agents, observe whether repeated meaningful cycles are producing better future work. These are signals to notice, not requirements that must be satisfied before Clover is considered valid.
+You perform the Growth stage every cycle. What accumulates from performing it is a separate thing, and it cannot be forced.
+
+Observe whether repeated meaningful cycles are producing better future work. These are signals to notice, not requirements that must be satisfied before Clover is considered valid.
 
 Look for signs such as:
 
@@ -284,7 +297,7 @@ For a trivial task, the cycle may fit in a few lines:
 
 For a complex system, the same cycle may repeat across many scoped subproblems:
 
-**Context → Direction → Action → Outcome → new Context → new Direction → …**
+**Context → Direction → Action → Outcome → Growth → new Context → new Direction → …**
 
 Do not make simple problems complex merely to demonstrate the framework. Do not make complex problems simple merely to finish faster.
 
@@ -298,7 +311,7 @@ Whatever the size of the problem, remember:
 
 **System → Human → AI**
 
-**Context → Direction → Action → Outcome**
+**Context → Direction → Action → Outcome → Growth**
 
 **AI can be capable enough to suggest directions. Humans should always have the authority to decide what to pursue.**
 

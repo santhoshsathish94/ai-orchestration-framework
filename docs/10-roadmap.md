@@ -17,7 +17,7 @@ help getting real context in front of AI and keeping it there.
   reached.
 - Work on the gap named in [the orchestration environment](orchestration-environment.md): nothing
   today reliably shows when an agent acts outside intent inside access it legitimately holds.
-- Keep the framework at four stages while the material around it grows.
+- Keep the framework at five stages while the material around it grows.
 
 ## What Clover cannot work out alone
 

@@ -92,14 +92,14 @@ The marks are the site's identity and they carry the argument, so they have rule
 - **One cycle, shown once.** The page carries a single labelled clover in `#story`. It replaced a
   three-act arc that grew the mark from three leaves to four to five. Do not reintroduce separate
   marks per act.
-- **Four stages only:** Context → Direction → Action → Outcome. Never introduce a competing
+- **Five stages only:** Context → Direction → Action → Outcome → Growth. Never introduce a competing
   arrow-chain, never append "→ repeat" to that one, and never bring back the short form
   "Where → Know → Do → Validate". Direction is *what*, not *where*.
-- **Growth is not an operational stage**, so it appears in one section, `#growth`, and nowhere else.
+- **Growth is the fifth stage**, and `#growth` is where the page explains it.
   Not in the hero, not in the stage list, not in the worked steps, not in the definition.
 - **"Leaves" is for the picture.** Say leaves when describing a clover mark. Everywhere else on the
   page, say stages.
-- **The framework is four stages** — Context, Direction, Action, Outcome. Growth is not something
+- **The framework is five stages** — Context, Direction, Action, Outcome, Growth. Growth is something
   a team runs, so no example, walkthrough or diagram gets a Growth step. Examples end at Outcome and
   loop back into Context.
 - **Iteration feeds Context, never Growth.** The page states the rule plainly: after each success or
@@ -123,7 +123,7 @@ The marks are the site's identity and they carry the argument, so they have rule
   move on: AI grew from finishing a line to doing whole jobs, the habit that stuck has the human
   supplying the context by hand, and the systems that hold the real context can now be read by AI
   directly. The human moves from being the source of the context to pointing at it. It is the first
-  place the four stages are named in order, so it must say Context first and must not mention Growth.
+  place the five stages are named in order, so it must say Context first and must not mention Growth.
   Keep it to the setup — the per-stage mechanics belong to the story, which goes much further
   (`#st-limit` on what the common clover costs, `#st-direction-2` on Direction pointing rather than
   describing). State the transition here, then hand over.

@@ -6,23 +6,23 @@ Clover is a way of working with **System, Human, and AI to produce meaningful ou
 
 It does not claim to have invented the underlying pattern. Before AI could execute substantial portions of work, humans already gathered context, set Direction, performed or coordinated the work, and checked the result. Clover makes that relationship explicit for an AI era in which more of the execution can be delegated to AI.
 
-**System → Human → AI** establishes the relationship. **Context → Direction → Action → Outcome** gives it an operational cycle.
+**System → Human → AI** establishes the relationship. **Context → Direction → Action → Outcome → Growth** gives it an operational cycle.
 
 Prompts, tools, agents, and AI model choice all sit underneath the cycle. What the framework describes is how human intent becomes an outcome the environment shows, and what the next attempt starts from.
 
-**The framework is four stages: Context → Direction → Action → Outcome.**
+**The framework is five stages: Context → Direction → Action → Outcome → Growth.**
 
-Clover also describes what can emerge when those four stages are repeated: **Growth**. Growth is not a fifth stage a team runs. It is the learning and improvement that can emerge from the entire cycle and feed future Context.
+The first four produce a result. **Growth** is what the team does with what that result taught: preserve it, look across cycles for what repeats, and promote what held into practice the next cycle can start from. Growth closes the loop back into Context.
 
 ## What makes Clover distinct
 
-Clover is not novel because it names four familiar activities. Understanding, deciding, acting, and observing what happened exist in many engineering, operational, and management practices already.
+Clover is not novel because it names five familiar activities. Understanding, deciding, acting, and observing what happened exist in many engineering, operational, and management practices already.
 
 The framework's useful claim is that these familiar activities need to be made explicit again when the **execution layer changes**. Humans historically participated directly in execution; AI can now perform a growing share of that execution.
 
 **System → Human → AI** establishes the relationship: System reality grounds the work, humans own Direction and accountability, and AI supplies capability and can take on execution.
 
-**Context → Direction → Action → Outcome** establishes the operational cycle: understand the relevant reality, establish the desired outcome and boundaries, perform the work, and observe what happened against reality.
+**Context → Direction → Action → Outcome → Growth** establishes the operational cycle: understand the relevant reality, establish the desired outcome and boundaries, perform the work, observe what happened against reality, and keep what it taught.
 
 The value of the framework is therefore not the invention of a sequence. It is making the boundaries and feedback between **reality, human purpose, AI execution, and evidence** explicit enough to design and govern AI-enabled work.
 
@@ -96,9 +96,13 @@ A lucky clover is the rare one, and this is the stage that makes it rare. It is 
 
 ### Five leaves — the growth clover
 
-Growth is not a fifth task and nobody has to run it. It is what can emerge when the four stages are repeated and what they reveal is preserved and learned from.
+Growth is the fifth stage. The first four produce a result; Growth is what the team does with what that result taught, so the next cycle does not start where the last one did.
 
-A Clover cycle can produce useful learning from **all four stages**:
+It has a job, and it is small: **preserve what the cycle established, look across cycles for what repeats, and promote what held into practice the next cycle can start from.** Writing the context files after a favorable or unfavorable Outcome is the smallest version of it. Deciding that a pattern has held often enough to become a default is the larger one.
+
+What gets written down and what gets reused are different bars. A single good result is an observation. A pattern earns promotion when it holds across repeated cycles.
+
+A Clover cycle can produce useful learning from **every stage before it**:
 
 - Context can reveal how the system actually behaves, what was previously unknown, and what information was missing.
 - Direction can reveal which purposes, constraints, priorities, processes, or decisions produced favorable or unfavorable outcomes.
@@ -129,9 +133,9 @@ The broader principle is:
 
 The model may remain the same while the human, team, organization, and system around it become better at using it. The underlying AI may also improve through frontier training and refinement, but that learning happens at a different layer and under different control.
 
-Growth therefore does not belong to one actor. It is the accumulated learning that can emerge from repeated interaction between the **system, human, and AI**.
+Growth therefore does not belong to one actor. Preserving and promoting what a cycle taught is work a team does; what accumulates from it reaches across the **system, human, and AI**.
 
-Everything below sets out the four stages one at a time, in the order they run.
+Everything below sets out the five stages one at a time, in the order they run.
 
 ## From AI models to AI orchestration
 
@@ -143,7 +147,7 @@ This is not a strict replacement hierarchy. An agentic workflow can be an import
 
 Context can accumulate at whatever scope fits — a human, a team, an organization, a system, or another defined boundary.
 
-## The four stages
+## The five stages
 
 Each stage has one job. The complexity belongs in the context, ownership, evidence, and feedback around the stages, and not in adding more of them.
 
@@ -152,9 +156,10 @@ Each stage has one job. The complexity belongs in the context, ownership, eviden
 | **Context** | The relevant evidence about system reality needed for the current work — an existing system or the system being built, its data, behavior, history, constraints, evidence, and previous cycles. | What do we need to know about reality before acting? |
 | **Direction** | The human establishes purpose, the outcome worth pursuing, priorities, constraints, boundaries, what must not happen, and accountability for the outcome. Direction can also point AI at where the relevant Context is and can include a process or approach when that itself matters to the intended outcome. | What needs to be done, what outcome is worth pursuing, and what must not happen? |
 | **Action** | AI uses human Direction as instructions and system Context as data to determine how the work should happen and execute within those boundaries. | How should the work happen? |
-| **Outcome** | What the system or environment shows actually happened as a result of the Action, whether favorable, unfavorable, partial, inconclusive, or otherwise different from what was intended. | What does reality show happened, and what can this Outcome teach the next cycle? |
+| **Outcome** | What the system or environment shows actually happened as a result of the Action, whether favorable, unfavorable, partial, inconclusive, or otherwise different from what was intended. | What does reality show happened? |
+| **Growth** | What the cycle taught, preserved where the next cycle will find it, and promoted into practice when it has held across enough cycles. | What did this teach, and what should the next cycle start from? |
 
-A cycle can then run again. What one cycle establishes becomes part of the next cycle's Context. The Outcome may change the next Action, and it may also change Direction when reality shows that a different outcome or constraint is now appropriate.
+A cycle can then run again. Growth is what carries one cycle into the next: what it preserves becomes part of the next cycle's Context. The Outcome may change the next Action, and it may also change Direction when reality shows that a different outcome or constraint is now appropriate.
 
 ---
 
@@ -234,11 +239,47 @@ A passing test is only as meaningful as the integrity of the test and its accept
 
 Where the work matters, preserve a concise Outcome record: what intended outcome was evaluated, what evidence was used, what environment it came from, what changed, what was not changed, what actually happened, and where observation stopped. The record should be reproducible enough for another human or agent to understand the Outcome and why it was characterized that way.
 
-Structured receipts can be useful when many agents or systems need to exchange Outcome information. They are an implementation choice, not a fifth Clover stage. A markdown context file may be sufficient for a small task; a structured record may be useful at larger scale.
+Structured receipts can be useful when many agents or systems need to exchange Outcome information. They are an implementation choice rather than a stage of their own. A markdown context file may be sufficient for a small task; a structured record may be useful at larger scale.
 
 The human holds the standard for what counts as sufficient evidence and remains accountable for the outcome. AI runs checks, gathers evidence, reports it accurately, and makes clear what it could not observe. The system or environment provides the reality against which the Outcome is judged.
 
 When the evidence does not support the intended outcome, return to Context rather than repeating the same Action. The unfavorable Outcome is information about reality and should change what the next cycle knows.
+
+---
+
+## Stage 5 — Growth
+
+Growth is where a cycle is turned into something the next cycle can use. Without it the cycle still
+produces a result, and the team starts the next one from the same place it started this one.
+
+The work is small and specific:
+
+- **Preserve what the cycle established.** What was tried, what the environment showed, what turned
+  out to be wrong, and what is still unknown, written where the next cycle will find it rather than
+  held in a conversation that ends.
+- **Look across cycles.** A single result is an observation. Repetition is what turns it into a
+  pattern worth naming — a recurring failure, an approach that keeps working, a constraint nobody
+  had written down.
+- **Promote what has held.** When a pattern has survived enough cycles, make it the default: a
+  practice, a check, a template, a piece of Direction that no longer has to be rediscovered.
+
+Unfavorable Outcomes feed this stage as much as favorable ones. A cycle that disproved an assumption
+has produced something worth keeping.
+
+**Core question.** What did this teach, and what should the next cycle start from?
+
+**What the human holds.** The judgment about what is worth keeping and what is worth promoting, and
+accountability for a practice once it becomes a default.
+
+**What AI does.** Most of the writing back — recording what the pass established, what it could not
+reach, and what contradicted an earlier assumption — and surfacing patterns across cycles that no
+one was tracking.
+
+**What happens there.** The stage gets skipped, because the result is in and the work feels finished.
+The next cycle then rediscovers what the last one already knew. The opposite failure is promoting too
+early: one good outcome becomes a rule, and the rule turns out to be a coincidence.
+
+Growth closes the loop. What it preserves is [Context](05-context-engineering.md) for the next pass.
 
 ---
 
@@ -299,4 +340,4 @@ Clover's common failure modes are predictable:
 6. **Silent unfavorable-outcome repetition** — the same Action is retried without learning.
 7. **Lost continuity** — useful learning remains in one session instead of becoming Context for the next.
 
-The answer to all seven is the same cycle, applied carefully: **Context → Direction → Action → Outcome**, then carry useful learning into the next cycle.
+The answer to all seven is the same cycle, applied carefully: **Context → Direction → Action → Outcome → Growth**, then carry useful learning into the next cycle.

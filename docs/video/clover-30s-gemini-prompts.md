@@ -182,9 +182,9 @@ Introduce the label **Outcome** with a short visual caption:
 
 Then show the human still standing beside the process—not replaced, not absent, still clearly accountable.
 
-The camera smoothly pulls back. The four stages appear as a clean, elegant loop:
+The camera smoothly pulls back. The five stages appear as a clean, elegant loop:
 
-**Context → Direction → Action → Outcome**
+**Context → Direction → Action → Outcome → Growth**
 
 Keep the diagram visually simple and integrated into the environment, not as a corporate presentation slide.
 
@@ -196,7 +196,7 @@ Finish on a clean bright identity frame with:
 
 and below it:
 
-**Context → Direction → Action → Outcome**
+**Context → Direction → Action → Outcome → Growth**
 
 The fifth leaf should remain visible but understated.
 
