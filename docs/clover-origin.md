@@ -8,7 +8,7 @@ The five-leaf clover is more than a logo. It is how the framework is pictured, a
 
 The canonical operational cycle is:
 
-**Context → Direction → Action → Success**
+**Context → Direction → Action → Outcome**
 
 The fifth leaf is **Growth**. Nobody in an organization runs it. Growth describes the learning and improvement that can emerge from repeated cycles across the system, humans, AI, teams, and organizations.
 
@@ -22,7 +22,7 @@ Clover begins with a simple priority:
 
 **System → Human → AI**
 
-The **system** is what becomes reality. Its state, data, behavior, history, constraints, and evidence are what ultimately show whether an intended outcome occurred. The system may already exist, or it may be the system we are trying to build.
+The **system** is what becomes reality. Its state, data, behavior, history, constraints, and evidence are what ultimately show what happened. The system may already exist, or it may be the system we are trying to build.
 
 The **human** provides Direction. Humans choose what matters, the desired outcome, priorities, acceptable risk, constraints, boundaries, what must not happen, and any process or approach that is itself part of the outcome. Humans remain accountable for what they direct.
 
@@ -130,31 +130,31 @@ Delegation can expand when evidence, observability, reversibility, blast radius,
 
 ---
 
-## 4. Success
+## 4. Outcome
 
-Success means the intended outcome is actually validated by reality.
+Outcome means what the system or environment shows actually happened as a result of the Action.
 
-Success is NOT:
+Outcome is intentionally broader than Success. It may be:
 
-- The AI saying it succeeded
-- A plausible answer
-- A generated explanation
-- Model confidence
-- An artifact that has not been connected back to the intended outcome
+- favorable;
+- unfavorable;
+- partial;
+- inconclusive; or
+- otherwise different from what was intended.
+
+The point is not to reserve the fourth stage for a win. The point is to make the actual result visible and evidence-based so that any meaningful learning can feed the next cycle.
 
 The system or environment supplies the evidence that matters.
 
-Examples include actual performance improvement, a real memory leak mitigation, passing tests tied to the intended behavior, improved production behavior, correct data analysis confirmed against the source system, or an improved user/customer outcome.
+Examples include actual performance improvement, a real memory leak mitigation, passing tests tied to the intended behavior, improved production behavior, correct data analysis confirmed against the source system, an unmet acceptance criterion, a failed hypothesis, or an unexpected side effect.
 
-> **The system becomes the evidence of whether the outcome exists in reality.**
-
-Success is preferred over Results. Results describe what happened; Success asks whether the intended outcome was actually achieved.
+> **Reality shows what happened.**
 
 **Core question:**
 
-> Did reality validate the intended outcome?
+> What does reality show actually happened, and what does that teach us about the next cycle?
 
-When the outcome is not validated, the result becomes new Context. The next cycle should be materially better informed rather than simply repeating the same Action.
+When the Outcome does not match the intended outcome, the result becomes new Context. The next cycle should be materially better informed rather than simply repeating the same Action.
 
 ---
 
@@ -167,9 +167,9 @@ Growth is different from the first four leaves because it describes learning and
 Growth can emerge from every part of the cycle:
 
 - Context can reveal how the system behaves, what was unknown, or what information was missing.
-- Direction can reveal which purposes, priorities, constraints, or decisions produced good or bad outcomes.
+- Direction can reveal which purposes, priorities, constraints, or decisions produced favorable or unfavorable outcomes.
 - Action can reveal which approaches, tools, processes, and execution patterns work or fail.
-- Success can reveal what actually held, what failed, and what the evidence showed.
+- Outcome can reveal what actually happened, what held, what failed, and what the evidence showed.
 
 Growth can accumulate at different layers:
 
@@ -214,9 +214,9 @@ Clover has two clearly separated layers.
 
 ## Engineering layer — useful today
 
-**Context → Direction → Action → Success**
+**Context → Direction → Action → Outcome**
 
-This is a practical way of working with System, Human, and AI around real context, human intent, means of execution, and real-world validation. Growth is the learning that can emerge from repeating those four stages.
+This is a practical way of working with System, Human, and AI around real context, human intent, means of execution, and real-world observation. Growth is the learning that can emerge from repeating those four stages.
 
 ## Hypothesis layer — questions beyond the cycle
 
@@ -272,7 +272,7 @@ Clover must clearly distinguish:
 
 ### What Clover establishes
 
-**Context → Direction → Action → Success** as a practical way of working with System, Human, and AI to produce meaningful outcomes. Growth is the fifth leaf and the learning layer that can emerge around repeated cycles.
+**Context → Direction → Action → Outcome** as a practical way of working with System, Human, and AI to produce meaningful outcomes. Growth is the fifth leaf and the learning layer that can emerge around repeated cycles.
 
 The policy is also explicit:
 
@@ -300,7 +300,7 @@ A reader should leave with two things.
 
 ### Practical takeaway
 
-> **Here is a useful way of working with System, Human, and AI to produce meaningful outcomes: Context → Direction → Action → Success.**
+> **Here is a useful way of working with System, Human, and AI to produce meaningful outcomes: Context → Direction → Action → Outcome.**
 
 ### Deeper question
 
@@ -317,7 +317,7 @@ The goal is to make the reader think about the fifth leaf while keeping the huma
 > **Context gives the work the information to understand the system reality.**  
 > **Direction gives it a human-defined purpose.**  
 > **Action applies capability to that Direction and Context.**  
-> **Success lets reality validate the outcome.**  
+> **Outcome shows what reality says happened.**  
 > **Growth carries learning into future cycles.**
 
 Then:
@@ -337,11 +337,11 @@ That framing is intentionally scale-independent: the same relationship can be ap
 When helping build Clover:
 
 1. Treat **Clover** as the framework's current identity.
-2. Keep **Context, Direction, Action, Success** as the four stages of the framework, and **Growth** as the fifth leaf and learning layer, unless a genuine conceptual problem is discovered.
+2. Keep **Context, Direction, Action, Outcome** as the four stages of the framework, and **Growth** as the fifth leaf and learning layer, unless a genuine conceptual problem is discovered.
 3. Preserve the five-leaf clover as the visual and conceptual identity.
 4. Keep Growth distinct from a fifth operational stage.
 5. Ground the framework in real engineering outcomes and production evidence.
-6. Keep Success tied to validation by the real environment.
+6. Keep Outcome tied to what the real environment shows.
 7. Keep human Direction explicit and accountable.
 8. Preserve **System → Human → AI** as the foundational priority.
 9. Keep capability, authority, and accountability distinct.
