@@ -276,6 +276,8 @@ Growth is not reserved for scale. It is not something only frontier AI providers
 interaction data, and it does not require a team, an organization, or a repeated pattern. One person,
 one table, one wrong answer, one thing learned is Growth.
 
+> **Any system that does not retrospect its growth will not produce better outcomes.**
+
 **Core question.** What did this teach, and what should the next cycle start from?
 
 **What the human holds.** The judgment about what is worth keeping, and accountability for anything

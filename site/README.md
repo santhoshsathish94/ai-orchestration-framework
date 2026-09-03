@@ -45,7 +45,7 @@ The page is one continuous argument rather than one section per stage.
 9. `#stage-growth` — What is Growth?
 10. `#why-cycle` — Why is it a cycle? Growth becomes the next Context
 11. `#scale` — Two dimensions: who is working, and what they are working on
-12. `#try` — Four steps on a real problem the reader already has
+12. `#try` — Five steps on a real problem the reader already has
 13. `#evidence-preview` — Case studies, reference implementations, how model reviews are reported
 14. `#next` — The closing restatement and where to go
 15. `#stands-for` — What Clover stands for? The final word
@@ -58,10 +58,7 @@ Each leaf of the mark is an SVG `<a>` to its own stage, so the mark is also the 
 generic in-page click handler scrolls them; nothing leaf-specific is needed. The leaves are links,
 not `tabindex` groups, so the keyboard reaches them for free.
 
-There is no author section on this page. The nav and the footer both link to `author/` instead.
-
-Failure-mode material is folded into the arc sections as "what happens there" rather than kept
-standalone.
+There is no author section on this page. The nav links to `author/` instead.
 
 ## How it is built
 
@@ -81,26 +78,27 @@ The marks are the site's identity and they carry the argument, so they have rule
   second leaf path anywhere — add one and the identity drifts.
 - **One mark carries the story**, drawn with five leaves at 72 degrees and labeled Context,
   Direction, Execution, Outcome and Growth. All five are solid: Growth is a stage of the cycle, not a
-  possibility hanging off the end of it, and drawing it dotted said the opposite. The hero mark is
-  the same five leaves, unlabeled; the small header mark is decorative and stays solid.
-- Leaf names are real `<text>` labels positioned outside each leaf tip, inside a `viewBox` of
-  `-30 -18 160 117` so the labels have room. They are content, not decoration — never replace them
-  with a legend.
+  possibility hanging off the end of it, and drawing it dotted said the opposite. It is the
+  `.clover--hero` mark in the pinned rail and the only labeled mark on the site; the small header
+  mark is decorative and stays solid.
+- Leaf names are real `<text>` labels, each set on a `<textPath>` along an arc outside its own leaf
+  tip, inside a `viewBox` of `-6 -10 112 110` so the labels have room. They are content, not
+  decoration — never replace them with a legend.
 - Fill state is CSS, not geometry. `.clover__leaf.is-soft` is an established stage,
   `.clover__leaf.is-new` is the stage that just arrived, and `.clover__leaf.is-next` is Growth drawn
   with a dashed stroke and no fill. `.clover__leaf.is-filled` stays for the solid leaves in the
   header and hero.
-- Marks that carry meaning get `role="img"` and an `aria-label` naming the leaves. Decorative
+- Marks that carry meaning get `role="group"` and an `aria-label` naming the leaves. Decorative
   duplicates, such as the one in the header, get `aria-hidden="true"`.
-- An arc mark has to hold up between about 200px and 420px; the header and hero marks between about
-  26px and 160px. Nothing else is allowed to carry the identity: no brains, robots, circuit boards,
-  neural networks, hexagons or glowing AI graphics.
+- An arc mark has to hold up between about 200px and 420px; the pinned mark between about 110px and
+  400px, and the header mark is 26px. Nothing else is allowed to carry the identity: no brains,
+  robots, circuit boards, neural networks, hexagons or glowing AI graphics.
 
 ## Editing rules
 
-- **One cycle, shown once.** The page carries a single labelled clover in `#story`. It replaced a
-  three-act arc that grew the mark from three leaves to four to five. Do not reintroduce separate
-  marks per act.
+- **One cycle, shown once.** The page carries a single labelled clover in `div.pinned__mark`, the
+  first child of `div.pinned` and a sticky rail that spans every section. It replaced a three-act arc
+  that grew the mark from three leaves to four to five. Do not reintroduce separate marks per act.
 - **The site does not use the `System → Human → AI` chain.** Say it in words: the system is the
   reality, and the human and AI are **the actors**. The docs still carry the chain; the site does not.
   `Context → Direction → Execution → Outcome → Growth` is **the system cycle**. Say those names when
@@ -123,7 +121,7 @@ The marks are the site's identity and they carry the argument, so they have rule
   named claim **Capability may scale. Direction remains human.** now lives on the security page and
   in `llms.txt`, not on the home page.
 - **The system cycle has five stages** — Context, Direction, Execution, Outcome, Growth. All five get
-  named wherever the cycle is enumerated: the hero, the stage list, the story, the agent file
+  named wherever the cycle is enumerated: the mark, the five stage sections, the agent file
   description on `start/`, and `llms.txt`. `#stage-growth` and `#why-cycle` are where the home page
   explains the fifth stage and why the five come round again.
 - **Growth is whatever the Outcome taught, carried back into Context**, at any size. No repetition and
@@ -144,12 +142,13 @@ The marks are the site's identity and they carry the argument, so they have rule
 - **Never invent** metrics, customers, adoption, or results. The React memory leak is a CI-green pull
   request that is *not merged*, and the Contentful production cutover *has not run* — the site must
   keep saying so.
-- **`#capability` is short on purpose.** Six roles and one paragraph, in the same voice as the rest
-  of the page. It says what AI can already do and stops there. Do not turn it into a benchmark table,
-  do not add scores, and do not start arguing about what AI is missing — that argument belongs to the
-  story below it, and making it twice weakens both.
-- `#story` says nothing about production. Development first, then the other non-production
-  environments. Access is read-only and scoped to what the human already holds.
+- **`#capability` is short on purpose.** A lede and one paragraph, in the same voice as the rest of
+  the page. It says the cycle ran before AI, with the human as the actor, and stops there. Do not
+  turn it into a benchmark table, do not add scores, and do not start arguing about what AI is
+  missing — that argument belongs to `#humans` below it, and making it twice weakens both.
+- The home page says nothing about production. `#setup` on `start/` is where the environments are
+  named: development first, then the other non-production environments. Access is read-only and
+  scoped to what the human already holds.
 - Growth is the next stage, never a hypothesis, a prediction or "next phase", and never described as
   dangerous. Do not explain the *Black Clover* or devil association anywhere.
 - Never assert that any AI provider trains on customer or enterprise work. Keep the accumulation
@@ -165,17 +164,16 @@ The marks are the site's identity and they carry the argument, so they have rule
   than the header height, so the two overlap; at an exact match the page scrolled through the sliver
   between them.
 - **Use the width.** Sections must not stack down the left in a 68ch column. `.wrong__flow` and
-  `.wrong__cols` run the "what happens there" blocks across both columns, `.split` puts a heading
-  and lead on the left with the detail on the right, `.stack--2` gives a two-column definition list,
-  and `.panel__cols` spreads a tab panel across the full measure.
+  `.wrong__cols` run a `.wrong` block across both columns, `.split` puts a heading and lead on the
+  left with the detail on the right, `.stack--2` gives a two-column definition list, and
+  `.panel__cols` spreads a tab panel across the full measure.
 - Tabs: one generic `initTabs` over `[data-tabs]` groups. The first tab and panel in each group carry
   `aria-selected` and `is-active` in the markup, so nothing flashes before `app.js` runs.
 - The worked example component is `.run` — plain HTML and CSS, no images and no JavaScript. **No page
   currently uses it**, though its 14 rules are still in `styles.css`. If it comes back, keep it to a
   few steps, do not turn it back into prose, and keep it ending at Outcome with `.run__loop` turning
   back into Context.
-- `#story` is the only home-page anchor linked from another page. Keep it resolving, and keep all six
-  navs identical.
+- No page links to any home-page anchor. Keep all six navs identical.
 - `author/index.html` is the one page written in the first person about a life rather than about the
   framework. It is also the one place *Black Clover* may be named, as a favorite anime. It ends on
   the verse, with no closing section and no site footer. Leave all of that alone.
@@ -189,10 +187,10 @@ The marks are the site's identity and they carry the argument, so they have rule
   every relative link and every anchor.
 - **The primary nav is six plain links, and it does not point at any section of the home page.** It was
   a "Framework" dropdown holding the three clover sections and the worked example, and later carried a
-  first link to `/#story`. Both are gone, because the story section labels
-  its own leaves and the reader can pick one there. Do not reintroduce a dropdown to hold anchors that
-  the page already exposes. Nav labels are the only Title Case text on the site; everything else,
-  including the headings those links point at, stays sentence case.
+  first link to `/#story`. Both are gone, because the pinned mark labels its own leaves and links
+  each one to its stage section, so the reader can pick one there. Do not reintroduce a dropdown to
+  hold anchors that the page already exposes. Nav labels are the only Title Case text on the site;
+  everything else, including the headings those links point at, stays sentence case.
 - **Anchor scrolling is eased in `app.js`, and the duration scales with the distance.** The browser's
   own `scroll-behavior: smooth` runs at a fixed speed, so a jump from the hero down to the story
   arrived almost as abruptly as no animation at all. The CSS rule stays for the no-JS case, and
@@ -213,24 +211,25 @@ The marks are the site's identity and they carry the argument, so they have rule
   deleted six stages, one showed the production cutover as a completed step, and one said the memory
   leak fix went to Next.js when it went to React. Any new diagram gets checked against the case study
   text before it ships.
-- **The story is a single `[data-story]` block** with its own clover and its own steps. It was three
-  separate acts, each with its own mark, because a leaf had to link to a step in the act being read.
-  With one block that constraint is gone.
-- **Each `.story__step` carries `data-leaf` and `data-caption`**, and the last one carries
-  `data-ink`. `app.js` picks, per block, the step whose centre is nearest the middle of the viewport,
-  and highlights that leaf and its label. Nearest-to-centre is used rather than an
-  IntersectionObserver because it gives the same answer scrolling up as scrolling down; an observer
-  fires on entry and leaves the highlight stale on the way back up. Scrolling is never taken over.
-- **Every leaf carries a `<text class="story__label">`** naming the stage, and the label highlights
-  with its leaf. The labels are content, not decoration — a reader has to be able to tell which stage
-  is being described without counting leaves.
-- **Leaf links are SVG `<a class="story__leaf-link">` scoped to their own act**, with an
-  `aria-label`, so they are clickable and focusable and still jump to the right step without
-  JavaScript.
-- **`#context`, `#st-direction-2`, `#st-execution-2` and `#st-outcome-2` are step ids inside the
-  story**, not section ids. Nothing in the nav points at them, but keep them — they are the anchors
-  the clover leaves link to, and `check.ps1` follows every one. Each leaf and its step share a
-  `data-leaf` value, so the four values must stay paired.
+- **`[data-story]` is `div.pinned`**, the wrapper holding every section and the mark itself. It was
+  three separate acts, each with its own mark, because a leaf had to link to a step in the act being
+  read. With one mark spanning the page that constraint is gone.
+- **Each `section.band.stage` carries `data-leaf`.** `app.js` picks, per block, the stage whose
+  centre is nearest the middle of the viewport, and highlights that leaf and its label. It also still
+  reads `data-caption` and `data-ink`, but nothing on the page carries either. Nearest-to-centre is
+  used rather than an IntersectionObserver because it gives the same answer scrolling up as scrolling
+  down; an observer fires on entry and leaves the highlight stale on the way back up. Scrolling is
+  never taken over.
+- **Every leaf carries a `<text class="clover__label story__label">`** naming the stage, and the
+  label highlights with its leaf. The labels are content, not decoration — a reader has to be able to
+  tell which stage is being described without counting leaves.
+- **Leaf links are SVG `<a class="clover__leaf-hit">`**, one around each leaf, its vein and its
+  label, carrying an `href` to that stage section, an `aria-label` and a `<title>`, so they are
+  clickable and focusable and still jump to the right section without JavaScript.
+- **`#stage-context`, `#stage-direction`, `#stage-execution`, `#stage-outcome` and `#stage-growth`
+  are the anchors the clover leaves link to.** Nothing in the nav points at them, but keep them —
+  `check.ps1` follows every one. Each leaf, its label and its section share a `data-leaf` value, so
+  the five values must stay paired.
 - American spelling. No employer, product, cluster or infrastructure names.
 - **Bump the `?v=` on `styles.css` and `app.js` whenever either changes.** All six pages carry it.
   GitHub Pages sends `Cache-Control: max-age=600` on every file and they expire independently, so
