@@ -9,6 +9,16 @@
   <strong>Clover Framework</strong> · System, Human and AI working together for meaningful outcomes
 </p>
 
+<p align="center">
+  <a href="https://cloverframework.com/"><strong>cloverframework.com</strong></a>
+  ·
+  <a href="QUICKSTART.md">Quickstart</a>
+  ·
+  <a href="AGENTS.md">AGENTS.md</a>
+  ·
+  <a href="docs/README.md">Docs</a>
+</p>
+
 ---
 
 # Clover
@@ -211,3 +221,19 @@ What it keeps becomes Context, which is how the loop closes.
 When cycles repeat, patterns can emerge. When patterns are preserved, future cycles can improve.
 
 Growth does not belong to one actor. It can emerge across humans, AI systems, teams, organizations, and the systems being worked on, while each layer retains its own authority and control over what it can change.
+
+---
+
+# Where to go next
+
+**[cloverframework.com](https://cloverframework.com/)** is the framework as one continuous read, and
+the shortest way in. It also carries getting started, governance, the evidence, and a glossary.
+
+| | |
+|---|---|
+| [Quickstart](QUICKSTART.md) | Run a first cycle on work you already have. |
+| [AGENTS.md](AGENTS.md) | The operating specification. Give it to an AI agent and the agent works this way. |
+| [Docs](docs/README.md) | The framework in full, one document per part. |
+| [Case studies](case-studies/) | What has actually been run, and where each one stopped. |
+| [Orchestration brief](templates/orchestration-brief.md) | A one-page working artifact for the five stages. |
+| [Contributing](CONTRIBUTING.md) | How to raise a correction, a gap, or a disagreement. |
