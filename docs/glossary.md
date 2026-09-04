@@ -29,8 +29,8 @@ that is a bug in the writing — [tell us](../CONTRIBUTING.md).
 | Term | What it means here |
 |---|---|
 | **Orchestration** | Coordinating people, AI, tools, and context so that work produces an outcome the environment confirms, rather than each part doing its own thing. |
-| **Orchestration environment** | The access layer between AI and the current systems an organization uses. It is what feeds the Context stage. See [the orchestration environment](orchestration-environment.md). |
-| **MCP server** | A small service that gives an agent a scoped way to read one system — a repository, a datasource, a log store, an environment. Read-only, and scoped to what the human driving the work already has access to. This is how the Context stage gets connected. |
+| **Orchestration environment** | The access layer between AI and the current systems an organization uses. Read-only connections to whatever those systems keep — their records, their history, their measurements, the working environments. It is what feeds the Context stage. See [the orchestration environment](orchestration-environment.md). |
+| **MCP server** | The software route into a system: a small service that gives an agent a scoped way to read one of them — a repository, a datasource, a log store, an environment. Read-only, and scoped to what the human driving the work already has access to. Systems that are not software need the same thing by some other means. |
 | **Capability** | Anything that can do work: a human, a team, an AI model, an agent, a tool, a system. Capability does not by itself grant authority or accountability. |
 | **Intent** | What a human actually wants to achieve. The outcome, and not the task. |
 | **Output** | What got produced — a file, a patch, a report. Distinct from the **Outcome**, which is the change in the real world that was wanted. Work can produce output and reach no outcome. |
@@ -40,11 +40,11 @@ that is a bug in the writing — [tell us](../CONTRIBUTING.md).
 | **Ownership** | The named human accountable for an outcome. Work can be delegated; ownership cannot. |
 | **Agent** | An AI system that can take actions and use tools, rather than only produce text. |
 | **Agentic workflow** | A designed loop of agent steps that repeats a known process. Orchestration differs in that it keeps what the outcome taught it. |
-| **Autonomy** | In Clover's current engineering layer, this refers only to how much of the *path* AI is allowed to determine inside human Direction. It never means ownership of purpose, acceptable risk, priorities, boundaries, or accountability. A more capable model does not create authority over the destination. |
+| **Autonomy** | In Clover, this refers only to how much of the *path* AI is allowed to determine inside human Direction. It never means ownership of purpose, acceptable risk, priorities, boundaries, or accountability. A more capable model does not create authority over the destination. |
 | **Delegated execution** | The amount of operational work a human or organization chooses to have AI perform inside human Direction. It can expand or contract by context and evidence. It does not transfer purpose, acceptable risk, priorities, boundaries, the destination, or accountability to AI. |
-| **Telemetry** | The signals a running system emits about itself — logs, metrics, traces, error rates. |
+| **Telemetry** | The signals a running system emits about itself. In software: logs, metrics, traces, error rates. In any other system: whatever it records about its own operation while it runs. |
 | **Blast radius** | How much damage a change could do if it is wrong. A bigger blast radius means more human approval. |
-| **Non-production** | Any environment that is not serving real users — local, test, staging. It can still contain sensitive data and is not automatically safe to expose. |
+| **Non-production** | Any setting that is not the live system — a copy, a test bench, a rehearsal, and in software local, test and staging. It can still contain sensitive data and is not automatically safe to expose. |
 | **Guardrail** | A constraint that keeps work inside safe boundaries: a required approval, a scope limit, a check that must pass. |
 | **Boundary** | A limit on the work set by human Direction — scope, approval points, what must not happen. A boundary can be widened or narrowed by the accountable human. |
 | **Obligation** | A duty that comes from law, regulation, or an organization's own rules. It sits outside Clover's boundaries, applies to the system and to both actors, and no one inside a cycle can trade it away. Adopting Clover neither satisfies it nor removes it. See [governance](08-governance.md#the-rules-each-actor-works-inside). |

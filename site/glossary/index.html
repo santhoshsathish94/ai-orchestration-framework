@@ -85,8 +85,8 @@
   <h2 style="font-size:1.05rem;margin-top:2rem">Everything else</h2>
   <dl class="terms">
     <div><dt>Orchestration</dt><dd>Coordinating people, AI, tools, and context so that work produces an outcome the environment confirms, rather than each part doing its own thing.</dd></div>
-    <div><dt>Orchestration environment</dt><dd>The access layer between AI and the systems an organization already uses. Read-only MCP servers in front of the repositories, datasources, logs and environments. It is what feeds the Context stage.</dd></div>
-    <div><dt>MCP server</dt><dd>A small service that gives an agent a scoped way to read one system — a repository, a datasource, a log store, an environment. Read-only, and scoped to what the human driving the work already has access to. This is how the Context stage gets connected.</dd></div>
+    <div><dt>Orchestration environment</dt><dd>The access layer between AI and the systems an organization already uses. Read-only connections to whatever those systems keep — their records, their history, their measurements, the working environments. For software that usually means MCP servers in front of the repositories, datasources, logs and environments. It is what feeds the Context stage.</dd></div>
+    <div><dt>MCP server</dt><dd>The software route into a system: a small service that gives an agent a scoped way to read one of them — a repository, a datasource, a log store, an environment. Read-only, and scoped to what the human driving the work already has access to. Systems that are not software need the same thing by some other means.</dd></div>
     <div><dt>Capability</dt><dd>Anything that can do work: a human, a team, an AI, an agent, a tool, a system. Capability does not by itself grant authority or accountability.</dd></div>
     <div><dt>Intent</dt><dd>What a human actually wants to achieve. The outcome, and not the task.</dd></div>
     <div><dt>Output</dt><dd>What got produced — a file, a patch, a report. Distinct from the <strong>Outcome</strong>, which is the change in the real world that was wanted. Work can produce output and reach no outcome.</dd></div>
@@ -96,11 +96,11 @@
     <div><dt>Ownership</dt><dd>The named human accountable for an outcome. Work can be delegated; ownership cannot.</dd></div>
     <div><dt>Agent</dt><dd>An AI system that can take actions and use tools, rather than only produce text.</dd></div>
     <div><dt>Agentic workflow</dt><dd>A designed loop of agent steps that repeats a known process. Orchestration differs in that it keeps what the outcome taught it.</dd></div>
-    <div><dt>Autonomy</dt><dd>In Clover's current engineering layer, this refers only to how much of the <em>path</em> AI is allowed to determine inside human Direction. It never means ownership of purpose, acceptable risk, priorities, boundaries, or accountability. A more capable model does not create authority over the destination.</dd></div>
+    <div><dt>Autonomy</dt><dd>In Clover, this refers only to how much of the <em>path</em> AI is allowed to determine inside human Direction. It never means ownership of purpose, acceptable risk, priorities, boundaries, or accountability. A more capable model does not create authority over the destination.</dd></div>
     <div><dt>Delegated execution</dt><dd>The amount of operational work a human or organization chooses to have AI perform inside human Direction. It can expand or contract by context and evidence. It does not transfer purpose, acceptable risk, priorities, boundaries, the destination, or accountability to AI.</dd></div>
-    <div><dt>Telemetry</dt><dd>The signals a running system emits about itself — logs, metrics, traces, error rates.</dd></div>
+    <div><dt>Telemetry</dt><dd>The signals a running system emits about itself. In software: logs, metrics, traces, error rates. In any other system: whatever it records about its own operation while it runs.</dd></div>
     <div><dt>Blast radius</dt><dd>How much damage a change could do if it is wrong. A bigger blast radius means more human approval.</dd></div>
-    <div><dt>Non-production</dt><dd>Any environment that is not serving real users — local, test, staging. It can still contain sensitive data and is not automatically safe to expose.</dd></div>
+    <div><dt>Non-production</dt><dd>Any setting that is not the live system — a copy, a test bench, a rehearsal, and in software local, test and staging. It can still contain sensitive data and is not automatically safe to expose.</dd></div>
     <div><dt>Guardrail</dt><dd>A constraint that keeps work inside safe boundaries: a required approval, a scope limit, a check that must pass.</dd></div>
     <div><dt>Boundary</dt><dd>A limit set by human Direction — how far the work may go, what it must not do, what needs approval first. The accountable human can widen it or narrow it as evidence comes in.</dd></div>
     <div><dt>Obligation</dt><dd>A requirement that comes from law, regulation, or an organization's own rules. It sits outside Clover, so nobody inside a cycle can trade it away and no Direction can lift it. Adopting Clover neither satisfies an obligation nor removes one.</dd></div>
