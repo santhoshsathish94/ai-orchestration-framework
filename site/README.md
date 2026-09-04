@@ -46,7 +46,7 @@ The page is one continuous argument rather than one section per stage.
 10. `#why-cycle` — Why is it a cycle? Growth becomes the next Context
 11. `#try` — A common example: something changed since last time, and each stage explained against it
 12. `#scale` — Complexity can grow: the same cycle for individuals, teams, organizations and AI
-13. `#evidence-preview` — Case studies, reference implementations, how model reviews are reported
+13. `#evidence-preview` — The cycle exists in every system: what Clover is still working out, and where contribution matters
 14. `#next` — The closing restatement and where to go
 15. `#real-world-context` — Context in the real world? Credit stays with the original creators
 16. `#real-world-direction` — Direction in the real world? Capability is not permission to choose
