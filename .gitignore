@@ -3,3 +3,6 @@ assets/peacock-feather.png
 
 __pycache__/
 .pytest_cache/
+
+# Written by reference/runtime-enforcement/verify.sh when the example runs.
+reference/runtime-enforcement/workspace/src/agent-change.js

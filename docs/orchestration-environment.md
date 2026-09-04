@@ -90,6 +90,12 @@ real orchestration work.
 deployment, or close a ticket that should have stayed open. Write access should be added narrowly,
 for a specific purpose, and never as a convenience.
 
+Read-only is not the same as harmless. Reading is the whole surface for finding credentials that
+should not be there, assembling a picture of the systems that no single person has, and carrying any
+of it somewhere it should not go. Those risks are not removed by refusing write access; they are the
+reason the connection is scoped to one human's existing privileges and the reason the layer itself is
+treated as a sensitive asset.
+
 **Use the accounts the organization already issues.** Read-only service and test accounts are
 standard practice in most enterprises. This is not a new category of access; it is existing access
 pointed at a new consumer.

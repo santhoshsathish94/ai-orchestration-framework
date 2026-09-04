@@ -126,6 +126,26 @@ several that point the same way before anything treats it as settled. What Growt
 
 ---
 
+## 9. A goal picked up from something the work read
+
+**What it looks like:** The agent starts pursuing something nobody asked for. A comment on a ticket, a
+string in a log line, a `README` in a dependency, or a page it fetched contained something shaped like
+an instruction, and the work quietly changed direction. The output is coherent and the reasoning reads
+well, because the agent is doing exactly what it now believes it was asked to do.
+
+**Why it happens:** Direction and Context arrive as the same kind of thing — text. Nothing in the
+material marks which of it came from the accountable human, and a model has no independent way to
+tell an instruction it was given from an instruction it found.
+
+**Caught by Direction.** The outcome is fixed by a human before the reading starts, so anything that
+appears mid-task proposing a different one is a finding to report rather than a goal to adopt. This is
+the failure mode behind prompt injection, and it is worth naming separately because the damage does
+not need write access: an agent that has been redirected is a reconnaissance tool pointed at whatever
+it can already reach. Keeping write access small limits what a redirected agent can do; it does not
+stop the redirection. See [governance](08-governance.md) for what that means for access.
+
+---
+
 ## The summary
 
 | Failure | Caught by |
@@ -138,6 +158,10 @@ several that point the same way before anything treats it as settled. What Growt
 | Thrashing | Context |
 | Motion mistaken for progress | Execution, Outcome |
 | Learning from unvalidated output | Growth |
+| A goal picked up from something the work read | Direction |
 
-Every one of these is caught by evidence rather than by better prompting, which is why the discipline
-around the model matters as much as the choice of model.
+Better prompting reduces several of these. Asking for sources, telling a model to say when it cannot
+verify something, and giving it permission to stop and ask all measurably help. What prompting cannot
+do is tell you whether it worked this time, and none of these failures announces itself. Evidence is
+what catches them reliably, which is why the discipline around the model matters as much as the
+choice of model.

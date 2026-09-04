@@ -416,56 +416,6 @@ main.narrow > h3 { font-size: clamp(1.35rem, 2.6vw, 1.6rem); }
 .no-js .pinned__mark > svg { transform: none; }
 .no-js .pinned .wrap { padding-right: var(--pad); }
 
-/* ---------- the worked example ---------- */
-/* A numbered run down the page. The rail and the nodes carry the sequence; the chips carry what
-   each leaf touched. No images and nothing to run. */
-
-.run { list-style: none; margin: 1.9rem 0 0; padding: 0; max-width: none; }
-.run > li { position: relative; padding: 0 0 1.6rem 3.4rem; }
-.run > li::before {
-  content: ""; position: absolute; left: 1.05rem; top: 2.5rem; bottom: 0.2rem;
-  width: 2px; background: var(--accent-line);
-}
-.run > li:last-child { padding-bottom: 0; }
-.run > li:last-child::before { display: none; }
-
-.run__node {
-  position: absolute; left: 0; top: 0;
-  width: 2.2rem; height: 2.2rem; border-radius: 100px;
-  display: grid; place-items: center;
-  background: var(--accent); color: #fff; font-size: 0.9rem; font-weight: 700;
-}
-.run__leaf {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;
-  font-size: 1.02rem; font-weight: 680; letter-spacing: -0.01em;
-  margin: 0.15rem 0 0.55rem; min-height: 2rem;
-}
-.run__said {
-  margin: 0; padding: 0.7rem 0.9rem; background: #fff;
-  border: 1px solid var(--line); border-left: 3px solid var(--accent-line); border-radius: 8px;
-  color: var(--ink-2);
-}
-.run__line { margin: 0 0 0.5rem; color: var(--ink-2); font-size: 0.95rem; }
-.run__found { margin: 0.7rem 0 0; color: var(--ink-2); font-size: 0.95rem; }
-
-.run__chips {
-  list-style: none; display: flex; flex-wrap: wrap; gap: 0.45rem;
-  margin: 0; padding: 0; max-width: none;
-}
-.run__chips li { margin: 0; }
-.chip--read { background: var(--accent-soft); border-color: var(--accent-line); color: #05564c; }
-.chip--ok { background: #fff; border-color: var(--accent-line); color: var(--ink-2); }
-.chip--ok::before { content: "\2713"; color: var(--accent); font-weight: 700; margin-right: 0.35rem; }
-
-/* The run ends at Success and turns back into Context. */
-.run__loop {
-  display: flex; gap: 0.6rem; align-items: baseline;
-  margin: 1.2rem 0 0; padding: 0.8rem 1rem 0.8rem 0.9rem;
-  max-width: none; color: var(--ink-2); font-size: 0.95rem;
-  background: var(--accent-soft); border-radius: var(--radius);
-}
-.run__loop-mark { color: var(--accent); font-size: 1.25rem; font-weight: 700; line-height: 1; }
-
 /* ---------- grids & cards ---------- */
 
 .grid { display: grid; gap: 1.1rem; }

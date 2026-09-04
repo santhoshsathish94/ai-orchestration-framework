@@ -16,13 +16,13 @@ Next.js's own code, but one layer deeper, in React's Server Components renderer 
 "Flight" server), and it was fixed there so that every consumer of the library could benefit.
 This took **several days of repeated profiling**, and four plausible fixes were implemented and
 disproved before the real one was found. AI carried much of the loop: building a minimal reproduction,
-making the leak measurable, isolating the mechanism, writing the one-file fix, and drafting the public
+making the leak measurable, isolating the mechanism, writing the fix, and drafting the public
 issue, pull request, and reproduction repository. That is what made a fix like this practical to
 attempt at all. It still took human judgment to set the direction and to check each result against
 real, measured behavior before trusting it.
 
-The result is a personal open-source contribution, filed as a **CI-green pull request awaiting maintainer
-review — not yet merged**. The goal is broader than fixing one application: if the upstream fix is accepted, other applications using the affected React path can benefit without carrying the same workaround. It addresses the React instance of the anti-pattern; the same pattern exists
+The result is a personal open-source contribution, filed as a **CI-green pull request that is still
+open and not merged**. The goal is broader than fixing one application: if the upstream fix is accepted, other applications using the affected React path can benefit without carrying the same workaround. It addresses the React instance of the anti-pattern; the same pattern exists
 at a second site in Next.js, independently reported by another engineer, and is tracked separately.
 
 ![Stabilize the incident, keep looking, find the cause in React's react-server renderer, and give the fix back upstream](../assets/case-study-02-react-rsc-memory-leak.svg)
@@ -32,9 +32,11 @@ at a second site in Next.js, independently reported by another engineer, and is 
 ## Context — what the systems showed
 
 - **Unbounded server memory → OOM.** Under real traffic the application's memory climbed continuously
-  and the process eventually crashed — producing production incidents and release delays. (The
-  production impact is qualitative here; the quantitative evidence below comes from a public
-  reproduction, not the private app.)
+  and the process eventually crashed — producing production incidents and release delays. (Two kinds
+  of evidence appear below and they are not interchangeable. The before-and-after retained-heap
+  numbers come from a public reproduction. The pod-level object counts and the fleet A/B are
+  observations of the private production system, so they can be described but not reproduced by a
+  reader.)
 - **The immediate mitigation was blunt.** `NODE_OPTIONS=--stack-trace-limit=0` bounded the growth but
   globally strips stack frames from every error, degrading observability across the whole service.
 - **It wasn't only us.** The same symptom is widely reported publicly — e.g. `vercel/next.js#84648`,
@@ -145,7 +147,11 @@ traces across the application.
 ## Execution — the fix and the contribution
 
 The cleanup reason is internal and never surfaced to users, so it does not need a stack trace at all.
-Create it with stack capture turned off, then restore the previous limit — one file, **+11 / −0**.
+Create it with stack capture turned off, then restore the previous limit. As filed the change was one
+file and **+11 / −0**; after community review it is two files and **+20 / −1**, because the toggle moved
+into a `createErrorWithoutStack` helper with a `try/finally` — `Error.stackTraceLimit` is process-wide,
+and a throw inside the block would otherwise leave every later stack trace in the process truncated —
+and a regression test was added asserting the completion reason carries no frames.
 
 | | Before | After |
 |---|---|---|
@@ -190,7 +196,7 @@ is the lowered barrier rather than the split of credit.
    heap-snapshot retainer analysis showing retained `_Response` objects tracing back to the `cache()`
    dedupe map, then instrumented `global.Error` to enumerate every error constructed per request,
    which is what located the pinning object in React rather than Next.js.
-4. **Implemented the one-file fix** — create the never-surfaced cleanup reason with
+4. **Implemented the fix** — create the never-surfaced cleanup reason with
    `Error.stackTraceLimit = 0` (save/restore) so it carries no stack.
 5. **Authored the public issue, pull request, and reproduction repo** — forked, branched, committed,
    and pushed under a personal identity, and signed the contributor license agreement — all isolated
@@ -204,7 +210,7 @@ is the lowered barrier rather than the split of credit.
 
 The work followed the four working stages. **Context** was reproducing the leak, isolating the mechanism, and gathering the evidence.
 **Direction** was a production incident worth fixing at the root.
-**Execution** was the focused one-file fix and the upstream contribution path. **Outcome** was measured,
+**Execution** was the focused fix and the upstream contribution path. **Outcome** was measured,
 repeatable heap evidence plus independent corroboration. Each failed check sent the work back to Context rather than to another
 attempt at a fix, which is the only reason the four wrong answers were ever ruled out.
 
@@ -242,9 +248,34 @@ unbounded to bounded, which is what stopped the crashes; it did not go to zero.
 | Mechanism isolation | — | only `--stack-trace-limit=0` fixes it (synchronous frames) |
 | Effort to root cause | — | several days of repeated profiling; four candidate fixes disproved |
 | Fleet A/B, same image | 113 restarts across 53 pods | **0 restarts** across 36 pods, ~6.5 h under load |
-| Fix size | — | 1 file, +11 / −0 |
-| Independent corroboration | — | matching production diagnosis (`vercel/next.js#97316`) |
-| Status | production mitigated via a global Node flag | upstream fix filed, CI-green, in review |
+| Fix size | — | 2 files, +20 / −1 (helper with `try/finally`, plus a regression test) |
+| Independent corroboration | — | matching production diagnosis (`vercel/next.js#97316`), plus three independent reproductions on the pull request |
+| Status | production mitigated via a global Node flag | upstream fix **open, not merged**; CI green, community review addressed, no maintainer review yet |
+
+The two A/B arms ran different pod counts, 53 against 36, and the case study cannot reconstruct why.
+Restarts per pod still separate the arms completely, but the denominators were not controlled.
+
+**What the load evidence does not establish.** Every A/B here, including the independent ones, sets
+`--stack-trace-limit=0` process-wide, which suppresses stack capture at every site rather than at this
+one. What they establish is that captured stacks are the dominant retained cost on the client-abort
+path. They do not isolate this single `new Error()` as the only contributor, and the fix should not be
+expected to account for every megabyte the flag recovers.
+
+**Independent reproductions since filing.** Three people arrived at the same result on workloads the
+original reproduction does not cover. One ran four rounds of ~19,500 client-aborted requests per arm
+with the whole protocol repeated: sixteen measurements without the flag landed between 407 and
+2264 MB, sixteen with it between 68 and 157 MB, and the two sets never overlap. One ran a production
+e-commerce storefront with real aborts — crawler timeouts, CDN origin timeouts, users navigating away
+— and measured 650 MB retained above baseline against 118 MB, roughly 260 KB per aborted request
+against 47 KB. Their residual 118 MB is unexplained and was still declining when they stopped. One has
+shipped the same fix shape to their own production storefront.
+
+**An open objection.** A React collaborator has pointed out that the regression test cannot prove the
+leak is fixed: the test holds the signal in its own scope, so nothing can be collected regardless of
+what the abort reason retains. The test asserts an invariant — the completion reason carries no
+captured frames — rather than a reclaim. That reading is correct, and the reviewer who first endorsed
+the test has since withdrawn that part of his endorsement. The effect is established by the
+end-to-end reproductions, not by the unit test.
 
 ## Growth — what went back into Context
 

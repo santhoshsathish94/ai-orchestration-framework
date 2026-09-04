@@ -5,6 +5,9 @@ $fail = 0
 $pages = 'index.html', 'start\index.html', 'governance\index.html', 'evidence\index.html',
 'glossary\index.html', 'author\index.html'
 
+# The redirect stub has no nav, so it is link-checked and version-checked but not nav-compared.
+$stubs = 'security\index.html'
+
 # Resolve a page-relative href to a site-root-relative path, so pages at different depths compare.
 function Resolve-Target([string]$pageFile, [string]$href) {
   if ($href -match '^(https?:|mailto:|data:)') { return $href }
@@ -47,7 +50,7 @@ else {
 
 Write-Output ''
 Write-Output '=========== asset versions ==========='
-$all = foreach ($p in $pages) {
+$all = foreach ($p in ($pages + $stubs)) {
   $raw = Get-Content (Join-Path $root $p) -Raw
   [regex]::Matches($raw, '\?v=([\d.]+)') | ForEach-Object { $_.Groups[1].Value }
 }
@@ -58,7 +61,7 @@ if ($uniqueVers.Count -ne 1) { Write-Output '  MISMATCH'; $fail++ }
 Write-Output ''
 Write-Output '=========== relative links and assets resolve ==========='
 $bad = 0
-foreach ($p in $pages) {
+foreach ($p in ($pages + $stubs)) {
   $full = Join-Path $root $p
   $dir = Split-Path $full
   $raw = Get-Content $full -Raw

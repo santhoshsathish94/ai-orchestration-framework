@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import os
+import unicodedata
 from pathlib import Path, PurePosixPath
 
 PROTECTED_NAMES = {"test", "tests", "spec", "specs"}
@@ -42,7 +43,9 @@ class VerificationPolicy:
         try:
             return PurePosixPath(candidate.relative_to(self.root).as_posix())
         except ValueError:
-            return PurePosixPath("")
+            # Outside the root. Match on the whole path rather than reporting "not verification",
+            # so a caller using is_verification_path on its own is not told a test file is safe.
+            return PurePosixPath(candidate.as_posix())
 
     def is_outside_root(self, path: str) -> bool:
         """Return True when a resolved path escapes the protected root."""
@@ -54,17 +57,52 @@ class VerificationPolicy:
             return True
         return False
 
+    @staticmethod
+    def _fold(value: str) -> str:
+        # NFC first: on macOS a decomposed spelling is the same file but a different string.
+        return unicodedata.normalize("NFC", value).lower()
+
     def is_verification_path(self, path: str) -> bool:
         # Case-folded: on Windows and macOS, TESTS/A.TEST.JS names the same file as tests/a.test.js.
         relative = self._relative(path)
-        parts = {part.lower() for part in relative.parts}
-        name = relative.name.lower()
+        parts = {self._fold(part) for part in relative.parts}
+        name = self._fold(relative.name)
         return bool(parts & PROTECTED_NAMES) or name.endswith(PROTECTED_SUFFIXES)
+
+    def _identity(self, path: Path) -> tuple[int, int] | None:
+        """Return a filesystem identity for an existing file, or None."""
+        try:
+            info = path.stat()
+        except (OSError, ValueError):
+            return None
+        if info.st_ino == 0:  # Some filesystems do not report inodes; identity is unavailable.
+            return None
+        return (info.st_dev, info.st_ino)
+
+    def shares_identity_with_verification(self, path: str) -> bool:
+        """Return True when a path is another name for an existing verification artifact.
+
+        resolve() follows symlinks, but a hard link is not a link to a file, it is the file under a
+        second name. Comparing identities is what catches src/notatest.js pointing at tests/a.test.js.
+        """
+        if self.root is None:
+            return False
+        target = self._identity(self._resolve(path))
+        if target is None:
+            return False
+        for candidate in self.root.rglob("*"):
+            if not candidate.is_file() or not self.is_verification_path(str(candidate)):
+                continue
+            if self._identity(candidate) == target:
+                return True
+        return False
 
     def is_protected(self, path: str) -> bool:
         """Return True when an existing verification artifact is protected."""
         target = self._resolve(path)
-        return self.is_verification_path(path) and target.exists()
+        if self.is_verification_path(path) and target.exists():
+            return True
+        return self.shares_identity_with_verification(path)
 
     def authorize_write(self, path: str) -> str:
         """Return the policy decision and raise on a denied write."""
@@ -76,6 +114,12 @@ class VerificationPolicy:
 
         verification = self.is_verification_path(path)
         exists = self._resolve(path).exists()
+
+        if not verification and self.shares_identity_with_verification(path):
+            self.audit("write_denied", path, reason="hard_link_to_trusted_verification")
+            raise PermissionError(
+                f"Clover runtime policy rejected write to another name for a trusted verification artifact: {path}"
+            )
 
         if verification and exists:
             self.audit("write_denied", path, reason="trusted_verification_exists")

@@ -17,5 +17,5 @@ What this demonstrates:
 
 For development workflows, create new tests in a writable area and promote
 trusted verification artifacts into the protected boundary before using them
-as evidence of Success.
+as evidence of the Outcome.
 EOF

@@ -1,4 +1,5 @@
 import os
+import unicodedata
 
 import pytest
 
@@ -98,6 +99,52 @@ def test_symlink_to_protected_file_is_rejected(tmp_path) -> None:
         guarded_write(str(link), "changed", protected_root=str(workspace))
 
     assert target.read_text(encoding="utf-8") == "original"
+
+
+def test_hard_link_to_protected_file_is_rejected(tmp_path) -> None:
+    """A hard link is the file under a second name, so resolve() has nothing to follow."""
+    workspace = tmp_path / "workspace"
+    tests_dir = workspace / "tests"
+    src_dir = workspace / "src"
+    tests_dir.mkdir(parents=True)
+    src_dir.mkdir()
+
+    target = tests_dir / "existing.test.js"
+    target.write_text("original", encoding="utf-8")
+    alias = src_dir / "notatest.js"
+    try:
+        os.link(target, alias)
+    except (OSError, NotImplementedError, AttributeError) as exc:
+        pytest.skip(f"hard links not permitted in this environment: {exc}")
+
+    with pytest.raises(PermissionError):
+        guarded_write(str(alias), "changed", protected_root=str(workspace))
+
+    assert target.read_text(encoding="utf-8") == "original"
+
+
+def test_folding_normalizes_before_comparing() -> None:
+    """Every protected name is ASCII today, so this guards the list rather than a live bypass.
+
+    NFC and NFD spellings of "tests" are identical because it has no combining characters. The
+    normalization exists so that adding a non-ASCII protected name later cannot be defeated by
+    writing the same name in a different encoding form.
+    """
+    policy = VerificationPolicy()
+    decomposed = "te\u0301sts"  # te + combining acute + sts
+    assert policy._fold(decomposed) == unicodedata.normalize("NFC", decomposed).lower()
+    assert policy.is_verification_path("TESTS/a.js")
+    assert not policy.is_verification_path(f"{decomposed}/a.js")
+
+
+def test_verification_path_outside_root_is_still_reported(tmp_path) -> None:
+    """A caller using is_verification_path on its own must not be told a test file is safe."""
+    workspace = tmp_path / "workspace"
+    workspace.mkdir()
+    policy = VerificationPolicy(protected_root=str(workspace))
+    outside = tmp_path / "elsewhere" / "tests" / "a.test.js"
+
+    assert policy.is_verification_path(str(outside))
 
 
 def test_new_test_creation_requires_explicit_policy(tmp_path) -> None:

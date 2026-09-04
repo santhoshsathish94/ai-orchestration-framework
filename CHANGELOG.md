@@ -55,14 +55,11 @@ cache-busting query strings match it.
   capability to suggest a direction at that scale is not authority to pursue it.
 - **A runtime-enforcement reference implementation.** `reference/runtime-enforcement/` holds a
   tool-layer write guard, a protected verification fixture, a container that mounts the verification
-  path read-only, a `verify.sh`, and a test suite covering path traversal, symlinks and
+  path read-only, a `verify.sh`, and a test suite covering path traversal, symlinks, hard links and
   new-test generation. It exists to show one boundary living outside the model rather than inside an
-  instruction. Container egress is denied in `docker-compose.yml`; that setting has not been observed
+  instruction. The container runs read-only, with all capabilities dropped, no new privileges, memory
+  and pid limits, and no route to the network. None of the container settings have been observed
   running, since no Docker daemon was available on the machine the branch was written on.
-- **A reproducible model review protocol.** [`docs/evaluations/model-review-protocol.md`](docs/evaluations/model-review-protocol.md)
-  fixes what an external model review has to carry to be worth anything: the exact repository
-  revision, the protocol used, the raw review, and the calculation. A score with none of those behind
-  it is a number, not evidence.
 - **`CLOVER-CONTEXT.md`, kept in the branch.** The framework asks for a context file beside the work
   and written while the work runs. The branch that expands the framework now keeps its own.
 
@@ -132,6 +129,16 @@ cache-busting query strings match it.
 ### Removed
 
 - **`assets/widening-what-ai-determines.svg`**, which nothing referenced.
+- **The model review protocol.** `docs/evaluations/model-review-protocol.md` set out how to publish a
+  reproducible model rating. It was procedurally careful — frozen commit, shared prompt, raw response
+  kept, mechanical scoring — and it still could not produce a number worth publishing. There was no
+  baseline and no blinding, so a model asked to rate a framework it is told is the subject will score
+  it high; no repeated sampling, so a single run stood in for a distribution; and the categories and
+  their weights were written by the project being scored. A protocol that cannot separate the
+  framework's quality from its own framing should not exist rather than be run carefully.
+- **The dead `.run` component** in `site/styles.css`. Fourteen rules for a worked-example layout that
+  no page has used since the example was rewritten in prose, and the one place on the site still
+  carrying `Success` as a stage name.
 - **From the home page**: the hero buttons, the How It Works nav link, the Why now section, the
   `System → Human → AI` arrow chain, the green stage labels, the scale worked examples, the five
   enforcement asks, and the closing restatement section. The arrow chain is deliberate — it remains
@@ -139,6 +146,46 @@ cache-busting query strings match it.
 
 ### Fixed
 
+- **The React case study contradicted its own sourcing caveat.** It said the quantitative evidence
+  came from a public reproduction rather than the private application, and then gave pod-level object
+  counts and a fleet A/B, both of which are production observations. The caveat now separates the two
+  kinds of evidence and says which can be reproduced by a reader. The same pass brought the pull
+  request up to date: it is two files and +20/−1 rather than one file and +11/−0, because review moved
+  the stack-limit toggle into a helper with a `try/finally` and added a regression test; three people
+  have since reproduced the result independently, one of them on a production storefront; a React
+  collaborator has objected that the regression test asserts an invariant rather than a reclaim, and
+  that objection is recorded rather than answered. The A/B evidence now states what it does not
+  establish, since setting the stack limit process-wide suppresses capture at every site rather than
+  at the one the fix changes.
+- **A hard link defeated the write guard.** `resolve()` follows symbolic links, but a hard link is the
+  file under a second name and there is nothing to follow, so `src/notatest.js` pointing at
+  `tests/example.test.js` was writable. The policy now compares filesystem identity against the
+  verification artifacts under the protected root, and a test covers it. Path folding also normalizes
+  to NFC before comparing; every protected name is ASCII today, so that guards the list rather than a
+  live bypass, and the test says so.
+- **`is_verification_path` reported False for anything outside the protected root.** `authorize_write`
+  was safe because it checks the root first, but a caller using the helper on its own was told a test
+  file outside the root was not a verification path. It now matches on the whole path instead.
+- **The container was a boundary in name only.** It ran on a writable root filesystem with every
+  capability, no privilege ceiling and no resource limits. It is now `read_only` with a `tmpfs` for
+  `/tmp`, `cap_drop: ALL`, `no-new-privileges`, and memory and pid limits, alongside the read-only
+  verification mount and the internal network it already had.
+- **The reference did not say which of its two layers is the boundary.** The Python policy is a gate
+  that only protects against code that calls it; a plain `open()` goes straight past. The mount is
+  what refuses the write. The README now says that in the opening paragraph rather than leaving a
+  reader to infer it from the entrypoint script.
+- **`verify.sh` still said `Success`**, and the site validator no longer checked the `/security/`
+  redirect stub after the page moved. Both corrected.
+- **Two claims that reached past their evidence.** [How AI fails](docs/how-ai-fails.md) said every
+  failure is caught by evidence rather than by better prompting; prompting demonstrably reduces
+  several of them, and what it cannot do is tell you whether it worked this time, which is the actual
+  argument. [The orchestration environment](docs/orchestration-environment.md) said reading cannot
+  corrupt anything, which is true and reads as though read-only were harmless; reading is the whole
+  surface for finding credentials and assembling a picture no single person has.
+- **A missing failure mode.** [How AI fails](docs/how-ai-fails.md) covered fabrication and unchecked
+  success but never named the case where an agent adopts a goal from something it read. It is now the
+  ninth mode, caught by Direction, with the point that a redirected agent does damage without needing
+  write access.
 - **The runtime-enforcement tests could not run.** The suite imported
   `reference.runtime_enforcement`, but the directory is hyphenated and therefore not importable, and
   no `conftest.py`, `__init__.py` or packaging file existed anywhere. The command printed in the

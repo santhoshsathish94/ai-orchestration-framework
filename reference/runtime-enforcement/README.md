@@ -2,14 +2,20 @@
 
 This reference demonstrates how a Clover verification boundary can be enforced outside the model.
 
+**Two layers, and only one of them is a boundary.** The Python policy is a gate an agent's tooling
+calls; it protects nothing from code that does not call it, because a plain `open()` goes straight
+past it. The container mount is the boundary: it refuses the write whether or not anything asked. The
+policy exists to give a clear denial and an audit record at the point of decision, and the mount
+exists because the policy can be bypassed. Do not deploy the first without the second.
+
 ## What it demonstrates
 
 - Existing trusted verification files are treated as immutable by the write policy.
 - New verification files require explicit creation permission.
-- Parent traversal and symbolic-link paths are resolved before authorization.
+- Parent traversal, symbolic links and hard links are all resolved or identity-matched before authorization.
 - Denied write attempts are emitted as structured JSON security events without recording file contents.
-- Docker can provide a second, physical filesystem boundary by mounting verification artifacts read-only.
-- The container runs on an `internal` network, so the Execution stage has no route out of the sandbox.
+- Docker provides the physical filesystem boundary by mounting verification artifacts read-only, on a
+  read-only root filesystem with all capabilities dropped and no route to the network.
 
 ## Run the policy tests
 

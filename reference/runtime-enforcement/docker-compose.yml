@@ -3,6 +3,16 @@ services:
     build: ./agent
     networks:
       - sandbox
+    # The root filesystem is read-only, so the only writable places are the ones named below.
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 256m
+    pids_limit: 128
     volumes:
       - ./workspace/src:/workspace/src:rw
       # Existing verification controls are runtime read-only.
