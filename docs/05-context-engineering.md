@@ -10,7 +10,7 @@ Capability is only as good as the material it reasons from. A human cannot solve
 
 ## System first: reality before assumptions
 
-Clover's priority is the reality and the **actors** who work in it, **System → Human → AI**. The system is the grounding reality. Humans then set Direction and remain accountable. AI uses that system Context and human Direction to determine how work should happen and to execute within those boundaries.
+Clover's priority is the reality and the **actors** who work in it. The system is the reality; the actors in it are the human and AI. The system is the grounding reality. Humans then set Direction and remain accountable. AI uses that system Context and human Direction to determine how work should happen and to execute within those boundaries.
 
 Context is therefore not merely context about an AI task. It is the context of the system itself — including what it is becoming when the system is under construction.
 

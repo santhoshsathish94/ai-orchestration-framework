@@ -9,14 +9,16 @@ where somebody has to stand behind the evidence, and Growth is where what the cy
 Accountability is the subject of this page, and it is the thing AI took out of scope. The way of
 working is old. Somebody understood the situation, somebody decided what mattered and answered for
 it, the work got done, reality showed what happened, and what it taught carried into the next
-attempt. What changed is that execution moved to something that cannot be accountable. A model can
-perform the work, report that it worked, and hold nothing when it did not. Clover establishes
-accountability back into the system, through the human actor who can truly take it up, and AI takes
-its place as an actor inside the existing cycle rather than as a replacement for it.
+attempt. AI does not change that cycle; it makes every stage easier, better and faster, and all the
+actors grow with it. What AI did change is that execution moved to something that cannot be
+accountable. A model can perform the work, report that it worked, and hold nothing when it did not.
+Clover establishes accountability back into the system, through the human actor who can truly take it
+up, and AI takes its place as an actor inside the existing cycle rather than as a replacement for it.
+AI capability may scale, but accountability cannot. AI cannot carry it, and it can make it visible.
 
-## System → Human → AI
+## The system is the reality. The actors in it are the human and AI.
 
-**System → Human → AI**: the system is the reality, and the human and AI are the **actors**. The **system cycle** they run is Context →
+The system is the reality, and the human and AI are the **actors**. The **system cycle** they run is Context →
 Direction → Execution → Outcome → Growth. Clover keeps the three responsibilities distinct:
 
 - **System is reality.** It may be an existing system or the system being built. Its data, behavior,
@@ -53,9 +55,12 @@ writing, code, images, music, film, research, journalism, design, made by people
 Clover's position is that the same boundary applies there. Consent, licensing and attribution are
 conditions on how capability is built, rather than friction to be routed around.
 
-Clover cannot enforce that last one, and no framework can. What it can do is state the expectation
-plainly, keep it out of the small print, and decline to call a system well governed while the
-question of what it was built from is treated as somebody else's problem.
+Clover cannot enforce that last one, and no framework can. Clover is here to highlight the issues the
+current system has, and it cannot enforce them at real-world scale. That belongs to the governments,
+the AI companies, and the enterprises that use them, and how it is done is for the world to decide.
+What Clover can do is state the expectation plainly, keep it out of the small print, and decline to
+call a system well governed while the question of what it was built from is treated as somebody
+else's problem.
 
 > **Capability is not permission. That applies to the model as much as to the team using it.**
 

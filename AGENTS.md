@@ -20,7 +20,7 @@ This is the complete operating specification. The full framework lives in `docs/
 
 Clover starts from the reality and the **actors** who work in it:
 
-**System → Human → AI**
+**The system is the reality. The actors in it are the human and AI.**
 
 The **System** is the reality in which the outcome must exist and the primary source of evidence for validating it. It may already exist, or it may be the system being built.
 
@@ -346,7 +346,7 @@ The framework is successful when the cycle matches the real work, not when it pr
 
 Whatever the size of the problem, remember:
 
-**System → Human → AI**
+**The system is the reality. The actors in it are the human and AI.**
 
 **Context → Direction → Execution → Outcome → Growth**
 

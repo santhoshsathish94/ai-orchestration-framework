@@ -20,17 +20,17 @@ The fifth leaf is **Growth**. Growth is the fifth stage of the cycle. Whatever t
 
 Clover is not a new way of working. Every system that worked in the past has worked this way. Somebody understood the situation. Somebody decided what mattered and answered for it. The work got done. Reality showed what happened. What it taught carried into the next attempt.
 
-AI did not remove that pattern. It moved execution to something that cannot be accountable. A model can perform the work, report that it worked, and hold nothing when it did not. Where execution went, accountability followed it out of scope.
+AI did not remove that pattern, and it did not change the cycle. It makes every stage easier, better and faster, and all the actors grow with it. What it did move is execution, to something that cannot be accountable. A model can perform the work, report that it worked, and hold nothing when it did not. Where execution went, accountability followed it out of scope.
 
-Clover establishes accountability back in the system, through the human actor who can truly take up the role. AI takes its place as an actor inside the existing cycle rather than as a replacement for it.
+Clover establishes accountability back in the system, through the human actor who can truly take up the role. AI takes its place as an actor inside the existing cycle rather than as a replacement for it. AI capability may scale, but accountability cannot. AI cannot carry it, and it can make it visible.
 
 ---
 
-## System → Human → AI
+## The system is the reality. The actors in it are the human and AI.
 
 Clover begins with a simple priority:
 
-**System → Human → AI**
+**The system is the reality. The actors in it are the human and AI.**
 
 The **system** is what becomes reality. Its state, data, behavior, history, constraints, and evidence are what ultimately show what happened. The system may already exist, or it may be the system we are trying to build.
 
@@ -284,7 +284,7 @@ Clover must clearly distinguish:
 
 ### What Clover establishes
 
-**Context → Direction → Execution → Outcome → Growth** as a practical way of working with System, Human, and AI to produce meaningful outcomes. **System → Human → AI**: the system is the reality, and the human and AI are the actors. The five stages are the system cycle those actors run, and Growth is the fifth of them.
+**Context → Direction → Execution → Outcome → Growth** as a practical way of working with System, Human, and AI to produce meaningful outcomes. The system is the reality, and the human and AI are the actors. The five stages are the system cycle those actors run, and Growth is the fifth of them.
 
 Clover also establishes accountability back in the system, on the human actor who can truly take up the role. AI takes its place as an actor inside the cycle rather than as a replacement for it.
 
@@ -351,7 +351,7 @@ That framing is intentionally scale-independent: the same relationship can be ap
 When helping build Clover:
 
 1. Treat **Clover** as the framework's current identity.
-2. Keep **System → Human → AI** in that order as the foundational priority: the system is the reality, and the human and AI are the **actors**.
+2. Say that the system is the reality and the human and AI are the **actors**. Do not draw it as an arrow chain; the order is a priority, not a sequence.
 3. Call **Context → Direction → Execution → Outcome → Growth** the **system cycle**, and keep it at five stages unless a genuine conceptual problem is discovered.
 4. Keep **Growth** as the fifth stage: whatever the Outcome taught, at any size, carried back into Context. No repetition and no scale are required for it to count.
 5. Never describe Growth as something nobody runs, or as something sitting outside the framework.

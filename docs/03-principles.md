@@ -2,9 +2,9 @@
 
 ## Purpose
 
-Clover describes how the **actors** — the Human and AI — turn intent into outcomes the environment confirms, working in the reality of the **System**. **System → Human → AI** is the order that runs in. The system cycle — **Context → Direction → Execution → Outcome → Growth** — gives the structure. These principles are what make each stage hold up on real work.
+Clover describes how the **actors** — the human and AI — turn intent into outcomes the environment confirms, working in the reality of the **system**. The system is the reality; the actors in it are the human and AI. The system cycle — **Context → Direction → Execution → Outcome → Growth** — gives the structure. These principles are what make each stage hold up on real work.
 
-Every one of them exists for the same reason. Every system that worked has worked this way. What AI changed is accountability: execution moved to something that cannot be accountable, and accountability went out of scope with it. These principles are how it gets established back in the system, on the human actor who can truly take up the role.
+Every one of them exists for the same reason. Every system that worked has worked this way. AI does not change the cycle; it makes every stage easier, better and faster, and all the actors grow with it. What AI did change is accountability: execution moved to something that cannot be accountable, and accountability went out of scope with it. These principles are how it gets established back in the system, on the human actor who can truly take up the role.
 
 There is one principle per stage. A team that remembers the stages already remembers the principles. The first two carry most of the weight, because Context and Direction are what separate the lucky clover from the common one.
 
@@ -26,7 +26,7 @@ So the process is not a set of controls that humans place on AI. It is what keep
 
 Clover starts from a simple priority:
 
-**System → Human → AI**
+**The system is the reality. The actors in it are the human and AI.**
 
 The system comes first because it is where the outcome must exist. It may be an existing system, or the system we are trying to build. Its state, data, behavior, history, constraints, and evidence are the material the work must ultimately be grounded in.
 
@@ -126,6 +126,8 @@ The reason is accountability. As the potential impact grows, the consequences of
 
 Direction carries the boundaries with it: what must not change, what needs approval before it happens, which systems and data the work may touch, and what evidence will be sufficient.
 
+AI can hold those rules once they are set: say when an action is about to cross one, decline the action, and keep the boundary visible to whoever the work passes to next. Holding a rule is not owning the Direction behind it, and AI never pursues a possibility on its own.
+
 Tickets, incidents, requests, or prompts can trigger Direction. They rarely define the complete outcome on their own, and somebody still has to.
 
 ---
@@ -143,6 +145,8 @@ Planning and doing sit on one stage on purpose. The plan can change when work me
 AI may execute tests and modify test code when the human explicitly directs that as part of the intended outcome. **Otherwise, verification artifacts that define whether the Outcome is acceptable should remain outside the agent's writable Execution scope.** Test fixtures, regression assertions, acceptance criteria, and other validation controls should be protected from silent weakening or deletion.
 
 Humans and AI can share execution. The human retains the boundaries, approvals, and accountability even when AI performs most of the work.
+
+**The boundaries bind both actors.** The system boundaries established in Direction are not a leash on AI alone. Neither the human nor AI may violate them, and a boundary is not removed by being ignored — it is removed by the human changing the Direction on the record.
 
 Plan the smallest coherent path to the outcome. Run work in parallel only where it is genuinely independent, and replan when new information contradicts the current path.
 
@@ -190,7 +194,9 @@ Growth needs no repetition and no scale. Whatever the Outcome taught, at any siz
 
 Growth can come from **every stage**. Context can reveal how the system actually behaves and what information was missing. Direction can reveal whether the purpose, constraints, priorities, or process were appropriate. Execution can reveal which approaches, tools, and execution patterns work. Outcome can reveal what actually happened, what held, what failed, and what the evidence showed.
 
-Failure is part of Growth. So are successful outcomes, analyses, discoveries about the current system, repeated patterns, and newly understood constraints. A failed attempt can teach more than a successful one when it exposes an assumption that reality rejected.
+Failure is part of Growth. So are successful outcomes, analyses, discoveries about the current system, repeated patterns, and newly understood constraints. A failed attempt can teach more than a successful one when it exposes an assumption that reality rejected. Growth is also recognizing where the system, the human and AI failed.
+
+> **Any system that does not retrospect its growth will not produce better outcomes.**
 
 Learning can accumulate at different layers:
 

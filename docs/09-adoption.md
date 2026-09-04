@@ -6,9 +6,9 @@ This page carries more weight than the rest of the framework. Access can be arra
 
 ## What is actually being adopted
 
-Clover does not ask teams to replace human judgment with AI. It asks teams to make the reality and the actors explicit: **System → Human → AI**.
+Clover does not ask teams to replace human judgment with AI. It asks teams to make the reality and the actors explicit: the system is the reality, and the actors in it are the human and AI.
 
-What adoption restores is accountability. Every system that worked has worked this way: somebody understood the situation, somebody decided what mattered and answered for it, the work got done, and reality showed what happened. When execution moved to AI, accountability tended to go out of scope with it. Adoption is what establishes accountability back in the system, on the human actor who can truly take up the role.
+AI does not change the cycle. It makes every stage easier, better and faster, and all the actors grow with it. What adoption restores is accountability. Every system that worked has worked this way: somebody understood the situation, somebody decided what mattered and answered for it, the work got done, and reality showed what happened. When execution moved to AI, accountability tended to go out of scope with it. Adoption is what establishes accountability back in the system, on the human actor who can truly take up the role.
 
 - **System** is the reality being worked on — an existing system or the system being built, with its data, behavior, state, history, constraints, and evidence.
 - **Human** owns Direction — purpose, intended outcomes, priorities, acceptable risk, constraints, boundaries, and accountability.

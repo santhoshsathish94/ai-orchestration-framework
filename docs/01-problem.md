@@ -1,14 +1,17 @@
 # The Problem
 
-Clover is a way of working with the reality and the actors in it — **System → Human → AI** — through the system
-cycle they run: **Context → Direction → Execution → Outcome → Growth**.
+Clover is a way of working with the reality and the actors in it. The system is the reality; the
+actors in it are the human and AI. What they run is the system cycle:
+**Context → Direction → Execution → Outcome → Growth**.
 
 None of that is a new way of working. Every system that worked has worked this way: somebody
 understood the situation, somebody decided what mattered and answered for it, the work got done,
-reality showed what happened, and what it taught carried into the next attempt. What AI changed is
-accountability. Execution moved to something that cannot be accountable, and accountability went out
-of scope with it. Clover establishes accountability back in the system, through the human actor who
-can truly take up the role.
+reality showed what happened, and what it taught carried into the next attempt.
+
+AI does not change that cycle. It makes every stage easier, better and faster, and all the actors
+grow with it. What AI did change is accountability. Execution moved to something that cannot be
+accountable, and accountability went out of scope with it. Clover establishes accountability back in
+the system, through the human actor who can truly take up the role.
 
 ## AI already does expert work
 

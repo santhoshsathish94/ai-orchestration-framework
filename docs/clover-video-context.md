@@ -20,7 +20,7 @@ All five leaves make the cycle. The fifth leaf is **Growth**: whatever the Outco
 
 The reality and the **actors** are:
 
-**System → Human → AI**
+**The system is the reality. The actors in it are the human and AI.**
 
 The system is reality. Humans choose the destination and remain accountable. AI provides capability and determines how work happens within human Direction.
 
@@ -34,9 +34,9 @@ CLOVER is not a new way of working.
 
 Every system that worked in the past has worked this way. Somebody understood the situation. Somebody decided what mattered and answered for it. The work got done. Reality showed what happened. What it taught carried into the next attempt.
 
-AI did not remove that pattern. AI moved execution to something that cannot be accountable. A model can perform the work, report that it worked, and hold nothing when it did not. Where execution went, accountability followed it out of scope.
+AI did not remove that pattern, and it did not change the cycle. AI makes every stage easier, better and faster, and all the actors grow with it. What AI moved is execution, to something that cannot be accountable. A model can perform the work, report that it worked, and hold nothing when it did not. Where execution went, accountability followed it out of scope.
 
-CLOVER establishes accountability back into the system, through the human actor who can truly take up the role. AI takes its place as an actor inside the existing cycle rather than as a replacement for it.
+CLOVER establishes accountability back into the system, through the human actor who can truly take up the role. AI takes its place as an actor inside the existing cycle rather than as a replacement for it. AI capability may scale, but accountability cannot. AI cannot carry it, and it can make it visible.
 
 So AI becomes useful inside real work.
 

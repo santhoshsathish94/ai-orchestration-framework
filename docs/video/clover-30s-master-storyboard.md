@@ -34,7 +34,7 @@ The closing carries the point that makes the framework matter:
 
 > **The system is the reality that can validate the outcome. The human is accountable for it. AI helps reach it sooner.**
 
-The system is the reality; the human and AI are the **actors**: System → Human → AI.
+The system is the reality; the human and AI are the **actors**.
 
 Use this idea as the conceptual backbone of the visual story. Show the two actors and the real system, rather than illustrating it as a journey.
 

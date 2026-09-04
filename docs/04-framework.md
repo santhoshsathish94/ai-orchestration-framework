@@ -6,9 +6,11 @@ Clover is a way of working with **System, Human, and AI to produce meaningful ou
 
 It does not claim to have invented the underlying pattern. Every system that worked has worked this way: somebody understood the situation, somebody decided what mattered and answered for it, the work got done, reality showed what happened, and what it taught carried into the next attempt.
 
-What AI changed is not the pattern. It is that execution moved to something that cannot be accountable. Where execution went, accountability tended to follow, and in a lot of places it left the picture. Clover puts AI back inside the existing cycle as one of its actors, and puts accountability back where it can sit.
+AI does not change that pattern. It makes every stage easier, better and faster. Context becomes easier to build, with the human and AI helping each other understand the system. Direction becomes easier to identify and to pursue. Execution becomes faster and better, because the Context and Direction behind it are better. Outcomes become easier to validate against the real system, without tampering. Every stage feeds the learning and the growth of the system, and all the actors grow with it. Nobody is left behind.
 
-**System → Human → AI**: the system is the reality, and the human and AI are the **actors**. **Context → Direction → Execution → Outcome → Growth** is the **system cycle** they run.
+What AI did change is that execution moved to something that cannot be accountable. Where execution went, accountability tended to follow, and in a lot of places it left the picture. Clover puts AI back inside the existing cycle as one of its actors, and puts accountability back where it can sit. AI capability may scale, but accountability cannot. AI cannot carry it, and it can make it visible.
+
+The system is the reality, and the human and AI are the **actors**. **Context → Direction → Execution → Outcome → Growth** is the **system cycle** they run.
 
 Prompts, tools, agents, and AI model choice all sit underneath the cycle. What the framework describes is how human intent becomes an outcome the environment shows, and what the next attempt starts from.
 
@@ -22,7 +24,7 @@ Naming five familiar activities is not what makes Clover worth using. Understand
 
 The framework's useful claim is about accountability. Humans historically participated directly in execution, and the person doing the work was reachable when it went wrong. AI can now perform a growing share of that execution, and it cannot answer for any of it. The familiar activities have to be made explicit again so that the accountability which used to travel with the work does not disappear with it.
 
-**System → Human → AI**: the system is the reality the work happens in, humans own Direction and accountability, and AI supplies capability and can take on execution. The human and AI are the **actors**.
+**The system is the reality, and the actors in it are the human and AI**: the system is the reality the work happens in, humans own Direction and accountability, and AI supplies capability and can take on execution.
 
 **Context → Direction → Execution → Outcome → Growth** is the **system cycle** those actors run: understand the relevant reality, establish the desired outcome and boundaries, perform the work, observe what happened against reality, and keep what it taught.
 
@@ -36,7 +38,7 @@ Clover is therefore best understood as **a framework for working with System, Hu
 
 Clover is built around a simple priority:
 
-**System → Human → AI**
+**The system is the reality. The actors in it are the human and AI.**
 
 The system comes first because it is where the outcome must exist. It may be an existing system, or the system we are trying to build. Its state, data, behavior, history, constraints, and evidence are the material the work must ultimately be grounded in, and the primary source of evidence for observing what happened.
 
@@ -181,6 +183,8 @@ In the common clover, context is only what one human can hand over — what they
 
 **What AI does.** Most of the gathering. Reading code, tracing a call path, pulling telemetry, reconstructing an incident from logs, finding the earlier attempt nobody remembered, and writing back what the pass established so the next one starts from it.
 
+The human's understanding is part of what the stage is for. They are working from memory of a system that has moved on since they last read it, and from context, human understanding can be improved by using AI to look at the relevant system information. Improving AI's own picture while leaving the human's where it was is half the stage.
+
 **What happens there.** The plausible answer. An AI model working from thin context produces something that reads correctly and describes a system that does not exist. The opposite failure is hoarding, where a context packed with irrelevant material buries the few facts the problem turns on. [How AI fails](how-ai-fails.md) covers the specific patterns, and [context engineering](05-context-engineering.md) covers how the material is assembled.
 
 ---
@@ -203,7 +207,7 @@ Clover also does not make competitive pressure a basis for changing this boundar
 
 **What the human holds.** Purpose, priorities, the intended outcome, why it matters, constraints, risk boundaries, relevant pointers into Context, important process requirements, what counts as good enough, what stays out of scope, and accountability for the outcome.
 
-**What AI does.** Clarifies and challenges Direction without owning it. AI can restate the objective, identify missing constraints, point out conflicts, and turn a vague request into something specific enough to execute.
+**What AI does.** Clarifies and challenges Direction without owning it. AI can restate the objective, identify missing constraints, point out conflicts, and turn a vague request into something specific enough to execute. Once the rules are set it can hold them: say when an action is about to cross a boundary, decline the action, and keep the boundary visible to whoever the work passes to next. Holding a rule is not owning the Direction behind it, and AI never pursues a possibility on its own.
 
 **Boundary examples.** Choosing to restore service within ten minutes is Direction; choosing which safe restart sequence is fastest is Execution. Requiring zero customer-data exposure is Direction; choosing a redacted log query is Execution. Deciding that a deployment may proceed only with a rollback path is Direction; selecting and executing that rollback path within the approved mechanism is Execution.
 
@@ -222,6 +226,8 @@ Planning and doing sit on one stage on purpose. The plan can change when work me
 AI may execute tests and modify test code when the human explicitly directs that as part of the intended outcome. Otherwise, verification artifacts that help characterize the Outcome should remain outside the agent's writable Execution scope. Test fixtures, regression assertions, acceptance criteria, and other observation controls should be protected from silent weakening or deletion.
 
 Humans and AI can share execution. The human retains the boundaries, approvals, and accountability even when AI performs most of the work.
+
+**The boundaries bind both actors.** The system boundaries established in Direction are not a leash on AI alone. Neither the human nor AI may violate them, and a boundary is not removed by being ignored — it is removed by the human changing the Direction on the record.
 
 Plan the smallest coherent path to the outcome. Run work in parallel only where it is genuinely independent, and replan when new information contradicts the current path.
 

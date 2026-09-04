@@ -15,7 +15,7 @@
 
 ### System, Human and AI working together for meaningful outcomes
 
-**System → Human → AI**
+**The system is the reality. The actors in it are the human and AI.**
 
 **Context → Direction → Execution → Outcome → Growth**
 
@@ -31,9 +31,11 @@ It can be applied to the smallest possible use case or to large, complex systems
 
 Clover does **not** claim to have invented the underlying way people and systems already work. Every system that worked has worked this way. Somebody understood the situation, somebody decided what mattered and answered for it, the work got done, reality showed what happened, and what it taught carried into the next attempt.
 
-What AI changed is not the pattern. It is that execution moved to something that cannot be accountable. A model can perform the work, report that it worked, and hold nothing when it did not. Where execution went, accountability quietly followed, and in a lot of places it left the picture altogether.
+AI does not change that pattern. It makes every stage easier, better and faster. Context becomes easier to build, with the human and AI helping each other understand the system. Direction becomes easier to identify and to pursue. Execution becomes faster and better, because the Context and Direction behind it are better. Outcomes become easier to validate against the real system, without tampering. Every stage feeds the learning and the growth of the system, and all the actors grow with it. Nobody is left behind.
 
-**Clover puts it back.** AI takes its place as an actor inside the existing system cycle rather than as a replacement for it, and accountability stays where it can actually sit: with a human.
+What AI did change is that execution moved to something that cannot be accountable. A model can perform the work, report that it worked, and hold nothing when it did not. Where execution went, accountability quietly followed, and in a lot of places it left the picture altogether.
+
+**Clover puts it back.** AI takes its place as an actor inside the existing system cycle rather than as a replacement for it, and accountability stays where it can actually sit: with a human. AI capability may scale, but accountability cannot. AI cannot carry it, and it can make it visible.
 
 **System** is the reality in which the outcome must exist: the state, data, behavior, history, constraints, and evidence of the thing being worked on. It is also the primary source of evidence for validating whether an intended outcome actually happened.
 
@@ -41,11 +43,7 @@ What AI changed is not the pattern. It is that execution moved to something that
 
 **AI** provides capability and can help determine the means of achieving the desired outcome within the human's Direction and the System's Context. In the AI era, more of the execution can be delegated to AI without transferring Direction or accountability.
 
-The framework therefore starts with the reality and the **actors** who work in it:
-
-**System → Human → AI**
-
-and the **system cycle** they run:
+The framework therefore starts with the reality and the **actors** who work in it. The system is the reality; the actors in it are the human and AI. The **system cycle** they run is:
 
 **Context → Direction → Execution → Outcome → Growth**
 
@@ -85,7 +83,7 @@ These dimensions can combine in many ways:
 
 The combinations can become much larger than these examples. The core does not change:
 
-**System → Human → AI**
+**The system is the reality. The actors in it are the human and AI.**
 
 **Context → Direction → Execution → Outcome → Growth**
 
@@ -99,7 +97,7 @@ Clover does not claim novelty merely from naming Context, Direction, Execution, 
 
 The useful distinction for the AI era is the relationship between them:
 
-**System → Human → AI** makes explicit that System reality grounds the work, Human provides Direction and accountability, and AI provides capability and can take on execution.
+**The system is the reality, and the actors in it are the human and AI.** That makes explicit that system reality grounds the work, the human provides Direction and accountability, and AI provides capability and can take on execution.
 
 **Context → Direction → Execution → Outcome → Growth** makes that relationship operational: understand the relevant reality, establish the desired outcome and boundaries, perform the work, observe what happened against reality, and keep what it taught.
 

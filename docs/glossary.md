@@ -9,7 +9,7 @@ that is a bug in the writing — [tell us](../CONTRIBUTING.md).
 |---|---|
 | **Clover** | This framework. Clover is a way of working with System, Human, and AI to produce meaningful outcomes through real Context, human Direction, delegated Execution, validated Outcome, and the Growth each cycle carries into the next. See [the framework](04-framework.md). |
 | **System** | The reality the work happens in. Outcomes are the changes that get applied to it. |
-| **Actors** | The two participants in any cycle — the **Human**, who holds Direction and accountability, and **AI**, which supplies capability and execution. Their order runs **System → Human → AI**. |
+| **Actors** | The two participants in any cycle — the **human**, who holds Direction and accountability, and **AI**, which supplies capability and execution. They work inside the **system**, which is the reality the outcome has to exist in. |
 | **System cycle** | The five stages the actors run — **Context → Direction → Execution → Outcome → Growth**. |
 | **Stage** | One part of the system cycle. Each stage has one job. There are five. |
 | **Accountability** | Being answerable for the outcome afterward. It cannot sit with AI, which can perform work and report on it but cannot carry the consequence. When execution moved to AI, accountability tended to move out of scope with it. Clover establishes it back in the system, on the human actor who can truly take up the role. |

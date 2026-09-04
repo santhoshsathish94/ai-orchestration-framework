@@ -4,9 +4,7 @@
 
 Clover is a way of working with **System, Human, and AI to produce meaningful outcomes**, from the smallest possible use case to large and complex systems.
 
-It starts from the reality and the **actors** who work in it:
-
-**System → Human → AI**
+It starts from the reality and the **actors** who work in it. The system is the reality. The actors in it are the human and AI.
 
 The **System** is the reality in which the outcome must exist: the state, data, behavior, history, constraints, and evidence of the thing being worked on. It is also the primary source of evidence for validating whether an intended outcome actually happened.
 
@@ -47,7 +45,9 @@ humans. It is to keep the work answerable to reality when nobody involved has th
 
 Clover does not claim to have invented the underlying pattern of working with systems to produce outcomes. Every system that worked has worked this way. Long before AI could perform substantial portions of execution, humans were already doing this work: understanding the situation, deciding what should happen and answering for it, carrying out or coordinating the work, checking whether the result matched the intended outcome, and carrying what they learned into the next attempt.
 
-What AI changed is accountability. Execution moved to something that cannot be accountable. A model can perform the work, report that it worked, and hold nothing when it did not. Where execution went, accountability tended to go with it, out of scope entirely. Clover establishes accountability back in the system, through the human actor who can truly take up the role.
+AI does not change that cycle. It makes every stage easier, better and faster. Context becomes easier to build, with the human and AI helping each other understand the system. Direction becomes easier to identify and to pursue. Execution becomes faster and better, because the Context and Direction behind it are better. Outcomes become easier to validate against the real system, without tampering. Every stage feeds the learning and the growth of the system, and all the actors grow with it. Nobody is left behind.
+
+What AI did change is accountability. Execution moved to something that cannot be accountable. A model can perform the work, report that it worked, and hold nothing when it did not. Where execution went, accountability tended to go with it, out of scope entirely. Clover establishes accountability back in the system, through the human actor who can truly take up the role. AI capability may scale, but accountability cannot. AI cannot carry it, and it can make it visible.
 
 The cycle itself carried over unchanged. What changed is **who or what can perform the execution**, and what became of accountability when it moved. In the AI era, AI can take on much more of the Execution that humans previously performed directly.
 
@@ -65,7 +65,7 @@ The framework does not claim novelty from naming Context, Direction, Execution, 
 
 Clover's claim is narrower and more practical: **make that existing relationship explicit for an AI era in which execution can increasingly be delegated to AI while accountability cannot.**
 
-- **System → Human → AI**: the system is the reality the work happens in, the Human provides Direction and accountability, and AI provides capability and can take on execution. The Human and AI are the **actors**.
+- **The system is the reality, and the actors in it are the human and AI**: the system is the reality the work happens in, the human provides Direction and accountability, and AI provides capability and can take on execution.
 - **Context → Direction → Execution → Outcome → Growth** is the **system cycle** those actors run: understand the relevant reality, establish the desired outcome and boundaries, perform the work, validate the outcome against reality, and carry what it taught into the next Context.
 - The value of the framework is in making the boundaries and feedback between **reality, human purpose, AI execution, evidence, and learning** explicit enough to apply AI-enabled work without losing the pattern that existed before AI, or the accountability that used to travel with it.
 - The claim is not a prerequisite for adoption. Clover does not need to be proven before people use it; adoption in the AI era gives us the opportunity to observe what emerges when the same underlying cycle is used with AI performing more of the execution.
@@ -162,7 +162,7 @@ and
 
 The objects, actors, tools, and scope change. The relationship remains:
 
-**System → Human → AI**
+**The system is the reality. The actors in it are the human and AI.**
 
 and the work can be understood through:
 
