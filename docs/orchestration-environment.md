@@ -12,6 +12,13 @@ that already exist, plus the rules governing what may be done through them.
 
 > **Status.** This describes a working setup and the patterns it has produced, generalized from real
 > use. It is one practitioner's environment, not a standard, and not a product recommendation.
+>
+> **This page is about software.** Everything below assumes source code, tickets, logs, datasources
+> and deployed environments, and it names the tools that connect them. The rest of the framework is
+> not limited to software, and the site does not describe it that way. This page is the exception on
+> purpose: an access layer has to be built against something specific, and software is the something
+> the author has built it against. A system of another kind needs the same thing — the actors sharing
+> one view of what is actually there — arranged out of whatever that system keeps.
 
 ---
 
