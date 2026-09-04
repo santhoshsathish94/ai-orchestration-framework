@@ -44,7 +44,7 @@ The page is one continuous argument rather than one section per stage.
 8. `#stage-outcome` — What is Outcome?
 9. `#stage-growth` — What is Growth?
 10. `#why-cycle` — Why is it a cycle? Growth becomes the next Context
-11. `#try` — One worked example: something changed, who changed it and when, stage by stage
+11. `#try` — A common example: something changed since last time, and each stage explained against it
 12. `#scale` — Two dimensions: who is working, and what they are working on
 13. `#evidence-preview` — Case studies, reference implementations, how model reviews are reported
 14. `#next` — The closing restatement and where to go
