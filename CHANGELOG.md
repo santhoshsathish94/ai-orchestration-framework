@@ -2,11 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
-## v1.2.0 — 2026-09-04
+## v2.0.0 — 2026-09-04
 
 The site became one continuous argument rather than a set of panels, Growth became a stage of the
 cycle rather than something beside it, and the framework stopped assuming the system it is applied to
-is software. `VERSION` is `1.2.0` and the site's `?v=` cache-busting query strings match it.
+is software. `VERSION` is `2.0.0` and the site's `?v=` cache-busting query strings match it.
+
+A major version because three things change underneath anyone already using it. **Growth is the fifth
+stage of the cycle**, not something sitting outside the framework, so the cycle is
+`Context → Direction → Execution → Outcome → Growth` everywhere. **`System → Human → AI` is gone**,
+replaced by the sentence the site uses: the system is the reality, and the actors in it are the human
+and AI. **`/security/` moved to `/governance/`**, with a redirect left behind, so anything linking to
+the old path now takes a client-side hop. The stage names `Action` and `Success` were retired in
+1.1.x and remain retired.
 
 ### Added
 
