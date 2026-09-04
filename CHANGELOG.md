@@ -35,6 +35,59 @@ Work on the `clover-expansion` branch. Not released.
   unsolved, asks for the people who know the domain, and says how the framework itself advances —
   this expansion is Direction, adoption produces the Context, and what teams report back from real
   cycles is the evidence.
+- **Connected System, as the fourth level of scope.** Scope ran `Task → Feature → System` and stopped
+  where one system stops, which is not where the consequence stops.
+  [Philosophy](docs/02-philosophy.md) now carries the fourth level, and the accountability argument
+  is stated against it: as the scale grows, the cost of a wrong Direction grows with it, and
+  capability to suggest a direction at that scale is not authority to pursue it.
+- **A runtime-enforcement reference implementation.** `reference/runtime-enforcement/` holds a
+  tool-layer write guard, a protected verification fixture, a container that mounts the verification
+  path read-only, a `verify.sh`, and a test suite covering path traversal, symlinks and
+  new-test generation. It exists to show one boundary living outside the model rather than inside an
+  instruction. Container egress is denied in `docker-compose.yml`; that setting has not been observed
+  running, since no Docker daemon was available on the machine the branch was written on.
+- **A reproducible model review protocol.** [`docs/evaluations/model-review-protocol.md`](docs/evaluations/model-review-protocol.md)
+  fixes what an external model review has to carry to be worth anything: the exact repository
+  revision, the protocol used, the raw review, and the calculation. A score with none of those behind
+  it is a number, not evidence.
+- **`CLOVER-CONTEXT.md`, kept in the branch.** The framework asks for a context file beside the work
+  and written while the work runs. The branch that expands the framework now keeps its own.
+
+### Changed
+
+- **Growth is a stage of the cycle, not something outside it.** The framework was four stages with a
+  growth clover sitting beside them. It is now
+  `Context → Direction → Execution → Outcome → Growth`, and Growth is where what the Outcome taught
+  is written back so the next cycle starts from it. The change reaches the mark on every page, the
+  five leaves, [the framework](docs/04-framework.md), both glossaries, the four case-study and
+  reference diagrams, and the reference implementations, each of which now states its own Growth.
+- **The home page is one continuous argument in nineteen sections.** It opened as a set of panels
+  and cards. It now runs from what Clover is, through what AI changes and why humans matter, through
+  a section for each of the five stages in the author's own words, a worked example, scale, evidence,
+  five sections on what each stage means in the real world, and what the real world should enforce.
+  One white background throughout, no tints, no dividing rules, and no eyebrows.
+- **One clover mark serves the whole page.** The five-leaf mark is pinned beside the text on a
+  zero-height sticky rail, turns one full revolution across the length of the page, and lights the
+  leaf whose section is being read. Rotation is applied inside the `viewBox` rather than to the
+  element, because rotating the element grew its box to the diagonal and pushed the page sideways.
+  From the evidence section onward the mark ripens from green to autumn and its leaves repoint from
+  the stages to the closing sections, with each `aria-label` taken from the heading it now leads to.
+- **The site says what the docs say.** The tagline, the stage names, the accountability claim and
+  the definitions were carrying different words in different places. One tagline now identifies
+  Clover everywhere, `Success` is gone as a stage name, and the glossary on the site and the glossary
+  in `docs/` are kept in step.
+- **Section prose, headings and the nav are set at seventeen pixels or above.** Body copy inside a
+  section, sub-headings, the nav links and the brand were all below the size the rest of the site
+  reads at.
+- **The nav opens with Clover, and clicking it on the home page scrolls rather than reloads.**
+
+### Removed
+
+- **`assets/widening-what-ai-determines.svg`**, which nothing referenced.
+- **From the home page**: the hero buttons, the How It Works nav link, the Why now section, the
+  `System → Human → AI` arrow chain, the green stage labels, the scale worked examples, the five
+  enforcement asks, and the closing restatement section. The arrow chain is deliberate — it remains
+  in `docs/`, where the reader has the room for it, and stays off the site.
 
 ### Fixed
 
