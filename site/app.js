@@ -43,7 +43,9 @@
       });
     });
 
-    activate(0, false);
+    // The markup decides which tab opens. Forcing the first one here would silently override it.
+    var initial = tabs.findIndex(function (tab) { return tab.getAttribute('aria-selected') === 'true'; });
+    activate(initial === -1 ? 0 : initial, false);
   }
 
   document.querySelectorAll('[data-tabs]').forEach(initTabs);

@@ -37,7 +37,7 @@ body:
       required: true
 
   - type: textarea
-    id: action
+    id: execution
     attributes:
       label: A change you have in mind
       description: Optional. Skip it if you'd rather discuss the problem first.

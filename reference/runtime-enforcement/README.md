@@ -27,7 +27,13 @@ python -m pytest reference/runtime-enforcement/tests/test_write_guard.py
 
 ## Run the Docker boundary example
 
-Requires Docker and Docker Compose:
+Requires Docker and Docker Compose.
+
+**Not observed running.** The compose file and the container settings below were written without a
+Docker daemon available, so `read_only`, `cap_drop`, `no-new-privileges`, the resource limits and the
+internal network have never been exercised. The Python policy tests have. Treat the container half of
+this reference as a pattern to check on your own machine rather than a verified result, and tell us
+if it does not behave as described.
 
 ```bash
 cd reference/runtime-enforcement
