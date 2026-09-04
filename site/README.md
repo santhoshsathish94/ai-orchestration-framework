@@ -59,9 +59,9 @@ exist rather than what they are, and the only place written in the first person 
 They are `.band.stage` sections carrying `data-leaf`, the same as the five stages, so the matching
 leaf goes to ink as each one is read.
 
-**The mark ripens over them.** Once the first of the five reaches the middle of the viewport,
-`app.js` puts `is-mature` on `<html>`, the leaf gradient turns from green to autumn, and each leaf
-repoints from `#stage-*` to its `#real-world-*` section with an `aria-label` taken from that
+**The mark ripens from `#evidence-preview` onward.** Once that section reaches the middle of the
+viewport, `app.js` puts `is-mature` on `<html>`, the leaf gradient turns from green to autumn, and
+each leaf repoints from `#stage-*` to its `#real-world-*` section with an `aria-label` taken from that
 section's heading. Scrolling back turns it green and restores the stage links. The colour is driven
 by `--leaf-1/2/3` on the root rather than by swapping the fill, because a fill cannot animate between
 two `url()` paints but `stop-color` can. The gradient serves the hero mark alone, so the header logo

@@ -226,10 +226,10 @@
     window.addEventListener('resize', onTurn);
   }
 
-  /* The mark ripens over the closing sections, and its leaves point at them instead of the stages.
-     Same leaf, later in its life: what the stage is, then what it should come to. */
+  /* The mark ripens from the evidence section onward, and its leaves point at the closing sections
+     instead of the stages. Same leaf, later in its life: what the stage is, then what it should come to. */
   var ripeMark = document.querySelector('.pinned__mark');
-  var firstRipe = document.getElementById('real-world-context');
+  var firstRipe = document.getElementById('evidence-preview');
   if (ripeMark && firstRipe) {
     var leafLinks = Array.prototype.slice.call(ripeMark.querySelectorAll('a.clover__leaf-hit[href]'));
     leafLinks.forEach(function (a) {
