@@ -2,10 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased
+## v1.2.0 — 2026-09-04
 
-Work on the `clover-expansion` branch. Not released. `VERSION` is `1.2.0` and the site's `?v=`
-cache-busting query strings match it.
+The site became one continuous argument rather than a set of panels, Growth became a stage of the
+cycle rather than something beside it, and the framework stopped assuming the system it is applied to
+is software. `VERSION` is `1.2.0` and the site's `?v=` cache-busting query strings match it.
 
 ### Added
 
