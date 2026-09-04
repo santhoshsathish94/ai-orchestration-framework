@@ -274,7 +274,7 @@ main.narrow > h3 { font-size: clamp(1.35rem, 2.6vw, 1.6rem); }
 .brand {
   display: inline-flex; align-items: center; gap: 0.5rem;
   font-weight: 680; letter-spacing: -0.02em; color: var(--ink); text-decoration: none;
-  margin-right: auto; font-size: 0.98rem;
+  margin-right: auto; font-size: 1.0625rem;
 }
 .brand span { color: var(--accent); font-weight: 600; }
 .site-nav { display: flex; gap: 0.35rem 1.15rem; flex-wrap: wrap; align-items: center; }
