@@ -4,5 +4,9 @@ assets/peacock-feather.png
 __pycache__/
 .pytest_cache/
 
+# The working context file stays on the machine doing the work. It records where the framework is
+# weak and what has not been verified, which is useful to whoever is working and useful to nobody else.
+CLOVER-CONTEXT.md
+
 # Written by reference/runtime-enforcement/verify.sh when the example runs.
 reference/runtime-enforcement/workspace/src/agent-change.js

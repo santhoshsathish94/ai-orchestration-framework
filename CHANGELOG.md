@@ -60,9 +60,6 @@ cache-busting query strings match it.
   instruction. The container runs read-only, with all capabilities dropped, no new privileges, memory
   and pid limits, and no route to the network. None of the container settings have been observed
   running, since no Docker daemon was available on the machine the branch was written on.
-- **`CLOVER-CONTEXT.md`, kept in the branch.** The framework asks for a context file beside the work
-  and written while the work runs. The branch that expands the framework now keeps its own.
-
 ### Changed
 
 - **The agent specification says what the site says.** Seven claims the home page carried and
@@ -128,6 +125,13 @@ cache-busting query strings match it.
 
 ### Removed
 
+- **`CLOVER-CONTEXT.md` is no longer checked in.** The framework asks for a context file beside the
+  work, and this branch keeps one. It is not published. A working context file records where the
+  framework is weak, which assumptions have not been tested and where the next attempt is likely to
+  fail, which is exactly what makes it useful to whoever is doing the work and exactly what makes it
+  the wrong thing to hand a reader. It is in `.gitignore` and stays on the machine doing the work.
+  What it teaches reaches the repository through the documents it changes, which is what Growth is
+  for.
 - **`assets/widening-what-ai-determines.svg`**, which nothing referenced.
 - **The model review protocol.** `docs/evaluations/model-review-protocol.md` set out how to publish a
   reproducible model rating. It was procedurally careful — frozen commit, shared prompt, raw response
