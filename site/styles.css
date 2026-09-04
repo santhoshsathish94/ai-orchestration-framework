@@ -109,6 +109,11 @@ main section.band > .wrap > p,
 main section.band > .wrap > .scale-dimensions > div > p,
 main.narrow > p { font-size: clamp(1.12rem, 2.2vw, 1.28rem); }
 
+/* A section-level h3 has to clear the prose under it, which is now the hero size. Scoped, because
+   every other h3 on the site sits inside a card or a tab panel and keeps its own smaller size. */
+main section.band > .wrap > h3,
+main.narrow > h3 { font-size: clamp(1.35rem, 2.6vw, 1.6rem); }
+
 /* ---------- author page ---------- */
 
 .author-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.4rem; align-items: center; }
