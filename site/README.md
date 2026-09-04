@@ -47,13 +47,12 @@ The page is one continuous argument rather than one section per stage.
 11. `#try` — A common example: something changed since last time, and each stage explained against it
 12. `#scale` — Complexity can grow: the same cycle for individuals, teams, organizations and AI
 13. `#evidence-preview` — The cycle exists in every system: what Clover is still working out, and where contribution matters
-14. `#next` — The closing restatement and where to go
-15. `#real-world-context` — Context in the real world? Credit stays with the original creators
-16. `#real-world-direction` — Direction in the real world? Capability is not permission to choose
-17. `#real-world-execution` — Execution in the real world? The environment enforces what instructions cannot
-18. `#real-world-outcome` — Outcome in the real world? Improve the fields, do not disrupt them
-19. `#real-world-growth` — Growth in the real world? Learn from the mistakes or never improve
-20. `#enforce` — What the real world should enforce? One ask per stage, and Clover enforcing none of it
+14. `#real-world-context` — Context in the real world? Credit stays with the original creators
+15. `#real-world-direction` — Direction in the real world? Capability is not permission to choose
+16. `#real-world-execution` — Execution in the real world? The environment enforces what instructions cannot
+17. `#real-world-outcome` — Outcome in the real world? Improve the fields, do not disrupt them
+18. `#real-world-growth` — Growth in the real world? Learn from the mistakes or never improve
+19. `#enforce` — What the real world should enforce? One ask per stage, and Clover enforcing none of it
 
 The five real-world sections close the page. They are the only place the site says why the boundaries
 exist rather than what they are, and the only place written in the first person outside `author/`.
