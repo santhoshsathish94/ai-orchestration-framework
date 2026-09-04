@@ -45,7 +45,7 @@ The page is one continuous argument rather than one section per stage.
 9. `#stage-growth` — What is Growth?
 10. `#why-cycle` — Why is it a cycle? Growth becomes the next Context
 11. `#try` — A common example: something changed since last time, and each stage explained against it
-12. `#scale` — Two dimensions: who is working, and what they are working on
+12. `#scale` — Complexity can grow: the same cycle for individuals, teams, organizations and AI
 13. `#evidence-preview` — Case studies, reference implementations, how model reviews are reported
 14. `#next` — The closing restatement and where to go
 15. `#real-world-context` — Context in the real world? Credit stays with the original creators
