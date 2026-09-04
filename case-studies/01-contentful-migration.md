@@ -142,7 +142,7 @@ works.
 
 | Metric | Before | After |
 |---|---|---|
-| Live parity, Current vs. Migrated CMS API (byte-for-byte) | — | **36/36** endpoint cases (34 exact + 2 explicitly-approved deviations) |
+| Live parity, Current vs. Migrated CMS API | — | **34/36** endpoint cases byte-for-byte; the other 2 differ by explicit approval |
 | Endpoint groups verified side-by-side | — | **15/15**, zero errors, zero customer-visible differences |
 | Site validated end to end through the API gateway | — | **QA tested the live site against the migrated API and signed off** |
 | Automated tests | — | **239/239** passing (220 unit + 19 contract-snapshot), 0 build warnings |

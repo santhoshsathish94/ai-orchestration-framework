@@ -191,12 +191,9 @@ The marks are the site's identity and they carry the argument, so they have rule
   `.wrong__cols` run a `.wrong` block across both columns, `.split` puts a heading and lead on the
   left with the detail on the right, `.stack--2` gives a two-column definition list, and
   `.panel__cols` spreads a tab panel across the full measure.
-- Tabs: one generic `initTabs` over `[data-tabs]` groups. The first tab and panel in each group carry
-  `aria-selected` and `is-active` in the markup, so nothing flashes before `app.js` runs.
-- The worked example component is `.run` — plain HTML and CSS, no images and no JavaScript. **No page
-  currently uses it**, though its 14 rules are still in `styles.css`. If it comes back, keep it to a
-  few steps, do not turn it back into prose, and keep it ending at Outcome with `.run__loop` turning
-  back into Context.
+- Tabs: one generic `initTabs` over `[data-tabs]` groups. The markup decides which tab opens — whichever
+  carries `aria-selected="true"` and `is-active` — so nothing flashes before `app.js` runs, and
+  `app.js` does not override the choice.
 - No page links to any home-page anchor. Keep all six navs identical.
 - `author/index.html` is the one page written in the first person about a life rather than about the
   framework. It is also the one place *Black Clover* may be named, as a favorite anime. It ends on
