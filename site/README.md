@@ -20,7 +20,8 @@ python -m http.server 8000 --directory site
 site/
   index.html        the framework: one cycle, at any scale
   start/            getting started: read-only access, the agent file, a first cycle
-  security/         security and governance
+  governance/       governance: access, attribution, approvals, delegated execution
+  security/         a redirect stub, kept so the old URL still resolves
   evidence/         case studies and reference implementations
   glossary/         searchable terms
   author/           who wrote this, in the first person
@@ -129,13 +130,13 @@ The marks are the site's identity and they carry the argument, so they have rule
   that cannot be accountable, and a model can perform the work, report that it worked, and hold
   nothing when it did not. Clover establishes accountability back into the system, through the human
   actor who can truly take up the role, and AI takes its place as an actor inside the existing cycle
-  rather than as a replacement for it. `#capability` on the home page and `#policy` on the security
+  rather than as a replacement for it. `#capability` on the home page and `#policy` on the governance
   page both carry this claim, and `llms.txt` carries it for agents. Do not soften it into "AI needs
   oversight".
 - **Accountability lands on a named human.** Governance is where the site shows that the naming is
   real: whose access was used, who approved, and who answers when it goes wrong. Capability is never
   authority, and authority is never accountability. The home page carries this in `#humans`; the
-  named claim **Capability may scale. Direction remains human.** now lives on the security page and
+  named claim **Capability may scale. Direction remains human.** now lives on the governance page and
   in `llms.txt`, not on the home page.
 - **The system cycle has five stages** — Context, Direction, Execution, Outcome, Growth. All five get
   named wherever the cycle is enumerated: the mark, the five stage sections, the agent file

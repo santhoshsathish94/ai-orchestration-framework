@@ -2,7 +2,7 @@ $root = $PSScriptRoot
 Set-Location $root
 $fail = 0
 
-$pages = 'index.html', 'start\index.html', 'security\index.html', 'evidence\index.html',
+$pages = 'index.html', 'start\index.html', 'governance\index.html', 'evidence\index.html',
 'glossary\index.html', 'author\index.html'
 
 # Resolve a page-relative href to a site-root-relative path, so pages at different depths compare.

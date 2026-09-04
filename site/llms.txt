@@ -26,7 +26,7 @@ Growth is the fifth stage of the system cycle: whatever the Outcome taught, at a
 
 - [The framework](https://cloverframework.com/): the full argument, the actors, and the system cycle.
 - [Getting started](https://cloverframework.com/start/): read-only system access, AGENTS.md, and a first cycle.
-- [Security and governance](https://cloverframework.com/security/): access, attribution, approvals, agent behavior, delegated execution, and the named human who is accountable.
+- [Governance](https://cloverframework.com/governance/): access, attribution, approvals, agent behavior, delegated execution, and the named human who is accountable.
 - [Evidence](https://cloverframework.com/evidence/): case studies and reference implementations, each stating where it stopped.
 - [Glossary](https://cloverframework.com/glossary/): plain-language definitions.
 - [The author](https://cloverframework.com/author/): who wrote it.
