@@ -87,11 +87,23 @@ class VerificationPolicy:
         """
         if self.root is None:
             return False
-        target = self._identity(self._resolve(path))
+        resolved = self._resolve(path)
+        try:
+            info = resolved.stat()
+        except (OSError, ValueError):
+            return False
+        # A file with one name cannot be a second name for something else, and this is the case for
+        # almost every write. Without it, every write costs a full walk of the protected root.
+        if info.st_nlink < 2:
+            return False
+        target = self._identity(resolved)
         if target is None:
             return False
         for candidate in self.root.rglob("*"):
-            if not candidate.is_file() or not self.is_verification_path(str(candidate)):
+            try:
+                if not candidate.is_file() or not self.is_verification_path(str(candidate)):
+                    continue
+            except OSError:  # Unreadable entry, or a symlinked directory cycle.
                 continue
             if self._identity(candidate) == target:
                 return True
