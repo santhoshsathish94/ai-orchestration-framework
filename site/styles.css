@@ -279,7 +279,7 @@ main.narrow > h3 { font-size: clamp(1.35rem, 2.6vw, 1.6rem); }
 .brand span { color: var(--accent); font-weight: 600; }
 .site-nav { display: flex; gap: 0.35rem 1.15rem; flex-wrap: wrap; align-items: center; }
 .site-nav a {
-  color: var(--ink); text-decoration: none; font-size: 1rem; font-weight: 600;
+  color: var(--ink); text-decoration: none; font-size: 1.0625rem; font-weight: 600;
   padding: 0.3rem 0; border-bottom: 2px solid transparent;
 }
 .site-nav a:hover { color: var(--accent); border-bottom-color: var(--accent-line); }
