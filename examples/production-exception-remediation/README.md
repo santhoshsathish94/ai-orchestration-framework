@@ -7,6 +7,11 @@ The example fills in the [Orchestration Brief](../../templates/orchestration-bri
 stage, so another exception can be swapped in and follow the same path. Nothing here is
 tool-specific, and the prompts work with any capable coding assistant.
 
+**This is the software case.** It is written that way because most readers will recognize it
+fastest, not because Clover is for software. The same five stages run against any system that keeps
+a record of what it did: the sources become that system's records rather than logs and diffs, and
+the evidence becomes its measurements rather than a `5xx` rate.
+
 > **This is an illustrative scenario, not a reported incident.** The checkout bug, the numbers, and
 > the results are invented to show the shape of a full cycle. For real, evidence-backed work see
 > the [case studies](../../case-studies/).

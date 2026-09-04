@@ -24,16 +24,18 @@ framework is about.
 
 ## 1. Pick a real task (2 min)
 
-Something small and real works best — a bug, a small feature, a recurring exception. The cycle needs
-concrete work to run on.
+Something small and real works best — a fault, a recurring complaint, a small change, a question
+nobody can answer quickly. It does not have to be software. Any system that keeps a record of what
+it did will do. The cycle needs concrete work to run on.
 
 ## 2. Give the assistant something real to read (3 min)
 
-Hand over a source instead of describing the problem from memory: the repository, the failing test,
-the log lines, the ticket, the query results, the running application in the development
-environment. A read-only MCP server in front of that one system is enough, scoped to what the human
-driving the work already has access to, at the privileges they already hold. One source is enough to
-start.
+Hand over a source instead of describing the problem from memory: whatever the system itself keeps.
+Its records, its history, its measurements, the thing as it is running. For software that means the
+repository, the failing test, the log lines, the ticket, the query results, the application in a
+development environment, and a read-only MCP server in front of that one system is enough. Whatever
+the system, the access is scoped to what the human driving the work already has, at the privileges
+they already hold. One source is enough to start.
 [What to connect, and in what order →](docs/orchestration-environment.md#building-one)
 
 ## 3. Say what you are trying to get done (2 min)
@@ -44,15 +46,15 @@ changes anything, and it asks for a specific missing piece rather than guessing 
 be connected.
 [What we ask of agents →](AGENTS.md)
 
-Then point. Say which service went out last week, which job has always been fragile, which part of
-the code to read first. The systems are a haystack, and a pointer from someone who works in them
-every day is worth more than a longer description of the task.
+Then point. Say which part changed last week, which step has always been fragile, where to look
+first. The systems are a haystack, and a pointer from someone who works in them every day is worth
+more than a longer description of the task.
 
 ## 4. Copy the orchestration brief (1 min)
 
 Take [`templates/orchestration-brief.md`](templates/orchestration-brief.md), copy it, and rename it
-for the task — `checkout-500.md`, for example. That one page is the working artifact for the whole
-cycle, and it lives beside the work rather than in a chat window.
+for the task. That one page is the working artifact for the whole cycle, and it lives beside the
+work rather than in a chat window.
 
 ## 5. Walk the five stages (6 min)
 
@@ -82,15 +84,15 @@ repetition and no scale are needed for it to be real.
 Every pass adds context, and that includes the passes that failed. Before the next attempt, write
 what the attempt showed and what it ruled out back into the Context section of the brief.
 
-Save the filled-in brief with the work — in the pull request, the ticket, or the repository. Because
-it is written down, the next agent or the next human can pick the work up without redoing the
-investigation.
+Save the filled-in brief with the work, wherever the work is kept. Because it is written down, the
+next agent or the next human can pick the work up without redoing the investigation.
 
 ## See a full example
 
 [`examples/production-exception-remediation/`](examples/production-exception-remediation/) runs a
-recurring production `500` through the five stages, with the prompts used at each one. Swap in
-another scenario and follow the same path.
+recurring production `500` through the five stages, with the prompts used at each one. It is a
+software scenario because that is the one most readers will recognize. Swap in another scenario,
+from any kind of system, and follow the same path.
 
 ## If you remember one thing
 

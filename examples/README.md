@@ -6,6 +6,10 @@ Worked walkthroughs that run a real task through the five stages. Each one fills
 [Orchestration Brief](../templates/orchestration-brief.md), so another scenario can be swapped in and
 follow the same path.
 
+The walkthrough below is a software one, because that is the scenario most readers will recognize
+fastest. The stages do not depend on it. Any system that keeps a record of what it did can be run
+through the same five.
+
 ## Available examples
 
 - **[Production Exception Remediation](production-exception-remediation/)** — a recurring production
