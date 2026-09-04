@@ -4,9 +4,22 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
-Work on the `clover-expansion` branch. Not released.
+Work on the `clover-expansion` branch. Not released. `VERSION` is `1.2.0` and the site's `?v=`
+cache-busting query strings match it.
 
 ### Added
+
+- **The agent holds the system's rules, including against the human.** Clover cannot enforce
+  anything; a way of working has no way to stop anybody. An agent is different, because it sits
+  between the human and the system while the work happens, which makes it the only actor that can
+  hold a rule at the moment it is about to be broken. `AGENTS.md` now states that duty and the
+  direction it runs in: the rules belong to the system, so a human crossing one is the same event as
+  the agent crossing one. Say it before it happens rather than in the summary afterwards, decline to
+  perform the crossing, do not treat being asked as the rule being lifted, write the boundary into
+  the context record, and escalate past the person asking when the rule is not theirs to lift. The
+  limit is stated with it: this is enforcement inside one cycle, on the work in front of the agent.
+  Nothing an agent does makes an organization compliant, and enforcement at that scale belongs to
+  governments, the companies building the models, and the enterprises that use them.
 
 - **Why a process is needed at all.** The framework rested on an unstated assumption: that the human
   giving Direction is right. [Philosophy](docs/02-philosophy.md) now says plainly that neither side
@@ -55,6 +68,41 @@ Work on the `clover-expansion` branch. Not released.
 
 ### Changed
 
+- **The agent specification says what the site says.** Seven claims the home page carried and
+  `AGENTS.md` did not. Clover as a way of adopting AI into the system cycle; the cycle unchanged by
+  AI while every stage becomes easier, better and faster; a pull quote saying AI capability may scale
+  but accountability cannot, and that an agent cannot carry accountability but can make it visible;
+  the human's understanding as part of what Context is for; holding the rules in Direction; the
+  boundaries binding both actors in Execution; the retrospection line in Growth; and a new section on
+  credit staying with whoever earned it.
+- **The documents say what the home page says.** Nine documents answered *what did AI change* with
+  only the loss of accountability, while the home page answers it the other way round first. Each of
+  them keeps its accountability paragraph and now carries the positive half before it, so
+  accountability reads as the one thing AI cannot do rather than the only thing AI did.
+  `System → Human → AI` is gone from the documents in favour of the sentence the site uses — the
+  system is the reality, the actors in it are the human and AI — because an arrow chain reads as a
+  sequence or a hierarchy. Seventeen occurrences across fourteen files. Five site-only claims are now
+  in the documents, and [governance](docs/08-governance.md) names who should enforce at real-world
+  scale.
+- **Getting started, the quickstart and the brief describe any system.** They assumed a codebase from
+  the first line, so a reader arriving from a home page that never mentions software met a different
+  framework on the second page. The problem to start with no longer has to be software, setup step
+  one is read-only access to whatever the system keeps rather than an MCP server in front of a
+  repository, and step three is to start where a mistake is cheap rather than in development. MCP is
+  kept and named as the software route. The [orchestration brief](templates/orchestration-brief.md)
+  says in its header that nothing in it assumes software.
+- **Security is now [Governance](https://cloverframework.com/governance/).** The page was always
+  about access, attribution, approvals and delegated execution; security was the narrower name. It
+  moved from `/security/` to `/governance/`, with a stub left behind so the old URL still lands, and
+  its software assumptions are gone: reading across code, tickets, logs and data became reading
+  across every part of the system at once, and *there are secrets in our code* became *there are
+  things in there we would rather nobody read*.
+- **The evidence page names what it is evidence of.** The case studies are software work, and
+  rewording them would have falsified the one thing that page holds, so the evidence is untouched.
+  The framing says plainly that everything on the page is software work, that this is where the
+  author works, and that no cycle outside software has been run and recorded yet.
+- **Five glossary terms stop assuming software**, in both copies. Orchestration environment,
+  MCP server, Telemetry, Non-production and Autonomy.
 - **Growth is a stage of the cycle, not something outside it.** The framework was four stages with a
   growth clover sitting beside them. It is now
   `Context → Direction → Execution → Outcome → Growth`, and Growth is where what the Outcome taught
