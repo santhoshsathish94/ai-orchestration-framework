@@ -53,6 +53,7 @@ The page is one continuous argument rather than one section per stage.
 17. `#real-world-execution` — Execution in the real world? The environment enforces what instructions cannot
 18. `#real-world-outcome` — Outcome in the real world? Improve the fields, do not disrupt them
 19. `#real-world-growth` — Growth in the real world? Learn from the mistakes or never improve
+20. `#enforce` — What the real world should enforce? One ask per stage, and Clover enforcing none of it
 
 The five real-world sections close the page. They are the only place the site says why the boundaries
 exist rather than what they are, and the only place written in the first person outside `author/`.
